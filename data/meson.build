@@ -58,7 +58,6 @@ foreach name: desktops
   endif
 
   desktop_target = i18n.merge_file(
-    desktop,
     type: 'desktop',
     input: desktop_in,
     output: desktop,
@@ -89,7 +88,6 @@ foreach session: sessions
   )
 
   i18n.merge_file(
-    session_file,
     type: 'desktop',
     input: desktop_in,
     output: session_file,
