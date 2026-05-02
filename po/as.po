@@ -33,8 +33,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "এই অধিবেশনে আপোনাক GNOME ত লগিন কৰায়"
+msgid "This session logs you into Scarecrow"
+msgstr "এই অধিবেশনে আপোনাক Scarecrow ত লগিন কৰায়"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
 msgid "GNOME dummy"
@@ -43,11 +43,11 @@ msgstr "GNOME ডামি"
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
 msgid "GNOME on Wayland"
-msgstr "Wayland ত GNOME"
+msgstr "Wayland ত Scarecrow"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-msgid "This session logs you into GNOME, using Wayland"
-msgstr "এই অধিবেশনে আপোনাক Wayland ব্যৱহাৰ কৰি, GNOME ত লগিন কৰায়"
+msgid "This session logs you into Scarecrow, using Wayland"
+msgstr "এই অধিবেশনে আপোনাক Wayland ব্যৱহাৰ কৰি, Scarecrow ত লগিন কৰায়"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
@@ -218,8 +218,8 @@ msgid "Show the fail whale dialog for testing"
 msgstr "পৰিক্ষণৰ বাবে ব্যৰ্থ হোৱেইল ডাইলগ দেখুৱাওক"
 
 #: ../gnome-session/main.c:344
-msgid " - the GNOME session manager"
-msgstr "- GNOME অধিবেশন ব্যৱস্থাপক"
+msgid " - the Scarecrow session manager"
+msgstr "- Scarecrow অধিবেশন ব্যৱস্থাপক"
 
 #: ../tools/gnome-session-inhibit.c:110
 #, c-format

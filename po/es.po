@@ -45,8 +45,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Esta sesión accede a GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Esta sesión accede a Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -246,8 +246,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Desactivar la verificación de aceleración hardware"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " - El gestor de sesiones de GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " - El gestor de sesiones de Scarecrow"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"
@@ -409,8 +409,8 @@ msgstr "Ya existe una sesión llamada «%s»"
 #~ msgid "_Name:"
 #~ msgstr "_Nombre:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Esta sesión accede a GNOME, usando Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Esta sesión accede a Scarecrow, usando Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "Seleccionar comando"
@@ -619,20 +619,20 @@ msgstr "Ya existe una sesión llamada «%s»"
 #~ msgstr "GNOME 3 falló al cargar"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Desafortunadamente GNOME 3 falló al iniciar y se inició en el <i>modo "
+#~ "Desafortunadamente Scarecrow 3 falló al iniciar y se inició en el <i>modo "
 #~ "alternativo</i>.\n"
 #~ "\n"
 #~ "Probablemente significa que su sistema (hardware gráfico o controlador) "
-#~ "no es capaz de ejecutar la experiencia GNOME 3 completa."
+#~ "no es capaz de ejecutar la experiencia Scarecrow 3 completa."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Aprenda más acerca de GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Aprenda más acerca de Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -702,7 +702,7 @@ msgstr "Ya existe una sesión llamada «%s»"
 #~ msgid "Window Manager"
 #~ msgstr "Gestor de ventanas"
 
-#~ msgid "Classic GNOME"
+#~ msgid "Classic Scarecrow"
 #~ msgstr "GNOME clásico"
 
 #~ msgid "File Manager"
@@ -797,11 +797,11 @@ msgstr "Ya existe una sesión llamada «%s»"
 #~ "Esperando a que finalice el programa. Interrumpir el programa puede "
 #~ "causar pérdidas de datos."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- Pantalla de bienvenida de GNOME"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Pantalla de bienvenida de Scarecrow"
 
 #~ msgid "GNOME Splash Screen"
-#~ msgstr "Pantalla de bienvenida de GNOME"
+#~ msgstr "Pantalla de bienvenida de Scarecrow"
 
 #~ msgid ""
 #~ "Assistive technology support has been requested for this session, but the "
@@ -818,7 +818,7 @@ msgstr "Ya existe una sesión llamada «%s»"
 #~ msgstr "Envolvente de registro AT SPI"
 
 #~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "Ayudante del demonio de preferencias de GNOME"
+#~ msgstr "Ayudante del demonio de preferencias de Scarecrow"
 
 #~ msgid ""
 #~ "If enabled, gnome-session will save the session automatically. Otherwise, "
@@ -851,13 +851,13 @@ msgstr "Ya existe una sesión llamada «%s»"
 #~ msgstr "Configure sus sesiones"
 
 #~ msgid "GNOME Keyring Daemon Wrapper"
-#~ msgstr "Envolvente del demonio del Depósito de claves de GNOME"
+#~ msgstr "Envolvente del demonio del Depósito de claves de Scarecrow"
 
 #~ msgid "Session management"
 #~ msgstr "Gestión de sesiones"
 
 #~ msgid "GNOME GUI Library + EggSMClient"
-#~ msgstr "Biblioteca IGU de GNOME + EggSMClient"
+#~ msgstr "Biblioteca IGU de Scarecrow + EggSMClient"
 
 #~ msgid ""
 #~ "The Window manager that gnome-session will start. Valid values are "

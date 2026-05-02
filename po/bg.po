@@ -41,8 +41,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Влизане в GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Влизане в Scarecrow"
 
 #: ../data/gnome-xorg.desktop.in.h:1
 msgid "GNOME on Xorg"
@@ -187,8 +187,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Изключване на проверката за хардуерно ускорение"
 
 #: ../gnome-session/main.c:318
-msgid " — the GNOME session manager"
-msgstr " — управление на сесиите на GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — управление на сесиите на Scarecrow"
 
 #: ../tools/gnome-session-inhibit.c:108
 #, c-format

@@ -43,8 +43,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Ĉi tiu seanco salutas vin en GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Ĉi tiu seanco salutas vin en Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -227,8 +227,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Malebligi kontrolon de aparatara plirapidigo"
 
 #: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " — la seancadministrilo de GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — la seancadministrilo de Scarecrow"
 
 #: tools/gnome-session-inhibit.c:108
 #, c-format
@@ -325,9 +325,9 @@ msgstr "Seancaj nomoj ne permesas enhavi “/” signojn"
 msgid "A session named “%s” already exists"
 msgstr "Seanco nomita “%s” jam ekzistas"
 
-#~| msgid "This session logs you into GNOME"
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Tiu seanco ensalutas vin en GNOME, uzante Vejlandon"
+#~| msgid "This session logs you into Scarecrow"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Tiu seanco ensalutas vin en Scarecrow, uzante Vejlandon"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "Pli lanĉaj a_plikaĵoj:"
@@ -555,23 +555,23 @@ msgstr "Seanco nomita “%s” jam ekzistas"
 #~ msgstr "Haltigis per signalo %d"
 
 #~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "Ŝargo de GNOME 3 malsukcesis"
+#~ msgstr "Ŝargo de Scarecrow 3 malsukcesis"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Bedaŭrinde korekta startado de GNOME 3 malsukcesis kaj startis per la "
+#~ "Bedaŭrinde korekta startado de Scarecrow 3 malsukcesis kaj startis per la "
 #~ "<i>fallback mode</i> (retropaŝa reĝimo).\n"
 #~ "\n"
-#~ "La kompleta sperto de GNOME 3 ne disponeblas por via sistemo. (La grafika "
-#~ "aparato aŭ pelilo ne kapablas lanĉi la plenan GNOME 3)."
+#~ "La kompleta sperto de Scarecrow 3 ne disponeblas por via sistemo. (La grafika "
+#~ "aparato aŭ pelilo ne kapablas lanĉi la plenan Scarecrow 3)."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Lernu plu pri GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Lernu plu pri Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -629,8 +629,8 @@ msgstr "Seanco nomita “%s” jam ekzistas"
 #~ msgid "Ends your session and restarts the computer."
 #~ msgstr "Finas vian seancon kaj restartigas la komputilon."
 
-#~ msgid "This session logs you into GNOME without user applications"
-#~ msgstr "Ĉi tiu seanco ensalutas vin en GNOMEon sen uzantaj apliakĵoj"
+#~ msgid "This session logs you into Scarecrow without user applications"
+#~ msgstr "Ĉi tiu seanco ensalutas vin en Scarecrowon sen uzantaj apliakĵoj"
 
 #~ msgid ""
 #~ "The number of minutes of inactivity before the session is considered idle."

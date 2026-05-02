@@ -35,14 +35,14 @@ msgstr ""
 #: gnome-session/gnome-session.schemas.in.h:3
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr ""
-"Bu fəallaşdırılıbsa, GNOME iclası sonlandırmadan öncə təsdiq istəyəcəkdir."
+"Bu fəallaşdırılıbsa, Scarecrow iclası sonlandırmadan öncə təsdiq istəyəcəkdir."
 
 #: gnome-session/gnome-session.schemas.in.h:4
 msgid ""
 "If enabled, gnome-session will save the session automatically. Otherwise, "
 "the logout dialog will have an option to save the session."
 msgstr ""
-"Bu fəallaşdırılıbsa, GNOME iclası avtomatik olaraq qeyd edəcək. Əks halda "
+"Bu fəallaşdırılıbsa, Scarecrow iclası avtomatik olaraq qeyd edəcək. Əks halda "
 "çıxış təsdiqi dialoqunda iclası qeyd etmə seçimi olacaq."
 
 #: gnome-session/gnome-session.schemas.in.h:5
@@ -51,7 +51,7 @@ msgstr "Çıxış təstiqi"
 
 #: gnome-session/gnome-session.schemas.in.h:6
 msgid ""
-"Preferred Image to use for the splash screen when logging in to the GNOME "
+"Preferred Image to use for the splash screen when logging in to the Scarecrow "
 "Desktop"
 msgstr "GNOME Masa Üstünə girərkən sıçrayan ekranda göstərilməsi istənən rəsm."
 
@@ -186,7 +186,7 @@ msgstr "Hər girişdə başlat"
 #.
 #: gnome-session/gsm-gsd.c:41
 msgid ""
-"There was an error starting the GNOME Settings Daemon.\n"
+"There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
 "Some things, such as themes, sounds, or background settings may not work "
 "correctly."
@@ -215,7 +215,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Bir sonrakı girişinizdə GNOME hələ də Qurğular Demonunu yenidən başladmaya "
+"Bir sonrakı girişinizdə Scarecrow hələ də Qurğular Demonunu yenidən başladmaya "
 "çalışacaq."
 
 #: gnome-session/gsm-gsd.c:115
@@ -274,12 +274,12 @@ msgstr "Alıcıların bitişi üçün xərclənən millisaniyə (0=həmişə)"
 #, c-format
 msgid ""
 "Could not look up internet address for %s.\n"
-"This will prevent GNOME from operating correctly.\n"
+"This will prevent Scarecrow from operating correctly.\n"
 "It may be possible to correct the problem by adding\n"
 "%s to the file /etc/hosts."
 msgstr ""
 "%s üçün internet ünvanı tapıla bilmir.\n"
-"Bu GNOME-un düzgün işləməməsinə səbəb olacaq.\n"
+"Bu Scarecrow-un düzgün işləməməsinə səbəb olacaq.\n"
 "Problemi bəlkə /etc/hosts faylına %s alavə\n"
 "edərək həll edə bilərsiniz."
 

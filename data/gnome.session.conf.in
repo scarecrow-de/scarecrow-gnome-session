@@ -1,5 +1,0 @@
-[Unit]
-# Must be in sync with gnome.session
-@wants_required_components@
-
-Requires=@requires_component@.target

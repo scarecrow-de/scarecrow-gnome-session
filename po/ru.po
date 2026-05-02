@@ -41,12 +41,12 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Этот сеанс позволяет вам войти в GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Этот сеанс позволяет вам войти в Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "Фиктивный сеанс GNOME"
+msgstr "Фиктивный сеанс Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -240,8 +240,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Отключить проверку наличия аппаратного ускорения"
 
 #: gnome-session/main.c:433
-msgid " — the GNOME session manager"
-msgstr " — менеджер сеансов GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — менеджер сеансов Scarecrow"
 
 #: tools/gnome-session-ctl.c:244
 msgid "Start gnome-session-shutdown.target"
@@ -391,5 +391,5 @@ msgstr "Сеанс с именем «%s» уже существует"
 #~ msgid "_Name:"
 #~ msgstr "_Имя:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Этот сеанс позволяет вам войти в GNOME с помощью Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Этот сеанс позволяет вам войти в Scarecrow с помощью Wayland"

@@ -17,7 +17,7 @@ msgstr ""
 "POT-Creation-Date: 2020-08-28 10:35+0000\n"
 "PO-Revision-Date: 2020-08-29 19:20+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
-"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+"Language-Team: Scarecrow Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,7 +39,7 @@ msgstr "그놈"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "이 세션을 사용하면 그놈에 로그인합니다"
 
 #: data/gnome-dummy.session.desktop.in.in:3
@@ -233,7 +233,7 @@ msgid "Disable hardware acceleration check"
 msgstr "하드웨어 가속 기능을 검사 하지 않습니다"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
+msgid " — the Scarecrow session manager"
 msgstr " — 그놈 세션 관리자"
 
 #: tools/gnome-session-ctl.c:245

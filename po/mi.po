@@ -45,7 +45,7 @@ msgstr ""
 
 #: gnome-session/gnome-session.schemas.in.h:6
 msgid ""
-"Preferred Image to use for the splash screen when logging in to the GNOME "
+"Preferred Image to use for the splash screen when logging in to the Scarecrow "
 "Desktop"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgstr ""
 #.
 #: gnome-session/gsm-gsd.c:41
 msgid ""
-"There was an error starting the GNOME Settings Daemon.\n"
+"There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
 "Some things, such as themes, sounds, or background settings may not work "
 "correctly."
@@ -257,7 +257,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Could not look up internet address for %s.\n"
-"This will prevent GNOME from operating correctly.\n"
+"This will prevent Scarecrow from operating correctly.\n"
 "It may be possible to correct the problem by adding\n"
 "%s to the file /etc/hosts."
 msgstr ""

@@ -32,7 +32,7 @@ msgstr "گنوم"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "به‌م دانیشتنه‌ ئه‌که‌ویته‌ ناو گنومه‌وه‌"
 
 #: data/gnome-dummy.session.desktop.in.in:3
@@ -224,7 +224,7 @@ msgid "Disable hardware acceleration check"
 msgstr ""
 
 #: gnome-session/main.c:433
-msgid " — the GNOME session manager"
+msgid " — the Scarecrow session manager"
 msgstr " —بەڕێوەبردنی پیشاندانی گنۆم"
 
 #: tools/gnome-session-ctl.c:244

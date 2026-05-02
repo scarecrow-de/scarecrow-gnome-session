@@ -30,8 +30,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Laso session nangli phan GNOME long pon po"
+msgid "This session logs you into Scarecrow"
+msgstr "Laso session nangli phan Scarecrow long pon po"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -218,8 +218,8 @@ msgid "Disable hardware acceleration check"
 msgstr ""
 
 #: gnome-session/main.c:433
-msgid " — the GNOME session manager"
-msgstr " — the GNOME session manager"
+msgid " — the Scarecrow session manager"
+msgstr " — the Scarecrow session manager"
 
 #: tools/gnome-session-inhibit.c:108
 #, c-format

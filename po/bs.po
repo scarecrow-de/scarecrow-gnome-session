@@ -27,8 +27,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Ova sesija Vas prijavljuje u GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Ova sesija Vas prijavljuje u Scarecrow"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
 msgid "GNOME dummy"
@@ -40,8 +40,8 @@ msgid "GNOME on Wayland"
 msgstr "GNOME u Wayland"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-msgid "This session logs you into GNOME, using Wayland"
-msgstr "Ova sesija vas prijavljuje na GNOME, koristeći Wayland"
+msgid "This session logs you into Scarecrow, using Wayland"
+msgstr "Ova sesija vas prijavljuje na Scarecrow, koristeći Wayland"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
@@ -212,8 +212,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Isključi provjeru hardverske akceleracije"
 
 #: ../gnome-session/main.c:267
-msgid " - the GNOME session manager"
-msgstr " - GNOME upravljač sesija"
+msgid " - the Scarecrow session manager"
+msgstr " - Scarecrow upravljač sesija"
 
 #: ../tools/gnome-session-inhibit.c:108
 #, c-format

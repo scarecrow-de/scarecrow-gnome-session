@@ -33,8 +33,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Бұл сессия арқылы GNOME-ға кіресіз"
+msgid "This session logs you into Scarecrow"
+msgstr "Бұл сессия арқылы Scarecrow-ға кіресіз"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -42,7 +42,7 @@ msgstr "GNOME жалған сессиясы"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
-msgstr "Xorg негізіндегі GNOME"
+msgstr "Xorg негізіндегі Scarecrow"
 
 #: data/org.gnome.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
@@ -233,8 +233,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Құрылғылық үдетуді тексеруді сөндіру"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOME сессиялар басқарушысы"
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow сессиялар басқарушысы"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"
@@ -394,8 +394,8 @@ msgstr "\"%s\" атауы бар сессия бар болып тұр"
 #~ msgid "_Name:"
 #~ msgstr "_Аты:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Бұл сессия арқылы Wayland негізіндегі GNOME ішіне кіресіз"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Бұл сессия арқылы Wayland негізіндегі Scarecrow ішіне кіресіз"
 
 #~ msgid "Select Command"
 #~ msgstr "Команданы таңдаңыз"

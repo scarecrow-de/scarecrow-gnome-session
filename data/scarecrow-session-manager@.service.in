@@ -1,0 +1,19 @@
+[Unit]
+Description=GNOME Session Manager (session: %i)
+RefuseManualStart=yes
+RefuseManualStop=yes
+OnFailure=scarecrow-session-shutdown.target
+OnFailureJobMode=replace-irreversibly
+CollectMode=inactive-or-failed
+
+Requisite=scarecrow-session-pre.target
+After=scarecrow-session-pre.target
+
+Requires=scarecrow-session-manager.target
+PartOf=scarecrow-session-manager.target
+Before=scarecrow-session-manager.target
+
+[Service]
+Type=notify
+ExecStart=@libexecdir@/scarecrow-session-binary --systemd-service --session=%i
+ExecStopPost=-@libexecdir@/scarecrow-session-ctl --shutdown

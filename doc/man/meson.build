@@ -13,10 +13,10 @@ xsltproc_cmd = [
   '@INPUT@'
 ]
 
-mans = ['gnome-session-inhibit']
+mans = ['scarecrow-session-inhibit']
 
 if enable_session_selector
-  mans += 'gnome-session-selector'
+  mans += 'scarecrow-session-selector'
 endif
 
 foreach man: mans
@@ -33,8 +33,8 @@ foreach man: mans
 endforeach
 
 man_data = files(
-  'gnome-session.1',
-  'gnome-session-quit.1'
+  'scarecrow-session.1',
+  'scarecrow-session-quit.1'
 )
 
 install_data(

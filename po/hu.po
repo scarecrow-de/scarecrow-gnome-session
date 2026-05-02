@@ -39,8 +39,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Bejelentkezés a GNOME környezetbe"
+msgid "This session logs you into Scarecrow"
+msgstr "Bejelentkezés a Scarecrow környezetbe"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -239,8 +239,8 @@ msgid "Disable hardware acceleration check"
 msgstr "A hardveres gyorsítás ellenőrzésének kikapcsolása"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " – A GNOME munkamenet-kezelője"
+msgid " — the Scarecrow session manager"
+msgstr " – A Scarecrow munkamenet-kezelője"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"

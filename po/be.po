@@ -31,8 +31,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Сеанс уваходу ў GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Сеанс уваходу ў Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -217,8 +217,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Выключыць праверку апаратнага паскарэння"
 
 #: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " - кіраўнік сеансаў GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " - кіраўнік сеансаў Scarecrow"
 
 #: tools/gnome-session-inhibit.c:108
 #, c-format
@@ -359,8 +359,8 @@ msgstr "Сеанс з назвай \"%s\" ужо існуе"
 #~ msgid "Choose what applications to start when you log in"
 #~ msgstr "Выбар праграмы для аўтазапуску пры ўваходзе ў сеанс"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Гэты сеанс прызначаны для ўваходу ў GNOME з выкарыстаннем Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Гэты сеанс прызначаны для ўваходу ў Scarecrow з выкарыстаннем Wayland"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "Дадатковыя праграмы _аўтазапуску:"

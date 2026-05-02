@@ -87,7 +87,7 @@ msgid "GNOME"
 msgstr ""
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr ""
 
 #: ../data/gnome-session.schemas.in.h:1
@@ -500,12 +500,12 @@ msgstr ""
 
 #: ../gnome-session/main.c:528
 #, fuzzy
-msgid " - the GNOME session manager"
+msgid " - the Scarecrow session manager"
 msgstr "Enweghị ike isụnye n'onyenlekọta oge mmem"
 
 #: ../splash/gnome-session-splash.c:315
 #, fuzzy
-msgid "- GNOME Splash Screen"
+msgid "- Scarecrow Splash Screen"
 msgstr "Gosi inyogo ngosi ndubanye"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
@@ -608,12 +608,12 @@ msgstr ""
 
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "Agaghị achọnwu ngosi ebe ịntaneetị maka %s.\n"
-#~ "Nke a ga-egbochi GNOME ịrụ ọfụma.\n"
+#~ "Nke a ga-egbochi Scarecrow ịrụ ọfụma.\n"
 #~ "O nwere ike inwe isi n'imezi nsogbu ahụ site n'itinye\n"
 #~ "%s na hostụ faịlụ /dgz/."
 
@@ -742,12 +742,12 @@ msgstr ""
 #~ msgstr "Aha oge mmem agaghị eghenwu oghe"
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "E nwere ndehie mgbe a na-ebido Deimọọnụ nhazi GNOME.\n"
+#~ "E nwere ndehie mgbe a na-ebido Deimọọnụ nhazi Scarecrow.\n"
 #~ "\n"
 #~ "Ụfọdụ ihe, dịka isiokwu, Ụda, mọọbụ nhazi ntọala nwere ike ọgaghị arụ ọrụ "
 #~ "ọfụma."

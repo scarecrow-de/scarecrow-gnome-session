@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2020-08-18 21:08+0000\n"
 "PO-Revision-Date: 2020-08-19 21:46+0200\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
-"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language-Team: Slovenian Scarecrow Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,12 +37,12 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Seja omogoča prijavo v namizje GNOME."
+msgid "This session logs you into Scarecrow"
+msgstr "Seja omogoča prijavo v namizje Scarecrow."
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "Poskusni GNOME"
+msgstr "Poskusni Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -233,8 +233,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Onemogoči strojno pospeševanje"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr "– upravljalnik seje GNOME"
+msgid " — the Scarecrow session manager"
+msgstr "– upravljalnik seje Scarecrow"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"
@@ -397,8 +397,8 @@ msgstr "Seja z imenom »%s« že obstaja"
 #~ msgid "_Name:"
 #~ msgstr "_Ime:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Seja omogoča prijavo v namizje GNOME z uporabo sistema Wayland."
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Seja omogoča prijavo v namizje Scarecrow z uporabo sistema Wayland."
 
 #~ msgid "Select Command"
 #~ msgstr "Izbor ukaza"
@@ -615,23 +615,23 @@ msgstr "Seja z imenom »%s« že obstaja"
 #~ msgstr "Ikone '%s' ni mogoče najti"
 
 #~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "Nalaganje namizja GNOME 3 je spodletelo"
+#~ msgstr "Nalaganje namizja Scarecrow 3 je spodletelo"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Nalaganje namizja GNOME 3 je spodletelo, zato je namizje <i>povrnjeno na  "
+#~ "Nalaganje namizja Scarecrow 3 je spodletelo, zato je namizje <i>povrnjeno na  "
 #~ "delujočo različico</i>.\n"
 #~ "\n"
 #~ "Napaka običajno pomeni, da grafična strojna oprema ali gonilnik ni "
-#~ "primeren za zagon namizja GNOME 3 v polnem grafičnem načinu."
+#~ "primeren za zagon namizja Scarecrow 3 v polnem grafičnem načinu."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Več podrobnosti o namizju GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Več podrobnosti o namizju Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

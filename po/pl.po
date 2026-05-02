@@ -39,12 +39,12 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Ta sesja loguje użytkownika do środowiska GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Ta sesja loguje użytkownika do środowiska Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "Pusta sesja GNOME"
+msgstr "Pusta sesja Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -240,8 +240,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Wyłącza sprawdzanie przyspieszenia sprzętowego"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — menedżer sesji środowiska GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — menedżer sesji środowiska Scarecrow"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"

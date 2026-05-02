@@ -231,7 +231,7 @@ msgstr "ku buri Ifashayinjira"
 #: gnome-session/gsm-gsd.c:41
 #, fuzzy
 msgid ""
-"There was an error starting the GNOME Settings Daemon.\n"
+"There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
 "Some things, such as themes, sounds, or background settings may not work "
 "correctly."
@@ -325,7 +325,7 @@ msgstr "Igihe Tegereza kugirango Kuri 0"
 #, fuzzy, c-format
 msgid ""
 "Could not look up internet address for %s.\n"
-"This will prevent GNOME from operating correctly.\n"
+"This will prevent Scarecrow from operating correctly.\n"
 "It may be possible to correct the problem by adding\n"
 "%s to the file /etc/hosts."
 msgstr ""

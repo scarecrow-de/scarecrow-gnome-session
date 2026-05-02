@@ -31,8 +31,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Ova sesija vas prijavljuje u GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Ova sesija vas prijavljuje u Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -229,8 +229,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Onemogući provjeru hardverskog ubrzanja"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOME upravitelj sesijama"
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow upravitelj sesijama"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"
@@ -427,5 +427,5 @@ msgstr "Sesija naziva \"%s\" već postoji"
 #~ msgid "_Name:"
 #~ msgstr "_Naziv:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Ova sesija prijavljuje vas u GNOME, upotrebom Waylanda"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Ova sesija prijavljuje vas u Scarecrow, upotrebom Waylanda"

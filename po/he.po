@@ -36,12 +36,12 @@ msgstr "‏GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "הפעלה זאת מחברת אותך לשולחן העבודה GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "הפעלה זאת מחברת אותך לשולחן העבודה Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "‏דימוי של GNOME"
+msgstr "‏דימוי של Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -246,9 +246,9 @@ msgid "Disable hardware acceleration check"
 msgstr "Disable hardware acceleration check"
 
 #: gnome-session/main.c:433
-#| msgid " - the GNOME session manager"
-msgid " — the GNOME session manager"
-msgstr " — the GNOME session manager"
+#| msgid " - the Scarecrow session manager"
+msgid " — the Scarecrow session manager"
+msgstr " — the Scarecrow session manager"
 
 #: tools/gnome-session-ctl.c:244
 msgid "Start gnome-session-shutdown.target"
@@ -417,8 +417,8 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 #~ msgid "_Name:"
 #~ msgstr "_שם:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "הפעלה זאת מחברת אותך לשולחן העבודה GNOME, באמצעות Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "הפעלה זאת מחברת אותך לשולחן העבודה Scarecrow, באמצעות Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "בחירת פקודה"
@@ -618,22 +618,22 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 #~ msgstr "הסמל '%s' לא נמצא"
 
 #~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "טעינת GNOME 3 נכשלה"
+#~ msgstr "טעינת Scarecrow 3 נכשלה"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "לרוע המזל הפעלת GNOME 3 כראוי נכשלה ובמקום זאת הופעל <b>מצב השחזור</b>.\n"
+#~ "לרוע המזל הפעלת Scarecrow 3 כראוי נכשלה ובמקום זאת הופעל <b>מצב השחזור</b>.\n"
 #~ "\n"
 #~ "תקלה זו אירעה כפי הנראה כיוון שהמערכת שלך (או מנהל ההתקן של חומרת הגרפיקה "
-#~ "שלך) אינה מסוגלת להפעיל את חווית GNOME 3 במלואה."
+#~ "שלך) אינה מסוגלת להפעיל את חווית Scarecrow 3 במלואה."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "מידע נוסף על אודות GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "מידע נוסף על אודות Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -686,7 +686,7 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 #~ msgid "Kill session"
 #~ msgstr "Kill session"
 
-#~ msgid "Classic GNOME"
+#~ msgid "Classic Scarecrow"
 #~ msgstr "GNOME קלסי"
 
 #~ msgid "Window Manager"
@@ -777,8 +777,8 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 #~ "lose work."
 #~ msgstr "ממתין לסיום תוכנית. הפרעה לתוכנית עלולה לגרום לאיבוד העבודה שלך."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME Splash Screen"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow Splash Screen"
 
 #~ msgid "GNOME Splash Screen"
 #~ msgstr "GNOME Splash Screen"
@@ -804,7 +804,7 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 #~ msgstr "עוטף רישומי ה־AT SPI"
 
 #~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "מסייע מנוע ההגדרות של GNOME"
+#~ msgstr "מסייע מנוע ההגדרות של Scarecrow"
 
 #~ msgid "The name of the startup program cannot be empty"
 #~ msgstr "שם פקודת ההפעלה לא יכול להיות ריק"
@@ -855,8 +855,8 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 #~ msgid "Play logout sound instead of login"
 #~ msgstr "Play logout sound instead of login"
 
-#~ msgid "- GNOME login/logout sound"
-#~ msgstr "- GNOME login/logout sound"
+#~ msgid "- Scarecrow login/logout sound"
+#~ msgstr "- Scarecrow login/logout sound"
 
 #~ msgid "Allow TCP connections"
 #~ msgstr "Allow TCP connections"
@@ -933,12 +933,12 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 #~ msgstr "מצב"
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "ארעה שגיאה בהפעלת תהליך השירות של הגדרות GNOME.\n"
+#~ "ארעה שגיאה בהפעלת תהליך השירות של הגדרות Scarecrow.\n"
 #~ "\n"
 #~ "כמה דברים, כמו הגדרות ערכות נושא, צלילים, או רקעים עלולים לא לפעול כראוי."
 
@@ -1014,12 +1014,12 @@ msgstr "כבר קיימת הפעלה בשם „%s”"
 
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "לא הצלחתי למצוא את כתובת האינטרנט: %s.\n"
-#~ "זה ימנע מ GNOME לעבוד כנדרש.\n"
+#~ "זה ימנע מ Scarecrow לעבוד כנדרש.\n"
 #~ "ייתכן וכל הנדרש לתיקון הבעיה הוא הוספת\n"
 #~ "%s לקובץ /etc/hosts."
 

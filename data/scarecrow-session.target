@@ -1,0 +1,13 @@
+[Unit]
+Description=GNOME Session
+DefaultDependencies=no
+RefuseManualStart=yes
+RefuseManualStop=yes
+
+BindsTo=graphical-session.target
+Before=graphical-session.target
+
+# scarecrow-session-monitor.service will quit with the session leader process
+# scarecrow-session.target pulls in graphical-session.target
+BindsTo=scarecrow-session-monitor.service
+After=scarecrow-session-monitor.service

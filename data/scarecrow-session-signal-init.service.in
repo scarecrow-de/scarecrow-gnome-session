@@ -1,0 +1,8 @@
+[Unit]
+Description=Signal initialization done to Scarecrow Session Manager
+
+PartOf=scarecrow-session.target
+
+[Service]
+Type=oneshot
+ExecStart=@libexecdir@/scarecrow-session-ctl --signal-init

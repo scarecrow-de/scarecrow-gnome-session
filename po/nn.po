@@ -100,8 +100,8 @@ msgstr "GNOME"
 
 #
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Denne økta loggar inn i GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Denne økta loggar inn i Scarecrow"
 
 #: ../data/gsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
@@ -413,11 +413,11 @@ msgstr "GNOME 3 klarte ikkje starta"
 
 #: ../gnome-session/gsm-manager.c:1387
 msgid ""
-"Unfortunately GNOME 3 failed to start properly and started in the "
+"Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
 "\n"
 "This most likely means your system (graphics hardware or driver) is not "
-"capable of delivering the full GNOME 3 experience."
+"capable of delivering the full Scarecrow 3 experience."
 msgstr ""
 "GNOME 3 klarte ikkje starta skikkeleg, og køyrer <i>reserveløysinga.</i>.\n"
 "\n"
@@ -425,8 +425,8 @@ msgstr ""
 "GNOME 3."
 
 #: ../gnome-session/gsm-manager.c:1389
-msgid "Learn more about GNOME 3"
-msgstr "Lær meir om GNOME 3"
+msgid "Learn more about Scarecrow 3"
+msgstr "Lær meir om Scarecrow 3"
 
 #: ../gnome-session/gsm-manager.c:1486 ../gnome-session/gsm-manager.c:2255
 msgid "Not responding"
@@ -498,8 +498,8 @@ msgid "Show the fail whale dialog for testing"
 msgstr "Vis feilvindauget for testing"
 
 #: ../gnome-session/main.c:303
-msgid " - the GNOME session manager"
-msgstr " – GNOME økthandsamar"
+msgid " - the Scarecrow session manager"
+msgstr " – Scarecrow økthandsamar"
 
 # panel/logout.c:74 panel/menu.c:5340
 #: ../tools/gnome-session-quit.c:52
@@ -531,7 +531,7 @@ msgid "Program called with conflicting options"
 msgstr "Programmet vart kalla med motstridande alternativ"
 
 #~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "Hjelpar til GNOME innstillingsnisse"
+#~ msgstr "Hjelpar til Scarecrow innstillingsnisse"
 
 # gsm/save-session.c:42
 #~| msgid "Kill session"
@@ -661,7 +661,7 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 
 # gsm/session-properties-capplet.c:192
 #~| msgid "Show the splash screen"
-#~ msgid "- GNOME Splash Screen"
+#~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "- Oppstartskjerm"
 
 #~ msgid "GNOME Splash Screen"
@@ -813,12 +813,12 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgstr "Tilstand"
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "Ein feil oppstod då programmet som styrer instillingane i GNOME vart "
+#~ "Ein feil oppstod då programmet som styrer instillingane i Scarecrow vart "
 #~ "starta.\n"
 #~ "\n"
 #~ "Somme ting, slik som drakt, lydar og bakgrunnsinnstillingar vil kanskje "
@@ -873,32 +873,32 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgstr "Kunne ikkje finna program %s i økta\n"
 
 #~ msgid ""
-#~ "The GNOME session manager cannot start properly.  Please report this as a "
+#~ "The Scarecrow session manager cannot start properly.  Please report this as a "
 #~ "GNOME bug. Please include this ICE failure message in the bug report:  "
 #~ "'%s'.  Meanwhile you could try logging in using the failsafe session."
 #~ msgstr ""
-#~ "Sesjonshandsamar for GNOME kan ikkje startast. Vennligst rapportar dette "
+#~ "Sesjonshandsamar for Scarecrow kan ikkje startast. Vennligst rapportar dette "
 #~ "som ein feil. Ta med denne feilmeldinga frå ICE i rapporten: «%s». I "
 #~ "mellomtida kan du logge inn med feilsikker økt."
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to lock the file '%s'.  Please "
-#~ "report this as a GNOME bug.  Sometimes this error may occur if the file's "
+#~ "The Scarecrow session manager was unable to lock the file '%s'.  Please "
+#~ "report this as a Scarecrow bug.  Sometimes this error may occur if the file's "
 #~ "directory is unwritable, you could try logging in via the failsafe "
 #~ "session and ensuring that it is."
 #~ msgstr ""
-#~ "Sesjonshandsamar for GNOME klarte ikkje å låse fila '%s'. Vennligst "
-#~ "rapportar dette som ein feili GNOME. Nokon gong oppstår denne feilen når "
+#~ "Sesjonshandsamar for Scarecrow klarte ikkje å låse fila '%s'. Vennligst "
+#~ "rapportar dette som ein feili Scarecrow. Nokon gong oppstår denne feilen når "
 #~ "filens mappe ikkje er skrivbar, du kan prøve å logge inn via ein "
 #~ "feilsikker økt for å forsikre deg om at den er skrivbar."
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to read the file: '%s'.  If this "
-#~ "file exists it must be readable by you for GNOME to work properly.  Try "
+#~ "The Scarecrow session manager was unable to read the file: '%s'.  If this "
+#~ "file exists it must be readable by you for Scarecrow to work properly.  Try "
 #~ "logging in with the failsafe session and removing this file."
 #~ msgstr ""
-#~ "Sesjonshandsamar for GNOME klarte ikkje å lesa fila '%s'. Viss denne fila "
-#~ "eksisterer, så må den vera lesbar av deg, for at GNOME skal fungere "
+#~ "Sesjonshandsamar for Scarecrow klarte ikkje å lesa fila '%s'. Viss denne fila "
+#~ "eksisterer, så må den vera lesbar av deg, for at Scarecrow skal fungere "
 #~ "ordentlig. Prøv og logg med ein feilsikker økt og fjern denne fila."
 
 #~ msgid ""
@@ -906,7 +906,7 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ "GNOME to function properly.  Try logging in with the failsafe session and "
 #~ "removing this file.  Also make sure that the file's directory is writable."
 #~ msgstr ""
-#~ "Kan ikkje skriva til '%s'. Denne fila må vera skrivbar for at GNOME skal "
+#~ "Kan ikkje skriva til '%s'. Denne fila må vera skrivbar for at Scarecrow skal "
 #~ "fungere ordentlig. Prøv og logg med ein feilsikker økt og fjern denne "
 #~ "fila. Sjekk òg at filens mappe er skrivbar."
 
@@ -982,12 +982,12 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 # gsm/gnome-login-check.c:344
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "Kunne ikkje slå opp internett-adressa for %s.\n"
-#~ "Dette vil hindre GNOME i å virka ordentleg.\n"
+#~ "Dette vil hindre Scarecrow i å virka ordentleg.\n"
 #~ "Det er mogleg å retta opp problemet ved å leggja\n"
 #~ "til %s i fila /etc/hosts."
 
@@ -1045,8 +1045,8 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "could not connect to the session manager\n"
 #~ msgstr "kunne ikkje kopla til økthandsamaren\n"
 
-#~ msgid "session manager does not support GNOME extensions\n"
-#~ msgstr "økthandsamaren støttar ikkje GNOME-utvidelser\n"
+#~ msgid "session manager does not support Scarecrow extensions\n"
+#~ msgstr "økthandsamaren støttar ikkje Scarecrow-utvidelser\n"
 
 #~ msgid "Remove the currently selected client from the session."
 #~ msgstr "Fjern den valde klienten frå økta."

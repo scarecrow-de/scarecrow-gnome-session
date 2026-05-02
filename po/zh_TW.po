@@ -42,8 +42,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "這個工作階段讓您登入 GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "這個工作階段讓您登入 Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -233,8 +233,8 @@ msgid "Disable hardware acceleration check"
 msgstr "停用硬體加速檢查"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOME 工作階段管理員"
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow 工作階段管理員"
 
 #: tools/gnome-session-ctl.c:244
 msgid "Start gnome-session-shutdown.target"
@@ -381,8 +381,8 @@ msgstr "已存在名為「%s」的工作階段"
 #~ msgid "_Name:"
 #~ msgstr "名稱(_N):"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "這個作業階段讓您登入 GNOME，使用 Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "這個作業階段讓您登入 Scarecrow，使用 Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "選擇指令"
@@ -554,18 +554,18 @@ msgstr "已存在名為「%s」的工作階段"
 #~ msgstr "GNOME 3 無法載入"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "很不幸的 GNOME 3 無法正常啟動而必須以<i>後備模式</i>啟動。\n"
+#~ "很不幸的 Scarecrow 3 無法正常啟動而必須以<i>後備模式</i>啟動。\n"
 #~ "\n"
-#~ "這通常代表您的系統 (圖形硬體或驅動程式) 無法完整呈現 GNOME 3 的體驗。"
+#~ "這通常代表您的系統 (圖形硬體或驅動程式) 無法完整呈現 Scarecrow 3 的體驗。"
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "獲取更多有關 GNOME 3 的資訊"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "獲取更多有關 Scarecrow 3 的資訊"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

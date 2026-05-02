@@ -88,8 +88,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Ушбу сеанс GNOME'га киришингизни таъминлайди"
+msgid "This session logs you into Scarecrow"
+msgstr "Ушбу сеанс Scarecrow'га киришингизни таъминлайди"
 
 #: ../data/gnome-session.schemas.in.h:1
 msgid "Default session"
@@ -466,12 +466,12 @@ msgid "Do not load user-specified applications"
 msgstr "Фойдаланувчи дастурлари ишга туширилмасин"
 
 #: ../gnome-session/main.c:528
-msgid " - the GNOME session manager"
-msgstr " - GNOME сеанс бошқарувчиси"
+msgid " - the Scarecrow session manager"
+msgstr " - Scarecrow сеанс бошқарувчиси"
 
 #: ../splash/gnome-session-splash.c:315
-msgid "- GNOME Splash Screen"
-msgstr "- GNOME сплэш ойнаси"
+msgid "- Scarecrow Splash Screen"
+msgstr "- Scarecrow сплэш ойнаси"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
 msgid "GNOME Splash Screen"

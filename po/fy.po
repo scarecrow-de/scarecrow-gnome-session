@@ -81,7 +81,7 @@ msgid "GNOME"
 msgstr "Gnome"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Dizze sesje meld jo oan by Gnome"
 
 #: ../data/gsm-inhibit-dialog.ui.h:1
@@ -376,11 +376,11 @@ msgstr "Gnome 3 koe net laden wurde"
 
 #: ../gnome-session/gsm-manager.c:1333
 msgid ""
-"Unfortunately GNOME 3 failed to start properly and started in the "
+"Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
 "\n"
 "This most likely means your system (graphics hardware or driver) is not "
-"capable of delivering the full GNOME 3 experience."
+"capable of delivering the full Scarecrow 3 experience."
 msgstr ""
 "Spitigernôch is Gnome 3 net goed starte en begjint no in de <i>weromfal "
 "modus</i>.\n"
@@ -389,7 +389,7 @@ msgstr ""
 "stjoerprogramma) net de hiele Gnome 3 ûnderfining kin bringe."
 
 #: ../gnome-session/gsm-manager.c:1335
-msgid "Learn more about GNOME 3"
+msgid "Learn more about Scarecrow 3"
 msgstr "Mear ynformaasje oer Gnome 3"
 
 #: ../gnome-session/gsm-manager.c:1432 ../gnome-session/gsm-manager.c:2156
@@ -435,7 +435,7 @@ msgid "Do not load user-specified applications"
 msgstr "Net troch de brûker oantsjutte programma's lade"
 
 #: ../gnome-session/main.c:300
-msgid " - the GNOME session manager"
+msgid " - the Scarecrow session manager"
 msgstr " - de Gnome sesjebehearder"
 
 #: ../tools/gnome-session-quit.c:52
@@ -587,8 +587,8 @@ msgstr "Programma oanroppen mei stridige opsjes"
 #~ "Wachtsjen op beëinigjen fan applikaasje.  Ûnderbrekken fan de applikaasje "
 #~ "kin jo wurk kwyt meitsje."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME Splash-skerm"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow Splash-skerm"
 
 #~ msgid "GNOME Splash Screen"
 #~ msgstr "GNOME Splash-skerm"
@@ -605,11 +605,11 @@ msgstr "Programma oanroppen mei stridige opsjes"
 #~ msgid "GNOME Settings Daemon Helper"
 #~ msgstr "GNOME Ynstellings Demon Behearder"
 
-#~ msgid "Failsafe GNOME"
-#~ msgstr "Mislearfeiliche GNOME"
+#~ msgid "Failsafe Scarecrow"
+#~ msgstr "Mislearfeiliche Scarecrow"
 
-#~ msgid "This session logs you into GNOME without user applications"
-#~ msgstr "Dizze sesje meld jo oan yn GNOME sûnder brûker applikaasjes"
+#~ msgid "This session logs you into Scarecrow without user applications"
+#~ msgstr "Dizze sesje meld jo oan yn Scarecrow sûnder brûker applikaasjes"
 
 #~ msgid ""
 #~ "If enabled, gnome-session will save the session automatically. Otherwise, "

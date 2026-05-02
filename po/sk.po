@@ -43,13 +43,13 @@ msgstr "GNOME"
 # desktop entry comment
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Táto relácia vás prihlási do GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Táto relácia vás prihlási do Scarecrow"
 
 # desktop entry name
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "Fingované GNOME"
+msgstr "Fingované Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -264,8 +264,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Zakáže kontrolu hardvérovej akcelerácie"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — správca relácie GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — správca relácie Scarecrow"
 
 #: tools/gnome-session-ctl.c:244
 msgid "Start gnome-session-shutdown.target"
@@ -436,8 +436,8 @@ msgstr "Relácia s názvom „%s“ už existuje"
 #~ msgstr "_Názov:"
 
 # desktop entry comment
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Táto relácia vás prihlási do GNOME s použitím protokolu Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Táto relácia vás prihlási do Scarecrow s použitím protokolu Wayland"
 
 # titulok okna
 #~ msgid "Select Command"

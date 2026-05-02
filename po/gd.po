@@ -35,12 +35,12 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Clàraidh an seisean seo a-steach gu GNOME thu"
+msgid "This session logs you into Scarecrow"
+msgstr "Clàraidh an seisean seo a-steach gu Scarecrow thu"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "Caochag GNOME"
+msgstr "Caochag Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -218,8 +218,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Cuir an dearbhadh air luathachadh a’ bhathair-chruaidh à comas"
 
 #: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " – manaidsear nan seisean GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " – manaidsear nan seisean Scarecrow"
 
 #: tools/gnome-session-inhibit.c:108
 #, c-format
@@ -373,8 +373,8 @@ msgstr "Tha seisean air a bheil “%s” ann mu thràth"
 #~ msgid "Choose what applications to start when you log in"
 #~ msgstr "Tagh na prògraman a thèid a ruith nuair a nì thu clàradh a-steach"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Clàraidh an seisean seo a-steach gu GNOME thu a'cleachdadh Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Clàraidh an seisean seo a-steach gu Scarecrow thu a'cleachdadh Wayland"
 
 #~ msgid "File is not a valid .desktop file"
 #~ msgstr "Chan eil am faidhle seo na fhaidhle .desktop dligheach"
@@ -542,11 +542,11 @@ msgstr "Tha seisean air a bheil “%s” ann mu thràth"
 #~ "A' feitheamh son prògraman a chrìochnach. Dh'fhaodadh tu caill d'obair le "
 #~ "a bhith a' cuir stad air na prògraman seo."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Ionnsaich barrachd mu dheidhinn GNOME"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Ionnsaich barrachd mu dheidhinn Scarecrow"
 
 #~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "Dh'fhàillig GNOME 3 luchdadh"
+#~ msgstr "Dh'fhàillig Scarecrow 3 luchdadh"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -555,14 +555,14 @@ msgstr "Tha seisean air a bheil “%s” ann mu thràth"
 #~ "ceangal ris an fhrithealaiche X"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Gu mì-fhortanach dh'fhàillig GNOME 3 tòiseachadh ceart agus thòisich e "
+#~ "Gu mì-fhortanach dh'fhàillig Scarecrow 3 tòiseachadh ceart agus thòisich e "
 #~ "ann an <i>modh cùl-taic</i>.\n"
 #~ "\n"
 #~ "Tha seo ciallachadh gu mòr nach eil do shiostam ( bathar-chruaidh "
-#~ "grafaichean no dràibhear) an comas lìbhrigeadh làn blas GNOME 3."
+#~ "grafaichean no dràibhear) an comas lìbhrigeadh làn blas Scarecrow 3."

@@ -41,8 +41,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Šī sesija ieraksta jūs GNOME vidē"
+msgid "This session logs you into Scarecrow"
+msgstr "Šī sesija ieraksta jūs Scarecrow vidē"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -196,7 +196,7 @@ msgid "Running as systemd service"
 msgstr "Darbina kā systemd pakalpojumu"
 
 #: gnome-session/main.c:391
-#| msgid " — the GNOME session manager"
+#| msgid " — the Scarecrow session manager"
 msgid "Use systemd session management"
 msgstr "Izmantot systemd sesiju pārvaldību"
 
@@ -238,8 +238,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Izslēgt aparatūras paātrinājuma pārbaudi"
 
 #: gnome-session/main.c:433
-msgid " — the GNOME session manager"
-msgstr " — GNOME sesiju pārvaldnieks"
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow sesiju pārvaldnieks"
 
 #: tools/gnome-session-ctl.c:244
 msgid "Start gnome-session-shutdown.target"

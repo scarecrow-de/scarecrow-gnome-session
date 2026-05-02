@@ -1,0 +1,3 @@
+[io.github.scarecrow-de.SessionManager]
+auto-save-session = /apps/scarecrow-session/options/auto_save_session
+logout-prompt = /apps/scarecrow-session/options/logout_prompt

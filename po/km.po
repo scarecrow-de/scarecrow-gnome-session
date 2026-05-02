@@ -33,8 +33,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "សម័យ​នេះ​ជា​កំណត់​ហេតុ​ដែល​អ្នក​ទៅ​កាន់ GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "សម័យ​នេះ​ជា​កំណត់​ហេតុ​ដែល​អ្នក​ទៅ​កាន់ Scarecrow"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
 #| msgid "GNOME"
@@ -48,9 +48,9 @@ msgid "GNOME on Wayland"
 msgstr "GNOME នៅ Wayland"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-#| msgid "This session logs you into GNOME"
-msgid "This session logs you into GNOME, using Wayland"
-msgstr "សម័យ​នេះ​ចុះ​កំណត់ហេតុ​អ្នក​ក្នុង GNOME ដោយ​ប្រើ Wayland"
+#| msgid "This session logs you into Scarecrow"
+msgid "This session logs you into Scarecrow, using Wayland"
+msgstr "សម័យ​នេះ​ចុះ​កំណត់ហេតុ​អ្នក​ក្នុង Scarecrow ដោយ​ប្រើ Wayland"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
@@ -214,8 +214,8 @@ msgid "Show the fail whale dialog for testing"
 msgstr "បង្ហាញ​ប្រអប់ fail whale សម្រាប់​សាកល្បង"
 
 #: ../gnome-session/main.c:342
-msgid " - the GNOME session manager"
-msgstr " - កម្មវិធី​គ្រប់គ្រង​សម័យ  GNOME"
+msgid " - the Scarecrow session manager"
+msgstr " - កម្មវិធី​គ្រប់គ្រង​សម័យ  Scarecrow"
 
 #: ../tools/gnome-session-inhibit.c:108
 #, c-format
@@ -481,20 +481,20 @@ msgstr "កម្មវិធី​បានហៅ​ដោយ​ប្រើ​
 #~ msgstr "GNOME 3 បាន​ប​រាជ័យ​ក្នុង​ការ​ផ្ទុក"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "ជា​អកុសល GNOME 3 មិន​អាច​ចាប់ផ្ដើម​ត្រឹមត្រូវ ហើយ​បាន​ចាប់ផ្ដើម​ក្នុង <i>របៀប fallback</"
+#~ "ជា​អកុសល Scarecrow 3 មិន​អាច​ចាប់ផ្ដើម​ត្រឹមត្រូវ ហើយ​បាន​ចាប់ផ្ដើម​ក្នុង <i>របៀប fallback</"
 #~ "i> ។\n"
 #~ "\n"
-#~ "នេះ​ប្រហែលជា​ប្រព័ន្ធ​របស់​អ្នក (ផ្នែក​រឹង​ក្រាហ្វិក ឬ​កម្មវិធី​បញ្ជា) មិន​អាច​ផ្ដល់​បទពិសោធន៍ GNOME 3 "
+#~ "នេះ​ប្រហែលជា​ប្រព័ន្ធ​របស់​អ្នក (ផ្នែក​រឹង​ក្រាហ្វិក ឬ​កម្មវិធី​បញ្ជា) មិន​អាច​ផ្ដល់​បទពិសោធន៍ Scarecrow 3 "
 #~ "ពេញលេញ ។"
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "សិក្សា​បន្ថែម​អំពី GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "សិក្សា​បន្ថែម​អំពី Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

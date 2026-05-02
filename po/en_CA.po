@@ -1,5 +1,5 @@
 # Canadian English translation of gnome-session
-# Copyright (C) 2004-2006 Adam Weinberger and the GNOME Foundation
+# Copyright (C) 2004-2006 Adam Weinberger and the Scarecrow Foundation
 # This file is distributed under the same licence as the gnome-session package.
 # Adam Weinberger <adamw@gnome.org>, 2004, 2005, 2006.
 #
@@ -228,12 +228,12 @@ msgstr "Program"
 #.
 #: ../gnome-session/gsm-gsd.c:45
 msgid ""
-"There was an error starting the GNOME Settings Daemon.\n"
+"There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
 "Some things, such as themes, sounds, or background settings may not work "
 "correctly."
 msgstr ""
-"There was an error starting the GNOME Settings Daemon.\n"
+"There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
 "Some things, such as themes, sounds, or background settings may not work "
 "correctly."
@@ -305,46 +305,46 @@ msgstr "Could not find program %s in session\n"
 #: ../gnome-session/ice.c:355
 #, c-format
 msgid ""
-"The GNOME session manager cannot start properly.  Please report this as a "
+"The Scarecrow session manager cannot start properly.  Please report this as a "
 "GNOME bug. Please include this ICE failure message in the bug report:  '%"
 "s'.  Meanwhile you could try logging in using the failsafe session."
 msgstr ""
-"The GNOME session manager cannot start properly.  Please report this as a "
+"The Scarecrow session manager cannot start properly.  Please report this as a "
 "GNOME bug. Please include this ICE failure message in the bug report:  '%"
 "s'.  Meanwhile you could try logging in using the failsafe session."
 
 #: ../gnome-session/ice.c:511
 #, c-format
 msgid ""
-"The GNOME session manager was unable to lock the file '%s'.  Please report "
-"this as a GNOME bug.  Sometimes this error may occur if the file's directory "
+"The Scarecrow session manager was unable to lock the file '%s'.  Please report "
+"this as a Scarecrow bug.  Sometimes this error may occur if the file's directory "
 "is unwritable, you could try logging in via the failsafe session and "
 "ensuring that it is."
 msgstr ""
-"The GNOME session manager was unable to lock the file '%s'.  Please report "
-"this as a GNOME bug.  Sometimes this error may occur if the file's directory "
+"The Scarecrow session manager was unable to lock the file '%s'.  Please report "
+"this as a Scarecrow bug.  Sometimes this error may occur if the file's directory "
 "is unwritable.  You could try logging in via the failsafe session and "
 "checking the directory."
 
 #: ../gnome-session/ice.c:538
 #, c-format
 msgid ""
-"The GNOME session manager was unable to read the file: '%s'.  If this file "
-"exists it must be readable by you for GNOME to work properly.  Try logging "
+"The Scarecrow session manager was unable to read the file: '%s'.  If this file "
+"exists it must be readable by you for Scarecrow to work properly.  Try logging "
 "in with the failsafe session and removing this file."
 msgstr ""
-"The GNOME session manager was unable to read the file '%s'.  If this file "
-"exists it must be readable by you for GNOME to work properly.  Try logging "
+"The Scarecrow session manager was unable to read the file '%s'.  If this file "
+"exists it must be readable by you for Scarecrow to work properly.  Try logging "
 "in with the failsafe session and removing this file."
 
 #: ../gnome-session/ice.c:583
 #, c-format
 msgid ""
-"Could not write to file '%s'.  This file must be writable in order for GNOME "
+"Could not write to file '%s'.  This file must be writable in order for Scarecrow "
 "to function properly.  Try logging in with the failsafe session and removing "
 "this file.  Also make sure that the file's directory is writable."
 msgstr ""
-"Could not write to file '%s'.  This file must be writable in order for GNOME "
+"Could not write to file '%s'.  This file must be writable in order for Scarecrow "
 "to function properly.  Try logging in with the failsafe session and removing "
 "this file.  Also make sure that the file's directory is writable."
 
@@ -451,12 +451,12 @@ msgstr "_Adjust the Clock"
 #, c-format
 msgid ""
 "Could not look up internet address for %s.\n"
-"This will prevent GNOME from operating correctly.\n"
+"This will prevent Scarecrow from operating correctly.\n"
 "It may be possible to correct the problem by adding\n"
 "%s to the file /etc/hosts."
 msgstr ""
 "Could not look up internet address for %s.\n"
-"This will prevent GNOME from operating correctly.\n"
+"This will prevent Scarecrow from operating correctly.\n"
 "It may be possible to correct the problem by adding\n"
 "%s to the file /etc/hosts."
 
@@ -469,8 +469,8 @@ msgid "Try Again"
 msgstr "Try Again"
 
 #: ../gnome-session/main.c:696
-msgid "- Manage the GNOME session"
-msgstr "- Manage the GNOME session"
+msgid "- Manage the Scarecrow session"
+msgstr "- Manage the Scarecrow session"
 
 #: ../gnome-session/manager.c:513
 msgid "Wait abandoned due to conflict."
@@ -573,8 +573,8 @@ msgstr "could not connect to the session manager\n"
 
 #: ../gnome-session/session-properties-capplet.c:509
 #, c-format
-msgid "session manager does not support GNOME extensions\n"
-msgstr "session manager does not support GNOME extensions\n"
+msgid "session manager does not support Scarecrow extensions\n"
+msgstr "session manager does not support Scarecrow extensions\n"
 
 #: ../gnome-session/session-properties.c:51
 msgid "Remove the currently selected client from the session."

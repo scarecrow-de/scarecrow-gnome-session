@@ -87,19 +87,19 @@ msgstr "AT SPI обвиткувач на регистри"
 
 #: ../compat/gnome-keyring-daemon-wrapper.desktop.in.in.in.h:1
 msgid "GNOME Keyring Daemon Wrapper"
-msgstr "Обвивка на демонот за приврзоци на GNOME "
+msgstr "Обвивка на демонот за приврзоци на Scarecrow "
 
 #: ../compat/gnome-settings-daemon-helper.desktop.in.in.in.h:1
 msgid "GNOME Settings Daemon Helper"
-msgstr "Помагач за демонот за поставување на GNOME"
+msgstr "Помагач за демонот за поставување на Scarecrow"
 
 #: ../data/gnome.desktop.in.h:1
 msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Оваа сесија Ве најавува во GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Оваа сесија Ве најавува во Scarecrow"
 
 #: ../data/gnome-session.schemas.in.h:1
 msgid "Default session"
@@ -153,7 +153,7 @@ msgstr "Панел"
 msgid "Preferred Image to use for login splash screen"
 msgstr ""
 "Преферирана слика која ќе се користи за поздравниот екран при најава во "
-"работната околина GNOME"
+"работната околина Scarecrow"
 
 #: ../data/gnome-session.schemas.in.h:10
 msgid "Required session components"
@@ -533,16 +533,16 @@ msgid "Do not load user-specified applications"
 msgstr "Не вчитувај апликации одредени од корисникот"
 
 #: ../gnome-session/main.c:521
-msgid " - the GNOME session manager"
-msgstr "- Менаџер за сесии за GNOME"
+msgid " - the Scarecrow session manager"
+msgstr "- Менаџер за сесии за Scarecrow"
 
 #: ../splash/gnome-session-splash.c:291
-msgid "- GNOME Splash Screen"
-msgstr "- Поздравен екран за GNOME"
+msgid "- Scarecrow Splash Screen"
+msgstr "- Поздравен екран за Scarecrow"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
 msgid "GNOME Splash Screen"
-msgstr "Поздравен екран за GNOME"
+msgstr "Поздравен екран за Scarecrow"
 
 #: ../tools/gnome-session-save.c:65
 msgid "Set the current session name"

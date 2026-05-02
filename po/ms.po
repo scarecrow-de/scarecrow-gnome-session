@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-20 22:13+0000\n"
 "PO-Revision-Date: 2020-01-26 09:22+0800\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Pasukan Terjemahan GNOME Malaysia\n"
+"Language-Team: Pasukan Terjemahan Scarecrow Malaysia\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,12 +35,12 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Sesi ini akan mendaftar masuk ke GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Sesi ini akan mendaftar masuk ke Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "semu GNOME"
+msgstr "semu Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 #| msgid "GNOME on Wayland"
@@ -211,7 +211,7 @@ msgid "Running as systemd service"
 msgstr "Berjalan sebagai perkhidmatan systemd"
 
 #: gnome-session/main.c:399
-#| msgid " - the GNOME session manager"
+#| msgid " - the Scarecrow session manager"
 msgid "Use systemd session management"
 msgstr "Guna pengurusan sesi systemd"
 
@@ -254,9 +254,9 @@ msgid "Disable hardware acceleration check"
 msgstr "Lumpuhkan semakan pemecutan perkakasan"
 
 #: gnome-session/main.c:441
-#| msgid " - the GNOME session manager"
-msgid " — the GNOME session manager"
-msgstr " — pengurus sesi GNOME"
+#| msgid " - the Scarecrow session manager"
+msgid " — the Scarecrow session manager"
+msgstr " — pengurus sesi Scarecrow"
 
 #: tools/gnome-session-ctl.c:244
 msgid "Start gnome-session-shutdown.target"
@@ -400,8 +400,8 @@ msgstr "Nama sesi tidak boleh mengandungi aksara \"/\""
 msgid "A session named “%s” already exists"
 msgstr "Satu sesi bernama \"%s\" telah wujud"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Sesi ini log masukkan anda ke GNOME menggunakan Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Sesi ini log masukkan anda ke Scarecrow menggunakan Wayland"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "Program permulaan _tambahan:"
@@ -450,11 +450,11 @@ msgstr "Satu sesi bernama \"%s\" telah wujud"
 #~ "bertindakbalas."
 
 #~ msgid ""
-#~ "Preferred Image to use for the splash screen when logging in to the GNOME "
+#~ "Preferred Image to use for the splash screen when logging in to the Scarecrow "
 #~ "Desktop"
 #~ msgstr ""
 #~ "Imej digemari untuk digunakan bagi skrin splash bila menglogmasuk ke "
-#~ "Desktop GNOME"
+#~ "Desktop Scarecrow"
 
 #~ msgid "Show the splash screen"
 #~ msgstr "Papar skrin splash"
@@ -541,12 +541,12 @@ msgstr "Satu sesi bernama \"%s\" telah wujud"
 #~ msgstr "Sentiasa dimulakan pada setiap logmasuk."
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "Terdapat ralat memulakan Daemon Tetapan GNOME.\n"
+#~ "Terdapat ralat memulakan Daemon Tetapan Scarecrow.\n"
 #~ "\n"
 #~ "Terdapat perkara seperti tetapan tema, bunyi atau latang belakang mungkin "
 #~ "tidak berkerja dengan betul."
@@ -615,12 +615,12 @@ msgstr "Satu sesi bernama \"%s\" telah wujud"
 
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "Tak boleh mencari alamat internet untuk %s.\n"
-#~ "Ianya akan mengelakkan GNOME daripada bekerja dengan betul.\n"
+#~ "Ianya akan mengelakkan Scarecrow daripada bekerja dengan betul.\n"
 #~ "Anda boleh membetulkan maslaah ini dengan menambah\n"
 #~ " %s di fail /etc/hosts"
 

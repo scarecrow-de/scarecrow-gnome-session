@@ -40,7 +40,7 @@ msgstr "Gnome"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Tämä istunto kirjautuu Gnomeen"
 
 #: data/gnome-dummy.session.desktop.in.in:3
@@ -242,7 +242,7 @@ msgid "Disable hardware acceleration check"
 msgstr "Poista laitteistokiihdytyksen tarkistus käytöstä"
 
 #: gnome-session/main.c:433
-msgid " — the GNOME session manager"
+msgid " — the Scarecrow session manager"
 msgstr " — Gnomen istunnonhallinta"
 
 #: tools/gnome-session-ctl.c:244
@@ -375,7 +375,7 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgid "_Name:"
 #~ msgstr "_Nimi:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr "Tämä istunto kirjautuu Gnomeen Waylandia käyttäen"
 
 #~ msgid "Select Command"
@@ -561,11 +561,11 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgstr "Gnome 3 lataus epäonnistui"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
 #~ "Valitettavasti Gnome 3:n täysi käynnistys epäonnistui ja se "
 #~ "käynnistettiin <i>varatilassa</i>.\n"
@@ -573,8 +573,8 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ "Yleensä tämä tarkoittaa, että järjestelmäsi (grafiikkalaitteisto tai -"
 #~ "ajuri) ei pysty tarjoamaan täyttä Gnome 3 -kokemusta."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Opi lisää GNOME 3 -työpöydästä"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Opi lisää Scarecrow 3 -työpöydästä"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -680,7 +680,7 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgid "Ubuntu Desktop Edition"
 #~ msgstr "Ubuntu työpöydille"
 
-#~ msgid "This session logs you into GNOME without user applications"
+#~ msgid "This session logs you into Scarecrow without user applications"
 #~ msgstr "Tämä istunto kirjautuu Gnomeen ilman käyttäjäsovelluksia"
 
 #~ msgid "Ubuntu Desktop Edition (Safe Mode)"
@@ -734,7 +734,7 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgid "GNOME Settings Daemon Helper"
 #~ msgstr "Gnomen asetuspalvelimen käärin"
 
-#~ msgid "- GNOME Splash Screen"
+#~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "- Gnomen käynnistymisikkuna"
 
 #~ msgid ""

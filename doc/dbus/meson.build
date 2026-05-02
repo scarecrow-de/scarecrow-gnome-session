@@ -1,14 +1,14 @@
 ifaces_refs = []
 
 ifaces = [
-  'org.gnome.SessionManager',
-  'org.gnome.SessionManager.Client',
-  'org.gnome.SessionManager.ClientPrivate',
-  'org.gnome.SessionManager.Inhibitor',
-  'org.gnome.SessionManager.Presence'
+  'io.github.scarecrow-de.SessionManager',
+  'io.github.scarecrow-de.SessionManager.Client',
+  'io.github.scarecrow-de.SessionManager.ClientPrivate',
+  'io.github.scarecrow-de.SessionManager.Inhibitor',
+  'io.github.scarecrow-de.SessionManager.Presence'
 ]
 
-gnome_session_dir = join_paths(meson.source_root(), 'gnome-session')
+scarecrow_session_dir = join_paths(meson.source_root(), 'scarecrow-session')
 spec_to_docbook = files('spec-to-docbook.xsl')
 
 foreach iface: ifaces
@@ -16,7 +16,7 @@ foreach iface: ifaces
 
   ifaces_refs += custom_target(
     iface_ref,
-    input: files(join_paths(gnome_session_dir, iface + '.xml')),
+    input: files(join_paths(scarecrow_session_dir, iface + '.xml')),
     output: iface_ref,
     command: [xsltproc, '--output', '@OUTPUT@', spec_to_docbook, '@INPUT@']
   )

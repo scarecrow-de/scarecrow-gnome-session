@@ -31,8 +31,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Þessi seta skráir þig inn í GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Þessi seta skráir þig inn í Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -225,8 +225,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Gera prófun á vélbúnaðarhröðun óvirka"
 
 #: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " — GNOME setustýringin"
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow setustýringin"
 
 #: tools/gnome-session-inhibit.c:108
 #, c-format
@@ -323,8 +323,8 @@ msgstr "Heiti setu má ekki innihalda '/' stafi"
 msgid "A session named “%s” already exists"
 msgstr "Seta með heitinu '%s' er þegar til"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Þessi seta skráir þig inn í GNOME með Wayland undirkerfinu"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Þessi seta skráir þig inn í Scarecrow með Wayland undirkerfinu"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "_Önnur ræsiforrit:"
@@ -371,7 +371,7 @@ msgstr "Seta með heitinu '%s' er þegar til"
 #~ "tölvum. Endurræsa verður gnome-setuna til þess að stillingar taki gildi."
 
 #~ msgid ""
-#~ "Preferred Image to use for the splash screen when logging in to the GNOME "
+#~ "Preferred Image to use for the splash screen when logging in to the Scarecrow "
 #~ "Desktop"
 #~ msgstr ""
 #~ "Forvalin mynd til notkunar sem slembiskjá þegar skráð er inn á Gnome "
@@ -462,12 +462,12 @@ msgstr "Seta með heitinu '%s' er þegar til"
 #~ msgstr "Ræsa ávallt við hverja innskráningu."
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "Villa átti sér stað við ræsingu á GNOME stillingarforritinu.\n"
+#~ "Villa átti sér stað við ræsingu á Scarecrow stillingarforritinu.\n"
 #~ "\n"
 #~ "Hugsanlegt er að ýmsir hlutir eins og þema, hljóð eða bakgrunnur muni "
 #~ "ekki virka rétt."
@@ -533,12 +533,12 @@ msgstr "Seta með heitinu '%s' er þegar til"
 
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "Ekki tókst að flétta upp veffangi fyrir %s.\n"
-#~ "Þetta mun hindra GNOME frá því að virka rétt.\n"
+#~ "Þetta mun hindra Scarecrow frá því að virka rétt.\n"
 #~ "það er mögulegt að lagfæra vandamálið með því að\n"
 #~ "bæta %s við í skránna /etc/hosts."
 

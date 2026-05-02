@@ -38,12 +38,12 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Це — сеанс входу в GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Це — сеанс входу в Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "Несправжній GNOME"
+msgstr "Несправжній Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -238,8 +238,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Вимкнути перевіряння на апаратне прискорення"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — керування сеансом GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — керування сеансом Scarecrow"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"

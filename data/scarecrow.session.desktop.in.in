@@ -1,0 +1,4 @@
+[GNOME Session]
+Name=Scarecrow
+# Must be in sync with scarecrow-session@gnome.target.d/gnome.session.conf drop-in
+RequiredComponents=@required_components@;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=GNOME on Xorg
+Comment=This session logs you into Scarecrow
+Exec=@bindir@/scarecrow-session
+TryExec=@bindir@/scarecrow-session
+Type=Application
+DesktopNames=GNOME
+X-GDM-SessionRegisters=true

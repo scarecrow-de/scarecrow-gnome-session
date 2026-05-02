@@ -77,7 +77,7 @@ msgid "GNOME"
 msgstr "گىنوم(GNOME)"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "بۇ ئەڭگىمە سىزنى گىنومغا ئەكىرىدۇ."
 
 #: ../data/gnome-custom-session.desktop.in.h:1
@@ -439,7 +439,7 @@ msgid "Show the fail whale dialog for testing"
 msgstr "سىناش ئۈچۈن fail whale سۆزلەشكۈسىنى كۆرسىتىڭ"
 
 #: ../gnome-session/main.c:320
-msgid " - the GNOME session manager"
+msgid " - the Scarecrow session manager"
 msgstr " گىنوم(GNOME) ئەڭگىمە باشقۇرغۇچ"
 
 #: ../tools/gnome-session-inhibit.c:110
@@ -601,16 +601,16 @@ msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئ
 #~ msgstr "GNOME 3 نى يۈكلىيەلمىدى"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "ناھايىتى ئەپسۇس GNOME 3 نى توغرا يۈكلىيەلمىدى، <i>زاپاس ھالەت</i>تە "
+#~ "ناھايىتى ئەپسۇس Scarecrow 3 نى توغرا يۈكلىيەلمىدى، <i>زاپاس ھالەت</i>تە "
 #~ "قوزغاتتى."
 
-#~ msgid "Learn more about GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
 #~ msgstr "GNOME 3 ھەققىدە تېخىمۇ كۆپ ئۇچۇر"
 
 #~ msgid ""
@@ -720,11 +720,11 @@ msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئ
 #~ msgid "GNOME Settings Daemon Helper"
 #~ msgstr "GNOME تەڭشەك Daemon ياردەمچىسى"
 
-#~ msgid "Failsafe GNOME"
-#~ msgstr "بىخەتەر GNOME"
+#~ msgid "Failsafe Scarecrow"
+#~ msgstr "بىخەتەر Scarecrow"
 
-#~ msgid "This session logs you into GNOME without user applications"
-#~ msgstr "بۇ ئەڭگىمە سىزنى GNOME غا ئەكىرىدۇ، باشقا پروگرامما قوزغىتىلمايدۇ"
+#~ msgid "This session logs you into Scarecrow without user applications"
+#~ msgstr "بۇ ئەڭگىمە سىزنى Scarecrow غا ئەكىرىدۇ، باشقا پروگرامما قوزغىتىلمايدۇ"
 
 #~ msgid ""
 #~ "If enabled, gnome-session will save the session automatically. Otherwise, "
@@ -777,8 +777,8 @@ msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئ
 #~ msgid "Cannot find help."
 #~ msgstr "ياردەمنى تاپالمىدى."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME قوزغىلىش كۆزنىكى"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow قوزغىلىش كۆزنىكى"
 
 #~ msgid "GNOME Splash Screen"
 #~ msgstr "GNOME قوزغىلىش كۆزنىكى"

@@ -1,0 +1,4 @@
+#! /bin/sh
+
+scarecrow-session-selector
+exec scarecrow-session

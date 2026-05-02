@@ -34,8 +34,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Ista sesión accede a GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Ista sesión accede a Scarecrow"
 
 #: ../data/gnome-xorg.desktop.in.h:1
 #| msgid "GNOME on Wayland"
@@ -218,8 +218,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Desactivar a verificación d'acceleración hardware"
 
 #: ../gnome-session/main.c:307
-msgid " - the GNOME session manager"
-msgstr " - O chestor de sesions de GNOME"
+msgid " - the Scarecrow session manager"
+msgstr " - O chestor de sesions de Scarecrow"
 
 #: ../tools/gnome-session-inhibit.c:108
 #, c-format
@@ -319,8 +319,8 @@ msgstr "No se pudo connectar con o chestor de sesions"
 msgid "Program called with conflicting options"
 msgstr "Se clamó a lo programa con opcions en conflicto"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Ista sesión accede a lo GNOME, fendo servir o Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Ista sesión accede a lo Scarecrow, fendo servir o Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "Seleccionar comando"

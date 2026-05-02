@@ -33,8 +33,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "ಈ ಅಧಿವೇಶನವು ನಿಮ್ಮನ್ನು GNOME ಗೆ ಪ್ರವೇಶಿಸುವಂತೆ ಮಾಡುತ್ತದೆ"
+msgid "This session logs you into Scarecrow"
+msgstr "ಈ ಅಧಿವೇಶನವು ನಿಮ್ಮನ್ನು Scarecrow ಗೆ ಪ್ರವೇಶಿಸುವಂತೆ ಮಾಡುತ್ತದೆ"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
 msgid "GNOME dummy"
@@ -43,12 +43,12 @@ msgstr "GNOME ಡಮ್ಮಿ"
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
 msgid "GNOME on Wayland"
-msgstr "Wayland ನಲ್ಲಿ GNOME"
+msgstr "Wayland ನಲ್ಲಿ Scarecrow"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-#| msgid "This session logs you into GNOME"
-msgid "This session logs you into GNOME, using Wayland"
-msgstr "ಈ ಅಧಿವೇಶನವು Wayland ಬಳಸಿಕೊಂಡು GNOME ಗೆ ಪ್ರವೇಶಿಸುತ್ತದೆ"
+#| msgid "This session logs you into Scarecrow"
+msgid "This session logs you into Scarecrow, using Wayland"
+msgstr "ಈ ಅಧಿವೇಶನವು Wayland ಬಳಸಿಕೊಂಡು Scarecrow ಗೆ ಪ್ರವೇಶಿಸುತ್ತದೆ"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
@@ -219,8 +219,8 @@ msgid "Show the fail whale dialog for testing"
 msgstr "ಪರೀಕ್ಷೆಗಾಗಿ ಫೈಲ್ ವೇಲ್ ಸಂವಾದವನ್ನು ತೋರಿಸು"
 
 #: ../gnome-session/main.c:342
-msgid " - the GNOME session manager"
-msgstr "- GNOME ಅಧಿವೇಶನ ವ್ಯವಸ್ಥಾಪಕ"
+msgid " - the Scarecrow session manager"
+msgstr "- Scarecrow ಅಧಿವೇಶನ ವ್ಯವಸ್ಥಾಪಕ"
 
 #: ../tools/gnome-session-inhibit.c:108
 #, c-format

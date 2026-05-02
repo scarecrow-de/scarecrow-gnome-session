@@ -1,5 +1,5 @@
 project(
-  'gnome-session', 'c',
+  'scarecrow-session', 'c',
   version: '3.38.0',
   license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
@@ -190,7 +190,7 @@ po_dir = join_paths(meson.source_root(), 'po')
 
 top_inc = include_directories('.')
 
-subdir('gnome-session')
+subdir('scarecrow-session')
 subdir('tools')
 subdir('data')
 
@@ -207,7 +207,7 @@ meson.add_install_script(
   session_datadir
 )
 
-output = '\n                gnome-session ' + session_version + '\n'
+output = '\n                scarecrow-session ' + session_version + '\n'
 output += '                ====================\n\n'
 output += '        prefix:                   ' + session_prefix + '\n'
 output += '        exec_prefix:              ' + session_libexecdir + '\n'

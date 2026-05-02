@@ -75,8 +75,8 @@ msgstr "GNOME"
 
 # tüklü
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Bu oturım sizni GNOME'ğa içeri imzalandırır"
+msgid "This session logs you into Scarecrow"
+msgstr "Bu oturım sizni Scarecrow'ğa içeri imzalandırır"
 
 #: ../data/gnome-custom-session.desktop.in.h:1
 msgid "Custom"
@@ -454,8 +454,8 @@ msgid "Show the fail whale dialog for testing"
 msgstr "Sınama içün ciddiy hata dialoğını köster"
 
 #: ../gnome-session/main.c:320
-msgid " - the GNOME session manager"
-msgstr " - GNOME oturım idarecisi"
+msgid " - the Scarecrow session manager"
+msgstr " - Scarecrow oturım idarecisi"
 
 #: ../tools/gnome-session-inhibit.c:110
 #, c-format
@@ -578,19 +578,19 @@ msgstr "Program çatışqan ihtiyariyat ile çağırıldı"
 #~ msgstr "GNOME 3 Yüklenmekte Muvaffaqiyetsiz Edi"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Teessüf ki GNOME 3 uyğun olaraq başlayamadı ve <i>ricat tarzında</i> "
+#~ "Teessüf ki Scarecrow 3 uyğun olaraq başlayamadı ve <i>ricat tarzında</i> "
 #~ "başladı.\n"
 #~ "\n"
-#~ "Bu eñ muhtemelen sistemiñiz (grafikler donanımı yaki sürücisi) tolu GNOME "
+#~ "Bu eñ muhtemelen sistemiñiz (grafikler donanımı yaki sürücisi) tolu Scarecrow "
 #~ "3 tecribesini sunmaq içün qabiliyetli degil demektir."
 
-#~ msgid "Learn more about GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
 #~ msgstr "GNOME 3 haqqında daha çoq ögren"
 
 #~ msgid ""
@@ -747,8 +747,8 @@ msgstr "Program çatışqan ihtiyariyat ile çağırıldı"
 #~ "Programnıñ tamamlanuvı içün beklene.  Programnıñ kestirilüvi yapqan "
 #~ "olğanıñız işlerni coyuvıñızğa sebep ola bilir."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME Saçrama Ekranı"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow Saçrama Ekranı"
 
 #~ msgid "GNOME Splash Screen"
 #~ msgstr "GNOME Saçrama Ekranı"
@@ -783,13 +783,13 @@ msgstr "Program çatışqan ihtiyariyat ile çağırıldı"
 #~ msgstr "Oturım veriyoluna bağlanılamadı"
 
 # tüklü
-#~ msgid "Failsafe GNOME"
-#~ msgstr "Qusur-öñler GNOME"
+#~ msgid "Failsafe Scarecrow"
+#~ msgstr "Qusur-öñler Scarecrow"
 
 # tüklü
-#~ msgid "This session logs you into GNOME without user applications"
+#~ msgid "This session logs you into Scarecrow without user applications"
 #~ msgstr ""
-#~ "Bu oturım sizni qullanıcı uyğulamaları olmağan GNOME'ğa içeri imzalandırır"
+#~ "Bu oturım sizni qullanıcı uyğulamaları olmağan Scarecrow'ğa içeri imzalandırır"
 
 #~ msgid "Log Out of the Session"
 #~ msgstr "Oturımdan Tışarı İmzalan"
@@ -850,7 +850,7 @@ msgstr "Program çatışqan ihtiyariyat ile çağırıldı"
 
 # tüklü
 #~ msgid ""
-#~ "This session logs you into GNOME with the traditional panel without any "
+#~ "This session logs you into Scarecrow with the traditional panel without any "
 #~ "graphical effect."
 #~ msgstr ""
 #~ "Bu oturım sizni her hangi grafikiy effekti olmağan ananeviy panelli "
@@ -860,8 +860,8 @@ msgstr "Program çatışqan ihtiyariyat ile çağırıldı"
 #~ msgstr "Ubuntu Klassik (Effektler yoq)"
 
 # tüklü
-#~ msgid "This session logs you into GNOME with the traditional panel"
-#~ msgstr "Bu oturım sizni ananeviy panelli GNOME'ğa içeri imzalandırır"
+#~ msgid "This session logs you into Scarecrow with the traditional panel"
+#~ msgstr "Bu oturım sizni ananeviy panelli Scarecrow'ğa içeri imzalandırır"
 
 #~ msgid "Ubuntu Classic"
 #~ msgstr "Ubuntu Klassik"

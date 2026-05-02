@@ -82,19 +82,19 @@ msgstr "Dapamožnaja prahrama dla schovišča AT SPI"
 
 #: ../compat/gnome-keyring-daemon-wrapper.desktop.in.in.in.h:1
 msgid "GNOME Keyring Daemon Wrapper"
-msgstr "Dapamožnaja prahrama dla słužby klučnika GNOME"
+msgstr "Dapamožnaja prahrama dla słužby klučnika Scarecrow"
 
 #: ../compat/gnome-settings-daemon-helper.desktop.in.in.in.h:1
 msgid "GNOME Settings Daemon Helper"
-msgstr "Dapamožnaja prahrama dla słužby naładaŭ GNOME"
+msgstr "Dapamožnaja prahrama dla słužby naładaŭ Scarecrow"
 
 #: ../data/gnome.desktop.in.h:1
 msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Hetaja sesija ŭruchamlaje GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Hetaja sesija ŭruchamlaje Scarecrow"
 
 #: ../data/gnome-session.schemas.in.h:1
 msgid "Default session"
@@ -299,7 +299,7 @@ msgstr "Kiravańnie sesijami"
 
 #: ../egg/eggsmclient-libgnomeui.c:136
 msgid "GNOME GUI Library + EggSMClient"
-msgstr "Biblijateka GUI dla GNOME + EggSMClient"
+msgstr "Biblijateka GUI dla Scarecrow + EggSMClient"
 
 #: ../egg/eggsmclient.c:185
 msgid "Disable connection to session manager"
@@ -490,16 +490,16 @@ msgid "Do not load user-specified applications"
 msgstr "Nie ŭklučaj aplikacyjaŭ, akreślenych karystalnikam"
 
 #: ../gnome-session/main.c:528
-msgid " - the GNOME session manager"
-msgstr "- kiraŭnik sesijaŭ dla GNOME"
+msgid " - the Scarecrow session manager"
+msgstr "- kiraŭnik sesijaŭ dla Scarecrow"
 
 #: ../splash/gnome-session-splash.c:291
-msgid "- GNOME Splash Screen"
-msgstr "- Zastaŭka GNOME"
+msgid "- Scarecrow Splash Screen"
+msgstr "- Zastaŭka Scarecrow"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
 msgid "GNOME Splash Screen"
-msgstr "Zastaŭka GNOME"
+msgstr "Zastaŭka Scarecrow"
 
 #: ../tools/gnome-session-save.c:65
 msgid "Set the current session name"
@@ -554,5 +554,5 @@ msgstr "Prahrama ŭklučanaja ź niaŭzhodnienymi opcyjami"
 #~ msgid "Play logout sound instead of login"
 #~ msgstr "Hraj huk vychadu zamiest huku ŭvachodu"
 
-#~ msgid "- GNOME login/logout sound"
-#~ msgstr "- Huk uvachodu/vychadu GNOME"
+#~ msgid "- Scarecrow login/logout sound"
+#~ msgstr "- Huk uvachodu/vychadu Scarecrow"

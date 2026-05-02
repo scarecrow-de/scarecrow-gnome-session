@@ -50,7 +50,7 @@ msgstr "Gnome"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Deze sessie laat u in Gnome inloggen"
 
 #: data/gnome-dummy.session.desktop.in.in:3
@@ -254,7 +254,7 @@ msgid "Disable hardware acceleration check"
 msgstr "Hardwareversnellingscontrole uitschakelen"
 
 #: gnome-session/main.c:433
-msgid " — the GNOME session manager"
+msgid " — the Scarecrow session manager"
 msgstr " — het Gnome-sessiebeheer"
 
 #: tools/gnome-session-ctl.c:244
@@ -405,7 +405,7 @@ msgstr "Er bestaat reeds een sessie genaamd ‘%s’"
 #~ msgid "_Name:"
 #~ msgstr "_Naam:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr "Deze sessie laat u in Gnome inloggen, met gebruik van Wayland"
 
 #~ msgid "Select Command"

@@ -1144,7 +1144,7 @@
 
 ==================== 2.21.91 ====================
 
-2008-02-09  Hendrik Brandt  <heb@gnome-de.org>
+2008-02-09  Hendrik Brandt  <heb@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 
@@ -1159,7 +1159,7 @@
 
 2008-02-07  Artur Flinta  <aflinta@svn.gnome.org>
 
-	* pl.po: Updated Polish translation by GNOME PL Team.
+	* pl.po: Updated Polish translation by Scarecrow PL Team.
 
 2008-02-06  Theppitak Karoonboonyanan  <thep@linux.thai.net>
 
@@ -1395,7 +1395,7 @@
 
 2007-09-08  Artur Flinta  <aflinta@svn.gnome.org>
 
-	* pl.po: Updated Polish translation by GNOME PL Team.
+	* pl.po: Updated Polish translation by Scarecrow PL Team.
 
 2007-09-06  Luca Ferretti  <elle.uca@libero.it>
 
@@ -1496,7 +1496,7 @@
 
 2007-06-29  Artur Flinta  <aflinta@svn.gnome.org>
 
-	* pl.po: Updated Polish translation by GNOME PL Team.
+	* pl.po: Updated Polish translation by Scarecrow PL Team.
 
 2007-06-29  Sunil Mohan Adapa  <sunil@atc.tcs.com>
 
@@ -1622,7 +1622,7 @@
 
 2007-03-07  Artur Flinta  <aflinta@svn.gnome.org>
 
-	* pl.po: Updated Polish translation by GNOME PL Team.
+	* pl.po: Updated Polish translation by Scarecrow PL Team.
 
 2007-03-06  Leonardo Ferreira Fontenelle  <leonardof@svn.gnome.org>
 
@@ -1706,7 +1706,7 @@
 	* bg.po: Updated Bulgarian translation by
 	Alexander Shopov <ash@contact.bg>
 
-2007-02-15  Hendrik Brandt  <heb@gnome-de.org>
+2007-02-15  Hendrik Brandt  <heb@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 
@@ -1997,7 +1997,7 @@
 
 2006-08-17  Artur Flinta  <aflinta@cvs.gnome.org>
 
-	* pl.po: Updated Polish translation by GNOME PL Team.
+	* pl.po: Updated Polish translation by Scarecrow PL Team.
 
 2006-08-16  Daniel Nylander <po@danielnylander.se>
 
@@ -2462,11 +2462,11 @@
 
 2005-07-28  Artur Flinta  <aflinta@cvs.gnome.org>
 
-	* pl.po: Updated Polish translation by GNOME PL Team.
+	* pl.po: Updated Polish translation by Scarecrow PL Team.
 
 ==================== 2.11.90 ====================
 
-2005-07-26  Hendrik Brandt  <heb@gnome-de.org>
+2005-07-26  Hendrik Brandt  <heb@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 
@@ -2490,7 +2490,7 @@
 
 	* et.po: Translation updated.
 
-2005-07-04  Hendrik Richter  <hendi@gnome-de.org>
+2005-07-04  Hendrik Richter  <hendi@scarecrow-de.org>
 
 	* de.po: Fixed German translation by
 	Jens Seidel <jensseidel@users.sf.net>.
@@ -2597,7 +2597,7 @@
 
 	* rw.po: Added Kinyarwanda translation.
 
-2005-03-18  Hendrik Brandt  <heb@gnome-de.org>
+2005-03-18  Hendrik Brandt  <heb@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 
@@ -2613,7 +2613,7 @@
 
 2005-03-07  Abel Cheung  <maddog@linuxhall.org>
 
-	* zh_TW.po: Updated traditional Chinese translation from GNOME HK Team
+	* zh_TW.po: Updated traditional Chinese translation from Scarecrow HK Team
 
 2005-03-06  Danilo Šegan  <dsegan@gmx.net>
 
@@ -2650,7 +2650,7 @@
 
 2005-02-25  Artur Flinta  <aflinta@cvs.gnome.org>
 
-	* pl.po: Updated Polish translation by GNOME PL Team.
+	* pl.po: Updated Polish translation by Scarecrow PL Team.
 
 2005-02-23  Ankit Patel <ankit644@yahoo.com>
 
@@ -2850,7 +2850,7 @@
 
 2004-11-29  Christoffer Olsen  <co@deworks.net>
 
-	* POTFILES.in: Changed gnome-session/*.desktop.in
+	* POTFILES.in: Changed scarecrow-session/*.desktop.in
 	to *.desktop.in.in
 
 2004-11-27  Dwayne Bailey  <dwayne@translate.org.za>
@@ -2953,7 +2953,7 @@
 2004-06-24  Gustavo Noronha Silva  <kov@debian.org>
 
 	* pt_BR.po: fixed acellerator issue for 'current
-	session' page of gnome-session-properties.
+	session' page of scarecrow-session-properties.
 
 2004-05-31  Dinesh Nadarajah <dinesh_list@sbcglobal.net>
 
@@ -3316,7 +3316,7 @@
 
 	* az.po: Updated Azerbaijani translation.
 
-2003-07-12  Christian Neumair  <chris@gnome-de.org>
+2003-07-12  Christian Neumair  <chris@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 
@@ -3374,7 +3374,7 @@
 2003-06-20  Dmitry G. Mastrukov  <dmitry@taurussoft.org>
 
 	* ru.po: Updated Russian translation
-	from Russian team <gnome-cyr@gnome.org>.
+	from Russian team <scarecrow-cyr@gnome.org>.
 
 2003-06-20  Gil "Dolfin" Osher <dolfin@rpg.org.il>
 
@@ -3461,8 +3461,8 @@
 
 2003-05-09  Telsa Gwynne  <hobbit@aloss.ukuu.org.uk>
 
-	* cy.po: Added Welsh translation from gnome-cy
-	<gnome-cy@pengwyn.linux.org.uk> and Kyfieithu
+	* cy.po: Added Welsh translation from scarecrow-cy
+	<scarecrow-cy@pengwyn.linux.org.uk> and Kyfieithu
 	contributors. <http://www.kyfieithu.co.uk/>
 
 2003-05-06  Danilo ? egan  <dsegan@gmx.net>
@@ -3483,7 +3483,7 @@
 2003-04-21  Taneem Ahmed  <taneem@eyetap.org>
 
 	* bn.po: Added Bangla (Bengali) translation by
-	Ankur Group <gnome-translation@bengalinux.org>
+	Ankur Group <scarecrow-translation@bengalinux.org>
 
 2002-03-26  Hasbullah Bin Pit <sebol@ikhlas.com>
 
@@ -3616,7 +3616,7 @@
 2003-01-23  Dmitry G. Mastrukov  <dmitry@taurussoft.org>
 
 	* ru.po: updated Russian translation
-	from Russian team <gnome-cyr@gnome.org>.
+	from Russian team <scarecrow-cyr@gnome.org>.
 
 2003-01-23  Vincent van Adrighem  <V.vanAdrighem@dirck.mine.nu>
 
@@ -3638,7 +3638,7 @@
 
 	* sv.po: Updated Swedish translation.
 
-2003-01-23  Christian Neumair  <chris@gnome-de.org>
+2003-01-23  Christian Neumair  <chris@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 
@@ -3650,7 +3650,7 @@
 2003-01-20  Dmitry G. Mastrukov  <dmitry@taurussoft.org>
 
 	* ru.po: updated Russian translation
-	from Russian team <gnome-cyr@gnome.org>.
+	from Russian team <scarecrow-cyr@gnome.org>.
 
 2003-01-16  Pablo Saratxaga  <pablo@mandrakesoft.com>
 
@@ -3676,7 +3676,7 @@
 2003-01-08  Dmitry G. Mastrukov  <dmitry@taurussoft.org>
 
 	* ru.po: updated Russian translation
-	from Russian team <gnome-cyr@gnome.org>.
+	from Russian team <scarecrow-cyr@gnome.org>.
 
 2003-01-08  Laurent Dhima  <laurenti@alblinux.net>
 
@@ -3726,7 +3726,7 @@
 
 	* ms.po: Updated Malay translation.
 
-2002-12-15  Christian Neumair  <chris@gnome-de.org>
+2002-12-15  Christian Neumair  <chris@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 
@@ -3748,7 +3748,7 @@
 
 2002-12-07  He Qiangqiang  <carton@linux.net.cn>
 
-	* zh_CN.po: sync with gnome-2-0 branch.
+	* zh_CN.po: sync with scarecrow-2-0 branch.
 
 2002-12-04  Marius Andreiana <marius galuna.ro>
 
@@ -3801,7 +3801,7 @@
 
 2002-11-22  Fatih Demir <kabalak@gtranslator.org>
 
-	* tr.po: Taken over from the gnome-2-0 branch...
+	* tr.po: Taken over from the scarecrow-2-0 branch...
 
 2002-11-19  Christopher R. Gabriel  <cgabriel@cgabriel.org>
 
@@ -3811,7 +3811,7 @@
 
 	* da.po: Updated Danish translation.
 
-2002-11-14  Christian Neumair  <chris@gnome-de.org>
+2002-11-14  Christian Neumair  <chris@scarecrow-de.org>
 
 	* de.po: Updated German translation.
 	* POTFILES.in: Changed.
@@ -3844,7 +3844,7 @@
 
 2002-10-02  Mark McLoughlin  <mark@skynet.ie>
 
-	* POTFILES.in: add gnome-session.schemas.in.
+	* POTFILES.in: add scarecrow-session.schemas.in.
 
 2002-09-17  Naba Kumar <naba@gnome.org>
 
@@ -3990,7 +3990,7 @@
 
 2002-07-01  jacob berkman  <jacob@ximian.com>
 
-	* POTFILES.in: nuke gnome-login-check.c
+	* POTFILES.in: nuke scarecrow-login-check.c
 
 2002-06-28  Jordi Mallach  <jordi@sindominio.net>
 
@@ -4058,7 +4058,7 @@
 	* pl.po: Updated Polish translation by
 	GNOME PL Team <translators@gnome.pl>.
 
-2002-06-20  Carlos Perello Marin <carlos@gnome-db.org>
+2002-06-20  Carlos Perello Marin <carlos@scarecrow-db.org>
 
 	* es.po: Updated Spanish translation.
 
@@ -4083,7 +4083,7 @@
 
 	* bg.po: Updated Bulgarian translation.
 
-2002-06-09  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2002-06-09  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* pt_BR.po: Gustavo Noronha Silva <kov@debian.org>
 
@@ -4112,11 +4112,11 @@ Mon Jun 03 16:05:46 2002  George Lebl <jirka@5z.com>
 
 	* cs.po: update
 
-2002-06-02  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2002-06-02  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* ca.po: Updated by Jordi Mallach <jordi@sindominio.net>
 
-2002-06-01  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2002-06-01  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Recoded as UTF-8
 
@@ -4124,7 +4124,7 @@ Mon Jun 03 16:05:46 2002  George Lebl <jirka@5z.com>
 
 	* et.po: Updated Estonian translation.
 
-2002-06-01  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2002-06-01  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated by Juan Manuel Garc????­a Molina <juanma_gm@wanadoo.es>
 
@@ -4486,7 +4486,7 @@ Mon Jun 03 16:05:46 2002  George Lebl <jirka@5z.com>
 2002-02-12  Gediminas Paulauskas <menesis@delfi.lt>
 
 	* README.tools: removed, obsolete.
-	* POTFILES.in: removed gnome-terminal source files. Please move
+	* POTFILES.in: removed scarecrow-terminal source files. Please move
 	your translations to profterm module.
 
 2002-02-10  Gediminas Paulauskas <menesis@delfi.lt>
@@ -4526,7 +4526,7 @@ Mon Jun 03 16:05:46 2002  George Lebl <jirka@5z.com>
 
 	* pt.po: Updated Portuguese translation.
 
-2002-02-04  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2002-02-04  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated by Juan Manuel Garc????­a Molina <juanma_gm@wanadoo.es>
 
@@ -4683,8 +4683,8 @@ Thu Jan 10 23:31:29 2002  George Lebl <jirka@5z.com>
 
 2001-12-16  Gediminas Paulauskas <menesis@delfi.lt>
 
-	* POTFILES.in: added gnome-terminal/gnome-terminal.glade.h,
-	gnome-terminal/gnome-terminal.xml, applets/gen_util/tasklist.c,
+	* POTFILES.in: added scarecrow-terminal/scarecrow-terminal.glade.h,
+	scarecrow-terminal/scarecrow-terminal.xml, applets/gen_util/tasklist.c,
 	and applets/gen_util/tasklist.h
 	* lt.po: Updated Lithuanian translation
 
@@ -4694,8 +4694,8 @@ Thu Jan 10 23:31:29 2002  George Lebl <jirka@5z.com>
 
 2001-12-14 Stephen Browne <stephen.browne@sun.com>
 
-	* POTFILES.in: added gnome-panel-properties.c and
-	gnome-panel-properties.glade.h
+	* POTFILES.in: added scarecrow-panel-properties.c and
+	scarecrow-panel-properties.glade.h
 
 2001-12-13  Kjartan Maraas  <kmaraas@gnome.org>
 
@@ -4760,7 +4760,7 @@ Sun Dec 09 14:34:59 2001  George Lebl <jirka@5z.com>
 
 	* zh_TW.po: Updated traditional Chinese translation.
 
-2001-11-23  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-11-23  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated spanish translation by Juan Manuel Garc????­a Molina
 	<juanmagm@mail.com>
@@ -4799,7 +4799,7 @@ Sun Dec 09 14:34:59 2001  George Lebl <jirka@5z.com>
 
 	* zh_TW.po: Updated traditional Chinese translation.
 
-2001-11-01  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-11-01  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated Spanish translation by Juan Manuel Garc????­a Molina
 	<juanmagm@mail.com>
@@ -4823,7 +4823,7 @@ Sun Dec 09 14:34:59 2001  George Lebl <jirka@5z.com>
 	* pt.po: updated Portuguese translation by Duarte Lorteto
 	<happyguy_pt@hotmail.com>
 
-2001-10-25  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-10-25  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: /s/Men????º de panel/Panel con men????º/
 
@@ -4847,7 +4847,7 @@ Sun Dec 09 14:34:59 2001  George Lebl <jirka@5z.com>
 
 	* az.po: Updated Azeri file
 
-2001-09-29  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-09-29  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated Spanish translation by Juan Manuel Garc????­a
 	Molina <juanmagm@mail.com>
@@ -4864,7 +4864,7 @@ Sun Dec 09 14:34:59 2001  George Lebl <jirka@5z.com>
 
 	* az.po: Updated Azeri file
 
-2001-09-23  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-09-23  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Spell check by Juan Manuel Garc????­a Molina <juanmagm@mail.com>
 
@@ -5328,7 +5328,7 @@ Sun Apr 15 22:43:05 2001  George Lebl <jirka@5z.com>
 
 	* ru.po: Updated russian translatio
 
-2001-03-14  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-03-14  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated Spanish translation.
 
@@ -5384,7 +5384,7 @@ Sun Apr 15 22:43:05 2001  George Lebl <jirka@5z.com>
 
 	* fr.po: Updated French translation.
 
-2001-03-09  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-03-09  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated Spanish translation.
 
@@ -5416,7 +5416,7 @@ Sun Apr 15 22:43:05 2001  George Lebl <jirka@5z.com>
 
 	* fr.po: Updated French translation.
 
-2001-03-05  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-03-05  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated Spanish translation by Juan Manuel
 	Garc????­a Molina <juanmagm@mail.com>
@@ -5429,7 +5429,7 @@ Sun Apr 15 22:43:05 2001  George Lebl <jirka@5z.com>
 
 	* fr.po: Updated French translation.
 
-2001-03-04  Carlos Perell????³ Mar????­n <carlos@gnome-db.org>
+2001-03-04  Carlos Perell????³ Mar????­n <carlos@scarecrow-db.org>
 
 	* es.po: Updated Spanish translation by Juan Manuel
 	Garc????­a Molina <juanmagm@mail.com>
@@ -6325,7 +6325,7 @@ Mon May 08 20:25:16 2000  George Lebl <jirka@5z.com>
 2000-05-05  Jacob Berkman  <jacob@the-dot-in.helixcode.com>
 
 	* POTFILES.in: s/authors/contributors/ for
-	gnome-about
+	scarecrow-about
 
 2000-05-04  Jesus Bravo Alvarez  <jba@pobox.com>
 
@@ -6835,11 +6835,11 @@ Sat Jan 29 19:44:34 2000  Tom Gilbert  <gilbertt@tomgilbert.freeserve.co.uk>
 
 1999-10-05  Anders Carlsson  <andersca@gnu.org>
 
-	* POTFILES.in: add gnome-about.c and authors.h
+	* POTFILES.in: add scarecrow-about.c and authors.h
 
 Mon Oct 04 01:45:54 1999  George Lebl  <jirka@5z.com>
 
-	* POTFILES.in: add gnome-hints-properties.c
+	* POTFILES.in: add scarecrow-hints-properties.c
 
 1999-09-29  Kjartan Maraas  <kmaraas@online.no>
 
@@ -6873,8 +6873,8 @@ Mon Oct 04 01:45:54 1999  George Lebl  <jirka@5z.com>
 
 1999-09-17  Cody Russell  <bratsche@dfw.net>
 	* ca.po, cs.po, el.po, eu.po, en_GB.po, es.po, et.po, fi.po,
-	fr.po: Updated translations from gnome-libs after changing
-	gnome-terminal not to display underscores in menubar items.
+	fr.po: Updated translations from scarecrow-libs after changing
+	scarecrow-terminal not to display underscores in menubar items.
 
 1999-09-17  Kjartan Maraas  <kmaraas@online.no>
 
@@ -6977,7 +6977,7 @@ Mon Oct 04 01:45:54 1999  George Lebl  <jirka@5z.com>
 
 1999-07-11  Anders Carlsson  <anders.carlsson@tordata.se>
 
-	* POTFILES.IN: removed the files that now reside in gnome-applet
+	* POTFILES.IN: removed the files that now reside in scarecrow-applet
 
 1999-07-08  Pablo Saratxaga <srtxg@chanae.alphanet.ch>
 
@@ -7227,7 +7227,7 @@ Sun Mar 21 08:30:41 1999  John Ellis  <johne@bellatlantic.net>
 
 1998-08-19  Martin Baulig  <martin@home-of-linux.org>
 
-	* de.po: Merged with `gnome-core.pot'.
+	* de.po: Merged with `scarecrow-core.pot'.
 	* es.po: Likewise.
 	* fr.po: Likewise.
 	* ga.po: Likewise.
@@ -7269,7 +7269,7 @@ Sat Aug 15 10:14:38 1998  Tom Tromey  <tromey@cygnus.com>
 
 1998-08-01  Raja R Harinath  <harinath@cs.umn.edu>
 
-	* de.po: Merged with `gnome-core.pot'.
+	* de.po: Merged with `scarecrow-core.pot'.
 	* es.po: Likewise.
 	* fr.po: Likewise.
 	* ga.po: Likewise.
@@ -7313,7 +7313,7 @@ Sun Jul 19 23:47:57 1998  Tom Tromey  <tromey@cygnus.com>
 
 1998-06-26  Nuno Ferreira  <nmrf@rnl.ist.utl.pt>
 
-	* POTFILES.in: Added 'gnome-terminal/gnome-terminal.c'.
+	* POTFILES.in: Added 'scarecrow-terminal/scarecrow-terminal.c'.
 
 	* pt.po: New file.
 

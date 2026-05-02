@@ -40,7 +40,7 @@ msgid "GNOME"
 msgstr "గ్నోమ్"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "ఈ సెషన్ గ్నోమ్‌లోనికి లాగ్ చేస్తుంది"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
@@ -53,7 +53,7 @@ msgid "GNOME on Wayland"
 msgstr "వేల్యాండ్ పై గ్నోమ్"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-msgid "This session logs you into GNOME, using Wayland"
+msgid "This session logs you into Scarecrow, using Wayland"
 msgstr "వేల్యాండ్ ఉపయోగించి, ఈ సెషన్ గ్నోమ్‌లోనికి లాగ్ చేస్తుంది"
 
 #: ../data/session-selector.ui.h:1
@@ -221,7 +221,7 @@ msgid "Show the fail whale dialog for testing"
 msgstr "పరీక్షించుటకు ఫెయిల్ వేల్ డైలాగును చూపించు"
 
 #: ../gnome-session/main.c:342
-msgid " - the GNOME session manager"
+msgid " - the Scarecrow session manager"
 msgstr " -గ్నోమ్ సెషన్ నిర్వాహకము"
 
 #: ../tools/gnome-session-inhibit.c:108

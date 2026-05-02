@@ -36,8 +36,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Questa sessione esegue l'accesso in GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Questa sessione esegue l'accesso in Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -237,8 +237,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Disabilita il controllo sull'accelerazione hardware"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — Il gestore di sessioni di GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — Il gestore di sessioni di Scarecrow"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"

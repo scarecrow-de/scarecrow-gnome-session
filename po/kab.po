@@ -30,8 +30,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Tiɣimit-agi ad k-teqqen ɣer GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Tiɣimit-agi ad k-teqqen ɣer Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -212,8 +212,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Sens aselken n wesɣiwel angaw"
 
 #: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " — Amsefrak n tɣimiyin n GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — Amsefrak n tɣimiyin n Scarecrow"
 
 #: tools/gnome-session-inhibit.c:108
 #, c-format

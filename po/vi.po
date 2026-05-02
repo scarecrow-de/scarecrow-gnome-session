@@ -1,6 +1,6 @@
-# Vietnamese Translation for GNOME Session.
-# Bản dịch tiếng Việt dành cho GNOME Session.
-# Copyright © 2016 GNOME i18n Project for Vietnamese.
+# Vietnamese Translation for Scarecrow Session.
+# Bản dịch tiếng Việt dành cho Scarecrow Session.
+# Copyright © 2016 Scarecrow i18n Project for Vietnamese.
 # This file is distributed under the same license as the gnome-session package.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2002-2004,2007-2008,2011-2013.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
@@ -34,12 +34,12 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Phiên làm việc này sẽ đăng nhập bạn vào GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Phiên làm việc này sẽ đăng nhập bạn vào Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
-msgstr "Giả lập GNOME"
+msgstr "Giả lập Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
 msgid "GNOME on Xorg"
@@ -218,8 +218,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Tắt kiểm tra tăng tốc phần cứng"
 
 #: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " — bộ quản lý phiên làm việc GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — bộ quản lý phiên làm việc Scarecrow"
 
 #: tools/gnome-session-inhibit.c:108
 #, c-format
@@ -318,8 +318,8 @@ msgstr "Tên phiên làm việc không cho phép chứa ký tự “/”"
 msgid "A session named “%s” already exists"
 msgstr "Đã sẵn có phiên làm việc mang tên “%s”"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Phiên làm việc này sẽ đăng nhập bạn vào GNOME, đang dùng Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Phiên làm việc này sẽ đăng nhập bạn vào Scarecrow, đang dùng Wayland"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "_Chương trình khởi động thêm:"
@@ -524,23 +524,23 @@ msgstr "Đã sẵn có phiên làm việc mang tên “%s”"
 #~ msgstr "Không thấy biểu tượng “%s”"
 
 #~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "Lỗi nạp GNOME 3"
+#~ msgstr "Lỗi nạp Scarecrow 3"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Rất tiếc không thể khởi động GNOME 3 nên đang chạy trong <i>chế độ phòng "
+#~ "Rất tiếc không thể khởi động Scarecrow 3 nên đang chạy trong <i>chế độ phòng "
 #~ "bị</i>.\n"
 #~ "\n"
 #~ "Nhiều khả năng hệ thống của bạn (phần cứng đồ họa hoặc trình điều khiển) "
-#~ "không đủ khả năng chạy GNOME 3."
+#~ "không đủ khả năng chạy Scarecrow 3."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Tìm hiểu thêm về GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Tìm hiểu thêm về Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -587,7 +587,7 @@ msgstr "Đã sẵn có phiên làm việc mang tên “%s”"
 #~ msgstr "Bộ bao bọc đăng ký SPI AT"
 
 #~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "Trình bổ trợ Trình nền Thiết lập GNOME"
+#~ msgstr "Trình bổ trợ Trình nền Thiết lập Scarecrow"
 
 #~ msgid "File Manager"
 #~ msgstr "Bộ Quản lý Tập tin"

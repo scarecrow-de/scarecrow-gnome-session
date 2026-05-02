@@ -36,8 +36,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "วาระนี้จะเข้าสู่ GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "วาระนี้จะเข้าสู่ Scarecrow"
 
 #: ../data/gnome-xorg.desktop.in.h:1
 msgid "GNOME on Xorg"
@@ -45,7 +45,7 @@ msgstr "GNOME ใน Xorg"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
 msgid "GNOME dummy"
-msgstr "หุ่นตัวอย่าง GNOME"
+msgstr "หุ่นตัวอย่าง Scarecrow"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
@@ -214,8 +214,8 @@ msgid "Disable hardware acceleration check"
 msgstr "ปิดใช้การตรวจสอบการเร่งความเร็วด้วยฮาร์ดแวร์"
 
 #: ../gnome-session/main.c:307
-msgid " - the GNOME session manager"
-msgstr "- โปรแกรมจัดการวาระ GNOME"
+msgid " - the Scarecrow session manager"
+msgstr "- โปรแกรมจัดการวาระ Scarecrow"
 
 #: ../tools/gnome-session-inhibit.c:108
 #, c-format
@@ -312,8 +312,8 @@ msgstr "ติดต่อโปรแกรมจัดการวาระไ
 msgid "Program called with conflicting options"
 msgstr "โปรแกรมถูกเรียกด้วยตัวเลือกที่ขัดแย้งกันเอง"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "วาระนี้จะเข้าสู่ GNOME โดยใช้ Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "วาระนี้จะเข้าสู่ Scarecrow โดยใช้ Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "เลือกคำสั่ง"
@@ -490,19 +490,19 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ msgstr "GNOME 3 โหลดไม่สำเร็จ"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "โชคไม่ดีที่ GNOME 3 เริ่มทำงานไม่สำเร็จ โดยเป็นการทำงานใน <i>โหมดสำรอง</i>\n"
+#~ "โชคไม่ดีที่ Scarecrow 3 เริ่มทำงานไม่สำเร็จ โดยเป็นการทำงานใน <i>โหมดสำรอง</i>\n"
 #~ "\n"
-#~ "เป็นไปได้สูงว่าระบบของคุณ (การ์ดจอหรือไดรเวอร์) ไม่สามารถรองรับการทำงานของ GNOME 3 "
+#~ "เป็นไปได้สูงว่าระบบของคุณ (การ์ดจอหรือไดรเวอร์) ไม่สามารถรองรับการทำงานของ Scarecrow 3 "
 #~ "อย่างเต็มรูปแบบได้"
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "ศึกษาเพิ่มเติมเกี่ยวกับ GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "ศึกษาเพิ่มเติมเกี่ยวกับ Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -636,7 +636,7 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ msgstr "โปรแกรมครอบเรจิสตรี AT SPI"
 
 #~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "ตัวช่วยดีมอนค่าตั้ง GNOME"
+#~ msgstr "ตัวช่วยดีมอนค่าตั้ง Scarecrow"
 
 #~ msgid ""
 #~ "If enabled, gnome-session will save the session automatically. Otherwise, "
@@ -667,11 +667,11 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ "lose work."
 #~ msgstr "จะรอให้โปรแกรมทำงานจบ การขัดจังหวะโปรแกรมอาจทำให้เสียงานบางอย่างของคุณไป"
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- รูปไตเติลเริ่มระบบ GNOME"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- รูปไตเติลเริ่มระบบ Scarecrow"
 
 #~ msgid "GNOME Splash Screen"
-#~ msgstr "รูปไตเติลเริ่มระบบ GNOME"
+#~ msgstr "รูปไตเติลเริ่มระบบ Scarecrow"
 
 #~ msgid "The name of the startup program cannot be empty"
 #~ msgstr "คำสั่งที่ให้เรียกเมื่อเริ่มวาระจะว่างไม่ได้"
@@ -695,13 +695,13 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ msgstr "ตั้งค่าสำหรับวาระของคุณ"
 
 #~ msgid "GNOME Keyring Daemon Wrapper"
-#~ msgstr "โปรแกรมครอบดีมอนพวงกุญแจ GNOME"
+#~ msgstr "โปรแกรมครอบดีมอนพวงกุญแจ Scarecrow"
 
 #~ msgid "Session management"
 #~ msgstr "การจัดการวาระ"
 
 #~ msgid "GNOME GUI Library + EggSMClient"
-#~ msgstr "ไลบรารี GUI ของ GNOME + EggSMClient"
+#~ msgstr "ไลบรารี GUI ของ Scarecrow + EggSMClient"
 
 #~ msgid ""
 #~ "The Window manager that gnome-session will start. Valid values are "
@@ -790,12 +790,12 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ msgstr "สถานะ"
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "เกิดข้อผิดพลาดขณะเริ่มดีมอนจัดการค่าตั้งของ GNOME\n"
+#~ "เกิดข้อผิดพลาดขณะเริ่มดีมอนจัดการค่าตั้งของ Scarecrow\n"
 #~ "\n"
 #~ "บางสิ่งบางอย่าง เช่น ชุดตกแต่ง เสียง พื้นหลัง หรือ สิ่งอื่น ๆ อาจทำงานไม่ถูกต้อง"
 
@@ -842,31 +842,31 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ msgstr "ไม่พบโปรแกรม %s ในวาระ\n"
 
 #~ msgid ""
-#~ "The GNOME session manager cannot start properly.  Please report this as a "
+#~ "The Scarecrow session manager cannot start properly.  Please report this as a "
 #~ "GNOME bug. Please include this ICE failure message in the bug report:  "
 #~ "'%s'.  Meanwhile you could try logging in using the failsafe session."
 #~ msgstr ""
-#~ "โปรแกรมจัดการวาระ GNOME ไม่สามารถเริ่มทำงานได้ กรุณารายงานข้อผิดพลาดนี้ไปยัง GNOME "
+#~ "โปรแกรมจัดการวาระ Scarecrow ไม่สามารถเริ่มทำงานได้ กรุณารายงานข้อผิดพลาดนี้ไปยัง Scarecrow "
 #~ "โดยแนบข้อความข้อผิดพลาดจาก ICE ต่อไปนี้ไปด้วย: '%s' ในระหว่างนี้ "
 #~ "คุณอาจลองเข้าระบบด้วยวาระ failsafe แทน"
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to lock the file '%s'.  Please "
-#~ "report this as a GNOME bug.  Sometimes this error may occur if the file's "
+#~ "The Scarecrow session manager was unable to lock the file '%s'.  Please "
+#~ "report this as a Scarecrow bug.  Sometimes this error may occur if the file's "
 #~ "directory is unwritable, you could try logging in via the failsafe "
 #~ "session and ensuring that it is."
 #~ msgstr ""
-#~ "โปรแกรมจัดการวาระ GNOME ไม่สามารถล็อคแฟ้ม '%s' ได้ กรุณารายงานข้อผิดพลาดนี้ไปยัง "
+#~ "โปรแกรมจัดการวาระ Scarecrow ไม่สามารถล็อคแฟ้ม '%s' ได้ กรุณารายงานข้อผิดพลาดนี้ไปยัง "
 #~ "GNOME ในบางครั้ง ข้อผิดพลาดนี้ก็อาจเกิดขึ้นได้ ถ้าไดเรกทอรีที่เก็บแฟ้มไม่อนุญาตให้เขียน "
 #~ "คุณอาจลองเข้าระบบด้วยวาระ failsafe แล้วตรวจสอบดู"
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to read the file: '%s'.  If this "
-#~ "file exists it must be readable by you for GNOME to work properly.  Try "
+#~ "The Scarecrow session manager was unable to read the file: '%s'.  If this "
+#~ "file exists it must be readable by you for Scarecrow to work properly.  Try "
 #~ "logging in with the failsafe session and removing this file."
 #~ msgstr ""
-#~ "โปรแกรมจัดการวาระ GNOME ไม่สามารถอ่านแฟ้ม: '%s' ถ้าแฟ้มนี้มีอยู่แล้ว "
-#~ "คุณก็จะต้องมีสิทธิ์อ่านได้ด้วย GNOME จะได้ทำงานได้อย่างถูกต้อง ลองเข้าระบบด้วยวาระ "
+#~ "โปรแกรมจัดการวาระ Scarecrow ไม่สามารถอ่านแฟ้ม: '%s' ถ้าแฟ้มนี้มีอยู่แล้ว "
+#~ "คุณก็จะต้องมีสิทธิ์อ่านได้ด้วย Scarecrow จะได้ทำงานได้อย่างถูกต้อง ลองเข้าระบบด้วยวาระ "
 #~ "failsafe แล้วลบแฟ้มนี้ดู"
 
 #~ msgid ""
@@ -874,7 +874,7 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ "GNOME to function properly.  Try logging in with the failsafe session and "
 #~ "removing this file.  Also make sure that the file's directory is writable."
 #~ msgstr ""
-#~ "ไม่สามารถเขียนแฟ้ม '%s' ได้ คุณต้องมีสิทธิ์เขียนแฟ้มนี้เพื่อให้ GNOME ทำงานได้อย่างถูกต้อง "
+#~ "ไม่สามารถเขียนแฟ้ม '%s' ได้ คุณต้องมีสิทธิ์เขียนแฟ้มนี้เพื่อให้ Scarecrow ทำงานได้อย่างถูกต้อง "
 #~ "ลองเข้าระบบด้วยวาระ failsafe แล้วลบแฟ้มนี้ดู "
 #~ "กรุณาตรวจสอบให้แน่ใจด้วยว่าไดเรกทอรีที่เก็บแฟ้มนี้สามารถเขียนได้"
 
@@ -930,12 +930,12 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "ไม่สามารถค้นหาที่อยู่อินเทอร์เน็ตสำหรับ %s \n"
-#~ "ซึ่งจะทำให้ GNOME ทำงานไม่ถูกต้อง\n"
+#~ "ซึ่งจะทำให้ Scarecrow ทำงานไม่ถูกต้อง\n"
 #~ "อาจจะแก้ปัญหานี้ได้โดยการเพิ่ม %s ลงในแฟ้ม /etc/hosts"
 
 #~ msgid "Try Again"
@@ -977,8 +977,8 @@ msgstr "โปรแกรมถูกเรียกด้วยตัวเล
 #~ msgid "could not connect to the session manager\n"
 #~ msgstr "ติดต่อโปรแกรมจัดการวาระไม่สำเร็จ\n"
 
-#~ msgid "session manager does not support GNOME extensions\n"
-#~ msgstr "โปรแกรมจัดการวาระไม่รองรับส่วนขยายของ GNOME\n"
+#~ msgid "session manager does not support Scarecrow extensions\n"
+#~ msgstr "โปรแกรมจัดการวาระไม่รองรับส่วนขยายของ Scarecrow\n"
 
 #~ msgid "Remove the currently selected client from the session."
 #~ msgstr "ลบโปรแกรมลูกที่ถูกเลือกออกจากวาระ"

@@ -1,0 +1,20 @@
+[Unit]
+Description=GNOME X11 Session (session: %i)
+DefaultDependencies=no
+# Start happens explicitly
+RefuseManualStart=no
+# Stop happens by starting scarecrow-session-shutdown.target
+#RefuseManualStop=yes
+
+Conflicts=shutdown.target scarecrow-session-shutdown.target
+PartOf=graphical-session.target
+
+# As this is the main entry point, pull in the other toplevel scarecrow-session targets
+BindsTo=scarecrow-session@.target
+After=scarecrow-session@.target
+
+BindsTo=scarecrow-session-x11.target
+After=scarecrow-session-x11.target
+
+BindsTo=scarecrow-session.target
+After=scarecrow-session.target

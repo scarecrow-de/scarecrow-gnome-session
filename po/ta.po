@@ -40,7 +40,7 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "இந்த அமர்வு க்நோம் இல் உங்களை நுழைக்கும் "
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
@@ -51,13 +51,13 @@ msgstr "GNOME டம்மி"
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
 #| msgid "GNOME fallback"
 msgid "GNOME on Wayland"
-msgstr "Wayland இல் GNOME"
+msgstr "Wayland இல் Scarecrow"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-#| msgid "This session logs you into GNOME"
-msgid "This session logs you into GNOME, using Wayland"
+#| msgid "This session logs you into Scarecrow"
+msgid "This session logs you into Scarecrow, using Wayland"
 msgstr ""
-"இந்த அமர்வு உங்களை Wayland ஐப் பயன்படுத்தி GNOME இல் புகுபதிவு செய்யும்"
+"இந்த அமர்வு உங்களை Wayland ஐப் பயன்படுத்தி Scarecrow இல் புகுபதிவு செய்யும்"
 
 # gsm/save-session.c:43
 #: ../data/session-selector.ui.h:1
@@ -237,7 +237,7 @@ msgid "Show the fail whale dialog for testing"
 msgstr "சோதனைக்கு பெய்ல் வேல் உரையாடலை காட்டுக"
 
 #: ../gnome-session/main.c:344
-msgid " - the GNOME session manager"
+msgid " - the Scarecrow session manager"
 msgstr "- க்னோம் அமர்வு மேலாலாளர்"
 
 #: ../tools/gnome-session-inhibit.c:110
@@ -538,11 +538,11 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ msgstr "க்னோம் 3 ஏற்றத்தில் தோல்வியுற்றது"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
 #~ "துரத்ருஷ்ட வசமாக க்னோம் 3 சரியாக துவங்கவில்லை; அது இந்த நிலையில் துவங்கியது. "
 #~ "<i>பின் சார்தல்</i>.\n"
@@ -550,7 +550,7 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ "அனேகமாக இதன் பொரூல் என்னவென்றால் உங்கள் கணினி (வரைகலை வன்பொருள் அல்லது இயக்கி) முழு "
 #~ "க்னோம் 3 அனுபவத்தை தர பொருத்தமில்லை."
 
-#~ msgid "Learn more about GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
 #~ msgstr "மேலும் க்னோம் 3 பற்றி"
 
 #~ msgid ""
@@ -726,7 +726,7 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ "சேமிக்காமல் போகச் செய்யும்."
 
 # gsm/session-properties-capplet.c:192
-#~ msgid "- GNOME Splash Screen"
+#~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "க்னோம்  தொடக்க ஓவியம்"
 
 #~ msgid "GNOME Splash Screen"

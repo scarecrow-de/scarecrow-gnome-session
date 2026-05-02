@@ -40,7 +40,7 @@ msgstr "گنوم"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "این نشست شما را به گنوم وارد می‌کند"
 
 #: data/gnome-dummy.session.desktop.in.in:3
@@ -238,7 +238,7 @@ msgid "Disable hardware acceleration check"
 msgstr "غیرفعال‌سازی بررسی شتابدهنده سخت‌افزاری"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
+msgid " — the Scarecrow session manager"
 msgstr " — مدیر نشست گنوم"
 
 #: tools/gnome-session-ctl.c:245
@@ -367,7 +367,7 @@ msgstr "نام نشست‌ها نمی‌توانند شامل نویسهٔ «/»
 msgid "A session named “%s” already exists"
 msgstr "نشستی با نام «%s» از پیش وجود دارد"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr "این نشست، با استفاده از Wayland شما را به گنوم وارد می‌کند"
 
 #~ msgid "Additional startup _programs:"
@@ -609,11 +609,11 @@ msgstr "نشستی با نام «%s» از پیش وجود دارد"
 #~ msgstr "بارگیری گنوم ۳ شکست خورد"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
 #~ "متاسفانه اجرای صحیح گنوم ۳ با مشکل مواجه شد و در <i>حالت یدکی</i> اجرا "
 #~ "شد.\n"
@@ -621,7 +621,7 @@ msgstr "نشستی با نام «%s» از پیش وجود دارد"
 #~ "این موضوع اکثرا به این علت است که سیستم شما (سخت‌افزار گرافیکی یا راه‌انداز) "
 #~ "قابلیت ارائه‌ی کامل گنوم ۳ را ندارد."
 
-#~ msgid "Learn more about GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
 #~ msgstr "اطلاعات بیشتر در مورد گنوم ۳"
 
 #~ msgid "Unable to start login session (and unable to connect to the X server)"

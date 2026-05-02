@@ -33,12 +33,12 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Ин ҷаласа шуморо ба GNOME ворид мекунад"
+msgid "This session logs you into Scarecrow"
+msgstr "Ин ҷаласа шуморо ба Scarecrow ворид мекунад"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
 msgid "GNOME dummy"
-msgstr "Сохти GNOME"
+msgstr "Сохти Scarecrow"
 
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
@@ -46,8 +46,8 @@ msgid "GNOME on Wayland"
 msgstr "GNOME дар Wayland"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-msgid "This session logs you into GNOME, using Wayland"
-msgstr "Ин ҷаласа шуморо ба GNOME тавассути Wayland ворид мекунад"
+msgid "This session logs you into Scarecrow, using Wayland"
+msgstr "Ин ҷаласа шуморо ба Scarecrow тавассути Wayland ворид мекунад"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
@@ -222,8 +222,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Ғайрифаъол кардани санҷиши шитоби сахтафзор"
 
 #: ../gnome-session/main.c:267
-msgid " - the GNOME session manager"
-msgstr " - мудири ҷаласаи GNOME"
+msgid " - the Scarecrow session manager"
+msgstr " - мудири ҷаласаи Scarecrow"
 
 #: ../tools/gnome-session-inhibit.c:108
 #, c-format

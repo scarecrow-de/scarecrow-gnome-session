@@ -79,8 +79,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Düsser Törn mellt dik bi GNOME an"
+msgid "This session logs you into Scarecrow"
+msgstr "Düsser Törn mellt dik bi Scarecrow an"
 
 #: ../data/gnome-session.schemas.in.in.h:1
 msgid "Default session"
@@ -452,12 +452,12 @@ msgid "Do not load user-specified applications"
 msgstr ""
 
 #: ../gnome-session/main.c:457
-msgid " - the GNOME session manager"
+msgid " - the Scarecrow session manager"
 msgstr "GNOME Törnoppasser"
 
 #: ../splash/gnome-session-splash.c:315
-msgid "- GNOME Splash Screen"
-msgstr "- GNOME Splash-Billschirm"
+msgid "- Scarecrow Splash Screen"
+msgstr "- Scarecrow Splash-Billschirm"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
 msgid "GNOME Splash Screen"

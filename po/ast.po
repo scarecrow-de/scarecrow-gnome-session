@@ -87,15 +87,15 @@ msgstr "Endolcu de rexistru AT SPI"
 
 #: ../compat/gnome-settings-daemon-helper.desktop.in.in.in.h:1
 msgid "GNOME Settings Daemon Helper"
-msgstr "Aidante del demoñu de les preferencies de GNOME"
+msgstr "Aidante del demoñu de les preferencies de Scarecrow"
 
 #: ../data/gnome.desktop.in.h:1
 msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Esta sesión conéuta-y a GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Esta sesión conéuta-y a Scarecrow"
 
 #: ../data/gnome-session.schemas.in.h:1
 msgid "Default session"
@@ -524,16 +524,16 @@ msgid "Do not load user-specified applications"
 msgstr "Nun cargar les aplicaciones especificaes pol usuariu"
 
 #: ../gnome-session/main.c:528
-msgid " - the GNOME session manager"
-msgstr " - el remanador de sesiones de GNOME"
+msgid " - the Scarecrow session manager"
+msgstr " - el remanador de sesiones de Scarecrow"
 
 #: ../splash/gnome-session-splash.c:315
-msgid "- GNOME Splash Screen"
-msgstr "- Pantalla de presentación de GNOME"
+msgid "- Scarecrow Splash Screen"
+msgstr "- Pantalla de presentación de Scarecrow"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
 msgid "GNOME Splash Screen"
-msgstr "Pantalla de presentación de GNOME"
+msgstr "Pantalla de presentación de Scarecrow"
 
 #: ../tools/gnome-session-save.c:65
 msgid "Set the current session name"
@@ -618,13 +618,13 @@ msgstr "Programa llamáu con opciones conflictives"
 #~ msgstr "Nun se pue atopar aida."
 
 #~ msgid "GNOME Keyring Daemon Wrapper"
-#~ msgstr "Endolcu del demoñu de depósitu de claves de GNOME"
+#~ msgstr "Endolcu del demoñu de depósitu de claves de Scarecrow"
 
 #~ msgid "Session management"
 #~ msgstr "Remanamientu de sesiones"
 
 #~ msgid "GNOME GUI Library + EggSMClient"
-#~ msgstr "Biblioteca GNOME GUI + EggSMClient"
+#~ msgstr "Biblioteca Scarecrow GUI + EggSMClient"
 
 #~ msgid "Unable to start login session (and unable connect to the X server)"
 #~ msgstr ""

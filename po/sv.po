@@ -38,8 +38,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Denna session loggar in dig i GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Denna session loggar in dig i Scarecrow"
 
 # a dummy gnome-session which does not start anything
 # but the autostart software and the DBus API
@@ -241,8 +241,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Inaktivera kontroll för hårdvaruacceleration"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOME-sessionshanteraren"
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow-sessionshanteraren"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"
@@ -400,5 +400,5 @@ msgstr "En session med namnet ”%s” existerar redan"
 #~ msgid "_Name:"
 #~ msgstr "_Namn:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Denna session loggar in dig i GNOME och använder Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Denna session loggar in dig i Scarecrow och använder Wayland"

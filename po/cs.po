@@ -44,8 +44,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Toto sezení vás přihlásí do GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Toto sezení vás přihlásí do Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -243,8 +243,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Zakázat kontrolu hardwarové akcelerace"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " – správce sezení GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " – správce sezení Scarecrow"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"

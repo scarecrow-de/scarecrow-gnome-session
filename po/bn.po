@@ -85,8 +85,8 @@ msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "এই সেশনের মাধ্যমে GNOME-এ লগ-ইন করা যাবে"
+msgid "This session logs you into Scarecrow"
+msgstr "এই সেশনের মাধ্যমে Scarecrow-এ লগ-ইন করা যাবে"
 
 #: ../data/gsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
@@ -362,11 +362,11 @@ msgstr "জিনোম 3 লোড করতে ব্যর্থ"
 
 #: ../gnome-session/gsm-manager.c:1373
 msgid ""
-"Unfortunately GNOME 3 failed to start properly and started in the "
+"Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
 "\n"
 "This most likely means your system (graphics hardware or driver) is not "
-"capable of delivering the full GNOME 3 experience."
+"capable of delivering the full Scarecrow 3 experience."
 msgstr ""
 "দুর্ভাগ্যবশত জিনোম 3 ঠিকভাবে শুরু করতে ব্যর্থ এবং <i>ফলব্যাক মোড</i> এ শুরু হয়।\n"
 "\n"
@@ -374,7 +374,7 @@ msgstr ""
 "পরিবেশ ডেলিভার করতে সমর্থ নয়।"
 
 #: ../gnome-session/gsm-manager.c:1375
-msgid "Learn more about GNOME 3"
+msgid "Learn more about Scarecrow 3"
 msgstr "জিনোম 3 সম্পর্কে আরও জানুন"
 
 #: ../gnome-session/gsm-manager.c:1472 ../gnome-session/gsm-manager.c:2203
@@ -421,8 +421,8 @@ msgid "Do not load user-specified applications"
 msgstr "ব্যবহারকারী দ্বারা নির্ধারিত অ্যাপ্লিকেশন লোড করা হবে না"
 
 #: ../gnome-session/main.c:300
-msgid " - the GNOME session manager"
-msgstr "- GNOME সেশন ম্যানেজার"
+msgid " - the Scarecrow session manager"
+msgstr "- Scarecrow সেশন ম্যানেজার"
 
 #: ../tools/gnome-session-quit.c:52
 msgid "Log out"
@@ -573,8 +573,8 @@ msgstr "দ্বন্দ্বযুক্ত অপশন সহ প্রো
 #~ msgid "GConf key used to lookup default session"
 #~ msgstr "ডিফল্ট সেশন অনুসন্ধানের জন্য ব্যবহৃত GConf কী"
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME-র স্প্ল্যাশ স্ক্রিন"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow-র স্প্ল্যাশ স্ক্রিন"
 
 #~ msgid "GNOME Splash Screen"
 #~ msgstr "GNOME-র স্প্ল্যাশ স্ক্রিন"

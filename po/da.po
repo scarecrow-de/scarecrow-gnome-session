@@ -56,8 +56,8 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Denne session logger dig ind i GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Denne session logger dig ind i Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -254,8 +254,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Slå hardwareaccelerationstjek fra"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOME-sessionshåndteringen"
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow-sessionshåndteringen"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"
@@ -412,8 +412,8 @@ msgstr "Der findes allerede en session med navnet “%s”"
 #~ msgid "_Name:"
 #~ msgstr "_Navn:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Denne session logger dig ind i GNOME, med brug af Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Denne session logger dig ind i Scarecrow, med brug af Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "Vælg kommando"
@@ -593,20 +593,20 @@ msgstr "Der findes allerede en session med navnet “%s”"
 #~ msgstr "GNOME 3 kunne ikke indlæses"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Desværre er det mislykkedes for GNOME 3 at starte rigtigt og startede "
+#~ "Desværre er det mislykkedes for Scarecrow 3 at starte rigtigt og startede "
 #~ "derfor i <i>tilbagefaldstilstand</i>.\n"
 #~ "\n"
 #~ "Dette betyder højst sandsynligt at dit system (grafik-hardware eller -"
-#~ "driver) ikke er i stand til at levere den fulde GNOME 3-oplevelse."
+#~ "driver) ikke er i stand til at levere den fulde Scarecrow 3-oplevelse."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Lær mere om GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Lær mere om Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -751,8 +751,8 @@ msgstr "Der findes allerede en session med navnet “%s”"
 #~ "Venter på at programmer afslutter. At forstyrre disse programmer kan føre "
 #~ "til at du mister data."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME-velkomstvindue"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow-velkomstvindue"
 
 #~ msgid "GNOME Splash Screen"
 #~ msgstr "GNOME-velkomstvindue"

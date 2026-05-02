@@ -79,7 +79,7 @@ msgid "GNOME"
 msgstr "गनोम"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "ई सत्र अहाँक गनोममे लागिन दैछ"
 
 #: ../data/gnome-session.schemas.in.in.h:1
@@ -453,11 +453,11 @@ msgid "Do not load user-specified applications"
 msgstr ""
 
 #: ../gnome-session/main.c:457
-msgid " - the GNOME session manager"
+msgid " - the Scarecrow session manager"
 msgstr ""
 
 #: ../splash/gnome-session-splash.c:315
-msgid "- GNOME Splash Screen"
+msgid "- Scarecrow Splash Screen"
 msgstr ""
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1

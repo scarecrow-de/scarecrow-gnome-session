@@ -1,0 +1,12 @@
+[Unit]
+Description=GNOME Session Manager is ready
+DefaultDependencies=no
+RefuseManualStart=yes
+RefuseManualStop=yes
+
+Requisite=scarecrow-session-pre.target
+After=scarecrow-session-pre.target
+
+Requisite=scarecrow-session-initialized.target
+PartOf=scarecrow-session-initialized.target
+Before=scarecrow-session-initialized.target

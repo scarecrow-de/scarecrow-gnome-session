@@ -227,7 +227,7 @@ msgstr "Fillon gjithmonë në çdo login."
 #.
 #: ../gnome-session/gsm-gsd.c:45
 msgid ""
-"There was an error starting the GNOME Settings Daemon.\n"
+"There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
 "Some things, such as themes, sounds, or background settings may not work "
 "correctly."
@@ -296,43 +296,43 @@ msgstr "E pamundur gjetja e progamit %s në seancë\n"
 #: ../gnome-session/ice.c:355
 #, c-format
 msgid ""
-"The GNOME session manager cannot start properly.  Please report this as a "
+"The Scarecrow session manager cannot start properly.  Please report this as a "
 "GNOME bug. Please include this ICE failure message in the bug report:  '%"
 "s'.  Meanwhile you could try logging in using the failsafe session."
 msgstr ""
-"Organizuesi i seancës GNOME nuk mundi të nisë në rregull.  Të lutem njoftoje "
-"këtë si një gabim GNOME. Të lutem përfshije këtë mesazh gabimi në njoftimin "
+"Organizuesi i seancës Scarecrow nuk mundi të nisë në rregull.  Të lutem njoftoje "
+"këtë si një gabim Scarecrow. Të lutem përfshije këtë mesazh gabimi në njoftimin "
 "e gabimit:  '%s'.  Ndërkohë mund të provosh të futesh duke përdorur seancën "
 "shpëtuese."
 
 #: ../gnome-session/ice.c:510
 #, c-format
 msgid ""
-"The GNOME session manager was unable to lock the file '%s'.  Please report "
-"this as a GNOME bug.  Sometimes this error may occur if the file's directory "
+"The Scarecrow session manager was unable to lock the file '%s'.  Please report "
+"this as a Scarecrow bug.  Sometimes this error may occur if the file's directory "
 "is unwritable, you could try logging in via the failsafe session and "
 "ensuring that it is."
 msgstr ""
-"Organizuesi i seancës GNOME nuk mundi të kyçë file '%s'.  Të lutem njoftoje "
-"këtë si një gabim GNOME.  Ndonjëherë ky gabim mund të ndodhë nëse dosja e "
+"Organizuesi i seancës Scarecrow nuk mundi të kyçë file '%s'.  Të lutem njoftoje "
+"këtë si një gabim Scarecrow.  Ndonjëherë ky gabim mund të ndodhë nëse dosja e "
 "file-t është e pashkruajtshme, mund të provosh të hysh me anë të seancës "
 "shpëtuese dhe të sigurohesh për këtë."
 
 #: ../gnome-session/ice.c:537
 #, c-format
 msgid ""
-"The GNOME session manager was unable to read the file: '%s'.  If this file "
-"exists it must be readable by you for GNOME to work properly.  Try logging "
+"The Scarecrow session manager was unable to read the file: '%s'.  If this file "
+"exists it must be readable by you for Scarecrow to work properly.  Try logging "
 "in with the failsafe session and removing this file."
 msgstr ""
-"Organizuesi i seancës GNOME nuk mundi të lexojë file '%s'.  Nëse ky file "
-"ekziston ai duhet të jetë i lexueshëm nga ti që GNOME të punojë siç duhet.  "
+"Organizuesi i seancës Scarecrow nuk mundi të lexojë file '%s'.  Nëse ky file "
+"ekziston ai duhet të jetë i lexueshëm nga ti që Scarecrow të punojë siç duhet.  "
 "Provo të hysh me seancën shpëtuese dhe të heqësh këtë file."
 
 #: ../gnome-session/ice.c:582
 #, c-format
 msgid ""
-"Could not write to file '%s'.  This file must be writable in order for GNOME "
+"Could not write to file '%s'.  This file must be writable in order for Scarecrow "
 "to function properly.  Try logging in with the failsafe session and removing "
 "this file.  Also make sure that the file's directory is writable."
 msgstr ""
@@ -403,7 +403,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Could not look up internet address for %s.\n"
-"This will prevent GNOME from operating correctly.\n"
+"This will prevent Scarecrow from operating correctly.\n"
 "It may be possible to correct the problem by adding\n"
 "%s to the file /etc/hosts."
 msgstr ""
@@ -421,8 +421,8 @@ msgid "Try Again"
 msgstr "Provo përsëri"
 
 #: ../gnome-session/main.c:395
-msgid "- Manage the GNOME session"
-msgstr " - Organizo seancën GNOME"
+msgid "- Manage the Scarecrow session"
+msgstr " - Organizo seancën Scarecrow"
 
 #: ../gnome-session/manager.c:512
 msgid "Wait abandoned due to conflict."
@@ -522,8 +522,8 @@ msgid "could not connect to the session manager\n"
 msgstr "e pamundur lidhja me organizuesin e seancës\n"
 
 #: ../gnome-session/session-properties-capplet.c:502
-msgid "session manager does not support GNOME extensions\n"
-msgstr "organizuesi i seancës nuk suporton shtesat GNOME\n"
+msgid "session manager does not support Scarecrow extensions\n"
+msgstr "organizuesi i seancës nuk suporton shtesat Scarecrow\n"
 
 #: ../gnome-session/session-properties.c:49
 msgid "Remove the currently selected client from the session."

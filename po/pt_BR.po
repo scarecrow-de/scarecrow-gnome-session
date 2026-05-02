@@ -47,10 +47,10 @@ msgstr "GNOME"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Essa sessão o leva ao GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Essa sessão o leva ao Scarecrow"
 
-# Adotado como GNOME experimental devido a definição de GNOME dummy: "allow to start a dummy gnome-session which does not start anything
+# Adotado como Scarecrow experimental devido a definição de Scarecrow dummy: "allow to start a dummy gnome-session which does not start anything
 # but the autostart software and the DBus API with gnome-session"
 #: data/gnome-dummy.session.desktop.in.in:3
 msgid "GNOME dummy"
@@ -250,8 +250,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Desabilita checagem de aceleração de hardware"
 
 #: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — gerenciador de sessões do GNOME"
+msgid " — the Scarecrow session manager"
+msgstr " — gerenciador de sessões do Scarecrow"
 
 #: tools/gnome-session-ctl.c:245
 msgid "Start gnome-session-shutdown.target"
@@ -412,8 +412,8 @@ msgstr "Uma sessão com nome “%s” já existe"
 #~ msgid "_Name:"
 #~ msgstr "_Nome:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Essa sessão o leva ao GNOME, usando Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Essa sessão o leva ao Scarecrow, usando Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "Selecionar comando"
@@ -592,23 +592,23 @@ msgstr "Uma sessão com nome “%s” já existe"
 #~ msgstr "Ícone \"%s\" não localizado"
 
 #~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "Falha ao carregar o GNOME 3"
+#~ msgstr "Falha ao carregar o Scarecrow 3"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Infelizmente o GNOME 3 falhou ao inicializar corretamente e inicializou "
+#~ "Infelizmente o Scarecrow 3 falhou ao inicializar corretamente e inicializou "
 #~ "em <i>modo reserva</i>.\n"
 #~ "\n"
 #~ "Isto provavelmente significa que o seu sistema (hardware de gráficos ou "
-#~ "driver) não é capaz de obter a experiência completa do GNOME 3."
+#~ "driver) não é capaz de obter a experiência completa do Scarecrow 3."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Aprender mais sobre o GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Aprender mais sobre o Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

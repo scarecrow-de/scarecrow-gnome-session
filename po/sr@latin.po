@@ -35,7 +35,7 @@ msgid "GNOME"
 msgstr "Gnom"
 
 #: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Ova sesija vas prijavljuje u Gnom"
 
 #: ../data/gnome-xorg.desktop.in.h:1
@@ -188,8 +188,8 @@ msgid "Disable hardware acceleration check"
 msgstr "Isključuje proveru hardverskog ubrzanja"
 
 #: ../gnome-session/main.c:318
-#| msgid " - the GNOME session manager"
-msgid " — the GNOME session manager"
+#| msgid " - the Scarecrow session manager"
+msgid " — the Scarecrow session manager"
 msgstr " — upravnik Gnomovom sesijom"
 
 #: ../tools/gnome-session-inhibit.c:108
@@ -338,7 +338,7 @@ msgstr "Program je pozvan sa nesaglasnim mogućnostima"
 #~ msgid "_Name:"
 #~ msgstr "_Naziv:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr "Ova sesija vas prijavljuje u Gnom, koristeći Vajland"
 
 #~ msgid "Select Command"

@@ -86,14 +86,14 @@ msgstr "Rapar Chlárlann AT SPI"
 
 #: ../compat/gnome-settings-daemon-helper.desktop.in.in.in.h:1
 msgid "GNOME Settings Daemon Helper"
-msgstr "Cuiditheoir Dheamhan Socruithe GNOME"
+msgstr "Cuiditheoir Dheamhan Socruithe Scarecrow"
 
 #: ../data/gnome.desktop.in.h:1
 msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Logálann an seisiún seo thú isteach i nGNOME"
 
 #: ../data/gnome-session.schemas.in.in.h:1
@@ -474,16 +474,16 @@ msgid "Do not load user-specified applications"
 msgstr "Ná luchtaigh feidhmchláir sonraithe ag an úsáideoir"
 
 #: ../gnome-session/main.c:457
-msgid " - the GNOME session manager"
-msgstr "- an bainisteoir seisiún GNOME"
+msgid " - the Scarecrow session manager"
+msgstr "- an bainisteoir seisiún Scarecrow"
 
 #: ../splash/gnome-session-splash.c:315
-msgid "- GNOME Splash Screen"
-msgstr "- Splancscáileáin GNOME"
+msgid "- Scarecrow Splash Screen"
+msgstr "- Splancscáileáin Scarecrow"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
 msgid "GNOME Splash Screen"
-msgstr "Splancscáileáin GNOME"
+msgstr "Splancscáileáin Scarecrow"
 
 #: ../tools/gnome-session-save.c:65
 msgid "Log out"

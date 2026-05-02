@@ -84,15 +84,15 @@ msgstr "Skoazeller marilh AT SPI"
 
 #: ../compat/gnome-settings-daemon-helper.desktop.in.in.in.h:1
 msgid "GNOME Settings Daemon Helper"
-msgstr "Skoazeller sikour arventennoù GNOME"
+msgstr "Skoazeller sikour arventennoù Scarecrow"
 
 #: ../data/gnome.desktop.in.h:1
 msgid "GNOME"
 msgstr "GNOME"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "An estez-mañ a lug ac'hanoc'h davet GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "An estez-mañ a lug ac'hanoc'h davet Scarecrow"
 
 #: ../data/gnome-session.schemas.in.in.h:1
 msgid "Default session"
@@ -446,16 +446,16 @@ msgid "Do not load user-specified applications"
 msgstr "Ne garg ket an arloadoù goulennet gant an arveriad"
 
 #: ../gnome-session/main.c:457
-msgid " - the GNOME session manager"
-msgstr " - ardoer estezioù GNOME"
+msgid " - the Scarecrow session manager"
+msgstr " - ardoer estezioù Scarecrow"
 
 #: ../splash/gnome-session-splash.c:315
-msgid "- GNOME Splash Screen"
-msgstr "- Skramm degemer GNOME"
+msgid "- Scarecrow Splash Screen"
+msgstr "- Skramm degemer Scarecrow"
 
 #: ../splash/gnome-session-splash.desktop.in.in.in.h:1
 msgid "GNOME Splash Screen"
-msgstr "Skramm degemer GNOME"
+msgstr "Skramm degemer Scarecrow"
 
 #: ../tools/gnome-session-save.c:65
 msgid "Log out"
