@@ -93,7 +93,7 @@
 #define GDM_FLEXISERVER_COMMAND "gdmflexiserver"
 #define GDM_FLEXISERVER_ARGS    "--startnew Standard"
 
-#define SESSION_SCHEMA            "io.github.scarecrow_de.desktop.session"
+#define SESSION_SCHEMA            "org.gnome.desktop.session"
 #define KEY_IDLE_DELAY            "idle-delay"
 #define KEY_SESSION_NAME          "session-name"
 
@@ -103,10 +103,10 @@
 #define KEY_LOGOUT_PROMPT         "logout-prompt"
 #define KEY_SHOW_FALLBACK_WARNING "show-fallback-warning"
 
-#define SCREENSAVER_SCHEMA        "io.github.scarecrow_de.desktop.screensaver"
+#define SCREENSAVER_SCHEMA        "org.gnome.desktop.screensaver"
 #define KEY_SLEEP_LOCK            "lock-enabled"
 
-#define LOCKDOWN_SCHEMA           "io.github.scarecrow_de.desktop.lockdown"
+#define LOCKDOWN_SCHEMA           "org.gnome.desktop.lockdown"
 #define KEY_DISABLE_LOG_OUT       "disable-log-out"
 #define KEY_DISABLE_USER_SWITCHING "disable-user-switching"
 
