@@ -79,9 +79,9 @@ static gboolean inhibit (const gchar       *app_id,
     }
 
   ret = g_dbus_connection_call_sync (bus,
-                               "io.github.scarecrow-de.SessionManager",
-                               "/io/github/scarecrow-de/SessionManager",
-                               "io.github.scarecrow-de.SessionManager",
+                               "io.github.scarecrow_de.SessionManager",
+                               "/io/github/scarecrow_de/SessionManager",
+                               "io.github.scarecrow_de.SessionManager",
                                "Inhibit",
                                g_variant_new ("(susu)",
                                               app_id, 0, reason, flags),
@@ -201,9 +201,9 @@ static void list (void)
     }
 
   ret = g_dbus_connection_call_sync (bus,
-                               "io.github.scarecrow-de.SessionManager",
-                               "/io/github/scarecrow-de/SessionManager",
-                               "io.github.scarecrow-de.SessionManager",
+                               "io.github.scarecrow_de.SessionManager",
+                               "/io/github/scarecrow_de/SessionManager",
+                               "io.github.scarecrow_de.SessionManager",
                                "GetInhibitors",
                                NULL,
                                NULL,
@@ -240,9 +240,9 @@ static void list (void)
       inhibitor = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
                                                  G_DBUS_PROXY_FLAGS_NONE,
                                                  NULL,
-                                                 "io.github.scarecrow-de.SessionManager",
+                                                 "io.github.scarecrow_de.SessionManager",
                                                  inhibitor_path,
-                                                 "io.github.scarecrow-de.SessionManager.Inhibitor",
+                                                 "io.github.scarecrow_de.SessionManager.Inhibitor",
                                                  NULL,
                                                  &error);
 

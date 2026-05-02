@@ -25,7 +25,7 @@
 #include <string.h>
 
 #include "gsm-app.h"
-#include "io.github.scarecrow-de.SessionManager.App.h"
+#include "io.github.scarecrow_de.SessionManager.App.h"
 
 #define GSM_APP_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_APP, GsmAppPrivate))
 
@@ -176,7 +176,7 @@ gsm_app_constructor (GType                  type,
                                                                            construct_properties));
 
         g_free (app->priv->id);
-        app->priv->id = g_strdup_printf ("/io/github/scarecrow-de/SessionManager/App%u", get_next_app_serial ());
+        app->priv->id = g_strdup_printf ("/io/github/scarecrow_de/SessionManager/App%u", get_next_app_serial ());
 
         res = register_app (app);
         if (! res) {

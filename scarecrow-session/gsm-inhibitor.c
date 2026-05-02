@@ -25,7 +25,7 @@
 #include <unistd.h>
 
 #include "gsm-inhibitor.h"
-#include "io.github.scarecrow-de.SessionManager.Inhibitor.h"
+#include "io.github.scarecrow_de.SessionManager.Inhibitor.h"
 
 #include "gsm-util.h"
 
@@ -68,7 +68,7 @@ static guint signals[LAST_SIGNAL] = { 0 };
 
 G_DEFINE_TYPE (GsmInhibitor, gsm_inhibitor, G_TYPE_OBJECT)
 
-#define GSM_INHIBITOR_DBUS_IFACE "io.github.scarecrow-de.SessionManager.Inhibitor"
+#define GSM_INHIBITOR_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Inhibitor"
 
 static const GDBusErrorEntry gsm_inhibitor_error_entries[] = {
         { GSM_INHIBITOR_ERROR_GENERAL, GSM_INHIBITOR_DBUS_IFACE ".GeneralError" },
@@ -228,7 +228,7 @@ gsm_inhibitor_constructor (GType                  type,
                                                                                              construct_properties));
 
         g_free (inhibitor->priv->id);
-        inhibitor->priv->id = g_strdup_printf ("/io/github/scarecrow-de/SessionManager/Inhibitor%u", get_next_inhibitor_serial ());
+        inhibitor->priv->id = g_strdup_printf ("/io/github/scarecrow_de/SessionManager/Inhibitor%u", get_next_inhibitor_serial ());
         res = register_inhibitor (inhibitor);
         if (! res) {
                 g_warning ("Unable to register inhibitor with session bus");

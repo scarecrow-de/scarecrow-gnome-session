@@ -1,11 +1,11 @@
 ifaces_refs = []
 
 ifaces = [
-  'io.github.scarecrow-de.SessionManager',
-  'io.github.scarecrow-de.SessionManager.Client',
-  'io.github.scarecrow-de.SessionManager.ClientPrivate',
-  'io.github.scarecrow-de.SessionManager.Inhibitor',
-  'io.github.scarecrow-de.SessionManager.Presence'
+  'io.github.scarecrow_de.SessionManager',
+  'io.github.scarecrow_de.SessionManager.Client',
+  'io.github.scarecrow_de.SessionManager.ClientPrivate',
+  'io.github.scarecrow_de.SessionManager.Inhibitor',
+  'io.github.scarecrow_de.SessionManager.Presence'
 ]
 
 scarecrow_session_dir = join_paths(meson.source_root(), 'scarecrow-session')

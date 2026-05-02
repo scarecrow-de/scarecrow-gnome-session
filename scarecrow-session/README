@@ -27,7 +27,7 @@ Startup is divided into 7 phases (GsmManagerPhase):
       running very early (before any windows are displayed).
 
       Apps in this phase can make use of a D-Bus interface
-      (io.github.scarecrow-de.SessionManager.Setenv) to set environment variables
+      (io.github.scarecrow_de.SessionManager.Setenv) to set environment variables
       in scarecrow-session's environment. This can be used for things like
       $GTK_MODULES, $GNOME_KEYRING_SOCKET, etc
 

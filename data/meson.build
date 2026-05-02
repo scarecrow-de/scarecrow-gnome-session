@@ -6,27 +6,27 @@ desktops = [
 ]
 
 shell_component = {
-  desktop_plain: 'io.github.scarecrow-de.Shell',
+  desktop_plain: 'io.github.scarecrow_de.Shell',
 }
 
 required_components = {
   desktop_plain: [
-    'io.github.scarecrow-de.SettingsDaemon.A11ySettings',
-    'io.github.scarecrow-de.SettingsDaemon.Color',
-    'io.github.scarecrow-de.SettingsDaemon.Datetime',
-    'io.github.scarecrow-de.SettingsDaemon.Housekeeping',
-    'io.github.scarecrow-de.SettingsDaemon.Keyboard',
-    'io.github.scarecrow-de.SettingsDaemon.MediaKeys',
-    'io.github.scarecrow-de.SettingsDaemon.Power',
-    'io.github.scarecrow-de.SettingsDaemon.PrintNotifications',
-    'io.github.scarecrow-de.SettingsDaemon.Rfkill',
-    'io.github.scarecrow-de.SettingsDaemon.ScreensaverProxy',
-    'io.github.scarecrow-de.SettingsDaemon.Sharing',
-    'io.github.scarecrow-de.SettingsDaemon.Smartcard',
-    'io.github.scarecrow-de.SettingsDaemon.Sound',
-    'io.github.scarecrow-de.SettingsDaemon.UsbProtection',
-    'io.github.scarecrow-de.SettingsDaemon.Wacom',
-    'io.github.scarecrow-de.SettingsDaemon.XSettings',
+    'io.github.scarecrow_de.SettingsDaemon.A11ySettings',
+    'io.github.scarecrow_de.SettingsDaemon.Color',
+    'io.github.scarecrow_de.SettingsDaemon.Datetime',
+    'io.github.scarecrow_de.SettingsDaemon.Housekeeping',
+    'io.github.scarecrow_de.SettingsDaemon.Keyboard',
+    'io.github.scarecrow_de.SettingsDaemon.MediaKeys',
+    'io.github.scarecrow_de.SettingsDaemon.Power',
+    'io.github.scarecrow_de.SettingsDaemon.PrintNotifications',
+    'io.github.scarecrow_de.SettingsDaemon.Rfkill',
+    'io.github.scarecrow_de.SettingsDaemon.ScreensaverProxy',
+    'io.github.scarecrow_de.SettingsDaemon.Sharing',
+    'io.github.scarecrow_de.SettingsDaemon.Smartcard',
+    'io.github.scarecrow_de.SettingsDaemon.Sound',
+    'io.github.scarecrow_de.SettingsDaemon.UsbProtection',
+    'io.github.scarecrow_de.SettingsDaemon.Wacom',
+    'io.github.scarecrow_de.SettingsDaemon.XSettings',
   ],
 }
 
@@ -99,7 +99,7 @@ endforeach
 
 schema_conf = configuration_data()
 
-schema = 'io.github.scarecrow-de.SessionManager.gschema.xml'
+schema = 'io.github.scarecrow_de.SessionManager.gschema.xml'
 
 configure_file(
   input: schema + '.in',

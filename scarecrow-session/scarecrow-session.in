@@ -13,7 +13,7 @@ if [ "x$XDG_SESSION_TYPE" = "xwayland" ] &&
   fi
 fi
 
-SETTING=$(G_MESSAGES_DEBUG='' gsettings get io.github.scarecrow-de.system.locale region)
+SETTING=$(G_MESSAGES_DEBUG='' gsettings get io.github.scarecrow_de.system.locale region)
 REGION=${SETTING#\'}
 REGION=${REGION%\'}
 

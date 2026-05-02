@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
-<!ENTITY dbus-Manager SYSTEM "io.github.scarecrow-de.SessionManager.ref.xml">
-<!ENTITY dbus-Client SYSTEM "io.github.scarecrow-de.SessionManager.Client.ref.xml">
-<!ENTITY dbus-ClientPrivate SYSTEM "io.github.scarecrow-de.SessionManager.ClientPrivate.ref.xml">
-<!ENTITY dbus-Inhibitor SYSTEM "io.github.scarecrow-de.SessionManager.Inhibitor.ref.xml">
-<!ENTITY dbus-Presence SYSTEM "io.github.scarecrow-de.SessionManager.Presence.ref.xml">
+<!ENTITY dbus-Manager SYSTEM "io.github.scarecrow_de.SessionManager.ref.xml">
+<!ENTITY dbus-Client SYSTEM "io.github.scarecrow_de.SessionManager.Client.ref.xml">
+<!ENTITY dbus-ClientPrivate SYSTEM "io.github.scarecrow_de.SessionManager.ClientPrivate.ref.xml">
+<!ENTITY dbus-Inhibitor SYSTEM "io.github.scarecrow_de.SessionManager.Inhibitor.ref.xml">
+<!ENTITY dbus-Presence SYSTEM "io.github.scarecrow_de.SessionManager.Presence.ref.xml">
 ]>
 
 <book id="index">

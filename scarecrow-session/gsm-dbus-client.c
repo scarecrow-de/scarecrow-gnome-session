@@ -27,7 +27,7 @@
 #include <unistd.h>
 #include <gio/gio.h>
 
-#include "io.github.scarecrow-de.SessionManager.ClientPrivate.h"
+#include "io.github.scarecrow_de.SessionManager.ClientPrivate.h"
 #include "gsm-dbus-client.h"
 
 #include "gsm-manager.h"
@@ -36,8 +36,8 @@
 #define GSM_DBUS_CLIENT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_DBUS_CLIENT, GsmDBusClientPrivate))
 
 
-#define SM_DBUS_NAME                     "io.github.scarecrow-de.SessionManager"
-#define SM_DBUS_CLIENT_PRIVATE_INTERFACE "io.github.scarecrow-de.SessionManager.ClientPrivate"
+#define SM_DBUS_NAME                     "io.github.scarecrow_de.SessionManager"
+#define SM_DBUS_CLIENT_PRIVATE_INTERFACE "io.github.scarecrow_de.SessionManager.ClientPrivate"
 
 struct GsmDBusClientPrivate
 {

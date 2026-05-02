@@ -27,11 +27,11 @@
 #include <glib.h>
 #include <gio/gio.h>
 
-#define SM_DBUS_NAME      "io.github.scarecrow-de.SessionManager"
-#define SM_DBUS_PATH      "/io/github/scarecrow-de/SessionManager"
-#define SM_DBUS_INTERFACE "io.github.scarecrow-de.SessionManager"
+#define SM_DBUS_NAME      "io.github.scarecrow_de.SessionManager"
+#define SM_DBUS_PATH      "/io/github/scarecrow_de/SessionManager"
+#define SM_DBUS_INTERFACE "io.github.scarecrow_de.SessionManager"
 
-#define SM_CLIENT_DBUS_INTERFACE "io.github.scarecrow-de.SessionManager.ClientPrivate"
+#define SM_CLIENT_DBUS_INTERFACE "io.github.scarecrow_de.SessionManager.ClientPrivate"
 
 static GDBusConnection *connection = NULL;
 static GDBusProxy      *sm_proxy = NULL;
