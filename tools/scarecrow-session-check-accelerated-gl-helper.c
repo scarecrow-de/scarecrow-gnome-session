@@ -409,7 +409,7 @@ _set_max_screen_size_property (Display *display, int screen, int size)
         max_screen_size_atom = XInternAtom (display, "_GNOME_MAX_SCREEN_SIZE",
                                             False);
 
-        /* Will be read by scarecrow-settings-daemon and
+        /* Will be read by gnome-settings-daemon and
          * scarecrow-control-center to avoid display configurations where 3D
          * is not available (and would break scarecrow-shell) */
         XChangeProperty (display, RootWindow(display, screen),

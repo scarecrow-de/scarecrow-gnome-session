@@ -60,7 +60,7 @@ typedef enum {
         GSM_MANAGER_PHASE_PRE_DISPLAY_SERVER,
         /* wayland compositor and XWayland */
         GSM_MANAGER_PHASE_DISPLAY_SERVER,
-        /* xrandr setup, scarecrow-settings-daemon, etc */
+        /* xrandr setup, gnome-settings-daemon, etc */
         GSM_MANAGER_PHASE_INITIALIZATION,
         /* window/compositing managers */
         GSM_MANAGER_PHASE_WINDOW_MANAGER,

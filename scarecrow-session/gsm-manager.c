@@ -772,7 +772,7 @@ _start_app (const char *id,
 
         if (manager->priv->phase < GSM_MANAGER_PHASE_APPLICATION) {
                 /* Historical note - apparently,
-                 * e.g. scarecrow-settings-daemon used to "daemonize", and
+                 * e.g. gnome-settings-daemon used to "daemonize", and
                  * so scarecrow-session assumes process exit means "ok
                  * we're done".  Of course this is broken, we don't
                  * even distinguish between exit code 0 versus not-0,
