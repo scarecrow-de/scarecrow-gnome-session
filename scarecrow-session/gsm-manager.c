@@ -38,7 +38,7 @@
 #include <gio/gio.h>
 
 #include "gsm-manager.h"
-#include "io.github.scarecrow_de.SessionManager.h"
+#include "org.gnome.SessionManager.h"
 
 #ifdef ENABLE_SYSTEMD_JOURNAL
 #include <systemd/sd-journal.h>
@@ -77,8 +77,8 @@
 #define GSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID "10dd2dc188b54a5e98970f56499d1f73"
 
 #define GSM_MANAGER_DBUS_PATH "/io/github/scarecrow_de/SessionManager"
-#define GSM_MANAGER_DBUS_NAME "io.github.scarecrow_de.SessionManager"
-#define GSM_MANAGER_DBUS_IFACE "io.github.scarecrow_de.SessionManager"
+#define GSM_MANAGER_DBUS_NAME "org.gnome.SessionManager"
+#define GSM_MANAGER_DBUS_IFACE "org.gnome.SessionManager"
 
 /* Probably about the longest amount of time someone could reasonably
  * want to wait, at least for something happening more than once.
@@ -97,7 +97,7 @@
 #define KEY_IDLE_DELAY            "idle-delay"
 #define KEY_SESSION_NAME          "session-name"
 
-#define GSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
+#define GSM_MANAGER_SCHEMA        "org.gnome.SessionManager"
 #define KEY_AUTOSAVE              "auto-save-session"
 #define KEY_AUTOSAVE_ONE_SHOT     "auto-save-session-one-shot"
 #define KEY_LOGOUT_PROMPT         "logout-prompt"
@@ -3569,7 +3569,7 @@ show_shell_end_session_dialog (GsmManager                   *manager,
 
 /*
   dbus-send --session --type=method_call --print-reply
-      --dest=io.github.scarecrow_de.SessionManager
+      --dest=org.gnome.SessionManager
       /io/github/scarecrow_de/SessionManager
       org.freedesktop.DBus.Introspectable.Introspect
 */

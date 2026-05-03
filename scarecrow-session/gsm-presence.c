@@ -28,9 +28,9 @@
 #include <libgnome-desktop/gnome-idle-monitor.h>
 
 #include "gsm-presence.h"
-#include "io.github.scarecrow_de.SessionManager.Presence.h"
+#include "org.gnome.SessionManager.Presence.h"
 
-#define GSM_PRESENCE_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Presence"
+#define GSM_PRESENCE_DBUS_IFACE "org.gnome.SessionManager.Presence"
 #define GSM_PRESENCE_DBUS_PATH "/io/github/scarecrow_de/SessionManager/Presence"
 
 #define GS_NAME      "io.github.scarecrow_de.ScreenSaver"

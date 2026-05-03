@@ -20,7 +20,7 @@
 #include "config.h"
 
 #include "gsm-client.h"
-#include "io.github.scarecrow_de.SessionManager.Client.h"
+#include "org.gnome.SessionManager.Client.h"
 
 static guint32 client_serial = 1;
 
@@ -54,7 +54,7 @@ static guint signals[LAST_SIGNAL] = { 0 };
 
 G_DEFINE_ABSTRACT_TYPE (GsmClient, gsm_client, G_TYPE_OBJECT)
 
-#define GSM_CLIENT_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Client"
+#define GSM_CLIENT_DBUS_IFACE "org.gnome.SessionManager.Client"
 
 static const GDBusErrorEntry gsm_client_error_entries[] = {
         { GSM_CLIENT_ERROR_GENERAL, GSM_CLIENT_DBUS_IFACE ".GeneralError" },

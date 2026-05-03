@@ -6,7 +6,7 @@ data/scarecrow-dummy.session.desktop.in.in
 data/scarecrow.session.desktop.in.in
 data/scarecrow-wayland.desktop.in.in
 data/scarecrow-xorg.desktop.in.in
-data/io.github.scarecrow_de.SessionManager.gschema.xml.in
+data/org.gnome.SessionManager.gschema.xml.in
 data/session-selector.ui
 scarecrow-session/gsm-fail-whale-dialog.c
 scarecrow-session/gsm-manager.c

@@ -99,7 +99,7 @@ endforeach
 
 schema_conf = configuration_data()
 
-schema = 'io.github.scarecrow_de.SessionManager.gschema.xml'
+schema = 'org.gnome.SessionManager.gschema.xml'
 
 configure_file(
   input: schema + '.in',

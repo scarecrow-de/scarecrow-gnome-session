@@ -35,7 +35,7 @@
 #define SHELL_INTERFACE "io.github.scarecrow_de.Shell"
 
 #define SHELL_END_SESSION_DIALOG_PATH      "/io/github/scarecrow_de/SessionManager/EndSessionDialog"
-#define SHELL_END_SESSION_DIALOG_INTERFACE "io.github.scarecrow_de.SessionManager.EndSessionDialog"
+#define SHELL_END_SESSION_DIALOG_INTERFACE "org.gnome.SessionManager.EndSessionDialog"
 
 #define AUTOMATIC_ACTION_TIMEOUT 60
 

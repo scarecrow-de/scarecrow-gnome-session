@@ -27,9 +27,9 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 
-#define SM_DBUS_NAME      "io.github.scarecrow_de.SessionManager"
+#define SM_DBUS_NAME      "org.gnome.SessionManager"
 #define SM_DBUS_PATH      "/io/github/scarecrow_de/SessionManager"
-#define SM_DBUS_INTERFACE "io.github.scarecrow_de.SessionManager"
+#define SM_DBUS_INTERFACE "org.gnome.SessionManager"
 
 static GDBusConnection *connection = NULL;
 static GDBusProxy      *sm_proxy = NULL;

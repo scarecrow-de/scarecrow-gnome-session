@@ -36,9 +36,9 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#define GSM_SERVICE_DBUS   "io.github.scarecrow_de.SessionManager"
+#define GSM_SERVICE_DBUS   "org.gnome.SessionManager"
 #define GSM_PATH_DBUS      "/io/github/scarecrow_de/SessionManager"
-#define GSM_INTERFACE_DBUS "io.github.scarecrow_de.SessionManager"
+#define GSM_INTERFACE_DBUS "org.gnome.SessionManager"
 
 #define SYSTEMD_DBUS            "org.freedesktop.systemd1"
 #define SYSTEMD_PATH_DBUS       "/org/freedesktop/systemd1"

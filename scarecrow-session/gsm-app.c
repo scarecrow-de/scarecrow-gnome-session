@@ -25,7 +25,7 @@
 #include <string.h>
 
 #include "gsm-app.h"
-#include "io.github.scarecrow_de.SessionManager.App.h"
+#include "org.gnome.SessionManager.App.h"
 
 #define GSM_APP_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_APP, GsmAppPrivate))
 

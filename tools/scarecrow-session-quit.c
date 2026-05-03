@@ -30,9 +30,9 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#define GSM_SERVICE_DBUS   "io.github.scarecrow_de.SessionManager"
+#define GSM_SERVICE_DBUS   "org.gnome.SessionManager"
 #define GSM_PATH_DBUS      "/io/github/scarecrow_de/SessionManager"
-#define GSM_INTERFACE_DBUS "io.github.scarecrow_de.SessionManager"
+#define GSM_INTERFACE_DBUS "org.gnome.SessionManager"
 
 enum {
         GSM_LOGOUT_MODE_NORMAL = 0,

@@ -47,7 +47,7 @@
 #include <systemd/sd-journal.h>
 #endif
 
-#define GSM_DBUS_NAME "io.github.scarecrow_de.SessionManager"
+#define GSM_DBUS_NAME "org.gnome.SessionManager"
 
 static gboolean systemd_service = FALSE;
 static gboolean use_systemd = USE_SYSTEMD_SESSION;

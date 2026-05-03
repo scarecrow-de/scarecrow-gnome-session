@@ -25,7 +25,7 @@
 #include <unistd.h>
 
 #include "gsm-inhibitor.h"
-#include "io.github.scarecrow_de.SessionManager.Inhibitor.h"
+#include "org.gnome.SessionManager.Inhibitor.h"
 
 #include "gsm-util.h"
 
@@ -68,7 +68,7 @@ static guint signals[LAST_SIGNAL] = { 0 };
 
 G_DEFINE_TYPE (GsmInhibitor, gsm_inhibitor, G_TYPE_OBJECT)
 
-#define GSM_INHIBITOR_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Inhibitor"
+#define GSM_INHIBITOR_DBUS_IFACE "org.gnome.SessionManager.Inhibitor"
 
 static const GDBusErrorEntry gsm_inhibitor_error_entries[] = {
         { GSM_INHIBITOR_ERROR_GENERAL, GSM_INHIBITOR_DBUS_IFACE ".GeneralError" },

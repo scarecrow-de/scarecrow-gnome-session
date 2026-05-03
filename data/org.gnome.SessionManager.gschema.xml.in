@@ -1,5 +1,5 @@
 <schemalist gettext-domain="scarecrow-session-3.0">
-  <schema id="io.github.scarecrow_de.SessionManager" path="/io/github/scarecrow_de/scarecrow-session/">
+  <schema id="org.gnome.SessionManager" path="/io/github/scarecrow_de/scarecrow-session/">
     <key name="auto-save-session" type="b">
       <default>false</default>
       <summary>Save sessions</summary>
