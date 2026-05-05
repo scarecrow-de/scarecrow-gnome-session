@@ -73,7 +73,7 @@ sessions = [
 ]
 
 foreach session: sessions
-  session_file = 'gnome' + '.session'
+  session_file = session + '.session'
   desktop_conf = configuration_data()
   desktop_conf.set('libexecdir', session_libexecdir)
   desktop_conf.set('required_components', ';'.join(
@@ -90,7 +90,7 @@ foreach session: sessions
   i18n.merge_file(
     type: 'desktop',
     input: desktop_in,
-    output: session_file,
+    output: 'gnome.session',
     po_dir: po_dir,
     install: true,
     install_dir: join_paths(session_pkgdatadir, 'sessions')
