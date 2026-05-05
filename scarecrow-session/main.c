@@ -596,7 +596,7 @@ main (int argc, char **argv)
 
         /* We want to use the GNOME menus which has the designed categories.
          */
-        gsm_util_setenv ("XDG_MENU_PREFIX", "gnome-");
+        gsm_util_setenv ("XDG_MENU_PREFIX", "scarecrow-");
 
         /* Talk to logind before acquiring a name, since it does synchronous
          * calls at initialization time that invoke a main loop and if we

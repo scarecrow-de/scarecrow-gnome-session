@@ -31,10 +31,10 @@
 #include "gsm-shell.h"
 
 #define SHELL_NAME      "io.github.scarecrow_de.Shell"
-#define SHELL_PATH      "/org/gnome/Shell"
+#define SHELL_PATH      "/io/github/scarecrow_de/Shell"
 #define SHELL_INTERFACE "io.github.scarecrow_de.Shell"
 
-#define SHELL_END_SESSION_DIALOG_PATH      "/org/gnome/SessionManager/EndSessionDialog"
+#define SHELL_END_SESSION_DIALOG_PATH      "/io/github/scarecrow_de/SessionManager/EndSessionDialog"
 #define SHELL_END_SESSION_DIALOG_INTERFACE "io.github.scarecrow_de.SessionManager.EndSessionDialog"
 
 #define AUTOMATIC_ACTION_TIMEOUT 60

@@ -31,10 +31,10 @@
 #include "io.github.scarecrow_de.SessionManager.Presence.h"
 
 #define GSM_PRESENCE_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Presence"
-#define GSM_PRESENCE_DBUS_PATH "/org/gnome/SessionManager/Presence"
+#define GSM_PRESENCE_DBUS_PATH "/io/github/scarecrow_de/SessionManager/Presence"
 
 #define GS_NAME      "io.github.scarecrow_de.ScreenSaver"
-#define GS_PATH      "/org/gnome/ScreenSaver"
+#define GS_PATH      "/io/github/scarecrow_de/ScreenSaver"
 #define GS_INTERFACE "io.github.scarecrow_de.ScreenSaver"
 
 #define MAX_STATUS_TEXT 140

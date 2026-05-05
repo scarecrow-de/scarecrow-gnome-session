@@ -210,7 +210,7 @@ gsm_client_constructor (GType                  type,
                                                                                     construct_properties));
 
         g_free (client->priv->id);
-        client->priv->id = g_strdup_printf ("/org/gnome/SessionManager/Client%u", get_next_client_serial ());
+        client->priv->id = g_strdup_printf ("/io/github/scarecrow_de/SessionManager/Client%u", get_next_client_serial ());
 
         res = register_client (client);
         if (! res) {

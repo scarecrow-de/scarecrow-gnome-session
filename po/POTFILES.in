@@ -1,6 +1,6 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/gnome-custom-session.desktop.in.in
+data/scarecrow-custom-session.desktop.in.in
 data/scarecrow.desktop.in.in
 data/scarecrow-dummy.session.desktop.in.in
 data/scarecrow.session.desktop.in.in

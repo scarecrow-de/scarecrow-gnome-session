@@ -76,7 +76,7 @@
 #define GSM_MANAGER_STARTUP_SUCCEEDED_MSGID     "0ce153587afa4095832d233c17a88001"
 #define GSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID "10dd2dc188b54a5e98970f56499d1f73"
 
-#define GSM_MANAGER_DBUS_PATH "/org/gnome/SessionManager"
+#define GSM_MANAGER_DBUS_PATH "/io/github/scarecrow_de/SessionManager"
 #define GSM_MANAGER_DBUS_NAME "io.github.scarecrow_de.SessionManager"
 #define GSM_MANAGER_DBUS_IFACE "io.github.scarecrow_de.SessionManager"
 
@@ -2410,7 +2410,7 @@ gsm_manager_class_init (GsmManagerClass *klass)
         /**
          * GsmManager::session-name
          *
-         * Then name of the currently active session, typically "gnome" or "gnome-fallback".
+         * Then name of the currently active session, typically "scarecrow" or "scarecrow-fallback".
          * This may be the name of the configured default session, or the name of a fallback
          * session in case we fell back.
          */
@@ -3570,7 +3570,7 @@ show_shell_end_session_dialog (GsmManager                   *manager,
 /*
   dbus-send --session --type=method_call --print-reply
       --dest=io.github.scarecrow_de.SessionManager
-      /org/gnome/SessionManager
+      /io/github/scarecrow_de/SessionManager
       org.freedesktop.DBus.Introspectable.Introspect
 */
 

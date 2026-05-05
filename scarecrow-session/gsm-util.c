@@ -107,7 +107,7 @@ gsm_util_find_desktop_file_for_app_name (const char *name,
         /* look for gnome vendor prefix */
         if (app_path == NULL) {
                 g_free (desktop_file);
-                desktop_file = g_strdup_printf ("gnome-%s.desktop", name);
+                desktop_file = g_strdup_printf ("scarecrow-%s.desktop", name);
 
                 g_key_file_load_from_dirs (key_file,
                                            desktop_file,
@@ -232,7 +232,7 @@ gsm_util_get_standard_autostart_dirs (void)
         for (i = 0; system_data_dirs[i]; i++) {
                 g_ptr_array_add (dirs,
                                  g_build_filename (system_data_dirs[i],
-                                                   "gnome", "autostart", NULL));
+                                                   "scarecrow", "autostart", NULL));
         }
 
         system_config_dirs = g_get_system_config_dirs ();

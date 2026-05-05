@@ -8,9 +8,9 @@ PartOf=scarecrow-session-failed.target
 
 # We could do this, but it requires an intermediate target for OnFailure
 # handling, so scarecrow-session-failed checks RUNNING_UNDER_GDM itself
-#Conflicts=scarecrow-session@gnome-login.target
+#Conflicts=scarecrow-session@scarecrow-login.target
 # or in the case of GDM and then not passing --allow-logout
-#Requisite=scarecrow-session@gnome-login.target
+#Requisite=scarecrow-session@scarecrow-login.target
 
 [Service]
 Type=simple

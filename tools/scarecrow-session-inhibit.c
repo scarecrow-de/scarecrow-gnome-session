@@ -80,7 +80,7 @@ static gboolean inhibit (const gchar       *app_id,
 
   ret = g_dbus_connection_call_sync (bus,
                                "io.github.scarecrow_de.SessionManager",
-                               "/org/gnome/SessionManager",
+                               "/io/github/scarecrow_de/SessionManager",
                                "io.github.scarecrow_de.SessionManager",
                                "Inhibit",
                                g_variant_new ("(susu)",
@@ -202,7 +202,7 @@ static void list (void)
 
   ret = g_dbus_connection_call_sync (bus,
                                "io.github.scarecrow_de.SessionManager",
-                               "/org/gnome/SessionManager",
+                               "/io/github/scarecrow_de/SessionManager",
                                "io.github.scarecrow_de.SessionManager",
                                "GetInhibitors",
                                NULL,

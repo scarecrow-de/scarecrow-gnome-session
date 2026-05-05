@@ -176,7 +176,7 @@ gsm_app_constructor (GType                  type,
                                                                            construct_properties));
 
         g_free (app->priv->id);
-        app->priv->id = g_strdup_printf ("/org/gnome/SessionManager/App%u", get_next_app_serial ());
+        app->priv->id = g_strdup_printf ("/io/github/scarecrow_de/SessionManager/App%u", get_next_app_serial ());
 
         res = register_app (app);
         if (! res) {
