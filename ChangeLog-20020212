@@ -6,9 +6,9 @@
 
 2002-02-12  Gediminas Paulauskas <menesis@delfi.lt>
 
-	* configure.in: removed GNOME_COMMON_INIT,
-	GNOME_PLATFORM_GNOME_2 -- obsolete.
-	GNOME_COMPILE_WARNINGS does not take arguments.
+	* configure.in: removed Scarecrow_COMMON_INIT,
+	Scarecrow_PLATFORM_Scarecrow_2 -- obsolete.
+	Scarecrow_COMPILE_WARNINGS does not take arguments.
 	* TRANSLATABLE_FILES: removed, intltool handles all of them.
 
 2002-02-11  Mark McLoughlin  <mark@skynet.ie>
@@ -280,7 +280,7 @@ Sun Dec  2 13:14:22 2001  Owen Taylor  <otaylor@redhat.com>
 	* applets/gen_util/pager.[ch]:
 	New files, implement a pager using libwnck.
 	
-	* applets/gen_util/GNOME_GenUtilApplet_Factory.server.in.in:
+	* applets/gen_util/Scarecrow_GenUtilApplet_Factory.server.in.in:
 	* applets/gen_util/Makefile.am:
 	* applets/gen_util/main.c:
 	Add Pager applet
@@ -379,7 +379,7 @@ Mon, 19 Nov 2001 02:06:20 -0500 Frank Belew <frb@ximian.com>
 	* configure.in:
 
 	Fetch the IDL flags for Bonobo Activation for use
-	with orbit-idl2 on GNOME_Panel.idl.
+	with orbit-idl2 on Scarecrow_Panel.idl.
 
 	* panel/main.c:
 
@@ -401,7 +401,7 @@ Mon, 19 Nov 2001 02:06:20 -0500 Frank Belew <frb@ximian.com>
 2001-10-12  Alex Larsson  <alexl@redhat.com>
 
 	* configure.in:
-	Added GNOME_ABOUT_CFLAGS/LIBS.
+	Added Scarecrow_ABOUT_CFLAGS/LIBS.
 
 	* Makefile.am:
 	build gnome-about 
@@ -460,7 +460,7 @@ Mon, 19 Nov 2001 02:06:20 -0500 Frank Belew <frb@ximian.com>
 
 2001-08-17  Martin Baulig  <baulig@suse.de>
 
-	* configure.in (GNOME_DESKTOP): Require bonobo-config.
+	* configure.in (Scarecrow_DESKTOP): Require bonobo-config.
 
 2001-08-09  Martin Baulig  <baulig@suse.de>
 
@@ -473,12 +473,12 @@ Mon, 19 Nov 2001 02:06:20 -0500 Frank Belew <frb@ximian.com>
 
 2001-08-06  Martin Baulig  <baulig@suse.de>
 
-	* configure.in (GNOME_DESKTOP): Added pkg-config checks for the
+	* configure.in (Scarecrow_DESKTOP): Added pkg-config checks for the
 	gnome-desktop directory.
 	
 2001-08-06  Martin Baulig  <baulig@suse.de>
 
-	* configure.in, autogen.sh: Updated for the GNOME 2 platform.
+	* configure.in, autogen.sh: Updated for the Scarecrow 2 platform.
 
 	* Makefile.am: Disabled all subdirs except idl, gnome-ditem and panel.
 
@@ -489,8 +489,8 @@ Mon, 19 Nov 2001 02:06:20 -0500 Frank Belew <frb@ximian.com>
 
 2001-08-06  Martin Baulig  <baulig@suse.de>
 
-	gnome-core has been branched for GNOME 1.4 - please use the gnome-core-1-4
-	branch for GNOME 1.4 - the HEAD is for GNOME 2.0.
+	gnome-core has been branched for Scarecrow 1.4 - please use the gnome-core-1-4
+	branch for Scarecrow 1.4 - the HEAD is for Scarecrow 2.0.
 
 	If you have a checked out copy of gnome-core, do a
 
@@ -621,7 +621,7 @@ Sat May 19 16:54:24 2001  George Lebl <jirka@5z.com>
 
 2001-04-19  Dan Mueth  <dan@eazel.com>
 
-	Adding Sasha's doc, "Reporting GNOME bugs and other feedback"
+	Adding Sasha's doc, "Reporting Scarecrow bugs and other feedback"
 	Alexander Kirillov <kirillov@math.sunysb.edu>
 
 	* configure.in:
@@ -659,7 +659,7 @@ Sat May 19 16:54:24 2001  George Lebl <jirka@5z.com>
 
 2001-03-28  Dan Mueth  <dan@eazel.com>
 
-	Linking GNOME hint capplet to doc
+	Linking Scarecrow hint capplet to doc
 
 	* gnome-hint/gnome-hint-properties.c: (help):
 
@@ -670,7 +670,7 @@ Sat May 19 16:54:24 2001  George Lebl <jirka@5z.com>
 2001-03-25  Dan Mueth  <dan@eazel.com>
 
 	Updated index page for gnome-help-browser to point to current
-	GNOME User's Guide.
+	Scarecrow User's Guide.
 
 	* help-browser/help/C/default-page.html:
 	* help-browser/help/ca/default-page.html:
@@ -1114,7 +1114,7 @@ Wed Jan 31 20:36:25 2001  George Lebl <jirka@5z.com>
 
 Wed Jan 10 11:15:02 2001  George Lebl <jirka@5z.com>
 
-	* configure.in:  Make sure GNOME_ICONDIR gets expand it to the
+	* configure.in:  Make sure Scarecrow_ICONDIR gets expand it to the
 	  datadir corectly
 
 2000-12-11  Marius Andreiana <mandreiana@yahoo.com>
@@ -1140,7 +1140,7 @@ Wed Jan 10 11:15:02 2001  George Lebl <jirka@5z.com>
 2000-11-10  Gregory Leblanc  <gleblanc@cu-portland.edu>
 
 	* *.sgml: Updates to all docs for compliance with the doc
-	standards for GNOME 1.4
+	standards for Scarecrow 1.4
 
 2000-11-09  Yukihiro Nakai  <nakai@gnome.gr.jp>
 
@@ -1324,7 +1324,7 @@ Sun Sep 03 06:31:46 2000  George Lebl <jirka@5z.com>
 	files after talking to George.
 	* desktop-links/Makefile.am: added the new files
 
-	Andreas Hydén is now testing then, and will submit
+	Andreas Hydï¿½n is now testing then, and will submit
 	changes if there are errors
 
 2000-05-04  Jacob Berkman  <jacob@helixcode.com>
@@ -1423,7 +1423,7 @@ Thu Apr 13 22:29:05 2000  George Lebl <jirka@5z.com>
 
 2000-03-27  Jacob Berkman  <jacob@helixcode.com>
 
-	* configure.in: pass 'capplet' to GNOME_INIT
+	* configure.in: pass 'capplet' to Scarecrow_INIT
 
 Sat Mar 04 18:35:59 2000  George Lebl <jirka@5z.com>
 
@@ -1465,7 +1465,7 @@ Sat Mar 04 18:35:59 2000  George Lebl <jirka@5z.com>
 
 	* configure.in : Added tr to ALL_LINGUAS .
 
-2000-2-11   Tomasz K³oczko <kloczek@pld.org.pl>
+2000-2-11   Tomasz Kï¿½oczko <kloczek@pld.org.pl>
 	* desktop-links/balsa.desktop
 	* pixmaps/gnome-balsa2.png: moved to balsa module,
 	
@@ -1485,7 +1485,7 @@ Sat Mar 04 18:35:59 2000  George Lebl <jirka@5z.com>
 
 2000-01-30  Timur I. Bakeyev  <timur@gnu.org>
 
-	* configure.in: AM_GNU_GETTEXT changed to AM_GNOME_GETTEXT - that
+	* configure.in: AM_GNU_GETTEXT changed to AM_Scarecrow_GETTEXT - that
 	makes proper substitution for INTLLIBS variable.
 
 2000-01-27  Jacob Berkman  <jacob@helixcode.com>
@@ -1772,7 +1772,7 @@ Mon May 10 14:10:51 1999  George Lebl  <jirka@5z.com>
 	so you can point at KDE menus in a different location.
 	(Should thus just be --with-kde-dir?)
 
-1999-04-07  Viööe Pätsi  <drc@gnu.org>
+1999-04-07  Viï¿½ï¿½e Pï¿½tsi  <drc@gnu.org>
 
 	* pixmaps/tile-drc-4-up.png: New tile.
 	* pixmaps/tile-drc-4-down.png: New tile.
@@ -2221,7 +2221,7 @@ Thu Sep 17 14:20:05 1998  John Ellis  <johne@bellatlantic.net>
 
 1998-09-06  Raja R Harinath  <harinath@cs.umn.edu>
 
-	* configure.in (GNOME_COMPILE_WARNINGS): New check.
+	* configure.in (Scarecrow_COMPILE_WARNINGS): New check.
 
 Fri Sep 04 00:07:08 1998  George Lebl  <jirka@5z.com>
 
@@ -2240,12 +2240,12 @@ Wed Sep 02 23:18:00 1998  George Lebl  <jirka@5z.com>
 
 1998-08-23  Martin Baulig  <martin@home-of-linux.org>
 
-	* configure.in (GNOME_FILEUTILS_CHECKS): Removed. This check
+	* configure.in (Scarecrow_FILEUTILS_CHECKS): Removed. This check
 	is no longer necessary since we now use libgtop for the
 	mountlist and fsusage stuff in the diskusage applet.
 	* acconfig.h: Removed mountlist stuff.
 
-	* configure.in (GNOME_INIT_LIBGTOP): New check.
+	* configure.in (Scarecrow_INIT_LIBGTOP): New check.
 	* acconfig.h: Added libgtop stuff.
 
 1998-08-20  Raja R Harinath  <harinath@cs.umn.edu>
@@ -2293,10 +2293,10 @@ Thu Aug 20 00:32:24 1998  Tom Tromey  <tromey@cygnus.com>
 
 	* core-docs/Makefile.am (install-data-local): Use INSTALL_DATA in
 	a for loop, don't install all at once.
-	(GNOME_INTRO_HTML_FILES): Remove $(srcdir) from names of files.
-	(GNOME_INTRO_PICTURES): Likewise.
+	(Scarecrow_INTRO_HTML_FILES): Remove $(srcdir) from names of files.
+	(Scarecrow_INTRO_PICTURES): Likewise.
 	(INTRO_EXTRA_DIST): Likewise.
-	(GNOME_INTRO_GIFS): Likewise.
+	(Scarecrow_INTRO_GIFS): Likewise.
 	(EXTRA_DIST): Likewise.
 
 1998-07-31  Federico Mena Quintero  <federico@nuclecu.unam.mx>
@@ -2376,7 +2376,7 @@ Fri Jun 12 22:56:58 1998  Tom Tromey  <tromey@cygnus.com>
 
 1998-06-11  John Ellis  <johne@bellatlantic.net>
 
-	* gmenu directory: Checked in a gmenu, the GNOME menu editor,
+	* gmenu directory: Checked in a gmenu, the Scarecrow menu editor,
 	still needs a Makefile.am file though.
 
 Wed Jun 10 11:34:52 1998  Owen Taylor  <otaylor@gtk.org>
@@ -2423,7 +2423,7 @@ Tue Jun  9 23:37:43 EDT 1998 Gregory McLean <gregm@comstar.net>
 
 1998-05-22  Martin Baulig  <baulig@merkur.uni-trier.de>
 
-	* configure.in: added GNOME_FILEUTILS_CHECKS
+	* configure.in: added Scarecrow_FILEUTILS_CHECKS
 
 	* acconfig.h (AFS, MOUNTED_FREAD, MOUNTED_FREAD_FSTYP,
 	MOUNTED_GETFSSTAT, MOUNTED_GETMNT, MOUNTED_GETMNTENT1,
@@ -2446,7 +2446,7 @@ Tue Jun  9 23:37:43 EDT 1998 Gregory McLean <gregm@comstar.net>
 	* core-docs/Makefile.am (install-data-local): fixed little bug in
 	installing help files.
 
-	* core-docs/gnome-intro.sgml: completed the GNOME intro; there are
+	* core-docs/gnome-intro.sgml: completed the Scarecrow intro; there are
 	many omissions, but it seems OK.  Now I have to proofread it a bit
 	and add a mention of panel applets.  I also added all the
 	generated HTML files for people who do not have the docbook tools
@@ -2570,7 +2570,7 @@ Sat Feb 14 01:31:21 1998  Tom Tromey  <tromey@cygnus.com>
 
 1998-02-14  Raja R Harinath  <harinath@cs.umn.edu>
 
-	* configure.in (GNOME_X_CHECKS): Add new check.
+	* configure.in (Scarecrow_X_CHECKS): Add new check.
 	(AC_OUTPUT): Also generate `macros/Makefile'.
 
 	* Makefile.am (macros/macros.dep): Maintainer rule to

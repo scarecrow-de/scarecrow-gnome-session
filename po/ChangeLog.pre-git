@@ -2850,7 +2850,7 @@
 
 2004-11-29  Christoffer Olsen  <co@deworks.net>
 
-	* POTFILES.in: Changed gnome-session/*.desktop.in
+	* POTFILES.in: Changed scarecrow-session/*.desktop.in
 	to *.desktop.in.in
 
 2004-11-27  Dwayne Bailey  <dwayne@translate.org.za>
@@ -2953,7 +2953,7 @@
 2004-06-24  Gustavo Noronha Silva  <kov@debian.org>
 
 	* pt_BR.po: fixed acellerator issue for 'current
-	session' page of gnome-session-properties.
+	session' page of scarecrow-session-properties.
 
 2004-05-31  Dinesh Nadarajah <dinesh_list@sbcglobal.net>
 
@@ -3844,7 +3844,7 @@
 
 2002-10-02  Mark McLoughlin  <mark@skynet.ie>
 
-	* POTFILES.in: add gnome-session.schemas.in.
+	* POTFILES.in: add scarecrow-session.schemas.in.
 
 2002-09-17  Naba Kumar <naba@gnome.org>
 

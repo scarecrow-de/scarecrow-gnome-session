@@ -1,14 +1,14 @@
 ifaces_refs = []
 
 ifaces = [
-  'io.github.scarecrow_deSessionManager',
-  'io.github.scarecrow_deSessionManager.Client',
-  'io.github.scarecrow_deSessionManager.ClientPrivate',
-  'io.github.scarecrow_deSessionManager.Inhibitor',
-  'io.github.scarecrow_deSessionManager.Presence'
+  'io.github.scarecrow_de.SessionManager',
+  'io.github.scarecrow_de.SessionManager.Client',
+  'io.github.scarecrow_de.SessionManager.ClientPrivate',
+  'io.github.scarecrow_de.SessionManager.Inhibitor',
+  'io.github.scarecrow_de.SessionManager.Presence'
 ]
 
-gnome_session_dir = join_paths(meson.source_root(), 'gnome-session')
+gnome_session_dir = join_paths(meson.source_root(), 'scarecrow-session')
 spec_to_docbook = files('spec-to-docbook.xsl')
 
 foreach iface: ifaces

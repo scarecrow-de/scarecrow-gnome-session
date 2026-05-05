@@ -1,37 +1,37 @@
-desktop_plain = 'gnome'
+desktop_plain = 'scarecrow'
 
 desktops = [
   desktop_plain,
-  'gnome-xorg'
+  'scarecrow-xorg'
 ]
 
 shell_component = {
-  desktop_plain: 'io.github.scarecrow_deShell',
+  desktop_plain: 'io.github.scarecrow_de.Shell',
 }
 
 required_components = {
   desktop_plain: [
-    'io.github.scarecrow_deSettingsDaemon.A11ySettings',
-    'io.github.scarecrow_deSettingsDaemon.Color',
-    'io.github.scarecrow_deSettingsDaemon.Datetime',
-    'io.github.scarecrow_deSettingsDaemon.Housekeeping',
-    'io.github.scarecrow_deSettingsDaemon.Keyboard',
-    'io.github.scarecrow_deSettingsDaemon.MediaKeys',
-    'io.github.scarecrow_deSettingsDaemon.Power',
-    'io.github.scarecrow_deSettingsDaemon.PrintNotifications',
-    'io.github.scarecrow_deSettingsDaemon.Rfkill',
-    'io.github.scarecrow_deSettingsDaemon.ScreensaverProxy',
-    'io.github.scarecrow_deSettingsDaemon.Sharing',
-    'io.github.scarecrow_deSettingsDaemon.Smartcard',
-    'io.github.scarecrow_deSettingsDaemon.Sound',
-    'io.github.scarecrow_deSettingsDaemon.UsbProtection',
-    'io.github.scarecrow_deSettingsDaemon.Wacom',
-    'io.github.scarecrow_deSettingsDaemon.XSettings',
+    'io.github.scarecrow_de.SettingsDaemon.A11ySettings',
+    'io.github.scarecrow_de.SettingsDaemon.Color',
+    'io.github.scarecrow_de.SettingsDaemon.Datetime',
+    'io.github.scarecrow_de.SettingsDaemon.Housekeeping',
+    'io.github.scarecrow_de.SettingsDaemon.Keyboard',
+    'io.github.scarecrow_de.SettingsDaemon.MediaKeys',
+    'io.github.scarecrow_de.SettingsDaemon.Power',
+    'io.github.scarecrow_de.SettingsDaemon.PrintNotifications',
+    'io.github.scarecrow_de.SettingsDaemon.Rfkill',
+    'io.github.scarecrow_de.SettingsDaemon.ScreensaverProxy',
+    'io.github.scarecrow_de.SettingsDaemon.Sharing',
+    'io.github.scarecrow_de.SettingsDaemon.Smartcard',
+    'io.github.scarecrow_de.SettingsDaemon.Sound',
+    'io.github.scarecrow_de.SettingsDaemon.UsbProtection',
+    'io.github.scarecrow_de.SettingsDaemon.Wacom',
+    'io.github.scarecrow_de.SettingsDaemon.XSettings',
   ],
 }
 
 if enable_session_selector
-  desktops += 'gnome-custom-session'
+  desktops += 'scarecrow-custom-session'
 endif
 
 foreach name: desktops
@@ -68,8 +68,8 @@ foreach name: desktops
 endforeach
 
 sessions = [
-  'gnome',
-  'gnome-dummy'
+  'scarecrow',
+  'scarecrow-dummy'
 ]
 
 foreach session: sessions
@@ -99,7 +99,7 @@ endforeach
 
 schema_conf = configuration_data()
 
-schema = 'io.github.scarecrow_deSessionManager.gschema.xml'
+schema = 'io.github.scarecrow_de.SessionManager.gschema.xml'
 
 configure_file(
   input: schema + '.in',
@@ -110,7 +110,7 @@ configure_file(
 )
 
 install_data(
-  'gnome-session.convert',
+  'scarecrow-session.convert',
   install_dir: join_paths(session_datadir, 'GConf', 'gsettings')
 )
 
@@ -118,11 +118,11 @@ if enable_systemd_session
   unit_conf = configuration_data()
   unit_conf.set('libexecdir', session_libexecdir)
 
-  systemd_service = ['gnome-session-manager@.service',
-                     'gnome-session-signal-init.service',
-                     'gnome-session-restart-dbus.service',
-                     'gnome-session-monitor.service',
-                     'gnome-session-failed.service']
+  systemd_service = ['scarecrow-session-manager@.service',
+                     'scarecrow-session-signal-init.service',
+                     'scarecrow-session-restart-dbus.service',
+                     'scarecrow-session-monitor.service',
+                     'scarecrow-session-failed.service']
 
   foreach service: systemd_service
     configure_file(
@@ -134,19 +134,19 @@ if enable_systemd_session
     )
   endforeach
 
-  systemd_target = files('gnome-session-wayland@.target',
-                         'gnome-session-wayland.target',
-                         'gnome-session-x11@.target',
-                         'gnome-session-x11.target',
-                         'gnome-session-x11-services.target',
-                         'gnome-session-x11-services-ready.target',
-                         'gnome-session@.target',
-                         'gnome-session.target',
-                         'gnome-session-pre.target',
-                         'gnome-session-manager.target',
-                         'gnome-session-initialized.target',
-                         'gnome-session-shutdown.target',
-                         'gnome-session-failed.target',
+  systemd_target = files('scarecrow-session-wayland@.target',
+                         'scarecrow-session-wayland.target',
+                         'scarecrow-session-x11@.target',
+                         'scarecrow-session-x11.target',
+                         'scarecrow-session-x11-services.target',
+                         'scarecrow-session-x11-services-ready.target',
+                         'scarecrow-session@.target',
+                         'scarecrow-session.target',
+                         'scarecrow-session-pre.target',
+                         'scarecrow-session-manager.target',
+                         'scarecrow-session-initialized.target',
+                         'scarecrow-session-shutdown.target',
+                         'scarecrow-session-failed.target',
                          )
 
   install_data(
@@ -173,7 +173,7 @@ if enable_systemd_session
         'requires_component': shell_component[session],
         'wants_required_components': '\n'.join(wanted_targets),
       },
-      install_dir: systemd_userunitdir / 'gnome-session@@0@.target.d'.format(
+      install_dir: systemd_userunitdir / 'scarecrow-session@@0@.target.d'.format(
         session),
     )
   endforeach

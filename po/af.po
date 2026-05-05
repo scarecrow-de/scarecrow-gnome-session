@@ -1,14 +1,14 @@
-# Afrikaans translation of gnome-session.
+# Afrikaans translation of scarecrow-session.
 # Copyright (C) 2004 Zuza Software Foundation
-# This file is distributed under the same license as the gnome-session package.
+# This file is distributed under the same license as the scarecrow-session package.
 # Zuza Software Foundation <info@translate.org.za>, 2004
 # F Wolff <friedel@translate.org.za>, 2011, 2013.
 # Pieter Schoeman <pieter@sonbesie.co.za>, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session 2.6-branch\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session 2.6-branch\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2018-06-01 11:05+0000\n"
 "PO-Revision-Date: 2018-02-06 17:39+0200\n"
 "Last-Translator: Pieter Schalk Schoeman <pieter@sonbesie.co.za>\n"
@@ -30,26 +30,26 @@ msgid "This entry lets you select a saved session"
 msgstr "Die inskrywing laat u 'n gestoorde sessie kies"
 
 #: data/gnome.desktop.in:3 data/gnome.session.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: data/gnome.desktop.in:4 data/gnome-xorg.desktop.in:4
-msgid "This session logs you into GNOME"
-msgstr "Die sessie laat u by GNOME aanmeld"
+msgid "This session logs you into Scarecrow"
+msgstr "Die sessie laat u by Scarecrow aanmeld"
 
 #: data/gnome-xorg.desktop.in:3
-msgid "GNOME on Xorg"
-msgstr "GNOME op Xorg"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow op Xorg"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "GNOME dummy"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow dummy"
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "Pasgemaakte sessie"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Kies asb. 'n pasgemaakte sessie om uit te voer"
 
@@ -69,11 +69,11 @@ msgstr "_Hernoem sessie"
 msgid "_Continue"
 msgstr "_Gaan voort"
 
-#: gnome-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/gsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Gits!  Iets het verkeerd geloop."
 
-#: gnome-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/gsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -81,7 +81,7 @@ msgstr ""
 "'n Fout het voorgekom en die stelsel kan nie daarvan herstel nie. Kontak die "
 "stelseladministrateur"
 
-#: gnome-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/gsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -89,7 +89,7 @@ msgstr ""
 "'n Fout het voorgekom en die stelsel kan nie daarvan herstel nie. Alle "
 "uitbreidings is as voorsorgmaatreël gedeaktiveer."
 
-#: gnome-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/gsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -97,27 +97,27 @@ msgstr ""
 "'n Fout het voorgekom en die stelsel kan nie herstel daarvan nie.\n"
 "Meld af en probeer gerus weer aanmeld."
 
-#: gnome-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/gsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Meld af"
 
-#: gnome-session/gsm-fail-whale-dialog.c:361 gnome-session/main.c:279
+#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
 msgid "Enable debugging code"
 msgstr "Aktiveer ontfoutkode"
 
-#: gnome-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/gsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Laat afmelding toe"
 
-#: gnome-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/gsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Wys uitbreidingwaarskuwing"
 
-#: gnome-session/gsm-manager.c:1266 gnome-session/gsm-manager.c:1919
+#: scarecrow-session/gsm-manager.c:1266 scarecrow-session/gsm-manager.c:1919
 msgid "Not responding"
 msgstr "Reageer nie"
 
-#: gnome-session/gsm-util.c:382
+#: scarecrow-session/gsm-util.c:382
 msgid "_Log out"
 msgstr "_Meld af"
 
@@ -125,64 +125,64 @@ msgstr "_Meld af"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Onthou die toepassing"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Dié program keer afmelding."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "Nuwe klientverbinding word geweier omdat die sessie tans afgesluit word\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Kon nie 'n ICE-luistersok skep nie: %s"
 
-#: gnome-session/main.c:277
+#: scarecrow-session/main.c:277
 msgid "Override standard autostart directories"
 msgstr "Oorheers standaard outobegin gidse"
 
-#: gnome-session/main.c:277
+#: scarecrow-session/main.c:277
 msgid "AUTOSTART_DIR"
 msgstr "OUTOBEGIN_GIDS"
 
-#: gnome-session/main.c:278
+#: scarecrow-session/main.c:278
 msgid "Session to use"
 msgstr "Sessie om te gebruik"
 
-#: gnome-session/main.c:278
+#: scarecrow-session/main.c:278
 msgid "SESSION_NAME"
 msgstr "SESSIE_NAAM"
 
-#: gnome-session/main.c:280
+#: scarecrow-session/main.c:280
 msgid "Do not load user-specified applications"
 msgstr "Moenie gebruiker-gespesifiseerde toepassings laai nie"
 
-#: gnome-session/main.c:281
+#: scarecrow-session/main.c:281
 msgid "Version of this application"
 msgstr "Weergawe van hierdie program"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:283
+#: scarecrow-session/main.c:283
 msgid "Show the fail whale dialog for testing"
 msgstr "Wys die dialoog vir ernstige foute (vir toetsdoeleindes)"
 
-#: gnome-session/main.c:284
+#: scarecrow-session/main.c:284
 msgid "Disable hardware acceleration check"
 msgstr "Skakel die hardeware versnelling toets af"
 
-#: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " — die GNOME-sessiebestuurder"
+#: scarecrow-session/main.c:316
+msgid " — the Scarecrow session manager"
+msgstr " — die Scarecrow-sessiebestuurder"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -215,66 +215,66 @@ msgstr ""
 "\n"
 "As geen --inhibit-keuse gegee is nie, word \"idle\" aangeneem.\n"
 
-#: tools/gnome-session-inhibit.c:146
+#: tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Uitvoering van \"%s\" het misluk\n"
 
-#: tools/gnome-session-inhibit.c:206 tools/gnome-session-inhibit.c:216
-#: tools/gnome-session-inhibit.c:226
+#: tools/scarecrow-session-inhibit.c:206 tools/scarecrow-session-inhibit.c:216
+#: tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "\"%s\" benodig 'n parameter\n"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Sessie %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr ""
 "Sessiename mag nie met \".\" begin nie en mag nie \"/\"-karakters bevat nie"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Sessiename mag nie met \".\" begin nie"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Sessiename mag nie \"/\"-karakters bevat nie"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "'n Sessie met die naam \"%s\" bestaan reeds"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Meld af"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Skakel af"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Herbegin"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Gaan enige bestaande inhibeerders ignoreer"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Moenie vra vir gebruikerbevestiging nie"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Kon nie met sessiebestuurder koppel nie"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Program geroep met botsende opsies"
 
@@ -320,9 +320,9 @@ msgstr "Program geroep met botsende opsies"
 #~ msgid "Choose what applications to start when you log in"
 #~ msgstr "Kies watter toepassings moet begin by aanmelding"
 
-#~| msgid "This session logs you into GNOME"
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Hierdie sessie laat mens aanmeld by GNOME m.b.v. Wayland"
+#~| msgid "This session logs you into Scarecrow"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Hierdie sessie laat mens aanmeld by Scarecrow m.b.v. Wayland"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "Bykomende aanvangs_programme:"
@@ -495,24 +495,24 @@ msgstr "Program geroep met botsende opsies"
 #~ msgid "Stopped by signal %d"
 #~ msgstr "Gestop met sein %d"
 
-#~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "GNOME 3 kon nie laai nie"
+#~ msgid "Scarecrow 3 Failed to Load"
+#~ msgstr "Scarecrow 3 kon nie laai nie"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Ongelukkig kon GNOME 3 nie behoorlik laai nie en het in <i>terugvalmodus</"
+#~ "Ongelukkig kon Scarecrow 3 nie behoorlik laai nie en het in <i>terugvalmodus</"
 #~ "i> begin.\n"
 #~ "\n"
 #~ "Dit beteken waarskynlik dat die stelsel (grafikahardeware of aandrywer) "
-#~ "nie in staat is om die volle ervaring van GNOME 3 te lewer nie."
+#~ "nie in staat is om die volle ervaring van Scarecrow 3 te lewer nie."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Vind meer uit oor GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Vind meer uit oor Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -525,26 +525,26 @@ msgstr "Program geroep met botsende opsies"
 
 #~ msgid ""
 #~ "For security reasons, on platforms which have _IceTcpTransNoListen() "
-#~ "(XFree86 systems), gnome-session does not listen for connections on TCP "
+#~ "(XFree86 systems), scarecrow-session does not listen for connections on TCP "
 #~ "ports. This option will allow connections from (authorized) remote hosts. "
-#~ "gnome-session must be restarted for this to take effect."
+#~ "scarecrow-session must be restarted for this to take effect."
 #~ msgstr ""
-#~ "Om sekuriteitsredes luister gnome-session nie uit na konneksies op TCP-"
+#~ "Om sekuriteitsredes luister scarecrow-session nie uit na konneksies op TCP-"
 #~ "poorte op platforms  met _IceTcpTransNoListen() (XFree86 systems) nie. "
 #~ "Hierdie opsie laat konneksies van (gemagtide) afgeleë gashere toe.Gnome-"
 #~ "session moet oorbegin word vir die instelling om  toegepas te word."
 
 #~ msgid ""
-#~ "If enabled, gnome-session will prompt the user before ending a session."
+#~ "If enabled, scarecrow-session will prompt the user before ending a session."
 #~ msgstr ""
-#~ "Indien geaktiveer, sal gnome-session die gebruiker waarsku voordat 'n "
+#~ "Indien geaktiveer, sal scarecrow-session die gebruiker waarsku voordat 'n "
 #~ "sessie beëindig word."
 
 #~ msgid ""
-#~ "If enabled, gnome-session will save the session automatically. Otherwise, "
+#~ "If enabled, scarecrow-session will save the session automatically. Otherwise, "
 #~ "the logout dialog will have an option to save the session."
 #~ msgstr ""
-#~ "Indien geaktiveer, sal gnome-session die sessie outomaties stoor. "
+#~ "Indien geaktiveer, sal scarecrow-session die sessie outomaties stoor. "
 #~ "Andersins sal daar op die afmeldingsdialoog 'n opsie wees om die sessie "
 #~ "te stoor."
 
@@ -552,11 +552,11 @@ msgstr "Program geroep met botsende opsies"
 #~ msgstr "Afmeldingspor"
 
 #~ msgid ""
-#~ "Preferred Image to use for the splash screen when logging in to the GNOME "
+#~ "Preferred Image to use for the splash screen when logging in to the Scarecrow "
 #~ "Desktop"
 #~ msgstr ""
 #~ "Voorkeurbeeld wat gebruik moet word vir die spatskerm wanneer daar by "
-#~ "GNOME Desktop aangemeld word"
+#~ "Scarecrow Desktop aangemeld word"
 
 #~ msgid "Show the splash screen"
 #~ msgstr "Vertoon die spatskerm"
@@ -634,12 +634,12 @@ msgstr "Program geroep met botsende opsies"
 #~ msgstr "Altyd begin vir elke aanmelding."
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "n Fout is ondervind met die laai van die GNOME-Instellingsdaemoon.\n"
+#~ "n Fout is ondervind met die laai van die Scarecrow-Instellingsdaemoon.\n"
 #~ "\n"
 #~ "Sommige funksies, soos temas, klanke of agtergrondinstellings mag dalk "
 #~ "nie korrek werk nie."
@@ -658,11 +658,11 @@ msgstr "Program geroep met botsende opsies"
 #~ msgid ""
 #~ "\n"
 #~ "\n"
-#~ "GNOME will still try to restart the Settings Daemon next time you log in."
+#~ "Scarecrow will still try to restart the Settings Daemon next time you log in."
 #~ msgstr ""
 #~ "\n"
 #~ "\n"
-#~ "GNOME sal probeer om die Instellingsdaemoon oor te begin wanneer jy weer "
+#~ "Scarecrow sal probeer om die Instellingsdaemoon oor te begin wanneer jy weer "
 #~ "aanmeld."
 
 #~ msgid "There was an unknown activation error."
@@ -694,12 +694,12 @@ msgstr "Program geroep met botsende opsies"
 
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "Kon nie internetadres vir %s opsoek nie.\n"
-#~ "Die sal verhoed dat GNOME behoorlik funksioneer.\n"
+#~ "Die sal verhoed dat Scarecrow behoorlik funksioneer.\n"
 #~ "Die probleem mag moontlik opgelos word deur \n"
 #~ "%s by die lêer /etc/gashere te voeg."
 

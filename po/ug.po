@@ -1,13 +1,13 @@
-# Uighur translation for gnome-session
+# Uighur translation for scarecrow-session
 # Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
-# This file is distributed under the same license as the gnome-session package.
+# This file is distributed under the same license as the scarecrow-session package.
 # Gheyret T.Kenji <gheyret@yahoo.com>, 2010.
 # Sahran <sahran.ug@gmail.com>, 2010
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-session&keywords=I18N+L10N&component=general\n"
+"Project-Id-Version: scarecrow-session\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=scarecrow-session&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-03-23 22:29+0000\n"
 "PO-Revision-Date: 2013-04-06 18:52+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
@@ -64,7 +64,7 @@ msgstr "ئاتسىز"
 msgid "No description"
 msgstr "چۈشەندۈرۈش يوق"
 
-#: ../capplet/main.c:35 ../gnome-session/main.c:284
+#: ../capplet/main.c:35 ../scarecrow-session/main.c:284
 msgid "Version of this application"
 msgstr "بۇ پروگراممىنىڭ نەشرى"
 
@@ -73,11 +73,11 @@ msgid "Could not display help document"
 msgstr "ياردەم پۈتۈكىنى كۆرسەتكىلى بولمىدى"
 
 #: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
-msgid "GNOME"
-msgstr "گىنوم(GNOME)"
+msgid "Scarecrow"
+msgstr "گىنوم(Scarecrow)"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "بۇ ئەڭگىمە سىزنى گىنومغا ئەكىرىدۇ."
 
 #: ../data/gnome-custom-session.desktop.in.h:1
@@ -89,15 +89,15 @@ msgid "This entry lets you select a saved session"
 msgstr "بۇ كىرگۈدە ساقلانغان ئەڭگىمەلەرنى تاللىيالايسىز"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
-#| msgid "GNOME"
-msgid "GNOME dummy"
+#| msgid "Scarecrow"
+msgid "Scarecrow dummy"
 msgstr "گىنوم dummy"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
 msgstr "ئىختىيارى ئەڭگىمە"
 
-#: ../data/session-selector.ui.h:2 ../tools/gnome-session-selector.c:103
+#: ../data/session-selector.ui.h:2 ../tools/scarecrow-session-selector.c:103
 msgid "Please select a custom session to run"
 msgstr "ئىجرا قىلىدىغان ئىختىيارى ئەڭگىمەنى تاللاڭ"
 
@@ -117,7 +117,7 @@ msgstr "ئەڭگىمەنىڭ ئاتىنى ئۆزگەرت(_M)"
 msgid "_Continue"
 msgstr "داۋاملاشتۇر(_C)"
 
-#: ../data/gsm-inhibit-dialog.ui.h:1 ../gnome-session/gsm-inhibit-dialog.c:514
+#: ../data/gsm-inhibit-dialog.ui.h:1 ../scarecrow-session/gsm-inhibit-dialog.c:514
 msgid "Some programs are still running:"
 msgstr "بەزى پروگراممىلار يەنىلا ئىجرا قىلىنىۋاتىدۇ:"
 
@@ -233,160 +233,160 @@ msgstr "ئەڭگىمە باشقۇرغۇ تاللانمىلىرى:"
 msgid "Show session management options"
 msgstr "ئەڭگىمە باشقۇرغۇ تاللانمىلىرى كۆرسەت"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:286
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:286
 msgid "Oh no!  Something has gone wrong."
 msgstr "ئاپلا! خاتالىق كۆرۈلدى."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:293
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:293
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
 msgstr "كاشىلا كۆرۈلدى، سىستېمىنى ئەسلىگە كەلتۈرگىلى بولمايدۇ. سىستېما باشقۇرغۇچىسى بىلەن ئالاقە قىلىڭ."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:295
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:295
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
 msgstr "سىستېمىدا مەسىلە كۆرۈلۈپ، ئەسلىگە كەلتۈرگىلى بولمىدى. ھەر ئېھتىمالغا قارىشى، بارلىق كېڭەيتىلمىلەر ئىناۋەتسىز قىلىندى."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:297
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:297
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
 msgstr "كاشىلا كۆرۈلدى سىستېمىنى ئەسلىگە كەلتۈرەلمەيدۇ.\n"
 "تىزىمدىن چىقىپ قايتا سىناڭ."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:312
-#: ../gnome-session/gsm-logout-dialog.c:384
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:312
+#: ../scarecrow-session/gsm-logout-dialog.c:384
 msgid "_Log Out"
 msgstr "تىزىمدىن چىق(_L)"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:334 ../gnome-session/main.c:282
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:334 ../scarecrow-session/main.c:282
 msgid "Enable debugging code"
 msgstr "سازلاش كودىنى قوزغات"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:335
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:335
 msgid "Allow logout"
 msgstr "چىقىشقا ئىجازەت"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:336
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:336
 msgid "Show extension warning"
 msgstr "كېڭەيتىلمە ئاگاھلاندۇرۇشىنى كۆرسەتسۇن"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:462
+#: ../scarecrow-session/gsm-inhibit-dialog.c:462
 msgid "Unknown"
 msgstr "نامەلۇم"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:510
+#: ../scarecrow-session/gsm-inhibit-dialog.c:510
 msgid "A program is still running:"
 msgstr "پروگرامما يەنىلا ئىجرا قىلىنىۋاتىدۇ:"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:511
+#: ../scarecrow-session/gsm-inhibit-dialog.c:511
 msgid ""
 "Waiting for the program to finish. Interrupting the program may cause you to "
 "lose work."
 msgstr "پروگراممىنىڭ تاماملىنىشىنى كۈتۈۋاتىدۇ. ئارىلىقتا ئۈزۈۋەتسە بىر قىسىم ئىشلىگەن خىزمەتلەر يوقىلىشى مۇمكىن."
 
-#: ../gnome-session/gsm-inhibit-dialog.c:515
+#: ../scarecrow-session/gsm-inhibit-dialog.c:515
 msgid ""
 "Waiting for programs to finish. Interrupting these programs may cause you to "
 "lose work."
 msgstr "پروگراممىنىڭ تاماملىنىشىنى كۈتۈۋاتىدۇ. ئارىلىقتا ئۈزۈۋەتسە بىر قىسىم ئىشلىگەن خىزمەتلەر يوقىلىشى مۇمكىن."
 
-#: ../gnome-session/gsm-inhibit-dialog.c:745
+#: ../scarecrow-session/gsm-inhibit-dialog.c:745
 msgid "Switch User Anyway"
 msgstr "ئىشلەتكۈچىنى مەجبۇرىي ئالماشتۇر"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:748
+#: ../scarecrow-session/gsm-inhibit-dialog.c:748
 msgid "Log Out Anyway"
 msgstr "تىزىمدىن چىقىۋەر"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:751
+#: ../scarecrow-session/gsm-inhibit-dialog.c:751
 msgid "Suspend Anyway"
 msgstr "توڭلىتىۋەر"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:754
+#: ../scarecrow-session/gsm-inhibit-dialog.c:754
 msgid "Hibernate Anyway"
 msgstr "ئۈچەككە كىرىۋەر"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:757
+#: ../scarecrow-session/gsm-inhibit-dialog.c:757
 msgid "Shut Down Anyway"
 msgstr "تاقاۋەر"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:760
+#: ../scarecrow-session/gsm-inhibit-dialog.c:760
 msgid "Restart Anyway"
 msgstr "قايتا قوزغىتىۋەر"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:768
+#: ../scarecrow-session/gsm-inhibit-dialog.c:768
 msgid "Lock Screen"
 msgstr "ئېكراننى قۇلۇپلاش"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:771
+#: ../scarecrow-session/gsm-inhibit-dialog.c:771
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇر"
 
 #. This string is shared with gsm-fail-whale-dialog.c
-#: ../gnome-session/gsm-logout-dialog.c:263
+#: ../scarecrow-session/gsm-logout-dialog.c:263
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
 msgstr[0] "%d سېكۇنتتىن كېيىن ئۆزلۈكىدىن تىزىمدىن چىقىدۇ."
 
-#: ../gnome-session/gsm-logout-dialog.c:271
+#: ../scarecrow-session/gsm-logout-dialog.c:271
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
 msgstr[0] "بۇ سىستېما %d سېكۇنتتىن كېيىن ئۆزلۈكىدىن تاقىلىدۇ."
 
-#: ../gnome-session/gsm-logout-dialog.c:279
+#: ../scarecrow-session/gsm-logout-dialog.c:279
 #, c-format
 msgid "This system will be automatically restarted in %d second."
 msgid_plural "This system will be automatically restarted in %d seconds."
 msgstr[0] "سىستېما يەنە %d سېكۇنتتىن كېيىن قايتا قوزغىلىدۇ."
 
-#: ../gnome-session/gsm-logout-dialog.c:303
+#: ../scarecrow-session/gsm-logout-dialog.c:303
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "نۆۋەتتە «%s» سۈپىتىدە تىزىمغا كىردىڭىز."
 
-#: ../gnome-session/gsm-logout-dialog.c:369
+#: ../scarecrow-session/gsm-logout-dialog.c:369
 msgid "Log out of this system now?"
 msgstr "سىستېمىدىن ھازىرلا چىقسۇنمۇ؟"
 
-#: ../gnome-session/gsm-logout-dialog.c:375
+#: ../scarecrow-session/gsm-logout-dialog.c:375
 msgid "_Switch User"
 msgstr "ئىشلەتكۈچى ئالماشتۇر(_S)"
 
-#: ../gnome-session/gsm-logout-dialog.c:390
+#: ../scarecrow-session/gsm-logout-dialog.c:390
 msgid "Shut down this system now?"
 msgstr "بۇ سىستېمىنى ھازىر تاقامسىز؟"
 
-#: ../gnome-session/gsm-logout-dialog.c:396
+#: ../scarecrow-session/gsm-logout-dialog.c:396
 msgid "S_uspend"
 msgstr "توڭلات(_U)"
 
-#: ../gnome-session/gsm-logout-dialog.c:402
+#: ../scarecrow-session/gsm-logout-dialog.c:402
 msgid "_Hibernate"
 msgstr "ئۈچەككە كىر(_H)"
 
-#: ../gnome-session/gsm-logout-dialog.c:408
-#: ../gnome-session/gsm-logout-dialog.c:434
+#: ../scarecrow-session/gsm-logout-dialog.c:408
+#: ../scarecrow-session/gsm-logout-dialog.c:434
 msgid "_Restart"
 msgstr "قايتا قوزغات(_R)"
 
-#: ../gnome-session/gsm-logout-dialog.c:418
+#: ../scarecrow-session/gsm-logout-dialog.c:418
 msgid "_Shut Down"
 msgstr "تاقا(_S)"
 
-#: ../gnome-session/gsm-logout-dialog.c:424
+#: ../scarecrow-session/gsm-logout-dialog.c:424
 msgid "Restart this system now?"
 msgstr "سىستېمىنى ھازىرلا قايتا قوزغاتسۇنمۇ؟"
 
-#: ../gnome-session/gsm-manager.c:1429 ../gnome-session/gsm-manager.c:2178
+#: ../scarecrow-session/gsm-manager.c:1429 ../scarecrow-session/gsm-manager.c:2178
 msgid "Not responding"
 msgstr "ئىنكاس يوق"
 
-#: ../gnome-session/gsm-util.c:411
+#: ../scarecrow-session/gsm-util.c:411
 msgid "_Log out"
 msgstr "چىق(_L)"
 
@@ -394,55 +394,55 @@ msgstr "چىق(_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:558
+#: ../scarecrow-session/gsm-xsmp-client.c:558
 msgid "Remembered Application"
 msgstr "پروگراممىنى ئەستە تۇت"
 
-#: ../gnome-session/gsm-xsmp-client.c:1196
+#: ../scarecrow-session/gsm-xsmp-client.c:1196
 msgid "This program is blocking logout."
 msgstr "بۇ پروگرامما تىزىمدىن چىقىشنى چەكلەيدۇ."
 
-#: ../gnome-session/gsm-xsmp-server.c:341
+#: ../scarecrow-session/gsm-xsmp-server.c:341
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "يېڭى ئىشلەتكۈچى باغلىنىشى رەت قىلىندى. چۈنكى ئەڭگىمە تاقىلىۋاتىدۇ\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:610
+#: ../scarecrow-session/gsm-xsmp-server.c:610
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE تىڭشاش روزېتكىسى قۇرالمىدى: %s"
 
-#: ../gnome-session/main.c:280
+#: ../scarecrow-session/main.c:280
 msgid "Override standard autostart directories"
 msgstr "كۆڭۈلدىكى ئۆزلۈكىدىن قوزغىلىش مۇندەرىجىسىنىڭ ئورنىنى ئىگىلىيەلمىدى"
 
-#: ../gnome-session/main.c:280
+#: ../scarecrow-session/main.c:280
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-#: ../gnome-session/main.c:281
+#: ../scarecrow-session/main.c:281
 msgid "Session to use"
 msgstr "ئىشلىتىدىغان ئەڭگىمە"
 
-#: ../gnome-session/main.c:281
+#: ../scarecrow-session/main.c:281
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: ../gnome-session/main.c:283
+#: ../scarecrow-session/main.c:283
 msgid "Do not load user-specified applications"
 msgstr "ئىشلەتكۈچى بەلگىلىگەن پروگراممىنى يۈكلىمە"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:286
+#: ../scarecrow-session/main.c:286
 msgid "Show the fail whale dialog for testing"
 msgstr "سىناش ئۈچۈن fail whale سۆزلەشكۈسىنى كۆرسىتىڭ"
 
-#: ../gnome-session/main.c:320
-msgid " - the GNOME session manager"
-msgstr " گىنوم(GNOME) ئەڭگىمە باشقۇرغۇچ"
+#: ../scarecrow-session/main.c:320
+msgid " - the Scarecrow session manager"
+msgstr " گىنوم(Scarecrow) ئەڭگىمە باشقۇرغۇچ"
 
-#: ../tools/gnome-session-inhibit.c:110
+#: ../tools/scarecrow-session-inhibit.c:110
 #, c-format
 msgid ""
 "%s [OPTION...] COMMAND\n"
@@ -474,69 +474,69 @@ msgstr "%s [تاللانما...] بۇيرۇق\n"
 "\n"
 "If no --inhibit option is specified, idle is assumed.\n"
 
-#: ../tools/gnome-session-inhibit.c:148
+#: ../tools/scarecrow-session-inhibit.c:148
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "%s نى ئىجرا قىلىش مەغلۇپ بولدى\n"
 
-#: ../tools/gnome-session-inhibit.c:208 ../tools/gnome-session-inhibit.c:218
-#: ../tools/gnome-session-inhibit.c:228
+#: ../tools/scarecrow-session-inhibit.c:208 ../tools/scarecrow-session-inhibit.c:218
+#: ../tools/scarecrow-session-inhibit.c:228
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s ئۈچۈن بىر پارامېتىر كېرەك\n"
 
-#: ../tools/gnome-session-selector.c:62
+#: ../tools/scarecrow-session-selector.c:62
 #, c-format
 msgid "Session %d"
 msgstr "ئەڭگىمە %d"
 
-#: ../tools/gnome-session-selector.c:108
+#: ../tools/scarecrow-session-selector.c:108
 msgid ""
 "Session names are not allowed to start with ‘.’ or contain ‘/’ characters"
 msgstr "ئەڭگىمە ئاتى چېكىت‹.› بىلەن باشلانسا ۋە تەركىبىدە ‹/› بەلگىسى بولسا بولمايدۇ"
 
-#: ../tools/gnome-session-selector.c:112
+#: ../tools/scarecrow-session-selector.c:112
 msgid "Session names are not allowed to start with ‘.’"
 msgstr "ئەڭگىمە ئاتى چېكىت‹.› بىلەن باشلانسا بولمايدۇ"
 
-#: ../tools/gnome-session-selector.c:116
+#: ../tools/scarecrow-session-selector.c:116
 msgid "Session names are not allowed to contain ‘/’ characters"
 msgstr "ئەڭگىمە ئاتى تەركىبىدە ‹/› بەلگىسى بولسا بولمايدۇ"
 
-#: ../tools/gnome-session-selector.c:124
+#: ../tools/scarecrow-session-selector.c:124
 #, c-format
 msgid "A session named ‘%s’ already exists"
 msgstr "ئاتى ‹%s› بولغان ئەڭگىمە مەۋجۇت"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Log out"
 msgstr "تىزىمدىن چىق"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 msgid "Power off"
 msgstr "توكنى ئۈز"
 
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 msgid "Reboot"
 msgstr "قايتا قوزغات"
 
-#: ../tools/gnome-session-quit.c:56
+#: ../tools/scarecrow-session-quit.c:56
 msgid "Ignoring any existing inhibitors"
 msgstr "نۆۋەتتىكى چەكلىمە ئامىللىرىغا پەرۋا قىلما"
 
-#: ../tools/gnome-session-quit.c:57
+#: ../tools/scarecrow-session-quit.c:57
 msgid "Don't prompt for user confirmation"
 msgstr "ئىشلەتكۈچى جەزملەشنى كۆرسەتمە"
 
-#: ../tools/gnome-session-quit.c:91 ../tools/gnome-session-quit.c:101
+#: ../tools/scarecrow-session-quit.c:91 ../tools/scarecrow-session-quit.c:101
 msgid "Could not connect to the session manager"
 msgstr "ئەڭگىمە باشقۇرغۇچقا  باغلىنالمىدى"
 
-#: ../tools/gnome-session-quit.c:203
+#: ../tools/scarecrow-session-quit.c:203
 msgid "Program called with conflicting options"
 msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئارا توقۇنۇشىدۇ"
 
-#~ msgid "GNOME fallback"
+#~ msgid "Scarecrow fallback"
 #~ msgstr "گىنوم زاپاس ھالىتى"
 
 #~ msgid "%d hour"
@@ -597,21 +597,21 @@ msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئ
 #~ msgid "Stopped by signal %d"
 #~ msgstr "سىگنال %d تەرىپىدىن توختىتىلدى"
 
-#~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "GNOME 3 نى يۈكلىيەلمىدى"
+#~ msgid "Scarecrow 3 Failed to Load"
+#~ msgstr "Scarecrow 3 نى يۈكلىيەلمىدى"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "ناھايىتى ئەپسۇس GNOME 3 نى توغرا يۈكلىيەلمىدى، <i>زاپاس ھالەت</i>تە "
+#~ "ناھايىتى ئەپسۇس Scarecrow 3 نى توغرا يۈكلىيەلمىدى، <i>زاپاس ھالەت</i>تە "
 #~ "قوزغاتتى."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "GNOME 3 ھەققىدە تېخىمۇ كۆپ ئۇچۇر"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Scarecrow 3 ھەققىدە تېخىمۇ كۆپ ئۇچۇر"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -639,11 +639,11 @@ msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئ
 #~ msgstr "ھۆججەت باشقۇرغۇ"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will prompt the user before ending a session."
+#~ "If enabled, scarecrow-session will prompt the user before ending a session."
 #~ msgstr "ئەگەر قوزغىتىلسا، gnome ئەڭگىمە ئاخىرلىشىشتىن ئىلگىرى ئەسكەرتىدۇ."
 
-#~ msgid "If enabled, gnome-session will save the session automatically."
-#~ msgstr "ئەگەر قوزغىتىلسا، gnome-session ئەڭگىمەنى ئۆزلۈكىدىن ساقلايدۇ."
+#~ msgid "If enabled, scarecrow-session will save the session automatically."
+#~ msgstr "ئەگەر قوزغىتىلسا، scarecrow-session ئەڭگىمەنى ئۆزلۈكىدىن ساقلايدۇ."
 
 #~ msgid "List of applications that are part of the default session."
 #~ msgstr "كۆڭۈلدىكى ئەڭگىمە ئۆز ئىچىگە ئالغان پروگرامما تىزىملىكى."
@@ -717,20 +717,20 @@ msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئ
 #~ msgid "Could not connect to the session bus"
 #~ msgstr "ئەڭگىمە باش لىنىيىسىگە باغلىنالمىدى"
 
-#~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "GNOME تەڭشەك Daemon ياردەمچىسى"
+#~ msgid "Scarecrow Settings Daemon Helper"
+#~ msgstr "Scarecrow تەڭشەك Daemon ياردەمچىسى"
 
-#~ msgid "Failsafe GNOME"
-#~ msgstr "بىخەتەر GNOME"
+#~ msgid "Failsafe Scarecrow"
+#~ msgstr "بىخەتەر Scarecrow"
 
-#~ msgid "This session logs you into GNOME without user applications"
-#~ msgstr "بۇ ئەڭگىمە سىزنى GNOME غا ئەكىرىدۇ، باشقا پروگرامما قوزغىتىلمايدۇ"
+#~ msgid "This session logs you into Scarecrow without user applications"
+#~ msgstr "بۇ ئەڭگىمە سىزنى Scarecrow غا ئەكىرىدۇ، باشقا پروگرامما قوزغىتىلمايدۇ"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will save the session automatically. Otherwise, "
+#~ "If enabled, scarecrow-session will save the session automatically. Otherwise, "
 #~ "the logout dialog will have an option to save the session."
 #~ msgstr ""
-#~ "ئەگەر قوزغىتىلسا، gnome-session ئەڭگىمەنى ئۆزلۈكىدىن ساقلايدۇ. ياكى "
+#~ "ئەگەر قوزغىتىلسا، scarecrow-session ئەڭگىمەنى ئۆزلۈكىدىن ساقلايدۇ. ياكى "
 #~ "بولمىسا تىزىمدىن چىقىش سۆزلەشكۈسىدە ئەڭگىمە ساقلاش تاللانمىسى بار بولىدۇ."
 
 #~ msgid "Preferred Image to use for login splash screen"
@@ -777,8 +777,8 @@ msgstr "چاقىرغان پروگراممىنىڭ تاللانمىسى ئۆز ئ
 #~ msgid "Cannot find help."
 #~ msgstr "ياردەمنى تاپالمىدى."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME قوزغىلىش كۆزنىكى"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow قوزغىلىش كۆزنىكى"
 
-#~ msgid "GNOME Splash Screen"
-#~ msgstr "GNOME قوزغىلىش كۆزنىكى"
+#~ msgid "Scarecrow Splash Screen"
+#~ msgstr "Scarecrow قوزغىلىش كۆزنىكى"

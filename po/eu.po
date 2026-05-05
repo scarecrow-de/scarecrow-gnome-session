@@ -10,7 +10,7 @@
 #
 msgid ""
 msgstr "Project-Id-Version: eu\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2020-07-31 14:02+0000\n"
 "PO-Revision-Date: 2020-08-23 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
@@ -32,63 +32,63 @@ msgstr "Sarrera honek gordetako saio bat hautatzea uzten dizu"
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Saio honek GNOMEn sartuko zaitu"
+msgid "This session logs you into Scarecrow"
+msgstr "Saio honek Scarecrown sartuko zaitu"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "Probako GNOME"
+msgid "Scarecrow dummy"
+msgstr "Probako Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
-msgstr "GNOME Xorg gainean"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow Xorg gainean"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Gorde saioak"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
-msgstr "Gaituta badago, gnome-session-ek saioa automatikoki gordeko du."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
+msgstr "Gaituta badago, scarecrow-session-ek saioa automatikoki gordeko du."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Gorde saio hau"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
-msgstr "Gaituta badago, 'gnome-session'ek hurrengo saioa automatikoki gordeko du saioa amaitzean, nahiz eta gordetze automatikoa desgaituta egon."
+msgstr "Gaituta badago, 'scarecrow-session'ek hurrengo saioa automatikoki gordeko du saioa amaitzean, nahiz eta gordetze automatikoa desgaituta egon."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Saio-amaierako gonbita"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
-msgstr "Gaituta badago, 'gnome-session'ek erabiltzaileari galdetuko dio saioa bukatu aurretik."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
+msgstr "Gaituta badago, 'scarecrow-session'ek erabiltzaileari galdetuko dio saioa bukatu aurretik."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Erakutsi ordezko abisua"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
-msgstr "Gaituta badago, 'gnome-session'ek abisu bat bistaratuko du saioa hasi ondoren ordezko saioan sartu bada automatikoki."
+msgstr "Gaituta badago, 'scarecrow-session'ek abisu bat bistaratuko du saioa hasi ondoren ordezko saioan sartu bada automatikoki."
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "Saio pertsonalizatua"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Hautatu saio pertsonalizatua exekutatzeko"
 
@@ -108,50 +108,50 @@ msgstr "_Aldatu saioaren izena"
 msgid "_Continue"
 msgstr "_Jarraitu"
 
-#: gnome-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/gsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "Zerbait gaizki irten da."
 
-#: gnome-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/gsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
 msgstr "Arazo bat gertatu da eta sistemak ezin du berreskuratu. Jar zaitez sistemaren administratzaile batekin harremanetan"
 
-#: gnome-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/gsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
 msgstr "Arazo bat gertatu da eta sistemak ezin du berreskuratu. Hedapen guztiak desgaitu egin dira badaezpada."
 
-#: gnome-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/gsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
 msgstr "Arazo bat gertatu da eta sistemak ezin du berreskuratu.\n"
 "Amaitu saioa eta saiatu berriro."
 
-#: gnome-session/gsm-fail-whale-dialog.c:344
+#: scarecrow-session/gsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "Amaitu _saioa"
 
-#: gnome-session/gsm-fail-whale-dialog.c:412 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "Gaitu arazketa-kodea"
 
-#: gnome-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/gsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "Baimendu saio-amaiera"
 
-#: gnome-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/gsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "Erakutsi hedapenaren abisua"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "Ez du erantzuten"
 
-#: gnome-session/gsm-util.c:415
+#: scarecrow-session/gsm-util.c:415
 msgid "_Log out"
 msgstr "_Amaitu saioa"
 
@@ -159,102 +159,102 @@ msgstr "_Amaitu saioa"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Gogoratutako aplikazioa"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Programa honek saioa amaitzea blokeatzen ari da."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Bezero berrien konexioa ukatzen, unean saioa itzaltzen ari delako\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Ezin izan da entzuteko ICE socket-a sortu: %s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "systemd zerbitzu gisa exekutatzen"
 
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "Erabili systemd saio-kudeatzailea"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr "Erabili integratutako saio-kudeatzailea (systemd sisteman oinarritutakoa erabili ordez)"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "Jaramonik ez egin hasiera automatikoko direktorio estandarrei"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "HASIERA_AUTOMATIKOKO_DIREKTORIOA"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "Saioa erabiltzeko"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "SAIOAREN_IZENA"
 
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "Ez kargatu erabiltzaileak zehaztutako aplikazioak"
 
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "Aplikazio honen bertsioa"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "Erakutsi errorearen elkarrizketa-koadroa probetarako"
 
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "Desgaitu hardware bidezko azelerazioaren egiaztaketa"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOMEren saio-kudeatzailea"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrowren saio-kudeatzailea"
 
-#: tools/gnome-session-ctl.c:245
-msgid "Start gnome-session-shutdown.target"
-msgstr "Abiarazi 'gnome-session-shutdown.target'"
+#: tools/scarecrow-session-ctl.c:245
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "Abiarazi 'scarecrow-session-shutdown.target'"
 
-#: tools/gnome-session-ctl.c:246
+#: tools/scarecrow-session-ctl.c:246
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
-msgstr "Abiarazi 'gnome-session-shutdown.target' EOF jasotzean edo byte bakarra jasotzean stdin-en"
+msgstr "Abiarazi 'scarecrow-session-shutdown.target' EOF jasotzean edo byte bakarra jasotzean stdin-en"
 
-#: tools/gnome-session-ctl.c:247
-msgid "Signal initialization done to gnome-session"
-msgstr "Seinalearen hasieratzea egin da 'gnome-session' programan"
+#: tools/scarecrow-session-ctl.c:247
+msgid "Signal initialization done to scarecrow-session"
+msgstr "Seinalearen hasieratzea egin da 'scarecrow-session' programan"
 
-#: tools/gnome-session-ctl.c:248
+#: tools/scarecrow-session-ctl.c:248
 msgid "Restart dbus.service if it is running"
 msgstr "Berrabiarazi 'dbus.service' hura exekutatzen ari bada"
 
-#: tools/gnome-session-ctl.c:249
+#: tools/scarecrow-session-ctl.c:249
 msgid ""
-"Run from ExecStopPost to start gnome-session-failed.target on service failure"
-msgstr "Exekutatu ExecStopPost-etik gnome-session-failed.target abiarazteko zerbitzuak huts egiten duenean"
+"Run from ExecStopPost to start scarecrow-session-failed.target on service failure"
+msgstr "Exekutatu ExecStopPost-etik scarecrow-session-failed.target abiarazteko zerbitzuak huts egiten duenean"
 
-#: tools/gnome-session-ctl.c:279
+#: tools/scarecrow-session-ctl.c:279
 msgid "Program needs exactly one parameter"
 msgstr "Programak parametro bakar bat behar du"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -290,70 +290,70 @@ msgstr "%s [AUKERA…] KOMANDOA\n"
 "\n"
 "Ez bada --inhibit aukera zehazten, aktibitate ez dagoela ulertzen da.\n"
 
-#: tools/gnome-session-inhibit.c:288
+#: tools/scarecrow-session-inhibit.c:288
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Huts egin du %s exekutatzean\n"
 
-#: tools/gnome-session-inhibit.c:352 tools/gnome-session-inhibit.c:362
-#: tools/gnome-session-inhibit.c:372
+#: tools/scarecrow-session-inhibit.c:352 tools/scarecrow-session-inhibit.c:362
+#: tools/scarecrow-session-inhibit.c:372
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s(e)k argumentu bat behar du\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Amaitu saioa"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Itzali"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Berrabiarazi"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Ez ikusi egin dauden inhibitzaileei"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Ez eskatu erabiltzailearen baieztapena"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Ezin izan da saio-kudeatzailearekin konektatu"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Gatazkan dauden aukerekin deitu da programa"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "%d saio"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "Saioen izenak ezin dute “.“ karakterearekin hasi, edo “/“ karakterea eduki"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Saioen izenak ezin dute “.“ karakterearekin hasi"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Saioen izenak ezin dute “/“ karakterea eduki"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "“%s“ izeneko saioa badago lehendik ere"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Saio honek GNOMEn sartuko zaitu, Wayland erabiliz"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Saio honek Scarecrown sartuko zaitu, Wayland erabiliz"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "Abioko _programa osagarriak:"
@@ -607,24 +607,24 @@ msgstr "“%s“ izeneko saioa badago lehendik ere"
 #~ msgid "Stopped by signal %d"
 #~ msgstr "%d seinalearekin geldituta"
 
-#~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "Huts egin du GNOME 3 kargatzean"
+#~ msgid "Scarecrow 3 Failed to Load"
+#~ msgstr "Huts egin du Scarecrow 3 kargatzean"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Zoritxarrez huts egin du GNOME 3 dagokion moduan kargatzean eta "
+#~ "Zoritxarrez huts egin du Scarecrow 3 dagokion moduan kargatzean eta "
 #~ "<i>ordezko moduan</i> hasi da.\n"
 #~ "\n"
 #~ "Baliteke sistemak (grafikoen hardware edo gailuak) ahalmenik ez izatea "
-#~ "GNOME 3 esperientzia osoaz aritzeko."
+#~ "Scarecrow 3 esperientzia osoaz aritzeko."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Ikasi GNOME 3 buruz gehiago"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Ikasi Scarecrow 3 buruz gehiago"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

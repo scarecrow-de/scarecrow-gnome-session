@@ -1,5 +1,5 @@
-# gnome-session Korean message translation
-# This file is distributed under the same license as the gnome-session package.
+# scarecrow-session Korean message translation
+# This file is distributed under the same license as the scarecrow-session package.
 #
 # Updated by Sung-Hyun Nam <namsh@kldp.org>, 2000
 # Updated by Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2006,2007
@@ -12,12 +12,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2020-08-28 10:35+0000\n"
 "PO-Revision-Date: 2020-08-29 19:20+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
-"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+"Language-Team: Scarecrow Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,67 +34,67 @@ msgstr "이 항목으로 저장한 세션을 지정합니다"
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
+msgid "Scarecrow"
 msgstr "그놈"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "이 세션을 사용하면 그놈에 로그인합니다"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
+msgid "Scarecrow dummy"
 msgstr "그놈 더미"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
+msgid "Scarecrow on Xorg"
 msgstr "그놈 (Xorg)"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "세션 저장"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
-msgstr "참이면, gnome-session에서 자동으로 세션을 저장합니다."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
+msgstr "참이면, scarecrow-session에서 자동으로 세션을 저장합니다."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "이 세션 저장"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"참이면, gnome-session에서 자동 저장을 껐더라도 로그아웃할 때 다음 세션을 자동"
+"참이면, scarecrow-session에서 자동 저장을 껐더라도 로그아웃할 때 다음 세션을 자동"
 "으로 저장합니다."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "로그아웃 확인"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
 msgstr "참이면, 세션을 끝낼 때 사용자에게 물어봅니다."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "대체 모드 경고 표시"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
-"참이면, gnome-session에서 대체 모드로 자동 진입하는 경우 로그인한 다음 경고 "
+"참이면, scarecrow-session에서 대체 모드로 자동 진입하는 경우 로그인한 다음 경고 "
 "대화 상자를 표시합니다."
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "사용자 지정 세션"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "실행할 세션을 직접 지정하십시오"
 
@@ -114,17 +114,17 @@ msgstr "세션 이름 바꾸기(_M)"
 msgid "_Continue"
 msgstr "계속(_C)"
 
-#: gnome-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/gsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "아, 뭔가 문제가 생겼습니다."
 
-#: gnome-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/gsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
 msgstr "문제가 발생했지만 복구하지 못했습니다. 시스템 관리자에게 문의하십시오"
 
-#: gnome-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/gsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -132,7 +132,7 @@ msgstr ""
 "문제가 발생했지만 복구하지 못했습니다. 안전을 위해 모든 확장 기능을 사용하지 "
 "않도록 만듭니다."
 
-#: gnome-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/gsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -140,27 +140,27 @@ msgstr ""
 "문제가 발생했지만 복구하지 못했습니다.\n"
 "로그아웃하고 다시 시도하십시오."
 
-#: gnome-session/gsm-fail-whale-dialog.c:344
+#: scarecrow-session/gsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "로그아웃(_L)"
 
-#: gnome-session/gsm-fail-whale-dialog.c:412 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "디버깅 코드를 사용합니다"
 
-#: gnome-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/gsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "로그아웃 허용"
 
-#: gnome-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/gsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "확장 경고 표시"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "응답 없음"
 
-#: gnome-session/gsm-util.c:415
+#: scarecrow-session/gsm-util.c:415
 msgid "_Log out"
 msgstr "로그아웃(_L)"
 
@@ -168,104 +168,104 @@ msgstr "로그아웃(_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "기억한 프로그램"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "이 프로그램이 로그아웃을 막고 있습니다."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "지금 세션을 끝내는 중이므로 새 클라이언트 연결을 거부합니다.\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE 리스닝 소켓을 만들 수 없습니다: %s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "systemd 서비스로 실행"
 
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "systemd 세션 관리 사용"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr "내장 세션 관리 기능 사용 (systemd 기반 세션 아님)"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "기본 자동 시작 디렉토리 대신 사용합니다"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "<자동시작_폴더>"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "사용할 세션"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "<세션_이름>"
 
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "사용자가 지정한 프로그램을 읽어들이지 않습니다"
 
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "이 프로그램의 버전"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "테스트 용도로 고래 대화창을 표시합니다"
 
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "하드웨어 가속 기능을 검사 하지 않습니다"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
 msgstr " — 그놈 세션 관리자"
 
-#: tools/gnome-session-ctl.c:245
-msgid "Start gnome-session-shutdown.target"
-msgstr "gnome-session-shutdown.target 시작"
+#: tools/scarecrow-session-ctl.c:245
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "scarecrow-session-shutdown.target 시작"
 
-#: tools/gnome-session-ctl.c:246
+#: tools/scarecrow-session-ctl.c:246
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
-"표준 입력에서 EOF 또는 한 바이트를 받으면 gnome-session-shutdown.target을 시"
+"표준 입력에서 EOF 또는 한 바이트를 받으면 scarecrow-session-shutdown.target을 시"
 "작합니다"
 
-#: tools/gnome-session-ctl.c:247
-msgid "Signal initialization done to gnome-session"
-msgstr "gnome-session에 시그널 초기화 완료"
+#: tools/scarecrow-session-ctl.c:247
+msgid "Signal initialization done to scarecrow-session"
+msgstr "scarecrow-session에 시그널 초기화 완료"
 
-#: tools/gnome-session-ctl.c:248
+#: tools/scarecrow-session-ctl.c:248
 msgid "Restart dbus.service if it is running"
 msgstr "dbus.service가 실행 중이면 다시 시작"
 
-#: tools/gnome-session-ctl.c:249
+#: tools/scarecrow-session-ctl.c:249
 msgid ""
-"Run from ExecStopPost to start gnome-session-failed.target on service failure"
-msgstr "ExecStopPost에서 실행, 서비스 실패할 때 gnome-session-failed.target을 시작합니다"
+"Run from ExecStopPost to start scarecrow-session-failed.target on service failure"
+msgstr "ExecStopPost에서 실행, 서비스 실패할 때 scarecrow-session-failed.target을 시작합니다"
 
-#: tools/gnome-session-ctl.c:279
+#: tools/scarecrow-session-ctl.c:279
 msgid "Program needs exactly one parameter"
 msgstr "프로그램에 정확히 하나의 인수가 필요합니다"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -299,64 +299,64 @@ msgstr ""
 "\n"
 "--inhibit 옵션을 지정하지 않았다면, idle이라고 가정합니다.\n"
 
-#: tools/gnome-session-inhibit.c:288
+#: tools/scarecrow-session-inhibit.c:288
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "%s 실행 실패\n"
 
-#: tools/gnome-session-inhibit.c:352 tools/gnome-session-inhibit.c:362
-#: tools/gnome-session-inhibit.c:372
+#: tools/scarecrow-session-inhibit.c:352 tools/scarecrow-session-inhibit.c:362
+#: tools/scarecrow-session-inhibit.c:372
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s requires an argument\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "로그아웃"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "전원 끄기"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "다시 시작"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "금지하는 프로그램이 있어도 무시"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "사용자 확인 질문을 하지 않기"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "세션 관리자에 연결할 수 없습니다"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "함께 사용할 수 없는 옵션을 같이 사용했습니다"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "세션 %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "“.”으로 시작하거나 “/”가 들어간 세션 이름은 허용하지 않습니다"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "“.”으로 시작하는 세션 이름은 허용하지 않습니다"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "“/”가 들어간 세션 이름은 허용하지 않습니다"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "이름이 “%s”인 세션이 이미 있습니다"

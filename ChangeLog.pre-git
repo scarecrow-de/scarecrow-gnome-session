@@ -556,7 +556,7 @@
 	* gnome-session/Makefile.am: add gsm-session-save.[ch] to the build.
 	* gnome-session/gsm-session-save.[ch]: session saving functions.
 	* gnome-session/gsm-autostart-app.c (load_desktop_file): check if the
-	desktop file has X-GNOME-Autostart-startup-id to define startup id of
+	desktop file has X-Scarecrow-Autostart-startup-id to define startup id of
 	the GsmAutostartApp.
 	* gnome-session/gsm-client.[ch] (gsm_client_save): add gsm_client_save
 	virtual method which should be implemented by each type of client.
@@ -893,11 +893,11 @@
 2009-01-08  Lucas Rocha  <lucasr@gnome.org>
 
 	Bug 555369 – gnome-session-properties work improperly when key
-	X-GNOME-Autostart-enabled=false in .desktop
+	X-Scarecrow-Autostart-enabled=false in .desktop
 
 	* capplet/gsm-properties-dialog.c (toggle_app, enable_app,
 	disable_app): move app enabling/disabling logic into toggle_app and
-	fix handling of X-GNOME-Autostart-enabled in .desktop files.
+	fix handling of X-Scarecrow-Autostart-enabled in .desktop files.
 	Patch by Halton Huo.
 
 2009-01-08  Lucas Rocha  <lucasr@gnome.org>
@@ -987,8 +987,8 @@
 
 2008-12-10  Vincent Untz  <vuntz@gnome.org>
 
-	* configure.in: remove TIME_UTILITY and GNOME_SESSION_TARBALL_* since
-	it's unused, use GNOME_COMPILE_WARNINGS instead of some custom stuff
+	* configure.in: remove TIME_UTILITY and Scarecrow_SESSION_TARBALL_* since
+	it's unused, use Scarecrow_COMPILE_WARNINGS instead of some custom stuff
 	to define compiler warning flags
 	* capplet/Makefile.am:
 	* compat/Makefile.am:
@@ -1127,7 +1127,7 @@
 
 2008-09-23  Patryk Zawadzki  <patrys@pld-linux.org>
 
-	* data/session-properties.desktop.in.in: add GTK and GNOME.
+	* data/session-properties.desktop.in.in: add GTK and Scarecrow.
 	Fix bug #552050.
 
 2008-09-22  Vincent Untz  <vuntz@gnome.org>
@@ -1304,13 +1304,13 @@
 
 2008-09-02  Vincent Untz  <vuntz@gnome.org>
 
-	* gnome-session/main.c: (main): set GNOME_DESKTOP_SESSION_ID to
+	* gnome-session/main.c: (main): set Scarecrow_DESKTOP_SESSION_ID to
 	"this-is-deprecated" to make it clear that people should stop relying
 	on this.
 
 2008-09-02  Vincent Untz  <vuntz@gnome.org>
 
-	* gnome-session/main.c: (main): export GNOME_DESKTOP_SESSION_ID. We
+	* gnome-session/main.c: (main): export Scarecrow_DESKTOP_SESSION_ID. We
 	need this for compatibility reasons for third-party programs.
 	Fix bug #542880.
 
@@ -3575,7 +3575,7 @@
 
 	* compat/gnome-keyring-daemon-wrapper.c (keyring_daemon_start):
 	capture output from gnome-keyring-daemon and set SSH_AUTH_SOCK and
-	GNOME_KEYRING_PID env variables properly.  
+	Scarecrow_KEYRING_PID env variables properly.  
 
 2008-05-25  Lucas Rocha  <lucasr@gnome.org>
 
@@ -3811,8 +3811,8 @@
 
 2008-04-10  Lucas Rocha  <lucasr@gnome.org>
 
-	* gnome-session/Makefile.am: use GNOME_SESSION_FLAGS and
-	GNOME_SESSION_LIBS in INCLUDES and LDADD respectively. 
+	* gnome-session/Makefile.am: use Scarecrow_SESSION_FLAGS and
+	Scarecrow_SESSION_LIBS in INCLUDES and LDADD respectively. 
 
 2008-04-10  Lucas Rocha  <lucasr@gnome.org>
 
@@ -3854,14 +3854,14 @@
 
 2008-03-23  Lucas Rocha  <lucasr@gnome.org>
 
-	Fix relation between apps set with X-GNOME-Autorestart and
+	Fix relation between apps set with X-Scarecrow-Autorestart and
 	AutostartCondition. 
 
 	* gnome-session/session.c 
 	(app_condition_changed, client_disconnected): don't restart apps if
 	their condition are set to false.
 	* gnome-session/app-autostart.c (is_disabled): don't keep track of
-	condition in case the app is not set with X-GNOME-Autorestart.
+	condition in case the app is not set with X-Scarecrow-Autorestart.
 
 2008-03-22  Lucas Rocha  <lucasr@gnome.org>
 
@@ -3940,7 +3940,7 @@
 	* gnome-session/logout-dialog.[ch]: new logout dialog implementation 
 	for logout and shutdown operations. 
 	* gnome-session/power-manager.[ch]: new functions for powering down, 
-	restarting, and suspending the computer through GNOME Power Manager.
+	restarting, and suspending the computer through Scarecrow Power Manager.
 	* gnome-session/gdm.[ch]: new functions for communication with GDM.
 	* gnome-session/client-xsmp.c: (save_yourself_request_callback): update
 	with new gnome_session_initiate_shutdown() API.
@@ -3985,7 +3985,7 @@
 2007-11-10  Lucas Rocha  <lucasr@gnome.org>
 
 	Add support for client autorestart which can be activated by the
-	"X-GNOME-AutoRestart" .desktop file key or by setting the restart
+	"X-Scarecrow-AutoRestart" .desktop file key or by setting the restart
 	style accordingly through the session client API (GnomeClient's 
 	gnome_client_set_restart_style()).
 
@@ -4074,7 +4074,7 @@
 	data/metacity.desktop, data/nautilus.desktop,
 	splash/gnome-login-sound.desktop.in,
 	splash/gnome-session-splash.desktop.in: use 
-	X-GNOME-Autostart-Notify key for passing session client ids
+	X-Scarecrow-Autostart-Notify key for passing session client ids
 	through the DESKTOP_AUTOSTART_ID environment variable.
 
 2007-06-29  Dan Winship  <danw@gnome.org>

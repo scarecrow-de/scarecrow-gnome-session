@@ -1,0 +1,12 @@
+[Unit]
+Description=Tasks to be run before Scarecrow Session starts
+DefaultDependencies=no
+RefuseManualStart=yes
+RefuseManualStop=yes
+
+Requires=graphical-session-pre.target
+After=graphical-session-pre.target
+
+Requisite=scarecrow-session-initialized.target
+PartOf=scarecrow-session-initialized.target
+Before=scarecrow-session-initialized.target

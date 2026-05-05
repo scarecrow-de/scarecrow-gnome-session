@@ -1,14 +1,14 @@
-gnome-session
+scarecrow-session
 =============
 
-gnome-session contains the GNOME session manager, as well as a
+scarecrow-session contains the GNOME session manager, as well as a
 configuration program to choose applications starting on login.
 
 You may download updates to the package from:
 
    http://download.gnome.org/sources/gnome-session/
 
-To discuss gnome-session, you may use the desktop-devel-list mailing
+To discuss scarecrow-session, you may use the desktop-devel-list mailing
 list:
 
   http://mail.gnome.org/mailman/listinfo/desktop-devel-list
@@ -24,7 +24,7 @@ Installation
 ============
 
 See the file 'INSTALL'. If you are not using a released version of
-gnome-session (for example, if you checked out the code from git), you
+scarecrow-session (for example, if you checked out the code from git), you
 first need to run './autogen.sh'.
 
 

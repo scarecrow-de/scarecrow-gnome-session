@@ -1,4 +1,4 @@
-# translation of gnome-session.HEAD.ta.po to Tamil
+# translation of scarecrow-session.HEAD.ta.po to Tamil
 # translation of ta.po to
 # Tamil translation of Gnome-Session messages.
 # Copyright (C) 2001, 2004, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
@@ -11,7 +11,7 @@
 # Shantha kumar <shkumar@redhat.com>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session.HEAD.ta\n"
+"Project-Id-Version: scarecrow-session.HEAD.ta\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "session&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-10-11 12:53+0000\n"
@@ -36,35 +36,35 @@ msgid "This entry lets you select a saved session"
 msgstr "இந்த உள்ளீடானது ஒரு சேமிக்கப்பட்ட அமர்வை தேர்ந்தெடுக்கிறது"
 
 #: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "இந்த அமர்வு க்நோம் இல் உங்களை நுழைக்கும் "
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
-msgid "GNOME dummy"
-msgstr "GNOME டம்மி"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow டம்மி"
 
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
-#| msgid "GNOME fallback"
-msgid "GNOME on Wayland"
-msgstr "Wayland இல் GNOME"
+#| msgid "Scarecrow fallback"
+msgid "Scarecrow on Wayland"
+msgstr "Wayland இல் Scarecrow"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-#| msgid "This session logs you into GNOME"
-msgid "This session logs you into GNOME, using Wayland"
+#| msgid "This session logs you into Scarecrow"
+msgid "This session logs you into Scarecrow, using Wayland"
 msgstr ""
-"இந்த அமர்வு உங்களை Wayland ஐப் பயன்படுத்தி GNOME இல் புகுபதிவு செய்யும்"
+"இந்த அமர்வு உங்களை Wayland ஐப் பயன்படுத்தி Scarecrow இல் புகுபதிவு செய்யும்"
 
 # gsm/save-session.c:43
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
 msgstr "தனிப்பயன் அமர்வு"
 
-#: ../data/session-selector.ui.h:2 ../tools/gnome-session-selector.c:103
+#: ../data/session-selector.ui.h:2 ../tools/scarecrow-session-selector.c:103
 msgid "Please select a custom session to run"
 msgstr "ஒரு தனிப்பயன் அமர்வை இயக்குவதற்கு தேர்ந்தெடுக்கவும் "
 
@@ -128,11 +128,11 @@ msgstr "(_m) கட்டளை:"
 msgid "_Name:"
 msgstr "பெயர்: (_N)"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:295
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:295
 msgid "Oh no!  Something has gone wrong."
 msgstr "அடடா! ஏதோ தவறு நிகழ்ந்துவிட்டது"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:302
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:302
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -140,7 +140,7 @@ msgstr ""
 "ஒரு பிரச்சினை நிகழ்ந்தது. கணினி மீள இயலாது. ஒரு கணினி மேலாளரை தொடர்பு "
 "கொள்ளவும்."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:304
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:304
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -149,7 +149,7 @@ msgstr ""
 "நீட்சிகளும் செயல் "
 "இழக்கப்பட்டுள்ளன."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:306
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:306
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -158,28 +158,28 @@ msgstr ""
 "வெளியேறி மீண்டும் முயற்சிக்கவும்"
 
 # panel/logout.c:73 panel/menu.c:5339
-#: ../gnome-session/gsm-fail-whale-dialog.c:321
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:321
 msgid "_Log Out"
 msgstr "(_L) விலகவும்"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:343 ../gnome-session/main.c:307
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:343 ../scarecrow-session/main.c:307
 msgid "Enable debugging code"
 msgstr "பிழைத்திருத்த குறியீட்டை செயல்படுத்து."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:344
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:344
 msgid "Allow logout"
 msgstr "வெளிசெல்ல அனுமதி"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:345
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:345
 msgid "Show extension warning"
 msgstr "நீட்டிப்பு எச்சரிக்கையைக் காட்டு"
 
-#: ../gnome-session/gsm-manager.c:1271 ../gnome-session/gsm-manager.c:2043
+#: ../scarecrow-session/gsm-manager.c:1271 ../scarecrow-session/gsm-manager.c:2043
 msgid "Not responding"
 msgstr "பதிலளிக்க இல்லை"
 
 # panel/logout.c:73 panel/menu.c:5339
-#: ../gnome-session/gsm-util.c:411
+#: ../scarecrow-session/gsm-util.c:411
 msgid "_Log out"
 msgstr "வெளியேறு (_L)"
 
@@ -187,60 +187,60 @@ msgstr "வெளியேறு (_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:559
+#: ../scarecrow-session/gsm-xsmp-client.c:559
 msgid "Remembered Application"
 msgstr "நினைவில் கொண்ட பயன்பாடு"
 
-#: ../gnome-session/gsm-xsmp-client.c:1209
+#: ../scarecrow-session/gsm-xsmp-client.c:1209
 msgid "This program is blocking logout."
 msgstr "இந்த நிரல் வெளியேறுவதை தடுக்கிறது"
 
-#: ../gnome-session/gsm-xsmp-server.c:341
+#: ../scarecrow-session/gsm-xsmp-server.c:341
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "புதிய சார்ந்தோன் இணைப்பை மறுக்கிறது; ஏனெனில் இப்போதைய அமர்வு மூடப்படுகிறது\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:610
+#: ../scarecrow-session/gsm-xsmp-server.c:610
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ஐஸ் கேட்கும் பொருத்துவாயை உருவாக்க முடியவில்லை : %s"
 
-#: ../gnome-session/main.c:305
+#: ../scarecrow-session/main.c:305
 msgid "Override standard autostart directories"
 msgstr "செந்தர தானியங்கி அடைவுகளை வலுவாக புறக்கணி"
 
-#: ../gnome-session/main.c:305
+#: ../scarecrow-session/main.c:305
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-#: ../gnome-session/main.c:306
+#: ../scarecrow-session/main.c:306
 msgid "Session to use"
 msgstr "பயன்படுத்த அமர்வு"
 
-#: ../gnome-session/main.c:306
+#: ../scarecrow-session/main.c:306
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: ../gnome-session/main.c:308
+#: ../scarecrow-session/main.c:308
 msgid "Do not load user-specified applications"
 msgstr "பயனர் குறித்த நிரல்களை ஏற்றாதே"
 
-#: ../gnome-session/main.c:309
+#: ../scarecrow-session/main.c:309
 msgid "Version of this application"
 msgstr "இந்த பயன்பாட்டின் பதிப்பு "
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:311
+#: ../scarecrow-session/main.c:311
 msgid "Show the fail whale dialog for testing"
 msgstr "சோதனைக்கு பெய்ல் வேல் உரையாடலை காட்டுக"
 
-#: ../gnome-session/main.c:344
-msgid " - the GNOME session manager"
+#: ../scarecrow-session/main.c:344
+msgid " - the Scarecrow session manager"
 msgstr "- க்னோம் அமர்வு மேலாலாளர்"
 
-#: ../tools/gnome-session-inhibit.c:110
+#: ../tools/scarecrow-session-inhibit.c:110
 #, c-format
 msgid ""
 "%s [OPTION...] COMMAND\n"
@@ -273,68 +273,68 @@ msgstr ""
 "\n"
 "If no --inhibit option is specified, idle is assumed.\n"
 
-#: ../tools/gnome-session-inhibit.c:148
+#: ../tools/scarecrow-session-inhibit.c:148
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "%s ஐச் செயல்படுத்துவது தோல்வி\n"
 
-#: ../tools/gnome-session-inhibit.c:208 ../tools/gnome-session-inhibit.c:218
-#: ../tools/gnome-session-inhibit.c:228
+#: ../tools/scarecrow-session-inhibit.c:208 ../tools/scarecrow-session-inhibit.c:218
+#: ../tools/scarecrow-session-inhibit.c:228
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s க்கு ஒரு மதிப்புரு தேவை\n"
 
-#: ../tools/gnome-session-selector.c:62
+#: ../tools/scarecrow-session-selector.c:62
 #, c-format
 msgid "Session %d"
 msgstr "அமர்வு %d"
 
-#: ../tools/gnome-session-selector.c:108
+#: ../tools/scarecrow-session-selector.c:108
 msgid ""
 "Session names are not allowed to start with ‘.’ or contain ‘/’ characters"
 msgstr ""
 "அமர்வு பெயர்கள் ஒரு '.' அல்லது ‘/’ எழுத்துக்களுடன் துவக்க அனுமதிப்பதில்லை"
 
-#: ../tools/gnome-session-selector.c:112
+#: ../tools/scarecrow-session-selector.c:112
 msgid "Session names are not allowed to start with ‘.’"
 msgstr "அமர்வு பெயர்கள் ஒரு '.' எழுத்துடன் துவக்க அனுமதிப்பதில்லை"
 
-#: ../tools/gnome-session-selector.c:116
+#: ../tools/scarecrow-session-selector.c:116
 msgid "Session names are not allowed to contain ‘/’ characters"
 msgstr "அமர்வு பெயர்கள் '/' எழுத்துக்களை கொண்டிருக்க அனுமதிப்பதில்லை"
 
-#: ../tools/gnome-session-selector.c:124
+#: ../tools/scarecrow-session-selector.c:124
 #, c-format
 msgid "A session named ‘%s’ already exists"
 msgstr "‘%s’ பெயருடைய ஒரு அமர்வு ஏற்கனவே உள்ளது"
 
 # panel/logout.c:73 panel/menu.c:5339
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Log out"
 msgstr "வெளியேறுக"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 msgid "Power off"
 msgstr "மின்சக்தி நிறுத்து"
 
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 msgid "Reboot"
 msgstr "மறுதுவக்கம்"
 
-#: ../tools/gnome-session-quit.c:56
+#: ../tools/scarecrow-session-quit.c:56
 msgid "Ignoring any existing inhibitors"
 msgstr "ஏதாவது தடை வரின் அவற்றை உதாசீனம் செய்க"
 
-#: ../tools/gnome-session-quit.c:57
+#: ../tools/scarecrow-session-quit.c:57
 msgid "Don't prompt for user confirmation"
 msgstr "பயனர் உறுதிபடுத்தலுக்கு தூண்டாதே"
 
 # gsm/save-session.c:93
-#: ../tools/gnome-session-quit.c:91 ../tools/gnome-session-quit.c:101
+#: ../tools/scarecrow-session-quit.c:91 ../tools/scarecrow-session-quit.c:101
 msgid "Could not connect to the session manager"
 msgstr "அமர்வு மேலாளருடன் இணைக்க முடியவில்லை"
 
-#: ../tools/gnome-session-quit.c:203
+#: ../tools/scarecrow-session-quit.c:203
 msgid "Program called with conflicting options"
 msgstr "நிரல் முரணான தேர்வுகளை அழைத்தது"
 
@@ -534,15 +534,15 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ msgid "Icon '%s' not found"
 #~ msgstr "'%s' சின்னம் காணப்படவில்லை"
 
-#~ msgid "GNOME 3 Failed to Load"
+#~ msgid "Scarecrow 3 Failed to Load"
 #~ msgstr "க்னோம் 3 ஏற்றத்தில் தோல்வியுற்றது"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
 #~ "துரத்ருஷ்ட வசமாக க்னோம் 3 சரியாக துவங்கவில்லை; அது இந்த நிலையில் துவங்கியது. "
 #~ "<i>பின் சார்தல்</i>.\n"
@@ -550,7 +550,7 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ "அனேகமாக இதன் பொரூல் என்னவென்றால் உங்கள் கணினி (வரைகலை வன்பொருள் அல்லது இயக்கி) முழு "
 #~ "க்னோம் 3 அனுபவத்தை தர பொருத்தமில்லை."
 
-#~ msgid "Learn more about GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
 #~ msgstr "மேலும் க்னோம் 3 பற்றி"
 
 #~ msgid ""
@@ -591,10 +591,10 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ msgstr "சாளர மேலாளர்"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will prompt the user before ending a session."
+#~ "If enabled, scarecrow-session will prompt the user before ending a session."
 #~ msgstr "செயல்படுத்தப்பட்ட,gnome அமர்வுகளை பயன்படுத்தி அமர்வுகளை முடி."
 
-#~ msgid "If enabled, gnome-session will save the session automatically."
+#~ msgid "If enabled, scarecrow-session will save the session automatically."
 #~ msgstr "செயல்படுத்தப்பட்டால், க்னோம் அமர்வை தானியங்கியாக சேமிக்கும்."
 
 #~ msgid "List of applications that are part of the default session."
@@ -691,11 +691,11 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ msgid "AT SPI Registry Wrapper"
 #~ msgstr "AT SPI பதிவேட்டு உறை"
 
-#~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "GNOME அமைப்புகள் டெய்மன் உதவியாளர்"
+#~ msgid "Scarecrow Settings Daemon Helper"
+#~ msgstr "Scarecrow அமைப்புகள் டெய்மன் உதவியாளர்"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will save the session automatically. Otherwise, "
+#~ "If enabled, scarecrow-session will save the session automatically. Otherwise, "
 #~ "the logout dialog will have an option to save the session."
 #~ msgstr "செயல்படுத்தப்பட்ட gnome -அமர்வுகளை தானாகவே சேமித்துக்கொள்ள முடியும்."
 
@@ -726,10 +726,10 @@ msgstr "நிரல் முரணான தேர்வுகளை அழை
 #~ "சேமிக்காமல் போகச் செய்யும்."
 
 # gsm/session-properties-capplet.c:192
-#~ msgid "- GNOME Splash Screen"
+#~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "க்னோம்  தொடக்க ஓவியம்"
 
-#~ msgid "GNOME Splash Screen"
+#~ msgid "Scarecrow Splash Screen"
 #~ msgstr "க்னோம் துவக்க திரை"
 
 # gsm/startup-programs.c:333

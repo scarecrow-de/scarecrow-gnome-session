@@ -1,6 +1,6 @@
-# Slovak translation for gnome-session.
+# Slovak translation for scarecrow-session.
 # Copyright (C) 2002, 2003, 2005-2010, 2012, 2013 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-session package.
+# This file is distributed under the same license as the scarecrow-session package.
 # Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>, 2002, 2003.
 # Stanislav Visnovsky <visnovsky@kde.org>, 2003.
 # Peter Tuharsky <tuharsky@misbb.sk>, 2007.
@@ -11,8 +11,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2019-12-16 13:18+0000\n"
 "PO-Revision-Date: 2020-03-18 14:05+0100\n"
 "Last-Translator: Dušan B. <drunkez@gmail.com>\n"
@@ -37,65 +37,65 @@ msgstr "Táto položka vám umožní vybrať uloženú reláciu"
 # desktop entry name; gnome session name
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 # desktop entry comment
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Táto relácia vás prihlási do GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Táto relácia vás prihlási do Scarecrow"
 
 # desktop entry name
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "Fingované GNOME"
+msgid "Scarecrow dummy"
+msgstr "Fingované Scarecrow"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
-msgstr "GNOME cez Xorg"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow cez Xorg"
 
 # GtkButton label
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Ukladanie relácie"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
-msgstr "Ak je povolené, gnome-session bude reláciu ukladať automaticky."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
+msgstr "Ak je povolené, scarecrow-session bude reláciu ukladať automaticky."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Uloženie tejto relácie"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"Keď je povolené, gnome-session automaticky uloží nasledujúcu reláciu pri "
+"Keď je povolené, scarecrow-session automaticky uloží nasledujúcu reláciu pri "
 "odhlásení, aj keď je automatické ukladanie zakázané."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Výzvna na odhlásenie"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
 msgstr ""
-"Ak je povolené, gnome-session vyzve používateľa pred ukončením relácie."
+"Ak je povolené, scarecrow-session vyzve používateľa pred ukončením relácie."
 
 # cmd desc
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Zobrazí upozornenie záchranného režimu"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
-"Ak je povolené, gnome-session zobrazí po prihlásení upozornenie, ak sa "
+"Ak je povolené, scarecrow-session zobrazí po prihlásení upozornenie, ak sa "
 "automaticky použije záchranný režim."
 
 # GtkWindow title
@@ -104,7 +104,7 @@ msgid "Custom Session"
 msgstr "Vlastná relácia"
 
 # GtkLabel label
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Prosím, vyberte vlastnú reláciu, ktorá sa má spustiť"
 
@@ -128,11 +128,11 @@ msgstr "Pre_menovať reláciu"
 msgid "_Continue"
 msgstr "_Pokračovať"
 
-#: gnome-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/gsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ale nie! Niekde sa stala chyba."
 
-#: gnome-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/gsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -142,7 +142,7 @@ msgstr ""
 
 # PK: extensions asi zasuvne moduly
 # DK: zasuvne moduly su "plugins".tu sa jedna o rozsirenia Shellu.mam overene v praxi.
-#: gnome-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/gsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -150,7 +150,7 @@ msgstr ""
 "Vyskytla sa chyba a systém sa nedokáže obnoviť. Všetky rozšírenia boli "
 "preventívne zakázané."
 
-#: gnome-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/gsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -159,31 +159,31 @@ msgstr ""
 "Prosím, odhláste sa a skúste to znovu."
 
 # button
-#: gnome-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/gsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Odhlásiť sa"
 
 # cmd desc
-#: gnome-session/gsm-fail-whale-dialog.c:361 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "Povolí ladiaci kód"
 
 # cmd desc
-#: gnome-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/gsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Povolí odhlásenie"
 
 # cmd desc
-#: gnome-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/gsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Zobrazí upozornenie rozšírenia"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "Neodpovedá"
 
 # button
-#: gnome-session/gsm-util.c:414
+#: scarecrow-session/gsm-util.c:414
 msgid "_Log out"
 msgstr "Odh_lásiť sa"
 
@@ -191,107 +191,107 @@ msgstr "Odh_lásiť sa"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Zapamätaná aplikácia"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Tento program blokuje odhlásenie."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Nové pripojenie klienta odmietnuté, pretože sa relácia práve vypína\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Nepodarilo sa vytvoriť načúvajúci soket ICE: %s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "Pobeží ako služba systemd"
 
 # cmd desc
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "Použije správu relácií systemd"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr ""
 "Použije zabudovaného správcu relácií (namiesto toho, založeného na systemd)"
 
 # cmd desc
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "Preváži predvolené adresáre automatického spúšťania"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "ADRESÁR_AUTOSPUSTENIA"
 
 # cmd desc
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "Relácia, ktorá bude použitá"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "NÁZOV_RELÁCIE"
 
 # cmd desc
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "Nenačíta aplikácie špecifikované používateľom"
 
 # cmd desc
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "Verzia tejto aplikácie"
 
 # cmd desc
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "Zobrazí dialógové okno s chybou slúžiace na testovanie"
 
 # cmd desc
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "Zakáže kontrolu hardvérovej akcelerácie"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — správca relácie GNOME"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
+msgstr " — správca relácie Scarecrow"
 
-#: tools/gnome-session-ctl.c:244
-msgid "Start gnome-session-shutdown.target"
-msgstr "Spustí gnome-session-shutdown.target"
+#: tools/scarecrow-session-ctl.c:244
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "Spustí scarecrow-session-shutdown.target"
 
-#: tools/gnome-session-ctl.c:245
+#: tools/scarecrow-session-ctl.c:245
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
-"Spustí gnome-session-shutdown.target pri obdržaní EOF alebo jedného bajtu zo "
+"Spustí scarecrow-session-shutdown.target pri obdržaní EOF alebo jedného bajtu zo "
 "štandardného vstupu"
 
-#: tools/gnome-session-ctl.c:246
-msgid "Signal initialization done to gnome-session"
-msgstr "Signalizuje dokončenie inicializácie pre gnome-session"
+#: tools/scarecrow-session-ctl.c:246
+msgid "Signal initialization done to scarecrow-session"
+msgstr "Signalizuje dokončenie inicializácie pre scarecrow-session"
 
-#: tools/gnome-session-ctl.c:247
+#: tools/scarecrow-session-ctl.c:247
 msgid "Restart dbus.service if it is running"
 msgstr "Reštartuje dbus.service, ak beží"
 
-#: tools/gnome-session-ctl.c:275
+#: tools/scarecrow-session-ctl.c:275
 msgid "Program needs exactly one parameter"
 msgstr "Program vyžaduje presne jeden parameter"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -331,70 +331,70 @@ msgstr ""
 "Ak nie je určená žiadna voľba typu --inhibit, bude sa predpokladať "
 "nečinnosť.\n"
 
-#: tools/gnome-session-inhibit.c:146
+#: tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Zlyhalo spustenie príkazu %s\n"
 
-#: tools/gnome-session-inhibit.c:206 tools/gnome-session-inhibit.c:216
-#: tools/gnome-session-inhibit.c:226
+#: tools/scarecrow-session-inhibit.c:206 tools/scarecrow-session-inhibit.c:216
+#: tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "Príkaz %s vyžaduje parameter\n"
 
 # cmd desc
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Uskutoční odhlásenie"
 
 # cmd desc
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Uskutoční vypnutie"
 
 # cmd desc
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Uskutoční reštart"
 
 # cmd desc
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Budú sa ignorovať akékoľvek potlačenia"
 
 # cmd desc
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Nepýtať si potvrdenie od používateľa"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Nepodarilo sa pripojiť k správcovi relácií"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Program volaný s konfliktnými voľbami"
 
 # cmd desc
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Relácia č. %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "Názvy relácií nesmú začínať s „.“ ani obsahovať znaky „/“"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Názvy relácií nesmú začínať s „.“"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Názvy relácií nesmú obsahovať znaky „/“"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "Relácia s názvom „%s“ už existuje"
@@ -436,8 +436,8 @@ msgstr "Relácia s názvom „%s“ už existuje"
 #~ msgstr "_Názov:"
 
 # desktop entry comment
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Táto relácia vás prihlási do GNOME s použitím protokolu Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Táto relácia vás prihlási do Scarecrow s použitím protokolu Wayland"
 
 # titulok okna
 #~ msgid "Select Command"

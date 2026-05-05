@@ -1,0 +1,17 @@
+[Unit]
+Description=Scarecrow Session is initialized
+DefaultDependencies=no
+RefuseManualStart=yes
+RefuseManualStop=yes
+
+Requires=scarecrow-session-pre.target
+After=scarecrow-session-pre.target
+
+Requisite=scarecrow-session.target
+PartOf=scarecrow-session.target
+Before=scarecrow-session.target
+
+# Signal scarecrow-session that we reached the initialized target and
+# that it may start applications.
+Requires=scarecrow-session-signal-init.service
+Before=scarecrow-session-signal-init.service

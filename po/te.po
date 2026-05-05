@@ -1,7 +1,7 @@
-# translation of gnome-session.master.te.po to Telugu
-# Telugu translation of gnome-session.
+# translation of scarecrow-session.master.te.po to Telugu
+# Telugu translation of scarecrow-session.
 # Copyright (C) 2007,2012 Swecha Telugu Localisation Team <localizatioin@swecha.net>
-# This file is distributed under the same license as the gnome-session package.
+# This file is distributed under the same license as the scarecrow-session package.
 #
 #
 # Pavan Kumar <pavanpreetam@gmail.com>, 2007.
@@ -13,7 +13,7 @@
 # GVS.Giri <gvs.giri947@gmail.com>,2012, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session.master.te\n"
+"Project-Id-Version: scarecrow-session.master.te\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "session&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-08-26 19:25+0000\n"
@@ -36,31 +36,31 @@ msgid "This entry lets you select a saved session"
 msgstr "ఈ ప్రవేశం అనునది మిమ్ములను దాచిన సెషన్ యెంపికచేయుటకు అనుమతించును"
 
 #: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
-msgid "GNOME"
+msgid "Scarecrow"
 msgstr "గ్నోమ్"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "ఈ సెషన్ గ్నోమ్‌లోనికి లాగ్ చేస్తుంది"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
-msgid "GNOME dummy"
+msgid "Scarecrow dummy"
 msgstr "గ్నోమ్ డమ్మీ"
 
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
-msgid "GNOME on Wayland"
+msgid "Scarecrow on Wayland"
 msgstr "వేల్యాండ్ పై గ్నోమ్"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-msgid "This session logs you into GNOME, using Wayland"
+msgid "This session logs you into Scarecrow, using Wayland"
 msgstr "వేల్యాండ్ ఉపయోగించి, ఈ సెషన్ గ్నోమ్‌లోనికి లాగ్ చేస్తుంది"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
 msgstr "మలచిన సెషన్"
 
-#: ../data/session-selector.ui.h:2 ../tools/gnome-session-selector.c:102
+#: ../data/session-selector.ui.h:2 ../tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "నడుపుటకు మలచిన సెషన్ యెంపికచేయి"
 
@@ -116,18 +116,18 @@ msgstr "ఆదేశం (_m):"
 msgid "_Name:"
 msgstr "పేరు (_N):"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:321
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:321
 msgid "Oh no!  Something has gone wrong."
 msgstr "అయ్యో! ఎక్కడో పొరపాటు జరిగినది."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:328
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:328
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
 msgstr ""
 "ఒక సమస్య ఎదురయింది మరియు వ్యవస్థ దానినుండి కోలుకోలేదు. దయచేసి మీ వ్యవస్థ నిర్వాహకుడిని సంప్రదించండి"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:330
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:330
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -135,7 +135,7 @@ msgstr ""
 "ఒక సమస్య ఎదురయింది మరియు వ్యవస్థ దానినుండి కోలుకోలేదు. ముందు జాగ్రత్తగా దయచేసి మీ వ్యవస్థ "
 "నిర్వాహకుడిని సంప్రదించండి"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:332
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:332
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -143,27 +143,27 @@ msgstr ""
 "ఒక సమస్య ఎదురయింది మరియు వ్యవస్థ దానినుండి కోలుకోలేదు.\n"
 "దయచేసి నిష్క్రమించి మరలా ప్రయత్నించండి."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:347
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:347
 msgid "_Log Out"
 msgstr "నిష్క్రమించు (_L)"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:369 ../gnome-session/main.c:305
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:369 ../scarecrow-session/main.c:305
 msgid "Enable debugging code"
 msgstr "దోషనిర్మూలన కోడ్‌ను చేతనపరుచు"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:370
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:370
 msgid "Allow logout"
 msgstr "నిష్క్రమణ అనుమతించు"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:371
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:371
 msgid "Show extension warning"
 msgstr "పొడిగింపు హెచ్చరికను చూపుము"
 
-#: ../gnome-session/gsm-manager.c:1271 ../gnome-session/gsm-manager.c:2043
+#: ../scarecrow-session/gsm-manager.c:1271 ../scarecrow-session/gsm-manager.c:2043
 msgid "Not responding"
 msgstr "స్పందించుటలేదు"
 
-#: ../gnome-session/gsm-util.c:382
+#: ../scarecrow-session/gsm-util.c:382
 msgid "_Log out"
 msgstr "నిష్క్రమించు (_L)"
 
@@ -171,60 +171,60 @@ msgstr "నిష్క్రమించు (_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "గుర్తించుకున్న అనువర్తనము"
 
-#: ../gnome-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/gsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "ఈ ప్రోగ్రామ్ నిష్క్రమించుటను నిరోధిస్తోంది."
 
-#: ../gnome-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/gsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "కొత్త కక్షిదారి అనుసంధానమును తిరస్కరిస్తోంది యెంచేతంటే విభాగము అనునది ప్రస్తుతము మూసివేయబడుతోంది\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/gsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE లిజనింగ్ సాకెట్‌ను సృష్టించలేక పోయింది: %s"
 
-#: ../gnome-session/main.c:303
+#: ../scarecrow-session/main.c:303
 msgid "Override standard autostart directories"
 msgstr "ప్రామాణిక స్వయంచాలక డైరెక్టరీలను తిరిగివ్రాయుము"
 
-#: ../gnome-session/main.c:303
+#: ../scarecrow-session/main.c:303
 msgid "AUTOSTART_DIR"
 msgstr "స్వయంప్రారంభ సంచయం (_D)"
 
-#: ../gnome-session/main.c:304
+#: ../scarecrow-session/main.c:304
 msgid "Session to use"
 msgstr "వాడవలసిన సెషన్"
 
-#: ../gnome-session/main.c:304
+#: ../scarecrow-session/main.c:304
 msgid "SESSION_NAME"
 msgstr "సెషన్ పేరు (_N)"
 
-#: ../gnome-session/main.c:306
+#: ../scarecrow-session/main.c:306
 msgid "Do not load user-specified applications"
 msgstr "వాడుకరి-తెలిపిన అనువర్తనములను లోడుచేయలేకపోయింది"
 
-#: ../gnome-session/main.c:307
+#: ../scarecrow-session/main.c:307
 msgid "Version of this application"
 msgstr "ఈ అనువర్తనం యొక్క రూపాంతరం"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:309
+#: ../scarecrow-session/main.c:309
 msgid "Show the fail whale dialog for testing"
 msgstr "పరీక్షించుటకు ఫెయిల్ వేల్ డైలాగును చూపించు"
 
-#: ../gnome-session/main.c:342
-msgid " - the GNOME session manager"
+#: ../scarecrow-session/main.c:342
+msgid " - the Scarecrow session manager"
 msgstr " -గ్నోమ్ సెషన్ నిర్వాహకము"
 
-#: ../tools/gnome-session-inhibit.c:108
+#: ../tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION...] COMMAND\n"
@@ -257,65 +257,65 @@ msgstr ""
 "\n"
 "If no --inhibit option is specified, idle is assumed.\n"
 
-#: ../tools/gnome-session-inhibit.c:146
+#: ../tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "%s నిర్వర్తించుటకు విఫలమైంది\n"
 
-#: ../tools/gnome-session-inhibit.c:206 ../tools/gnome-session-inhibit.c:216
-#: ../tools/gnome-session-inhibit.c:226
+#: ../tools/scarecrow-session-inhibit.c:206 ../tools/scarecrow-session-inhibit.c:216
+#: ../tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s కు వొక ఆర్గుమెంట్ కావాలి\n"
 
-#: ../tools/gnome-session-selector.c:61
+#: ../tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "సెషన్ %d"
 
-#: ../tools/gnome-session-selector.c:107
+#: ../tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with ‘.’ or contain ‘/’ characters"
 msgstr "సెషన్ పేర్లు  ‘.’ తో ప్రారంభమగుటకు లేదా ‘/’ అక్షరాలను కలిగివుండుటకు అనుమతించబడవు"
 
-#: ../tools/gnome-session-selector.c:111
+#: ../tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with ‘.’"
 msgstr "సెషన్ పేర్లు  ‘.’ తో ప్రారంభమగుటకు అనుమతించబడవు"
 
-#: ../tools/gnome-session-selector.c:115
+#: ../tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain ‘/’ characters"
 msgstr "సెషన్ పేర్లు  ‘/’ అక్షరాలను కలిగివుండుటకు అనుమతించబడవు"
 
-#: ../tools/gnome-session-selector.c:123
+#: ../tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named ‘%s’ already exists"
 msgstr "సెషన్ పేరు ‘%s’ యిప్పటికే వుంది"
 
-#: ../tools/gnome-session-quit.c:51
+#: ../tools/scarecrow-session-quit.c:51
 msgid "Log out"
 msgstr "నిష్క్రమించు"
 
-#: ../tools/gnome-session-quit.c:52
+#: ../tools/scarecrow-session-quit.c:52
 msgid "Power off"
 msgstr "విద్యుత్ ఆపు"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Reboot"
 msgstr "పునఃప్రారంభం"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 msgid "Ignoring any existing inhibitors"
 msgstr "ఉన్నటువంటి ఏ అవరోధకాలనైనా వదిలివేస్తున్నది"
 
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 msgid "Don't prompt for user confirmation"
 msgstr "వాడుకరి నిర్ధారణ కోసం అడగవద్దు"
 
-#: ../tools/gnome-session-quit.c:89 ../tools/gnome-session-quit.c:99
+#: ../tools/scarecrow-session-quit.c:89 ../tools/scarecrow-session-quit.c:99
 msgid "Could not connect to the session manager"
 msgstr "సెషన్ నిర్వాహకానికి అనుసంధానించలేకపోతుంది"
 
-#: ../tools/gnome-session-quit.c:201
+#: ../tools/scarecrow-session-quit.c:201
 msgid "Program called with conflicting options"
 msgstr "విభేదిస్తున్న ఐచ్చికాలతో పిలువబడే ప్రోగ్రామ్"
 

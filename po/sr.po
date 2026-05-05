@@ -1,6 +1,6 @@
-# Serbian translation of gnome-session
+# Serbian translation of scarecrow-session
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2017.
-# This file is distributed under the same license as the gnome-session package.
+# This file is distributed under the same license as the scarecrow-session package.
 # Данило Шеган <danilo@gnome.org> 2005.
 # Слободан Д. Средојевић <slobo@akrep.be> 2006.
 # Милош Поповић <gpopac@gmail.com>, 2010—2011.
@@ -9,8 +9,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2020-07-31 14:02+0000\n"
 "PO-Revision-Date: 2020-08-18 23:06+0200\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
@@ -34,59 +34,59 @@ msgstr "Ова ставка вам допушта да изаберете сач
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
+msgid "Scarecrow"
 msgstr "Гном"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Ова сесија вас пријављује у Гном"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
+msgid "Scarecrow dummy"
 msgstr "Гномов лажњак"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
+msgid "Scarecrow on Xorg"
 msgstr "Гном на Икс серверу"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Сачувај сесије"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
 msgstr "Ако је омогућено, гномова сесија ће самостално чувати сесију."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Сачувај ову сесију"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
 "Када је омогућено, гномова сесија ће самостално сачувати следећу сесију при "
 "одјави чак иако је самостално чување искључено."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Упит за одјаву"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
 msgstr ""
 "Ако је омогућено, гномова сесија ће питати корисника да ли жели да оконча "
 "сесију."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Прикажи упозорење о одступању"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
 "Ако је омогућено, гномова сесија ће приказати прозорче са упозорењем након "
@@ -96,7 +96,7 @@ msgstr ""
 msgid "Custom Session"
 msgstr "Прилагођена сесија"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Изаберите прилагођену сесију за покретање"
 
@@ -116,11 +116,11 @@ msgstr "Преименуј _сесију"
 msgid "_Continue"
 msgstr "_Настави"
 
-#: gnome-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/gsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "О, не!  Нешто је пошло наопако!"
 
-#: gnome-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/gsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -128,7 +128,7 @@ msgstr ""
 "Дошло је до проблема и систем не може да се опорави. Обратите се "
 "администратору система"
 
-#: gnome-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/gsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -136,7 +136,7 @@ msgstr ""
 "Дошло је до проблема и систем не може да се опорави. Сва проширења су "
 "искључена зарад предострожности."
 
-#: gnome-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/gsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -144,27 +144,27 @@ msgstr ""
 "Дошло је до проблема и систем не може да се опорави.\n"
 "Одјавите се и покушајте опет."
 
-#: gnome-session/gsm-fail-whale-dialog.c:344
+#: scarecrow-session/gsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "_Одјави ме"
 
-#: gnome-session/gsm-fail-whale-dialog.c:412 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "Укључује код за исправљање грешака"
 
-#: gnome-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/gsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "Дозвољава одјављивање"
 
-#: gnome-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/gsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "Приказује упозорење проширења"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "Не даје одзив"
 
-#: gnome-session/gsm-util.c:415
+#: scarecrow-session/gsm-util.c:415
 msgid "_Log out"
 msgstr "_Одјави ме"
 
@@ -172,106 +172,106 @@ msgstr "_Одјави ме"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Запамћени програм"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Овај програм онемогућава одјаву."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Одбацујем везу са новим клијентом јер је у току гашење сесије\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Не могу да направим прикључак ИЦЕ ослушкивања: %s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "Покрени као систем-де услугу"
 
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "Користи систем-де управљање сесијом"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr "Користи уграђено управљање сесије (уместо оне засноване на систем-деу)"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "Заобилази уобичајене директоријуме самопокретања"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "ДИРЕКТОРИЈУМ_САМОПОКРЕТАЊА"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "Сесије које ће бити коришћене"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "НАЗИВ_СЕСИЈЕ"
 
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "Не учитава програме које је задао корисник"
 
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "Издање овог програма"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "Приказује прозорче неуспеха за испробавање"
 
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "Искључује проверу хардверског убрзања"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
 msgstr " — управник Гномовом сесијом"
 
-#: tools/gnome-session-ctl.c:245
-msgid "Start gnome-session-shutdown.target"
-msgstr "Покрени gnome-session-shutdown.target"
+#: tools/scarecrow-session-ctl.c:245
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "Покрени scarecrow-session-shutdown.target"
 
-#: tools/gnome-session-ctl.c:246
+#: tools/scarecrow-session-ctl.c:246
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
-"Покрени gnome-session-shutdown.target након примања EOF сигнала или примања "
+"Покрени scarecrow-session-shutdown.target након примања EOF сигнала или примања "
 "једног бајта на стандардном улазу"
 
-#: tools/gnome-session-ctl.c:247
-msgid "Signal initialization done to gnome-session"
-msgstr "Иницијализација сигнала урађено за gnome-session"
+#: tools/scarecrow-session-ctl.c:247
+msgid "Signal initialization done to scarecrow-session"
+msgstr "Иницијализација сигнала урађено за scarecrow-session"
 
-#: tools/gnome-session-ctl.c:248
+#: tools/scarecrow-session-ctl.c:248
 msgid "Restart dbus.service if it is running"
 msgstr "Поново покрени dbus.service ако је покренут"
 
-#: tools/gnome-session-ctl.c:249
+#: tools/scarecrow-session-ctl.c:249
 msgid ""
-"Run from ExecStopPost to start gnome-session-failed.target on service failure"
+"Run from ExecStopPost to start scarecrow-session-failed.target on service failure"
 msgstr ""
-"Покретање из ExecStopPost-а зарад покретања gnome-session-failed.target при "
+"Покретање из ExecStopPost-а зарад покретања scarecrow-session-failed.target при "
 "неуспешној услузи"
 
-#: tools/gnome-session-ctl.c:279
+#: tools/scarecrow-session-ctl.c:279
 msgid "Program needs exactly one parameter"
 msgstr "Програму треба тачно један параметар"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 #| msgid ""
 #| "%s [OPTION…] COMMAND\n"
@@ -324,64 +324,64 @@ msgstr ""
 "Ако ниједна опција спречавања (--inhibit) није наведена, подразумева се "
 "стање мировања (idle).\n"
 
-#: tools/gnome-session-inhibit.c:288
+#: tools/scarecrow-session-inhibit.c:288
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Нисам успео да извршим „%s“\n"
 
-#: tools/gnome-session-inhibit.c:352 tools/gnome-session-inhibit.c:362
-#: tools/gnome-session-inhibit.c:372
+#: tools/scarecrow-session-inhibit.c:352 tools/scarecrow-session-inhibit.c:362
+#: tools/scarecrow-session-inhibit.c:372
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "„%s“ захтева аргумент\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Одјави ме"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Искључи"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Поново покрени"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Занемарујем постојеће ометаче"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Не тражи потврду од корисника"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Не могу да се повежем са управником сесије"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Програм је позван са несагласним могућностима"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Сесија „%d“"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "Називи сесија не могу да почињу тачком (.) или да садрже косу црту (/)"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Називи сесија не могу да почињу тачком (.)"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Називи сесија не могу да садрже косу црту (/)"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "Већ постоји сесија под називом „%s“"
@@ -413,7 +413,7 @@ msgstr "Већ постоји сесија под називом „%s“"
 #~ msgid "_Name:"
 #~ msgstr "_Назив:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr "Ова сесија вас пријављује у Гном, користећи Вајланд"
 
 #~ msgid "Select Command"

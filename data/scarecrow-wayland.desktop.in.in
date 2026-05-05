@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Scarecrow
+Comment=This session logs you into Scarecrow
+Exec=@bindir@/scarecrow-session
+TryExec=@bindir@/scarecrow-session
+Type=Application
+DesktopNames=Scarecrow

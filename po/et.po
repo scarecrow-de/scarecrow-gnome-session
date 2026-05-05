@@ -1,8 +1,8 @@
-# GNOME seansi eesti keele tõlge.
-# Estonian translation of gnome-session.
+# Scarecrow seansi eesti keele tõlge.
+# Estonian translation of scarecrow-session.
 #
 # Copyright (C) 1999, 2001, 2002, 2004–2006 Free Software Foundation, Inc.
-# Copyright (C) 2006–2011 The GNOME Project.
+# Copyright (C) 2006–2011 The Scarecrow Project.
 #
 # Lauris Kaplinski <lauris@ariman.ee>, 1999.
 # Ilmar Kerm <ikerm@hot.ee>, 2001, 2002.
@@ -13,7 +13,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session MASTER\n"
+"Project-Id-Version: scarecrow-session MASTER\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "session&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2018-01-08 21:39+0000\n"
@@ -36,26 +36,26 @@ msgid "This entry lets you select a saved session"
 msgstr "Selle abil saab valida salvestatud seansi"
 
 #: data/gnome.desktop.in:3 data/gnome.session.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: data/gnome.desktop.in:4 data/gnome-xorg.desktop.in:4
-msgid "This session logs you into GNOME"
-msgstr "Selle seansiga logitakse sind GNOME keskkonda sisse"
+msgid "This session logs you into Scarecrow"
+msgstr "Selle seansiga logitakse sind Scarecrow keskkonda sisse"
 
 #: data/gnome-xorg.desktop.in:3
-msgid "GNOME on Xorg"
-msgstr "GNOME Xorg’iga"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow Xorg’iga"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "GNOME libaseanss"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow libaseanss"
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "Kohandatud seanss"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Palun vali kohandatud seanss, mida käivitada"
 
@@ -75,11 +75,11 @@ msgstr "_Muuda seansi nime"
 msgid "_Continue"
 msgstr "_Jätka"
 
-#: gnome-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/gsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Oo ei!  Miski läks nihu."
 
-#: gnome-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/gsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -87,7 +87,7 @@ msgstr ""
 "Esines viga ja süsteem ei suuda taastuda. Palun võta ühendust "
 "süsteemihalduriga"
 
-#: gnome-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/gsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -95,7 +95,7 @@ msgstr ""
 "Esines viga ja süsteem ei suuda taastuda. Ettevaatusabinõuna keelati kõik "
 "laiendused."
 
-#: gnome-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/gsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -103,27 +103,27 @@ msgstr ""
 "Esines viga ja süsteem ei suuda taastuda.\n"
 "Logi välja ja proovi uuesti."
 
-#: gnome-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/gsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "Logi _välja"
 
-#: gnome-session/gsm-fail-whale-dialog.c:361 gnome-session/main.c:279
+#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
 msgid "Enable debugging code"
 msgstr "Silumiskoodi lubamine"
 
-#: gnome-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/gsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Väljalogimine on lubatud"
 
-#: gnome-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/gsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Laienduse hoiatuse kuvamine"
 
-#: gnome-session/gsm-manager.c:1266 gnome-session/gsm-manager.c:1919
+#: scarecrow-session/gsm-manager.c:1266 scarecrow-session/gsm-manager.c:1919
 msgid "Not responding"
 msgstr "Ei vasta"
 
-#: gnome-session/gsm-util.c:382
+#: scarecrow-session/gsm-util.c:382
 msgid "_Log out"
 msgstr "_Logi välja"
 
@@ -131,66 +131,66 @@ msgstr "_Logi välja"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Meelde jäetud rakendus"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "See rakendus takistab väljalogimist."
 
-#: gnome-session/gsm-xsmp-server.c:340
+#: scarecrow-session/gsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "Uue kliendi ühendus lükati tagasi, kuna hetkel jäetakse seanss seisma\n"
 
-#: gnome-session/gsm-xsmp-server.c:609
+#: scarecrow-session/gsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE kuulamissoklit pole võimalik luua: %s"
 
-#: gnome-session/main.c:277
+#: scarecrow-session/main.c:277
 msgid "Override standard autostart directories"
 msgstr ""
 "Standardsete automaatkäivituse kataloogide asemel muude kataloogide "
 "kasutamine"
 
-#: gnome-session/main.c:277
+#: scarecrow-session/main.c:277
 msgid "AUTOSTART_DIR"
 msgstr "AUTOMAATKÄIVITUS_KAUST"
 
-#: gnome-session/main.c:278
+#: scarecrow-session/main.c:278
 msgid "Session to use"
 msgstr "Kasutatav seanss"
 
-#: gnome-session/main.c:278
+#: scarecrow-session/main.c:278
 msgid "SESSION_NAME"
 msgstr "SEANSI_NIMI"
 
-#: gnome-session/main.c:280
+#: scarecrow-session/main.c:280
 msgid "Do not load user-specified applications"
 msgstr "Kasutaja määratud rakendusi ei laadita"
 
-#: gnome-session/main.c:281
+#: scarecrow-session/main.c:281
 msgid "Version of this application"
 msgstr "Rakenduse versioon"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:283
+#: scarecrow-session/main.c:283
 msgid "Show the fail whale dialog for testing"
 msgstr "Testimise jaoks kuvatakse nurjumise dialoogi"
 
-#: gnome-session/main.c:284
+#: scarecrow-session/main.c:284
 msgid "Disable hardware acceleration check"
 msgstr "Riistvarakiirenduse kontrolli keelamine"
 
-#: gnome-session/main.c:316
-msgid " — the GNOME session manager"
-msgstr " — GNOME seansihaldur"
+#: scarecrow-session/main.c:316
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow seansihaldur"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -223,71 +223,71 @@ msgstr ""
 "\n"
 "Kui ühtegi --inhibit valikut pole määratud, jääb idle (jõudeolek).\n"
 
-#: tools/gnome-session-inhibit.c:146
+#: tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "%s käivitamine nurjus\n"
 
-#: tools/gnome-session-inhibit.c:206 tools/gnome-session-inhibit.c:216
-#: tools/gnome-session-inhibit.c:226
+#: tools/scarecrow-session-inhibit.c:206 tools/scarecrow-session-inhibit.c:216
+#: tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s jaoks on vajalik argument\n"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Seanss %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "Seansi nimed ei tohi alata punktiga (.) ega sisaldada kaldkriipsu (/)"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Seansi nimed ei tohi alata punktiga (.)"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Seansi nimed ei tohi sisaldada kaldkriipsu (/)"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "Seanss nimega „%s“ on juba olemas"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Väljalogimine"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Väljalülitamine"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Taaskäivita"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Kõiki olemasolevaid piiranguid eiratakse"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Kinnitust pole vaja küsida"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Seansihalduriga pole võimalik ühenduda"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Rakendus kutsuti välja vastuoluliste parameetritega"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr ""
-#~ "Selle seansiga logitakse sind Waylandi kasutades GNOME keskkonda sisse"
+#~ "Selle seansiga logitakse sind Waylandi kasutades Scarecrow keskkonda sisse"
 
 #~ msgid "Additional startup _programs:"
 #~ msgstr "Täiendavad automaatselt käivituvad _rakendused:"
@@ -522,24 +522,24 @@ msgstr "Rakendus kutsuti välja vastuoluliste parameetritega"
 #~ msgid "Icon '%s' not found"
 #~ msgstr "Ikooni '%s' ei leitud"
 
-#~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "GNOME 3 laadimine nurjus"
+#~ msgid "Scarecrow 3 Failed to Load"
+#~ msgstr "Scarecrow 3 laadimine nurjus"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Kahjuks polnud GNOME 3 võimalik õigesti käivituda ja kasutatakse "
+#~ "Kahjuks polnud Scarecrow 3 võimalik õigesti käivituda ja kasutatakse "
 #~ "<i>varurežiimi</i>.\n"
 #~ "\n"
 #~ "Kõige tõenäolisemalt on probleemide allikaks sinu videokaart või selle "
 #~ "draiver."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Õpi GNOME 3 rohkem tundma"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Õpi Scarecrow 3 rohkem tundma"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

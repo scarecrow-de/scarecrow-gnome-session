@@ -1,0 +1,14 @@
+[Unit]
+Description=Scarecrow Session (session: %i)
+DefaultDependencies=no
+RefuseManualStart=yes
+RefuseManualStop=yes
+
+Requires=scarecrow-session-initialized.target
+After=scarecrow-session-initialized.target
+
+Requisite=scarecrow-session.target
+PartOf=scarecrow-session.target
+Before=scarecrow-session.target
+
+Requires=scarecrow-session-manager@.service

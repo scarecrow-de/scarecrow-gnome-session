@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2019-08-06 16:59+0000\n"
 "PO-Revision-Date: 2019-08-24 18:13+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
@@ -36,67 +36,67 @@ msgstr "Šis ieraksts ļauj izvēlēties saglabātu sesiju"
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Šī sesija ieraksta jūs GNOME vidē"
+msgid "This session logs you into Scarecrow"
+msgstr "Šī sesija ieraksta jūs Scarecrow vidē"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "GNOME makets"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow makets"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
-msgstr "GNOME ar Xorg"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow ar Xorg"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Saglabāt sesijas"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
-msgstr "Ja ieslēgts, gnome-session automātiski saglabās sesiju."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
+msgstr "Ja ieslēgts, scarecrow-session automātiski saglabās sesiju."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Saglabāt šo sesiju"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"Kad ieslēgts, gnome-session izrakstoties automātiski saglabās nākamo sesiju, "
+"Kad ieslēgts, scarecrow-session izrakstoties automātiski saglabās nākamo sesiju, "
 "pat ja automātiskā saglabāšana ir izslēgta."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Izrakstīšanās uzvedne"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
-msgstr "Ja ieslēgts, gnome-session vaicās lietotājam pirms sesijas beigšanas."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
+msgstr "Ja ieslēgts, scarecrow-session vaicās lietotājam pirms sesijas beigšanas."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Rādīt atkāpšanās brīdinājumu"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
-"Ja ieslēgts, gnome-session pēc ierakstīšanās rādīs brīdinājumu, ja sesija ir "
+"Ja ieslēgts, scarecrow-session pēc ierakstīšanās rādīs brīdinājumu, ja sesija ir "
 "automātiski atkāpusies."
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "Pielāgota sesija"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Lūdzu, izvēlieties pielāgotu sesiju, ko palaist"
 
@@ -116,11 +116,11 @@ msgstr "_Pārsaukt sesiju"
 msgid "_Continue"
 msgstr "_Turpināt"
 
-#: gnome-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/gsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ak nē! Kaut kas nogāja greizi."
 
-#: gnome-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/gsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -128,7 +128,7 @@ msgstr ""
 "Gadījās problēma, un sistēma no tās nevar atgūties. Lūdzu, sazinieties ar "
 "sistēmas administratoru."
 
-#: gnome-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/gsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -136,7 +136,7 @@ msgstr ""
 "Gadījās problēma, un sistēma no tās nevar atgūties. Kā piesardzības "
 "pasākums, visi paplašinājumi ir deaktivēti."
 
-#: gnome-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/gsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -144,27 +144,27 @@ msgstr ""
 "Gadījās problēma, un sistēma no tās nevar atgūties.\n"
 "Lūdzu, izrakstieties un mēģiniet vēlreiz."
 
-#: gnome-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/gsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Izrakstīties"
 
-#: gnome-session/gsm-fail-whale-dialog.c:361 gnome-session/main.c:396
+#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
 msgid "Enable debugging code"
 msgstr "Aktivēt atkļūdošanas kodu"
 
-#: gnome-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/gsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Atļaut izrakstīšanos"
 
-#: gnome-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/gsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Rādīt paplašinājumu brīdinājumus"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1967
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1967
 msgid "Not responding"
 msgstr "Neatbild"
 
-#: gnome-session/gsm-util.c:382
+#: scarecrow-session/gsm-util.c:382
 msgid "_Log out"
 msgstr "_Izrakstīties"
 
@@ -172,99 +172,99 @@ msgstr "_Izrakstīties"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Iegaumētā lietotne"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Programma bloķē izrakstīšanos."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Atsaka jauniem klientu savienojumiem, jo sesija tiek izslēgta\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Nevar izveidot ICE klausīšanās ligzdu — %s"
 
-#: gnome-session/main.c:390
+#: scarecrow-session/main.c:390
 msgid "Running as systemd service"
 msgstr "Darbina kā systemd pakalpojumu"
 
-#: gnome-session/main.c:391
-#| msgid " — the GNOME session manager"
+#: scarecrow-session/main.c:391
+#| msgid " — the Scarecrow session manager"
 msgid "Use systemd session management"
 msgstr "Izmantot systemd sesiju pārvaldību"
 
-#: gnome-session/main.c:393
+#: scarecrow-session/main.c:393
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr "Izmantot iebūvēto sesiju pārvaldību (nevis systemd pārbaldību)"
 
-#: gnome-session/main.c:394
+#: scarecrow-session/main.c:394
 msgid "Override standard autostart directories"
 msgstr "Aizstāt standarta automātiskā starta direktorijas"
 
-#: gnome-session/main.c:394
+#: scarecrow-session/main.c:394
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTARTA_DIR"
 
-#: gnome-session/main.c:395
+#: scarecrow-session/main.c:395
 msgid "Session to use"
 msgstr "Sesija, ko izmantot"
 
-#: gnome-session/main.c:395
+#: scarecrow-session/main.c:395
 msgid "SESSION_NAME"
 msgstr "SESIJAS_NOSAUKUMS"
 
-#: gnome-session/main.c:397
+#: scarecrow-session/main.c:397
 msgid "Do not load user-specified applications"
 msgstr "Neielādēt lietotāja norādītās lietotnes"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Version of this application"
 msgstr "Lietotnes versija"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:400
+#: scarecrow-session/main.c:400
 msgid "Show the fail whale dialog for testing"
 msgstr "Rādīt neveiksmju vali testēšanai"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Disable hardware acceleration check"
 msgstr "Izslēgt aparatūras paātrinājuma pārbaudi"
 
-#: gnome-session/main.c:433
-msgid " — the GNOME session manager"
-msgstr " — GNOME sesiju pārvaldnieks"
+#: scarecrow-session/main.c:433
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow sesiju pārvaldnieks"
 
-#: tools/gnome-session-ctl.c:244
-msgid "Start gnome-session-shutdown.target"
-msgstr "Palaist gnome-session-shutdown.target"
+#: tools/scarecrow-session-ctl.c:244
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "Palaist scarecrow-session-shutdown.target"
 
-#: tools/gnome-session-ctl.c:245
+#: tools/scarecrow-session-ctl.c:245
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
-"Palaist gnome-session-shutdown.target, kad saņem EOF vai vienu baitu no stdin"
+"Palaist scarecrow-session-shutdown.target, kad saņem EOF vai vienu baitu no stdin"
 
-#: tools/gnome-session-ctl.c:246
-msgid "Signal initialization done to gnome-session"
-msgstr "Signāla inicializācija tika veikta gnome-session"
+#: tools/scarecrow-session-ctl.c:246
+msgid "Signal initialization done to scarecrow-session"
+msgstr "Signāla inicializācija tika veikta scarecrow-session"
 
-#: tools/gnome-session-ctl.c:247
+#: tools/scarecrow-session-ctl.c:247
 msgid "Restart dbus.service if it is running"
 msgstr "Pārstartēt dbus.service, ja tas ir palaists"
 
-#: tools/gnome-session-ctl.c:275
+#: tools/scarecrow-session-ctl.c:275
 msgid "Program needs exactly one parameter"
 msgstr "Programmai vajag tieši vienu parametru"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -297,64 +297,64 @@ msgstr ""
 "\n"
 "Ja nav norādīta opcija --inhibit, tiek pieņemts idle.\n"
 
-#: tools/gnome-session-inhibit.c:146
+#: tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Neizdevās izpildīt %s\n"
 
-#: tools/gnome-session-inhibit.c:206 tools/gnome-session-inhibit.c:216
-#: tools/gnome-session-inhibit.c:226
+#: tools/scarecrow-session-inhibit.c:206 tools/scarecrow-session-inhibit.c:216
+#: tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s pieprasa parametru\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Izrakstīties"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Izslēgt"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Pārstartēt"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Ignorējot jebkādus šķēršļus"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Neprasīt lietotāja apstiprinājumu"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Nevar savienoties ar sesiju pārvaldnieku"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Programma izsaukta ar konfliktējošām opcijām"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Sesija %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "Sesijas nosaukums nedrīkst sākties ar rakstzīmi “.” vai saturēt “/”"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Sesijas nosaukums nedrīkst sākties ar rakstzīmi “.”"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Sesijas nosaukums nedrīkst vai saturēt rakstzīmi “/”"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "Sesija ar nosaukumu “%s” jau eksistē"

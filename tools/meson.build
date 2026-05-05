@@ -1,5 +1,5 @@
 install_data(
-  'gnome-session-custom-session',
+  'scarecrow-session-custom-session',
   install_dir: session_bindir
 )
 
@@ -12,12 +12,12 @@ cflags = ['-DLOCALE_DIR="@0@"'.format(session_localedir)]
 
 programs = [
   # name, deps, cflags, install_dir
-  ['gnome-session-quit', deps, cflags, session_bindir],
-  ['gnome-session-inhibit', session_deps, cflags, session_bindir]
+  ['scarecrow-session-quit', deps, cflags, session_bindir],
+  ['scarecrow-session-inhibit', session_deps, cflags, session_bindir]
 ]
 
 if enable_systemd_session
-  programs += [['gnome-session-ctl', session_bin_deps, cflags, session_libexecdir]]
+  programs += [['scarecrow-session-ctl', session_bin_deps, cflags, session_libexecdir]]
 endif
 
 if enable_session_selector
@@ -28,7 +28,7 @@ if enable_session_selector
 
   cflags += '-DGTKBUILDER_DIR="@0@"'.format(session_pkgdatadir)
 
-  programs += [['gnome-session-selector', deps, cflags, session_bindir]]
+  programs += [['scarecrow-session-selector', deps, cflags, session_bindir]]
 endif
 
 deps = [
@@ -40,7 +40,7 @@ deps = [
 
 cflags = '-DPKGDATADIR="@0@"'.format(session_pkgdatadir)
 
-programs += [['gnome-session-check-accelerated-gles-helper', deps, cflags, session_libexecdir]]
+programs += [['scarecrow-session-check-accelerated-gles-helper', deps, cflags, session_libexecdir]]
 
 deps = [
   glib_dep,
@@ -50,13 +50,13 @@ deps = [
   dependency('xcomposite')
 ]
 
-programs += [['gnome-session-check-accelerated-gl-helper', deps, cflags, session_libexecdir]]
+programs += [['scarecrow-session-check-accelerated-gl-helper', deps, cflags, session_libexecdir]]
 
 deps += [gtk_dep]
 
 cflags = '-DLIBEXECDIR="@0@"'.format(session_libexecdir)
 
-programs += [['gnome-session-check-accelerated', deps, cflags, session_libexecdir]]
+programs += [['scarecrow-session-check-accelerated', deps, cflags, session_libexecdir]]
 
 foreach program: programs
   executable(

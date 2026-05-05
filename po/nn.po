@@ -81,7 +81,7 @@ msgstr "Utan namn"
 msgid "No description"
 msgstr "Inga skildring"
 
-#: ../capplet/main.c:35 ../gnome-session/main.c:281
+#: ../capplet/main.c:35 ../scarecrow-session/main.c:281
 msgid "Version of this application"
 msgstr "Versjon av dette programmet"
 
@@ -90,24 +90,24 @@ msgid "Could not display help document"
 msgstr "Klarte ikkje visa hjelpedokumentet"
 
 #: ../data/gnome-fallback.session.desktop.in.in.h:1
-msgid "GNOME fallback"
-msgstr "GNOME reserveløysing"
+msgid "Scarecrow fallback"
+msgstr "Scarecrow reserveløysing"
 
 #
 #: ../data/gnome.session.desktop.in.in.h:1 ../data/gnome.desktop.in.h:1
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Denne økta loggar inn i GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Denne økta loggar inn i Scarecrow"
 
 #: ../data/gsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>Nokre program køyrer enno:</b>"
 
-#: ../data/gsm-inhibit-dialog.ui.h:2 ../gnome-session/gsm-inhibit-dialog.c:640
+#: ../data/gsm-inhibit-dialog.ui.h:2 ../scarecrow-session/gsm-inhibit-dialog.c:640
 #| msgid ""
 #| "Waiting for programs to finish.  Interrupting these programs may cause "
 #| "you to lose work."
@@ -244,25 +244,25 @@ msgstr "Innstillingar for økthandsaming"
 msgid "Show session management options"
 msgstr "Vis innstillingar for økthandsaming"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:253
+#: ../scarecrow-session/gsm-inhibit-dialog.c:253
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "Klarte ikkje finna ikonet «%s»"
 
 # gsm/gsm-client-row.c:43
-#: ../gnome-session/gsm-inhibit-dialog.c:588
+#: ../scarecrow-session/gsm-inhibit-dialog.c:588
 msgid "Unknown"
 msgstr "Ukjend"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:639
+#: ../scarecrow-session/gsm-inhibit-dialog.c:639
 msgid "A program is still running:"
 msgstr "Eit program køyrer enno:"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:643
+#: ../scarecrow-session/gsm-inhibit-dialog.c:643
 msgid "Some programs are still running:"
 msgstr "Nokre program køyrer enno:"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:644
+#: ../scarecrow-session/gsm-inhibit-dialog.c:644
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
@@ -270,103 +270,103 @@ msgstr ""
 "Ventar på at program skal avslutta. Om du avbryt desse programma kan data gå "
 "tapt."
 
-#: ../gnome-session/gsm-inhibit-dialog.c:874
+#: ../scarecrow-session/gsm-inhibit-dialog.c:874
 msgid "Switch User Anyway"
 msgstr "Byt brukar likevel"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:877
+#: ../scarecrow-session/gsm-inhibit-dialog.c:877
 #| msgid "Logout Anyway"
 msgid "Log Out Anyway"
 msgstr "Logg ut likevel"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:880
+#: ../scarecrow-session/gsm-inhibit-dialog.c:880
 msgid "Suspend Anyway"
 msgstr "Gå i kvilemodus likevel"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:883
+#: ../scarecrow-session/gsm-inhibit-dialog.c:883
 msgid "Hibernate Anyway"
 msgstr "Gå i dvalemodus likevel"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:886
+#: ../scarecrow-session/gsm-inhibit-dialog.c:886
 #| msgid "Shutdown Anyway"
 msgid "Shut Down Anyway"
 msgstr "Slå av likevel"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:889
+#: ../scarecrow-session/gsm-inhibit-dialog.c:889
 #| msgid "Reboot Anyway"
 msgid "Restart Anyway"
 msgstr "Start på nytt likevel"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:897
+#: ../scarecrow-session/gsm-inhibit-dialog.c:897
 msgid "Lock Screen"
 msgstr "Lås skjerm"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:900
+#: ../scarecrow-session/gsm-inhibit-dialog.c:900
 msgid "Cancel"
 msgstr "Avbryt"
 
 #. This string is shared with gsm-fail-whale-dialog.c
-#: ../gnome-session/gsm-logout-dialog.c:275
+#: ../scarecrow-session/gsm-logout-dialog.c:275
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
 msgstr[0] "Du vert logga ut automatisk om %d sekund."
 msgstr[1] "Du vert logga ut automatisk om %d sekund."
 
-#: ../gnome-session/gsm-logout-dialog.c:283
+#: ../scarecrow-session/gsm-logout-dialog.c:283
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
 msgstr[0] "Systemet vert slått av automatisk om %d sekund."
 msgstr[1] "Systemet vert slått av automatisk om %d sekund."
 
-#: ../gnome-session/gsm-logout-dialog.c:315
+#: ../scarecrow-session/gsm-logout-dialog.c:315
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "Du er logga inn som «%s»."
 
-#: ../gnome-session/gsm-logout-dialog.c:381
+#: ../scarecrow-session/gsm-logout-dialog.c:381
 msgid "Log out of this system now?"
 msgstr "Logg ut av systemet no?"
 
-#: ../gnome-session/gsm-logout-dialog.c:387
+#: ../scarecrow-session/gsm-logout-dialog.c:387
 msgid "_Switch User"
 msgstr "_Byt brukar"
 
 # panel/logout.c:74 panel/menu.c:5340
-#: ../gnome-session/gsm-logout-dialog.c:396
-#: ../gnome-session/gsm-fail-whale-dialog.c:422
-#: ../gnome-session/gsm-util.c:389
+#: ../scarecrow-session/gsm-logout-dialog.c:396
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:422
+#: ../scarecrow-session/gsm-util.c:389
 msgid "_Log Out"
 msgstr "_Logg ut"
 
-#: ../gnome-session/gsm-logout-dialog.c:402
+#: ../scarecrow-session/gsm-logout-dialog.c:402
 msgid "Shut down this system now?"
 msgstr "Slå av systemet no?"
 
-#: ../gnome-session/gsm-logout-dialog.c:408
+#: ../scarecrow-session/gsm-logout-dialog.c:408
 msgid "S_uspend"
 msgstr "_Kvilemodus"
 
-#: ../gnome-session/gsm-logout-dialog.c:414
+#: ../scarecrow-session/gsm-logout-dialog.c:414
 msgid "_Hibernate"
 msgstr "_Dvalemodus"
 
 # applets/tasklist/tasklist_menu.c:258
-#: ../gnome-session/gsm-logout-dialog.c:420
+#: ../scarecrow-session/gsm-logout-dialog.c:420
 msgid "_Restart"
 msgstr "_Start på nytt"
 
 # gsm/logout.c:250
-#: ../gnome-session/gsm-logout-dialog.c:430
+#: ../scarecrow-session/gsm-logout-dialog.c:430
 msgid "_Shut Down"
 msgstr "Slå _av"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:377
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:377
 msgid "Oh no!  Something has gone wrong."
 msgstr "Å nei! Noko har gått gale."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:384
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:384
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -374,7 +374,7 @@ msgstr ""
 "Eit problem har oppstått og systemet klarer ikkje gjenoppretta. Kontakt ein "
 "systemadministrator."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:386
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:386
 msgid ""
 "A problem has occurred and the system can't recover. Some of the extensions "
 "below may have caused this.\n"
@@ -384,7 +384,7 @@ msgstr ""
 "utvidingane under kan ha medført dette.\n"
 "Prøv å slå av nokre av desse og logg ut for å prøva på nytt."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:388
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:388
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -392,43 +392,43 @@ msgstr ""
 "Eit problem har oppstått og systemet klarer ikkje gjenoppretta.\n"
 "Logg ut og prøv på nytt."
 
-#: ../gnome-session/gsm-process-helper.c:123
+#: ../scarecrow-session/gsm-process-helper.c:123
 #, c-format
 msgid "Exited with code %d"
 msgstr "Avslutta med koden %d"
 
-#: ../gnome-session/gsm-process-helper.c:128
+#: ../scarecrow-session/gsm-process-helper.c:128
 #, c-format
 msgid "Killed by signal %d"
 msgstr "Avslutta av signalet %d"
 
-#: ../gnome-session/gsm-process-helper.c:133
+#: ../scarecrow-session/gsm-process-helper.c:133
 #, c-format
 msgid "Stopped by signal %d"
 msgstr "Stoppa av signalet %d"
 
-#: ../gnome-session/gsm-manager.c:1386
-msgid "GNOME 3 Failed to Load"
-msgstr "GNOME 3 klarte ikkje starta"
+#: ../scarecrow-session/gsm-manager.c:1386
+msgid "Scarecrow 3 Failed to Load"
+msgstr "Scarecrow 3 klarte ikkje starta"
 
-#: ../gnome-session/gsm-manager.c:1387
+#: ../scarecrow-session/gsm-manager.c:1387
 msgid ""
-"Unfortunately GNOME 3 failed to start properly and started in the "
+"Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
 "\n"
 "This most likely means your system (graphics hardware or driver) is not "
-"capable of delivering the full GNOME 3 experience."
+"capable of delivering the full Scarecrow 3 experience."
 msgstr ""
-"GNOME 3 klarte ikkje starta skikkeleg, og køyrer <i>reserveløysinga.</i>.\n"
+"Scarecrow 3 klarte ikkje starta skikkeleg, og køyrer <i>reserveløysinga.</i>.\n"
 "\n"
 "Sannsynlegvis klarer ikkje systemet (grafikkortet eller drivaren) å køyre "
-"GNOME 3."
+"Scarecrow 3."
 
-#: ../gnome-session/gsm-manager.c:1389
-msgid "Learn more about GNOME 3"
-msgstr "Lær meir om GNOME 3"
+#: ../scarecrow-session/gsm-manager.c:1389
+msgid "Learn more about Scarecrow 3"
+msgstr "Lær meir om Scarecrow 3"
 
-#: ../gnome-session/gsm-manager.c:1486 ../gnome-session/gsm-manager.c:2255
+#: ../scarecrow-session/gsm-manager.c:1486 ../scarecrow-session/gsm-manager.c:2255
 msgid "Not responding"
 msgstr "Svarer ikkje"
 
@@ -437,101 +437,101 @@ msgstr "Svarer ikkje"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:559
+#: ../scarecrow-session/gsm-xsmp-client.c:559
 #| msgid "Remember running applications"
 msgid "Remembered Application"
 msgstr "Hugsa program"
 
-#: ../gnome-session/gsm-xsmp-client.c:1197
+#: ../scarecrow-session/gsm-xsmp-client.c:1197
 #| msgid "This program is blocking log out."
 msgid "This program is blocking logout."
 msgstr "Dette programmet hindrar utlogging."
 
-#: ../gnome-session/gsm-xsmp-server.c:325
+#: ../scarecrow-session/gsm-xsmp-server.c:325
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Avviser ny klienttilkopling fordi økta er i ferd med å avslutta\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:587
+#: ../scarecrow-session/gsm-xsmp-server.c:587
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Klarte ikkje oppretta sokkel for ICE-lytting: %s"
 
 #. Oh well, no X for you!
-#: ../gnome-session/gsm-util.c:373
+#: ../scarecrow-session/gsm-util.c:373
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr ""
 "Klarte ikkje starta innloggingsøkt (klarte heller ikkje å kopla til X-"
 "tenaren)"
 
-#: ../gnome-session/main.c:277
+#: ../scarecrow-session/main.c:277
 msgid "Override standard autostart directories"
 msgstr "Overstyr standard autostartmapper"
 
-#: ../gnome-session/main.c:277
+#: ../scarecrow-session/main.c:277
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
 # gsm/session-properties.c:272
-#: ../gnome-session/main.c:278
+#: ../scarecrow-session/main.c:278
 #| msgid "Sessions"
 msgid "Session to use"
 msgstr "Økt som skal brukast"
 
-#: ../gnome-session/main.c:278
+#: ../scarecrow-session/main.c:278
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: ../gnome-session/main.c:279
+#: ../scarecrow-session/main.c:279
 msgid "Enable debugging code"
 msgstr "Aktiver feilsøkingskode"
 
-#: ../gnome-session/main.c:280
+#: ../scarecrow-session/main.c:280
 msgid "Do not load user-specified applications"
 msgstr "Ikkje last brukarvalde program"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:283
+#: ../scarecrow-session/main.c:283
 msgid "Show the fail whale dialog for testing"
 msgstr "Vis feilvindauget for testing"
 
-#: ../gnome-session/main.c:303
-msgid " - the GNOME session manager"
-msgstr " – GNOME økthandsamar"
+#: ../scarecrow-session/main.c:303
+msgid " - the Scarecrow session manager"
+msgstr " – Scarecrow økthandsamar"
 
 # panel/logout.c:74 panel/menu.c:5340
-#: ../tools/gnome-session-quit.c:52
+#: ../tools/scarecrow-session-quit.c:52
 msgid "Log out"
 msgstr "Logg ut"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Power off"
 msgstr "Slå av"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 #| msgid "Log out, ignoring any existing inhibitors"
 msgid "Ignoring any existing inhibitors"
 msgstr "Ignorerer eventuelle hindringar"
 
 #
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 #| msgid "Do not require confirmation"
 msgid "Don't prompt for user confirmation"
 msgstr "Ikkje spør etter stadfesting"
 
 # gsm/save-session.c:92
-#: ../tools/gnome-session-quit.c:89 ../tools/gnome-session-quit.c:99
+#: ../tools/scarecrow-session-quit.c:89 ../tools/scarecrow-session-quit.c:99
 msgid "Could not connect to the session manager"
 msgstr "Klarte ikkje kopla til økthandsamar"
 
-#: ../tools/gnome-session-quit.c:199
+#: ../tools/scarecrow-session-quit.c:199
 msgid "Program called with conflicting options"
 msgstr "Programmet vart kalla med motstridande alternativ"
 
-#~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "Hjelpar til GNOME innstillingsnisse"
+#~ msgid "Scarecrow Settings Daemon Helper"
+#~ msgstr "Hjelpar til Scarecrow innstillingsnisse"
 
 # gsm/save-session.c:42
 #~| msgid "Kill session"
@@ -544,13 +544,13 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgstr "Filhandsamar"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will prompt the user before ending a session."
+#~ "If enabled, scarecrow-session will prompt the user before ending a session."
 #~ msgstr ""
 #~ "Viss det er kryssa av her, vil brukaren få ein spørsmålsdialog før økta "
 #~ "vert avslutta."
 
 #~ msgid ""
-#~ "If enabled, gnome-session will save the session automatically. Otherwise, "
+#~ "If enabled, scarecrow-session will save the session automatically. Otherwise, "
 #~ "the logout dialog will have an option to save the session."
 #~ msgstr ""
 #~ "Viss det er kryssa av her, vil økta verta lagra automatisk. Elles vil "
@@ -661,11 +661,11 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 
 # gsm/session-properties-capplet.c:192
 #~| msgid "Show the splash screen"
-#~ msgid "- GNOME Splash Screen"
+#~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "- Oppstartskjerm"
 
-#~ msgid "GNOME Splash Screen"
-#~ msgstr "GNOME oppstartskjerm"
+#~ msgid "Scarecrow Splash Screen"
+#~ msgstr "Scarecrow oppstartskjerm"
 
 #~ msgid "Show logout dialog"
 #~ msgstr "Vis avloggingsdialog"
@@ -693,13 +693,13 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 
 #~ msgid ""
 #~ "For security reasons, on platforms which have _IceTcpTransNoListen() "
-#~ "(XFree86 systems), gnome-session does not listen for connections on TCP "
+#~ "(XFree86 systems), scarecrow-session does not listen for connections on TCP "
 #~ "ports. This option will allow connections from (authorized) remote hosts. "
-#~ "gnome-session must be restarted for this to take effect."
+#~ "scarecrow-session must be restarted for this to take effect."
 #~ msgstr ""
-#~ "Av omsyn til tryggleiken vil ikkje gnome-session lytta etter tilkoplingar "
+#~ "Av omsyn til tryggleiken vil ikkje scarecrow-session lytta etter tilkoplingar "
 #~ "på TCP-portar på system som har _IceTcpTransNoListen() (XFree86-system). "
-#~ "Dette valet vil la autoriserte eksterne vertar kopla til. gnome-session "
+#~ "Dette valet vil la autoriserte eksterne vertar kopla til. scarecrow-session "
 #~ "må startast på nytt før dette valet blir aktivt."
 
 #~ msgid "Selected option in the log out dialog"
@@ -813,12 +813,12 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgstr "Tilstand"
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "Ein feil oppstod då programmet som styrer instillingane i GNOME vart "
+#~ "Ein feil oppstod då programmet som styrer instillingane i Scarecrow vart "
 #~ "starta.\n"
 #~ "\n"
 #~ "Somme ting, slik som drakt, lydar og bakgrunnsinnstillingar vil kanskje "
@@ -838,11 +838,11 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid ""
 #~ "\n"
 #~ "\n"
-#~ "GNOME will still try to restart the Settings Daemon next time you log in."
+#~ "Scarecrow will still try to restart the Settings Daemon next time you log in."
 #~ msgstr ""
 #~ "\n"
 #~ "\n"
-#~ "GNOME vil likevel prøva å starta innstillingsprogrammet neste gong du "
+#~ "Scarecrow vil likevel prøva å starta innstillingsprogrammet neste gong du "
 #~ "loggar inn."
 
 #~ msgid "The Settings Daemon restarted too many times."
@@ -873,40 +873,40 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgstr "Kunne ikkje finna program %s i økta\n"
 
 #~ msgid ""
-#~ "The GNOME session manager cannot start properly.  Please report this as a "
-#~ "GNOME bug. Please include this ICE failure message in the bug report:  "
+#~ "The Scarecrow session manager cannot start properly.  Please report this as a "
+#~ "Scarecrow bug. Please include this ICE failure message in the bug report:  "
 #~ "'%s'.  Meanwhile you could try logging in using the failsafe session."
 #~ msgstr ""
-#~ "Sesjonshandsamar for GNOME kan ikkje startast. Vennligst rapportar dette "
+#~ "Sesjonshandsamar for Scarecrow kan ikkje startast. Vennligst rapportar dette "
 #~ "som ein feil. Ta med denne feilmeldinga frå ICE i rapporten: «%s». I "
 #~ "mellomtida kan du logge inn med feilsikker økt."
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to lock the file '%s'.  Please "
-#~ "report this as a GNOME bug.  Sometimes this error may occur if the file's "
+#~ "The Scarecrow session manager was unable to lock the file '%s'.  Please "
+#~ "report this as a Scarecrow bug.  Sometimes this error may occur if the file's "
 #~ "directory is unwritable, you could try logging in via the failsafe "
 #~ "session and ensuring that it is."
 #~ msgstr ""
-#~ "Sesjonshandsamar for GNOME klarte ikkje å låse fila '%s'. Vennligst "
-#~ "rapportar dette som ein feili GNOME. Nokon gong oppstår denne feilen når "
+#~ "Sesjonshandsamar for Scarecrow klarte ikkje å låse fila '%s'. Vennligst "
+#~ "rapportar dette som ein feili Scarecrow. Nokon gong oppstår denne feilen når "
 #~ "filens mappe ikkje er skrivbar, du kan prøve å logge inn via ein "
 #~ "feilsikker økt for å forsikre deg om at den er skrivbar."
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to read the file: '%s'.  If this "
-#~ "file exists it must be readable by you for GNOME to work properly.  Try "
+#~ "The Scarecrow session manager was unable to read the file: '%s'.  If this "
+#~ "file exists it must be readable by you for Scarecrow to work properly.  Try "
 #~ "logging in with the failsafe session and removing this file."
 #~ msgstr ""
-#~ "Sesjonshandsamar for GNOME klarte ikkje å lesa fila '%s'. Viss denne fila "
-#~ "eksisterer, så må den vera lesbar av deg, for at GNOME skal fungere "
+#~ "Sesjonshandsamar for Scarecrow klarte ikkje å lesa fila '%s'. Viss denne fila "
+#~ "eksisterer, så må den vera lesbar av deg, for at Scarecrow skal fungere "
 #~ "ordentlig. Prøv og logg med ein feilsikker økt og fjern denne fila."
 
 #~ msgid ""
 #~ "Could not write to file '%s'.  This file must be writable in order for "
-#~ "GNOME to function properly.  Try logging in with the failsafe session and "
+#~ "Scarecrow to function properly.  Try logging in with the failsafe session and "
 #~ "removing this file.  Also make sure that the file's directory is writable."
 #~ msgstr ""
-#~ "Kan ikkje skriva til '%s'. Denne fila må vera skrivbar for at GNOME skal "
+#~ "Kan ikkje skriva til '%s'. Denne fila må vera skrivbar for at Scarecrow skal "
 #~ "fungere ordentlig. Prøv og logg med ein feilsikker økt og fjern denne "
 #~ "fila. Sjekk òg at filens mappe er skrivbar."
 
@@ -982,12 +982,12 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 # gsm/gnome-login-check.c:344
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "Kunne ikkje slå opp internett-adressa for %s.\n"
-#~ "Dette vil hindre GNOME i å virka ordentleg.\n"
+#~ "Dette vil hindre Scarecrow i å virka ordentleg.\n"
 #~ "Det er mogleg å retta opp problemet ved å leggja\n"
 #~ "til %s i fila /etc/hosts."
 
@@ -1045,8 +1045,8 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "could not connect to the session manager\n"
 #~ msgstr "kunne ikkje kopla til økthandsamaren\n"
 
-#~ msgid "session manager does not support GNOME extensions\n"
-#~ msgstr "økthandsamaren støttar ikkje GNOME-utvidelser\n"
+#~ msgid "session manager does not support Scarecrow extensions\n"
+#~ msgstr "økthandsamaren støttar ikkje Scarecrow-utvidelser\n"
 
 #~ msgid "Remove the currently selected client from the session."
 #~ msgstr "Fjern den valde klienten frå økta."

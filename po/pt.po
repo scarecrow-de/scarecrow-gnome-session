@@ -1,6 +1,6 @@
-# gnome-session's Portuguese translation
-# Copyright © 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 gnome-session
-# Distributed under the same licence as the gnome-session package
+# scarecrow-session's Portuguese translation
+# Copyright © 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 scarecrow-session
+# Distributed under the same licence as the scarecrow-session package
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1999
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
 # António Lima <amrlima@gmail.com>, 2013.
@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.18\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2020-08-24 01:00+0000\n"
 "PO-Revision-Date: 2020-09-06 16:42-0300\n"
 "Last-Translator: Juliano Camargo <julianosc@pm.me>\n"
@@ -37,69 +37,69 @@ msgstr "Esta entrada permite-lhe selecionar uma sessão gravada"
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Esta sessão usa o GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Esta sessão usa o Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "GNOME de teste"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow de teste"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
-msgstr "GNOME em Xorg"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow em Xorg"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Guardar sessões"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
-msgstr "Se ativo, o \"gnome-session\" irá gravar a sessão automaticamente."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
+msgstr "Se ativo, o \"scarecrow-session\" irá gravar a sessão automaticamente."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Guardar esta sessão"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"Se ativado, \"gnome-session\" irá guardar automaticamente a próxima sessão "
+"Se ativado, \"scarecrow-session\" irá guardar automaticamente a próxima sessão "
 "ao terminar a sessão se o guardar automático estiver desativado."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Perguntar ao terminar sessão"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
 msgstr ""
-"Se ativo, o \"gnome-session\" questionará o utilizador antes de terminar uma "
+"Se ativo, o \"scarecrow-session\" questionará o utilizador antes de terminar uma "
 "sessão."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Mostrar aviso de extensão"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
-"Se ativado e se a sessão foi recuperada automaticamente, o \"gnome-session\" "
+"Se ativado e se a sessão foi recuperada automaticamente, o \"scarecrow-session\" "
 "irá exibir uma janela de aviso depois de entrar."
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "Sessão Personalizada"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Por favor, selecione uma sessão personalizada para executar"
 
@@ -119,11 +119,11 @@ msgstr "Renomear _Sessão"
 msgid "_Continue"
 msgstr "_Continuar"
 
-#: gnome-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/gsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ocorreu algo de errado."
 
-#: gnome-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/gsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -131,7 +131,7 @@ msgstr ""
 "Ocorreu um problema e o sistema não consegue recuperar. Por favor, contacte "
 "um administrador do sistema"
 
-#: gnome-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/gsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -139,7 +139,7 @@ msgstr ""
 "Ocorreu um problema e o sistema não consegue recuperar. Por precaução, foram "
 "desativadas todas as extensões."
 
-#: gnome-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/gsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -147,27 +147,27 @@ msgstr ""
 "Ocorreu um problema e o sistema não consegue recuperar.\n"
 "Por favor, termine a sessão e tente novamente."
 
-#: gnome-session/gsm-fail-whale-dialog.c:344
+#: scarecrow-session/gsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "_Terminar Sessão"
 
-#: gnome-session/gsm-fail-whale-dialog.c:412 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "Ativar o código de depuração"
 
-#: gnome-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/gsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "Permitir terminar a sessão"
 
-#: gnome-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/gsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "Mostrar aviso de extensão"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "Não está a responder"
 
-#: gnome-session/gsm-util.c:415
+#: scarecrow-session/gsm-util.c:415
 msgid "_Log out"
 msgstr "_Terminar sessão"
 
@@ -175,15 +175,15 @@ msgstr "_Terminar sessão"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Aplicação Memorizada"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Esta aplicação está a impedir o encerramento da sessão."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -191,92 +191,92 @@ msgstr ""
 "A recusar uma nova ligação de cliente porque a sessão está atualmente a ser "
 "terminada\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Não foi possível criar socket de escuta ICE: %s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "A executar como serviço \"systemd\""
 
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "Utilizar gestão de sessões \"systemd\""
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr "Utilize a gestão de sessões integrada (em vez da baseada no sistema)"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "Ignorar os diretórios de arranque automático padrão"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "DIRETÓRIO_INICIOAUTOMÁTICO"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "Sessão a utilizar"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "NOME_DA_SESSAO"
 
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "Não carregar as aplicações especificadas pelo utilizador"
 
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "Versão desta aplicação"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "Mostrar a janela de falha total para testar"
 
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "Desativar a verificação de aceleração de hardware"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — o gestor de sessões do GNOME"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
+msgstr " — o gestor de sessões do Scarecrow"
 
-#: tools/gnome-session-ctl.c:245
-msgid "Start gnome-session-shutdown.target"
-msgstr "Iniciar \"gnome-session-shutdown.target\""
+#: tools/scarecrow-session-ctl.c:245
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "Iniciar \"scarecrow-session-shutdown.target\""
 
-#: tools/gnome-session-ctl.c:246
+#: tools/scarecrow-session-ctl.c:246
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
-"Iniciar \"gnome-session-shutdown.target\" quando receber EOF ou um único "
+"Iniciar \"scarecrow-session-shutdown.target\" quando receber EOF ou um único "
 "byte em stdin"
 
-#: tools/gnome-session-ctl.c:247
-msgid "Signal initialization done to gnome-session"
-msgstr "Inicialização de sinal efetuada para a \"gnome-session\""
+#: tools/scarecrow-session-ctl.c:247
+msgid "Signal initialization done to scarecrow-session"
+msgstr "Inicialização de sinal efetuada para a \"scarecrow-session\""
 
-#: tools/gnome-session-ctl.c:248
+#: tools/scarecrow-session-ctl.c:248
 msgid "Restart dbus.service if it is running"
 msgstr "Reiniciar \"dbus.service\" se estiver em execução"
 
-#: tools/gnome-session-ctl.c:249
+#: tools/scarecrow-session-ctl.c:249
 msgid ""
-"Run from ExecStopPost to start gnome-session-failed.target on service failure"
+"Run from ExecStopPost to start scarecrow-session-failed.target on service failure"
 msgstr ""
 "Na falha do serviço, executar a partir de ExecStopPost para iniciar o "
-"\"gnome-session-failed.target\""
+"\"scarecrow-session-failed.target\""
 
-#: tools/gnome-session-ctl.c:279
+#: tools/scarecrow-session-ctl.c:279
 msgid "Program needs exactly one parameter"
 msgstr "O programa precisa exatamente de um parâmetro"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 #| msgid ""
 #| "%s [OPTION…] COMMAND\n"
@@ -327,66 +327,66 @@ msgstr ""
 "\n"
 "Se não for especificada nenhuma opção --inhibit, é assumida idle.\n"
 
-#: tools/gnome-session-inhibit.c:288
+#: tools/scarecrow-session-inhibit.c:288
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Falha ao executar %s\n"
 
-#: tools/gnome-session-inhibit.c:352 tools/gnome-session-inhibit.c:362
-#: tools/gnome-session-inhibit.c:372
+#: tools/scarecrow-session-inhibit.c:352 tools/scarecrow-session-inhibit.c:362
+#: tools/scarecrow-session-inhibit.c:372
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s requer um argumento\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Terminar sessão"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Desligar"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Reiniciar"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "A ignorar quaisquer inibidores existentes"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Não solicitar confirmação ao utilizador"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Não foi possível ligar ao gestor de sessões"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "O programa invocado com conflito de opções"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Sessão %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr ""
 "Não são permitidos nomes de sessão que comecem por \".\" ou contenham o "
 "caráter \"/\""
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Não são permitidos os nomes de sessão que comecem por \".\""
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Não são permitidos os nomes de sessão que contenham o caráter \"/\""
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "Já existe uma sessão designada \"%s\""
@@ -419,8 +419,8 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid "_Name:"
 #~ msgstr "_Nome:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Esta sessão faz com que entre no GNOME, utilizando o Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Esta sessão faz com que entre no Scarecrow, utilizando o Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "Selecionar o Comando"
@@ -627,24 +627,24 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid "Icon '%s' not found"
 #~ msgstr "Incapaz de encontrar o ícone '%s'"
 
-#~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "Falha ao Iniciar o GNOME 3"
+#~ msgid "Scarecrow 3 Failed to Load"
+#~ msgstr "Falha ao Iniciar o Scarecrow 3"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "Infelizmente o GNOME 3 foi incapaz de iniciar corretamente e arrancou em "
+#~ "Infelizmente o Scarecrow 3 foi incapaz de iniciar corretamente e arrancou em "
 #~ "<i>modo de recurso</i>.\n"
 #~ "\n"
 #~ "Provavelmente isso significa que o seu sistema (placa gráfica ou "
-#~ "controladores) não é capaz de processar toda a experiência GNOME 3."
+#~ "controladores) não é capaz de processar toda a experiência Scarecrow 3."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Descubra mais sobre o GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Descubra mais sobre o Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -797,14 +797,14 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid "AT SPI Registry Wrapper"
 #~ msgstr "Invólucro de Registo AT SPI"
 
-#~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "Assistente do Daemon das Definições GNOME"
+#~ msgid "Scarecrow Settings Daemon Helper"
+#~ msgstr "Assistente do Daemon das Definições Scarecrow"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will save the session automatically. Otherwise, "
+#~ "If enabled, scarecrow-session will save the session automatically. Otherwise, "
 #~ "the logout dialog will have an option to save the session."
 #~ msgstr ""
-#~ "Se ativo, o gnome-session gravará a sessão automaticamente. Caso "
+#~ "Se ativo, o scarecrow-session gravará a sessão automaticamente. Caso "
 #~ "contrário, o diálogo de terminar sessão terá uma opção para gravar a "
 #~ "sessão."
 
@@ -834,11 +834,11 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ "A aguardar que as aplicações terminem. Interromper as aplicações poderá "
 #~ "causar a perca de trabalho."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- Ecrã de Logotipo do GNOME"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Ecrã de Logotipo do Scarecrow"
 
-#~ msgid "GNOME Splash Screen"
-#~ msgstr "Ecrã de Logotipo do GNOME"
+#~ msgid "Scarecrow Splash Screen"
+#~ msgstr "Ecrã de Logotipo do Scarecrow"
 
 #~ msgid "The name of the startup program cannot be empty"
 #~ msgstr "O nome da aplicação de arranque não pode ser vazio"
@@ -846,8 +846,8 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid "Sessions Preferences"
 #~ msgstr "Preferências de Sessão"
 
-#~ msgid "GNOME Keyring Daemon Wrapper"
-#~ msgstr "Invólucro do Daemon do GNOME Keyring"
+#~ msgid "Scarecrow Keyring Daemon Wrapper"
+#~ msgstr "Invólucro do Daemon do Scarecrow Keyring"
 
 #~ msgid "Selected option in the log out dialog"
 #~ msgstr "Opção selecionada no diálogo de terminar sessão"
@@ -867,14 +867,14 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid "Session management"
 #~ msgstr "Gestão de sessões"
 
-#~ msgid "GNOME GUI Library + EggSMClient"
-#~ msgstr "Biblioteca de Interface Gráfico GNOME + EggSMClient"
+#~ msgid "Scarecrow GUI Library + EggSMClient"
+#~ msgstr "Biblioteca de Interface Gráfico Scarecrow + EggSMClient"
 
 #~ msgid ""
-#~ "The Window manager that gnome-session will start. Valid values are "
+#~ "The Window manager that scarecrow-session will start. Valid values are "
 #~ "\"metacity\" and \"compiz\"."
 #~ msgstr ""
-#~ "O gestor de janelas que o gnome-session irá iniciar. Valores válidos são "
+#~ "O gestor de janelas que o scarecrow-session irá iniciar. Valores válidos são "
 #~ "\"metacity\" e \"compiz\"."
 
 #~ msgid "Window Manager to start"
@@ -886,22 +886,22 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid "Play logout sound instead of login"
 #~ msgstr "Reproduzir som de terminar sessão em vez do de iniciar"
 
-#~ msgid "- GNOME login/logout sound"
-#~ msgstr "- som de início/terminar de sessão GNOME"
+#~ msgid "- Scarecrow login/logout sound"
+#~ msgstr "- som de início/terminar de sessão Scarecrow"
 
 #~ msgid "Allow TCP connections"
 #~ msgstr "Autorizar ligações TCP"
 
 #~ msgid ""
 #~ "For security reasons, on platforms which have _IceTcpTransNoListen() "
-#~ "(XFree86 systems), gnome-session does not listen for connections on TCP "
+#~ "(XFree86 systems), scarecrow-session does not listen for connections on TCP "
 #~ "ports. This option will allow connections from (authorized) remote hosts. "
-#~ "gnome-session must be restarted for this to take effect."
+#~ "scarecrow-session must be restarted for this to take effect."
 #~ msgstr ""
 #~ "Por motivos de segurança, em plataformas que tenham "
-#~ "_IceTcpTransNoListen() (sistemas XFree86), o gnome-session não escuta por "
+#~ "_IceTcpTransNoListen() (sistemas XFree86), o scarecrow-session não escuta por "
 #~ "ligações em portos TCP. Esta opção autorizará ligações de máquinas "
-#~ "remotas (autorizadas). O gnome-session tem de ser reiniciado para que "
+#~ "remotas (autorizadas). O scarecrow-session tem de ser reiniciado para que "
 #~ "esta opção tenha efeito."
 
 #~ msgid "_Order:"
@@ -965,12 +965,12 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgstr "Estado"
 
 #~ msgid ""
-#~ "There was an error starting the GNOME Settings Daemon.\n"
+#~ "There was an error starting the Scarecrow Settings Daemon.\n"
 #~ "\n"
 #~ "Some things, such as themes, sounds, or background settings may not work "
 #~ "correctly."
 #~ msgstr ""
-#~ "Ocorreu um erro ao iniciar o Daemon de Definições GNOME.\n"
+#~ "Ocorreu um erro ao iniciar o Daemon de Definições Scarecrow.\n"
 #~ "\n"
 #~ "Algumas coisas, tais como temas, sons ou configurações do fundo do "
 #~ "ambiente poderão não funcionar corretamente."
@@ -989,11 +989,11 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid ""
 #~ "\n"
 #~ "\n"
-#~ "GNOME will still try to restart the Settings Daemon next time you log in."
+#~ "Scarecrow will still try to restart the Settings Daemon next time you log in."
 #~ msgstr ""
 #~ "\n"
 #~ "\n"
-#~ "O GNOME tentará ainda assim reiniciar o Daemon de Definições da próxima "
+#~ "O Scarecrow tentará ainda assim reiniciar o Daemon de Definições da próxima "
 #~ "vez que iniciar sessão."
 
 #~ msgid "The Settings Daemon restarted too many times."
@@ -1022,44 +1022,44 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgstr "Incapaz de encontrar a aplicação %s na sessão\n"
 
 #~ msgid ""
-#~ "The GNOME session manager cannot start properly.  Please report this as a "
-#~ "GNOME bug. Please include this ICE failure message in the bug report:  "
+#~ "The Scarecrow session manager cannot start properly.  Please report this as a "
+#~ "Scarecrow bug. Please include this ICE failure message in the bug report:  "
 #~ "'%s'.  Meanwhile you could try logging in using the failsafe session."
 #~ msgstr ""
-#~ "O gestor de sessões GNOME foi incapaz de se iniciar corretamente.  "
-#~ "Reporte este problema como sendo um erro do GNOME. Inclua esta mensagem "
+#~ "O gestor de sessões Scarecrow foi incapaz de se iniciar corretamente.  "
+#~ "Reporte este problema como sendo um erro do Scarecrow. Inclua esta mensagem "
 #~ "de falha ICE no relatório de erro:  '%s'.  Entretanto poderá tentar "
 #~ "iniciar uma sessão utilizando a sessão de recurso."
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to lock the file '%s'.  Please "
-#~ "report this as a GNOME bug.  Sometimes this error may occur if the file's "
+#~ "The Scarecrow session manager was unable to lock the file '%s'.  Please "
+#~ "report this as a Scarecrow bug.  Sometimes this error may occur if the file's "
 #~ "directory is unwritable, you could try logging in via the failsafe "
 #~ "session and ensuring that it is."
 #~ msgstr ""
-#~ "O gestor de sessões GNOME foi incapaz de trancar o ficheiro '%s'.  Relate "
-#~ "este problema como sendo um erro do GNOME.  Por vezes este erro poderá "
+#~ "O gestor de sessões Scarecrow foi incapaz de trancar o ficheiro '%s'.  Relate "
+#~ "este problema como sendo um erro do Scarecrow.  Por vezes este erro poderá "
 #~ "ocorrer se o diretório do ficheiro não permitir escrita, pelo que poderá "
 #~ "iniciar uma sessão utilizando a sessão de recurso e certificar-se de que "
 #~ "o diretório possui permissões de escrita."
 
 #~ msgid ""
-#~ "The GNOME session manager was unable to read the file: '%s'.  If this "
-#~ "file exists it must be readable by you for GNOME to work properly.  Try "
+#~ "The Scarecrow session manager was unable to read the file: '%s'.  If this "
+#~ "file exists it must be readable by you for Scarecrow to work properly.  Try "
 #~ "logging in with the failsafe session and removing this file."
 #~ msgstr ""
-#~ "O gestor de sessões GNOME foi incapaz de ler o ficheiro: '%s'.  Se este "
-#~ "ficheiro existir terá de ser legível pelo seu utilizador para que o GNOME "
+#~ "O gestor de sessões Scarecrow foi incapaz de ler o ficheiro: '%s'.  Se este "
+#~ "ficheiro existir terá de ser legível pelo seu utilizador para que o Scarecrow "
 #~ "funcione corretamente.  Tente iniciar uma sessão utilizando a sessão de "
 #~ "recurso e remover este ficheiro."
 
 #~ msgid ""
 #~ "Could not write to file '%s'.  This file must be writable in order for "
-#~ "GNOME to function properly.  Try logging in with the failsafe session and "
+#~ "Scarecrow to function properly.  Try logging in with the failsafe session and "
 #~ "removing this file.  Also make sure that the file's directory is writable."
 #~ msgstr ""
 #~ "Incapz de escrever no ficheiro '%s'.  Este ficheiro tem de permitir "
-#~ "escrita para que o GNOME funcione corretamente.  Tente iniciar uma sessão "
+#~ "escrita para que o Scarecrow funcione corretamente.  Tente iniciar uma sessão "
 #~ "utilizando a sessão de recurso e remover este ficheiro.  Certifique-se "
 #~ "também de que o diretório onde se encontra o ficheiro permite escrita."
 
@@ -1121,12 +1121,12 @@ msgstr "Já existe uma sessão designada \"%s\""
 
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
-#~ "This will prevent GNOME from operating correctly.\n"
+#~ "This will prevent Scarecrow from operating correctly.\n"
 #~ "It may be possible to correct the problem by adding\n"
 #~ "%s to the file /etc/hosts."
 #~ msgstr ""
 #~ "Incapaz de encontrar endereço de internet para %s.\n"
-#~ "Isto impedirá o GNOME de funcionar corretamente.\n"
+#~ "Isto impedirá o Scarecrow de funcionar corretamente.\n"
 #~ "Poderá ser possível corrigir o problema adicionando\n"
 #~ "%s ao ficheiro /etc/hosts."
 
@@ -1169,8 +1169,8 @@ msgstr "Já existe uma sessão designada \"%s\""
 #~ msgid "could not connect to the session manager\n"
 #~ msgstr "Incapaz de se ligar ao gestor de sessões\n"
 
-#~ msgid "session manager does not support GNOME extensions\n"
-#~ msgstr "o gestor de sessões não suporta extensões GNOME\n"
+#~ msgid "session manager does not support Scarecrow extensions\n"
+#~ msgstr "o gestor de sessões não suporta extensões Scarecrow\n"
 
 #~ msgid "Remove the currently selected client from the session."
 #~ msgstr "Remover o cliente atualmente selecionado da sessão."

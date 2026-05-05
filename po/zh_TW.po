@@ -1,7 +1,7 @@
-# Chinese (Taiwan) translation of gnome-session.
+# Chinese (Taiwan) translation of scarecrow-session.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003 Free Software Foundation, Inc.
 # gnome-core:
-# gnome-session:
+# scarecrow-session:
 #
 # Yuan-Chung Cheng <platin@linux.org.tw>, 1999.
 # Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000.
@@ -14,8 +14,8 @@
 # pan93412 <pan93412@gmail.com>, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session 3.1.92\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session 3.1.92\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2020-03-30 17:28+0000\n"
 "PO-Revision-Date: 2020-04-01 00:02+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
@@ -37,66 +37,66 @@ msgstr "這個項目讓您選擇儲存的工作階段"
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "這個工作階段讓您登入 GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "這個工作階段讓您登入 Scarecrow"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "GNOME dummy"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow dummy"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
-msgstr "GNOME 採行 Xorg"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow 採行 Xorg"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "儲存工作階段"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
-msgstr "如啟用本選項，gnome-session 會自動儲存作業階段。"
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
+msgstr "如啟用本選項，scarecrow-session 會自動儲存作業階段。"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "儲存此工作階段"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"當啟用此選項，gnome-session 將在登出時自動儲存下一個工作階段，就算自動儲存為"
+"當啟用此選項，scarecrow-session 將在登出時自動儲存下一個工作階段，就算自動儲存為"
 "停用狀態。"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "登出提示"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
-msgstr "如啟用本選項，gnome-session 會在作業階段終止前先提示使用者。"
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
+msgstr "如啟用本選項，scarecrow-session 會在作業階段終止前先提示使用者。"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "顯示回滾警告"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
-"若啟用此選項，gnome-session 將會在工作階段自動回滾時，登入後顯示警告對話框。"
+"若啟用此選項，scarecrow-session 將會在工作階段自動回滾時，登入後顯示警告對話框。"
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "自訂工作階段"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "請選擇要執行的自訂工作階段"
 
@@ -116,23 +116,23 @@ msgstr "重新命名工作階段(_M)"
 msgid "_Continue"
 msgstr "繼續(_C)"
 
-#: gnome-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/gsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "糟糕！有些地方出問題了。"
 
-#: gnome-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/gsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
 msgstr "發生問題且系統無法恢復。請連絡系統管理者"
 
-#: gnome-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/gsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
 msgstr "發生問題且系統無法恢復。為了預防已先停用所有的擴充功能。"
 
-#: gnome-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/gsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -140,27 +140,27 @@ msgstr ""
 "發生問題且系統無法恢復。\n"
 "請登出後再試一次。"
 
-#: gnome-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/gsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "登出(_L)"
 
-#: gnome-session/gsm-fail-whale-dialog.c:361 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "啟用除錯碼"
 
-#: gnome-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/gsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "允許登出"
 
-#: gnome-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/gsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "顯示擴充功能警告"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "沒有回應"
 
-#: gnome-session/gsm-util.c:415
+#: scarecrow-session/gsm-util.c:415
 msgid "_Log out"
 msgstr "登出(_L)"
 
@@ -168,98 +168,98 @@ msgstr "登出(_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "記住的應用程式"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "這個程式正在阻擋登出。"
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "因為目前此工作階段即將關閉電腦，拒絕新的客戶端連線\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "無法建立 ICE 監聽插槽：%s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "以 systemd 服務執行"
 
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "使用 systemd 工作階段管理工具"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr "使用內建（而非基於 systemd 的）工作階段管理工具"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "覆蓋標準的自動啟動目錄"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "要使用的工作階段"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "不要載入使用者指定的應用程式"
 
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "這個程式的版本"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "顯示嚴重錯誤對話盒以供測試"
 
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "停用硬體加速檢查"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOME 工作階段管理員"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow 工作階段管理員"
 
-#: tools/gnome-session-ctl.c:244
-msgid "Start gnome-session-shutdown.target"
-msgstr "啟動 gnome-session-shutdown.target"
+#: tools/scarecrow-session-ctl.c:244
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "啟動 scarecrow-session-shutdown.target"
 
-#: tools/gnome-session-ctl.c:245
+#: tools/scarecrow-session-ctl.c:245
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
-"當在標準輸入接收到 EOF 或一個位元組時啟動 gnome-session-shutdown.target"
+"當在標準輸入接收到 EOF 或一個位元組時啟動 scarecrow-session-shutdown.target"
 
-#: tools/gnome-session-ctl.c:246
-msgid "Signal initialization done to gnome-session"
-msgstr "gnome-session 訊號初始化完成"
+#: tools/scarecrow-session-ctl.c:246
+msgid "Signal initialization done to scarecrow-session"
+msgstr "scarecrow-session 訊號初始化完成"
 
-#: tools/gnome-session-ctl.c:247
+#: tools/scarecrow-session-ctl.c:247
 msgid "Restart dbus.service if it is running"
 msgstr "在其執行時重新啟動 dbus.service"
 
-#: tools/gnome-session-ctl.c:275
+#: tools/scarecrow-session-ctl.c:275
 msgid "Program needs exactly one parameter"
 msgstr "程式明確指出需要一個參數"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -292,64 +292,64 @@ msgstr ""
 "\n"
 "如果沒有指定 --inhibit 選項，會假定為 idle。\n"
 
-#: tools/gnome-session-inhibit.c:146
+#: tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "無法執行 %s\n"
 
-#: tools/gnome-session-inhibit.c:206 tools/gnome-session-inhibit.c:216
-#: tools/gnome-session-inhibit.c:226
+#: tools/scarecrow-session-inhibit.c:206 tools/scarecrow-session-inhibit.c:216
+#: tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s 需要引數\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "登出"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "關閉電源"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "重新開機"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "忽略任何現有的限制因素"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "無需使用者確認"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "無法連接工作階段總管"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "以相衝突的選項呼叫程式"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "工作階段 %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "工作階段名稱不允許以「.」開頭或包含「/」字元"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "工作階段名稱不允許以「.」開頭"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "工作階段名稱不允許包含「/」字元"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "已存在名為「%s」的工作階段"
@@ -381,8 +381,8 @@ msgstr "已存在名為「%s」的工作階段"
 #~ msgid "_Name:"
 #~ msgstr "名稱(_N):"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "這個作業階段讓您登入 GNOME，使用 Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "這個作業階段讓您登入 Scarecrow，使用 Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "選擇指令"
@@ -550,22 +550,22 @@ msgstr "已存在名為「%s」的工作階段"
 #~ msgid "Icon '%s' not found"
 #~ msgstr "找不到圖示「%s」"
 
-#~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "GNOME 3 無法載入"
+#~ msgid "Scarecrow 3 Failed to Load"
+#~ msgstr "Scarecrow 3 無法載入"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "很不幸的 GNOME 3 無法正常啟動而必須以<i>後備模式</i>啟動。\n"
+#~ "很不幸的 Scarecrow 3 無法正常啟動而必須以<i>後備模式</i>啟動。\n"
 #~ "\n"
-#~ "這通常代表您的系統 (圖形硬體或驅動程式) 無法完整呈現 GNOME 3 的體驗。"
+#~ "這通常代表您的系統 (圖形硬體或驅動程式) 無法完整呈現 Scarecrow 3 的體驗。"
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "獲取更多有關 GNOME 3 的資訊"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "獲取更多有關 Scarecrow 3 的資訊"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

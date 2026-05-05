@@ -1,12 +1,12 @@
-# Aragonese translation for gnome-session.
-# Copyright (C) 2012 gnome-session's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-session package.
+# Aragonese translation for scarecrow-session.
+# Copyright (C) 2012 scarecrow-session's COPYRIGHT HOLDER
+# This file is distributed under the same license as the scarecrow-session package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Daniel Martinez <entaltoaragon@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session master\n"
+"Project-Id-Version: scarecrow-session master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "session&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2015-12-27 12:16+0000\n"
@@ -30,27 +30,27 @@ msgid "This entry lets you select a saved session"
 msgstr "Ista dentrada te deixa trigar una sesion alzada"
 
 #: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "Ista sesión accede a GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "Ista sesión accede a Scarecrow"
 
 #: ../data/gnome-xorg.desktop.in.h:1
-#| msgid "GNOME on Wayland"
-msgid "GNOME on Xorg"
-msgstr "GNOME en Xorg"
+#| msgid "Scarecrow on Wayland"
+msgid "Scarecrow on Xorg"
+msgstr "Scarecrow en Xorg"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
-msgid "GNOME dummy"
-msgstr "GNOME dummy"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow dummy"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
 msgstr "Sesión personalizada"
 
-#: ../data/session-selector.ui.h:2 ../tools/gnome-session-selector.c:102
+#: ../data/session-selector.ui.h:2 ../tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Por fabor tríe una sesión personalizada ta executar"
 
@@ -107,11 +107,11 @@ msgstr "Co_mando:"
 msgid "_Name:"
 msgstr "_Nombre:"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:313
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Redios! Bella cosa salió malament."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -119,7 +119,7 @@ msgstr ""
 "Ocurrió un problema y o sistema no se puet recuperar. Contacta con un "
 "administrador de sistemas."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -127,7 +127,7 @@ msgstr ""
 "Ocurrió un problema y o sistema no se puet recuperar. Por precacción, s'han "
 "desactivau todas as extensions."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:324
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -135,27 +135,27 @@ msgstr ""
 "Ocurrió un problema y o sistema no se puet recuperar.\n"
 "zarra la sesión y intenta-lo de nuevas."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:339
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "T_rancar a sesión"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:361 ../gnome-session/main.c:280
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:280
 msgid "Enable debugging code"
 msgstr "Enchegar o codigo de depuración"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:362
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Permitir zarrar sesión"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:363
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Amostrar alvertencias d'as extensions"
 
-#: ../gnome-session/gsm-manager.c:1256 ../gnome-session/gsm-manager.c:1902
+#: ../scarecrow-session/gsm-manager.c:1256 ../scarecrow-session/gsm-manager.c:1902
 msgid "Not responding"
 msgstr "No responde"
 
-#: ../gnome-session/gsm-util.c:381
+#: ../scarecrow-session/gsm-util.c:381
 msgid "_Log out"
 msgstr "_Zarrar a sesión"
 
@@ -163,15 +163,15 @@ msgstr "_Zarrar a sesión"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Aplicación remerada"
 
-#: ../gnome-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/gsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "Iste programa ye bloquiando a zarrada de sesió"
 
-#: ../gnome-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/gsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -179,49 +179,49 @@ msgstr ""
 "Se ye refusando a connexión d'un nuevo client porque actualment se ye "
 "zarrando a sesión\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/gsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "No se pudo creyar o socket d'escuita ICE: %s"
 
-#: ../gnome-session/main.c:278
+#: ../scarecrow-session/main.c:278
 msgid "Override standard autostart directories"
 msgstr "Sobreescribir as carpetas d'encieto automatico estandar"
 
-#: ../gnome-session/main.c:278
+#: ../scarecrow-session/main.c:278
 msgid "AUTOSTART_DIR"
 msgstr "CARPETA_D'ENCIETO_AUTOMATICO"
 
-#: ../gnome-session/main.c:279
+#: ../scarecrow-session/main.c:279
 msgid "Session to use"
 msgstr "Sesión ta emplegar"
 
-#: ../gnome-session/main.c:279
+#: ../scarecrow-session/main.c:279
 msgid "SESSION_NAME"
 msgstr "NOMBRE_D'A_SESIÓN"
 
-#: ../gnome-session/main.c:281
+#: ../scarecrow-session/main.c:281
 msgid "Do not load user-specified applications"
 msgstr "No cargar as aplicacions especificadas por l'usuario"
 
-#: ../gnome-session/main.c:282
+#: ../scarecrow-session/main.c:282
 msgid "Version of this application"
 msgstr "Versión d'ista aplicación"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:284
+#: ../scarecrow-session/main.c:284
 msgid "Show the fail whale dialog for testing"
 msgstr "Amostrar o dialogo d'a ballena de prebas"
 
-#: ../gnome-session/main.c:285
+#: ../scarecrow-session/main.c:285
 msgid "Disable hardware acceleration check"
 msgstr "Desactivar a verificación d'acceleración hardware"
 
-#: ../gnome-session/main.c:307
-msgid " - the GNOME session manager"
-msgstr " - O chestor de sesions de GNOME"
+#: ../scarecrow-session/main.c:307
+msgid " - the Scarecrow session manager"
+msgstr " - O chestor de sesions de Scarecrow"
 
-#: ../tools/gnome-session-inhibit.c:108
+#: ../tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION...] COMMAND\n"
@@ -255,72 +255,72 @@ msgstr ""
 "\n"
 "Si no s'especifica a opción --inhibit s'asume «idle».\n"
 
-#: ../tools/gnome-session-inhibit.c:146
+#: ../tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Ha fallau en executar %s\n"
 
-#: ../tools/gnome-session-inhibit.c:206 ../tools/gnome-session-inhibit.c:216
-#: ../tools/gnome-session-inhibit.c:226
+#: ../tools/scarecrow-session-inhibit.c:206 ../tools/scarecrow-session-inhibit.c:216
+#: ../tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s amenista un argumento\n"
 
-#: ../tools/gnome-session-selector.c:61
+#: ../tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Sesión %d"
 
-#: ../tools/gnome-session-selector.c:107
+#: ../tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with ‘.’ or contain ‘/’ characters"
 msgstr ""
 "Os nombres de sesion no pueden estar prencipiaus con '.' u tener caracters '/"
 "'"
 
-#: ../tools/gnome-session-selector.c:111
+#: ../tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with ‘.’"
 msgstr "Os nombres de sesion no pueden estar prencipiaus con '.'"
 
-#: ../tools/gnome-session-selector.c:115
+#: ../tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain ‘/’ characters"
 msgstr "Os nombres de sesion no pueden tener caracters '/'"
 
-#: ../tools/gnome-session-selector.c:123
+#: ../tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named ‘%s’ already exists"
 msgstr "Ya bi ha una sesion que se dice '%s'"
 
-#: ../tools/gnome-session-quit.c:49
+#: ../tools/scarecrow-session-quit.c:49
 msgid "Log out"
 msgstr "Trancar a sesión"
 
-#: ../tools/gnome-session-quit.c:50
+#: ../tools/scarecrow-session-quit.c:50
 msgid "Power off"
 msgstr "Amortar"
 
-#: ../tools/gnome-session-quit.c:51
+#: ../tools/scarecrow-session-quit.c:51
 msgid "Reboot"
 msgstr "Reenchegar"
 
-#: ../tools/gnome-session-quit.c:52
+#: ../tools/scarecrow-session-quit.c:52
 msgid "Ignoring any existing inhibitors"
 msgstr "Se ye inorando qualsiquier inhibidor existent"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Don't prompt for user confirmation"
 msgstr "No requerir confirmación de l'usuario"
 
-#: ../tools/gnome-session-quit.c:87 ../tools/gnome-session-quit.c:101
+#: ../tools/scarecrow-session-quit.c:87 ../tools/scarecrow-session-quit.c:101
 msgid "Could not connect to the session manager"
 msgstr "No se pudo connectar con o chestor de sesions"
 
-#: ../tools/gnome-session-quit.c:196
+#: ../tools/scarecrow-session-quit.c:196
 msgid "Program called with conflicting options"
 msgstr "Se clamó a lo programa con opcions en conflicto"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Ista sesión accede a lo GNOME, fendo servir o Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Ista sesión accede a lo Scarecrow, fendo servir o Wayland"
 
 #~ msgid "Select Command"
 #~ msgstr "Seleccionar comando"

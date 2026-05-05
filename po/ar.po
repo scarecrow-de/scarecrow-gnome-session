@@ -1,4 +1,4 @@
-# translation of gnome-session.HEAD.po to Arabic
+# translation of scarecrow-session.HEAD.po to Arabic
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
 # Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
@@ -10,7 +10,7 @@
 # Ibrahim Saed <ibraheem5000@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session.HEAD\n"
+"Project-Id-Version: scarecrow-session.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-28 23:26+0200\n"
 "PO-Revision-Date: 2014-02-28 23:26+0200\n"
@@ -34,31 +34,31 @@ msgid "This entry lets you select a saved session"
 msgstr "هذه الخاصية تسمح لك باختيار جلسة محفوطة"
 
 #: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
-msgid "GNOME"
+msgid "Scarecrow"
 msgstr "جنوم"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "تولجك هذه الجلسة في جنوم"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
-msgid "GNOME dummy"
+msgid "Scarecrow dummy"
 msgstr "جنوم لا شيء"
 
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
-msgid "GNOME on Wayland"
+msgid "Scarecrow on Wayland"
 msgstr "جنوم على وايلاند"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-msgid "This session logs you into GNOME, using Wayland"
+msgid "This session logs you into Scarecrow, using Wayland"
 msgstr "تولجك هذه الجلسة في جنوم باستخدام وايلاند"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
 msgstr "جلسة خاصة"
 
-#: ../data/session-selector.ui.h:2 ../tools/gnome-session-selector.c:102
+#: ../data/session-selector.ui.h:2 ../tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "من فضلك، اختر جلسة خاصة للعمل"
 
@@ -114,23 +114,23 @@ msgstr "الأ_مر:"
 msgid "_Name:"
 msgstr "الا_سم:"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:321
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:321
 msgid "Oh no!  Something has gone wrong."
 msgstr "لا! ثمة مشكلة."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:328
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:328
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
 msgstr "حدثت مشكلة وتعذّر تعافي النظام. حاول الاتصال بمدير النظام."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:330
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:330
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
 msgstr "حدثت مشكلة وتعذّر تعافي النظام. ستتعطل جميع الامتدادات كإجراء احترازي."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:332
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:332
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -138,27 +138,27 @@ msgstr ""
 "حدثت مشكلة وتعذّر تعافي النظام.\n"
 "حاول الخروج ثم الولوج مجددا."
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:347
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:347
 msgid "_Log Out"
 msgstr "ا_خرج"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:369 ../gnome-session/main.c:305
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:369 ../scarecrow-session/main.c:305
 msgid "Enable debugging code"
 msgstr "فعّل كود تتبع الأخطاء"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:370
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:370
 msgid "Allow logout"
 msgstr "اسمح بالخروج"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:371
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:371
 msgid "Show extension warning"
 msgstr "أظهر تحذير الامتداد"
 
-#: ../gnome-session/gsm-manager.c:1271 ../gnome-session/gsm-manager.c:2043
+#: ../scarecrow-session/gsm-manager.c:1271 ../scarecrow-session/gsm-manager.c:2043
 msgid "Not responding"
 msgstr "لا يستجيب"
 
-#: ../gnome-session/gsm-util.c:409
+#: ../scarecrow-session/gsm-util.c:409
 msgid "_Log out"
 msgstr "ا_خرج"
 
@@ -166,59 +166,59 @@ msgstr "ا_خرج"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "التطبيقات المتذكرة"
 
-#: ../gnome-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/gsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "يعيق هذا البرنامج الخروج."
 
-#: ../gnome-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/gsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "يرفض العملاء الجدد لأن الجلسة يتم إطفاؤها حاليا\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/gsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "تعذّر إنشاء مقبس استماع ICE: %s"
 
-#: ../gnome-session/main.c:303
+#: ../scarecrow-session/main.c:303
 msgid "Override standard autostart directories"
 msgstr "تخطى مجلدات بدء التشغيل القياسية"
 
-#: ../gnome-session/main.c:303
+#: ../scarecrow-session/main.c:303
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-#: ../gnome-session/main.c:304
+#: ../scarecrow-session/main.c:304
 msgid "Session to use"
 msgstr "الجلسة التي ستُستخدم"
 
-#: ../gnome-session/main.c:304
+#: ../scarecrow-session/main.c:304
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: ../gnome-session/main.c:306
+#: ../scarecrow-session/main.c:306
 msgid "Do not load user-specified applications"
 msgstr "لا تُحمّل التطبيقات التي حددها المستخدم"
 
-#: ../gnome-session/main.c:307
+#: ../scarecrow-session/main.c:307
 msgid "Version of this application"
 msgstr "إصدارة هذا التطبيق"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:309
+#: ../scarecrow-session/main.c:309
 msgid "Show the fail whale dialog for testing"
 msgstr "أظهر حوار الفشل للاختبار"
 
-#: ../gnome-session/main.c:342
-msgid " - the GNOME session manager"
+#: ../scarecrow-session/main.c:342
+msgid " - the Scarecrow session manager"
 msgstr " - مدير جلسات جنوم"
 
-#: ../tools/gnome-session-inhibit.c:108
+#: ../tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION...] COMMAND\n"
@@ -237,65 +237,65 @@ msgid ""
 "If no --inhibit option is specified, idle is assumed.\n"
 msgstr ""
 
-#: ../tools/gnome-session-inhibit.c:146
+#: ../tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "فشل التنفيذ %s\n"
 
-#: ../tools/gnome-session-inhibit.c:206 ../tools/gnome-session-inhibit.c:216
-#: ../tools/gnome-session-inhibit.c:226
+#: ../tools/scarecrow-session-inhibit.c:206 ../tools/scarecrow-session-inhibit.c:216
+#: ../tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "يتطلب الخيار %s معاملا\n"
 
-#: ../tools/gnome-session-selector.c:61
+#: ../tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "جلسة %d"
 
-#: ../tools/gnome-session-selector.c:107
+#: ../tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with ‘.’ or contain ‘/’ characters"
 msgstr "لا يسمح أن يبدأ اسم الجلسة بـ '.' أو أن يتضمن '/'"
 
-#: ../tools/gnome-session-selector.c:111
+#: ../tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with ‘.’"
 msgstr "لا يسمح أن تبدأ أسماء الجلسات بـ '.'"
 
-#: ../tools/gnome-session-selector.c:115
+#: ../tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain ‘/’ characters"
 msgstr "لا يسمح أن تتضمن أسماء الجلسات حرف '/'"
 
-#: ../tools/gnome-session-selector.c:123
+#: ../tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named ‘%s’ already exists"
 msgstr "جلسة باسم ‘%s’ موجودة بالفعل"
 
-#: ../tools/gnome-session-quit.c:51
+#: ../tools/scarecrow-session-quit.c:51
 msgid "Log out"
 msgstr "اخرج"
 
-#: ../tools/gnome-session-quit.c:52
+#: ../tools/scarecrow-session-quit.c:52
 msgid "Power off"
 msgstr "أطفئ"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Reboot"
 msgstr "أعِد التشغيل"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 msgid "Ignoring any existing inhibitors"
 msgstr "متجاهلًا أية معيقات موجودة"
 
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 msgid "Don't prompt for user confirmation"
 msgstr "لا تطلب تأكيدا من المستخدم"
 
-#: ../tools/gnome-session-quit.c:89 ../tools/gnome-session-quit.c:99
+#: ../tools/scarecrow-session-quit.c:89 ../tools/scarecrow-session-quit.c:99
 msgid "Could not connect to the session manager"
 msgstr "تعذّر الاتصال بمدير الجلسات"
 
-#: ../tools/gnome-session-quit.c:201
+#: ../tools/scarecrow-session-quit.c:201
 msgid "Program called with conflicting options"
 msgstr "تم استدعاء البرنامج بخيارات متضاربة"
 
@@ -483,22 +483,22 @@ msgstr "تم استدعاء البرنامج بخيارات متضاربة"
 #~ msgid "Icon '%s' not found"
 #~ msgstr "الأيقونة '%s' غير موجودة"
 
-#~ msgid "GNOME 3 Failed to Load"
+#~ msgid "Scarecrow 3 Failed to Load"
 #~ msgstr "فشل بدء جنوم 3"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
 #~ "للأسف فشل بدء جنوم 3 على الوجه الصحيح ودخلت إلى <i>الطور التقليدي</i>.\n"
 #~ "\n"
 #~ "غالبا ما يعني هذا أن نظامك (عتاد الرسوميات أو المُشغّل) ليس مؤهلا لتشغيل "
 #~ "جنوم 3 بكامل طاقتها."
 
-#~ msgid "Learn more about GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
 #~ msgstr "تعرّف أكثر على جنوم 3"
 
 #~ msgid ""
@@ -566,7 +566,7 @@ msgstr "تم استدعاء البرنامج بخيارات متضاربة"
 #~ msgid "Kill session"
 #~ msgstr "اقتل الجلسة"
 
-#~ msgid "Classic GNOME"
+#~ msgid "Classic Scarecrow"
 #~ msgstr "جنوم تقليدية"
 
 #~ msgid "Window Manager"

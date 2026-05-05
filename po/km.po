@@ -1,11 +1,11 @@
-# Khmer translation for gnome-session
+# Khmer translation for scarecrow-session
 # Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
-# This file is distributed under the same license as the gnome-session package.
+# This file is distributed under the same license as the scarecrow-session package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 # sutha <sutha@khmeros.info>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session\n"
+"Project-Id-Version: scarecrow-session\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "session&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-04-02 09:36+0000\n"
@@ -29,34 +29,34 @@ msgid "This entry lets you select a saved session"
 msgstr "ធាតុ​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​សម័យ​ដែល​បាន​រក្សាទុក"
 
 #: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "សម័យ​នេះ​ជា​កំណត់​ហេតុ​ដែល​អ្នក​ទៅ​កាន់ GNOME"
+msgid "This session logs you into Scarecrow"
+msgstr "សម័យ​នេះ​ជា​កំណត់​ហេតុ​ដែល​អ្នក​ទៅ​កាន់ Scarecrow"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
-#| msgid "GNOME"
-msgid "GNOME dummy"
-msgstr "GNOME dummy"
+#| msgid "Scarecrow"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow dummy"
 
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
-#| msgid "GNOME fallback"
-msgid "GNOME on Wayland"
-msgstr "GNOME នៅ Wayland"
+#| msgid "Scarecrow fallback"
+msgid "Scarecrow on Wayland"
+msgstr "Scarecrow នៅ Wayland"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-#| msgid "This session logs you into GNOME"
-msgid "This session logs you into GNOME, using Wayland"
-msgstr "សម័យ​នេះ​ចុះ​កំណត់ហេតុ​អ្នក​ក្នុង GNOME ដោយ​ប្រើ Wayland"
+#| msgid "This session logs you into Scarecrow"
+msgid "This session logs you into Scarecrow, using Wayland"
+msgstr "សម័យ​នេះ​ចុះ​កំណត់ហេតុ​អ្នក​ក្នុង Scarecrow ដោយ​ប្រើ Wayland"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
 msgstr "សម័យ​ផ្ទាល់​ខ្លួន"
 
-#: ../data/session-selector.ui.h:2 ../tools/gnome-session-selector.c:102
+#: ../data/session-selector.ui.h:2 ../tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "សូម​ជ្រើសសម័យ​ផ្ទាល់ខ្លួន ដើម្បីដំណើរការ"
 
@@ -112,23 +112,23 @@ msgstr "ពាក្យ​បញ្ជា ៖"
 msgid "_Name:"
 msgstr "ឈ្មោះ ៖"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:321
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:321
 msgid "Oh no!  Something has gone wrong."
 msgstr "អូ ! មាន​អ្វី​មួយ​មិន​ត្រឹមត្រូវ​ហើយ ។"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:328
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:328
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
 msgstr "មាន​បញ្ហា ​ប្រព័ន្ធ​មិន​អាច​សង្គ្រោះ​បាន​ទេ ។ សូម​ទាក់ទង​អ្នក​គ្រប់គ្រង​ប្រព័ន្ធ​របស់​អ្នក"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:330
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:330
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
 msgstr "មាន​បញ្ហា ប្រព័ន្ធ​មិន​អាច​សង្គ្រោះ​បាន​ទេ ។ ផ្នែក​បន្ថែម​ទាំងអស់​ត្រូវ​បាន​បិទ ។"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:332
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:332
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -136,27 +136,27 @@ msgstr ""
 "មាន​បញ្ហា​ ​ប្រព័ន្ធ​មិន​អាច​សង្គ្រោះ​បាន​ទេ ។\n"
 "សូម​ចេញ ហើយ​ព្យាយាម​​ម្ដង​ទៀត ។"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:347
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:347
 msgid "_Log Out"
 msgstr "ចេញ"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:369 ../gnome-session/main.c:305
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:369 ../scarecrow-session/main.c:305
 msgid "Enable debugging code"
 msgstr "បើក​កូដ​បំបាត់​កំហុស"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:370
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:370
 msgid "Allow logout"
 msgstr "អនុញ្ញាត​ឲ្យ​ចេញ"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:371
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:371
 msgid "Show extension warning"
 msgstr "បង្ហាញ​ការ​ព្រមាន​ផ្នែក​បន្ថែម"
 
-#: ../gnome-session/gsm-manager.c:1271 ../gnome-session/gsm-manager.c:2043
+#: ../scarecrow-session/gsm-manager.c:1271 ../scarecrow-session/gsm-manager.c:2043
 msgid "Not responding"
 msgstr "មិន​ឆ្លើយ​តប"
 
-#: ../gnome-session/gsm-util.c:409
+#: ../scarecrow-session/gsm-util.c:409
 #| msgid "Log out"
 msgid "_Log out"
 msgstr "ចេញ"
@@ -165,59 +165,59 @@ msgstr "ចេញ"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "កម្មវិធី​ដែល​ចងចាំ"
 
-#: ../gnome-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/gsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "កម្មវិធី​នេះ​ត្រូវ​បាន​ទប់ស្កាត់​មិន​ឲ្យ​ចេញ ។"
 
-#: ../gnome-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/gsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "បដិសេធ​ការ​តភ្ជាប់​ម៉ាស៊ីន​ភ្ញៀវ ពីព្រោះ​សម័យ​បច្ចុប្បន្ន​កំពុង​ត្រូវ​បានបិទ\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/gsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "មិន​អាច​បង្កើត​រន្ធ​ស្ដាប់ ICE បាន​ទេ ៖ %s"
 
-#: ../gnome-session/main.c:303
+#: ../scarecrow-session/main.c:303
 msgid "Override standard autostart directories"
 msgstr "បដិសេធ​ថត​ចាប់ផ្ដើម​ដោយ​ស្វ័យ​ប្រវត្តិ​ស្តង់ដារ"
 
-#: ../gnome-session/main.c:303
+#: ../scarecrow-session/main.c:303
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-#: ../gnome-session/main.c:304
+#: ../scarecrow-session/main.c:304
 msgid "Session to use"
 msgstr "សម័យ​ត្រូវ​ប្រើ"
 
-#: ../gnome-session/main.c:304
+#: ../scarecrow-session/main.c:304
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: ../gnome-session/main.c:306
+#: ../scarecrow-session/main.c:306
 msgid "Do not load user-specified applications"
 msgstr "កុំ​ផ្ទុក​កម្មវិធី​ដែល​បាន​បញ្ជាក់​ដោយ​អ្នក​ប្រើ"
 
-#: ../gnome-session/main.c:307
+#: ../scarecrow-session/main.c:307
 msgid "Version of this application"
 msgstr "កំណែ​កម្មវិធី​នេះ"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:309
+#: ../scarecrow-session/main.c:309
 msgid "Show the fail whale dialog for testing"
 msgstr "បង្ហាញ​ប្រអប់ fail whale សម្រាប់​សាកល្បង"
 
-#: ../gnome-session/main.c:342
-msgid " - the GNOME session manager"
-msgstr " - កម្មវិធី​គ្រប់គ្រង​សម័យ  GNOME"
+#: ../scarecrow-session/main.c:342
+msgid " - the Scarecrow session manager"
+msgstr " - កម្មវិធី​គ្រប់គ្រង​សម័យ  Scarecrow"
 
-#: ../tools/gnome-session-inhibit.c:108
+#: ../tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION...] COMMAND\n"
@@ -244,67 +244,67 @@ msgstr ""
 "idle, automount\n  --inhibit-only    Do not launch COMMAND and wait forever "
 "instead\n\nIf no --inhibit option is specified, idle is assumed.\n"
 
-#: ../tools/gnome-session-inhibit.c:146
+#: ../tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​អនុវត្ត %s\n"
 
-#: ../tools/gnome-session-inhibit.c:206 ../tools/gnome-session-inhibit.c:216
-#: ../tools/gnome-session-inhibit.c:226
+#: ../tools/scarecrow-session-inhibit.c:206 ../tools/scarecrow-session-inhibit.c:216
+#: ../tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s ទាមទារ​អាគុយម៉ង់\n"
 
-#: ../tools/gnome-session-selector.c:61
+#: ../tools/scarecrow-session-selector.c:61
 #, c-format
 #| msgid "Session to use"
 msgid "Session %d"
 msgstr "សម័យ %d"
 
-#: ../tools/gnome-session-selector.c:107
+#: ../tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with ‘.’ or contain ‘/’ characters"
 msgstr ""
 "ឈ្មោះសម័យ​មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​ចាប់ផ្ដើម​ដោយ ‘.’ ឬ​មាន​តួអក្សរ ‘/’"
 
-#: ../tools/gnome-session-selector.c:111
+#: ../tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with ‘.’"
 msgstr "ឈ្មោះ​សម័យ​មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​ចាប់ផ្ដើម​ដោយ ‘.’"
 
-#: ../tools/gnome-session-selector.c:115
+#: ../tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain ‘/’ characters"
 msgstr "ឈ្មោះ​សម័យ​មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​មានតួអក្សរ ‘/’"
 
-#: ../tools/gnome-session-selector.c:123
+#: ../tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named ‘%s’ already exists"
 msgstr "មាន​ឈ្មោះ​សម័យ​ដែលមាន​ឈ្មោះ ‘%s’ រួច​ហើយ"
 
-#: ../tools/gnome-session-quit.c:51
+#: ../tools/scarecrow-session-quit.c:51
 msgid "Log out"
 msgstr "ចេញ"
 
-#: ../tools/gnome-session-quit.c:52
+#: ../tools/scarecrow-session-quit.c:52
 msgid "Power off"
 msgstr "បិទ"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Reboot"
 msgstr "ចាប់ផ្ដើម​ឡើង​វិញ"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 msgid "Ignoring any existing inhibitors"
 msgstr "មិន​អើពើ​កម្មវិធី​ហាមឃាត់​ដែល​មាន​ស្រាប់"
 
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 msgid "Don't prompt for user confirmation"
 msgstr "កុំ​សួរ​រក​ការ​បញ្ជាក់​របស់​អ្នក​ប្រើ"
 
-#: ../tools/gnome-session-quit.c:89 ../tools/gnome-session-quit.c:99
+#: ../tools/scarecrow-session-quit.c:89 ../tools/scarecrow-session-quit.c:99
 msgid "Could not connect to the session manager"
 msgstr "មិន​អាច​តភ្ជាប់​ទៅ​កម្មវិធី​គ្រប់គ្រង​សម័យ​បាន​ទេ"
 
-#: ../tools/gnome-session-quit.c:201
+#: ../tools/scarecrow-session-quit.c:201
 msgid "Program called with conflicting options"
 msgstr "កម្មវិធី​បានហៅ​ដោយ​ប្រើ​ជម្រើសប៉ះទង្គិច"
 
@@ -477,24 +477,24 @@ msgstr "កម្មវិធី​បានហៅ​ដោយ​ប្រើ​
 #~ msgid "Restart this system now?"
 #~ msgstr "ចាប់ផ្ដើម​ប្រព័ន្ធ​នេះ​ឥឡូវ​នេះ​ឬ ?"
 
-#~ msgid "GNOME 3 Failed to Load"
-#~ msgstr "GNOME 3 បាន​ប​រាជ័យ​ក្នុង​ការ​ផ្ទុក"
+#~ msgid "Scarecrow 3 Failed to Load"
+#~ msgstr "Scarecrow 3 បាន​ប​រាជ័យ​ក្នុង​ការ​ផ្ទុក"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
-#~ "ជា​អកុសល GNOME 3 មិន​អាច​ចាប់ផ្ដើម​ត្រឹមត្រូវ ហើយ​បាន​ចាប់ផ្ដើម​ក្នុង <i>របៀប fallback</"
+#~ "ជា​អកុសល Scarecrow 3 មិន​អាច​ចាប់ផ្ដើម​ត្រឹមត្រូវ ហើយ​បាន​ចាប់ផ្ដើម​ក្នុង <i>របៀប fallback</"
 #~ "i> ។\n"
 #~ "\n"
-#~ "នេះ​ប្រហែលជា​ប្រព័ន្ធ​របស់​អ្នក (ផ្នែក​រឹង​ក្រាហ្វិក ឬ​កម្មវិធី​បញ្ជា) មិន​អាច​ផ្ដល់​បទពិសោធន៍ GNOME 3 "
+#~ "នេះ​ប្រហែលជា​ប្រព័ន្ធ​របស់​អ្នក (ផ្នែក​រឹង​ក្រាហ្វិក ឬ​កម្មវិធី​បញ្ជា) មិន​អាច​ផ្ដល់​បទពិសោធន៍ Scarecrow 3 "
 #~ "ពេញលេញ ។"
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "សិក្សា​បន្ថែម​អំពី GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "សិក្សា​បន្ថែម​អំពី Scarecrow 3"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"

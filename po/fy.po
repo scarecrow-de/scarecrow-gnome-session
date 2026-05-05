@@ -1,12 +1,12 @@
-# Frisian translation for gnome-session
+# Frisian translation for scarecrow-session
 #
-# This file is distributed under the same license as the gnome-session package.
+# This file is distributed under the same license as the scarecrow-session package.
 # Sietse <>, 2009.
 # Sense Hofstede <sense@ubuntu.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session\n"
+"Project-Id-Version: scarecrow-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-20 16:52+0100\n"
 "PO-Revision-Date: 2011-03-20 20:10+0100\n"
@@ -64,7 +64,7 @@ msgstr "Gjin namme"
 msgid "No description"
 msgstr "Gjin beskriuwing"
 
-#: ../capplet/main.c:35 ../gnome-session/main.c:280
+#: ../capplet/main.c:35 ../scarecrow-session/main.c:280
 msgid "Version of this application"
 msgstr "Ferzje fan dizze tapassing"
 
@@ -73,22 +73,22 @@ msgid "Could not display help document"
 msgstr "Koe it help dokumint net werjaan"
 
 #: ../data/gnome-fallback.session.desktop.in.in.h:1
-msgid "GNOME fallback"
+msgid "Scarecrow fallback"
 msgstr "Gnome weromfal"
 
 #: ../data/gnome.session.desktop.in.in.h:1 ../data/gnome.desktop.in.h:1
-msgid "GNOME"
+msgid "Scarecrow"
 msgstr "Gnome"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Dizze sesje meld jo oan by Gnome"
 
 #: ../data/gsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>Sommiche tapassingen rinne noch:</b>"
 
-#: ../data/gsm-inhibit-dialog.ui.h:2 ../gnome-session/gsm-inhibit-dialog.c:643
+#: ../data/gsm-inhibit-dialog.ui.h:2 ../scarecrow-session/gsm-inhibit-dialog.c:643
 msgid ""
 "Waiting for the program to finish.  Interrupting the program may cause you "
 "to lose work."
@@ -203,7 +203,7 @@ msgstr "Sesjebehearopsjes:"
 msgid "Show session management options"
 msgstr "Sesjebehearopsjes sjen litte"
 
-#: ../gnome-session/gsm-gconf.c:106
+#: ../scarecrow-session/gsm-gconf.c:106
 #, c-format
 msgid ""
 "There is a problem with the configuration server.\n"
@@ -212,24 +212,24 @@ msgstr ""
 "Der is in probleem mei de konfiguraasjetsjinner.\n"
 "(%s útgongen mei status %d)"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:252
+#: ../scarecrow-session/gsm-inhibit-dialog.c:252
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "Ikoan '%s' net fûn"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:591
+#: ../scarecrow-session/gsm-inhibit-dialog.c:591
 msgid "Unknown"
 msgstr "Ûnbekend"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:642
+#: ../scarecrow-session/gsm-inhibit-dialog.c:642
 msgid "A program is still running:"
 msgstr "In programma rint noch:"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:646
+#: ../scarecrow-session/gsm-inhibit-dialog.c:646
 msgid "Some programs are still running:"
 msgstr "Guon programma's rinne noch:"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:647
+#: ../scarecrow-session/gsm-inhibit-dialog.c:647
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
@@ -237,150 +237,150 @@ msgstr ""
 "Wachtsjen op it einigjen fan programma's. Ûnderbrekken fan dizze programma's "
 "kin jo wurk kwyt meitsje."
 
-#: ../gnome-session/gsm-inhibit-dialog.c:877
+#: ../scarecrow-session/gsm-inhibit-dialog.c:877
 msgid "Switch User Anyway"
 msgstr "Brûker dochs wikselje"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:880
+#: ../scarecrow-session/gsm-inhibit-dialog.c:880
 msgid "Log Out Anyway"
 msgstr "Dochs ôfmelde"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:883
+#: ../scarecrow-session/gsm-inhibit-dialog.c:883
 msgid "Suspend Anyway"
 msgstr "Dochs ûnderbrekke"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:886
+#: ../scarecrow-session/gsm-inhibit-dialog.c:886
 msgid "Hibernate Anyway"
 msgstr "Dochs sliepe"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:889
+#: ../scarecrow-session/gsm-inhibit-dialog.c:889
 msgid "Shut Down Anyway"
 msgstr "Dochs ôfslute"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:892
+#: ../scarecrow-session/gsm-inhibit-dialog.c:892
 msgid "Reboot Anyway"
 msgstr "Dochs opnij starte"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:900
+#: ../scarecrow-session/gsm-inhibit-dialog.c:900
 msgid "Lock Screen"
 msgstr "Skerm skoattelje"
 
-#: ../gnome-session/gsm-inhibit-dialog.c:903
+#: ../scarecrow-session/gsm-inhibit-dialog.c:903
 msgid "Cancel"
 msgstr "Ôfbrekke"
 
 #. This string is shared with gsm-fail-whale-dialog.c
 #. This string is shared with gsm-logout-dialog.c
-#: ../gnome-session/gsm-logout-dialog.c:268
-#: ../gnome-session/gsm-fail-whale-dialog.c:209
+#: ../scarecrow-session/gsm-logout-dialog.c:268
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:209
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
 msgstr[0] "Jo wurde automatysk ôfmelde yn %d sekonde."
 msgstr[1] "Jo wurde automatysk ôfmelde yn %d sekonde."
 
-#: ../gnome-session/gsm-logout-dialog.c:276
+#: ../scarecrow-session/gsm-logout-dialog.c:276
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
 msgstr[0] "Dit systeem sil automatysk ôfsluten wurde yn %d sekonde."
 msgstr[1] "Dit systeem sil automatysk ôfsluten wurde yn %d sekonde."
 
-#: ../gnome-session/gsm-logout-dialog.c:308
+#: ../scarecrow-session/gsm-logout-dialog.c:308
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "Jo binne no oanmeld as \"%s\""
 
-#: ../gnome-session/gsm-logout-dialog.c:374
+#: ../scarecrow-session/gsm-logout-dialog.c:374
 msgid "Log out of this system now?"
 msgstr "No ôfmelde fan dit systeem?"
 
-#: ../gnome-session/gsm-logout-dialog.c:380
+#: ../scarecrow-session/gsm-logout-dialog.c:380
 msgid "_Switch User"
 msgstr "Brûker _skeakelje?"
 
-#: ../gnome-session/gsm-logout-dialog.c:389
-#: ../gnome-session/gsm-fail-whale-dialog.c:290
+#: ../scarecrow-session/gsm-logout-dialog.c:389
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:290
 msgid "_Log Out"
 msgstr "Ôfme_lde"
 
-#: ../gnome-session/gsm-logout-dialog.c:395
+#: ../scarecrow-session/gsm-logout-dialog.c:395
 msgid "Shut down this system now?"
 msgstr "Dit systeem no ôfslúte?"
 
-#: ../gnome-session/gsm-logout-dialog.c:401
+#: ../scarecrow-session/gsm-logout-dialog.c:401
 msgid "S_uspend"
 msgstr "Ûnderbrekke"
 
-#: ../gnome-session/gsm-logout-dialog.c:407
+#: ../scarecrow-session/gsm-logout-dialog.c:407
 msgid "_Hibernate"
 msgstr "Sliepe"
 
-#: ../gnome-session/gsm-logout-dialog.c:413
+#: ../scarecrow-session/gsm-logout-dialog.c:413
 msgid "_Restart"
 msgstr "Opnij sta_rte"
 
-#: ../gnome-session/gsm-logout-dialog.c:423
+#: ../scarecrow-session/gsm-logout-dialog.c:423
 msgid "_Shut Down"
 msgstr "Ôf_slúte"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:277
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:277
 msgid "Try _Recovery"
 msgstr "Fe_rhelp besykje"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:279
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:279
 #, c-format
 msgid "A system error has occurred: %s"
 msgstr "In systeemflater is bard: %s"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:282
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:282
 #, c-format
 msgid "A fatal system error has occurred: %s"
 msgstr "In fatale systeemflater is bart: %s"
 
-#: ../gnome-session/gsm-process-helper.c:123
+#: ../scarecrow-session/gsm-process-helper.c:123
 #, c-format
 msgid "Exited with code %d"
 msgstr "Útgean mei koade %d"
 
-#: ../gnome-session/gsm-process-helper.c:128
+#: ../scarecrow-session/gsm-process-helper.c:128
 #, c-format
 msgid "Killed by signal %d"
 msgstr "Ôfbrutsen troch sinjaal %d"
 
-#: ../gnome-session/gsm-process-helper.c:133
+#: ../scarecrow-session/gsm-process-helper.c:133
 #, c-format
 msgid "Stopped by signal %d"
 msgstr "Stoppet troch signaal %d"
 
-#. Translators: This will look like: Component 'gnome-shell.desktop': Killed by signal 9.
+#. Translators: This will look like: Component 'scarecrow-shell.desktop': Killed by signal 9.
 #. * It is admittedly mostly technical goop.
-#: ../gnome-session/gsm-manager.c:260
+#: ../scarecrow-session/gsm-manager.c:260
 #, c-format
 msgid "Component '%s': %s"
 msgstr "Komponint '%s': %s"
 
-#: ../gnome-session/gsm-manager.c:561
+#: ../scarecrow-session/gsm-manager.c:561
 msgid "Killed by signal"
 msgstr "Ôfbrutsen troch sinjaal"
 
 #. Translators: "Timed out" refers to a non-responsive application not answering.
 #. In case the string is problematic it might be translated to the noun "Timeout".
-#: ../gnome-session/gsm-manager.c:619
+#: ../scarecrow-session/gsm-manager.c:619
 msgid "Timed out"
 msgstr "Wachttiid ferstriken"
 
-#: ../gnome-session/gsm-manager.c:1332
-msgid "GNOME 3 Failed to Load"
+#: ../scarecrow-session/gsm-manager.c:1332
+msgid "Scarecrow 3 Failed to Load"
 msgstr "Gnome 3 koe net laden wurde"
 
-#: ../gnome-session/gsm-manager.c:1333
+#: ../scarecrow-session/gsm-manager.c:1333
 msgid ""
-"Unfortunately GNOME 3 failed to start properly and started in the "
+"Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
 "\n"
 "This most likely means your system (graphics hardware or driver) is not "
-"capable of delivering the full GNOME 3 experience."
+"capable of delivering the full Scarecrow 3 experience."
 msgstr ""
 "Spitigernôch is Gnome 3 net goed starte en begjint no in de <i>weromfal "
 "modus</i>.\n"
@@ -388,77 +388,77 @@ msgstr ""
 "Dit betsjut wierskynlik dat jo systeem (grafyske hardware of "
 "stjoerprogramma) net de hiele Gnome 3 ûnderfining kin bringe."
 
-#: ../gnome-session/gsm-manager.c:1335
-msgid "Learn more about GNOME 3"
+#: ../scarecrow-session/gsm-manager.c:1335
+msgid "Learn more about Scarecrow 3"
 msgstr "Mear ynformaasje oer Gnome 3"
 
-#: ../gnome-session/gsm-manager.c:1432 ../gnome-session/gsm-manager.c:2156
+#: ../scarecrow-session/gsm-manager.c:1432 ../scarecrow-session/gsm-manager.c:2156
 msgid "Not responding"
 msgstr "Reagearret net"
 
-#: ../gnome-session/gsm-xsmp-client.c:1187
+#: ../scarecrow-session/gsm-xsmp-client.c:1187
 msgid "This program is blocking logout."
 msgstr "Dit programma hâldt it ôfmelde tsjin"
 
-#: ../gnome-session/gsm-xsmp-server.c:325
+#: ../scarecrow-session/gsm-xsmp-server.c:325
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Weigert nije ferbining mei klant omdat de sesje no ôfsluten wurd\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:587
+#: ../scarecrow-session/gsm-xsmp-server.c:587
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Koe net ICE-lústerjende hâlder oanmeitsje: %s"
 
 #. Oh well, no X for you!
-#: ../gnome-session/gsm-util.c:354
+#: ../scarecrow-session/gsm-util.c:354
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr ""
 "Kin oanmeldsesje net starte (en kin gjin kontakt mei de X-tsjinner meitsje)"
 
-#: ../gnome-session/main.c:276
+#: ../scarecrow-session/main.c:276
 msgid "Override standard autostart directories"
 msgstr "Standert autostarttriemtafels oerwâldzje"
 
-#: ../gnome-session/main.c:277
+#: ../scarecrow-session/main.c:277
 msgid "Session to use"
 msgstr "Te brûken sesje"
 
-#: ../gnome-session/main.c:278
+#: ../scarecrow-session/main.c:278
 msgid "Enable debugging code"
 msgstr "Útbrekkoade ynskeakelje"
 
-#: ../gnome-session/main.c:279
+#: ../scarecrow-session/main.c:279
 msgid "Do not load user-specified applications"
 msgstr "Net troch de brûker oantsjutte programma's lade"
 
-#: ../gnome-session/main.c:300
-msgid " - the GNOME session manager"
+#: ../scarecrow-session/main.c:300
+msgid " - the Scarecrow session manager"
 msgstr " - de Gnome sesjebehearder"
 
-#: ../tools/gnome-session-quit.c:52
+#: ../tools/scarecrow-session-quit.c:52
 msgid "Log out"
 msgstr "Ôfmelde"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Power off"
 msgstr "Ôfslute"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 msgid "Ignoring any existing inhibitors"
 msgstr "Alle besteande ferbieders negearjend"
 
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 msgid "Don't prompt for user confirmation"
 msgstr "De brûker gjin befêstiging freegje"
 
-#: ../tools/gnome-session-quit.c:89 ../tools/gnome-session-quit.c:99
+#: ../tools/scarecrow-session-quit.c:89 ../tools/scarecrow-session-quit.c:99
 msgid "Could not connect to the session manager"
 msgstr "Koe net ferbine mei de sesjebehearder"
 
-#: ../tools/gnome-session-quit.c:199
+#: ../tools/scarecrow-session-quit.c:199
 msgid "Program called with conflicting options"
 msgstr "Programma oanroppen mei stridige opsjes"
 
@@ -469,13 +469,13 @@ msgstr "Programma oanroppen mei stridige opsjes"
 #~ msgstr "Triembehearder"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will prompt the user before ending a session."
+#~ "If enabled, scarecrow-session will prompt the user before ending a session."
 #~ msgstr ""
-#~ "As dit ynskakele is, sil gnome-session de bruker freegje foar't hij de "
+#~ "As dit ynskakele is, sil scarecrow-session de bruker freegje foar't hij de "
 #~ "sesje beeindiget."
 
-#~ msgid "If enabled, gnome-session will save the session automatically."
-#~ msgstr "As dit ynskakele is, sil gnome-session de sesje automatysk bewarje."
+#~ msgid "If enabled, scarecrow-session will save the session automatically."
+#~ msgstr "As dit ynskakele is, sil scarecrow-session de sesje automatysk bewarje."
 
 #~ msgid "List of applications that are part of the default session."
 #~ msgstr "Lyst mei applikaasjes dy't in part binne fan de standerdsesje"
@@ -587,11 +587,11 @@ msgstr "Programma oanroppen mei stridige opsjes"
 #~ "Wachtsjen op beëinigjen fan applikaasje.  Ûnderbrekken fan de applikaasje "
 #~ "kin jo wurk kwyt meitsje."
 
-#~ msgid "- GNOME Splash Screen"
-#~ msgstr "- GNOME Splash-skerm"
+#~ msgid "- Scarecrow Splash Screen"
+#~ msgstr "- Scarecrow Splash-skerm"
 
-#~ msgid "GNOME Splash Screen"
-#~ msgstr "GNOME Splash-skerm"
+#~ msgid "Scarecrow Splash Screen"
+#~ msgstr "Scarecrow Splash-skerm"
 
 #~ msgid "Your session has been saved."
 #~ msgstr "Jo sesje is bewarre."
@@ -602,20 +602,20 @@ msgstr "Programma oanroppen mei stridige opsjes"
 #~ msgid "Could not connect to the session bus"
 #~ msgstr "Koe gjin ferbining meitsje mei de sesje bus"
 
-#~ msgid "GNOME Settings Daemon Helper"
-#~ msgstr "GNOME Ynstellings Demon Behearder"
+#~ msgid "Scarecrow Settings Daemon Helper"
+#~ msgstr "Scarecrow Ynstellings Demon Behearder"
 
-#~ msgid "Failsafe GNOME"
-#~ msgstr "Mislearfeiliche GNOME"
+#~ msgid "Failsafe Scarecrow"
+#~ msgstr "Mislearfeiliche Scarecrow"
 
-#~ msgid "This session logs you into GNOME without user applications"
-#~ msgstr "Dizze sesje meld jo oan yn GNOME sûnder brûker applikaasjes"
+#~ msgid "This session logs you into Scarecrow without user applications"
+#~ msgstr "Dizze sesje meld jo oan yn Scarecrow sûnder brûker applikaasjes"
 
 #~ msgid ""
-#~ "If enabled, gnome-session will save the session automatically. Otherwise, "
+#~ "If enabled, scarecrow-session will save the session automatically. Otherwise, "
 #~ "the logout dialog will have an option to save the session."
 #~ msgstr ""
-#~ "As dit ynskakele is, sil gnome-session de sesje automatysk opslaan. As "
+#~ "As dit ynskakele is, sil scarecrow-session de sesje automatysk opslaan. As "
 #~ "dat net it gefal is, sil it utlogfinster een opsje hawwe om de sesje op "
 #~ "te slaan."
 

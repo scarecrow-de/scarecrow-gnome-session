@@ -1,4 +1,4 @@
-# gnome-session Finnish translation
+# scarecrow-session Finnish translation
 # Copyright (C) 2002-2009 Free Software Foundation, Inc.
 # Ville Hautamäki <villeh@cs.joensuu.fi>, 1998, 2000.
 # Mikko Rauhala <mjr@iki.fi>, 1999.
@@ -12,8 +12,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2019-08-06 16:59+0000\n"
 "PO-Revision-Date: 2019-08-17 16:15+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
@@ -35,70 +35,70 @@ msgstr "Tämä kohta mahdollistaa tallennetun istunnon valinnan"
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
+msgid "Scarecrow"
 msgstr "Gnome"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "Tämä istunto kirjautuu Gnomeen"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
+msgid "Scarecrow dummy"
 msgstr "Gnome-malli-istunto (dummy)"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
+msgid "Scarecrow on Xorg"
 msgstr "Gnome Xorgia käyttäen"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Tallenna istunnot"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
-msgstr "Jos käytössä, gnome-session tallentaa istunnon automaatisesti."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
+msgstr "Jos käytössä, scarecrow-session tallentaa istunnon automaatisesti."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Tallenna tämä istunto"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"Jos käytössä, gnome-session tallentaa seuraavan istunnon automaatisesti "
+"Jos käytössä, scarecrow-session tallentaa seuraavan istunnon automaatisesti "
 "uloskirjautuessa vaikka automaattinen tallennus olisi pois käytöstä."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Uloskirjautumiskehote"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
 msgstr ""
-"Jos käytössä, gnome-session kysyy käyttäjältä ennen istunnon lopettamista."
+"Jos käytössä, scarecrow-session kysyy käyttäjältä ennen istunnon lopettamista."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 #, fuzzy
 #| msgid "Show extension warning"
 msgid "Show the fallback warning"
 msgstr "Näytä laajennusvaroitus"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 #, fuzzy
-#| msgid "If enabled, gnome-session will save the session automatically."
+#| msgid "If enabled, scarecrow-session will save the session automatically."
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
-msgstr "Jos käytössä, gnome-session tallentaa istunnon automaatisesti."
+msgstr "Jos käytössä, scarecrow-session tallentaa istunnon automaatisesti."
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "Omavalintainen istunto"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Valitse omavalintainen istunto"
 
@@ -118,11 +118,11 @@ msgstr "Ni_meä istunto uudelleen"
 msgid "_Continue"
 msgstr "_Jatka"
 
-#: gnome-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/gsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Voi ei! Jotain meni pieleen."
 
-#: gnome-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/gsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -130,7 +130,7 @@ msgstr ""
 "Esiintyi ongelma, josta järjestelmä ei pysty palautumaan. Ota yhteys "
 "järjestelmän ylläpitäjään"
 
-#: gnome-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/gsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -138,7 +138,7 @@ msgstr ""
 "Esiintyi ongelma, josta järjestelmä ei pysty palautumaan. Kaikki "
 "laajennukset on poistettu käytöstä varotoimenpiteenä."
 
-#: gnome-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/gsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -146,27 +146,27 @@ msgstr ""
 "Esiintyi ongelma, josta järjestelmä ei pysty palautumaan.\n"
 "Kirjaudu ulos ja yritä uudelleen."
 
-#: gnome-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/gsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "Kirjaudu ul_os"
 
-#: gnome-session/gsm-fail-whale-dialog.c:361 gnome-session/main.c:396
+#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
 msgid "Enable debugging code"
 msgstr "Käytä vianetsintäkoodia"
 
-#: gnome-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/gsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Salli uloskirjautuminen"
 
-#: gnome-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/gsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Näytä laajennusvaroitus"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1967
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1967
 msgid "Not responding"
 msgstr "Ei vastaa"
 
-#: gnome-session/gsm-util.c:382
+#: scarecrow-session/gsm-util.c:382
 msgid "_Log out"
 msgstr "Kirjau_du ulos"
 
@@ -174,15 +174,15 @@ msgstr "Kirjau_du ulos"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Muistettu sovellus"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Tämä ohjelma estää kirjautumisen ulos."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -190,84 +190,84 @@ msgstr ""
 "Kieltäydytään uudesta asiakasyhteydestä, koska istuntoa ollaan parhaillaan "
 "sulkemassa\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE-kuuntelupistoketta ei voi luoda: %s"
 
-#: gnome-session/main.c:390
+#: scarecrow-session/main.c:390
 msgid "Running as systemd service"
 msgstr "Suoritetaan systemd-palveluna"
 
-#: gnome-session/main.c:391
+#: scarecrow-session/main.c:391
 msgid "Use systemd session management"
 msgstr "Käytä systemd-istuntohallintaa"
 
-#: gnome-session/main.c:393
+#: scarecrow-session/main.c:393
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr ""
 "Käytä sisäänrakennettua istuntohallintaa systemd-istuntohallinan sijaan"
 
-#: gnome-session/main.c:394
+#: scarecrow-session/main.c:394
 msgid "Override standard autostart directories"
 msgstr "Korvaa automaattikäynnistyksen oletuskansiot"
 
-#: gnome-session/main.c:394
+#: scarecrow-session/main.c:394
 msgid "AUTOSTART_DIR"
 msgstr "AUTOKÄYN_HAK"
 
-#: gnome-session/main.c:395
+#: scarecrow-session/main.c:395
 msgid "Session to use"
 msgstr "Käytettävä istunto"
 
-#: gnome-session/main.c:395
+#: scarecrow-session/main.c:395
 msgid "SESSION_NAME"
 msgstr "ISTUNTONIMI"
 
-#: gnome-session/main.c:397
+#: scarecrow-session/main.c:397
 msgid "Do not load user-specified applications"
 msgstr "Älä lataa käyttäjän määrittelemiä sovelluksia"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Version of this application"
 msgstr "Tämän ohjelman versio"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:400
+#: scarecrow-session/main.c:400
 msgid "Show the fail whale dialog for testing"
 msgstr "Näytä musta virheikkuna testausta varten"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Disable hardware acceleration check"
 msgstr "Poista laitteistokiihdytyksen tarkistus käytöstä"
 
-#: gnome-session/main.c:433
-msgid " — the GNOME session manager"
+#: scarecrow-session/main.c:433
+msgid " — the Scarecrow session manager"
 msgstr " — Gnomen istunnonhallinta"
 
-#: tools/gnome-session-ctl.c:244
-msgid "Start gnome-session-shutdown.target"
-msgstr "Käynnistä gnome-session-shutdown.target"
+#: tools/scarecrow-session-ctl.c:244
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "Käynnistä scarecrow-session-shutdown.target"
 
-#: tools/gnome-session-ctl.c:245
+#: tools/scarecrow-session-ctl.c:245
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
 
-#: tools/gnome-session-ctl.c:246
-msgid "Signal initialization done to gnome-session"
+#: tools/scarecrow-session-ctl.c:246
+msgid "Signal initialization done to scarecrow-session"
 msgstr ""
 
-#: tools/gnome-session-ctl.c:247
+#: tools/scarecrow-session-ctl.c:247
 msgid "Restart dbus.service if it is running"
 msgstr "Käynnistä dbus.service uudelleen jos se on käynnissä"
 
-#: tools/gnome-session-ctl.c:275
+#: tools/scarecrow-session-ctl.c:275
 msgid "Program needs exactly one parameter"
 msgstr ""
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -286,64 +286,64 @@ msgid ""
 "If no --inhibit option is specified, idle is assumed.\n"
 msgstr ""
 
-#: tools/gnome-session-inhibit.c:146
+#: tools/scarecrow-session-inhibit.c:146
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "Kohteen %s suorittaminen epäonnistui\n"
 
-#: tools/gnome-session-inhibit.c:206 tools/gnome-session-inhibit.c:216
-#: tools/gnome-session-inhibit.c:226
+#: tools/scarecrow-session-inhibit.c:206 tools/scarecrow-session-inhibit.c:216
+#: tools/scarecrow-session-inhibit.c:226
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s vaatii argumentin\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Kirjaudu ulos"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Sammuta"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Käynnistä uudelleen"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Jätä käynnissä olevat estot huomioimatta"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Älä kysy käyttäjän vahvistusta"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Istunnonhallintaan ei saa yhteyttä"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Ohjelmaa kutsuttiin ristiriitaisilla valitsimilla"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Istunto %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "Istuntonimi ei voi alkaa merkillä “.” tai sisältää merkkiä “/”"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Istuntonimi ei voi alkaa merkillä “.”"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Istuntonimi ei voi sisältää merkkiä “/”"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "Istunto nimeltä “%s” on jo olemassa"
@@ -375,7 +375,7 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgid "_Name:"
 #~ msgstr "_Nimi:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr "Tämä istunto kirjautuu Gnomeen Waylandia käyttäen"
 
 #~ msgid "Select Command"
@@ -557,15 +557,15 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgid "Icon '%s' not found"
 #~ msgstr "Kuvaketta ”%s” ei löydy"
 
-#~ msgid "GNOME 3 Failed to Load"
+#~ msgid "Scarecrow 3 Failed to Load"
 #~ msgstr "Gnome 3 lataus epäonnistui"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
 #~ "Valitettavasti Gnome 3:n täysi käynnistys epäonnistui ja se "
 #~ "käynnistettiin <i>varatilassa</i>.\n"
@@ -573,8 +573,8 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ "Yleensä tämä tarkoittaa, että järjestelmäsi (grafiikkalaitteisto tai -"
 #~ "ajuri) ei pysty tarjoamaan täyttä Gnome 3 -kokemusta."
 
-#~ msgid "Learn more about GNOME 3"
-#~ msgstr "Opi lisää GNOME 3 -työpöydästä"
+#~ msgid "Learn more about Scarecrow 3"
+#~ msgstr "Opi lisää Scarecrow 3 -työpöydästä"
 
 #~ msgid ""
 #~ "Unable to start login session (and unable to connect to the X server)"
@@ -680,7 +680,7 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgid "Ubuntu Desktop Edition"
 #~ msgstr "Ubuntu työpöydille"
 
-#~ msgid "This session logs you into GNOME without user applications"
+#~ msgid "This session logs you into Scarecrow without user applications"
 #~ msgstr "Tämä istunto kirjautuu Gnomeen ilman käyttäjäsovelluksia"
 
 #~ msgid "Ubuntu Desktop Edition (Safe Mode)"
@@ -728,13 +728,13 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgid "Cannot find help."
 #~ msgstr "Ohjetta ei löydy."
 
-#~ msgid "GNOME Splash Screen"
+#~ msgid "Scarecrow Splash Screen"
 #~ msgstr "Gnomen käynnistymisikkuna"
 
-#~ msgid "GNOME Settings Daemon Helper"
+#~ msgid "Scarecrow Settings Daemon Helper"
 #~ msgstr "Gnomen asetuspalvelimen käärin"
 
-#~ msgid "- GNOME Splash Screen"
+#~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "- Gnomen käynnistymisikkuna"
 
 #~ msgid ""

@@ -1,0 +1,10 @@
+[Unit]
+Description=Scarecrow Session Failed
+
+# We need an initialized session
+Requisite=scarecrow-session-initialized.target
+BindsTo=scarecrow-session-initialized.target
+After=scarecrow-session-initialized.target
+
+BindsTo=scarecrow-session-failed.service
+After=scarecrow-session-failed.service

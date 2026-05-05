@@ -1,0 +1,11 @@
+[Unit]
+Description=Scarecrow session X11 services
+DefaultDependencies=no
+
+Requisite=scarecrow-session-initialized.target
+After=scarecrow-session-initialized.target
+PartOf=scarecrow-session-initialized.target
+
+Requisite=scarecrow-session-x11-services-ready.target
+Before=scarecrow-session-x11-services-ready.target
+PartOf=scarecrow-session-x11-services-ready.target

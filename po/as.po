@@ -29,31 +29,31 @@ msgid "This entry lets you select a saved session"
 msgstr "এই প্ৰৱিষ্টিয়ে আপোনাক এটা সংৰক্ষিত অধিবেশন নিৰ্বাচন কৰাত সহায় কৰে"
 
 #: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: ../data/gnome.desktop.in.h:2
-msgid "This session logs you into GNOME"
-msgstr "এই অধিবেশনে আপোনাক GNOME ত লগিন কৰায়"
+msgid "This session logs you into Scarecrow"
+msgstr "এই অধিবেশনে আপোনাক Scarecrow ত লগিন কৰায়"
 
 #: ../data/gnome-dummy.session.desktop.in.in.h:1
-msgid "GNOME dummy"
-msgstr "GNOME ডামি"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow ডামি"
 
 #: ../data/gnome-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
-msgid "GNOME on Wayland"
-msgstr "Wayland ত GNOME"
+msgid "Scarecrow on Wayland"
+msgstr "Wayland ত Scarecrow"
 
 #: ../data/gnome-wayland.desktop.in.h:2
-msgid "This session logs you into GNOME, using Wayland"
-msgstr "এই অধিবেশনে আপোনাক Wayland ব্যৱহাৰ কৰি, GNOME ত লগিন কৰায়"
+msgid "This session logs you into Scarecrow, using Wayland"
+msgstr "এই অধিবেশনে আপোনাক Wayland ব্যৱহাৰ কৰি, Scarecrow ত লগিন কৰায়"
 
 #: ../data/session-selector.ui.h:1
 msgid "Custom Session"
 msgstr "স্বনিৰ্বাচিত অধিবেশন"
 
-#: ../data/session-selector.ui.h:2 ../tools/gnome-session-selector.c:103
+#: ../data/session-selector.ui.h:2 ../tools/scarecrow-session-selector.c:103
 msgid "Please select a custom session to run"
 msgstr "অনুগ্ৰহ কৰি চলাবলে এটা স্বনিৰ্বাচিত অধিবেশন বাছক"
 
@@ -109,11 +109,11 @@ msgstr "কমান্ড (_m):"
 msgid "_Name:"
 msgstr "নাম (_N):"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:323
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:323
 msgid "Oh no!  Something has gone wrong."
 msgstr "ইচচ! কিবা এটা ভুল হৈছে।"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:330
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:330
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -121,7 +121,7 @@ msgstr ""
 "এটা সমস্যা দেখা দিছে আৰু চিস্টেমটো উদ্ধাৰ হব পৰা নাই। অনুগ্ৰহ কৰি এজন চিস্টেম "
 "প্ৰশাসকক যোগাযোগ কৰক"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:332
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:332
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -130,7 +130,7 @@ msgstr ""
 "সাৱধানতা "
 "হিচাপে অসামৰ্থবান কৰা হৈছে।"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:334
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:334
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -138,27 +138,27 @@ msgstr ""
 "এটা সমস্যা দেখা দিছে আৰু চিস্টেমটো উদ্ধাৰ হব পৰা নাই।\n"
 "অনুগ্ৰহ কৰি লগআউট কৰক আৰু পুনৰ চেষ্টা কৰক।"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:349
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:349
 msgid "_Log Out"
 msgstr "লগআউট কৰক (_L)"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:371 ../gnome-session/main.c:307
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:371 ../scarecrow-session/main.c:307
 msgid "Enable debugging code"
 msgstr "ক'ড ডিবাগিং সামৰ্থবান কৰক"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:372
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:372
 msgid "Allow logout"
 msgstr "লগআউটৰ অনুমতি দিয়ক"
 
-#: ../gnome-session/gsm-fail-whale-dialog.c:373
+#: ../scarecrow-session/gsm-fail-whale-dialog.c:373
 msgid "Show extension warning"
 msgstr "সম্প্ৰসাৰনৰ সতৰ্কবাৰ্তা দেখুৱাওক"
 
-#: ../gnome-session/gsm-manager.c:1272 ../gnome-session/gsm-manager.c:2044
+#: ../scarecrow-session/gsm-manager.c:1272 ../scarecrow-session/gsm-manager.c:2044
 msgid "Not responding"
 msgstr "কোনো প্ৰতিক্ৰিয়া নাই"
 
-#: ../gnome-session/gsm-util.c:411
+#: ../scarecrow-session/gsm-util.c:411
 msgid "_Log out"
 msgstr "লগআউট কৰক (_L)"
 
@@ -166,15 +166,15 @@ msgstr "লগআউট কৰক (_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../gnome-session/gsm-xsmp-client.c:559
+#: ../scarecrow-session/gsm-xsmp-client.c:559
 msgid "Remembered Application"
 msgstr "মনত ৰখা এপ্লিকেচন"
 
-#: ../gnome-session/gsm-xsmp-client.c:1209
+#: ../scarecrow-session/gsm-xsmp-client.c:1209
 msgid "This program is blocking logout."
 msgstr "এই প্ৰগ্ৰামে লগআউট অবৰোধ কৰি আছে।"
 
-#: ../gnome-session/gsm-xsmp-server.c:341
+#: ../scarecrow-session/gsm-xsmp-server.c:341
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -183,45 +183,45 @@ msgstr ""
 "সংযোগ "
 "স্থাপনৰ অনুৰোধ প্ৰত্যাখ্যান কৰা হৈছে।\n"
 
-#: ../gnome-session/gsm-xsmp-server.c:610
+#: ../scarecrow-session/gsm-xsmp-server.c:610
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE অপেক্ষাৰ ছ'কেট নিৰ্মাণ কৰিবলৈ ব্যৰ্থ: %s"
 
-#: ../gnome-session/main.c:305
+#: ../scarecrow-session/main.c:305
 msgid "Override standard autostart directories"
 msgstr "প্ৰামাণিক স্বআৰম্ভ ডাইৰেকটৰিসমূহ অভাৰৰাইড কৰক"
 
-#: ../gnome-session/main.c:305
+#: ../scarecrow-session/main.c:305
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-#: ../gnome-session/main.c:306
+#: ../scarecrow-session/main.c:306
 msgid "Session to use"
 msgstr "ব্যৱহাৰ হ'ব লগিয়া অধিবেশন"
 
-#: ../gnome-session/main.c:306
+#: ../scarecrow-session/main.c:306
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: ../gnome-session/main.c:308
+#: ../scarecrow-session/main.c:308
 msgid "Do not load user-specified applications"
 msgstr "ব্যৱহাৰকাৰী দ্বাৰা নিৰ্ধাৰিত এপ্লিকেচনসমূহ ল'ড নকৰিব"
 
-#: ../gnome-session/main.c:309
+#: ../scarecrow-session/main.c:309
 msgid "Version of this application"
 msgstr "এই এপ্লিকেচনৰ সংস্কৰণ"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: ../gnome-session/main.c:311
+#: ../scarecrow-session/main.c:311
 msgid "Show the fail whale dialog for testing"
 msgstr "পৰিক্ষণৰ বাবে ব্যৰ্থ হোৱেইল ডাইলগ দেখুৱাওক"
 
-#: ../gnome-session/main.c:344
-msgid " - the GNOME session manager"
-msgstr "- GNOME অধিবেশন ব্যৱস্থাপক"
+#: ../scarecrow-session/main.c:344
+msgid " - the Scarecrow session manager"
+msgstr "- Scarecrow অধিবেশন ব্যৱস্থাপক"
 
-#: ../tools/gnome-session-inhibit.c:110
+#: ../tools/scarecrow-session-inhibit.c:110
 #, c-format
 msgid ""
 "%s [OPTION...] COMMAND\n"
@@ -254,67 +254,67 @@ msgstr ""
 "\n"
 "যদি কোনো --inhibit বিকল্প ধাৰ্য্য কৰা হোৱা নাই, idle ধৰি লোৱা হয়।\n"
 
-#: ../tools/gnome-session-inhibit.c:148
+#: ../tools/scarecrow-session-inhibit.c:148
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "%s এক্সিকিউট কৰিবলে ব্যৰ্থ\n"
 
-#: ../tools/gnome-session-inhibit.c:208 ../tools/gnome-session-inhibit.c:218
-#: ../tools/gnome-session-inhibit.c:228
+#: ../tools/scarecrow-session-inhibit.c:208 ../tools/scarecrow-session-inhibit.c:218
+#: ../tools/scarecrow-session-inhibit.c:228
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s ৰ এটা তৰ্কৰ প্ৰয়োজন\n"
 
-#: ../tools/gnome-session-selector.c:62
+#: ../tools/scarecrow-session-selector.c:62
 #, c-format
 msgid "Session %d"
 msgstr "অধিবেশন %d"
 
-#: ../tools/gnome-session-selector.c:108
+#: ../tools/scarecrow-session-selector.c:108
 msgid ""
 "Session names are not allowed to start with ‘.’ or contain ‘/’ characters"
 msgstr ""
 "অধিবেশন নামসমূহ ‘.’ ৰ সৈতে আৰম্ভ হোৱাৰ অথবা ‘/’ আখৰসমূহ অন্তৰ্ভুক্ত কৰাৰ "
 "অনুমতি নাই"
 
-#: ../tools/gnome-session-selector.c:112
+#: ../tools/scarecrow-session-selector.c:112
 msgid "Session names are not allowed to start with ‘.’"
 msgstr "অধিবেশন নামসমূহ ‘.’ ৰ সৈতে আৰম্ভ হোৱাৰ অনুমতি নাই"
 
-#: ../tools/gnome-session-selector.c:116
+#: ../tools/scarecrow-session-selector.c:116
 msgid "Session names are not allowed to contain ‘/’ characters"
 msgstr "অধিবেশন নামসমূহ ‘/’ আখৰসমূহ অন্তৰ্ভুক্ত কৰাৰ অনুমতি নাই"
 
-#: ../tools/gnome-session-selector.c:124
+#: ../tools/scarecrow-session-selector.c:124
 #, c-format
 msgid "A session named ‘%s’ already exists"
 msgstr "‘%s’ নামৰ এটা অধিবেশন ইতিমধ্যে অস্তিত্ববান"
 
-#: ../tools/gnome-session-quit.c:53
+#: ../tools/scarecrow-session-quit.c:53
 msgid "Log out"
 msgstr "লগআউট কৰক"
 
-#: ../tools/gnome-session-quit.c:54
+#: ../tools/scarecrow-session-quit.c:54
 msgid "Power off"
 msgstr "বন্ধ কৰক"
 
-#: ../tools/gnome-session-quit.c:55
+#: ../tools/scarecrow-session-quit.c:55
 msgid "Reboot"
 msgstr "পুনৰাম্ভ কৰক"
 
-#: ../tools/gnome-session-quit.c:56
+#: ../tools/scarecrow-session-quit.c:56
 msgid "Ignoring any existing inhibitors"
 msgstr "কোনো উপস্থিত প্ৰতিৰোধ অগ্ৰাহ্য কৰা হৈ আছে"
 
-#: ../tools/gnome-session-quit.c:57
+#: ../tools/scarecrow-session-quit.c:57
 msgid "Don't prompt for user confirmation"
 msgstr "ব্যৱহাৰকাৰী নিশ্চিতকৰণৰ কাৰণে প্ৰমপ্ট নকৰিব"
 
-#: ../tools/gnome-session-quit.c:91 ../tools/gnome-session-quit.c:101
+#: ../tools/scarecrow-session-quit.c:91 ../tools/scarecrow-session-quit.c:101
 msgid "Could not connect to the session manager"
 msgstr "অধিবেশন ব্যৱস্থাপকৰ সৈতে সংযোগ স্থাপন কৰিবলৈ ব্যৰ্থ"
 
-#: ../tools/gnome-session-quit.c:203
+#: ../tools/scarecrow-session-quit.c:203
 msgid "Program called with conflicting options"
 msgstr "দ্বন্দ্বযুক্ত বিকল্প সহ প্ৰগ্ৰামক কল কৰা হৈছে"
 

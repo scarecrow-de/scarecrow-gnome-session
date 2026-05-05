@@ -1,7 +1,7 @@
-# Persian translation of gnome-session.
+# Persian translation of scarecrow-session.
 # Copyright (C) 2010, 2011, Iranian Free Software Users Group (IFSUG.org)translation team.
 # Copyright (C) 2002, 2003, 2005, 2006 Sharif FarsiWeb, Inc.
-# This file is distributed under the same license as gnome-session package.
+# This file is distributed under the same license as scarecrow-session package.
 # Roozbeh Pournader <roozbeh@farsiweb.info>, 2002, 2003.
 # Elnaz Sarbar <elnaz@farsiweb.info>, 2005, 2006.
 # Meelad Zakaria <meelad@farsiweb.info>, 2006.
@@ -11,8 +11,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session 2.10.0\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session 2.10.0\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2020-07-31 14:02+0000\n"
 "PO-Revision-Date: 2020-08-18 17:00+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
@@ -35,68 +35,68 @@ msgstr "این ورودی می‌گذارد نشست ذخیره‌شده‌ای 
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
+msgid "Scarecrow"
 msgstr "گنوم"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
+msgid "This session logs you into Scarecrow"
 msgstr "این نشست شما را به گنوم وارد می‌کند"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
+msgid "Scarecrow dummy"
 msgstr "گنوم ساختگی"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
+msgid "Scarecrow on Xorg"
 msgstr "گنوم روی زورگ"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "_ذخیرهٔ نشست‌ها"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
 msgstr "در صورت فعّال بودن، گنوم به صورت خودکار، نشست را ذخیره می‌کند."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "ذخیرهٔ این نشست"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"هنگام فعّال بودن، gnome-session به صورت خودکار، نشست بعدی را هنگام خروج ذخیره "
+"هنگام فعّال بودن، scarecrow-session به صورت خودکار، نشست بعدی را هنگام خروج ذخیره "
 "می‌کند، حتا اگر ذخیرهٔ خودکار غیرفعّال باشد."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "اعلان خروج"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
 msgstr ""
-"در صورت فعّال بودن، gnome-session پیش از اتمام یک نشست، به کاربر اعلان می‌دهد."
+"در صورت فعّال بودن، scarecrow-session پیش از اتمام یک نشست، به کاربر اعلان می‌دهد."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "نمایش هشدار جایگزینی"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
-"در صورت فعّال بودن، اگر نشست به صورت خودکار به عقب افتاده باشد، gnome-session "
+"در صورت فعّال بودن، اگر نشست به صورت خودکار به عقب افتاده باشد، scarecrow-session "
 "یک پنجرهٔ هشدار پس از ورود نمایش خواهد داد."
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "نشست سفارشی"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "لطفاً یک نشست سفارشی را برای اجرا برگزینید"
 
@@ -116,11 +116,11 @@ msgstr "_تغییرنام نشست"
 msgid "_Continue"
 msgstr "_ادامه"
 
-#: gnome-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/gsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "وای نه!  اشتباهی رخ داد."
 
-#: gnome-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/gsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -128,7 +128,7 @@ msgstr ""
 "مشکلی رخ داده و سامانه نمی‌تواند بازیابی شود. لطفاً با یک مدیر سامانه تماس "
 "بگیرید"
 
-#: gnome-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/gsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have been "
 "disabled as a precaution."
@@ -136,7 +136,7 @@ msgstr ""
 "مشکلی رخ داده و سامانه نمی‌تواند بازیابی شود. تمام افزونه‌ها جهت احتیاط غیرفعال "
 "شده‌اند."
 
-#: gnome-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/gsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -144,27 +144,27 @@ msgstr ""
 "مشکلی رخ داده و سامانه نمی‌تواند بازیابی شود.\n"
 "لطفاً خارج شده و دوباره بیازمایید."
 
-#: gnome-session/gsm-fail-whale-dialog.c:344
+#: scarecrow-session/gsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "_خروج"
 
-#: gnome-session/gsm-fail-whale-dialog.c:412 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "کد اشکال‌زدایی به کار انداخته شود"
 
-#: gnome-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/gsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "اجازهٔ خروج"
 
-#: gnome-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/gsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "نمایش هشدار افزونه"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "ناپاسخگو"
 
-#: gnome-session/gsm-util.c:415
+#: scarecrow-session/gsm-util.c:415
 msgid "_Log out"
 msgstr "_خروج"
 
@@ -172,105 +172,105 @@ msgstr "_خروج"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "به خاطر سپردن برنامه"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "این برنامه جلوی خروج را گرفته است."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "چون سامانه در حال خاموش شدن است، درخواست اتصال کارخواه رد می‌شود\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ایجاد سوکت شنود ICE ممکن نبود: %s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "در حال اجرا به عنوان خدمت سیستم‌دی"
 
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "استفاده از مدیریت نشست سیستم‌دی"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr ""
 "استفاده از مدیریت نشست توکار (به جای استفاده از مدیریت مبتنی بر سیستم‌دی)"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "شاخه‌های استاندارد آغاز خودکار، نادیده گرفته شود"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "نشست مورد استفاده"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "SESSION_NAME"
 
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "بار نکردن برنامه‌های مختص کاربر"
 
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "نگارش این برنامه"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "نمایش بالن محاوره شکست جهت آزمایش"
 
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "غیرفعال‌سازی بررسی شتابدهنده سخت‌افزاری"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
 msgstr " — مدیر نشست گنوم"
 
-#: tools/gnome-session-ctl.c:245
-msgid "Start gnome-session-shutdown.target"
-msgstr "شروع gnome-session-shutdown.target"
+#: tools/scarecrow-session-ctl.c:245
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "شروع scarecrow-session-shutdown.target"
 
-#: tools/gnome-session-ctl.c:246
+#: tools/scarecrow-session-ctl.c:246
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
-msgstr "شروع gnome-session-shutdown.target هنگام دریافت EOF یا تک‌بایت روی stdin"
+msgstr "شروع scarecrow-session-shutdown.target هنگام دریافت EOF یا تک‌بایت روی stdin"
 
-#: tools/gnome-session-ctl.c:247
-msgid "Signal initialization done to gnome-session"
-msgstr "آغازش سیگنال به gnome-session انجام شد"
+#: tools/scarecrow-session-ctl.c:247
+msgid "Signal initialization done to scarecrow-session"
+msgstr "آغازش سیگنال به scarecrow-session انجام شد"
 
-#: tools/gnome-session-ctl.c:248
+#: tools/scarecrow-session-ctl.c:248
 msgid "Restart dbus.service if it is running"
 msgstr "شروع دوبارهٔ dbus.service در صورت اجرا"
 
-#: tools/gnome-session-ctl.c:249
+#: tools/scarecrow-session-ctl.c:249
 msgid ""
-"Run from ExecStopPost to start gnome-session-failed.target on service failure"
+"Run from ExecStopPost to start scarecrow-session-failed.target on service failure"
 msgstr ""
-"برای آغاز gnome-session-failed.target هنگام شکست خدمت، از ExecStopPost اجرا "
+"برای آغاز scarecrow-session-failed.target هنگام شکست خدمت، از ExecStopPost اجرا "
 "کنید"
 
-#: tools/gnome-session-ctl.c:279
+#: tools/scarecrow-session-ctl.c:279
 msgid "Program needs exactly one parameter"
 msgstr "برنامه دقیقاً به یک پارامتر نیاز دارد"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -305,69 +305,69 @@ msgstr ""
 "\n"
 "اگر گزینهٔ no --inhibit مشخّص شود، idle در نظر گرفته می‌شود.\n"
 
-#: tools/gnome-session-inhibit.c:288
+#: tools/scarecrow-session-inhibit.c:288
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "اجرای %s شکست خورد\n"
 
-#: tools/gnome-session-inhibit.c:352 tools/gnome-session-inhibit.c:362
-#: tools/gnome-session-inhibit.c:372
+#: tools/scarecrow-session-inhibit.c:352 tools/scarecrow-session-inhibit.c:362
+#: tools/scarecrow-session-inhibit.c:372
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "دستور %s احتیاج به یک آرگومان دارد\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "خروج"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "خاموش کردن"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "راه‌اندازی دوباره"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "هرگونه مهارکننده‌های خروج را نادیده بگیر"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "برای تایید هویت کاربر هشدار نده"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "اتصال به مدیر نشست ممکن نیست"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "برنامه با گزینه‌های ناسازگار فراخوانده شده است"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "نشست %Id"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr "نام نشست‌ها نمی‌توانند با «.» شروع شده یا شامل نویسهٔ «/» باشند"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "نام نشست‌ها نمی‌توانند با «.» شروع شوند"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "نام نشست‌ها نمی‌توانند شامل نویسهٔ «/» باشند"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "نشستی با نام «%s» از پیش وجود دارد"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
 #~ msgstr "این نشست، با استفاده از Wayland شما را به گنوم وارد می‌کند"
 
 #~ msgid "Additional startup _programs:"
@@ -605,15 +605,15 @@ msgstr "نشستی با نام «%s» از پیش وجود دارد"
 #~ msgid "Icon '%s' not found"
 #~ msgstr "نقشک «%s» پیدا نشد"
 
-#~ msgid "GNOME 3 Failed to Load"
+#~ msgid "Scarecrow 3 Failed to Load"
 #~ msgstr "بارگیری گنوم ۳ شکست خورد"
 
 #~ msgid ""
-#~ "Unfortunately GNOME 3 failed to start properly and started in the "
+#~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
 #~ "<i>fallback mode</i>.\n"
 #~ "\n"
 #~ "This most likely means your system (graphics hardware or driver) is not "
-#~ "capable of delivering the full GNOME 3 experience."
+#~ "capable of delivering the full Scarecrow 3 experience."
 #~ msgstr ""
 #~ "متاسفانه اجرای صحیح گنوم ۳ با مشکل مواجه شد و در <i>حالت یدکی</i> اجرا "
 #~ "شد.\n"
@@ -621,7 +621,7 @@ msgstr "نشستی با نام «%s» از پیش وجود دارد"
 #~ "این موضوع اکثرا به این علت است که سیستم شما (سخت‌افزار گرافیکی یا راه‌انداز) "
 #~ "قابلیت ارائه‌ی کامل گنوم ۳ را ندارد."
 
-#~ msgid "Learn more about GNOME 3"
+#~ msgid "Learn more about Scarecrow 3"
 #~ msgstr "اطلاعات بیشتر در مورد گنوم ۳"
 
 #~ msgid "Unable to start login session (and unable to connect to the X server)"

@@ -1,12 +1,12 @@
-# Kazakh translation for gnome-session.
-# Copyright (C) 2013 gnome-session's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-session package.
+# Kazakh translation for scarecrow-session.
+# Copyright (C) 2013 scarecrow-session's COPYRIGHT HOLDER
+# This file is distributed under the same license as the scarecrow-session package.
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2013-2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-session master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-session/issues\n"
+"Project-Id-Version: scarecrow-session master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/Scarecrow/scarecrow-session/issues\n"
 "POT-Creation-Date: 2020-08-12 23:38+0000\n"
 "PO-Revision-Date: 2020-08-16 13:35+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
@@ -28,71 +28,71 @@ msgstr "Бұл элемент сізге сақталып тұрған сесс�
 
 #: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
 #: data/gnome-wayland.desktop.in.in:3
-msgid "GNOME"
-msgstr "GNOME"
+msgid "Scarecrow"
+msgstr "Scarecrow"
 
 #: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
 #: data/gnome-xorg.desktop.in.in:4
-msgid "This session logs you into GNOME"
-msgstr "Бұл сессия арқылы GNOME-ға кіресіз"
+msgid "This session logs you into Scarecrow"
+msgstr "Бұл сессия арқылы Scarecrow-ға кіресіз"
 
 #: data/gnome-dummy.session.desktop.in.in:3
-msgid "GNOME dummy"
-msgstr "GNOME жалған сессиясы"
+msgid "Scarecrow dummy"
+msgstr "Scarecrow жалған сессиясы"
 
 #: data/gnome-xorg.desktop.in.in:3
-msgid "GNOME on Xorg"
-msgstr "Xorg негізіндегі GNOME"
+msgid "Scarecrow on Xorg"
+msgstr "Xorg негізіндегі Scarecrow"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Сессияларды сақтау"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
-msgid "If enabled, gnome-session will save the session automatically."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:6
+msgid "If enabled, scarecrow-session will save the session automatically."
 msgstr ""
-"Іске қосылған болса, gnome-session сессияны автоматты түрде сақтайтын болады."
+"Іске қосылған болса, scarecrow-session сессияны автоматты түрде сақтайтын болады."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Бұл сессияны сақтау"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:11
 msgid ""
-"When enabled, gnome-session will automatically save the next session at log "
+"When enabled, scarecrow-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
-"Іске қосылған болса, gnome-session келесі сессияны шыққан кезде "
+"Іске қосылған болса, scarecrow-session келесі сессияны шыққан кезде "
 "автосақтайды, автоматты түрде сақтау сөндірілген болса да."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Жүйеден шығу сұрауы"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
-msgid "If enabled, gnome-session will prompt the user before ending a session."
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:16
+msgid "If enabled, scarecrow-session will prompt the user before ending a session."
 msgstr ""
-"Іске қосылған болса, gnome-session сессияны аяқтаудың алдында пайдаланушыдан "
+"Іске қосылған болса, scarecrow-session сессияны аяқтаудың алдында пайдаланушыдан "
 "растауды сұрайтын болады."
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Бастапқы сессияға оралу ескертуін көрсету"
 
-#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:21
 msgid ""
-"If enabled, gnome-session will display a warning dialog after login if the "
+"If enabled, scarecrow-session will display a warning dialog after login if the "
 "session was automatically fallen back."
 msgstr ""
 "Іске қосылған болса, жүйеге кірген кезде сессия автоматты түрде бастапқы "
-"түріне орнатылған болса, gnome-session ескерту хабарламасын көрсететін "
+"түріне орнатылған болса, scarecrow-session ескерту хабарламасын көрсететін "
 "болады."
 
 #: data/session-selector.ui:15
 msgid "Custom Session"
 msgstr "Таңдауыңызша сесия"
 
-#: data/session-selector.ui:50 tools/gnome-session-selector.c:102
+#: data/session-selector.ui:50 tools/scarecrow-session-selector.c:102
 msgid "Please select a custom session to run"
 msgstr "Жөнелту үшін таңдауыңызша сессияны таңдаңыз"
 
@@ -112,11 +112,11 @@ msgstr "Сессия атауын өз_герту"
 msgid "_Continue"
 msgstr "Жалға_стыру"
 
-#: gnome-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/gsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "Қап! Бір нәрсе қате кетті."
 
-#: gnome-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/gsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -124,7 +124,7 @@ msgstr ""
 "Мәселе орын алды және жүйе өз қалпына келе алмады. Жүйелік әкімшіңізге "
 "хабарласыңыз"
 
-#: gnome-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/gsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -132,7 +132,7 @@ msgstr ""
 "Мәселе орын алды және жүйе өз қалпына келе алмады. Барлық кеңейтулер сақтық "
 "мақсатында сөндірілген."
 
-#: gnome-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/gsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -140,27 +140,27 @@ msgstr ""
 "Мәселе орын алды және жүйе өз қалпына келе алмады.\n"
 "Жүйеден шығып, қайталап көріңіз."
 
-#: gnome-session/gsm-fail-whale-dialog.c:344
+#: scarecrow-session/gsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "Жүйеден ш_ығу"
 
-#: gnome-session/gsm-fail-whale-dialog.c:412 gnome-session/main.c:404
+#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "Жөндеу кодын іске қосу"
 
-#: gnome-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/gsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "Жүйеден шығуды рұқсат ету"
 
-#: gnome-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/gsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "Кеңейту ескертуін көрсету"
 
-#: gnome-session/gsm-manager.c:1289 gnome-session/gsm-manager.c:1999
+#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
 msgid "Not responding"
 msgstr "Жауап бермейді"
 
-#: gnome-session/gsm-util.c:415
+#: scarecrow-session/gsm-util.c:415
 msgid "_Log out"
 msgstr "Жүйеден _шығу"
 
@@ -168,106 +168,106 @@ msgstr "Жүйеден _шығу"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: gnome-session/gsm-xsmp-client.c:557
+#: scarecrow-session/gsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Есте сақталған қолданбалар"
 
-#: gnome-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/gsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Бұл бағдарлама жүйеден шығуды болдырмай тұр."
 
-#: gnome-session/gsm-xsmp-server.c:338
+#: scarecrow-session/gsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Жаңа клиенттік байланысын тайдыру, өйткені жүйе қазір сөндірілуде\n"
 
-#: gnome-session/gsm-xsmp-server.c:605
+#: scarecrow-session/gsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE тындаушы сокетін жасау мүмкін емес: %s"
 
-#: gnome-session/main.c:398
+#: scarecrow-session/main.c:398
 msgid "Running as systemd service"
 msgstr "systemd қызметі ретінде орындалуда"
 
-#: gnome-session/main.c:399
+#: scarecrow-session/main.c:399
 msgid "Use systemd session management"
 msgstr "systemd сессия басқаруын қолдану"
 
-#: gnome-session/main.c:401
+#: scarecrow-session/main.c:401
 msgid "Use builtin session management (rather than the systemd based one)"
 msgstr "Құрамындағы сессияларды басқаруды қолдану (systemd-негізіндегі орнына)"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "Override standard autostart directories"
 msgstr "Стандартты іске қосылу бумалардың орнына басқаларды қолдану"
 
-#: gnome-session/main.c:402
+#: scarecrow-session/main.c:402
 msgid "AUTOSTART_DIR"
 msgstr "АВТОІСКЕҚОСЫЛУ_БУМАСЫ"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "Session to use"
 msgstr "Қолдану үшін сессия"
 
-#: gnome-session/main.c:403
+#: scarecrow-session/main.c:403
 msgid "SESSION_NAME"
 msgstr "СЕССИЯ_АТЫ"
 
-#: gnome-session/main.c:405
+#: scarecrow-session/main.c:405
 msgid "Do not load user-specified applications"
 msgstr "Пайдаланушыға тән қолданбаларды жөнелтпеу"
 
-#: gnome-session/main.c:406
+#: scarecrow-session/main.c:406
 msgid "Version of this application"
 msgstr "Осы қолданбаның нұсқасы"
 
 #. Translators: the 'fail whale' is the black dialog we show when something goes seriously wrong
-#: gnome-session/main.c:408
+#: scarecrow-session/main.c:408
 msgid "Show the fail whale dialog for testing"
 msgstr "Сынау үшін \"fail whale\" сұхбатын көрсету"
 
-#: gnome-session/main.c:409
+#: scarecrow-session/main.c:409
 msgid "Disable hardware acceleration check"
 msgstr "Құрылғылық үдетуді тексеруді сөндіру"
 
-#: gnome-session/main.c:441
-msgid " — the GNOME session manager"
-msgstr " — GNOME сессиялар басқарушысы"
+#: scarecrow-session/main.c:441
+msgid " — the Scarecrow session manager"
+msgstr " — Scarecrow сессиялар басқарушысы"
 
-#: tools/gnome-session-ctl.c:245
-msgid "Start gnome-session-shutdown.target"
-msgstr "gnome-session-shutdown.target іске қосу"
+#: tools/scarecrow-session-ctl.c:245
+msgid "Start scarecrow-session-shutdown.target"
+msgstr "scarecrow-session-shutdown.target іске қосу"
 
-#: tools/gnome-session-ctl.c:246
+#: tools/scarecrow-session-ctl.c:246
 msgid ""
-"Start gnome-session-shutdown.target when receiving EOF or a single byte on "
+"Start scarecrow-session-shutdown.target when receiving EOF or a single byte on "
 "stdin"
 msgstr ""
-"Стандарты кіріске (stdin) EOF немесе бір байт алынған кезде, gnome-session-"
+"Стандарты кіріске (stdin) EOF немесе бір байт алынған кезде, scarecrow-session-"
 "shutdown.target іске қосу"
 
-#: tools/gnome-session-ctl.c:247
-msgid "Signal initialization done to gnome-session"
-msgstr "gnome-session үшін сигнал инициализациясы дайын"
+#: tools/scarecrow-session-ctl.c:247
+msgid "Signal initialization done to scarecrow-session"
+msgstr "scarecrow-session үшін сигнал инициализациясы дайын"
 
-#: tools/gnome-session-ctl.c:248
+#: tools/scarecrow-session-ctl.c:248
 msgid "Restart dbus.service if it is running"
 msgstr "dbus.service қызметі орындалып тұрса, оны қайта іске қосыңыз"
 
-#: tools/gnome-session-ctl.c:249
+#: tools/scarecrow-session-ctl.c:249
 msgid ""
-"Run from ExecStopPost to start gnome-session-failed.target on service failure"
+"Run from ExecStopPost to start scarecrow-session-failed.target on service failure"
 msgstr ""
-"Қызмет ақаулығы кезінде gnome-session-failed.target іске қосу үшін, "
+"Қызмет ақаулығы кезінде scarecrow-session-failed.target іске қосу үшін, "
 "ExecStopPost ішінен жөнелту"
 
-#: tools/gnome-session-ctl.c:279
+#: tools/scarecrow-session-ctl.c:279
 msgid "Program needs exactly one parameter"
 msgstr "Бағдарлама тек бір параметрді талап етеді"
 
-#: tools/gnome-session-inhibit.c:108
+#: tools/scarecrow-session-inhibit.c:108
 #, c-format
 msgid ""
 "%s [OPTION…] COMMAND\n"
@@ -303,66 +303,66 @@ msgstr ""
 "\n"
 "Егер --inhibit опциясы көрсетілмесе, бос етіп есептеледі.\n"
 
-#: tools/gnome-session-inhibit.c:288
+#: tools/scarecrow-session-inhibit.c:288
 #, c-format
 msgid "Failed to execute %s\n"
 msgstr "%s жөнелту сәтсіз\n"
 
-#: tools/gnome-session-inhibit.c:352 tools/gnome-session-inhibit.c:362
-#: tools/gnome-session-inhibit.c:372
+#: tools/scarecrow-session-inhibit.c:352 tools/scarecrow-session-inhibit.c:362
+#: tools/scarecrow-session-inhibit.c:372
 #, c-format
 msgid "%s requires an argument\n"
 msgstr "%s аргументті талап етеді\n"
 
-#: tools/gnome-session-quit.c:50
+#: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "Жүйеден шығу"
 
-#: tools/gnome-session-quit.c:51
+#: tools/scarecrow-session-quit.c:51
 msgid "Power off"
 msgstr "Сөндіру"
 
-#: tools/gnome-session-quit.c:52
+#: tools/scarecrow-session-quit.c:52
 msgid "Reboot"
 msgstr "Қайта қосу"
 
-#: tools/gnome-session-quit.c:53
+#: tools/scarecrow-session-quit.c:53
 msgid "Ignoring any existing inhibitors"
 msgstr "Кез-келген бар болып тұрған ингибиторларды елемеу"
 
-#: tools/gnome-session-quit.c:54
+#: tools/scarecrow-session-quit.c:54
 msgid "Don’t prompt for user confirmation"
 msgstr "Пайдаланушы растауын сұрамау"
 
-#: tools/gnome-session-quit.c:88 tools/gnome-session-quit.c:102
+#: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "Сессиялар басқарушысына байланысты орнату мүмкін емес"
 
-#: tools/gnome-session-quit.c:198
+#: tools/scarecrow-session-quit.c:198
 msgid "Program called with conflicting options"
 msgstr "Бағдарлама өазара ерегісетін опциялармен шақырылды"
 
-#: tools/gnome-session-selector.c:61
+#: tools/scarecrow-session-selector.c:61
 #, c-format
 msgid "Session %d"
 msgstr "Сессия %d"
 
-#: tools/gnome-session-selector.c:107
+#: tools/scarecrow-session-selector.c:107
 msgid ""
 "Session names are not allowed to start with “.” or contain “/” characters"
 msgstr ""
 "Сессия атауы \".\" таңбасынан басталмауы және құрамында \"/\" таңбасы "
 "болмауы тиіс"
 
-#: tools/gnome-session-selector.c:111
+#: tools/scarecrow-session-selector.c:111
 msgid "Session names are not allowed to start with “.”"
 msgstr "Сессия атауы \".\" таңбасынан басталмауы тиіс"
 
-#: tools/gnome-session-selector.c:115
+#: tools/scarecrow-session-selector.c:115
 msgid "Session names are not allowed to contain “/” characters"
 msgstr "Сессия атауында \"/\" таңбасы болмауы тиіс"
 
-#: tools/gnome-session-selector.c:123
+#: tools/scarecrow-session-selector.c:123
 #, c-format
 msgid "A session named “%s” already exists"
 msgstr "\"%s\" атауы бар сессия бар болып тұр"
@@ -394,8 +394,8 @@ msgstr "\"%s\" атауы бар сессия бар болып тұр"
 #~ msgid "_Name:"
 #~ msgstr "_Аты:"
 
-#~ msgid "This session logs you into GNOME, using Wayland"
-#~ msgstr "Бұл сессия арқылы Wayland негізіндегі GNOME ішіне кіресіз"
+#~ msgid "This session logs you into Scarecrow, using Wayland"
+#~ msgstr "Бұл сессия арқылы Wayland негізіндегі Scarecrow ішіне кіресіз"
 
 #~ msgid "Select Command"
 #~ msgstr "Команданы таңдаңыз"

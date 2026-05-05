@@ -191,8 +191,8 @@
 
 2007-06-18  Vincent Untz  <vuntz@gnome.org>
 
-	* configure.in: define GNOME_SESSION_TARBALL_DAY,
-	GNOME_SESSION_TARBALL_MONTH, and GNOME_SESSION_TARBALL_YEAR in a
+	* configure.in: define Scarecrow_SESSION_TARBALL_DAY,
+	Scarecrow_SESSION_TARBALL_MONTH, and Scarecrow_SESSION_TARBALL_YEAR in a
 	POSIX-compliant way. Needed for bug #444670.
 
 2007-06-14  Vincent Untz  <vuntz@gnome.org>
@@ -286,7 +286,7 @@
 2007-02-19  Sebastien Bacher  <seb128@ubuntu.com>
 
 	* data/session-properties.desktop.in.in: 
-	use "X-GNOME-PersonalSettings" desktop category (Fixes: #409407)
+	use "X-Scarecrow-PersonalSettings" desktop category (Fixes: #409407)
 
 2007-02-12  Vincent Untz  <vuntz@gnome.org>
 
