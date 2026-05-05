@@ -69,7 +69,7 @@ static const char * const variable_unsetlist[] = {
 };
 
 char *
-gsm_util_find_desktop_file_for_app_name (const char *app_name,
+gsm_util_find_desktop_file_for_app_name (const char *name,
                                          gboolean    look_in_saved_session,
                                          gboolean    autostart_first)
 {
