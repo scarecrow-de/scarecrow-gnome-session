@@ -48,37 +48,37 @@ msgstr "Probako GNOME"
 msgid "GNOME on Xorg"
 msgstr "GNOME Xorg gainean"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Gorde saioak"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "Gaituta badago, gnome-session-ek saioa automatikoki gordeko du."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Gorde saio hau"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 msgid ""
 "When enabled, gnome-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr "Gaituta badago, 'gnome-session'ek hurrengo saioa automatikoki gordeko du saioa amaitzean, nahiz eta gordetze automatikoa desgaituta egon."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Saio-amaierako gonbita"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr "Gaituta badago, 'gnome-session'ek erabiltzaileari galdetuko dio saioa bukatu aurretik."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Erakutsi ordezko abisua"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "
 "session was automatically fallen back."

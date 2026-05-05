@@ -42,19 +42,19 @@ msgstr "GNOME-пустышка"
 msgid "GNOME on Xorg"
 msgstr "GNOME на Xorg"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Захаваць сеанс"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "Калі ўключана, gnome-session будзе аўтаматычна захоўваць сеанс."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Захаваць бягучы сеанс."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 msgid ""
 "When enabled, gnome-session will automatically save the next session at log "
 "out even if auto saving is disabled."
@@ -62,21 +62,21 @@ msgstr ""
 "Калі ўключана, gnome-session аўтаматычна захавае наступны сеанс падчас "
 "выхаду, нават калі аўтаматычнае захаванне выключана."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Запыт на выхад"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr ""
 "Калі ўключана, gnome-session будзе пытацца ў карыстальніка перад сканчэннем "
 "сеанса."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Паказаць перасцярогі пры пераходзе да альтэрнатыўнага сеанса."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "
 "session was automatically fallen back."

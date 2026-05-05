@@ -34,7 +34,7 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 
-#define GSM_MANAGER_SCHEMA        "org.gnome.SessionManager"
+#define GSM_MANAGER_SCHEMA        "io.github.scarecrow_deSessionManager"
 #define KEY_AUTOSAVE_ONE_SHOT     "auto-save-session-one-shot"
 
 static GtkBuilder *builder;

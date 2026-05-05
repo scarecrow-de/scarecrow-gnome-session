@@ -62,19 +62,19 @@ msgstr "GNOME Platzhalter"
 msgid "GNOME on Xorg"
 msgstr "GNOME unter Xorg"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Sitzungen speichern"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "Wenn aktiviert, speichert gnome-session die Sitzung automatisch."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Diese Sitzung speichern"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 msgid ""
 "When enabled, gnome-session will automatically save the next session at log "
 "out even if auto saving is disabled."
@@ -82,21 +82,21 @@ msgstr ""
 "Wenn aktiviert, speichert gnome-session die nächste Sitzung beim Abmelden "
 "automatisch, selbst wenn automatisches Speichern deaktiviert ist."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Abmeldebestätigung"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr ""
 "Wenn aktiviert, bittet gnome-session den Benutzer um Bestätigung, bevor eine "
 "Sitzung beendet wird."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Warnung für Rückfallmodus anzeigen"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "
 "session was automatically fallen back."

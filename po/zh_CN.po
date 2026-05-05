@@ -58,38 +58,38 @@ msgstr "GNOME dummy"
 msgid "GNOME on Xorg"
 msgstr "运行于 Xorg 的 GNOME"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "保存会话"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "如果启用，gnome-session 将自动保存会话。"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "保存此会话"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 msgid ""
 "When enabled, gnome-session will automatically save the next session at log "
 "out even if auto saving is disabled."
 msgstr ""
 "启用时，gnome-session 将在下次注销时保存会话，无论自动保存是否已被禁用。"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "注销提示"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr "如果启用，gnome-session 将在结束会话前提示用户。"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "显示回退警告"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "
 "session was automatically fallen back."

@@ -56,7 +56,7 @@ enum {
         GSM_CONDITION_UNKNOWN        = 6
 };
 
-#define GSM_SESSION_CLIENT_DBUS_INTERFACE "org.gnome.SessionClient"
+#define GSM_SESSION_CLIENT_DBUS_INTERFACE "io.github.scarecrow_deSessionClient"
 
 struct _GsmAutostartAppPrivate {
         gboolean              mask_systemd;

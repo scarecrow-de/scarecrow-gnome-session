@@ -49,19 +49,19 @@ msgstr "Несправжній GNOME"
 msgid "GNOME on Xorg"
 msgstr "GNOME через Xorg"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 msgid "Save sessions"
 msgstr "Зберігати сеанси"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "Якщо увімкнено, gnome-session автоматично зберігатиме сеанси."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 msgid "Save this session"
 msgstr "Зберегти цей сеанс"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 msgid ""
 "When enabled, gnome-session will automatically save the next session at log "
 "out even if auto saving is disabled."
@@ -69,21 +69,21 @@ msgstr ""
 "Якщо увімкнено, gnome-session автоматично збереже наступний сеанс під час "
 "виходу із системи, навіть якщо автоматичне збереження вимкнено."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Попередження про завершення сеансу"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr ""
 "Якщо увімкнено, то gnome-session буде попереджувати користувача перед "
 "завершенням сеансу."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 msgid "Show the fallback warning"
 msgstr "Показувати попередження щодо резервного варіанта"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "
 "session was automatically fallen back."

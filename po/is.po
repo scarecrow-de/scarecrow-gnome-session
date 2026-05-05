@@ -42,23 +42,23 @@ msgstr "GNOME sýnishorn"
 msgid "GNOME on Xorg"
 msgstr "GNOME á Xorg"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 #| msgid "Saving session details."
 msgid "Save sessions"
 msgstr "Vista setur"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 #| msgid ""
 #| "If enabled, gnome-session will prompt the user before ending a session."
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "Ef virkt mun gnome-setan vista setuna sjálkrafa."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 #| msgid "Save Current Session"
 msgid "Save this session"
 msgstr "Vista þessa setu"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 #| msgid ""
 #| "If enabled, gnome-session will save the session automatically. Otherwise, "
 #| "the logout dialog will have an option to save the session."
@@ -69,20 +69,20 @@ msgstr ""
 "Ef virkt mun gnome-setan vista næstu setu sjálkrafa við útskráningu jafnvel"
 " þótt sjálfvirk vistun á setu sé óvirk."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Staðfesta útskráningu"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr "Ef virkt mun gnome-setan spyrja um staðfestingu áður en setu er lokið."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 #| msgid "Show extension warning"
 msgid "Show the fallback warning"
 msgstr "Birta varaaðvörun"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "
 "session was automatically fallen back."

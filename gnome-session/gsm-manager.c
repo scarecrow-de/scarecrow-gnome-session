@@ -38,7 +38,7 @@
 #include <gio/gio.h>
 
 #include "gsm-manager.h"
-#include "org.gnome.SessionManager.h"
+#include "io.github.scarecrow_deSessionManager.h"
 
 #ifdef ENABLE_SYSTEMD_JOURNAL
 #include <systemd/sd-journal.h>
@@ -77,8 +77,8 @@
 #define GSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID "10dd2dc188b54a5e98970f56499d1f73"
 
 #define GSM_MANAGER_DBUS_PATH "/org/gnome/SessionManager"
-#define GSM_MANAGER_DBUS_NAME "org.gnome.SessionManager"
-#define GSM_MANAGER_DBUS_IFACE "org.gnome.SessionManager"
+#define GSM_MANAGER_DBUS_NAME "io.github.scarecrow_deSessionManager"
+#define GSM_MANAGER_DBUS_IFACE "io.github.scarecrow_deSessionManager"
 
 /* Probably about the longest amount of time someone could reasonably
  * want to wait, at least for something happening more than once.
@@ -93,20 +93,20 @@
 #define GDM_FLEXISERVER_COMMAND "gdmflexiserver"
 #define GDM_FLEXISERVER_ARGS    "--startnew Standard"
 
-#define SESSION_SCHEMA            "org.gnome.desktop.session"
+#define SESSION_SCHEMA            "io.github.scarecrow_dedesktop.session"
 #define KEY_IDLE_DELAY            "idle-delay"
 #define KEY_SESSION_NAME          "session-name"
 
-#define GSM_MANAGER_SCHEMA        "org.gnome.SessionManager"
+#define GSM_MANAGER_SCHEMA        "io.github.scarecrow_deSessionManager"
 #define KEY_AUTOSAVE              "auto-save-session"
 #define KEY_AUTOSAVE_ONE_SHOT     "auto-save-session-one-shot"
 #define KEY_LOGOUT_PROMPT         "logout-prompt"
 #define KEY_SHOW_FALLBACK_WARNING "show-fallback-warning"
 
-#define SCREENSAVER_SCHEMA        "org.gnome.desktop.screensaver"
+#define SCREENSAVER_SCHEMA        "io.github.scarecrow_dedesktop.screensaver"
 #define KEY_SLEEP_LOCK            "lock-enabled"
 
-#define LOCKDOWN_SCHEMA           "org.gnome.desktop.lockdown"
+#define LOCKDOWN_SCHEMA           "io.github.scarecrow_dedesktop.lockdown"
 #define KEY_DISABLE_LOG_OUT       "disable-log-out"
 #define KEY_DISABLE_USER_SWITCHING "disable-user-switching"
 
@@ -270,7 +270,7 @@ on_required_app_failure (GsmManager  *manager,
 
         app_id = gsm_app_peek_app_id (app);
 
-        if (g_str_equal (app_id, "org.gnome.Shell")) {
+        if (g_str_equal (app_id, "io.github.scarecrow_deShell")) {
                 extensions = g_object_new (GSM_TYPE_SHELL_EXTENSIONS, NULL);
                 gsm_shell_extensions_disable_all (extensions);
         } else {
@@ -304,7 +304,7 @@ on_display_server_failure (GsmManager *manager,
 
         app_id = gsm_app_peek_app_id (app);
 
-        if (g_str_equal (app_id, "org.gnome.Shell")) {
+        if (g_str_equal (app_id, "io.github.scarecrow_deShell")) {
                 extensions = g_object_new (GSM_TYPE_SHELL_EXTENSIONS, NULL);
                 gsm_shell_extensions_disable_all (extensions);
 
@@ -3569,7 +3569,7 @@ show_shell_end_session_dialog (GsmManager                   *manager,
 
 /*
   dbus-send --session --type=method_call --print-reply
-      --dest=org.gnome.SessionManager
+      --dest=io.github.scarecrow_deSessionManager
       /org/gnome/SessionManager
       org.freedesktop.DBus.Introspectable.Introspect
 */

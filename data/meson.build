@@ -6,27 +6,27 @@ desktops = [
 ]
 
 shell_component = {
-  desktop_plain: 'org.gnome.Shell',
+  desktop_plain: 'io.github.scarecrow_deShell',
 }
 
 required_components = {
   desktop_plain: [
-    'org.gnome.SettingsDaemon.A11ySettings',
-    'org.gnome.SettingsDaemon.Color',
-    'org.gnome.SettingsDaemon.Datetime',
-    'org.gnome.SettingsDaemon.Housekeeping',
-    'org.gnome.SettingsDaemon.Keyboard',
-    'org.gnome.SettingsDaemon.MediaKeys',
-    'org.gnome.SettingsDaemon.Power',
-    'org.gnome.SettingsDaemon.PrintNotifications',
-    'org.gnome.SettingsDaemon.Rfkill',
-    'org.gnome.SettingsDaemon.ScreensaverProxy',
-    'org.gnome.SettingsDaemon.Sharing',
-    'org.gnome.SettingsDaemon.Smartcard',
-    'org.gnome.SettingsDaemon.Sound',
-    'org.gnome.SettingsDaemon.UsbProtection',
-    'org.gnome.SettingsDaemon.Wacom',
-    'org.gnome.SettingsDaemon.XSettings',
+    'io.github.scarecrow_deSettingsDaemon.A11ySettings',
+    'io.github.scarecrow_deSettingsDaemon.Color',
+    'io.github.scarecrow_deSettingsDaemon.Datetime',
+    'io.github.scarecrow_deSettingsDaemon.Housekeeping',
+    'io.github.scarecrow_deSettingsDaemon.Keyboard',
+    'io.github.scarecrow_deSettingsDaemon.MediaKeys',
+    'io.github.scarecrow_deSettingsDaemon.Power',
+    'io.github.scarecrow_deSettingsDaemon.PrintNotifications',
+    'io.github.scarecrow_deSettingsDaemon.Rfkill',
+    'io.github.scarecrow_deSettingsDaemon.ScreensaverProxy',
+    'io.github.scarecrow_deSettingsDaemon.Sharing',
+    'io.github.scarecrow_deSettingsDaemon.Smartcard',
+    'io.github.scarecrow_deSettingsDaemon.Sound',
+    'io.github.scarecrow_deSettingsDaemon.UsbProtection',
+    'io.github.scarecrow_deSettingsDaemon.Wacom',
+    'io.github.scarecrow_deSettingsDaemon.XSettings',
   ],
 }
 
@@ -99,7 +99,7 @@ endforeach
 
 schema_conf = configuration_data()
 
-schema = 'org.gnome.SessionManager.gschema.xml'
+schema = 'io.github.scarecrow_deSessionManager.gschema.xml'
 
 configure_file(
   input: schema + '.in',

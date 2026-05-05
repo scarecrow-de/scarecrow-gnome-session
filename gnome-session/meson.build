@@ -42,12 +42,12 @@ sources = files(
 )
 
 dbus_ifaces = [
-  ['org.gnome.SessionManager', 'ExportedManager'],
-  ['org.gnome.SessionManager.Client', 'ExportedClient'],
-  ['org.gnome.SessionManager.ClientPrivate', 'ExportedClientPrivate'],
-  ['org.gnome.SessionManager.App', 'ExportedApp'],
-  ['org.gnome.SessionManager.Inhibitor', 'ExportedInhibitor'],
-  ['org.gnome.SessionManager.Presence', 'ExportedPresence']
+  ['io.github.scarecrow_deSessionManager', 'ExportedManager'],
+  ['io.github.scarecrow_deSessionManager.Client', 'ExportedClient'],
+  ['io.github.scarecrow_deSessionManager.ClientPrivate', 'ExportedClientPrivate'],
+  ['io.github.scarecrow_deSessionManager.App', 'ExportedApp'],
+  ['io.github.scarecrow_deSessionManager.Inhibitor', 'ExportedInhibitor'],
+  ['io.github.scarecrow_deSessionManager.Presence', 'ExportedPresence']
 ]
 
 foreach iface: dbus_ifaces

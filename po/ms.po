@@ -47,23 +47,23 @@ msgstr "semu GNOME"
 msgid "GNOME on Xorg"
 msgstr "GNOME di Xorg"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 #| msgid "Saving session details."
 msgid "Save sessions"
 msgstr "Simpan sesi"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 #| msgid ""
 #| "If enabled, gnome-session will prompt the user before ending a session."
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "Jika dibenarkan, gnome-session akan menyimpan sesi secara automatik."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 #| msgid "Set the current session"
 msgid "Save this session"
 msgstr "Simpan sesi ini"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 #| msgid ""
 #| "If enabled, gnome-session will save the session automatically. Otherwise, "
 #| "the logout dialog will have an option to save the session."
@@ -74,22 +74,22 @@ msgstr ""
 "Jika dibenarkan, gnome-session akan menyimpan sesi secara automatik ketika "
 "daftar keluar walaupun auto-simpan dilumpuhkan."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "Bisikan daftar keluar"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr ""
 "Jika dibenarkan, gnome-session akan membisik pengguna sebelum mengakhirkan "
 "satu sesi."
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 #| msgid "Show extension warning"
 msgid "Show the fallback warning"
 msgstr "Tunjuk amaran jatuh-balik"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "
 "session was automatically fallen back."

@@ -79,9 +79,9 @@ static gboolean inhibit (const gchar       *app_id,
     }
 
   ret = g_dbus_connection_call_sync (bus,
-                               "org.gnome.SessionManager",
+                               "io.github.scarecrow_deSessionManager",
                                "/org/gnome/SessionManager",
-                               "org.gnome.SessionManager",
+                               "io.github.scarecrow_deSessionManager",
                                "Inhibit",
                                g_variant_new ("(susu)",
                                               app_id, 0, reason, flags),
@@ -201,9 +201,9 @@ static void list (void)
     }
 
   ret = g_dbus_connection_call_sync (bus,
-                               "org.gnome.SessionManager",
+                               "io.github.scarecrow_deSessionManager",
                                "/org/gnome/SessionManager",
-                               "org.gnome.SessionManager",
+                               "io.github.scarecrow_deSessionManager",
                                "GetInhibitors",
                                NULL,
                                NULL,
@@ -240,9 +240,9 @@ static void list (void)
       inhibitor = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
                                                  G_DBUS_PROXY_FLAGS_NONE,
                                                  NULL,
-                                                 "org.gnome.SessionManager",
+                                                 "io.github.scarecrow_deSessionManager",
                                                  inhibitor_path,
-                                                 "org.gnome.SessionManager.Inhibitor",
+                                                 "io.github.scarecrow_deSessionManager.Inhibitor",
                                                  NULL,
                                                  &error);
 

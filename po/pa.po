@@ -47,22 +47,22 @@ msgid "GNOME on Xorg"
 msgstr "Xorg ਉੱਤੇ ਗਨੋਮ"
 
 # gnome-session/session-properties.c:272
-#: data/org.gnome.SessionManager.gschema.xml.in:5
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:5
 #| msgid "_Remove Session"
 msgid "Save sessions"
 msgstr "ਸ਼ੈਸ਼ਨ ਸੰਭਾਲੋ"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:6
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:6
 msgid "If enabled, gnome-session will save the session automatically."
 msgstr "ਜੇ ਚੋਣ ਕੀਤੀ ਤਾਂ ਗਨੋਮ-ਸ਼ੈਸ਼ਨ ਆਟੋਮੈਟਿਕ ਹੀ ਸ਼ੈਸ਼ਨ ਨੂੰ ਸੰਭਾਲ ਲਵੇਗਾ।"
 
 # gnome-session/session-properties-capplet.c:259
-#: data/org.gnome.SessionManager.gschema.xml.in:10
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:10
 #| msgid " - Save the current session"
 msgid "Save this session"
 msgstr "ਇਹ ਸ਼ੈਸ਼ਨ ਸੰਭਾਲੋ"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:11
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:11
 #| msgid "If enabled, gnome-session will save the session automatically."
 msgid ""
 "When enabled, gnome-session will automatically save the next session at log "
@@ -72,20 +72,20 @@ msgstr ""
 " ਭਾਵੇਂ ਕਿ "
 "ਆਪਣੇ-ਆਪ ਸੰਭਾਲਣ ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਹੋਵੇ।"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:15
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:15
 msgid "Logout prompt"
 msgstr "ਲਾਗਆਉਟ ਪੁਸ਼ਟੀ"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:16
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:16
 msgid "If enabled, gnome-session will prompt the user before ending a session."
 msgstr "ਸੁਰੱਖਿਆ ਕਾਰਨਾਂ ਕਰਕੇ, ਗਨੋਮ-ਸ਼ੈਸ਼ਨ ਸ਼ੈਸ਼ਨ ਖਤਮ ਕਰਨ ਵੇਲੇ ਯੂਜ਼ਰ ਨੂੰ ਪੁੱਛੇ।"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:20
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:20
 #| msgid "Show extension warning"
 msgid "Show the fallback warning"
 msgstr "ਫਾਲਬੈਕ ਚੇਤਾਵਨੀ ਵੇਖਾਓ"
 
-#: data/org.gnome.SessionManager.gschema.xml.in:21
+#: data/io.github.scarecrow_deSessionManager.gschema.xml.in:21
 #| msgid "If enabled, gnome-session will save the session automatically."
 msgid ""
 "If enabled, gnome-session will display a warning dialog after login if the "

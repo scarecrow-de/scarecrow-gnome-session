@@ -30,12 +30,12 @@
 #include "gsm-inhibitor.h"
 #include "gsm-shell.h"
 
-#define SHELL_NAME      "org.gnome.Shell"
+#define SHELL_NAME      "io.github.scarecrow_deShell"
 #define SHELL_PATH      "/org/gnome/Shell"
-#define SHELL_INTERFACE "org.gnome.Shell"
+#define SHELL_INTERFACE "io.github.scarecrow_deShell"
 
 #define SHELL_END_SESSION_DIALOG_PATH      "/org/gnome/SessionManager/EndSessionDialog"
-#define SHELL_END_SESSION_DIALOG_INTERFACE "org.gnome.SessionManager.EndSessionDialog"
+#define SHELL_END_SESSION_DIALOG_INTERFACE "io.github.scarecrow_deSessionManager.EndSessionDialog"
 
 #define AUTOMATIC_ACTION_TIMEOUT 60
 

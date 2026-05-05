@@ -1,11 +1,11 @@
 ifaces_refs = []
 
 ifaces = [
-  'org.gnome.SessionManager',
-  'org.gnome.SessionManager.Client',
-  'org.gnome.SessionManager.ClientPrivate',
-  'org.gnome.SessionManager.Inhibitor',
-  'org.gnome.SessionManager.Presence'
+  'io.github.scarecrow_deSessionManager',
+  'io.github.scarecrow_deSessionManager.Client',
+  'io.github.scarecrow_deSessionManager.ClientPrivate',
+  'io.github.scarecrow_deSessionManager.Inhibitor',
+  'io.github.scarecrow_deSessionManager.Presence'
 ]
 
 gnome_session_dir = join_paths(meson.source_root(), 'gnome-session')

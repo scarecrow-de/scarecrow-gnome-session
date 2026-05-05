@@ -6,7 +6,7 @@ data/gnome-dummy.session.desktop.in.in
 data/gnome.session.desktop.in.in
 data/gnome-wayland.desktop.in.in
 data/gnome-xorg.desktop.in.in
-data/org.gnome.SessionManager.gschema.xml.in
+data/io.github.scarecrow_deSessionManager.gschema.xml.in
 data/session-selector.ui
 gnome-session/gsm-fail-whale-dialog.c
 gnome-session/gsm-manager.c

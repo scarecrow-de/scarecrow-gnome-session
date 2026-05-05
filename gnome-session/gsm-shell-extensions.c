@@ -27,7 +27,7 @@
 
 #include "gsm-shell-extensions.h"
 
-#define SHELL_SCHEMA "org.gnome.shell"
+#define SHELL_SCHEMA "io.github.scarecrow_deshell"
 #define DISABLE_EXTENSIONS_KEY "disable-user-extensions"
 
 #define SHELL_EXTENSIONS_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsPrivate))

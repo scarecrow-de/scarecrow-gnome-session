@@ -27,7 +27,7 @@ Startup is divided into 7 phases (GsmManagerPhase):
       running very early (before any windows are displayed).
 
       Apps in this phase can make use of a D-Bus interface
-      (org.gnome.SessionManager.Setenv) to set environment variables
+      (io.github.scarecrow_deSessionManager.Setenv) to set environment variables
       in gnome-session's environment. This can be used for things like
       $GTK_MODULES, $GNOME_KEYRING_SOCKET, etc
 
