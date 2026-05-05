@@ -73,7 +73,7 @@ sessions = [
 ]
 
 foreach session: sessions
-  session_file = session + '.session'
+  session_file = gnome + '.session'
   desktop_conf = configuration_data()
   desktop_conf.set('libexecdir', session_libexecdir)
   desktop_conf.set('required_components', ';'.join(
