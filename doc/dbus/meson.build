@@ -25,9 +25,7 @@ endforeach
 session_conf = configuration_data()
 session_conf.set('VERSION', session_version)
 
-#session = meson.project_name()
-
-session = 'scarecrow'
+session = meson.project_name()
 
 xml_in = configure_file(
   input: session + '.xml.in',
