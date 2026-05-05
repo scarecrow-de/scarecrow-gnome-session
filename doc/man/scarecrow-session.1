@@ -19,7 +19,7 @@ user as defined by the system administrator (or the default GNOME
 installation on your system). Note that \fIscarecrow-session\fP is a wrapper
 script for \fIscarecrow-session-binary\fP.
 .PP
-The default session is defined in \fBgnome.session\fP, a .desktop-like
+The default session is defined in \fBscarecrow.session\fP, a .desktop-like
 file that is looked for in
 \fB$XDG_CONFIG_HOME/scarecrow-session/sessions\fP,
 \fB$XDG_CONFIG_DIRS/scarecrow-session/sessions\fP and
@@ -41,7 +41,7 @@ When this option is present, then default autostart directories will not be sear
 .TP
 .I "--session=SESSION"
 Use the applications defined in \fBSESSION.session\fP. If not specified,
-\fBgnome.session\fP will be used.
+\fBscarecrow.session\fP will be used.
 .TP
 .I "--builtin"
 Use the legacy non-systemd method of managing the user session. This is the
