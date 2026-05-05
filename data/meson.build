@@ -68,8 +68,8 @@ foreach name: desktops
 endforeach
 
 sessions = [
-  'scarecrow',
-  'scarecrow-dummy'
+  'gnome',
+  'gnome-dummy'
 ]
 
 foreach session: sessions
@@ -90,7 +90,7 @@ foreach session: sessions
   i18n.merge_file(
     type: 'desktop',
     input: desktop_in,
-    output: 'gnome.session',
+    output: 'session_file',
     po_dir: po_dir,
     install: true,
     install_dir: join_paths(session_pkgdatadir, 'sessions')
