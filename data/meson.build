@@ -90,7 +90,7 @@ foreach session: sessions
   i18n.merge_file(
     type: 'desktop',
     input: desktop_in,
-    output: 'session_file',
+    output: session_file,
     po_dir: po_dir,
     install: true,
     install_dir: join_paths(session_pkgdatadir, 'sessions')
