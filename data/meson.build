@@ -155,9 +155,9 @@ if enable_systemd_session
   )
 
   install_data(
-    'gnome-launched-override.scope.conf',
+    'scarecrow-launched-override.scope.conf',
     rename: 'override.conf',
-    install_dir : join_paths(systemd_userunitdir, 'gnome-launched-.scope.d')
+    install_dir : join_paths(systemd_userunitdir, 'scarecrow-launched-.scope.d')
   )
 
   foreach session, req_components: required_components
