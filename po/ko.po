@@ -32,21 +32,21 @@ msgstr "사용자 지정"
 msgid "This entry lets you select a saved session"
 msgstr "이 항목으로 저장한 세션을 지정합니다"
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
-#: data/gnome-wayland.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
+#: data/scarecrow-wayland.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "그놈"
 
-#: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
-#: data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-wayland.desktop.in.in:4
+#: data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "이 세션을 사용하면 그놈에 로그인합니다"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr "그놈 더미"
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr "그놈 (Xorg)"
 

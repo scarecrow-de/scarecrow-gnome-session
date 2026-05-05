@@ -25,19 +25,19 @@ msgstr "Yugen"
 msgid "This entry lets you select a saved session"
 msgstr "S wefran-agi ad tferneḍ tɣimit ittuskelsen"
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "Tiɣimit-agi ad k-teqqen ɣer Scarecrow"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr ""
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr "Scarecrow ɣef Xorg"
 

@@ -33,19 +33,19 @@ msgstr "യഥേഷ്ടം"
 msgid "This entry lets you select a saved session"
 msgstr "സൂക്ഷിച്ച ഒരു പ്രവര്‍ത്തനവേള തെരഞ്ഞെടുക്കാന്‍ ഇതനുവദിക്കുന്നു"
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "ഗ്നോം"
 
-#: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "ഈ പ്രവര്‍ത്തനവേള നിങ്ങളെ ഗ്നോമിലേക്ക് കയറ്റുന്നു"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr "ഗ്നോം ഡമ്മി"
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr "ഗ്നോം Xorg ല്‍"
 

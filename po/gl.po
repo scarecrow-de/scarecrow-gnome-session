@@ -36,21 +36,21 @@ msgstr "Personalizada"
 msgid "This entry lets you select a saved session"
 msgstr "Esta entrada permítelle selecciona unha sesión gardada"
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
-#: data/gnome-wayland.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
+#: data/scarecrow-wayland.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
-#: data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-wayland.desktop.in.in:4
+#: data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "Esta sesión iniciará en Scarecrow"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr "Scarecrow de proba"
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr "Scarecrow en Xorg"
 

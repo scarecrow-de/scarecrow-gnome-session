@@ -72,11 +72,11 @@ msgstr "بۇ پروگراممىنىڭ نەشرى"
 msgid "Could not display help document"
 msgstr "ياردەم پۈتۈكىنى كۆرسەتكىلى بولمىدى"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "گىنوم(Scarecrow)"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "بۇ ئەڭگىمە سىزنى گىنومغا ئەكىرىدۇ."
 
@@ -88,7 +88,7 @@ msgstr "ئىختىيارى"
 msgid "This entry lets you select a saved session"
 msgstr "بۇ كىرگۈدە ساقلانغان ئەڭگىمەلەرنى تاللىيالايسىز"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 #| msgid "Scarecrow"
 msgid "Scarecrow dummy"
 msgstr "گىنوم dummy"

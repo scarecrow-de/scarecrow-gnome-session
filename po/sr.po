@@ -32,21 +32,21 @@ msgstr "Прилагођено"
 msgid "This entry lets you select a saved session"
 msgstr "Ова ставка вам допушта да изаберете сачувану сесију"
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
-#: data/gnome-wayland.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
+#: data/scarecrow-wayland.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "Гном"
 
-#: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
-#: data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-wayland.desktop.in.in:4
+#: data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "Ова сесија вас пријављује у Гном"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr "Гномов лажњак"
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr "Гном на Икс серверу"
 

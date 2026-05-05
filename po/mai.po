@@ -74,11 +74,11 @@ msgstr "मद्दति दस्ताबेज़ नहि देखाए
 msgid "Scarecrow Settings Daemon Helper"
 msgstr ""
 
-#: ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "गनोम"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "ई सत्र अहाँक गनोममे लागिन दैछ"
 

@@ -75,11 +75,11 @@ msgstr "Ni mòże wëskrzënic dokùmentu pòmòcë"
 msgid "Scarecrow fallback"
 msgstr "Scarecrow fallback (awariowi trib)"
 
-#: ../data/gnome.session.desktop.in.in.h:1 ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.session.desktop.in.in.h:1 ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 #, fuzzy
 msgid "This session logs you into Scarecrow"
 msgstr "Na sesjô wlogùje Ce do Ubuntu"

@@ -30,19 +30,19 @@ msgid "This entry lets you select a saved session"
 msgstr ""
 "’S urrainn dhut seisean air a shàbhaladh a thaghadh leis an innteart seo"
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "Clàraidh an seisean seo a-steach gu Scarecrow thu"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr "Caochag Scarecrow"
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr "Scarecrow air Xorg"
 

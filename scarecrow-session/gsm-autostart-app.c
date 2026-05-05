@@ -29,7 +29,7 @@
 #include <gio/gdesktopappinfo.h>
 
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-systemd.h>
+#include <libscarecrow-desktop/scarecrow-systemd.h>
 
 #ifdef HAVE_SYSTEMD
 #ifdef ENABLE_SYSTEMD_JOURNAL

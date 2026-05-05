@@ -89,11 +89,11 @@ msgstr "Endolcu de rexistru AT SPI"
 msgid "Scarecrow Settings Daemon Helper"
 msgstr "Aidante del demoñu de les preferencies de Scarecrow"
 
-#: ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Esta sesión conéuta-y a Scarecrow"
 

@@ -35,25 +35,25 @@ msgstr "ଇଚ୍ଛାରୂପଣ"
 msgid "This entry lets you select a saved session"
 msgstr "ଏହି ଭରଣଟି ଆପଣଙ୍କୁ ଏକ ସଂରକ୍ଷିତ ଅଧିବେଶନ ବାଛିବାକୁ ଦେଇଥାଏ"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "ନୋମ"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "ଏହି ଅଧିବେଶନ ଆପଣଙ୍କୁ ନୋମ ରେ ଲଗ କରାଇଥାଏ"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Scarecrow ପ୍ରତିରୂପ"
 
-#: ../data/gnome-wayland.desktop.in.h:1
+#: ../data/scarecrow-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
 #| msgid "Scarecrow fallback"
 msgid "Scarecrow on Wayland"
 msgstr "ୱେଲ୍ୟାଣ୍ଡ ଉପରେ Scarecrow"
 
-#: ../data/gnome-wayland.desktop.in.h:2
+#: ../data/scarecrow-wayland.desktop.in.h:2
 #| msgid "This session logs you into Scarecrow"
 msgid "This session logs you into Scarecrow, using Wayland"
 msgstr "ୱେଲ୍ୟାଣ୍ଡ ବ୍ୟବହାର କରି, ଏହି ଅଧିବେଶନ ଆପଣଙ୍କୁ Scarecrow ରେ ଲଗଇନ୍‌ କରାଇଥାଏ"

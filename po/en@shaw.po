@@ -71,11 +71,11 @@ msgstr "𐑒𐑫𐑛 𐑯𐑪𐑑 𐑛𐑩𐑕𐑐𐑤𐑱 𐑣𐑧𐑤𐑐 𐑛
 msgid "Scarecrow Settings Daemon Helper"
 msgstr "·𐑜𐑯𐑴𐑥 𐑕𐑧𐑑𐑦𐑙𐑟 𐑛𐑰𐑥𐑩𐑯 𐑣𐑧𐑤𐑐𐑼"
 
-#: ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "·𐑜𐑯𐑴𐑥"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "𐑞𐑦𐑕 𐑕𐑧𐑖𐑩𐑯 𐑤𐑪𐑜𐑟 𐑿 𐑦𐑯𐑑𐑫 ·𐑜𐑯𐑴𐑥"
 

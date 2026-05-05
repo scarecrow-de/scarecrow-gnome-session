@@ -36,19 +36,19 @@ msgstr "Други"
 msgid "This entry lets you select a saved session"
 msgstr "Оттук може да изберете сесия запазена от вас"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2 ../data/scarecrow-xorg.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Влизане в Scarecrow"
 
-#: ../data/gnome-xorg.desktop.in.h:1
+#: ../data/scarecrow-xorg.desktop.in.h:1
 msgid "Scarecrow on Xorg"
 msgstr "Scarecrow с Xorg"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Scarecrow — фиктивна"
 

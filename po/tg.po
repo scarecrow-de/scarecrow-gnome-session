@@ -28,24 +28,24 @@ msgid "This entry lets you select a saved session"
 msgstr ""
 "Ин вуруд ба шумо имкон медиҳад, ки тавонед ҷаласаи захирашударо интихоб кунед"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Ин ҷаласа шуморо ба Scarecrow ворид мекунад"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Сохти Scarecrow"
 
-#: ../data/gnome-wayland.desktop.in.h:1
+#: ../data/scarecrow-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "Scarecrow дар Wayland"
 
-#: ../data/gnome-wayland.desktop.in.h:2
+#: ../data/scarecrow-wayland.desktop.in.h:2
 msgid "This session logs you into Scarecrow, using Wayland"
 msgstr "Ин ҷаласа шуморо ба Scarecrow тавассути Wayland ворид мекунад"
 

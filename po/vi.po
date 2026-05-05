@@ -29,19 +29,19 @@ msgstr "Tự chọn"
 msgid "This entry lets you select a saved session"
 msgstr "Mục này cho phép bạn chọn phiên làm việc đã lưu"
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: data/gnome.desktop.in.in:4 data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "Phiên làm việc này sẽ đăng nhập bạn vào Scarecrow"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr "Giả lập Scarecrow"
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr "Scarecrow trên Xorg"
 

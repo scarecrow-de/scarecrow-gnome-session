@@ -67,11 +67,11 @@ msgstr "འདི་$datadir/pixmaps/ སྣོད་ཐོ་ལུ་མ་བ
 msgid "This is the option that will be selected in the logout dialog, valid values are \"logout\" for logging out, \"shutdown\" for halting the system and \"restart\" for restarting the system."
 msgstr "འདི་ཕྱིར་བསྐྱོད་ཌའི་ལོག་ནང་ སེལ་འཐུ་འབད་ནིའི་ གདམ་ཁ་ཨིན། ནུས་ཅན་བེ་ལུསི་ཚུ་ ཕྱིར་བསྐྱོད་དོན་ལུ་ \"logout\" དང་ མཚམས་འཇོག་དོན་ལུ་\"shutdown\" དེ་ལས་ རིམ་ལུགས་ལོག་འགོ་བཙུགས་ནིའི་དོན་ལུ་\"shutdown\" ཨིན།"
 
-#: ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "ཇི་ནོམ་ "
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "ལཱ་ཡུན་འདི་གིས་ ཁྱོད་ ཇི་ནོམ་ནང་ལུ་ ནང་བསྐྱོད་འབདཝ་ཨིན་ "
 

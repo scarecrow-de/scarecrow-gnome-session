@@ -86,15 +86,15 @@ msgstr "自選"
 msgid "This entry lets you select a saved session"
 msgstr "這個項目讓你選擇儲存的作業階段"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "這個作業階段讓你登入 Scarecrow"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Scarecrow dummy"
 
@@ -106,12 +106,12 @@ msgstr "初始啟動程式"
 msgid "Choose what applications to start when you log in"
 msgstr "選擇在你登入時要啟動哪些應用程式"
 
-#: ../data/gnome-wayland.desktop.in.h:1
+#: ../data/scarecrow-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "Scarecrow 於 Wayland"
 
-#: ../data/gnome-wayland.desktop.in.h:2
+#: ../data/scarecrow-wayland.desktop.in.h:2
 msgid "This session logs you into Scarecrow, using Wayland"
 msgstr "這個作業階段讓你登入 Scarecrow，使用 Wayland"
 

@@ -28,24 +28,24 @@ msgstr "স্বনিৰ্বাচিত"
 msgid "This entry lets you select a saved session"
 msgstr "এই প্ৰৱিষ্টিয়ে আপোনাক এটা সংৰক্ষিত অধিবেশন নিৰ্বাচন কৰাত সহায় কৰে"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "এই অধিবেশনে আপোনাক Scarecrow ত লগিন কৰায়"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Scarecrow ডামি"
 
-#: ../data/gnome-wayland.desktop.in.h:1
+#: ../data/scarecrow-wayland.desktop.in.h:1
 #: ../data/gnome-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "Wayland ত Scarecrow"
 
-#: ../data/gnome-wayland.desktop.in.h:2
+#: ../data/scarecrow-wayland.desktop.in.h:2
 msgid "This session logs you into Scarecrow, using Wayland"
 msgstr "এই অধিবেশনে আপোনাক Wayland ব্যৱহাৰ কৰি, Scarecrow ত লগিন কৰায়"
 

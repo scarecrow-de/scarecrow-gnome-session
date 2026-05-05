@@ -94,12 +94,12 @@ msgid "Scarecrow fallback"
 msgstr "Scarecrow reserveløysing"
 
 #
-#: ../data/gnome.session.desktop.in.in.h:1 ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.session.desktop.in.in.h:1 ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
 #
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Denne økta loggar inn i Scarecrow"
 

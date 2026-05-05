@@ -25,21 +25,21 @@ msgstr "ڕاسپێراو"
 msgid "This entry lets you select a saved session"
 msgstr ""
 
-#: data/gnome.desktop.in.in:3 data/gnome.session.desktop.in.in:3
-#: data/gnome-wayland.desktop.in.in:3
+#: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
+#: data/scarecrow-wayland.desktop.in.in:3
 msgid "Scarecrow"
 msgstr "گنوم"
 
-#: data/gnome.desktop.in.in:4 data/gnome-wayland.desktop.in.in:4
-#: data/gnome-xorg.desktop.in.in:4
+#: data/scarecrow.desktop.in.in:4 data/scarecrow-wayland.desktop.in.in:4
+#: data/scarecrow-xorg.desktop.in.in:4
 msgid "This session logs you into Scarecrow"
 msgstr "به‌م دانیشتنه‌ ئه‌که‌ویته‌ ناو گنومه‌وه‌"
 
-#: data/gnome-dummy.session.desktop.in.in:3
+#: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
 msgstr ""
 
-#: data/gnome-xorg.desktop.in.in:3
+#: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
 msgstr ""
 

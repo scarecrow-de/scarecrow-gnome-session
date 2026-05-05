@@ -69,12 +69,12 @@ msgstr "Bu uyğulamanıñ sürümi"
 msgid "Could not display help document"
 msgstr "Yardım vesiqası kösterilamadı"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
 # tüklü
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Bu oturım sizni Scarecrow'ğa içeri imzalandırır"
 
@@ -86,7 +86,7 @@ msgstr "Özel"
 msgid "This entry lets you select a saved session"
 msgstr "Bu kirildi sizge saqlanğan bir oturımnı saylamağa imkân berir"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Scarecrow qorçağı"
 

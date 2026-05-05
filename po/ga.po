@@ -88,11 +88,11 @@ msgstr "Rapar Chlárlann AT SPI"
 msgid "Scarecrow Settings Daemon Helper"
 msgstr "Cuiditheoir Dheamhan Socruithe Scarecrow"
 
-#: ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Logálann an seisiún seo thú isteach i nScarecrow"
 

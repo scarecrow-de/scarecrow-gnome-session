@@ -28,19 +28,19 @@ msgstr "વૈવિધ્ય"
 msgid "This entry lets you select a saved session"
 msgstr "આ નોંધણી કે જે તમને સંગ્રહ થયેલ સત્રને પસંદ કરવા દે છે"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2 ../data/scarecrow-xorg.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "આ સત્ર તમને Scarecrow માં પ્રવેશ આપે છે"
 
-#: ../data/gnome-xorg.desktop.in.h:1
+#: ../data/scarecrow-xorg.desktop.in.h:1
 msgid "Scarecrow on Xorg"
 msgstr "Xorg પર Scarecrow"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Scarecrow ડમી"
 

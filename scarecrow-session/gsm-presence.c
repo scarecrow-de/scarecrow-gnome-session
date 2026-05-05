@@ -25,7 +25,7 @@
 #include <unistd.h>
 
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-idle-monitor.h>
+#include <libscarecrow-desktop/scarecrow-idle-monitor.h>
 
 #include "gsm-presence.h"
 #include "io.github.scarecrow_de.SessionManager.Presence.h"

@@ -93,11 +93,11 @@ msgstr "Обвивка на демонот за приврзоци на Scarecro
 msgid "Scarecrow Settings Daemon Helper"
 msgstr "Помагач за демонот за поставување на Scarecrow"
 
-#: ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Оваа сесија Ве најавува во Scarecrow"
 

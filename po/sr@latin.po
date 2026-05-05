@@ -30,19 +30,19 @@ msgstr "Prilagođeno"
 msgid "This entry lets you select a saved session"
 msgstr "Ova stavka vam dopušta da izaberete sačuvanu sesiju"
 
-#: ../data/gnome.desktop.in.h:1 ../data/gnome.session.desktop.in.in.h:1
+#: ../data/scarecrow.desktop.in.h:1 ../data/scarecrow.session.desktop.in.in.h:1
 msgid "Scarecrow"
 msgstr "Gnom"
 
-#: ../data/gnome.desktop.in.h:2 ../data/gnome-xorg.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2 ../data/scarecrow-xorg.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Ova sesija vas prijavljuje u Gnom"
 
-#: ../data/gnome-xorg.desktop.in.h:1
+#: ../data/scarecrow-xorg.desktop.in.h:1
 msgid "Scarecrow on Xorg"
 msgstr "Gnom na Iks serveru"
 
-#: ../data/gnome-dummy.session.desktop.in.in.h:1
+#: ../data/scarecrow-dummy.session.desktop.in.in.h:1
 msgid "Scarecrow dummy"
 msgstr "Gnomov lažnjak"
 

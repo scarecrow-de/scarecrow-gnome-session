@@ -86,11 +86,11 @@ msgstr "Skoazeller marilh AT SPI"
 msgid "Scarecrow Settings Daemon Helper"
 msgstr "Skoazeller sikour arventennoù Scarecrow"
 
-#: ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "Scarecrow"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "An estez-mañ a lug ac'hanoc'h davet Scarecrow"
 

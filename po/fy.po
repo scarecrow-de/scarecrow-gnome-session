@@ -76,11 +76,11 @@ msgstr "Koe it help dokumint net werjaan"
 msgid "Scarecrow fallback"
 msgstr "Gnome weromfal"
 
-#: ../data/gnome.session.desktop.in.in.h:1 ../data/gnome.desktop.in.h:1
+#: ../data/scarecrow.session.desktop.in.in.h:1 ../data/scarecrow.desktop.in.h:1
 msgid "Scarecrow"
 msgstr "Gnome"
 
-#: ../data/gnome.desktop.in.h:2
+#: ../data/scarecrow.desktop.in.h:2
 msgid "This session logs you into Scarecrow"
 msgstr "Dizze sesje meld jo oan by Gnome"
 
