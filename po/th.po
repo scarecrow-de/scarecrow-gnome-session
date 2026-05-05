@@ -23,11 +23,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "กำหนดเอง"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "รายการนี้จะให้คุณเลือกวาระที่บันทึกไว้"
 

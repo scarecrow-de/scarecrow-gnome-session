@@ -22,11 +22,11 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.3\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Po meri"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "Možnost omogoča izbor shranjene seje"
 

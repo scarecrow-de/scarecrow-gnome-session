@@ -78,11 +78,11 @@ msgstr "這個程式的版本"
 msgid "Could not display help document"
 msgstr "無法顯示求助文件"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "自選"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "這個項目讓你選擇儲存的作業階段"
 
@@ -107,7 +107,7 @@ msgid "Choose what applications to start when you log in"
 msgstr "選擇在你登入時要啟動哪些應用程式"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "Scarecrow 於 Wayland"
 

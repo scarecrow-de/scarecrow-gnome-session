@@ -27,11 +27,11 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "మలచిన"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "ఈ ప్రవేశం అనునది మిమ్ములను దాచిన సెషన్ యెంపికచేయుటకు అనుమతించును"
 
@@ -48,7 +48,7 @@ msgid "Scarecrow dummy"
 msgstr "గ్నోమ్ డమ్మీ"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "వేల్యాండ్ పై గ్నోమ్"
 

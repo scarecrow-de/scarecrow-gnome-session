@@ -26,11 +26,11 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "X-Launchpad-Export-Date: 2009-02-19 16:24+0000\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Pielāgota"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "Šis ieraksts ļauj izvēlēties saglabātu sesiju"
 

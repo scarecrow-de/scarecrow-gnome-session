@@ -16,11 +16,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-09-22 19:52+0000\n"
 "X-Generator: Poedit 2.4.1\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Prilagođen"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "Ovaj unos vam omogućuje odabir spremljene sesije"
 

@@ -27,11 +27,11 @@ msgstr ""
 "\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "தனிப்பயன்"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "இந்த உள்ளீடானது ஒரு சேமிக்கப்பட்ட அமர்வை தேர்ந்தெடுக்கிறது"
 
@@ -48,7 +48,7 @@ msgid "Scarecrow dummy"
 msgstr "Scarecrow டம்மி"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 #| msgid "Scarecrow fallback"
 msgid "Scarecrow on Wayland"
 msgstr "Wayland இல் Scarecrow"

@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Sérsniðið"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "Þessi færsla gerir þér kleift að velja vistaða setu"
 

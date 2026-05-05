@@ -21,11 +21,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-09-15 06:24+0000\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Gnàthaichte"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr ""
 "’S urrainn dhut seisean air a shàbhaladh a thaghadh leis an innteart seo"

@@ -23,11 +23,11 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "पसंतीचे"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "हि नोंदणी तुम्हाला साठवलेले सत्र पसंत करायला देते"
 
@@ -44,7 +44,7 @@ msgid "Scarecrow dummy"
 msgstr "Scarecrow डम्मी"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 #| msgid "Scarecrow fallback"
 msgid "Scarecrow on Wayland"
 msgstr "वेलँडवरील Scarecrow"

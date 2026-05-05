@@ -27,11 +27,11 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "ଇଚ୍ଛାରୂପଣ"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "ଏହି ଭରଣଟି ଆପଣଙ୍କୁ ଏକ ସଂରକ୍ଷିତ ଅଧିବେଶନ ବାଛିବାକୁ ଦେଇଥାଏ"
 
@@ -48,7 +48,7 @@ msgid "Scarecrow dummy"
 msgstr "Scarecrow ପ୍ରତିରୂପ"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 #| msgid "Scarecrow fallback"
 msgid "Scarecrow on Wayland"
 msgstr "ୱେଲ୍ୟାଣ୍ଡ ଉପରେ Scarecrow"

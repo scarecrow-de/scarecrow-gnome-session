@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=1;\n"
 "X-Generator: Poedit 1.6.5\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "Фармоиш додан"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr ""
 "Ин вуруд ба шумо имкон медиҳад, ки тавонед ҷаласаи захирашударо интихоб кунед"
@@ -41,7 +41,7 @@ msgid "Scarecrow dummy"
 msgstr "Сохти Scarecrow"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "Scarecrow дар Wayland"
 

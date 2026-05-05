@@ -80,11 +80,11 @@ msgstr "گىنوم(Scarecrow)"
 msgid "This session logs you into Scarecrow"
 msgstr "بۇ ئەڭگىمە سىزنى گىنومغا ئەكىرىدۇ."
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "ئىختىيارى"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "بۇ كىرگۈدە ساقلانغان ئەڭگىمەلەرنى تاللىيالايسىز"
 

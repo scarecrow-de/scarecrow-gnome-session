@@ -14,11 +14,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2015-02-05 07:00+0000\n"
 "X-Generator: Launchpad (build 17331)\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "Prilagođeno"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "Ovaj unos vam omogućava izbor snimljene sesije"
 
@@ -35,7 +35,7 @@ msgid "Scarecrow dummy"
 msgstr "Scarecrow prazno"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "Scarecrow u Wayland"
 

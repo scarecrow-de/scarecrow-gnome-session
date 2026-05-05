@@ -121,15 +121,15 @@ _parse_kcmdline (void)
         if (!g_file_get_contents ("/proc/cmdline", &contents, NULL, NULL))
                 return ret;
 
-        regex = g_regex_new ("gnome.fallback=(\\S+)", 0, G_REGEX_MATCH_NOTEMPTY, NULL);
+        regex = g_regex_new ("scarecrow.fallback=(\\S+)", 0, G_REGEX_MATCH_NOTEMPTY, NULL);
         if (!g_regex_match (regex, contents, G_REGEX_MATCH_NOTEMPTY, &match))
                 goto out;
 
         word = g_match_info_fetch (match, 0);
         g_debug ("Found command-line match '%s'", word);
-        arg = word + strlen ("gnome.fallback=");
+        arg = word + strlen ("scarecrow.fallback=");
         if (*arg != '0' && *arg != '1')
-                fprintf (stderr, "scarecrow-session-is-accelerated: Invalid value '%s' for gnome.fallback passed in kernel command line.\n", arg);
+                fprintf (stderr, "scarecrow-session-is-accelerated: Invalid value '%s' for scarecrow.fallback passed in kernel command line.\n", arg);
         else
                 ret = atoi (arg);
         g_free (word);
@@ -153,11 +153,11 @@ _parse_kcmdline (void)
         /* a compile time check to avoid unexpected stack overflow */
         _Static_assert(KENV_MVALLEN < 1024 * 1024, "KENV_MVALLEN is too large");
 
-        if (kenv (KENV_GET, "gnome.fallback", value, KENV_MVALLEN) == -1)
+        if (kenv (KENV_GET, "scarecrow.fallback", value, KENV_MVALLEN) == -1)
                 return ret;
 
         if (*value != '0' && *value != '1')
-                fprintf (stderr, "scarecrow-session-is-accelerated: Invalid value '%s' for gnome.fallback passed in kernel environment.\n", value);
+                fprintf (stderr, "scarecrow-session-is-accelerated: Invalid value '%s' for scarecrow.fallback passed in kernel environment.\n", value);
         else
                 ret = atoi (value);
 

@@ -35,11 +35,11 @@ msgstr ""
 "X-Generator: Poedit 2.3.1\n"
 
 # Benutzerdefiniert oder Angepasst?
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr ""
 "Dieser Eintrag ermöglicht es Ihnen, eine gespeicherte Sitzung auszuwählen"

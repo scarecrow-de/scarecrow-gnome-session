@@ -28,11 +28,11 @@ msgstr ""
 "X-Generator: Gtranslator 3.36.0\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Personalizada"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "Esta entrada permítelle selecciona unha sesión gardada"
 

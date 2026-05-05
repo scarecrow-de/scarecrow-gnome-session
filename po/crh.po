@@ -78,11 +78,11 @@ msgstr "Scarecrow"
 msgid "This session logs you into Scarecrow"
 msgstr "Bu oturım sizni Scarecrow'ğa içeri imzalandırır"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "Özel"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "Bu kirildi sizge saqlanğan bir oturımnı saylamağa imkân berir"
 

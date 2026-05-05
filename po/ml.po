@@ -25,11 +25,11 @@ msgstr ""
 "X-Generator: Poedit 2.2\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "യഥേഷ്ടം"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "സൂക്ഷിച്ച ഒരു പ്രവര്‍ത്തനവേള തെരഞ്ഞെടുക്കാന്‍ ഇതനുവദിക്കുന്നു"
 

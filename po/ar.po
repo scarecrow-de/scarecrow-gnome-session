@@ -25,11 +25,11 @@ msgstr ""
 "X-Generator: Virtaal 1.0.0-beta1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "خاص"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "هذه الخاصية تسمح لك باختيار جلسة محفوطة"
 
@@ -46,7 +46,7 @@ msgid "Scarecrow dummy"
 msgstr "جنوم لا شيء"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 msgid "Scarecrow on Wayland"
 msgstr "جنوم على وايلاند"
 

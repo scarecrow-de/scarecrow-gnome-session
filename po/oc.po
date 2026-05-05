@@ -19,11 +19,11 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-custom-session.desktop.in:3
+#: data/scarecrow-custom-session.desktop.in:3
 msgid "Custom"
 msgstr "Personalizat"
 
-#: data/gnome-custom-session.desktop.in:4
+#: data/scarecrow-custom-session.desktop.in:4
 msgid "This entry lets you select a saved session"
 msgstr "Aquesta causida permet d'accedir a una session enregistrada"
 

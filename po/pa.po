@@ -20,11 +20,11 @@ msgstr ""
 "X-Generator: Lokalize 19.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "ਕਸਟਮ"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "ਇਹ ਐਂਟਰੀ ਤੁਹਾਨੂੰ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਚੁਣਨ ਦਿੰਦੀ ਹੈ"
 

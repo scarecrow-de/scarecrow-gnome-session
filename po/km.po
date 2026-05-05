@@ -20,11 +20,11 @@ msgstr ""
 "X-Generator: WordForge 0.8 RC1\n"
 "X-Language: km-KH\n"
 
-#: ../data/gnome-custom-session.desktop.in.h:1
+#: ../data/scarecrow-custom-session.desktop.in.h:1
 msgid "Custom"
 msgstr "ផ្ទាល់​ខ្លួន"
 
-#: ../data/gnome-custom-session.desktop.in.h:2
+#: ../data/scarecrow-custom-session.desktop.in.h:2
 msgid "This entry lets you select a saved session"
 msgstr "ធាតុ​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​សម័យ​ដែល​បាន​រក្សាទុក"
 
@@ -42,7 +42,7 @@ msgid "Scarecrow dummy"
 msgstr "Scarecrow dummy"
 
 #: ../data/scarecrow-wayland.desktop.in.h:1
-#: ../data/gnome-wayland.session.desktop.in.in.h:1
+#: ../data/scarecrow-wayland.session.desktop.in.in.h:1
 #| msgid "Scarecrow fallback"
 msgid "Scarecrow on Wayland"
 msgstr "Scarecrow នៅ Wayland"

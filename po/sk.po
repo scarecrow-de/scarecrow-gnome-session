@@ -25,12 +25,12 @@ msgstr ""
 "X-Generator: Poedit 2.3\n"
 
 # desktop entry name
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "Vlastná relácia"
 
 # desktop entry comment
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "Táto položka vám umožní vybrať uloženú reláciu"
 

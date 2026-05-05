@@ -26,11 +26,11 @@ msgstr ""
 "X-Generator: Gtranslator 3.36.0\n"
 
 # auto translated by TM merge from project: system-config-printer, version: 1.1.16-23, DocId: system-config-printer
-#: data/gnome-custom-session.desktop.in.in:3
+#: data/scarecrow-custom-session.desktop.in.in:3
 msgid "Custom"
 msgstr "স্বনির্ধারিত"
 
-#: data/gnome-custom-session.desktop.in.in:4
+#: data/scarecrow-custom-session.desktop.in.in:4
 msgid "This entry lets you select a saved session"
 msgstr "এই এন্ট্রি অাপনাকে একটি সংরক্ষিত সেশন নির্বাচন করতে দেয়"
 
