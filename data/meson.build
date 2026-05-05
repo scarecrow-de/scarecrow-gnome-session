@@ -67,6 +67,8 @@ foreach name: desktops
   )
 endforeach
 
+session = 'gnome'
+
 sessions = [
   'gnome',
   'gnome-dummy'
