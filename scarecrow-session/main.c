@@ -34,7 +34,7 @@
 #include <glib-unix.h>
 #include <gio/gio.h>
 
-#include "gdm-log.h"
+#include "scdm-log.h"
 
 #include "gsm-util.h"
 #include "gsm-manager.h"
@@ -131,7 +131,7 @@ sigusr2_cb (gpointer data)
 static gboolean
 sigusr1_cb (gpointer data)
 {
-        gdm_log_toggle_debug ();
+        scdm_log_toggle_debug ();
         return TRUE;
 }
 
@@ -464,8 +464,8 @@ main (int argc, char **argv)
         }
 #endif
 
-        gdm_log_init ();
-        gdm_log_set_debug (debug);
+        scdm_log_init ();
+        scdm_log_set_debug (debug);
 
         if (systemd_service) {
                 /* XXX: This is an optimization, but we actually need to do
@@ -617,7 +617,7 @@ main (int argc, char **argv)
         g_free (gl_renderer);
 
         g_bus_unown_name (name_owner_id);
-        gdm_log_shutdown ();
+        scdm_log_shutdown ();
 
         return 0;
 }

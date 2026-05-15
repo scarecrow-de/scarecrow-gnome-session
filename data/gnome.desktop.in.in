@@ -5,4 +5,4 @@ Exec=@bindir@/scarecrow-session
 TryExec=@bindir@/scarecrow-session
 Type=Application
 DesktopNames=Scarecrow
-X-GDM-SessionRegisters=true
+X-SCDM-SessionRegisters=true

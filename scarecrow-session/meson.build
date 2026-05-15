@@ -25,7 +25,7 @@ sources = files(
   'gsm-dbus-client.c',
   'gsm-fail-whale.c',
   'gsm-inhibitor.c',
-  'gdm-log.c',
+  'scdm-log.c',
   'gsm-manager.c',
   'gsm-presence.c',
   'gsm-process-helper.c',

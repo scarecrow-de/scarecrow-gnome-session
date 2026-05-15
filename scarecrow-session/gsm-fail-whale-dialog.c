@@ -438,10 +438,10 @@ int main (int argc, char *argv[])
             return 0;
         }
 
-        /* Force-off allow_logout when running inside GDM, this is needed
+        /* Force-off allow_logout when running inside SCDM, this is needed
          * because the systemd service always passes --allow-logout
          */
-        if (g_strcmp0 (g_getenv ("RUNNING_UNDER_GDM"), "true") == 0)
+        if (g_strcmp0 (g_getenv ("RUNNING_UNDER_SCDM"), "true") == 0)
                 allow_logout = FALSE;
 
         display = gdk_display_get_default ();

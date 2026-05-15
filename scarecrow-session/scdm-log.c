@@ -33,7 +33,7 @@
 #include <glib.h>
 #include <glib/gstdio.h>
 
-#include "gdm-log.h"
+#include "scdm-log.h"
 
 static gboolean initialized = FALSE;
 static int      syslog_levels = (G_LOG_LEVEL_ERROR | G_LOG_LEVEL_CRITICAL | G_LOG_LEVEL_WARNING);
@@ -98,7 +98,7 @@ log_level_to_priority_and_prefix (GLogLevelFlags log_level,
 }
 
 void
-gdm_log_default_handler (const gchar   *log_domain,
+scdm_log_default_handler (const gchar   *log_domain,
                          GLogLevelFlags log_level,
                          const gchar   *message,
                          gpointer       unused_data)
@@ -118,7 +118,7 @@ gdm_log_default_handler (const gchar   *log_domain,
         }
 
         if (! initialized) {
-                gdm_log_init ();
+                scdm_log_init ();
         }
 
         log_level_to_priority_and_prefix (log_level,
@@ -153,7 +153,7 @@ gdm_log_default_handler (const gchar   *log_domain,
 }
 
 void
-gdm_log_toggle_debug (void)
+scdm_log_toggle_debug (void)
 {
         if (syslog_levels & G_LOG_LEVEL_DEBUG) {
                 g_debug ("Debugging disabled");
@@ -165,7 +165,7 @@ gdm_log_toggle_debug (void)
 }
 
 void
-gdm_log_set_debug (gboolean debug)
+scdm_log_set_debug (gboolean debug)
 {
         if (debug) {
                 syslog_levels |= G_LOG_LEVEL_DEBUG;
@@ -177,12 +177,12 @@ gdm_log_set_debug (gboolean debug)
 }
 
 void
-gdm_log_init (void)
+scdm_log_init (void)
 {
         const char *prg_name;
         int         options;
 
-        g_log_set_default_handler (gdm_log_default_handler, NULL);
+        g_log_set_default_handler (scdm_log_default_handler, NULL);
 
         prg_name = g_get_prgname ();
 
@@ -197,7 +197,7 @@ gdm_log_init (void)
 }
 
 void
-gdm_log_shutdown (void)
+scdm_log_shutdown (void)
 {
         closelog ();
         initialized = FALSE;

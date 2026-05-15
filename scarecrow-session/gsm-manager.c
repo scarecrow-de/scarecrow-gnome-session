@@ -90,8 +90,8 @@
  */
 #define GSM_MANAGER_PHASE_TIMEOUT 90 /* seconds */
 
-#define GDM_FLEXISERVER_COMMAND "gdmflexiserver"
-#define GDM_FLEXISERVER_ARGS    "--startnew Standard"
+#define SCDM_FLEXISERVER_COMMAND "scdmflexiserver"
+#define SCDM_FLEXISERVER_ARGS    "--startnew Standard"
 
 #define SESSION_SCHEMA            "io.github.scarecrow_de.desktop.session"
 #define KEY_IDLE_DELAY            "idle-delay"
