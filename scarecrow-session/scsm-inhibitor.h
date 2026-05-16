@@ -27,24 +27,24 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_INHIBITOR            (scsm_inhibitor_get_type ())
-#define SCSM_INHIBITOR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_INHIBITOR, GsmInhibitor))
-#define SCSM_INHIBITOR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_INHIBITOR, GsmInhibitorClass))
+#define SCSM_INHIBITOR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_INHIBITOR, ScsmInhibitor))
+#define SCSM_INHIBITOR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_INHIBITOR, ScsmInhibitorClass))
 #define SCSM_IS_INHIBITOR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_INHIBITOR))
 #define SCSM_IS_INHIBITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_INHIBITOR))
-#define SCSM_INHIBITOR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_INHIBITOR, GsmInhibitorClass))
+#define SCSM_INHIBITOR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_INHIBITOR, ScsmInhibitorClass))
 
-typedef struct _GsmInhibitor        GsmInhibitor;
-typedef struct _GsmInhibitorClass   GsmInhibitorClass;
+typedef struct _ScsmInhibitor        ScsmInhibitor;
+typedef struct _ScsmInhibitorClass   ScsmInhibitorClass;
 
-typedef struct GsmInhibitorPrivate GsmInhibitorPrivate;
+typedef struct ScsmInhibitorPrivate ScsmInhibitorPrivate;
 
-struct _GsmInhibitor
+struct _ScsmInhibitor
 {
         GObject              parent;
-        GsmInhibitorPrivate *priv;
+        ScsmInhibitorPrivate *priv;
 };
 
-struct _GsmInhibitorClass
+struct _ScsmInhibitorClass
 {
         GObjectClass parent_class;
 };
@@ -54,34 +54,34 @@ typedef enum
         SCSM_INHIBITOR_ERROR_GENERAL = 0,
         SCSM_INHIBITOR_ERROR_NOT_SET,
         SCSM_INHIBITOR_NUM_ERRORS
-} GsmInhibitorError;
+} ScsmInhibitorError;
 
 #define SCSM_INHIBITOR_ERROR scsm_inhibitor_error_quark ()
 GQuark         scsm_inhibitor_error_quark          (void);
 
 GType          scsm_inhibitor_get_type             (void) G_GNUC_CONST;
 
-GsmInhibitor * scsm_inhibitor_new                  (const char    *app_id,
+ScsmInhibitor * scsm_inhibitor_new                  (const char    *app_id,
                                                    guint          toplevel_xid,
                                                    guint          flags,
                                                    const char    *reason,
                                                    const char    *bus_name,
                                                    guint          cookie);
-GsmInhibitor * scsm_inhibitor_new_for_client       (const char    *client_id,
+ScsmInhibitor * scsm_inhibitor_new_for_client       (const char    *client_id,
                                                    const char    *app_id,
                                                    guint          flags,
                                                    const char    *reason,
                                                    const char    *bus_name,
                                                    guint          cookie);
 
-const char *   scsm_inhibitor_peek_id              (GsmInhibitor  *inhibitor);
-const char *   scsm_inhibitor_peek_app_id          (GsmInhibitor  *inhibitor);
-const char *   scsm_inhibitor_peek_client_id       (GsmInhibitor  *inhibitor);
-const char *   scsm_inhibitor_peek_reason          (GsmInhibitor  *inhibitor);
-const char *   scsm_inhibitor_peek_bus_name        (GsmInhibitor  *inhibitor);
-guint          scsm_inhibitor_peek_cookie          (GsmInhibitor  *inhibitor);
-guint          scsm_inhibitor_peek_flags           (GsmInhibitor  *inhibitor);
-guint          scsm_inhibitor_peek_toplevel_xid    (GsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_id              (ScsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_app_id          (ScsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_client_id       (ScsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_reason          (ScsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_bus_name        (ScsmInhibitor  *inhibitor);
+guint          scsm_inhibitor_peek_cookie          (ScsmInhibitor  *inhibitor);
+guint          scsm_inhibitor_peek_flags           (ScsmInhibitor  *inhibitor);
+guint          scsm_inhibitor_peek_toplevel_xid    (ScsmInhibitor  *inhibitor);
 
 G_END_DECLS
 

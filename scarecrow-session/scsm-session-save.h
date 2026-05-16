@@ -24,8 +24,8 @@
 
 G_BEGIN_DECLS
 
-void      scsm_session_save                 (GsmStore  *client_store,
-                                            GsmStore  *app_store,
+void      scsm_session_save                 (ScsmStore  *client_store,
+                                            ScsmStore  *app_store,
                                             GError   **error);
 void      scsm_session_save_clear           (void);
 

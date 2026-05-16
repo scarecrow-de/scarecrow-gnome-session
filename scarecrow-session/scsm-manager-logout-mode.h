@@ -27,7 +27,7 @@ typedef enum {
         SCSM_MANAGER_LOGOUT_MODE_NORMAL = 0,
         SCSM_MANAGER_LOGOUT_MODE_NO_CONFIRMATION,
         SCSM_MANAGER_LOGOUT_MODE_FORCE
-} GsmManagerLogoutMode;
+} ScsmManagerLogoutMode;
 
 G_END_DECLS
 

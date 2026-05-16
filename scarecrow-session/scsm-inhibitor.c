@@ -31,9 +31,9 @@
 
 static guint32 inhibitor_serial = 1;
 
-#define SCSM_INHIBITOR_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_INHIBITOR, GsmInhibitorPrivate))
+#define SCSM_INHIBITOR_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_INHIBITOR, ScsmInhibitorPrivate))
 
-struct GsmInhibitorPrivate
+struct ScsmInhibitorPrivate
 {
         char *id;
         char *bus_name;
@@ -44,7 +44,7 @@ struct GsmInhibitorPrivate
         guint toplevel_xid;
         guint cookie;
         GDBusConnection *connection;
-        GsmExportedInhibitor *skeleton;
+        ScsmExportedInhibitor *skeleton;
 
         guint                 watch_id;
 };
@@ -66,7 +66,7 @@ enum {
 };
 static guint signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (GsmInhibitor, scsm_inhibitor, G_TYPE_OBJECT)
+G_DEFINE_TYPE (ScsmInhibitor, scsm_inhibitor, G_TYPE_OBJECT)
 
 #define SCSM_INHIBITOR_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Inhibitor"
 
@@ -88,9 +88,9 @@ scsm_inhibitor_error_quark (void)
 }
 
 static gboolean
-scsm_inhibitor_get_app_id (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_app_id (ScsmExportedInhibitor  *skeleton,
                           GDBusMethodInvocation *invocation,
-                          GsmInhibitor          *inhibitor)
+                          ScsmInhibitor          *inhibitor)
 {
         const gchar *id;
 
@@ -106,9 +106,9 @@ scsm_inhibitor_get_app_id (GsmExportedInhibitor  *skeleton,
 }
 
 static gboolean
-scsm_inhibitor_get_client_id (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_client_id (ScsmExportedInhibitor  *skeleton,
                              GDBusMethodInvocation *invocation,
-                             GsmInhibitor          *inhibitor)
+                             ScsmInhibitor          *inhibitor)
 {
         /* object paths are not allowed to be NULL or blank */
         if (IS_STRING_EMPTY (inhibitor->priv->client_id)) {
@@ -120,15 +120,15 @@ scsm_inhibitor_get_client_id (GsmExportedInhibitor  *skeleton,
         }
 
         scsm_exported_inhibitor_complete_get_client_id (skeleton, invocation, inhibitor->priv->client_id);
-        g_debug ("GsmInhibitor: getting client-id = '%s'", inhibitor->priv->client_id);
+        g_debug ("ScsmInhibitor: getting client-id = '%s'", inhibitor->priv->client_id);
 
         return TRUE;
 }
 
 static gboolean
-scsm_inhibitor_get_reason (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_reason (ScsmExportedInhibitor  *skeleton,
                           GDBusMethodInvocation *invocation,
-                          GsmInhibitor          *inhibitor)
+                          ScsmInhibitor          *inhibitor)
 {
         const gchar *reason;
 
@@ -143,18 +143,18 @@ scsm_inhibitor_get_reason (GsmExportedInhibitor  *skeleton,
 }
 
 static gboolean
-scsm_inhibitor_get_flags (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_flags (ScsmExportedInhibitor  *skeleton,
                          GDBusMethodInvocation *invocation,
-                         GsmInhibitor          *inhibitor)
+                         ScsmInhibitor          *inhibitor)
 {
         scsm_exported_inhibitor_complete_get_flags (skeleton, invocation, inhibitor->priv->flags);
         return TRUE;
 }
 
 static gboolean
-scsm_inhibitor_get_toplevel_xid (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_toplevel_xid (ScsmExportedInhibitor  *skeleton,
                                 GDBusMethodInvocation *invocation,
-                                GsmInhibitor          *inhibitor)
+                                ScsmInhibitor          *inhibitor)
 {
         scsm_exported_inhibitor_complete_get_toplevel_xid (skeleton, invocation, inhibitor->priv->toplevel_xid);
         return TRUE;
@@ -175,10 +175,10 @@ get_next_inhibitor_serial (void)
 }
 
 static gboolean
-register_inhibitor (GsmInhibitor *inhibitor)
+register_inhibitor (ScsmInhibitor *inhibitor)
 {
         GError *error;
-        GsmExportedInhibitor *skeleton;
+        ScsmExportedInhibitor *skeleton;
 
         error = NULL;
         inhibitor->priv->connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
@@ -220,7 +220,7 @@ scsm_inhibitor_constructor (GType                  type,
                            guint                  n_construct_properties,
                            GObjectConstructParam *construct_properties)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
         gboolean      res;
 
         inhibitor = SCSM_INHIBITOR (G_OBJECT_CLASS (scsm_inhibitor_parent_class)->constructor (type,
@@ -238,7 +238,7 @@ scsm_inhibitor_constructor (GType                  type,
 }
 
 static void
-scsm_inhibitor_init (GsmInhibitor *inhibitor)
+scsm_inhibitor_init (ScsmInhibitor *inhibitor)
 {
         inhibitor->priv = SCSM_INHIBITOR_GET_PRIVATE (inhibitor);
 }
@@ -248,7 +248,7 @@ on_inhibitor_vanished (GDBusConnection *connection,
                        const char      *name,
                        gpointer         user_data)
 {
-        GsmInhibitor  *inhibitor = user_data;
+        ScsmInhibitor  *inhibitor = user_data;
 
         g_bus_unwatch_name (inhibitor->priv->watch_id);
         inhibitor->priv->watch_id = 0;
@@ -257,7 +257,7 @@ on_inhibitor_vanished (GDBusConnection *connection,
 }
 
 static void
-scsm_inhibitor_set_bus_name (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_bus_name (ScsmInhibitor  *inhibitor,
                             const char    *bus_name)
 {
         g_return_if_fail (SCSM_IS_INHIBITOR (inhibitor));
@@ -281,7 +281,7 @@ scsm_inhibitor_set_bus_name (GsmInhibitor  *inhibitor,
 }
 
 static void
-scsm_inhibitor_set_app_id (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_app_id (ScsmInhibitor  *inhibitor,
                           const char    *app_id)
 {
         g_return_if_fail (SCSM_IS_INHIBITOR (inhibitor));
@@ -293,14 +293,14 @@ scsm_inhibitor_set_app_id (GsmInhibitor  *inhibitor,
 }
 
 static void
-scsm_inhibitor_set_client_id (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_client_id (ScsmInhibitor  *inhibitor,
                              const char    *client_id)
 {
         g_return_if_fail (SCSM_IS_INHIBITOR (inhibitor));
 
         g_free (inhibitor->priv->client_id);
 
-        g_debug ("GsmInhibitor: setting client-id = %s", client_id);
+        g_debug ("ScsmInhibitor: setting client-id = %s", client_id);
 
         if (client_id != NULL) {
                 inhibitor->priv->client_id = g_strdup (client_id);
@@ -311,7 +311,7 @@ scsm_inhibitor_set_client_id (GsmInhibitor  *inhibitor,
 }
 
 static void
-scsm_inhibitor_set_reason (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_reason (ScsmInhibitor  *inhibitor,
                           const char    *reason)
 {
         g_return_if_fail (SCSM_IS_INHIBITOR (inhibitor));
@@ -327,7 +327,7 @@ scsm_inhibitor_set_reason (GsmInhibitor  *inhibitor,
 }
 
 static void
-scsm_inhibitor_set_cookie (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_cookie (ScsmInhibitor  *inhibitor,
                           guint          cookie)
 {
         g_return_if_fail (SCSM_IS_INHIBITOR (inhibitor));
@@ -339,7 +339,7 @@ scsm_inhibitor_set_cookie (GsmInhibitor  *inhibitor,
 }
 
 static void
-scsm_inhibitor_set_flags (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_flags (ScsmInhibitor  *inhibitor,
                          guint          flags)
 {
         g_return_if_fail (SCSM_IS_INHIBITOR (inhibitor));
@@ -351,7 +351,7 @@ scsm_inhibitor_set_flags (GsmInhibitor  *inhibitor,
 }
 
 static void
-scsm_inhibitor_set_toplevel_xid (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_toplevel_xid (ScsmInhibitor  *inhibitor,
                                 guint          xid)
 {
         g_return_if_fail (SCSM_IS_INHIBITOR (inhibitor));
@@ -363,7 +363,7 @@ scsm_inhibitor_set_toplevel_xid (GsmInhibitor  *inhibitor,
 }
 
 const char *
-scsm_inhibitor_peek_bus_name (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_bus_name (ScsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -371,7 +371,7 @@ scsm_inhibitor_peek_bus_name (GsmInhibitor  *inhibitor)
 }
 
 const char *
-scsm_inhibitor_peek_id (GsmInhibitor *inhibitor)
+scsm_inhibitor_peek_id (ScsmInhibitor *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -379,7 +379,7 @@ scsm_inhibitor_peek_id (GsmInhibitor *inhibitor)
 }
 
 const char *
-scsm_inhibitor_peek_app_id (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_app_id (ScsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -387,7 +387,7 @@ scsm_inhibitor_peek_app_id (GsmInhibitor  *inhibitor)
 }
 
 const char *
-scsm_inhibitor_peek_client_id (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_client_id (ScsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -395,7 +395,7 @@ scsm_inhibitor_peek_client_id (GsmInhibitor  *inhibitor)
 }
 
 const char *
-scsm_inhibitor_peek_reason (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_reason (ScsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -403,7 +403,7 @@ scsm_inhibitor_peek_reason (GsmInhibitor  *inhibitor)
 }
 
 guint
-scsm_inhibitor_peek_flags (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_flags (ScsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), 0);
 
@@ -411,7 +411,7 @@ scsm_inhibitor_peek_flags (GsmInhibitor  *inhibitor)
 }
 
 guint
-scsm_inhibitor_peek_toplevel_xid (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_toplevel_xid (ScsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), 0);
 
@@ -419,7 +419,7 @@ scsm_inhibitor_peek_toplevel_xid (GsmInhibitor  *inhibitor)
 }
 
 guint
-scsm_inhibitor_peek_cookie (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_cookie (ScsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (SCSM_IS_INHIBITOR (inhibitor), 0);
 
@@ -432,7 +432,7 @@ scsm_inhibitor_set_property (GObject       *object,
                             const GValue  *value,
                             GParamSpec    *pspec)
 {
-        GsmInhibitor *self;
+        ScsmInhibitor *self;
 
         self = SCSM_INHIBITOR (object);
 
@@ -470,7 +470,7 @@ scsm_inhibitor_get_property (GObject    *object,
                             GValue     *value,
                             GParamSpec *pspec)
 {
-        GsmInhibitor *self;
+        ScsmInhibitor *self;
 
         self = SCSM_INHIBITOR (object);
 
@@ -505,7 +505,7 @@ scsm_inhibitor_get_property (GObject    *object,
 static void
 scsm_inhibitor_finalize (GObject *object)
 {
-        GsmInhibitor *inhibitor = (GsmInhibitor *) object;
+        ScsmInhibitor *inhibitor = (ScsmInhibitor *) object;
 
         g_free (inhibitor->priv->id);
         g_free (inhibitor->priv->bus_name);
@@ -529,7 +529,7 @@ scsm_inhibitor_finalize (GObject *object)
 }
 
 static void
-scsm_inhibitor_class_init (GsmInhibitorClass *klass)
+scsm_inhibitor_class_init (ScsmInhibitorClass *klass)
 {
         GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
@@ -601,10 +601,10 @@ scsm_inhibitor_class_init (GsmInhibitorClass *klass)
                                                             0,
                                                             G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
-        g_type_class_add_private (klass, sizeof (GsmInhibitorPrivate));
+        g_type_class_add_private (klass, sizeof (ScsmInhibitorPrivate));
 }
 
-GsmInhibitor *
+ScsmInhibitor *
 scsm_inhibitor_new (const char    *app_id,
                    guint          toplevel_xid,
                    guint          flags,
@@ -612,7 +612,7 @@ scsm_inhibitor_new (const char    *app_id,
                    const char    *bus_name,
                    guint          cookie)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
 
         inhibitor = g_object_new (SCSM_TYPE_INHIBITOR,
                                   "app-id", app_id,
@@ -626,7 +626,7 @@ scsm_inhibitor_new (const char    *app_id,
         return inhibitor;
 }
 
-GsmInhibitor *
+ScsmInhibitor *
 scsm_inhibitor_new_for_client (const char    *client_id,
                               const char    *app_id,
                               guint          flags,
@@ -634,7 +634,7 @@ scsm_inhibitor_new_for_client (const char    *client_id,
                               const char    *bus_name,
                               guint          cookie)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
 
         inhibitor = g_object_new (SCSM_TYPE_INHIBITOR,
                                   "client-id", client_id,

@@ -57,7 +57,7 @@ static gboolean debug = FALSE;
 static gboolean please_fail = FALSE;
 static gboolean disable_acceleration_check = FALSE;
 static const char *session_name = NULL;
-static GsmManager *manager = NULL;
+static ScsmManager *manager = NULL;
 static char *gl_renderer = NULL;
 
 static GMainLoop *loop;
@@ -90,7 +90,7 @@ on_name_lost (GDBusConnection *connection,
 
                 /*
                  * When the signal handler gets a shutdown signal, it calls
-                 * this function to inform GsmManager to not restart
+                 * this function to inform ScsmManager to not restart
                  * applications in the off chance a handler is already queued
                  * to dispatch following the below call to gtk_main_quit.
                  */
@@ -104,7 +104,7 @@ static gboolean
 term_or_int_signal_cb (gpointer data)
 {
         g_autoptr(GError) error = NULL;
-        GsmManager *manager = (GsmManager *)data;
+        ScsmManager *manager = (ScsmManager *)data;
 
         /* let the fatal signals interrupt us */
         g_debug ("Caught SIGINT/SIGTERM, shutting down normally.");
@@ -146,7 +146,7 @@ on_name_acquired (GDBusConnection *connection,
 static void
 create_manager (void)
 {
-        GsmStore *client_store;
+        ScsmStore *client_store;
 
         client_store = scsm_store_new ();
         manager = scsm_manager_new (client_store, failsafe, systemd_service);

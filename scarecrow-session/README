@@ -3,13 +3,13 @@ See also http://live.gnome.org/SessionManagement/NewGnomeSession
 Startup
 -------
 
-main() creates the GsmSession object representing the session (either
+main() creates the ScsmSession object representing the session (either
 failsafe or normal). scsm_session_new() reads the appropriate autostart
-and session files to create a list of GsmApps to be started.
-(GsmAppAutostart represents an autostarted app, and GsmAppResumed
+and session files to create a list of ScsmApps to be started.
+(ScsmAppAutostart represents an autostarted app, and ScsmAppResumed
 represents an app resumed from the previous saved session.)
 
-Startup is divided into 7 phases (GsmManagerPhase):
+Startup is divided into 7 phases (ScsmManagerPhase):
 
     * SCSM_MANAGER_PHASE_STARTUP covers scarecrow-session's internal
       startup, which also includes starting dbus-daemon (if
@@ -45,11 +45,11 @@ Startup is divided into 7 phases (GsmManagerPhase):
     * SCSM_MANAGER_PHASE_APPLICATION is everything else (normal apps,
       tray icons, etc)
 
-For each startup phase, GsmSession launches the appropriate GsmApps.
-When apps connect to the XSMP or D-Bus servers, GsmClients are created
+For each startup phase, ScsmSession launches the appropriate ScsmApps.
+When apps connect to the XSMP or D-Bus servers, ScsmClients are created
 and added to the session. The session tries to map these clients to
-GsmApps. GsmApps signal when they register (via XSMP or SN) or exit,
-and GsmSession uses this to decide when the phase is complete.
+ScsmApps. ScsmApps signal when they register (via XSMP or SN) or exit,
+and ScsmSession uses this to decide when the phase is complete.
 
 FIXME: after starting the session, we need to run the DiscardCommands
 of resumed apps.
@@ -62,8 +62,8 @@ SCSM_MANAGER_PHASE_RUNNING is pretty similar to the old scarecrow-session;
 mostly it just tracks XSMP clients, and watches for
 SmRestartImmediately clients exiting (NOTE: THIS DOESN'T HAPPEN YET).
 
-GsmClient is in theory not XSMP-specific, but it's very very
+ScsmClient is in theory not XSMP-specific, but it's very very
 XSMP-like, and the shutdown procedure is also very XSMP-like. This is
 just because there's no way to do XSMP shutdown correctly otherwise.
-However, GsmClientDBus will still be able to present a more sane
-protocol to its clients than GsmClient presents to it.
+However, ScsmClientDBus will still be able to present a more sane
+protocol to its clients than ScsmClient presents to it.

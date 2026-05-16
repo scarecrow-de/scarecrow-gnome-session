@@ -55,7 +55,7 @@ foreach iface: dbus_ifaces
     iface[0],
     iface[0] + '.xml',
     interface_prefix: iface[0] + '.',
-    namespace: 'Gsm',
+    namespace: 'Scsm',
     annotations: [iface[0], 'org.gtk.GDBus.C.Name', iface[1]]
   )
 endforeach

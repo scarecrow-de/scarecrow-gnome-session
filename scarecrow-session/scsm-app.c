@@ -27,12 +27,12 @@
 #include "scsm-app.h"
 #include "io.github.scarecrow_de.SessionManager.App.h"
 
-#define SCSM_APP_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_APP, GsmAppPrivate))
+#define SCSM_APP_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_APP, ScsmAppPrivate))
 
 /* If a component crashes twice within a minute, we count that as a fatal error */
 #define _SCSM_APP_RESPAWN_RATELIMIT_SECONDS 60
 
-struct _GsmAppPrivate
+struct _ScsmAppPrivate
 {
         char            *id;
         char            *app_id;
@@ -41,7 +41,7 @@ struct _GsmAppPrivate
         gboolean         registered;
         GTimeVal         last_restart_time;
         GDBusConnection *connection;
-        GsmExportedApp  *skeleton;
+        ScsmExportedApp  *skeleton;
 };
 
 
@@ -64,7 +64,7 @@ enum {
         LAST_PROP
 };
 
-G_DEFINE_TYPE (GsmApp, scsm_app, G_TYPE_OBJECT)
+G_DEFINE_TYPE (ScsmApp, scsm_app, G_TYPE_OBJECT)
 
 GQuark
 scsm_app_error_quark (void)
@@ -79,9 +79,9 @@ scsm_app_error_quark (void)
 }
 
 static gboolean
-scsm_app_get_app_id (GsmExportedApp        *skeleton,
+scsm_app_get_app_id (ScsmExportedApp        *skeleton,
                     GDBusMethodInvocation *invocation,
-                    GsmApp                *app)
+                    ScsmApp                *app)
 {
         const gchar *id;
 
@@ -92,9 +92,9 @@ scsm_app_get_app_id (GsmExportedApp        *skeleton,
 }
 
 static gboolean
-scsm_app_get_startup_id (GsmExportedApp        *skeleton,
+scsm_app_get_startup_id (ScsmExportedApp        *skeleton,
                         GDBusMethodInvocation *invocation,
-                        GsmApp                *app)
+                        ScsmApp                *app)
 {
         const gchar *id;
 
@@ -105,9 +105,9 @@ scsm_app_get_startup_id (GsmExportedApp        *skeleton,
 }
 
 static gboolean
-scsm_app_get_phase (GsmExportedApp        *skeleton,
+scsm_app_get_phase (ScsmExportedApp        *skeleton,
                    GDBusMethodInvocation *invocation,
-                   GsmApp                *app)
+                   ScsmApp                *app)
 {
         scsm_exported_app_complete_get_phase (skeleton, invocation, app->priv->phase);
         return TRUE;
@@ -128,10 +128,10 @@ get_next_app_serial (void)
 }
 
 static gboolean
-register_app (GsmApp *app)
+register_app (ScsmApp *app)
 {
         GError *error;
-        GsmExportedApp *skeleton;
+        ScsmExportedApp *skeleton;
 
         error = NULL;
         app->priv->connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
@@ -168,7 +168,7 @@ scsm_app_constructor (GType                  type,
                      guint                  n_construct_properties,
                      GObjectConstructParam *construct_properties)
 {
-        GsmApp    *app;
+        ScsmApp    *app;
         gboolean   res;
 
         app = SCSM_APP (G_OBJECT_CLASS (scsm_app_parent_class)->constructor (type,
@@ -187,13 +187,13 @@ scsm_app_constructor (GType                  type,
 }
 
 static void
-scsm_app_init (GsmApp *app)
+scsm_app_init (ScsmApp *app)
 {
         app->priv = SCSM_APP_GET_PRIVATE (app);
 }
 
 static void
-scsm_app_set_phase (GsmApp *app,
+scsm_app_set_phase (ScsmApp *app,
                    int     phase)
 {
         g_return_if_fail (SCSM_IS_APP (app));
@@ -202,7 +202,7 @@ scsm_app_set_phase (GsmApp *app,
 }
 
 static void
-scsm_app_set_id (GsmApp     *app,
+scsm_app_set_id (ScsmApp     *app,
                 const char *id)
 {
         g_return_if_fail (SCSM_IS_APP (app));
@@ -214,7 +214,7 @@ scsm_app_set_id (GsmApp     *app,
 
 }
 static void
-scsm_app_set_startup_id (GsmApp     *app,
+scsm_app_set_startup_id (ScsmApp     *app,
                         const char *startup_id)
 {
         g_return_if_fail (SCSM_IS_APP (app));
@@ -232,7 +232,7 @@ scsm_app_set_property (GObject      *object,
                       const GValue *value,
                       GParamSpec   *pspec)
 {
-        GsmApp *app = SCSM_APP (object);
+        ScsmApp *app = SCSM_APP (object);
 
         switch (prop_id) {
         case PROP_STARTUP_ID:
@@ -258,7 +258,7 @@ scsm_app_get_property (GObject    *object,
                       GValue     *value,
                       GParamSpec *pspec)
 {
-        GsmApp *app = SCSM_APP (object);
+        ScsmApp *app = SCSM_APP (object);
 
         switch (prop_id) {
         case PROP_STARTUP_ID:
@@ -281,7 +281,7 @@ scsm_app_get_property (GObject    *object,
 static void
 scsm_app_dispose (GObject *object)
 {
-        GsmApp *app = SCSM_APP (object);
+        ScsmApp *app = SCSM_APP (object);
 
         g_free (app->priv->startup_id);
         app->priv->startup_id = NULL;
@@ -301,7 +301,7 @@ scsm_app_dispose (GObject *object)
 }
 
 static void
-scsm_app_class_init (GsmAppClass *klass)
+scsm_app_class_init (ScsmAppClass *klass)
 {
         GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
@@ -353,7 +353,7 @@ scsm_app_class_init (GsmAppClass *klass)
                 g_signal_new ("exited",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmAppClass, exited),
+                              G_STRUCT_OFFSET (ScsmAppClass, exited),
                               NULL, NULL, NULL,
                               G_TYPE_NONE,
                               1, G_TYPE_UCHAR);
@@ -361,42 +361,42 @@ scsm_app_class_init (GsmAppClass *klass)
                 g_signal_new ("died",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmAppClass, died),
+                              G_STRUCT_OFFSET (ScsmAppClass, died),
                               NULL, NULL, NULL,
                               G_TYPE_NONE,
                               1, G_TYPE_INT);
 
-        g_type_class_add_private (klass, sizeof (GsmAppPrivate));
+        g_type_class_add_private (klass, sizeof (ScsmAppPrivate));
 }
 
 const char *
-scsm_app_peek_id (GsmApp *app)
+scsm_app_peek_id (ScsmApp *app)
 {
         return app->priv->id;
 }
 
 const char *
-scsm_app_peek_app_id (GsmApp *app)
+scsm_app_peek_app_id (ScsmApp *app)
 {
         return SCSM_APP_GET_CLASS (app)->impl_get_app_id (app);
 }
 
 const char *
-scsm_app_peek_startup_id (GsmApp *app)
+scsm_app_peek_startup_id (ScsmApp *app)
 {
         return app->priv->startup_id;
 }
 
 /**
  * scsm_app_peek_phase:
- * @app: a %GsmApp
+ * @app: a %ScsmApp
  *
  * Returns @app's startup phase.
  *
  * Return value: @app's startup phase
  **/
-GsmManagerPhase
-scsm_app_peek_phase (GsmApp *app)
+ScsmManagerPhase
+scsm_app_peek_phase (ScsmApp *app)
 {
         g_return_val_if_fail (SCSM_IS_APP (app), SCSM_MANAGER_PHASE_APPLICATION);
 
@@ -404,7 +404,7 @@ scsm_app_peek_phase (GsmApp *app)
 }
 
 gboolean
-scsm_app_peek_is_disabled (GsmApp *app)
+scsm_app_peek_is_disabled (ScsmApp *app)
 {
         g_return_val_if_fail (SCSM_IS_APP (app), FALSE);
 
@@ -416,7 +416,7 @@ scsm_app_peek_is_disabled (GsmApp *app)
 }
 
 gboolean
-scsm_app_peek_is_conditionally_disabled (GsmApp *app)
+scsm_app_peek_is_conditionally_disabled (ScsmApp *app)
 {
         g_return_val_if_fail (SCSM_IS_APP (app), FALSE);
 
@@ -428,7 +428,7 @@ scsm_app_peek_is_conditionally_disabled (GsmApp *app)
 }
 
 gboolean
-scsm_app_is_running (GsmApp *app)
+scsm_app_is_running (ScsmApp *app)
 {
         g_return_val_if_fail (SCSM_IS_APP (app), FALSE);
 
@@ -440,7 +440,7 @@ scsm_app_is_running (GsmApp *app)
 }
 
 gboolean
-scsm_app_peek_autorestart (GsmApp *app)
+scsm_app_peek_autorestart (ScsmApp *app)
 {
         g_return_val_if_fail (SCSM_IS_APP (app), FALSE);
 
@@ -452,7 +452,7 @@ scsm_app_peek_autorestart (GsmApp *app)
 }
 
 gboolean
-scsm_app_provides (GsmApp *app, const char *service)
+scsm_app_provides (ScsmApp *app, const char *service)
 {
         if (SCSM_APP_GET_CLASS (app)->impl_provides) {
                 return SCSM_APP_GET_CLASS (app)->impl_provides (app, service);
@@ -462,7 +462,7 @@ scsm_app_provides (GsmApp *app, const char *service)
 }
 
 char **
-scsm_app_get_provides (GsmApp *app)
+scsm_app_get_provides (ScsmApp *app)
 {
         if (SCSM_APP_GET_CLASS (app)->impl_get_provides) {
                 return SCSM_APP_GET_CLASS (app)->impl_get_provides (app);
@@ -472,7 +472,7 @@ scsm_app_get_provides (GsmApp *app)
 }
 
 gboolean
-scsm_app_has_autostart_condition (GsmApp     *app,
+scsm_app_has_autostart_condition (ScsmApp     *app,
                                  const char *condition)
 {
 
@@ -484,7 +484,7 @@ scsm_app_has_autostart_condition (GsmApp     *app,
 }
 
 gboolean
-scsm_app_start (GsmApp  *app,
+scsm_app_start (ScsmApp  *app,
                GError **error)
 {
         g_debug ("Starting app: %s", app->priv->id);
@@ -492,7 +492,7 @@ scsm_app_start (GsmApp  *app,
 }
 
 gboolean
-scsm_app_restart (GsmApp  *app,
+scsm_app_restart (ScsmApp  *app,
                  GError **error)
 {
         GTimeVal current_time;
@@ -515,14 +515,14 @@ scsm_app_restart (GsmApp  *app,
 }
 
 gboolean
-scsm_app_stop (GsmApp  *app,
+scsm_app_stop (ScsmApp  *app,
               GError **error)
 {
         return SCSM_APP_GET_CLASS (app)->impl_stop (app, error);
 }
 
 void
-scsm_app_exited (GsmApp *app,
+scsm_app_exited (ScsmApp *app,
                 guchar  exit_code)
 {
         g_return_if_fail (SCSM_IS_APP (app));
@@ -531,7 +531,7 @@ scsm_app_exited (GsmApp *app,
 }
 
 void
-scsm_app_died (GsmApp *app,
+scsm_app_died (ScsmApp *app,
               int     signal)
 {
         g_return_if_fail (SCSM_IS_APP (app));
@@ -540,7 +540,7 @@ scsm_app_died (GsmApp *app,
 }
 
 gboolean
-scsm_app_get_registered (GsmApp *app)
+scsm_app_get_registered (ScsmApp *app)
 {
         g_return_val_if_fail (SCSM_IS_APP (app), FALSE);
 
@@ -548,7 +548,7 @@ scsm_app_get_registered (GsmApp *app)
 }
 
 void
-scsm_app_set_registered (GsmApp   *app,
+scsm_app_set_registered (ScsmApp   *app,
                         gboolean  registered)
 {
         g_return_if_fail (SCSM_IS_APP (app));
@@ -560,7 +560,7 @@ scsm_app_set_registered (GsmApp   *app,
 }
 
 gboolean
-scsm_app_save_to_keyfile (GsmApp    *app,
+scsm_app_save_to_keyfile (ScsmApp    *app,
                          GKeyFile  *keyfile,
                          GError   **error)
 {

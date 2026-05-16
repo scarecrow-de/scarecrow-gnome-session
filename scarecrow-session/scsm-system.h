@@ -30,53 +30,53 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_SYSTEM             (scsm_system_get_type ())
-#define SCSM_SYSTEM(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SYSTEM, GsmSystem))
-#define SCSM_SYSTEM_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SYSTEM, GsmSystemInterface))
+#define SCSM_SYSTEM(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SYSTEM, ScsmSystem))
+#define SCSM_SYSTEM_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SYSTEM, ScsmSystemInterface))
 #define SCSM_IS_SYSTEM(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SYSTEM))
-#define SCSM_SYSTEM_GET_IFACE(obj)   (G_TYPE_INSTANCE_GET_INTERFACE((obj), SCSM_TYPE_SYSTEM, GsmSystemInterface))
+#define SCSM_SYSTEM_GET_IFACE(obj)   (G_TYPE_INSTANCE_GET_INTERFACE((obj), SCSM_TYPE_SYSTEM, ScsmSystemInterface))
 #define SCSM_SYSTEM_ERROR            (scsm_system_error_quark ())
 
-typedef struct _GsmSystem          GsmSystem;
-typedef struct _GsmSystemInterface GsmSystemInterface;
-typedef enum   _GsmSystemError     GsmSystemError;
+typedef struct _ScsmSystem          ScsmSystem;
+typedef struct _ScsmSystemInterface ScsmSystemInterface;
+typedef enum   _ScsmSystemError     ScsmSystemError;
 
-struct _GsmSystemInterface
+struct _ScsmSystemInterface
 {
         GTypeInterface base_interface;
 
-        void (* request_completed)    (GsmSystem *system,
+        void (* request_completed)    (ScsmSystem *system,
                                        GError    *error);
 
-        void (* shutdown_prepared)    (GsmSystem *system,
+        void (* shutdown_prepared)    (ScsmSystem *system,
                                        gboolean   success);
 
-        gboolean (* can_switch_user)  (GsmSystem *system);
-        gboolean (* can_stop)         (GsmSystem *system);
-        gboolean (* can_restart)      (GsmSystem *system);
-        gboolean (* can_restart_to_firmware_setup) (GsmSystem *system);
-        void     (* set_restart_to_firmware_setup) (GsmSystem *system,
+        gboolean (* can_switch_user)  (ScsmSystem *system);
+        gboolean (* can_stop)         (ScsmSystem *system);
+        gboolean (* can_restart)      (ScsmSystem *system);
+        gboolean (* can_restart_to_firmware_setup) (ScsmSystem *system);
+        void     (* set_restart_to_firmware_setup) (ScsmSystem *system,
                                               gboolean   enable);
-        gboolean (* can_suspend)      (GsmSystem *system);
-        gboolean (* can_hibernate)    (GsmSystem *system);
-        void     (* attempt_stop)     (GsmSystem *system);
-        void     (* attempt_restart)  (GsmSystem *system);
-        void     (* suspend)          (GsmSystem *system);
-        void     (* hibernate)        (GsmSystem *system);
-        void     (* set_session_idle) (GsmSystem *system,
+        gboolean (* can_suspend)      (ScsmSystem *system);
+        gboolean (* can_hibernate)    (ScsmSystem *system);
+        void     (* attempt_stop)     (ScsmSystem *system);
+        void     (* attempt_restart)  (ScsmSystem *system);
+        void     (* suspend)          (ScsmSystem *system);
+        void     (* hibernate)        (ScsmSystem *system);
+        void     (* set_session_idle) (ScsmSystem *system,
                                        gboolean   is_idle);
-        gboolean (* is_login_session) (GsmSystem *system);
-        void     (* add_inhibitor)    (GsmSystem        *system,
+        gboolean (* is_login_session) (ScsmSystem *system);
+        void     (* add_inhibitor)    (ScsmSystem        *system,
                                        const gchar      *id,
-                                       GsmInhibitorFlag  flags);
-        void     (* remove_inhibitor) (GsmSystem        *system,
+                                       ScsmInhibitorFlag  flags);
+        void     (* remove_inhibitor) (ScsmSystem        *system,
                                        const gchar      *id);
-        void     (* prepare_shutdown) (GsmSystem   *system,
+        void     (* prepare_shutdown) (ScsmSystem   *system,
                                        gboolean     restart);
-        void     (* complete_shutdown)(GsmSystem   *system);
-        gboolean (* is_last_session_for_user) (GsmSystem *system);
+        void     (* complete_shutdown)(ScsmSystem   *system);
+        gboolean (* is_last_session_for_user) (ScsmSystem *system);
 };
 
-enum _GsmSystemError {
+enum _ScsmSystemError {
         SCSM_SYSTEM_ERROR_RESTARTING = 0,
         SCSM_SYSTEM_ERROR_STOPPING
 };
@@ -85,49 +85,49 @@ GType      scsm_system_get_type         (void);
 
 GQuark     scsm_system_error_quark      (void);
 
-GsmSystem *scsm_get_system              (void);
+ScsmSystem *scsm_get_system              (void);
 
-gboolean   scsm_system_can_switch_user  (GsmSystem *system);
+gboolean   scsm_system_can_switch_user  (ScsmSystem *system);
 
-gboolean   scsm_system_can_stop         (GsmSystem *system);
+gboolean   scsm_system_can_stop         (ScsmSystem *system);
 
-gboolean   scsm_system_can_restart      (GsmSystem *system);
+gboolean   scsm_system_can_restart      (ScsmSystem *system);
 
-gboolean   scsm_system_can_restart_to_firmware_setup (GsmSystem *system);
+gboolean   scsm_system_can_restart_to_firmware_setup (ScsmSystem *system);
 
-void       scsm_system_set_restart_to_firmware_setup (GsmSystem *system,
+void       scsm_system_set_restart_to_firmware_setup (ScsmSystem *system,
                                                      gboolean   enable);
 
-gboolean   scsm_system_can_suspend      (GsmSystem *system);
+gboolean   scsm_system_can_suspend      (ScsmSystem *system);
 
-gboolean   scsm_system_can_hibernate    (GsmSystem *system);
+gboolean   scsm_system_can_hibernate    (ScsmSystem *system);
 
-void       scsm_system_attempt_stop     (GsmSystem *system);
+void       scsm_system_attempt_stop     (ScsmSystem *system);
 
-void       scsm_system_attempt_restart  (GsmSystem *system);
+void       scsm_system_attempt_restart  (ScsmSystem *system);
 
-void       scsm_system_suspend          (GsmSystem *system);
+void       scsm_system_suspend          (ScsmSystem *system);
 
-void       scsm_system_hibernate        (GsmSystem *system);
+void       scsm_system_hibernate        (ScsmSystem *system);
 
-void       scsm_system_set_session_idle (GsmSystem *system,
+void       scsm_system_set_session_idle (ScsmSystem *system,
                                         gboolean   is_idle);
 
-gboolean   scsm_system_is_login_session (GsmSystem *system);
+gboolean   scsm_system_is_login_session (ScsmSystem *system);
 
-gboolean   scsm_system_is_last_session_for_user (GsmSystem *system);
+gboolean   scsm_system_is_last_session_for_user (ScsmSystem *system);
 
-gboolean   scsm_system_is_active        (GsmSystem *system);
+gboolean   scsm_system_is_active        (ScsmSystem *system);
 
-void       scsm_system_add_inhibitor    (GsmSystem        *system,
+void       scsm_system_add_inhibitor    (ScsmSystem        *system,
                                         const gchar      *id,
-                                        GsmInhibitorFlag  flags);
+                                        ScsmInhibitorFlag  flags);
 
-void       scsm_system_remove_inhibitor (GsmSystem        *system,
+void       scsm_system_remove_inhibitor (ScsmSystem        *system,
                                         const gchar      *id);
-void       scsm_system_prepare_shutdown  (GsmSystem  *system,
+void       scsm_system_prepare_shutdown  (ScsmSystem  *system,
                                          gboolean    restart);
-void       scsm_system_complete_shutdown (GsmSystem  *system);
+void       scsm_system_complete_shutdown (ScsmSystem  *system);
 
 
 

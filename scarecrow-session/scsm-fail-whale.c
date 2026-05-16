@@ -36,7 +36,7 @@ on_fail_whale_failed (void)
 void
 scsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
                                   gboolean            allow_logout,
-                                  GsmShellExtensions *extensions)
+                                  ScsmShellExtensions *extensions)
 {
         gint i;
         gchar *argv[5];

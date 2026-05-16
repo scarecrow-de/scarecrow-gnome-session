@@ -28,31 +28,31 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_XSMP_SERVER         (scsm_xsmp_server_get_type ())
-#define SCSM_XSMP_SERVER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_XSMP_SERVER, GsmXsmpServer))
-#define SCSM_XSMP_SERVER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_XSMP_SERVER, GsmXsmpServerClass))
+#define SCSM_XSMP_SERVER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_XSMP_SERVER, ScsmXsmpServer))
+#define SCSM_XSMP_SERVER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_XSMP_SERVER, ScsmXsmpServerClass))
 #define SCSM_IS_XSMP_SERVER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), SCSM_TYPE_XSMP_SERVER))
 #define SCSM_IS_XSMP_SERVER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), SCSM_TYPE_XSMP_SERVER))
-#define SCSM_XSMP_SERVER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_XSMP_SERVER, GsmXsmpServerClass))
+#define SCSM_XSMP_SERVER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_XSMP_SERVER, ScsmXsmpServerClass))
 
-typedef struct GsmXsmpServerPrivate GsmXsmpServerPrivate;
+typedef struct ScsmXsmpServerPrivate ScsmXsmpServerPrivate;
 
 typedef struct
 {
         GObject            parent;
-        GsmXsmpServerPrivate *priv;
-} GsmXsmpServer;
+        ScsmXsmpServerPrivate *priv;
+} ScsmXsmpServer;
 
 typedef struct
 {
         GObjectClass   parent_class;
-} GsmXsmpServerClass;
+} ScsmXsmpServerClass;
 
 GType               scsm_xsmp_server_get_type                       (void);
 
-GsmXsmpServer *     scsm_xsmp_server_new                            (GsmStore      *client_store);
-void                scsm_xsmp_server_start                          (GsmXsmpServer *server);
-void                scsm_xsmp_server_stop_accepting_new_clients     (GsmXsmpServer *server);
-void                scsm_xsmp_server_start_accepting_new_clients    (GsmXsmpServer *server);
+ScsmXsmpServer *     scsm_xsmp_server_new                            (ScsmStore      *client_store);
+void                scsm_xsmp_server_start                          (ScsmXsmpServer *server);
+void                scsm_xsmp_server_stop_accepting_new_clients     (ScsmXsmpServer *server);
+void                scsm_xsmp_server_start_accepting_new_clients    (ScsmXsmpServer *server);
 
 G_END_DECLS
 

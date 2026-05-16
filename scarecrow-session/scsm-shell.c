@@ -40,17 +40,17 @@
 #define AUTOMATIC_ACTION_TIMEOUT 60
 
 #define SCSM_SHELL_GET_PRIVATE(o)                                   \
-        (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_SHELL, GsmShellPrivate))
+        (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_SHELL, ScsmShellPrivate))
 
-struct _GsmShellPrivate
+struct _ScsmShellPrivate
 {
         GDBusProxy      *end_session_dialog_proxy;
-        GsmStore        *inhibitors;
+        ScsmStore        *inhibitors;
 
         guint32          is_running : 1;
 
         gboolean         dialog_is_open;
-        GsmShellEndSessionDialogType end_session_dialog_type;
+        ScsmShellEndSessionDialogType end_session_dialog_type;
 
         guint            update_idle_id;
         guint            watch_id;
@@ -74,13 +74,13 @@ enum {
 
 static guint signals[NUMBER_OF_SIGNALS] = { 0 };
 
-static void     scsm_shell_class_init   (GsmShellClass *klass);
-static void     scsm_shell_init         (GsmShell      *ck);
+static void     scsm_shell_class_init   (ScsmShellClass *klass);
+static void     scsm_shell_init         (ScsmShell      *ck);
 static void     scsm_shell_finalize     (GObject            *object);
 
-static void     queue_end_session_dialog_update (GsmShell *shell);
+static void     queue_end_session_dialog_update (ScsmShell *shell);
 
-G_DEFINE_TYPE (GsmShell, scsm_shell, G_TYPE_OBJECT);
+G_DEFINE_TYPE (ScsmShell, scsm_shell, G_TYPE_OBJECT);
 
 static void
 scsm_shell_get_property (GObject    *object,
@@ -88,7 +88,7 @@ scsm_shell_get_property (GObject    *object,
                              GValue     *value,
                              GParamSpec *pspec)
 {
-        GsmShell *shell = SCSM_SHELL (object);
+        ScsmShell *shell = SCSM_SHELL (object);
 
         switch (prop_id) {
         case PROP_IS_RUNNING:
@@ -104,7 +104,7 @@ scsm_shell_get_property (GObject    *object,
 }
 
 static void
-scsm_shell_class_init (GsmShellClass *shell_class)
+scsm_shell_class_init (ScsmShellClass *shell_class)
 {
         GObjectClass *object_class;
         GParamSpec   *param_spec;
@@ -127,7 +127,7 @@ scsm_shell_class_init (GsmShellClass *shell_class)
                 g_signal_new ("end-session-dialog-opened",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmShellClass, end_session_dialog_opened),
+                              G_STRUCT_OFFSET (ScsmShellClass, end_session_dialog_opened),
                               NULL, NULL, NULL,
                               G_TYPE_NONE, 0);
 
@@ -135,7 +135,7 @@ scsm_shell_class_init (GsmShellClass *shell_class)
                 g_signal_new ("end-session-dialog-open-failed",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmShellClass, end_session_dialog_open_failed),
+                              G_STRUCT_OFFSET (ScsmShellClass, end_session_dialog_open_failed),
                               NULL, NULL, NULL,
                               G_TYPE_NONE, 0);
 
@@ -143,7 +143,7 @@ scsm_shell_class_init (GsmShellClass *shell_class)
                 g_signal_new ("end-session-dialog-closed",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmShellClass, end_session_dialog_closed),
+                              G_STRUCT_OFFSET (ScsmShellClass, end_session_dialog_closed),
                               NULL, NULL, NULL,
                               G_TYPE_NONE, 0);
 
@@ -151,7 +151,7 @@ scsm_shell_class_init (GsmShellClass *shell_class)
                 g_signal_new ("end-session-dialog-canceled",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmShellClass, end_session_dialog_canceled),
+                              G_STRUCT_OFFSET (ScsmShellClass, end_session_dialog_canceled),
                               NULL, NULL, NULL,
                               G_TYPE_NONE, 0);
 
@@ -159,7 +159,7 @@ scsm_shell_class_init (GsmShellClass *shell_class)
                 g_signal_new ("end-session-dialog-confirmed-logout",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmShellClass, end_session_dialog_confirmed_logout),
+                              G_STRUCT_OFFSET (ScsmShellClass, end_session_dialog_confirmed_logout),
                               NULL, NULL, NULL,
                               G_TYPE_NONE, 0);
 
@@ -167,7 +167,7 @@ scsm_shell_class_init (GsmShellClass *shell_class)
                 g_signal_new ("end-session-dialog-confirmed-shutdown",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmShellClass, end_session_dialog_confirmed_shutdown),
+                              G_STRUCT_OFFSET (ScsmShellClass, end_session_dialog_confirmed_shutdown),
                               NULL, NULL, NULL,
                               G_TYPE_NONE, 0);
 
@@ -175,11 +175,11 @@ scsm_shell_class_init (GsmShellClass *shell_class)
                 g_signal_new ("end-session-dialog-confirmed-reboot",
                               G_OBJECT_CLASS_TYPE (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmShellClass, end_session_dialog_confirmed_reboot),
+                              G_STRUCT_OFFSET (ScsmShellClass, end_session_dialog_confirmed_reboot),
                               NULL, NULL, NULL,
                               G_TYPE_NONE, 0);
 
-        g_type_class_add_private (shell_class, sizeof (GsmShellPrivate));
+        g_type_class_add_private (shell_class, sizeof (ScsmShellPrivate));
 }
 
 static void
@@ -187,7 +187,7 @@ on_shell_name_vanished (GDBusConnection *connection,
                         const gchar     *name,
                         gpointer         user_data)
 {
-        GsmShell *shell = user_data;
+        ScsmShell *shell = user_data;
         shell->priv->is_running = FALSE;
 }
 
@@ -197,12 +197,12 @@ on_shell_name_appeared (GDBusConnection *connection,
                         const gchar     *name_owner,
                         gpointer         user_data)
 {
-        GsmShell *shell = user_data;
+        ScsmShell *shell = user_data;
         shell->priv->is_running = TRUE;
 }
 
 static void
-scsm_shell_ensure_connection (GsmShell  *shell)
+scsm_shell_ensure_connection (ScsmShell  *shell)
 {
         if (shell->priv->watch_id != 0) {
                 return;
@@ -217,7 +217,7 @@ scsm_shell_ensure_connection (GsmShell  *shell)
 }
 
 static void
-scsm_shell_init (GsmShell *shell)
+scsm_shell_init (ScsmShell *shell)
 {
         shell->priv = SCSM_SHELL_GET_PRIVATE (shell);
 
@@ -227,7 +227,7 @@ scsm_shell_init (GsmShell *shell)
 static void
 scsm_shell_finalize (GObject *object)
 {
-        GsmShell *shell;
+        ScsmShell *shell;
         GObjectClass  *parent_class;
 
         shell = SCSM_SHELL (object);
@@ -246,20 +246,20 @@ scsm_shell_finalize (GObject *object)
         }
 }
 
-GsmShell *
+ScsmShell *
 scsm_shell_new (void)
 {
-        GsmShell *shell;
+        ScsmShell *shell;
 
         shell = g_object_new (SCSM_TYPE_SHELL, NULL);
 
         return shell;
 }
 
-GsmShell *
+ScsmShell *
 scsm_get_shell (void)
 {
-        static GsmShell *shell = NULL;
+        static ScsmShell *shell = NULL;
 
         if (shell == NULL) {
                 shell = scsm_shell_new ();
@@ -269,7 +269,7 @@ scsm_get_shell (void)
 }
 
 gboolean
-scsm_shell_is_running (GsmShell *shell)
+scsm_shell_is_running (ScsmShell *shell)
 {
         scsm_shell_ensure_connection (shell);
 
@@ -278,7 +278,7 @@ scsm_shell_is_running (GsmShell *shell)
 
 static gboolean
 add_inhibitor_to_array (const char      *id,
-                        GsmInhibitor    *inhibitor,
+                        ScsmInhibitor    *inhibitor,
                         GVariantBuilder *builder)
 {
         g_variant_builder_add (builder, "o", scsm_inhibitor_peek_id (inhibitor));
@@ -286,13 +286,13 @@ add_inhibitor_to_array (const char      *id,
 }
 
 static GVariant *
-get_array_from_store (GsmStore *inhibitors)
+get_array_from_store (ScsmStore *inhibitors)
 {
         GVariantBuilder builder;
 
         g_variant_builder_init (&builder, G_VARIANT_TYPE ("ao"));
         scsm_store_foreach (inhibitors,
-                           (GsmStoreFunc) add_inhibitor_to_array,
+                           (ScsmStoreFunc) add_inhibitor_to_array,
                            &builder);
 
         return g_variant_builder_end (&builder);
@@ -303,7 +303,7 @@ on_open_finished (GObject *source,
                   GAsyncResult *result,
                   gpointer user_data)
 {
-        GsmShell *shell = user_data;
+        ScsmShell *shell = user_data;
         GError   *error;
 
         if (shell->priv->update_idle_id != 0) {
@@ -332,7 +332,7 @@ on_end_session_dialog_dbus_signal (GDBusProxy *proxy,
                                    gchar      *sender_name,
                                    gchar      *signal_name,
                                    GVariant   *parameters,
-                                   GsmShell   *shell)
+                                   ScsmShell   *shell)
 {
         struct {
                 const char *name;
@@ -375,7 +375,7 @@ on_end_session_dialog_dbus_signal (GDBusProxy *proxy,
 static void
 on_end_session_dialog_name_owner_changed (GDBusProxy *proxy,
                                           GParamSpec *pspec,
-                                          GsmShell   *shell)
+                                          ScsmShell   *shell)
 {
         gchar *name_owner;
 
@@ -388,7 +388,7 @@ on_end_session_dialog_name_owner_changed (GDBusProxy *proxy,
 }
 
 static gboolean
-on_need_end_session_dialog_update (GsmShell *shell)
+on_need_end_session_dialog_update (ScsmShell *shell)
 {
         /* No longer need an update */
         if (shell->priv->update_idle_id == 0)
@@ -403,7 +403,7 @@ on_need_end_session_dialog_update (GsmShell *shell)
 }
 
 static void
-queue_end_session_dialog_update (GsmShell *shell)
+queue_end_session_dialog_update (ScsmShell *shell)
 {
         if (shell->priv->update_idle_id != 0)
                 return;
@@ -413,9 +413,9 @@ queue_end_session_dialog_update (GsmShell *shell)
 }
 
 gboolean
-scsm_shell_open_end_session_dialog (GsmShell *shell,
-                                   GsmShellEndSessionDialogType type,
-                                   GsmStore *inhibitors)
+scsm_shell_open_end_session_dialog (ScsmShell *shell,
+                                   ScsmShellEndSessionDialogType type,
+                                   ScsmStore *inhibitors)
 {
         GDBusProxy *proxy;
         GError *error;
@@ -492,7 +492,7 @@ scsm_shell_open_end_session_dialog (GsmShell *shell,
 }
 
 void
-scsm_shell_close_end_session_dialog (GsmShell *shell)
+scsm_shell_close_end_session_dialog (ScsmShell *shell)
 {
         if (!shell->priv->end_session_dialog_proxy)
                 return;

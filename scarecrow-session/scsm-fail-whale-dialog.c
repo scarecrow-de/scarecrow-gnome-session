@@ -36,7 +36,7 @@
 
 #include "scsm-icon-names.h"
 
-struct _GsmFailWhaleDialog
+struct _ScsmFailWhaleDialog
 {
         GtkWindow parent;
 
@@ -47,11 +47,11 @@ struct _GsmFailWhaleDialog
         GdkRectangle geometry;
 };
 
-G_DEFINE_TYPE (GsmFailWhaleDialog, scsm_fail_whale_dialog, GTK_TYPE_WINDOW);
+G_DEFINE_TYPE (ScsmFailWhaleDialog, scsm_fail_whale_dialog, GTK_TYPE_WINDOW);
 
 /* derived from tomboy */
 static void
-_window_override_user_time (GsmFailWhaleDialog *window)
+_window_override_user_time (ScsmFailWhaleDialog *window)
 {
         guint32 ev_time = gtk_get_current_event_time ();
         GdkWindow *gdk_window = gtk_widget_get_window (GTK_WIDGET (window));
@@ -79,7 +79,7 @@ _window_override_user_time (GsmFailWhaleDialog *window)
 }
 
 static void
-_window_move_resize_window (GsmFailWhaleDialog *window,
+_window_move_resize_window (ScsmFailWhaleDialog *window,
                             gboolean  move,
                             gboolean  resize)
 {
@@ -106,14 +106,14 @@ _window_move_resize_window (GsmFailWhaleDialog *window,
 }
 
 static void
-update_geometry (GsmFailWhaleDialog *fail_dialog)
+update_geometry (ScsmFailWhaleDialog *fail_dialog)
 {
         gdk_monitor_get_geometry (fail_dialog->monitor, &fail_dialog->geometry);
 }
 
 static void
 on_screen_size_changed (GdkScreen          *screen,
-                        GsmFailWhaleDialog *fail_dialog)
+                        ScsmFailWhaleDialog *fail_dialog)
 {
         gtk_widget_queue_resize (GTK_WIDGET (fail_dialog));
 }
@@ -151,7 +151,7 @@ static void
 scsm_fail_whale_dialog_size_request (GtkWidget      *widget,
                                     GtkRequisition *requisition)
 {
-        GsmFailWhaleDialog *fail_dialog;
+        ScsmFailWhaleDialog *fail_dialog;
         GdkRectangle   old_geometry;
         int            position_changed = FALSE;
         int            size_changed = FALSE;
@@ -234,7 +234,7 @@ scsm_fail_whale_dialog_get_preferred_height_for_width (GtkWidget *widget,
 }
 
 static void
-scsm_fail_whale_dialog_class_init (GsmFailWhaleDialogClass *klass)
+scsm_fail_whale_dialog_class_init (ScsmFailWhaleDialogClass *klass)
 {
         GtkWidgetClass *widget_class;
 
@@ -250,7 +250,7 @@ scsm_fail_whale_dialog_class_init (GsmFailWhaleDialogClass *klass)
 
 static void
 on_logout_clicked (GtkWidget          *button,
-                   GsmFailWhaleDialog *fail_dialog)
+                   ScsmFailWhaleDialog *fail_dialog)
 {
         if (!fail_dialog->debug_mode) {
                 g_spawn_command_line_async ("scarecrow-session-quit --force", NULL);
@@ -259,7 +259,7 @@ on_logout_clicked (GtkWidget          *button,
 }
 
 static void
-setup_window (GsmFailWhaleDialog *fail_dialog)
+setup_window (ScsmFailWhaleDialog *fail_dialog)
 {
         GtkWidget *box;
         GtkWidget *image;
@@ -351,7 +351,7 @@ setup_window (GsmFailWhaleDialog *fail_dialog)
 }
 
 static void
-scsm_fail_whale_dialog_init (GsmFailWhaleDialog *fail_dialog)
+scsm_fail_whale_dialog_init (ScsmFailWhaleDialog *fail_dialog)
 {
 }
 
@@ -363,7 +363,7 @@ static GList *dialogs = NULL;
 static void
 create_fail_dialog (GdkMonitor *monitor)
 {
-        GsmFailWhaleDialog *fail_dialog;
+        ScsmFailWhaleDialog *fail_dialog;
 
         fail_dialog = g_object_new (SCSM_TYPE_FAIL_WHALE_DIALOG, NULL);
         fail_dialog->debug_mode = debug_mode;
@@ -396,7 +396,7 @@ on_monitor_removed (GdkDisplay  *display,
 
         for (l = dialogs; l;) {
                 GList *next = l->next;
-                GsmFailWhaleDialog *fail_dialog = l->data;
+                ScsmFailWhaleDialog *fail_dialog = l->data;
 
                 if (fail_dialog->monitor == monitor) {
                         dialogs = g_list_delete_link (dialogs, l);

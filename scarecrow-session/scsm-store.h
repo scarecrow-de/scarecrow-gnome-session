@@ -26,68 +26,68 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_STORE         (scsm_store_get_type ())
-#define SCSM_STORE(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_STORE, GsmStore))
-#define SCSM_STORE_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_STORE, GsmStoreClass))
+#define SCSM_STORE(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_STORE, ScsmStore))
+#define SCSM_STORE_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_STORE, ScsmStoreClass))
 #define SCSM_IS_STORE(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), SCSM_TYPE_STORE))
 #define SCSM_IS_STORE_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), SCSM_TYPE_STORE))
-#define SCSM_STORE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_STORE, GsmStoreClass))
+#define SCSM_STORE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_STORE, ScsmStoreClass))
 
-typedef struct GsmStorePrivate GsmStorePrivate;
+typedef struct ScsmStorePrivate ScsmStorePrivate;
 
 typedef struct
 {
         GObject          parent;
-        GsmStorePrivate *priv;
-} GsmStore;
+        ScsmStorePrivate *priv;
+} ScsmStore;
 
 typedef struct
 {
         GObjectClass   parent_class;
 
-        void          (* added)    (GsmStore   *store,
+        void          (* added)    (ScsmStore   *store,
                                     const char *id);
-        void          (* removed)  (GsmStore   *store,
+        void          (* removed)  (ScsmStore   *store,
                                     const char *id);
-} GsmStoreClass;
+} ScsmStoreClass;
 
 typedef enum
 {
          SCSM_STORE_ERROR_GENERAL
-} GsmStoreError;
+} ScsmStoreError;
 
 #define SCSM_STORE_ERROR scsm_store_error_quark ()
 
-typedef gboolean (*GsmStoreFunc) (const char *id,
+typedef gboolean (*ScsmStoreFunc) (const char *id,
                                   GObject    *object,
                                   gpointer    user_data);
 
 GQuark              scsm_store_error_quark              (void);
 GType               scsm_store_get_type                 (void);
 
-GsmStore *          scsm_store_new                      (void);
+ScsmStore *          scsm_store_new                      (void);
 
-gboolean            scsm_store_get_locked               (GsmStore    *store);
-void                scsm_store_set_locked               (GsmStore    *store,
+gboolean            scsm_store_get_locked               (ScsmStore    *store);
+void                scsm_store_set_locked               (ScsmStore    *store,
                                                         gboolean     locked);
 
-guint               scsm_store_size                     (GsmStore    *store);
-gboolean            scsm_store_add                      (GsmStore    *store,
+guint               scsm_store_size                     (ScsmStore    *store);
+gboolean            scsm_store_add                      (ScsmStore    *store,
                                                         const char  *id,
                                                         GObject     *object);
-void                scsm_store_clear                    (GsmStore    *store);
-gboolean            scsm_store_remove                   (GsmStore    *store,
+void                scsm_store_clear                    (ScsmStore    *store);
+gboolean            scsm_store_remove                   (ScsmStore    *store,
                                                         const char  *id);
 
-void                scsm_store_foreach                  (GsmStore    *store,
-                                                        GsmStoreFunc func,
+void                scsm_store_foreach                  (ScsmStore    *store,
+                                                        ScsmStoreFunc func,
                                                         gpointer     user_data);
-guint               scsm_store_foreach_remove           (GsmStore    *store,
-                                                        GsmStoreFunc func,
+guint               scsm_store_foreach_remove           (ScsmStore    *store,
+                                                        ScsmStoreFunc func,
                                                         gpointer     user_data);
-GObject *           scsm_store_find                     (GsmStore    *store,
-                                                        GsmStoreFunc predicate,
+GObject *           scsm_store_find                     (ScsmStore    *store,
+                                                        ScsmStoreFunc predicate,
                                                         gpointer     user_data);
-GObject *           scsm_store_lookup                   (GsmStore    *store,
+GObject *           scsm_store_lookup                   (ScsmStore    *store,
                                                         const char  *id);
 
 

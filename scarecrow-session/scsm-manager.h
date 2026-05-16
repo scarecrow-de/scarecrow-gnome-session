@@ -29,27 +29,27 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_MANAGER         (scsm_manager_get_type ())
-#define SCSM_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_MANAGER, GsmManager))
-#define SCSM_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_MANAGER, GsmManagerClass))
+#define SCSM_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_MANAGER, ScsmManager))
+#define SCSM_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_MANAGER, ScsmManagerClass))
 #define SCSM_IS_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), SCSM_TYPE_MANAGER))
 #define SCSM_IS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), SCSM_TYPE_MANAGER))
-#define SCSM_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_MANAGER, GsmManagerClass))
+#define SCSM_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_MANAGER, ScsmManagerClass))
 
-typedef struct GsmManagerPrivate GsmManagerPrivate;
+typedef struct ScsmManagerPrivate ScsmManagerPrivate;
 
 typedef struct
 {
         GObject            parent;
-        GsmManagerPrivate *priv;
-} GsmManager;
+        ScsmManagerPrivate *priv;
+} ScsmManager;
 
 typedef struct
 {
         GObjectClass   parent_class;
 
-        void          (* phase_changed)       (GsmManager      *manager,
+        void          (* phase_changed)       (ScsmManager      *manager,
                                                const char      *phase);
-} GsmManagerClass;
+} ScsmManagerClass;
 
 typedef enum {
         /* scsm's own startup/initialization phase */
@@ -76,7 +76,7 @@ typedef enum {
         SCSM_MANAGER_PHASE_QUERY_END_SESSION,
         SCSM_MANAGER_PHASE_END_SESSION,
         SCSM_MANAGER_PHASE_EXIT
-} GsmManagerPhase;
+} ScsmManagerPhase;
 
 typedef enum
 {
@@ -88,49 +88,49 @@ typedef enum
         SCSM_MANAGER_ERROR_INVALID_OPTION,
         SCSM_MANAGER_ERROR_LOCKED_DOWN,
         SCSM_MANAGER_NUM_ERRORS
-} GsmManagerError;
+} ScsmManagerError;
 
 #define SCSM_MANAGER_ERROR scsm_manager_error_quark ()
 GQuark              scsm_manager_error_quark                    (void);
 
 GType               scsm_manager_get_type                       (void);
 
-GsmManager *        scsm_manager_new                            (GsmStore       *client_store,
+ScsmManager *        scsm_manager_new                            (ScsmStore       *client_store,
                                                                 gboolean        failsafe,
                                                                 gboolean        systemd_managed);
-GsmManager *        scsm_manager_get                            (void);
+ScsmManager *        scsm_manager_get                            (void);
 
-gboolean            scsm_manager_get_failsafe                   (GsmManager     *manager);
-gboolean            scsm_manager_get_systemd_managed            (GsmManager     *manager);
+gboolean            scsm_manager_get_failsafe                   (ScsmManager     *manager);
+gboolean            scsm_manager_get_systemd_managed            (ScsmManager     *manager);
 
-gboolean            scsm_manager_add_autostart_app              (GsmManager     *manager,
+gboolean            scsm_manager_add_autostart_app              (ScsmManager     *manager,
                                                                 const char     *path,
                                                                 const char     *provides);
-gboolean            scsm_manager_add_required_app               (GsmManager     *manager,
+gboolean            scsm_manager_add_required_app               (ScsmManager     *manager,
                                                                 const char     *path,
                                                                 const char     *provides);
-gboolean            scsm_manager_add_autostart_apps_from_dir    (GsmManager     *manager,
+gboolean            scsm_manager_add_autostart_apps_from_dir    (ScsmManager     *manager,
                                                                 const char     *path);
-gboolean            scsm_manager_add_legacy_session_apps        (GsmManager     *manager,
+gboolean            scsm_manager_add_legacy_session_apps        (ScsmManager     *manager,
                                                                 const char     *path);
 
-void                scsm_manager_start                          (GsmManager     *manager);
+void                scsm_manager_start                          (ScsmManager     *manager);
 
-char *              _scsm_manager_get_default_session           (GsmManager     *manager);
+char *              _scsm_manager_get_default_session           (ScsmManager     *manager);
 
-void                _scsm_manager_set_active_session            (GsmManager     *manager,
+void                _scsm_manager_set_active_session            (ScsmManager     *manager,
                                                                 const char     *session_name,
                                                                 gboolean        is_fallback);
 
-void                _scsm_manager_set_renderer                  (GsmManager     *manager,
+void                _scsm_manager_set_renderer                  (ScsmManager     *manager,
                                                                 const char     *renderer);
 
-gboolean            scsm_manager_logout                         (GsmManager     *manager,
+gboolean            scsm_manager_logout                         (ScsmManager     *manager,
                                                                 guint           logout_mode,
                                                                 GError        **error);
 
-gboolean            scsm_manager_set_phase                      (GsmManager     *manager,
-                                                                GsmManagerPhase phase);
+gboolean            scsm_manager_set_phase                      (ScsmManager     *manager,
+                                                                ScsmManagerPhase phase);
 
 G_END_DECLS
 

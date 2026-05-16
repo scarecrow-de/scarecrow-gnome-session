@@ -59,11 +59,11 @@
 #define SCSM_ICE_MAGIC_COOKIE_AUTH_NAME "MIT-MAGIC-COOKIE-1"
 #define SCSM_ICE_MAGIC_COOKIE_LEN       16
 
-#define SCSM_XSMP_SERVER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_XSMP_SERVER, GsmXsmpServerPrivate))
+#define SCSM_XSMP_SERVER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_XSMP_SERVER, ScsmXsmpServerPrivate))
 
-struct GsmXsmpServerPrivate
+struct ScsmXsmpServerPrivate
 {
-        GsmStore       *client_store;
+        ScsmStore       *client_store;
 
         IceListenObj   *xsmp_sockets;
         int             num_xsmp_sockets;
@@ -76,23 +76,23 @@ enum {
         PROP_CLIENT_STORE
 };
 
-static void     scsm_xsmp_server_class_init  (GsmXsmpServerClass *klass);
-static void     scsm_xsmp_server_init        (GsmXsmpServer      *xsmp_server);
+static void     scsm_xsmp_server_class_init  (ScsmXsmpServerClass *klass);
+static void     scsm_xsmp_server_init        (ScsmXsmpServer      *xsmp_server);
 static void     scsm_xsmp_server_finalize    (GObject         *object);
 
 static gpointer xsmp_server_object = NULL;
 
-G_DEFINE_TYPE (GsmXsmpServer, scsm_xsmp_server, G_TYPE_OBJECT)
+G_DEFINE_TYPE (ScsmXsmpServer, scsm_xsmp_server, G_TYPE_OBJECT)
 
 typedef struct {
-        GsmXsmpServer *server;
+        ScsmXsmpServer *server;
         IceListenObj   listener;
-} GsmIceConnectionData;
+} ScsmIceConnectionData;
 
 typedef struct {
         guint watch_id;
         guint protocol_timeout;
-} GsmIceConnectionWatch;
+} ScsmIceConnectionWatch;
 
 static void
 disconnect_ice_connection (IceConn ice_conn)
@@ -102,7 +102,7 @@ disconnect_ice_connection (IceConn ice_conn)
 }
 
 static void
-free_ice_connection_watch (GsmIceConnectionWatch *data)
+free_ice_connection_watch (ScsmIceConnectionWatch *data)
 {
         if (data->watch_id) {
                 g_source_remove (data->watch_id);
@@ -120,9 +120,9 @@ free_ice_connection_watch (GsmIceConnectionWatch *data)
 static gboolean
 ice_protocol_timeout (IceConn ice_conn)
 {
-        GsmIceConnectionWatch *data;
+        ScsmIceConnectionWatch *data;
 
-        g_debug ("GsmXsmpServer: ice_protocol_timeout for IceConn %p with status %d",
+        g_debug ("ScsmXsmpServer: ice_protocol_timeout for IceConn %p with status %d",
                  ice_conn, IceConnectionStatus (ice_conn));
 
         data = ice_conn->context;
@@ -139,7 +139,7 @@ auth_iochannel_watch (GIOChannel   *source,
                       IceConn       ice_conn)
 {
 
-        GsmIceConnectionWatch *data;
+        ScsmIceConnectionWatch *data;
         gboolean               keep_going;
 
         data = ice_conn->context;
@@ -149,13 +149,13 @@ auth_iochannel_watch (GIOChannel   *source,
                 keep_going = TRUE;
                 break;
         case IceProcessMessagesIOError:
-                g_debug ("GsmXsmpServer: IceProcessMessages returned IceProcessMessagesIOError");
+                g_debug ("ScsmXsmpServer: IceProcessMessages returned IceProcessMessagesIOError");
                 free_ice_connection_watch (data);
                 disconnect_ice_connection (ice_conn);
                 keep_going = FALSE;
                 break;
         case IceProcessMessagesConnectionClosed:
-                g_debug ("GsmXsmpServer: IceProcessMessages returned IceProcessMessagesConnectionClosed");
+                g_debug ("ScsmXsmpServer: IceProcessMessages returned IceProcessMessagesConnectionClosed");
                 free_ice_connection_watch (data);
                 keep_going = FALSE;
                 break;
@@ -169,22 +169,22 @@ auth_iochannel_watch (GIOChannel   *source,
 /* IceAcceptConnection returns a new ICE connection that is in a "pending" state,
  * this is because authentification may be necessary.
  * So we've to authenticate it, before accept_xsmp_connection() is called.
- * Then each GsmXSMPClient will have its own IceConn watcher
+ * Then each ScsmXSMPClient will have its own IceConn watcher
  */
 static void
 auth_ice_connection (IceConn ice_conn)
 {
         GIOChannel            *channel;
-        GsmIceConnectionWatch *data;
+        ScsmIceConnectionWatch *data;
         int                    fd;
 
-        g_debug ("GsmXsmpServer: auth_ice_connection()");
+        g_debug ("ScsmXsmpServer: auth_ice_connection()");
 
         fd = IceConnectionNumber (ice_conn);
         fcntl (fd, F_SETFD, fcntl (fd, F_GETFD, 0) | FD_CLOEXEC);
         channel = g_io_channel_unix_new (fd);
 
-        data = g_new0 (GsmIceConnectionWatch, 1);
+        data = g_new0 (ScsmIceConnectionWatch, 1);
         ice_conn->context = data;
 
         data->protocol_timeout = g_timeout_add_seconds (5,
@@ -203,16 +203,16 @@ auth_ice_connection (IceConn ice_conn)
 static gboolean
 accept_ice_connection (GIOChannel           *source,
                        GIOCondition          condition,
-                       GsmIceConnectionData *data)
+                       ScsmIceConnectionData *data)
 {
         IceConn         ice_conn;
         IceAcceptStatus status;
 
-        g_debug ("GsmXsmpServer: accept_ice_connection()");
+        g_debug ("ScsmXsmpServer: accept_ice_connection()");
 
         ice_conn = IceAcceptConnection (data->listener, &status);
         if (status != IceAcceptSuccess) {
-                g_debug ("GsmXsmpServer: IceAcceptConnection returned %d", status);
+                g_debug ("ScsmXsmpServer: IceAcceptConnection returned %d", status);
                 return TRUE;
         }
 
@@ -222,15 +222,15 @@ accept_ice_connection (GIOChannel           *source,
 }
 
 void
-scsm_xsmp_server_start (GsmXsmpServer *server)
+scsm_xsmp_server_start (ScsmXsmpServer *server)
 {
         GIOChannel *channel;
         int         i;
 
         for (i = 0; i < server->priv->num_local_xsmp_sockets; i++) {
-                GsmIceConnectionData *data;
+                ScsmIceConnectionData *data;
 
-                data = g_new0 (GsmIceConnectionData, 1);
+                data = g_new0 (ScsmIceConnectionData, 1);
                 data->server = server;
                 data->listener = server->priv->xsmp_sockets[i];
 
@@ -246,7 +246,7 @@ scsm_xsmp_server_start (GsmXsmpServer *server)
 }
 
 void
-scsm_xsmp_server_stop_accepting_new_clients (GsmXsmpServer *server)
+scsm_xsmp_server_stop_accepting_new_clients (ScsmXsmpServer *server)
 {
         g_return_if_fail (SCSM_IS_XSMP_SERVER (server));
         g_debug ("scsm_xsmp_server_stop_accepting_new_clients");
@@ -254,7 +254,7 @@ scsm_xsmp_server_stop_accepting_new_clients (GsmXsmpServer *server)
 }
 
 void
-scsm_xsmp_server_start_accepting_new_clients (GsmXsmpServer *server)
+scsm_xsmp_server_start_accepting_new_clients (ScsmXsmpServer *server)
 {
         g_return_if_fail (SCSM_IS_XSMP_SERVER (server));
         g_debug ("scsm_xsmp_server_start");
@@ -262,8 +262,8 @@ scsm_xsmp_server_start_accepting_new_clients (GsmXsmpServer *server)
 }
 
 static void
-scsm_xsmp_server_set_client_store (GsmXsmpServer *xsmp_server,
-                                  GsmStore      *store)
+scsm_xsmp_server_set_client_store (ScsmXsmpServer *xsmp_server,
+                                  ScsmStore      *store)
 {
         g_return_if_fail (SCSM_IS_XSMP_SERVER (xsmp_server));
 
@@ -284,7 +284,7 @@ scsm_xsmp_server_set_property (GObject      *object,
                               const GValue *value,
                               GParamSpec   *pspec)
 {
-        GsmXsmpServer *self;
+        ScsmXsmpServer *self;
 
         self = SCSM_XSMP_SERVER (object);
 
@@ -304,7 +304,7 @@ scsm_xsmp_server_get_property (GObject    *object,
                               GValue     *value,
                               GParamSpec *pspec)
 {
-        GsmXsmpServer *self;
+        ScsmXsmpServer *self;
 
         self = SCSM_XSMP_SERVER (object);
 
@@ -323,17 +323,17 @@ scsm_xsmp_server_get_property (GObject    *object,
  */
 static Status
 accept_xsmp_connection (SmsConn        sms_conn,
-                        GsmXsmpServer *server,
+                        ScsmXsmpServer *server,
                         unsigned long *mask_ret,
                         SmsCallbacks  *callbacks_ret,
                         char         **failure_reason_ret)
 {
         IceConn                ice_conn;
-        GsmClient             *client;
-        GsmIceConnectionWatch *data;
+        ScsmClient             *client;
+        ScsmIceConnectionWatch *data;
 
         if (server->priv->stopping) {
-                g_debug ("GsmXsmpServer: In shutdown, rejecting new client");
+                g_debug ("ScsmXsmpServer: In shutdown, rejecting new client");
 
                 *failure_reason_ret = strdup (_("Refusing new client connection because the session is currently being shut down\n"));
                 return FALSE;
@@ -342,7 +342,7 @@ accept_xsmp_connection (SmsConn        sms_conn,
         ice_conn = SmsGetIceConnection (sms_conn);
         data = ice_conn->context;
 
-        /* Each GsmXSMPClient has its own IceConn watcher */
+        /* Each ScsmXSMPClient has its own IceConn watcher */
         free_ice_connection_watch (data);
 
         client = scsm_xsmp_client_new (ice_conn);
@@ -365,7 +365,7 @@ ice_error_handler (IceConn       conn,
                    int           severity,
                    IcePointer    values)
 {
-        g_debug ("GsmXsmpServer: ice_error_handler (%p, %s, %d, %lx, %d, %d)",
+        g_debug ("ScsmXsmpServer: ice_error_handler (%p, %s, %d, %lx, %d, %d)",
                  conn, swap ? "TRUE" : "FALSE", offending_minor_opcode,
                  offending_sequence, error_class, severity);
 
@@ -384,7 +384,7 @@ ice_error_handler (IceConn       conn,
 static void
 ice_io_error_handler (IceConn conn)
 {
-        g_debug ("GsmXsmpServer: ice_io_error_handler (%p)", conn);
+        g_debug ("ScsmXsmpServer: ice_io_error_handler (%p)", conn);
 
         /* We don't need to do anything here; the next call to
          * IceProcessMessages() for this connection will receive
@@ -401,7 +401,7 @@ sms_error_handler (SmsConn       conn,
                    int           severity,
                    IcePointer    values)
 {
-        g_debug ("GsmXsmpServer: sms_error_handler (%p, %s, %d, %lx, %d, %d)",
+        g_debug ("ScsmXsmpServer: sms_error_handler (%p, %s, %d, %lx, %d, %d)",
                  conn, swap ? "TRUE" : "FALSE", offending_minor_opcode,
                  offending_sequence_num, error_class, severity);
 
@@ -441,7 +441,7 @@ auth_entry_new (const char *protocol,
 }
 
 static gboolean
-update_iceauthority (GsmXsmpServer *server,
+update_iceauthority (ScsmXsmpServer *server,
                      gboolean       adding)
 {
         char             *filename;
@@ -553,7 +553,7 @@ update_iceauthority (GsmXsmpServer *server,
 
 
 static void
-setup_listener (GsmXsmpServer *server)
+setup_listener (ScsmXsmpServer *server)
 {
         char   error[256];
         mode_t saved_umask;
@@ -661,7 +661,7 @@ setup_listener (GsmXsmpServer *server)
                                                    server->priv->xsmp_sockets);
 
         scsm_util_setenv ("SESSION_MANAGER", network_id_list);
-        g_debug ("GsmXsmpServer: SESSION_MANAGER=%s\n", network_id_list);
+        g_debug ("ScsmXsmpServer: SESSION_MANAGER=%s\n", network_id_list);
         free (network_id_list);
 }
 
@@ -670,7 +670,7 @@ scsm_xsmp_server_constructor (GType                  type,
                              guint                  n_construct_properties,
                              GObjectConstructParam *construct_properties)
 {
-        GsmXsmpServer *xsmp_server;
+        ScsmXsmpServer *xsmp_server;
 
         xsmp_server = SCSM_XSMP_SERVER (G_OBJECT_CLASS (scsm_xsmp_server_parent_class)->constructor (type,
                                                                                        n_construct_properties,
@@ -681,7 +681,7 @@ scsm_xsmp_server_constructor (GType                  type,
 }
 
 static void
-scsm_xsmp_server_class_init (GsmXsmpServerClass *klass)
+scsm_xsmp_server_class_init (ScsmXsmpServerClass *klass)
 {
         GObjectClass   *object_class = G_OBJECT_CLASS (klass);
 
@@ -698,11 +698,11 @@ scsm_xsmp_server_class_init (GsmXsmpServerClass *klass)
                                                               SCSM_TYPE_STORE,
                                                               G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
-        g_type_class_add_private (klass, sizeof (GsmXsmpServerPrivate));
+        g_type_class_add_private (klass, sizeof (ScsmXsmpServerPrivate));
 }
 
 static void
-scsm_xsmp_server_init (GsmXsmpServer *xsmp_server)
+scsm_xsmp_server_init (ScsmXsmpServer *xsmp_server)
 {
         xsmp_server->priv = SCSM_XSMP_SERVER_GET_PRIVATE (xsmp_server);
 
@@ -711,7 +711,7 @@ scsm_xsmp_server_init (GsmXsmpServer *xsmp_server)
 static void
 scsm_xsmp_server_finalize (GObject *object)
 {
-        GsmXsmpServer *xsmp_server;
+        ScsmXsmpServer *xsmp_server;
 
         g_return_if_fail (object != NULL);
         g_return_if_fail (SCSM_IS_XSMP_SERVER (object));
@@ -730,8 +730,8 @@ scsm_xsmp_server_finalize (GObject *object)
         G_OBJECT_CLASS (scsm_xsmp_server_parent_class)->finalize (object);
 }
 
-GsmXsmpServer *
-scsm_xsmp_server_new (GsmStore *client_store)
+ScsmXsmpServer *
+scsm_xsmp_server_new (ScsmStore *client_store)
 {
         if (xsmp_server_object != NULL) {
                 g_object_ref (xsmp_server_object);

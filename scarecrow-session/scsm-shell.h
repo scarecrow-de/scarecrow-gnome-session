@@ -30,57 +30,57 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_SHELL             (scsm_shell_get_type ())
-#define SCSM_SHELL(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SHELL, GsmShell))
-#define SCSM_SHELL_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SHELL, GsmShellClass))
+#define SCSM_SHELL(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SHELL, ScsmShell))
+#define SCSM_SHELL_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SHELL, ScsmShellClass))
 #define SCSM_IS_SHELL(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SHELL))
 #define SCSM_IS_SHELL_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_SHELL))
-#define SCSM_SHELL_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), SCSM_TYPE_SHELL, GsmShellClass))
+#define SCSM_SHELL_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), SCSM_TYPE_SHELL, ScsmShellClass))
 #define SCSM_SHELL_ERROR            (scsm_shell_error_quark ())
 
-typedef struct _GsmShell        GsmShell;
-typedef struct _GsmShellClass   GsmShellClass;
-typedef struct _GsmShellPrivate GsmShellPrivate;
+typedef struct _ScsmShell        ScsmShell;
+typedef struct _ScsmShellClass   ScsmShellClass;
+typedef struct _ScsmShellPrivate ScsmShellPrivate;
 
 typedef enum
 {
     SCSM_SHELL_END_SESSION_DIALOG_TYPE_LOGOUT = 0,
     SCSM_SHELL_END_SESSION_DIALOG_TYPE_SHUTDOWN,
     SCSM_SHELL_END_SESSION_DIALOG_TYPE_RESTART,
-} GsmShellEndSessionDialogType;
+} ScsmShellEndSessionDialogType;
 
-struct _GsmShell
+struct _ScsmShell
 {
         GObject               parent;
 
-        GsmShellPrivate *priv;
+        ScsmShellPrivate *priv;
 };
 
-struct _GsmShellClass
+struct _ScsmShellClass
 {
         GObjectClass parent_class;
 
-        void (* end_session_dialog_opened)        (GsmShell *shell);
-        void (* end_session_dialog_open_failed)   (GsmShell *shell);
-        void (* end_session_dialog_closed)        (GsmShell *shell);
-        void (* end_session_dialog_canceled)      (GsmShell *shell);
+        void (* end_session_dialog_opened)        (ScsmShell *shell);
+        void (* end_session_dialog_open_failed)   (ScsmShell *shell);
+        void (* end_session_dialog_closed)        (ScsmShell *shell);
+        void (* end_session_dialog_canceled)      (ScsmShell *shell);
 
-        void (* end_session_dialog_confirmed_logout)   (GsmShell *shell);
-        void (* end_session_dialog_confirmed_shutdown) (GsmShell *shell);
-        void (* end_session_dialog_confirmed_reboot)   (GsmShell *shell);
+        void (* end_session_dialog_confirmed_logout)   (ScsmShell *shell);
+        void (* end_session_dialog_confirmed_shutdown) (ScsmShell *shell);
+        void (* end_session_dialog_confirmed_reboot)   (ScsmShell *shell);
 
 };
 
 GType            scsm_shell_get_type           (void);
 
-GsmShell        *scsm_shell_new                (void);
+ScsmShell        *scsm_shell_new                (void);
 
-GsmShell        *scsm_get_shell                (void);
-gboolean         scsm_shell_is_running         (GsmShell *shell);
+ScsmShell        *scsm_get_shell                (void);
+gboolean         scsm_shell_is_running         (ScsmShell *shell);
 
-gboolean         scsm_shell_open_end_session_dialog (GsmShell *shell,
-                                                    GsmShellEndSessionDialogType type,
-                                                    GsmStore *inhibitors);
-void             scsm_shell_close_end_session_dialog (GsmShell *shell);
+gboolean         scsm_shell_open_end_session_dialog (ScsmShell *shell,
+                                                    ScsmShellEndSessionDialogType type,
+                                                    ScsmStore *inhibitors);
+void             scsm_shell_close_end_session_dialog (ScsmShell *shell);
 
 G_END_DECLS
 

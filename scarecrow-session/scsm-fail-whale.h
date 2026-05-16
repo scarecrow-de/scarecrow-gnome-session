@@ -26,7 +26,7 @@ G_BEGIN_DECLS
 
 void        scsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
                                               gboolean            allow_logout,
-                                              GsmShellExtensions *extensions);
+                                              ScsmShellExtensions *extensions);
 
 G_END_DECLS
 

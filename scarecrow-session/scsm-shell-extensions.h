@@ -27,34 +27,34 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_SHELL_EXTENSIONS            (scsm_shell_extensions_get_type ())
-#define SCSM_SHELL_EXTENSIONS(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensions))
-#define SCSM_SHELL_EXTENSIONS_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsClass))
+#define SCSM_SHELL_EXTENSIONS(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SHELL_EXTENSIONS, ScsmShellExtensions))
+#define SCSM_SHELL_EXTENSIONS_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  SCSM_TYPE_SHELL_EXTENSIONS, ScsmShellExtensionsClass))
 #define SCSM_IS_SHELL_EXTENSIONS(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SHELL_EXTENSIONS))
 #define SCSM_IS_SHELL_EXTENSIONS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  SCSM_TYPE_SHELL_EXTENSIONS))
-#define SCSM_SHELL_EXTENSIONS_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsClass))
+#define SCSM_SHELL_EXTENSIONS_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  SCSM_TYPE_SHELL_EXTENSIONS, ScsmShellExtensionsClass))
 
-typedef struct _GsmShellExtensions        GsmShellExtensions;
-typedef struct _GsmShellExtensionsClass   GsmShellExtensionsClass;
-typedef struct _GsmShellExtensionsPrivate GsmShellExtensionsPrivate;
+typedef struct _ScsmShellExtensions        ScsmShellExtensions;
+typedef struct _ScsmShellExtensionsClass   ScsmShellExtensionsClass;
+typedef struct _ScsmShellExtensionsPrivate ScsmShellExtensionsPrivate;
 
-struct _GsmShellExtensions
+struct _ScsmShellExtensions
 {
     GObject parent;
 
     /*< private >*/
-    GsmShellExtensionsPrivate *priv;
+    ScsmShellExtensionsPrivate *priv;
 };
 
-struct _GsmShellExtensionsClass
+struct _ScsmShellExtensionsClass
 {
     GObjectClass parent_class;
 };
 
 GType scsm_shell_extensions_get_type                   (void) G_GNUC_CONST;
 
-gboolean scsm_shell_extensions_disable_all             (GsmShellExtensions *self);
+gboolean scsm_shell_extensions_disable_all             (ScsmShellExtensions *self);
 
-guint scsm_shell_extensions_n_extensions               (GsmShellExtensions *self);
+guint scsm_shell_extensions_n_extensions               (ScsmShellExtensions *self);
 
 G_END_DECLS
 

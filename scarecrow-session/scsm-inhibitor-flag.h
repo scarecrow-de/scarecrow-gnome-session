@@ -29,7 +29,7 @@ typedef enum {
         SCSM_INHIBITOR_FLAG_SUSPEND     = 1 << 2,
         SCSM_INHIBITOR_FLAG_IDLE        = 1 << 3,
         SCSM_INHIBITOR_FLAG_AUTOMOUNT   = 1 << 4
-} GsmInhibitorFlag;
+} ScsmInhibitorFlag;
 
 G_END_DECLS
 

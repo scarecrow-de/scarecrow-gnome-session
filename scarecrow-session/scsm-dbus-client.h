@@ -24,33 +24,33 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_DBUS_CLIENT            (scsm_dbus_client_get_type ())
-#define SCSM_DBUS_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_DBUS_CLIENT, GsmDBusClient))
-#define SCSM_DBUS_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_DBUS_CLIENT, GsmDBusClientClass))
+#define SCSM_DBUS_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_DBUS_CLIENT, ScsmDBusClient))
+#define SCSM_DBUS_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_DBUS_CLIENT, ScsmDBusClientClass))
 #define SCSM_IS_DBUS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_DBUS_CLIENT))
 #define SCSM_IS_DBUS_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_DBUS_CLIENT))
-#define SCSM_DBUS_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_DBUS_CLIENT, GsmDBusClientClass))
+#define SCSM_DBUS_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_DBUS_CLIENT, ScsmDBusClientClass))
 
-typedef struct _GsmDBusClient        GsmDBusClient;
-typedef struct _GsmDBusClientClass   GsmDBusClientClass;
+typedef struct _ScsmDBusClient        ScsmDBusClient;
+typedef struct _ScsmDBusClientClass   ScsmDBusClientClass;
 
-typedef struct GsmDBusClientPrivate  GsmDBusClientPrivate;
+typedef struct ScsmDBusClientPrivate  ScsmDBusClientPrivate;
 
-struct _GsmDBusClient
+struct _ScsmDBusClient
 {
-        GsmClient             parent;
-        GsmDBusClientPrivate *priv;
+        ScsmClient             parent;
+        ScsmDBusClientPrivate *priv;
 };
 
-struct _GsmDBusClientClass
+struct _ScsmDBusClientClass
 {
-        GsmClientClass parent_class;
+        ScsmClientClass parent_class;
 };
 
 GType          scsm_dbus_client_get_type           (void) G_GNUC_CONST;
 
-GsmClient *    scsm_dbus_client_new                (const char     *startup_id,
+ScsmClient *    scsm_dbus_client_new                (const char     *startup_id,
                                                    const char     *bus_name);
-const char *   scsm_dbus_client_get_bus_name       (GsmDBusClient  *client);
+const char *   scsm_dbus_client_get_bus_name       (ScsmDBusClient  *client);
 
 G_END_DECLS
 

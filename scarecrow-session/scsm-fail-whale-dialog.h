@@ -29,7 +29,7 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_FAIL_WHALE_DIALOG         (scsm_fail_whale_dialog_get_type ())
-G_DECLARE_FINAL_TYPE (GsmFailWhaleDialog, scsm_fail_whale_dialog, SCSM, FAIL_WHALE_DIALOG, GtkWindow);
+G_DECLARE_FINAL_TYPE (ScsmFailWhaleDialog, scsm_fail_whale_dialog, SCSM, FAIL_WHALE_DIALOG, GtkWindow);
 
 G_END_DECLS
 

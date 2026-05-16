@@ -33,20 +33,20 @@
 #include "scsm-manager.h"
 #include "scsm-util.h"
 
-#define SCSM_DBUS_CLIENT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_DBUS_CLIENT, GsmDBusClientPrivate))
+#define SCSM_DBUS_CLIENT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_DBUS_CLIENT, ScsmDBusClientPrivate))
 
 
 #define SM_DBUS_NAME                     "io.github.scarecrow_de.SessionManager"
 #define SM_DBUS_CLIENT_PRIVATE_INTERFACE "io.github.scarecrow_de.SessionManager.ClientPrivate"
 
-struct GsmDBusClientPrivate
+struct ScsmDBusClientPrivate
 {
         char                 *bus_name;
         GPid                  caller_pid;
-        GsmClientRestartStyle restart_style_hint;
+        ScsmClientRestartStyle restart_style_hint;
 
         GDBusConnection      *connection;
-        GsmExportedClientPrivate *skeleton;
+        ScsmExportedClientPrivate *skeleton;
         guint                 watch_id;
 };
 
@@ -55,17 +55,17 @@ enum {
         PROP_BUS_NAME
 };
 
-G_DEFINE_TYPE (GsmDBusClient, scsm_dbus_client, SCSM_TYPE_CLIENT)
+G_DEFINE_TYPE (ScsmDBusClient, scsm_dbus_client, SCSM_TYPE_CLIENT)
 
 static gboolean
-setup_connection (GsmDBusClient *client)
+setup_connection (ScsmDBusClient *client)
 {
         GError *error = NULL;
 
         if (client->priv->connection == NULL) {
                 client->priv->connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
                 if (error != NULL) {
-                        g_debug ("GsmDbusClient: Couldn't connect to session bus: %s",
+                        g_debug ("ScsmDbusClient: Couldn't connect to session bus: %s",
                                  error->message);
                         g_error_free (error);
                         return FALSE;
@@ -76,13 +76,13 @@ setup_connection (GsmDBusClient *client)
 }
 
 static gboolean
-handle_end_session_response (GsmExportedClientPrivate *skeleton,
+handle_end_session_response (ScsmExportedClientPrivate *skeleton,
                              GDBusMethodInvocation    *invocation,
                              gboolean                  is_ok,
                              const char               *reason,
-                             GsmDBusClient            *client)
+                             ScsmDBusClient            *client)
 {
-        g_debug ("GsmDBusClient: got EndSessionResponse is-ok:%d reason=%s", is_ok, reason);
+        g_debug ("ScsmDBusClient: got EndSessionResponse is-ok:%d reason=%s", is_ok, reason);
         scsm_client_end_session_response (SCSM_CLIENT (client),
                                          is_ok, FALSE, FALSE, reason);
 
@@ -95,9 +95,9 @@ scsm_dbus_client_constructor (GType                  type,
                              guint                  n_construct_properties,
                              GObjectConstructParam *construct_properties)
 {
-        GsmDBusClient *client;
+        ScsmDBusClient *client;
         GError *error = NULL;
-        GsmExportedClientPrivate *skeleton;
+        ScsmExportedClientPrivate *skeleton;
 
         client = SCSM_DBUS_CLIENT (G_OBJECT_CLASS (scsm_dbus_client_parent_class)->constructor (type,
                                                                                               n_construct_properties,
@@ -130,14 +130,14 @@ scsm_dbus_client_constructor (GType                  type,
 }
 
 static void
-scsm_dbus_client_init (GsmDBusClient *client)
+scsm_dbus_client_init (ScsmDBusClient *client)
 {
         client->priv = SCSM_DBUS_CLIENT_GET_PRIVATE (client);
 }
 
 /* adapted from PolicyKit */
 static gboolean
-get_caller_info (GsmDBusClient *client,
+get_caller_info (ScsmDBusClient *client,
                  const char    *sender,
                  uid_t         *calling_uid_out,
                  pid_t         *calling_pid_out)
@@ -226,7 +226,7 @@ on_client_vanished (GDBusConnection *connection,
                     const char      *name,
                     gpointer         user_data)
 {
-        GsmDBusClient  *client = user_data;
+        ScsmDBusClient  *client = user_data;
 
         g_bus_unwatch_name (client->priv->watch_id);
         client->priv->watch_id = 0;
@@ -235,7 +235,7 @@ on_client_vanished (GDBusConnection *connection,
 }
 
 static void
-scsm_dbus_client_set_bus_name (GsmDBusClient  *client,
+scsm_dbus_client_set_bus_name (ScsmDBusClient  *client,
                               const char     *bus_name)
 {
         g_return_if_fail (SCSM_IS_DBUS_CLIENT (client));
@@ -259,7 +259,7 @@ scsm_dbus_client_set_bus_name (GsmDBusClient  *client,
 }
 
 const char *
-scsm_dbus_client_get_bus_name (GsmDBusClient  *client)
+scsm_dbus_client_get_bus_name (ScsmDBusClient  *client)
 {
         g_return_val_if_fail (SCSM_IS_DBUS_CLIENT (client), NULL);
 
@@ -272,7 +272,7 @@ scsm_dbus_client_set_property (GObject       *object,
                               const GValue  *value,
                               GParamSpec    *pspec)
 {
-        GsmDBusClient *self;
+        ScsmDBusClient *self;
 
         self = SCSM_DBUS_CLIENT (object);
 
@@ -292,7 +292,7 @@ scsm_dbus_client_get_property (GObject    *object,
                               GValue     *value,
                               GParamSpec *pspec)
 {
-        GsmDBusClient *self;
+        ScsmDBusClient *self;
 
         self = SCSM_DBUS_CLIENT (object);
 
@@ -309,7 +309,7 @@ scsm_dbus_client_get_property (GObject    *object,
 static void
 scsm_dbus_client_finalize (GObject *object)
 {
-        GsmDBusClient *client = (GsmDBusClient *) object;
+        ScsmDBusClient *client = (ScsmDBusClient *) object;
 
         g_free (client->priv->bus_name);
 
@@ -328,11 +328,11 @@ scsm_dbus_client_finalize (GObject *object)
 }
 
 static GKeyFile *
-dbus_client_save (GsmClient *client,
-                  GsmApp    *app,
+dbus_client_save (ScsmClient *client,
+                  ScsmApp    *app,
                   GError   **error)
 {
-        g_debug ("GsmDBusClient: saving client with id %s",
+        g_debug ("ScsmDBusClient: saving client with id %s",
                  scsm_client_peek_id (client));
 
         /* FIXME: We still don't support client saving for D-Bus
@@ -342,39 +342,39 @@ dbus_client_save (GsmClient *client,
 }
 
 static gboolean
-dbus_client_stop (GsmClient *client,
+dbus_client_stop (ScsmClient *client,
                   GError   **error)
 {
-        GsmDBusClient  *dbus_client = (GsmDBusClient *) client;
+        ScsmDBusClient  *dbus_client = (ScsmDBusClient *) client;
         scsm_exported_client_private_emit_stop (dbus_client->priv->skeleton);
         return TRUE;
 }
 
 static char *
-dbus_client_get_app_name (GsmClient *client)
+dbus_client_get_app_name (ScsmClient *client)
 {
         /* Always use app-id instead */
         return NULL;
 }
 
-static GsmClientRestartStyle
-dbus_client_get_restart_style_hint (GsmClient *client)
+static ScsmClientRestartStyle
+dbus_client_get_restart_style_hint (ScsmClient *client)
 {
         return (SCSM_DBUS_CLIENT (client)->priv->restart_style_hint);
 }
 
 static guint
-dbus_client_get_unix_process_id (GsmClient *client)
+dbus_client_get_unix_process_id (ScsmClient *client)
 {
         return (SCSM_DBUS_CLIENT (client)->priv->caller_pid);
 }
 
 static gboolean
-dbus_client_query_end_session (GsmClient                *client,
-                               GsmClientEndSessionFlag   flags,
+dbus_client_query_end_session (ScsmClient                *client,
+                               ScsmClientEndSessionFlag   flags,
                                GError                  **error)
 {
-        GsmDBusClient  *dbus_client = (GsmDBusClient *) client;
+        ScsmDBusClient  *dbus_client = (ScsmDBusClient *) client;
 
         if (dbus_client->priv->bus_name == NULL) {
                 g_set_error (error,
@@ -384,37 +384,37 @@ dbus_client_query_end_session (GsmClient                *client,
                 return FALSE;
         }
 
-        g_debug ("GsmDBusClient: sending QueryEndSession signal to %s", dbus_client->priv->bus_name);
+        g_debug ("ScsmDBusClient: sending QueryEndSession signal to %s", dbus_client->priv->bus_name);
 
         scsm_exported_client_private_emit_query_end_session (dbus_client->priv->skeleton, flags);
         return TRUE;
 }
 
 static gboolean
-dbus_client_end_session (GsmClient                *client,
-                         GsmClientEndSessionFlag   flags,
+dbus_client_end_session (ScsmClient                *client,
+                         ScsmClientEndSessionFlag   flags,
                          GError                  **error)
 {
-        GsmDBusClient  *dbus_client = (GsmDBusClient *) client;
+        ScsmDBusClient  *dbus_client = (ScsmDBusClient *) client;
 
         scsm_exported_client_private_emit_end_session (dbus_client->priv->skeleton, flags);
         return TRUE;
 }
 
 static gboolean
-dbus_client_cancel_end_session (GsmClient *client,
+dbus_client_cancel_end_session (ScsmClient *client,
                                 GError   **error)
 {
-        GsmDBusClient  *dbus_client = (GsmDBusClient *) client;
+        ScsmDBusClient  *dbus_client = (ScsmDBusClient *) client;
         scsm_exported_client_private_emit_cancel_end_session (dbus_client->priv->skeleton);
         return TRUE;
 }
 
 static void
-scsm_dbus_client_class_init (GsmDBusClientClass *klass)
+scsm_dbus_client_class_init (ScsmDBusClientClass *klass)
 {
         GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-        GsmClientClass *client_class = SCSM_CLIENT_CLASS (klass);
+        ScsmClientClass *client_class = SCSM_CLIENT_CLASS (klass);
 
         object_class->finalize             = scsm_dbus_client_finalize;
         object_class->constructor          = scsm_dbus_client_constructor;
@@ -438,14 +438,14 @@ scsm_dbus_client_class_init (GsmDBusClientClass *klass)
                                                               NULL,
                                                               G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
-        g_type_class_add_private (klass, sizeof (GsmDBusClientPrivate));
+        g_type_class_add_private (klass, sizeof (ScsmDBusClientPrivate));
 }
 
-GsmClient *
+ScsmClient *
 scsm_dbus_client_new (const char *startup_id,
                      const char *bus_name)
 {
-        GsmDBusClient *client;
+        ScsmDBusClient *client;
 
         client = g_object_new (SCSM_TYPE_DBUS_CLIENT,
                                "startup-id", startup_id,

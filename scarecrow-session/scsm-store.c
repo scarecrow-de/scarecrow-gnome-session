@@ -31,9 +31,9 @@
 
 #include "scsm-store.h"
 
-#define SCSM_STORE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_STORE, GsmStorePrivate))
+#define SCSM_STORE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_STORE, ScsmStorePrivate))
 
-struct GsmStorePrivate
+struct ScsmStorePrivate
 {
         GHashTable *objects;
         gboolean    locked;
@@ -52,11 +52,11 @@ enum {
 
 static guint signals [LAST_SIGNAL] = { 0 };
 
-static void     scsm_store_class_init    (GsmStoreClass *klass);
-static void     scsm_store_init          (GsmStore      *store);
+static void     scsm_store_class_init    (ScsmStoreClass *klass);
+static void     scsm_store_init          (ScsmStore      *store);
 static void     scsm_store_finalize      (GObject       *object);
 
-G_DEFINE_TYPE (GsmStore, scsm_store, G_TYPE_OBJECT)
+G_DEFINE_TYPE (ScsmStore, scsm_store, G_TYPE_OBJECT)
 
 GQuark
 scsm_store_error_quark (void)
@@ -70,13 +70,13 @@ scsm_store_error_quark (void)
 }
 
 guint
-scsm_store_size (GsmStore    *store)
+scsm_store_size (ScsmStore    *store)
 {
         return g_hash_table_size (store->priv->objects);
 }
 
 gboolean
-scsm_store_remove (GsmStore   *store,
+scsm_store_remove (ScsmStore   *store,
                   const char *id)
 {
         GObject *found;
@@ -106,8 +106,8 @@ scsm_store_remove (GsmStore   *store,
 }
 
 void
-scsm_store_foreach (GsmStore    *store,
-                   GsmStoreFunc func,
+scsm_store_foreach (ScsmStore    *store,
+                   ScsmStoreFunc func,
                    gpointer     user_data)
 {
         g_return_if_fail (store != NULL);
@@ -119,8 +119,8 @@ scsm_store_foreach (GsmStore    *store,
 }
 
 GObject *
-scsm_store_find (GsmStore    *store,
-                GsmStoreFunc predicate,
+scsm_store_find (ScsmStore    *store,
+                ScsmStoreFunc predicate,
                 gpointer     user_data)
 {
         GObject *object;
@@ -135,7 +135,7 @@ scsm_store_find (GsmStore    *store,
 }
 
 GObject *
-scsm_store_lookup (GsmStore   *store,
+scsm_store_lookup (ScsmStore   *store,
                   const char *id)
 {
         GObject *object;
@@ -151,9 +151,9 @@ scsm_store_lookup (GsmStore   *store,
 
 typedef struct
 {
-        GsmStoreFunc func;
+        ScsmStoreFunc func;
         gpointer     user_data;
-        GsmStore    *store;
+        ScsmStore    *store;
         GList       *removed;
 } WrapperData;
 
@@ -173,8 +173,8 @@ foreach_remove_wrapper (const char  *id,
 }
 
 guint
-scsm_store_foreach_remove (GsmStore    *store,
-                          GsmStoreFunc func,
+scsm_store_foreach_remove (ScsmStore    *store,
+                          ScsmStoreFunc func,
                           gpointer     user_data)
 {
         guint       ret;
@@ -195,7 +195,7 @@ scsm_store_foreach_remove (GsmStore    *store,
         while (data.removed != NULL) {
                 char *id;
                 id = data.removed->data;
-                g_debug ("GsmStore: emitting removed for %s", id);
+                g_debug ("ScsmStore: emitting removed for %s", id);
                 g_signal_emit (store, signals [REMOVED], 0, id);
                 g_free (data.removed->data);
                 data.removed->data = NULL;
@@ -214,11 +214,11 @@ _remove_all (const char *id,
 }
 
 void
-scsm_store_clear (GsmStore *store)
+scsm_store_clear (ScsmStore *store)
 {
         g_return_if_fail (store != NULL);
 
-        g_debug ("GsmStore: Clearing object store");
+        g_debug ("ScsmStore: Clearing object store");
 
         scsm_store_foreach_remove (store,
                                   _remove_all,
@@ -226,7 +226,7 @@ scsm_store_clear (GsmStore *store)
 }
 
 gboolean
-scsm_store_add (GsmStore   *store,
+scsm_store_add (ScsmStore   *store,
                const char *id,
                GObject    *object)
 {
@@ -240,7 +240,7 @@ scsm_store_add (GsmStore   *store,
                 return FALSE;
         }
 
-        g_debug ("GsmStore: Adding object id %s to store", id);
+        g_debug ("ScsmStore: Adding object id %s to store", id);
 
         g_hash_table_insert (store->priv->objects,
                              g_strdup (id),
@@ -252,7 +252,7 @@ scsm_store_add (GsmStore   *store,
 }
 
 void
-scsm_store_set_locked (GsmStore *store,
+scsm_store_set_locked (ScsmStore *store,
                       gboolean  locked)
 {
         g_return_if_fail (SCSM_IS_STORE (store));
@@ -261,7 +261,7 @@ scsm_store_set_locked (GsmStore *store,
 }
 
 gboolean
-scsm_store_get_locked (GsmStore *store)
+scsm_store_get_locked (ScsmStore *store)
 {
         g_return_val_if_fail (SCSM_IS_STORE (store), FALSE);
 
@@ -274,7 +274,7 @@ scsm_store_set_property (GObject      *object,
                         const GValue *value,
                         GParamSpec   *pspec)
 {
-        GsmStore *self;
+        ScsmStore *self;
 
         self = SCSM_STORE (object);
 
@@ -294,7 +294,7 @@ scsm_store_get_property (GObject    *object,
                         GValue     *value,
                         GParamSpec *pspec)
 {
-        GsmStore *self;
+        ScsmStore *self;
 
         self = SCSM_STORE (object);
 
@@ -311,7 +311,7 @@ scsm_store_get_property (GObject    *object,
 static void
 scsm_store_dispose (GObject *object)
 {
-        GsmStore *store;
+        ScsmStore *store;
 
         g_return_if_fail (object != NULL);
         g_return_if_fail (SCSM_IS_STORE (object));
@@ -324,7 +324,7 @@ scsm_store_dispose (GObject *object)
 }
 
 static void
-scsm_store_class_init (GsmStoreClass *klass)
+scsm_store_class_init (ScsmStoreClass *klass)
 {
         GObjectClass   *object_class = G_OBJECT_CLASS (klass);
 
@@ -337,7 +337,7 @@ scsm_store_class_init (GsmStoreClass *klass)
                 g_signal_new ("added",
                               G_TYPE_FROM_CLASS (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmStoreClass, added),
+                              G_STRUCT_OFFSET (ScsmStoreClass, added),
                               NULL, NULL, NULL,
                               G_TYPE_NONE,
                               1, G_TYPE_STRING);
@@ -345,7 +345,7 @@ scsm_store_class_init (GsmStoreClass *klass)
                 g_signal_new ("removed",
                               G_TYPE_FROM_CLASS (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmStoreClass, removed),
+                              G_STRUCT_OFFSET (ScsmStoreClass, removed),
                               NULL, NULL, NULL,
                               G_TYPE_NONE,
                               1, G_TYPE_STRING);
@@ -357,18 +357,18 @@ scsm_store_class_init (GsmStoreClass *klass)
                                                                FALSE,
                                                                G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
-        g_type_class_add_private (klass, sizeof (GsmStorePrivate));
+        g_type_class_add_private (klass, sizeof (ScsmStorePrivate));
 }
 
 static void
 _destroy_object (GObject *object)
 {
-        g_debug ("GsmStore: Unreffing object: %p", object);
+        g_debug ("ScsmStore: Unreffing object: %p", object);
         g_object_unref (object);
 }
 
 static void
-scsm_store_init (GsmStore *store)
+scsm_store_init (ScsmStore *store)
 {
 
         store->priv = SCSM_STORE_GET_PRIVATE (store);
@@ -382,7 +382,7 @@ scsm_store_init (GsmStore *store)
 static void
 scsm_store_finalize (GObject *object)
 {
-        GsmStore *store;
+        ScsmStore *store;
 
         g_return_if_fail (object != NULL);
         g_return_if_fail (SCSM_IS_STORE (object));
@@ -396,7 +396,7 @@ scsm_store_finalize (GObject *object)
         G_OBJECT_CLASS (scsm_store_parent_class)->finalize (object);
 }
 
-GsmStore *
+ScsmStore *
 scsm_store_new (void)
 {
         GObject *object;

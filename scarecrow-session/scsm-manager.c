@@ -70,7 +70,7 @@
 #include "scsm-shell-extensions.h"
 #include "scsm-fail-whale.h"
 
-#define SCSM_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_MANAGER, GsmManagerPrivate))
+#define SCSM_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_MANAGER, ScsmManagerPrivate))
 
 /* UUIDs for log messages */
 #define SCSM_MANAGER_STARTUP_SUCCEEDED_MSGID     "0ce153587afa4095832d233c17a88001"
@@ -110,7 +110,7 @@
 #define KEY_DISABLE_LOG_OUT       "disable-log-out"
 #define KEY_DISABLE_USER_SWITCHING "disable-user-switching"
 
-static void app_registered (GsmApp     *app, GParamSpec *spec, GsmManager *manager);
+static void app_registered (ScsmApp     *app, GParamSpec *spec, ScsmManager *manager);
 
 typedef enum
 {
@@ -120,30 +120,30 @@ typedef enum
         SCSM_MANAGER_LOGOUT_REBOOT_INTERACT,
         SCSM_MANAGER_LOGOUT_SHUTDOWN,
         SCSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT,
-} GsmManagerLogoutType;
+} ScsmManagerLogoutType;
 
-struct GsmManagerPrivate
+struct ScsmManagerPrivate
 {
         gboolean                failsafe;
         gboolean                systemd_managed;
         gboolean                systemd_initialized;
         gboolean                manager_initialized;
-        GsmStore               *clients;
-        GsmStore               *inhibitors;
-        GsmInhibitorFlag        inhibited_actions;
-        GsmStore               *apps;
-        GsmPresence            *presence;
-        GsmXsmpServer          *xsmp_server;
+        ScsmStore               *clients;
+        ScsmStore               *inhibitors;
+        ScsmInhibitorFlag        inhibited_actions;
+        ScsmStore               *apps;
+        ScsmPresence            *presence;
+        ScsmXsmpServer          *xsmp_server;
 
         char                   *session_name;
         gboolean                is_fallback_session : 1;
 
         /* Current status */
-        GsmManagerPhase         phase;
+        ScsmManagerPhase         phase;
         guint                   phase_timeout_id;
         GSList                 *required_apps;
         GSList                 *pending_apps;
-        GsmManagerLogoutMode    logout_mode;
+        ScsmManagerLogoutMode    logout_mode;
         GSList                 *query_clients;
         guint                   query_timeout_id;
         /* This is used for SCSM_MANAGER_PHASE_END_SESSION only at the moment,
@@ -151,7 +151,7 @@ struct GsmManagerPrivate
          * specific way */
         GSList                 *next_query_clients;
         /* This is the action that will be done just before we exit */
-        GsmManagerLogoutType    logout_type;
+        ScsmManagerLogoutType    logout_type;
 
         /* List of clients which were disconnected due to disabled condition
          * and shouldn't be automatically restarted */
@@ -165,12 +165,12 @@ struct GsmManagerPrivate
         GSettings              *screensaver_settings;
         GSettings              *lockdown_settings;
 
-        GsmSystem              *system;
+        ScsmSystem              *system;
         GDBusConnection        *connection;
-        GsmExportedManager     *skeleton;
+        ScsmExportedManager     *skeleton;
         gboolean                dbus_disconnected : 1;
 
-        GsmShell               *shell;
+        ScsmShell               *shell;
         guint                   shell_end_session_dialog_canceled_id;
         guint                   shell_end_session_dialog_open_failed_id;
         guint                   shell_end_session_dialog_confirmed_logout_id;
@@ -194,25 +194,25 @@ enum {
 
 static guint signals [LAST_SIGNAL] = { 0 };
 
-static void     scsm_manager_class_init  (GsmManagerClass *klass);
-static void     scsm_manager_init        (GsmManager      *manager);
+static void     scsm_manager_class_init  (ScsmManagerClass *klass);
+static void     scsm_manager_init        (ScsmManager      *manager);
 
-static gboolean auto_save_is_enabled (GsmManager *manager);
-static void     maybe_save_session   (GsmManager *manager);
+static gboolean auto_save_is_enabled (ScsmManager *manager);
+static void     maybe_save_session   (ScsmManager *manager);
 
-static gboolean _log_out_is_locked_down     (GsmManager *manager);
+static gboolean _log_out_is_locked_down     (ScsmManager *manager);
 
-static void     _handle_client_end_session_response (GsmManager *manager,
-                                                     GsmClient  *client,
+static void     _handle_client_end_session_response (ScsmManager *manager,
+                                                     ScsmClient  *client,
                                                      gboolean    is_ok,
                                                      gboolean    do_last,
                                                      gboolean    cancel,
                                                      const char *reason);
-static void     show_shell_end_session_dialog (GsmManager                   *manager,
-                                               GsmShellEndSessionDialogType  type);
+static void     show_shell_end_session_dialog (ScsmManager                   *manager,
+                                               ScsmShellEndSessionDialogType  type);
 static gpointer manager_object = NULL;
 
-G_DEFINE_TYPE (GsmManager, scsm_manager, G_TYPE_OBJECT)
+G_DEFINE_TYPE (ScsmManager, scsm_manager, G_TYPE_OBJECT)
 
 static const GDBusErrorEntry scsm_manager_error_entries[] = {
         { SCSM_MANAGER_ERROR_GENERAL, SCSM_MANAGER_DBUS_IFACE ".GeneralError" },
@@ -237,13 +237,13 @@ scsm_manager_error_quark (void)
 }
 
 static gboolean
-start_app_or_warn (GsmManager *manager,
-                   GsmApp     *app)
+start_app_or_warn (ScsmManager *manager,
+                   ScsmApp     *app)
 {
         gboolean res;
         GError *error = NULL;
 
-        g_debug ("GsmManager: starting app '%s'", scsm_app_peek_id (app));
+        g_debug ("ScsmManager: starting app '%s'", scsm_app_peek_id (app));
 
         res = scsm_app_start (app, &error);
         if (error != NULL) {
@@ -254,19 +254,19 @@ start_app_or_warn (GsmManager *manager,
 }
 
 static gboolean
-is_app_required (GsmManager *manager,
-                 GsmApp     *app)
+is_app_required (ScsmManager *manager,
+                 ScsmApp     *app)
 {
         return g_slist_find (manager->priv->required_apps, app) != NULL;
 }
 
 static void
-on_required_app_failure (GsmManager  *manager,
-                         GsmApp      *app)
+on_required_app_failure (ScsmManager  *manager,
+                         ScsmApp      *app)
 {
         const gchar *app_id;
         gboolean allow_logout;
-        GsmShellExtensions *extensions;
+        ScsmShellExtensions *extensions;
 
         app_id = scsm_app_peek_app_id (app);
 
@@ -296,11 +296,11 @@ on_required_app_failure (GsmManager  *manager,
 }
 
 static void
-on_display_server_failure (GsmManager *manager,
-                           GsmApp     *app)
+on_display_server_failure (ScsmManager *manager,
+                           ScsmApp     *app)
 {
         const gchar *app_id;
-        GsmShellExtensions *extensions;
+        ScsmShellExtensions *extensions;
 
         app_id = scsm_app_peek_app_id (app);
 
@@ -325,24 +325,24 @@ on_display_server_failure (GsmManager *manager,
 
 static gboolean
 _debug_client (const char *id,
-               GsmClient  *client,
-               GsmManager *manager)
+               ScsmClient  *client,
+               ScsmManager *manager)
 {
-        g_debug ("GsmManager: Client %s", scsm_client_peek_id (client));
+        g_debug ("ScsmManager: Client %s", scsm_client_peek_id (client));
         return FALSE;
 }
 
 static void
-debug_clients (GsmManager *manager)
+debug_clients (ScsmManager *manager)
 {
         scsm_store_foreach (manager->priv->clients,
-                           (GsmStoreFunc)_debug_client,
+                           (ScsmStoreFunc)_debug_client,
                            manager);
 }
 
 static gboolean
 _find_by_cookie (const char   *id,
-                 GsmInhibitor *inhibitor,
+                 ScsmInhibitor *inhibitor,
                  guint        *cookie_ap)
 {
         guint cookie_b;
@@ -354,7 +354,7 @@ _find_by_cookie (const char   *id,
 
 static gboolean
 _client_has_startup_id (const char *id,
-                        GsmClient  *client,
+                        ScsmClient  *client,
                         const char *startup_id_a)
 {
         const char *startup_id_b;
@@ -368,25 +368,25 @@ _client_has_startup_id (const char *id,
 }
 
 static void
-app_condition_changed (GsmApp     *app,
+app_condition_changed (ScsmApp     *app,
                        gboolean    condition,
-                       GsmManager *manager)
+                       ScsmManager *manager)
 {
-        GsmClient *client;
+        ScsmClient *client;
 
-        g_debug ("GsmManager: app:%s condition changed condition:%d",
+        g_debug ("ScsmManager: app:%s condition changed condition:%d",
                  scsm_app_peek_id (app),
                  condition);
 
-        client = (GsmClient *)scsm_store_find (manager->priv->clients,
-                                              (GsmStoreFunc)_client_has_startup_id,
+        client = (ScsmClient *)scsm_store_find (manager->priv->clients,
+                                              (ScsmStoreFunc)_client_has_startup_id,
                                               (char *)scsm_app_peek_startup_id (app));
 
         if (condition) {
                 if (!scsm_app_is_running (app) && client == NULL) {
                         start_app_or_warn (manager, app);
                 } else {
-                        g_debug ("GsmManager: not starting - app still running '%s'", scsm_app_peek_id (app));
+                        g_debug ("ScsmManager: not starting - app still running '%s'", scsm_app_peek_id (app));
                 }
         } else {
                 GError  *error;
@@ -399,7 +399,7 @@ app_condition_changed (GsmApp     *app,
                         manager->priv->condition_clients =
                                 g_slist_prepend (manager->priv->condition_clients, client);
 
-                        g_debug ("GsmManager: stopping client %s for app", scsm_client_peek_id (client));
+                        g_debug ("ScsmManager: stopping client %s for app", scsm_client_peek_id (client));
 
                         error = NULL;
                         res = scsm_client_stop (client, &error);
@@ -409,7 +409,7 @@ app_condition_changed (GsmApp     *app,
                                 g_error_free (error);
                         }
                 } else {
-                        g_debug ("GsmManager: stopping app %s", scsm_app_peek_id (app));
+                        g_debug ("ScsmManager: stopping app %s", scsm_app_peek_id (app));
 
                         /* If we don't have a client then we should try to kill the app */
                         error = NULL;
@@ -476,10 +476,10 @@ phase_num_to_name (guint phase)
         return name;
 }
 
-static void start_phase (GsmManager *manager);
+static void start_phase (ScsmManager *manager);
 
 static void
-scsm_manager_quit (GsmManager *manager)
+scsm_manager_quit (ScsmManager *manager)
 {
         /* See the comment in request_reboot() for some more details about how
          * this works. */
@@ -505,14 +505,14 @@ scsm_manager_quit (GsmManager *manager)
         }
 }
 
-static gboolean do_query_end_session_exit (GsmManager *manager);
+static gboolean do_query_end_session_exit (ScsmManager *manager);
 
 static void
-end_phase (GsmManager *manager)
+end_phase (ScsmManager *manager)
 {
         gboolean start_next_phase = TRUE;
 
-        g_debug ("GsmManager: ending phase %s",
+        g_debug ("ScsmManager: ending phase %s",
                  phase_num_to_name (manager->priv->phase));
 
         g_slist_free (manager->priv->pending_apps);
@@ -581,8 +581,8 @@ end_phase (GsmManager *manager)
 }
 
 static void
-app_event_during_startup (GsmManager *manager,
-                          GsmApp     *app)
+app_event_during_startup (ScsmManager *manager,
+                          ScsmApp     *app)
 {
         if (!(manager->priv->phase < SCSM_MANAGER_PHASE_APPLICATION))
                 return;
@@ -600,10 +600,10 @@ app_event_during_startup (GsmManager *manager,
 }
 
 static gboolean
-is_app_display_server (GsmManager *manager,
-                       GsmApp     *app)
+is_app_display_server (ScsmManager *manager,
+                       ScsmApp     *app)
 {
-        GsmManagerPhase phase;
+        ScsmManagerPhase phase;
 
         /* Apps can only really act as a display server if
          * we're a wayland session.
@@ -618,8 +618,8 @@ is_app_display_server (GsmManager *manager,
 }
 
 static void
-_restart_app (GsmManager *manager,
-              GsmApp     *app)
+_restart_app (ScsmManager *manager,
+              ScsmApp     *app)
 {
         GError *error = NULL;
 
@@ -641,9 +641,9 @@ _restart_app (GsmManager *manager,
 }
 
 static void
-app_died (GsmApp     *app,
+app_died (ScsmApp     *app,
           int         signal,
-          GsmManager *manager)
+          ScsmManager *manager)
 {
         g_warning ("Application '%s' killed by signal %d", scsm_app_peek_app_id (app), signal);
 
@@ -666,9 +666,9 @@ app_died (GsmApp     *app,
 }
 
 static void
-app_exited (GsmApp     *app,
+app_exited (ScsmApp     *app,
             guchar      exit_code,
-            GsmManager *manager)
+            ScsmManager *manager)
 {
         if (exit_code != 0)
                 g_warning ("App '%s' exited with code %d", scsm_app_peek_app_id (app), exit_code);
@@ -690,9 +690,9 @@ app_exited (GsmApp     *app,
 }
 
 static void
-app_registered (GsmApp     *app,
+app_registered (ScsmApp     *app,
                 GParamSpec *spec,
-                GsmManager *manager)
+                ScsmManager *manager)
 {
         if (!scsm_app_get_registered (app)) {
                 return;
@@ -704,7 +704,7 @@ app_registered (GsmApp     *app,
 }
 
 static gboolean
-on_phase_timeout (GsmManager *manager)
+on_phase_timeout (ScsmManager *manager)
 {
         GSList *a;
 
@@ -721,7 +721,7 @@ on_phase_timeout (GsmManager *manager)
         case SCSM_MANAGER_PHASE_DESKTOP:
         case SCSM_MANAGER_PHASE_APPLICATION:
                 for (a = manager->priv->pending_apps; a; a = a->next) {
-                        GsmApp *app = a->data;
+                        ScsmApp *app = a->data;
                         g_warning ("Application '%s' failed to register before timeout",
                                    scsm_app_peek_app_id (app));
                         if (is_app_required (manager, app))
@@ -747,8 +747,8 @@ on_phase_timeout (GsmManager *manager)
 
 static gboolean
 _start_app (const char *id,
-            GsmApp     *app,
-            GsmManager *manager)
+            ScsmApp     *app,
+            ScsmManager *manager)
 {
         if (scsm_app_peek_phase (app) != manager->priv->phase) {
                 goto out;
@@ -763,7 +763,7 @@ _start_app (const char *id,
 
         if (scsm_app_peek_is_disabled (app)
             || scsm_app_peek_is_conditionally_disabled (app)) {
-                g_debug ("GsmManager: Skipping disabled app: %s", id);
+                g_debug ("ScsmManager: Skipping disabled app: %s", id);
                 goto out;
         }
 
@@ -799,10 +799,10 @@ _start_app (const char *id,
 }
 
 static void
-do_phase_startup (GsmManager *manager)
+do_phase_startup (ScsmManager *manager)
 {
         scsm_store_foreach (manager->priv->apps,
-                           (GsmStoreFunc)_start_app,
+                           (ScsmStoreFunc)_start_app,
                            manager);
 
         if (manager->priv->pending_apps != NULL) {
@@ -817,13 +817,13 @@ do_phase_startup (GsmManager *manager)
 }
 
 typedef struct {
-        GsmManager *manager;
+        ScsmManager *manager;
         guint       flags;
 } ClientEndSessionData;
 
 
 static gboolean
-_client_end_session (GsmClient            *client,
+_client_end_session (ScsmClient            *client,
                      ClientEndSessionData *data)
 {
         gboolean ret;
@@ -836,7 +836,7 @@ _client_end_session (GsmClient            *client,
                 g_error_free (error);
                 /* FIXME: what should we do if we can't communicate with client? */
         } else {
-                g_debug ("GsmManager: adding client to end-session clients: %s", scsm_client_peek_id (client));
+                g_debug ("ScsmManager: adding client to end-session clients: %s", scsm_client_peek_id (client));
                 data->manager->priv->query_clients = g_slist_prepend (data->manager->priv->query_clients,
                                                                       client);
         }
@@ -846,14 +846,14 @@ _client_end_session (GsmClient            *client,
 
 static gboolean
 _client_end_session_helper (const char           *id,
-                            GsmClient            *client,
+                            ScsmClient            *client,
                             ClientEndSessionData *data)
 {
         return _client_end_session (client, data);
 }
 
 static void
-complete_end_session_tasks (GsmManager *manager)
+complete_end_session_tasks (ScsmManager *manager)
 {
         GSList *l;
 
@@ -871,7 +871,7 @@ complete_end_session_tasks (GsmManager *manager)
 }
 
 static void
-do_phase_end_session (GsmManager *manager)
+do_phase_end_session (ScsmManager *manager)
 {
         ClientEndSessionData data;
 
@@ -898,7 +898,7 @@ do_phase_end_session (GsmManager *manager)
                                                                          manager);
 
                 scsm_store_foreach (manager->priv->clients,
-                                   (GsmStoreFunc)_client_end_session_helper,
+                                   (ScsmStoreFunc)_client_end_session_helper,
                                    &data);
         } else {
                 end_phase (manager);
@@ -906,7 +906,7 @@ do_phase_end_session (GsmManager *manager)
 }
 
 static void
-do_phase_end_session_part_2 (GsmManager *manager)
+do_phase_end_session_part_2 (ScsmManager *manager)
 {
         ClientEndSessionData data;
 
@@ -938,7 +938,7 @@ do_phase_end_session_part_2 (GsmManager *manager)
 
 static gboolean
 _client_stop (const char *id,
-              GsmClient  *client,
+              ScsmClient  *client,
               gpointer    user_data)
 {
         gboolean ret;
@@ -951,7 +951,7 @@ _client_stop (const char *id,
                 g_error_free (error);
                 /* FIXME: what should we do if we can't communicate with client? */
         } else {
-                g_debug ("GsmManager: stopped client: %s", scsm_client_peek_id (client));
+                g_debug ("ScsmManager: stopped client: %s", scsm_client_peek_id (client));
         }
 
         return FALSE;
@@ -959,9 +959,9 @@ _client_stop (const char *id,
 
 #ifdef HAVE_SYSTEMD
 static void
-maybe_restart_user_bus (GsmManager *manager)
+maybe_restart_user_bus (ScsmManager *manager)
 {
-        GsmSystem *system;
+        ScsmSystem *system;
         g_autoptr(GVariant) reply = NULL;
         g_autoptr(GError) error = NULL;
 
@@ -986,17 +986,17 @@ maybe_restart_user_bus (GsmManager *manager)
                                              &error);
 
         if (error != NULL) {
-                g_debug ("GsmManager: reloading user bus failed: %s", error->message);
+                g_debug ("ScsmManager: reloading user bus failed: %s", error->message);
         }
 }
 #endif
 
 static void
-do_phase_exit (GsmManager *manager)
+do_phase_exit (ScsmManager *manager)
 {
         if (scsm_store_size (manager->priv->clients) > 0) {
                 scsm_store_foreach (manager->priv->clients,
-                                   (GsmStoreFunc)_client_stop,
+                                   (ScsmStoreFunc)_client_stop,
                                    NULL);
         }
 
@@ -1010,7 +1010,7 @@ do_phase_exit (GsmManager *manager)
 
 static gboolean
 _client_query_end_session (const char           *id,
-                           GsmClient            *client,
+                           ScsmClient            *client,
                            ClientEndSessionData *data)
 {
         gboolean ret;
@@ -1023,7 +1023,7 @@ _client_query_end_session (const char           *id,
                 g_error_free (error);
                 /* FIXME: what should we do if we can't communicate with client? */
         } else {
-                g_debug ("GsmManager: adding client to query clients: %s", scsm_client_peek_id (client));
+                g_debug ("ScsmManager: adding client to query clients: %s", scsm_client_peek_id (client));
                 data->manager->priv->query_clients = g_slist_prepend (data->manager->priv->query_clients,
                                                                       client);
         }
@@ -1033,7 +1033,7 @@ _client_query_end_session (const char           *id,
 
 static gboolean
 inhibitor_has_flag (gpointer      key,
-                    GsmInhibitor *inhibitor,
+                    ScsmInhibitor *inhibitor,
                     gpointer      data)
 {
         guint flag;
@@ -1047,9 +1047,9 @@ inhibitor_has_flag (gpointer      key,
 }
 
 static gboolean
-scsm_manager_is_logout_inhibited (GsmManager *manager)
+scsm_manager_is_logout_inhibited (ScsmManager *manager)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
 
         if (manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE) {
                 return FALSE;
@@ -1059,8 +1059,8 @@ scsm_manager_is_logout_inhibited (GsmManager *manager)
                 return FALSE;
         }
 
-        inhibitor = (GsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
-                                                    (GsmStoreFunc)inhibitor_has_flag,
+        inhibitor = (ScsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
+                                                    (ScsmStoreFunc)inhibitor_has_flag,
                                                     GUINT_TO_POINTER (SCSM_INHIBITOR_FLAG_LOGOUT));
         if (inhibitor == NULL) {
                 return FALSE;
@@ -1069,16 +1069,16 @@ scsm_manager_is_logout_inhibited (GsmManager *manager)
 }
 
 static gboolean
-scsm_manager_is_idle_inhibited (GsmManager *manager)
+scsm_manager_is_idle_inhibited (ScsmManager *manager)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
 
         if (manager->priv->inhibitors == NULL) {
                 return FALSE;
         }
 
-        inhibitor = (GsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
-                                                    (GsmStoreFunc)inhibitor_has_flag,
+        inhibitor = (ScsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
+                                                    (ScsmStoreFunc)inhibitor_has_flag,
                                                     GUINT_TO_POINTER (SCSM_INHIBITOR_FLAG_IDLE));
         if (inhibitor == NULL) {
                 return FALSE;
@@ -1088,8 +1088,8 @@ scsm_manager_is_idle_inhibited (GsmManager *manager)
 
 static gboolean
 _client_cancel_end_session (const char *id,
-                            GsmClient  *client,
-                            GsmManager *manager)
+                            ScsmClient  *client,
+                            ScsmManager *manager)
 {
         gboolean res;
         GError  *error;
@@ -1106,8 +1106,8 @@ _client_cancel_end_session (const char *id,
 
 static gboolean
 inhibitor_is_jit (gpointer      key,
-                  GsmInhibitor *inhibitor,
-                  GsmManager   *manager)
+                  ScsmInhibitor *inhibitor,
+                  ScsmManager   *manager)
 {
         gboolean    matches;
         const char *id;
@@ -1120,7 +1120,7 @@ inhibitor_is_jit (gpointer      key,
 }
 
 static void
-cancel_end_session (GsmManager *manager)
+cancel_end_session (ScsmManager *manager)
 {
         /* just ignore if received outside of shutdown */
         if (manager->priv->phase < SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
@@ -1128,7 +1128,7 @@ cancel_end_session (GsmManager *manager)
         }
 
         /* switch back to running phase */
-        g_debug ("GsmManager: Cancelling the end of session");
+        g_debug ("ScsmManager: Cancelling the end of session");
 
         g_cancellable_cancel (manager->priv->end_session_cancellable);
 
@@ -1139,21 +1139,21 @@ cancel_end_session (GsmManager *manager)
 
         /* clear all JIT inhibitors */
         scsm_store_foreach_remove (manager->priv->inhibitors,
-                                  (GsmStoreFunc)inhibitor_is_jit,
+                                  (ScsmStoreFunc)inhibitor_is_jit,
                                   (gpointer)manager);
 
         scsm_store_foreach (manager->priv->clients,
-                           (GsmStoreFunc)_client_cancel_end_session,
+                           (ScsmStoreFunc)_client_cancel_end_session,
                            NULL);
 
         start_phase (manager);
 }
 
 static void
-end_session_or_show_shell_dialog (GsmManager *manager)
+end_session_or_show_shell_dialog (ScsmManager *manager)
 {
         gboolean logout_prompt;
-        GsmShellEndSessionDialogType type;
+        ScsmShellEndSessionDialogType type;
         gboolean logout_inhibited;
 
         switch (manager->priv->logout_type) {
@@ -1207,10 +1207,10 @@ end_session_or_show_shell_dialog (GsmManager *manager)
 }
 
 static void
-query_end_session_complete (GsmManager *manager)
+query_end_session_complete (ScsmManager *manager)
 {
 
-        g_debug ("GsmManager: query end session complete");
+        g_debug ("ScsmManager: query end session complete");
 
         /* Remove the timeout since this can be called from outside the timer
          * and we don't want to have it called twice */
@@ -1233,29 +1233,29 @@ generate_cookie (void)
 }
 
 static guint32
-_generate_unique_cookie (GsmManager *manager)
+_generate_unique_cookie (ScsmManager *manager)
 {
         guint32 cookie;
 
         do {
                 cookie = generate_cookie ();
-        } while (scsm_store_find (manager->priv->inhibitors, (GsmStoreFunc)_find_by_cookie, &cookie) != NULL);
+        } while (scsm_store_find (manager->priv->inhibitors, (ScsmStoreFunc)_find_by_cookie, &cookie) != NULL);
 
         return cookie;
 }
 
 static gboolean
-_on_query_end_session_timeout (GsmManager *manager)
+_on_query_end_session_timeout (ScsmManager *manager)
 {
         GSList *l;
 
         manager->priv->query_timeout_id = 0;
 
-        g_debug ("GsmManager: query end session timed out");
+        g_debug ("ScsmManager: query end session timed out");
 
         for (l = manager->priv->query_clients; l != NULL; l = l->next) {
                 guint         cookie;
-                GsmInhibitor *inhibitor;
+                ScsmInhibitor *inhibitor;
                 const char   *bus_name;
                 char         *app_id;
 
@@ -1303,7 +1303,7 @@ _on_query_end_session_timeout (GsmManager *manager)
 }
 
 static void
-do_phase_query_end_session (GsmManager *manager)
+do_phase_query_end_session (ScsmManager *manager)
 {
         ClientEndSessionData data;
 
@@ -1318,12 +1318,12 @@ do_phase_query_end_session (GsmManager *manager)
          */
 
         debug_clients (manager);
-        g_debug ("GsmManager: sending query-end-session to clients (logout mode: %s)",
+        g_debug ("ScsmManager: sending query-end-session to clients (logout mode: %s)",
                  manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_NORMAL? "normal" :
                  manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE? "forceful":
                  "no confirmation");
         scsm_store_foreach (manager->priv->clients,
-                           (GsmStoreFunc)_client_query_end_session,
+                           (ScsmStoreFunc)_client_query_end_session,
                            &data);
 
         /* This phase doesn't time out unless logout is forced. Typically, this
@@ -1332,7 +1332,7 @@ do_phase_query_end_session (GsmManager *manager)
 }
 
 static void
-update_idle (GsmManager *manager)
+update_idle (ScsmManager *manager)
 {
         if (scsm_manager_is_idle_inhibited (manager)) {
                 scsm_presence_set_idle_enabled (manager->priv->presence, FALSE);
@@ -1342,10 +1342,10 @@ update_idle (GsmManager *manager)
 }
 
 static void
-start_phase (GsmManager *manager)
+start_phase (ScsmManager *manager)
 {
 
-        g_debug ("GsmManager: starting phase %s\n",
+        g_debug ("ScsmManager: starting phase %s\n",
                  phase_num_to_name (manager->priv->phase));
 
         /* reset state */
@@ -1421,7 +1421,7 @@ start_phase (GsmManager *manager)
 
 static gboolean
 _debug_app_for_phase (const char *id,
-                      GsmApp     *app,
+                      ScsmApp     *app,
                       gpointer    data)
 {
         guint phase;
@@ -1432,7 +1432,7 @@ _debug_app_for_phase (const char *id,
                 return FALSE;
         }
 
-        g_debug ("GsmManager:\tID: %s\tapp-id:%s\tis-disabled:%d\tis-conditionally-disabled:%d",
+        g_debug ("ScsmManager:\tID: %s\tapp-id:%s\tis-disabled:%d\tis-conditionally-disabled:%d",
                  scsm_app_peek_id (app),
                  scsm_app_peek_app_id (app),
                  scsm_app_peek_is_disabled (app),
@@ -1442,23 +1442,23 @@ _debug_app_for_phase (const char *id,
 }
 
 static void
-debug_app_summary (GsmManager *manager)
+debug_app_summary (ScsmManager *manager)
 {
         guint phase;
 
-        g_debug ("GsmManager: App startup summary");
+        g_debug ("ScsmManager: App startup summary");
         for (phase = SCSM_MANAGER_PHASE_EARLY_INITIALIZATION; phase < SCSM_MANAGER_PHASE_RUNNING; phase++) {
-                g_debug ("GsmManager: Phase %s", phase_num_to_name (phase));
+                g_debug ("ScsmManager: Phase %s", phase_num_to_name (phase));
                 scsm_store_foreach (manager->priv->apps,
-                                   (GsmStoreFunc)_debug_app_for_phase,
+                                   (ScsmStoreFunc)_debug_app_for_phase,
                                    GUINT_TO_POINTER (phase));
         }
 }
 
 void
-scsm_manager_start (GsmManager *manager)
+scsm_manager_start (ScsmManager *manager)
 {
-        g_debug ("GsmManager: SCSM starting to manage");
+        g_debug ("ScsmManager: SCSM starting to manage");
 
         g_return_if_fail (SCSM_IS_MANAGER (manager));
 
@@ -1469,7 +1469,7 @@ scsm_manager_start (GsmManager *manager)
 }
 
 char *
-_scsm_manager_get_default_session (GsmManager     *manager)
+_scsm_manager_get_default_session (ScsmManager     *manager)
 {
         g_autoptr(GSettings) session_settings = NULL;
 
@@ -1482,7 +1482,7 @@ _scsm_manager_get_default_session (GsmManager     *manager)
 }
 
 void
-_scsm_manager_set_active_session (GsmManager     *manager,
+_scsm_manager_set_active_session (ScsmManager     *manager,
                                  const char     *session_name,
                                  gboolean        is_fallback)
 {
@@ -1494,7 +1494,7 @@ _scsm_manager_set_active_session (GsmManager     *manager,
 }
 
 void
-_scsm_manager_set_renderer (GsmManager *manager,
+_scsm_manager_set_renderer (ScsmManager *manager,
                            const char *renderer)
 {
         scsm_exported_manager_set_renderer (manager->priv->skeleton, renderer);
@@ -1502,7 +1502,7 @@ _scsm_manager_set_renderer (GsmManager *manager,
 
 static gboolean
 _app_has_app_id (const char   *id,
-                 GsmApp       *app,
+                 ScsmApp       *app,
                  const char   *app_id_a)
 {
         const char *app_id_b;
@@ -1511,20 +1511,20 @@ _app_has_app_id (const char   *id,
         return (app_id_b != NULL && strcmp (app_id_a, app_id_b) == 0);
 }
 
-static GsmApp *
-find_app_for_app_id (GsmManager *manager,
+static ScsmApp *
+find_app_for_app_id (ScsmManager *manager,
                      const char *app_id)
 {
-        GsmApp *app;
-        app = (GsmApp *)scsm_store_find (manager->priv->apps,
-                                        (GsmStoreFunc)_app_has_app_id,
+        ScsmApp *app;
+        app = (ScsmApp *)scsm_store_find (manager->priv->apps,
+                                        (ScsmStoreFunc)_app_has_app_id,
                                         (char *)app_id);
         return app;
 }
 
 static gboolean
 inhibitor_has_client_id (gpointer      key,
-                         GsmInhibitor *inhibitor,
+                         ScsmInhibitor *inhibitor,
                          const char   *client_id_a)
 {
         gboolean    matches;
@@ -1536,7 +1536,7 @@ inhibitor_has_client_id (gpointer      key,
         if (! IS_STRING_EMPTY (client_id_a) && ! IS_STRING_EMPTY (client_id_b)) {
                 matches = (strcmp (client_id_a, client_id_b) == 0);
                 if (matches) {
-                        g_debug ("GsmManager: removing JIT inhibitor for %s for reason '%s'",
+                        g_debug ("ScsmManager: removing JIT inhibitor for %s for reason '%s'",
                                  scsm_inhibitor_peek_client_id (inhibitor),
                                  scsm_inhibitor_peek_reason (inhibitor));
                 }
@@ -1547,7 +1547,7 @@ inhibitor_has_client_id (gpointer      key,
 
 static gboolean
 _app_has_startup_id (const char *id,
-                     GsmApp     *app,
+                     ScsmApp     *app,
                      const char *startup_id_a)
 {
         const char *startup_id_b;
@@ -1561,11 +1561,11 @@ _app_has_startup_id (const char *id,
         return (strcmp (startup_id_a, startup_id_b) == 0);
 }
 
-static GsmApp *
-find_app_for_startup_id (GsmManager *manager,
+static ScsmApp *
+find_app_for_startup_id (ScsmManager *manager,
                         const char *startup_id)
 {
-        GsmApp *found_app;
+        ScsmApp *found_app;
         GSList *a;
 
         found_app = NULL;
@@ -1575,7 +1575,7 @@ find_app_for_startup_id (GsmManager *manager,
          * with any of the autostarted apps. */
         if (manager->priv->phase < SCSM_MANAGER_PHASE_APPLICATION) {
                 for (a = manager->priv->pending_apps; a != NULL; a = a->next) {
-                        GsmApp *app = SCSM_APP (a->data);
+                        ScsmApp *app = SCSM_APP (a->data);
 
                         if (strcmp (startup_id, scsm_app_peek_startup_id (app)) == 0) {
                                 found_app = app;
@@ -1583,10 +1583,10 @@ find_app_for_startup_id (GsmManager *manager,
                         }
                 }
         } else {
-                GsmApp *app;
+                ScsmApp *app;
 
-                app = (GsmApp *)scsm_store_find (manager->priv->apps,
-                                                (GsmStoreFunc)_app_has_startup_id,
+                app = (ScsmApp *)scsm_store_find (manager->priv->apps,
+                                                (ScsmStoreFunc)_app_has_startup_id,
                                                 (char *)startup_id);
                 if (app != NULL) {
                         found_app = app;
@@ -1598,17 +1598,17 @@ find_app_for_startup_id (GsmManager *manager,
 }
 
 static void
-_disconnect_client (GsmManager *manager,
-                    GsmClient  *client)
+_disconnect_client (ScsmManager *manager,
+                    ScsmClient  *client)
 {
         gboolean              is_condition_client;
-        GsmApp               *app;
+        ScsmApp               *app;
         const char           *app_id;
         const char           *startup_id;
         gboolean              app_restart;
-        GsmClientRestartStyle client_restart_hint;
+        ScsmClientRestartStyle client_restart_hint;
 
-        g_debug ("GsmManager: disconnect client: %s", scsm_client_peek_id (client));
+        g_debug ("ScsmManager: disconnect client: %s", scsm_client_peek_id (client));
 
         /* take a ref so it doesn't get finalized */
         g_object_ref (client);
@@ -1624,7 +1624,7 @@ _disconnect_client (GsmManager *manager,
 
         /* remove any inhibitors for this client */
         scsm_store_foreach_remove (manager->priv->inhibitors,
-                                  (GsmStoreFunc)inhibitor_has_client_id,
+                                  (ScsmStoreFunc)inhibitor_has_client_id,
                                   (gpointer)scsm_client_peek_id (client));
 
         app = NULL;
@@ -1640,7 +1640,7 @@ _disconnect_client (GsmManager *manager,
         if (app == NULL) {
                 app_id = scsm_client_peek_app_id (client);
                 if (! IS_STRING_EMPTY (app_id)) {
-                        g_debug ("GsmManager: disconnect for app '%s'", app_id);
+                        g_debug ("ScsmManager: disconnect for app '%s'", app_id);
                         app = find_app_for_app_id (manager, app_id);
                 }
         }
@@ -1691,17 +1691,17 @@ _disconnect_client (GsmManager *manager,
         }
 
         if (manager->priv->dbus_disconnected && SCSM_IS_DBUS_CLIENT (client)) {
-                g_debug ("GsmManager: dbus disconnected, not restarting application");
+                g_debug ("ScsmManager: dbus disconnected, not restarting application");
                 goto out;
         }
 
         if (app == NULL) {
-                g_debug ("GsmManager: unable to find application for client - not restarting");
+                g_debug ("ScsmManager: unable to find application for client - not restarting");
                 goto out;
         }
 
         if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
-                g_debug ("GsmManager: in shutdown, not restarting application");
+                g_debug ("ScsmManager: in shutdown, not restarting application");
                 goto out;
         }
 
@@ -1711,16 +1711,16 @@ _disconnect_client (GsmManager *manager,
         /* allow legacy clients to override the app info */
         if (! app_restart
             && client_restart_hint != SCSM_CLIENT_RESTART_IMMEDIATELY) {
-                g_debug ("GsmManager: autorestart not set, not restarting application");
+                g_debug ("ScsmManager: autorestart not set, not restarting application");
                 goto out;
         }
 
         if (is_condition_client) {
-                g_debug ("GsmManager: app conditionally disabled, not restarting application");
+                g_debug ("ScsmManager: app conditionally disabled, not restarting application");
                 goto out;
         }
 
-        g_debug ("GsmManager: restarting app");
+        g_debug ("ScsmManager: restarting app");
 
         _restart_app (manager, app);
 
@@ -1730,12 +1730,12 @@ _disconnect_client (GsmManager *manager,
 
 typedef struct {
         const char *service_name;
-        GsmManager *manager;
+        ScsmManager *manager;
 } RemoveClientData;
 
 static gboolean
 _disconnect_dbus_client (const char       *id,
-                         GsmClient        *client,
+                         ScsmClient        *client,
                          RemoveClientData *data)
 {
         const char *name;
@@ -1765,7 +1765,7 @@ _disconnect_dbus_client (const char       *id,
 
 /**
  * remove_clients_for_connection:
- * @manager: a #GsmManager
+ * @manager: a #ScsmManager
  * @service_name: a service name
  *
  * Disconnects clients that own @service_name.
@@ -1773,7 +1773,7 @@ _disconnect_dbus_client (const char       *id,
  * If @service_name is NULL, then disconnects all clients for the connection.
  */
 static void
-remove_clients_for_connection (GsmManager *manager,
+remove_clients_for_connection (ScsmManager *manager,
                                const char *service_name)
 {
         RemoveClientData data;
@@ -1783,18 +1783,18 @@ remove_clients_for_connection (GsmManager *manager,
 
         /* disconnect dbus clients for name */
         scsm_store_foreach_remove (manager->priv->clients,
-                                  (GsmStoreFunc)_disconnect_dbus_client,
+                                  (ScsmStoreFunc)_disconnect_dbus_client,
                                   &data);
 
         if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION
             && scsm_store_size (manager->priv->clients) == 0) {
-                g_debug ("GsmManager: last client disconnected - exiting");
+                g_debug ("ScsmManager: last client disconnected - exiting");
                 end_phase (manager);
         }
 }
 
 static void
-scsm_manager_set_failsafe (GsmManager *manager,
+scsm_manager_set_failsafe (ScsmManager *manager,
                           gboolean    enabled)
 {
         g_return_if_fail (SCSM_IS_MANAGER (manager));
@@ -1803,7 +1803,7 @@ scsm_manager_set_failsafe (GsmManager *manager,
 }
 
 gboolean
-scsm_manager_get_failsafe (GsmManager *manager)
+scsm_manager_get_failsafe (ScsmManager *manager)
 {
         g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
 
@@ -1811,7 +1811,7 @@ scsm_manager_get_failsafe (GsmManager *manager)
 }
 
 gboolean
-scsm_manager_get_systemd_managed (GsmManager *manager)
+scsm_manager_get_systemd_managed (ScsmManager *manager)
 {
         g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
 
@@ -1819,27 +1819,27 @@ scsm_manager_get_systemd_managed (GsmManager *manager)
 }
 
 static void
-on_client_disconnected (GsmClient  *client,
-                        GsmManager *manager)
+on_client_disconnected (ScsmClient  *client,
+                        ScsmManager *manager)
 {
-        g_debug ("GsmManager: disconnect client");
+        g_debug ("ScsmManager: disconnect client");
         _disconnect_client (manager, client);
         scsm_store_remove (manager->priv->clients, scsm_client_peek_id (client));
         if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION
             && scsm_store_size (manager->priv->clients) == 0) {
-                g_debug ("GsmManager: last client disconnected - exiting");
+                g_debug ("ScsmManager: last client disconnected - exiting");
                 end_phase (manager);
         }
 }
 
 static gboolean
-on_xsmp_client_register_request (GsmXSMPClient *client,
+on_xsmp_client_register_request (ScsmXSMPClient *client,
                                  char         **id,
-                                 GsmManager    *manager)
+                                 ScsmManager    *manager)
 {
         gboolean handled;
         char    *new_id;
-        GsmApp  *app;
+        ScsmApp  *app;
 
         handled = TRUE;
         new_id = NULL;
@@ -1851,10 +1851,10 @@ on_xsmp_client_register_request (GsmXSMPClient *client,
         if (IS_STRING_EMPTY (*id)) {
                 new_id = scsm_util_generate_startup_id ();
         } else {
-                GsmClient *client;
+                ScsmClient *client;
 
-                client = (GsmClient *)scsm_store_find (manager->priv->clients,
-                                                      (GsmStoreFunc)_client_has_startup_id,
+                client = (ScsmClient *)scsm_store_find (manager->priv->clients,
+                                                      (ScsmStoreFunc)_client_has_startup_id,
                                                       *id);
                 /* We can't have two clients with the same id. */
                 if (client != NULL) {
@@ -1864,7 +1864,7 @@ on_xsmp_client_register_request (GsmXSMPClient *client,
                 new_id = g_strdup (*id);
         }
 
-        g_debug ("GsmManager: Adding new client %s to session", new_id);
+        g_debug ("ScsmManager: Adding new client %s to session", new_id);
 
         g_signal_connect (client,
                           "disconnected",
@@ -1894,11 +1894,11 @@ on_xsmp_client_register_request (GsmXSMPClient *client,
 }
 
 static void
-on_xsmp_client_register_confirmed (GsmXSMPClient *client,
+on_xsmp_client_register_confirmed (ScsmXSMPClient *client,
                                    const gchar   *id,
-                                   GsmManager    *manager)
+                                   ScsmManager    *manager)
 {
-        GsmApp *app;
+        ScsmApp *app;
 
         app = find_app_for_startup_id (manager, id);
 
@@ -1908,7 +1908,7 @@ on_xsmp_client_register_confirmed (GsmXSMPClient *client,
 }
 
 static gboolean
-auto_save_is_enabled (GsmManager *manager)
+auto_save_is_enabled (ScsmManager *manager)
 {
         /* Note that saving/restoring sessions is not really possible on systemd, as
          * XSMP clients cannot be reliably mapped to .desktop files. */
@@ -1920,7 +1920,7 @@ auto_save_is_enabled (GsmManager *manager)
 }
 
 static void
-maybe_save_session (GsmManager *manager)
+maybe_save_session (ScsmManager *manager)
 {
         GError *error;
 
@@ -1949,8 +1949,8 @@ maybe_save_session (GsmManager *manager)
 }
 
 static void
-_handle_client_end_session_response (GsmManager *manager,
-                                     GsmClient  *client,
+_handle_client_end_session_response (ScsmManager *manager,
+                                     ScsmClient  *client,
                                      gboolean    is_ok,
                                      gboolean    do_last,
                                      gboolean    cancel,
@@ -1961,7 +1961,7 @@ _handle_client_end_session_response (GsmManager *manager,
                 return;
         }
 
-        g_debug ("GsmManager: Response from end session request: is-ok=%d do-last=%d cancel=%d reason=%s", is_ok, do_last, cancel, reason ? reason :"");
+        g_debug ("ScsmManager: Response from end session request: is-ok=%d do-last=%d cancel=%d reason=%s", is_ok, do_last, cancel, reason ? reason :"");
 
         if (cancel) {
                 cancel_end_session (manager);
@@ -1972,7 +1972,7 @@ _handle_client_end_session_response (GsmManager *manager,
 
         if (! is_ok && manager->priv->logout_mode != SCSM_MANAGER_LOGOUT_MODE_FORCE) {
                 guint         cookie;
-                GsmInhibitor *inhibitor;
+                ScsmInhibitor *inhibitor;
                 char         *app_id;
                 const char   *bus_name;
 
@@ -2004,7 +2004,7 @@ _handle_client_end_session_response (GsmManager *manager,
                 g_object_unref (inhibitor);
         } else {
                 scsm_store_foreach_remove (manager->priv->inhibitors,
-                                          (GsmStoreFunc)inhibitor_has_client_id,
+                                          (ScsmStoreFunc)inhibitor_has_client_id,
                                           (gpointer)scsm_client_peek_id (client));
         }
 
@@ -2039,12 +2039,12 @@ _handle_client_end_session_response (GsmManager *manager,
 }
 
 static void
-on_client_end_session_response (GsmClient  *client,
+on_client_end_session_response (ScsmClient  *client,
                                 gboolean    is_ok,
                                 gboolean    do_last,
                                 gboolean    cancel,
                                 const char *reason,
-                                GsmManager *manager)
+                                ScsmManager *manager)
 {
         _handle_client_end_session_response (manager,
                                              client,
@@ -2055,9 +2055,9 @@ on_client_end_session_response (GsmClient  *client,
 }
 
 static void
-on_xsmp_client_logout_request (GsmXSMPClient *client,
+on_xsmp_client_logout_request (ScsmXSMPClient *client,
                                gboolean       show_dialog,
-                               GsmManager    *manager)
+                               ScsmManager    *manager)
 {
         GError *error;
         int     logout_mode;
@@ -2077,15 +2077,15 @@ on_xsmp_client_logout_request (GsmXSMPClient *client,
 }
 
 static void
-on_store_client_added (GsmStore   *store,
+on_store_client_added (ScsmStore   *store,
                        const char *id,
-                       GsmManager *manager)
+                       ScsmManager *manager)
 {
-        GsmClient *client;
+        ScsmClient *client;
 
-        g_debug ("GsmManager: Client added: %s", id);
+        g_debug ("ScsmManager: Client added: %s", id);
 
-        client = (GsmClient *)scsm_store_lookup (store, id);
+        client = (ScsmClient *)scsm_store_lookup (store, id);
 
         /* a bit hacky */
         if (SCSM_IS_XSMP_CLIENT (client)) {
@@ -2113,18 +2113,18 @@ on_store_client_added (GsmStore   *store,
 }
 
 static void
-on_store_client_removed (GsmStore   *store,
+on_store_client_removed (ScsmStore   *store,
                          const char *id,
-                         GsmManager *manager)
+                         ScsmManager *manager)
 {
-        g_debug ("GsmManager: Client removed: %s", id);
+        g_debug ("ScsmManager: Client removed: %s", id);
 
         scsm_exported_manager_emit_client_removed (manager->priv->skeleton, id);
 }
 
 static void
-scsm_manager_set_client_store (GsmManager *manager,
-                              GsmStore   *store)
+scsm_manager_set_client_store (ScsmManager *manager,
+                              ScsmStore   *store)
 {
         g_return_if_fail (SCSM_IS_MANAGER (manager));
 
@@ -2144,7 +2144,7 @@ scsm_manager_set_client_store (GsmManager *manager,
         }
 
 
-        g_debug ("GsmManager: setting client store %p", store);
+        g_debug ("ScsmManager: setting client store %p", store);
 
         manager->priv->clients = store;
 
@@ -2171,7 +2171,7 @@ scsm_manager_set_property (GObject       *object,
                           const GValue  *value,
                           GParamSpec    *pspec)
 {
-        GsmManager *self;
+        ScsmManager *self;
 
         self = SCSM_MANAGER (object);
 
@@ -2200,7 +2200,7 @@ scsm_manager_get_property (GObject    *object,
                           GValue     *value,
                           GParamSpec *pspec)
 {
-        GsmManager *self;
+        ScsmManager *self;
 
         self = SCSM_MANAGER (object);
 
@@ -2225,7 +2225,7 @@ scsm_manager_get_property (GObject    *object,
 
 static gboolean
 _find_app_provides (const char *id,
-                    GsmApp     *app,
+                    ScsmApp     *app,
                     const char *service)
 {
         return scsm_app_provides (app, service);
@@ -2236,7 +2236,7 @@ scsm_manager_constructor (GType                  type,
                          guint                  n_construct_properties,
                          GObjectConstructParam *construct_properties)
 {
-        GsmManager *manager;
+        ScsmManager *manager;
 
         manager = SCSM_MANAGER (G_OBJECT_CLASS (scsm_manager_parent_class)->constructor (type,
                                                                                        n_construct_properties,
@@ -2245,8 +2245,8 @@ scsm_manager_constructor (GType                  type,
 }
 
 static void
-update_inhibited_actions (GsmManager *manager,
-                          GsmInhibitorFlag new_inhibited_actions)
+update_inhibited_actions (ScsmManager *manager,
+                          ScsmInhibitorFlag new_inhibited_actions)
 {
         if (manager->priv->inhibited_actions == new_inhibited_actions)
                 return;
@@ -2257,21 +2257,21 @@ update_inhibited_actions (GsmManager *manager,
 }
 
 static void
-on_inhibitor_vanished (GsmInhibitor *inhibitor,
-                       GsmManager   *manager)
+on_inhibitor_vanished (ScsmInhibitor *inhibitor,
+                       ScsmManager   *manager)
 {
         scsm_store_remove (manager->priv->inhibitors, scsm_inhibitor_peek_id (inhibitor));
 }
 
 static void
-on_store_inhibitor_added (GsmStore   *store,
+on_store_inhibitor_added (ScsmStore   *store,
                           const char *id,
-                          GsmManager *manager)
+                          ScsmManager *manager)
 {
-        GsmInhibitor *i;
-        GsmInhibitorFlag new_inhibited_actions;
+        ScsmInhibitor *i;
+        ScsmInhibitorFlag new_inhibited_actions;
 
-        g_debug ("GsmManager: Inhibitor added: %s", id);
+        g_debug ("ScsmManager: Inhibitor added: %s", id);
 
         i = SCSM_INHIBITOR (scsm_store_lookup (store, id));
         scsm_system_add_inhibitor (manager->priv->system, id,
@@ -2292,7 +2292,7 @@ collect_inhibition_flags (const char *id,
                           GObject    *object,
                           gpointer    user_data)
 {
-        GsmInhibitorFlag *new_inhibited_actions = user_data;
+        ScsmInhibitorFlag *new_inhibited_actions = user_data;
 
         *new_inhibited_actions |= scsm_inhibitor_peek_flags (SCSM_INHIBITOR (object));
 
@@ -2300,13 +2300,13 @@ collect_inhibition_flags (const char *id,
 }
 
 static void
-on_store_inhibitor_removed (GsmStore   *store,
+on_store_inhibitor_removed (ScsmStore   *store,
                             const char *id,
-                            GsmManager *manager)
+                            ScsmManager *manager)
 {
-        GsmInhibitorFlag new_inhibited_actions;
+        ScsmInhibitorFlag new_inhibited_actions;
 
-        g_debug ("GsmManager: Inhibitor removed: %s", id);
+        g_debug ("ScsmManager: Inhibitor removed: %s", id);
 
         scsm_system_remove_inhibitor (manager->priv->system, id);
 
@@ -2328,9 +2328,9 @@ on_store_inhibitor_removed (GsmStore   *store,
 static void
 scsm_manager_dispose (GObject *object)
 {
-        GsmManager *manager = SCSM_MANAGER (object);
+        ScsmManager *manager = SCSM_MANAGER (object);
 
-        g_debug ("GsmManager: disposing manager");
+        g_debug ("ScsmManager: disposing manager");
 
         g_clear_object (&manager->priv->end_session_cancellable);
         g_clear_object (&manager->priv->xsmp_server);
@@ -2382,7 +2382,7 @@ scsm_manager_dispose (GObject *object)
 }
 
 static void
-scsm_manager_class_init (GsmManagerClass *klass)
+scsm_manager_class_init (ScsmManagerClass *klass)
 {
         GObjectClass   *object_class = G_OBJECT_CLASS (klass);
 
@@ -2395,7 +2395,7 @@ scsm_manager_class_init (GsmManagerClass *klass)
                 g_signal_new ("phase-changed",
                               G_TYPE_FROM_CLASS (object_class),
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmManagerClass, phase_changed),
+                              G_STRUCT_OFFSET (ScsmManagerClass, phase_changed),
                               NULL, NULL, NULL,
                               G_TYPE_NONE,
                               1, G_TYPE_STRING);
@@ -2408,7 +2408,7 @@ scsm_manager_class_init (GsmManagerClass *klass)
                                                                FALSE,
                                                                G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
         /**
-         * GsmManager::session-name
+         * ScsmManager::session-name
          *
          * Then name of the currently active session, typically "scarecrow" or "scarecrow-fallback".
          * This may be the name of the configured default session, or the name of a fallback
@@ -2423,7 +2423,7 @@ scsm_manager_class_init (GsmManagerClass *klass)
                                                               G_PARAM_READABLE));
 
         /**
-         * GsmManager::fallback
+         * ScsmManager::fallback
          *
          * If %TRUE, the current session is running in the "fallback" mode;
          * this is distinct from whether or not it was configured as default.
@@ -2452,15 +2452,15 @@ scsm_manager_class_init (GsmManagerClass *klass)
                                                                FALSE,
                                                                G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
 
-        g_type_class_add_private (klass, sizeof (GsmManagerPrivate));
+        g_type_class_add_private (klass, sizeof (ScsmManagerPrivate));
 }
 
 static void
-on_presence_status_changed (GsmPresence  *presence,
+on_presence_status_changed (ScsmPresence  *presence,
                             guint         status,
-                            GsmManager   *manager)
+                            ScsmManager   *manager)
 {
-        GsmSystem *system;
+        ScsmSystem *system;
 
         system = scsm_get_system ();
         scsm_system_set_session_idle (system,
@@ -2469,9 +2469,9 @@ on_presence_status_changed (GsmPresence  *presence,
 }
 
 static void
-on_scsm_system_active_changed (GsmSystem  *system,
+on_scsm_system_active_changed (ScsmSystem  *system,
                               GParamSpec *pspec,
-                              GsmManager *self)
+                              ScsmManager *self)
 {
         gboolean is_active;
 
@@ -2482,14 +2482,14 @@ on_scsm_system_active_changed (GsmSystem  *system,
 }
 
 static gboolean
-_log_out_is_locked_down (GsmManager *manager)
+_log_out_is_locked_down (ScsmManager *manager)
 {
         return g_settings_get_boolean (manager->priv->lockdown_settings,
                                        KEY_DISABLE_LOG_OUT);
 }
 
 static void
-complete_end_session_task (GsmManager            *manager,
+complete_end_session_task (ScsmManager            *manager,
                            GAsyncResult          *result,
                            GDBusMethodInvocation *invocation)
 {
@@ -2502,9 +2502,9 @@ complete_end_session_task (GsmManager            *manager,
 }
 
 static void
-request_reboot (GsmManager *manager)
+request_reboot (ScsmManager *manager)
 {
-        g_debug ("GsmManager: requesting reboot");
+        g_debug ("ScsmManager: requesting reboot");
 
         /* FIXME: We need to support a more structured shutdown here,
          * but that's blocking on an improved ConsoleKit api.
@@ -2516,9 +2516,9 @@ request_reboot (GsmManager *manager)
 }
 
 static void
-request_shutdown (GsmManager *manager)
+request_shutdown (ScsmManager *manager)
 {
-        g_debug ("GsmManager: requesting shutdown");
+        g_debug ("ScsmManager: requesting shutdown");
 
         /* See the comment in request_reboot() for some more details about
          * what work needs to be done here. */
@@ -2527,10 +2527,10 @@ request_shutdown (GsmManager *manager)
 }
 
 static void
-request_logout (GsmManager           *manager,
-                GsmManagerLogoutMode  mode)
+request_logout (ScsmManager           *manager,
+                ScsmManagerLogoutMode  mode)
 {
-        g_debug ("GsmManager: requesting logout");
+        g_debug ("ScsmManager: requesting logout");
 
         manager->priv->logout_mode = mode;
         manager->priv->logout_type = SCSM_MANAGER_LOGOUT_LOGOUT;
@@ -2539,13 +2539,13 @@ request_logout (GsmManager           *manager,
 }
 
 static gboolean
-scsm_manager_shutdown (GsmExportedManager    *skeleton,
+scsm_manager_shutdown (ScsmExportedManager    *skeleton,
                       GDBusMethodInvocation *invocation,
-                      GsmManager            *manager)
+                      ScsmManager            *manager)
 {
         GTask *task;
 
-        g_debug ("GsmManager: Shutdown called");
+        g_debug ("ScsmManager: Shutdown called");
 
         if (manager->priv->phase < SCSM_MANAGER_PHASE_RUNNING) {
                 g_dbus_method_invocation_return_error (invocation,
@@ -2574,13 +2574,13 @@ scsm_manager_shutdown (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_reboot (GsmExportedManager    *skeleton,
+scsm_manager_reboot (ScsmExportedManager    *skeleton,
                     GDBusMethodInvocation *invocation,
-                    GsmManager            *manager)
+                    ScsmManager            *manager)
 {
         GTask *task;
 
-        g_debug ("GsmManager: Reboot called");
+        g_debug ("ScsmManager: Reboot called");
 
         if (manager->priv->phase < SCSM_MANAGER_PHASE_RUNNING) {
                 g_dbus_method_invocation_return_error (invocation,
@@ -2609,13 +2609,13 @@ scsm_manager_reboot (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_can_shutdown (GsmExportedManager    *skeleton,
+scsm_manager_can_shutdown (ScsmExportedManager    *skeleton,
                           GDBusMethodInvocation *invocation,
-                          GsmManager            *manager)
+                          ScsmManager            *manager)
 {
         gboolean shutdown_available;
 
-        g_debug ("GsmManager: CanShutdown called");
+        g_debug ("ScsmManager: CanShutdown called");
 
         shutdown_available = !_log_out_is_locked_down (manager) &&
                 (scsm_system_can_stop (manager->priv->system)
@@ -2629,13 +2629,13 @@ scsm_manager_can_shutdown (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_can_reboot_to_firmware_setup (GsmExportedManager    *skeleton,
+scsm_manager_can_reboot_to_firmware_setup (ScsmExportedManager    *skeleton,
                                           GDBusMethodInvocation *invocation,
-                                          GsmManager            *manager)
+                                          ScsmManager            *manager)
 {
         gboolean reboot_to_firmware_available;
 
-        g_debug ("GsmManager: CanRebootToFirmwareSetup called");
+        g_debug ("ScsmManager: CanRebootToFirmwareSetup called");
 
         reboot_to_firmware_available = !_log_out_is_locked_down (manager) &&
                 scsm_system_can_restart_to_firmware_setup (manager->priv->system);
@@ -2646,12 +2646,12 @@ scsm_manager_can_reboot_to_firmware_setup (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_set_reboot_to_firmware_setup (GsmExportedManager    *skeleton,
+scsm_manager_set_reboot_to_firmware_setup (ScsmExportedManager    *skeleton,
                                           GDBusMethodInvocation *invocation,
                                           gboolean               enable,
-                                          GsmManager            *manager)
+                                          ScsmManager            *manager)
 {
-        g_debug ("GsmManager: SetRebootToFirmwareSetup called");
+        g_debug ("ScsmManager: SetRebootToFirmwareSetup called");
 
         scsm_system_set_restart_to_firmware_setup (manager->priv->system, enable);
 
@@ -2661,11 +2661,11 @@ scsm_manager_set_reboot_to_firmware_setup (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_setenv (GsmExportedManager    *skeleton,
+scsm_manager_setenv (ScsmExportedManager    *skeleton,
                     GDBusMethodInvocation *invocation,
                     const char            *variable,
                     const char            *value,
-                    GsmManager            *manager)
+                    ScsmManager            *manager)
 {
         if (manager->priv->phase > SCSM_MANAGER_PHASE_INITIALIZATION) {
                 g_dbus_method_invocation_return_error (invocation,
@@ -2681,9 +2681,9 @@ scsm_manager_setenv (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_initialized (GsmExportedManager    *skeleton,
+scsm_manager_initialized (ScsmExportedManager    *skeleton,
                          GDBusMethodInvocation *invocation,
-                         GsmManager            *manager)
+                         ScsmManager            *manager)
 {
         /* Signaled by helper when scarecrow-session-initialized.target is reached. */
         if (!manager->priv->systemd_managed) {
@@ -2756,10 +2756,10 @@ is_valid_category (int category)
 }
 
 static gboolean
-scsm_manager_get_locale (GsmExportedManager    *skeleton,
+scsm_manager_get_locale (ScsmExportedManager    *skeleton,
                         GDBusMethodInvocation *invocation,
                         int                    category,
-                        GsmManager            *manager)
+                        ScsmManager            *manager)
 {
         if (!is_valid_category (category)) {
                 g_dbus_method_invocation_return_error (invocation,
@@ -2779,11 +2779,11 @@ scsm_manager_get_locale (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_initialization_error (GsmExportedManager    *skeleton,
+scsm_manager_initialization_error (ScsmExportedManager    *skeleton,
                                   GDBusMethodInvocation *invocation,
                                   const char            *message,
                                   gboolean               fatal,
-                                  GsmManager            *manager)
+                                  ScsmManager            *manager)
 {
         if (manager->priv->phase != SCSM_MANAGER_PHASE_INITIALIZATION) {
                 g_dbus_method_invocation_return_error (invocation,
@@ -2800,8 +2800,8 @@ scsm_manager_initialization_error (GsmExportedManager    *skeleton,
 }
 
 static void
-user_logout (GsmManager           *manager,
-             GsmManagerLogoutMode  mode)
+user_logout (ScsmManager           *manager,
+             ScsmManagerLogoutMode  mode)
 {
         if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 manager->priv->logout_mode = mode;
@@ -2813,7 +2813,7 @@ user_logout (GsmManager           *manager,
 }
 
 gboolean
-scsm_manager_logout (GsmManager *manager,
+scsm_manager_logout (ScsmManager *manager,
                     guint logout_mode,
                     GError **error)
 {
@@ -2854,14 +2854,14 @@ scsm_manager_logout (GsmManager *manager,
 }
 
 static gboolean
-scsm_manager_logout_dbus (GsmExportedManager    *skeleton,
+scsm_manager_logout_dbus (ScsmExportedManager    *skeleton,
                          GDBusMethodInvocation *invocation,
                          guint                  logout_mode,
-                         GsmManager            *manager)
+                         ScsmManager            *manager)
 {
         GError *error = NULL;
 
-        g_debug ("GsmManager: Logout called");
+        g_debug ("ScsmManager: Logout called");
 
         if (!scsm_manager_logout (manager, logout_mode, &error)) {
                 g_dbus_method_invocation_take_error (invocation, error);
@@ -2873,21 +2873,21 @@ scsm_manager_logout_dbus (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_register_client (GsmExportedManager    *skeleton,
+scsm_manager_register_client (ScsmExportedManager    *skeleton,
                              GDBusMethodInvocation *invocation,
                              const char            *app_id,
                              const char            *startup_id,
-                             GsmManager            *manager)
+                             ScsmManager            *manager)
 {
         char       *new_startup_id;
         const char *sender;
-        GsmClient  *client;
-        GsmApp     *app;
+        ScsmClient  *client;
+        ScsmApp     *app;
 
         app = NULL;
         client = NULL;
 
-        g_debug ("GsmManager: RegisterClient %s", startup_id);
+        g_debug ("ScsmManager: RegisterClient %s", startup_id);
 
         if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 g_debug ("Unable to register client: shutting down");
@@ -2903,8 +2903,8 @@ scsm_manager_register_client (GsmExportedManager    *skeleton,
                 new_startup_id = scsm_util_generate_startup_id ();
         } else {
 
-                client = (GsmClient *)scsm_store_find (manager->priv->clients,
-                                                      (GsmStoreFunc)_client_has_startup_id,
+                client = (ScsmClient *)scsm_store_find (manager->priv->clients,
+                                                      (ScsmStoreFunc)_client_has_startup_id,
                                                       (char *)startup_id);
                 /* We can't have two clients with the same startup id. */
                 if (client != NULL) {
@@ -2920,7 +2920,7 @@ scsm_manager_register_client (GsmExportedManager    *skeleton,
                 new_startup_id = g_strdup (startup_id);
         }
 
-        g_debug ("GsmManager: Adding new client %s to session", new_startup_id);
+        g_debug ("ScsmManager: Adding new client %s to session", new_startup_id);
 
         if (app == NULL && !IS_STRING_EMPTY (startup_id)) {
                 app = find_app_for_startup_id (manager, startup_id);
@@ -2971,16 +2971,16 @@ scsm_manager_register_client (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_unregister_client (GsmExportedManager    *skeleton,
+scsm_manager_unregister_client (ScsmExportedManager    *skeleton,
                                GDBusMethodInvocation *invocation,
                                const char            *client_id,
-                               GsmManager            *manager)
+                               ScsmManager            *manager)
 {
-        GsmClient *client;
+        ScsmClient *client;
 
-        g_debug ("GsmManager: UnregisterClient %s", client_id);
+        g_debug ("ScsmManager: UnregisterClient %s", client_id);
 
-        client = (GsmClient *)scsm_store_lookup (manager->priv->clients, client_id);
+        client = (ScsmClient *)scsm_store_lookup (manager->priv->clients, client_id);
         if (client == NULL) {
                 g_debug ("Unable to unregister client: not registered");
 
@@ -3001,18 +3001,18 @@ scsm_manager_unregister_client (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_inhibit (GsmExportedManager    *skeleton,
+scsm_manager_inhibit (ScsmExportedManager    *skeleton,
                      GDBusMethodInvocation *invocation,
                      const char            *app_id,
                      guint                  toplevel_xid,
                      const char            *reason,
                      guint                  flags,
-                     GsmManager            *manager)
+                     ScsmManager            *manager)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
         guint         cookie;
 
-        g_debug ("GsmManager: Inhibit xid=%u app_id=%s reason=%s flags=%u",
+        g_debug ("ScsmManager: Inhibit xid=%u app_id=%s reason=%s flags=%u",
                  toplevel_xid,
                  app_id,
                  reason,
@@ -3024,7 +3024,7 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
                 new_error = g_error_new (SCSM_MANAGER_ERROR,
                                          SCSM_MANAGER_ERROR_GENERAL,
                                          "Forced logout cannot be inhibited");
-                g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
+                g_debug ("ScsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
                 return TRUE;
         }
@@ -3035,7 +3035,7 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
                 new_error = g_error_new (SCSM_MANAGER_ERROR,
                                          SCSM_MANAGER_ERROR_GENERAL,
                                          "Application ID not specified");
-                g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
+                g_debug ("ScsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
                 return TRUE;
         }
@@ -3046,7 +3046,7 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
                 new_error = g_error_new (SCSM_MANAGER_ERROR,
                                          SCSM_MANAGER_ERROR_GENERAL,
                                          "Reason not specified");
-                g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
+                g_debug ("ScsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
                 return FALSE;
         }
@@ -3057,7 +3057,7 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
                 new_error = g_error_new (SCSM_MANAGER_ERROR,
                                          SCSM_MANAGER_ERROR_GENERAL,
                                          "Invalid inhibit flags");
-                g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
+                g_debug ("ScsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
                 return FALSE;
         }
@@ -3078,17 +3078,17 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_uninhibit (GsmExportedManager    *skeleton,
+scsm_manager_uninhibit (ScsmExportedManager    *skeleton,
                        GDBusMethodInvocation *invocation,
                        guint                  cookie,
-                       GsmManager            *manager)
+                       ScsmManager            *manager)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
 
-        g_debug ("GsmManager: Uninhibit %u", cookie);
+        g_debug ("ScsmManager: Uninhibit %u", cookie);
 
-        inhibitor = (GsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
-                                                    (GsmStoreFunc)_find_by_cookie,
+        inhibitor = (ScsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
+                                                    (ScsmStoreFunc)_find_by_cookie,
                                                     &cookie);
         if (inhibitor == NULL) {
                 GError *new_error;
@@ -3101,7 +3101,7 @@ scsm_manager_uninhibit (GsmExportedManager    *skeleton,
                 return TRUE;
         }
 
-        g_debug ("GsmManager: removing inhibitor %s %u reason '%s' %u connection %s",
+        g_debug ("ScsmManager: removing inhibitor %s %u reason '%s' %u connection %s",
                  scsm_inhibitor_peek_app_id (inhibitor),
                  scsm_inhibitor_peek_toplevel_xid (inhibitor),
                  scsm_inhibitor_peek_reason (inhibitor),
@@ -3116,20 +3116,20 @@ scsm_manager_uninhibit (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_is_inhibited (GsmExportedManager    *skeleton,
+scsm_manager_is_inhibited (ScsmExportedManager    *skeleton,
                           GDBusMethodInvocation *invocation,
                           guint                  flags,
-                          GsmManager            *manager)
+                          ScsmManager            *manager)
 {
-        GsmInhibitor *inhibitor;
+        ScsmInhibitor *inhibitor;
         gboolean is_inhibited;
 
         if (manager->priv->inhibitors == NULL
             || scsm_store_size (manager->priv->inhibitors) == 0) {
                 is_inhibited = FALSE;
         } else {
-                inhibitor = (GsmInhibitor *) scsm_store_find (manager->priv->inhibitors,
-                                                             (GsmStoreFunc)inhibitor_has_flag,
+                inhibitor = (ScsmInhibitor *) scsm_store_find (manager->priv->inhibitors,
+                                                             (ScsmStoreFunc)inhibitor_has_flag,
                                                              GUINT_TO_POINTER (flags));
                 if (inhibitor == NULL) {
                         is_inhibited = FALSE;
@@ -3153,15 +3153,15 @@ listify_store_ids (char       *id,
 }
 
 static gboolean
-scsm_manager_get_clients (GsmExportedManager    *skeleton,
+scsm_manager_get_clients (ScsmExportedManager    *skeleton,
                          GDBusMethodInvocation *invocation,
-                         GsmManager            *manager)
+                         ScsmManager            *manager)
 {
         GPtrArray *clients;
 
         clients = g_ptr_array_new_with_free_func (g_free);
         scsm_store_foreach (manager->priv->clients,
-                           (GsmStoreFunc) listify_store_ids,
+                           (ScsmStoreFunc) listify_store_ids,
                            &clients);
         g_ptr_array_add (clients, NULL);
 
@@ -3173,15 +3173,15 @@ scsm_manager_get_clients (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_get_inhibitors (GsmExportedManager    *skeleton,
+scsm_manager_get_inhibitors (ScsmExportedManager    *skeleton,
                             GDBusMethodInvocation *invocation,
-                            GsmManager            *manager)
+                            ScsmManager            *manager)
 {
         GPtrArray *inhibitors;
 
         inhibitors = g_ptr_array_new_with_free_func (g_free);
         scsm_store_foreach (manager->priv->inhibitors,
-                           (GsmStoreFunc) listify_store_ids,
+                           (ScsmStoreFunc) listify_store_ids,
                            &inhibitors);
         g_ptr_array_add (inhibitors, NULL);
 
@@ -3194,7 +3194,7 @@ scsm_manager_get_inhibitors (GsmExportedManager    *skeleton,
 
 static gboolean
 _app_has_autostart_condition (const char *id,
-                              GsmApp     *app,
+                              ScsmApp     *app,
                               const char *condition)
 {
         gboolean has;
@@ -3207,16 +3207,16 @@ _app_has_autostart_condition (const char *id,
 }
 
 static gboolean
-scsm_manager_is_autostart_condition_handled (GsmExportedManager    *skeleton,
+scsm_manager_is_autostart_condition_handled (ScsmExportedManager    *skeleton,
                                             GDBusMethodInvocation *invocation,
                                             const char            *condition,
-                                            GsmManager            *manager)
+                                            ScsmManager            *manager)
 {
-        GsmApp *app;
+        ScsmApp *app;
         gboolean handled;
 
-        app = (GsmApp *) scsm_store_find (manager->priv->apps,(
-                                         GsmStoreFunc) _app_has_autostart_condition,
+        app = (ScsmApp *) scsm_store_find (manager->priv->apps,(
+                                         ScsmStoreFunc) _app_has_autostart_condition,
                                          (char *)condition);
 
         if (app != NULL) {
@@ -3231,9 +3231,9 @@ scsm_manager_is_autostart_condition_handled (GsmExportedManager    *skeleton,
 }
 
 static gboolean
-scsm_manager_is_session_running (GsmExportedManager    *skeleton,
+scsm_manager_is_session_running (ScsmExportedManager    *skeleton,
                                 GDBusMethodInvocation *invocation,
-                                GsmManager            *manager)
+                                ScsmManager            *manager)
 {
         scsm_exported_manager_complete_is_session_running (skeleton, invocation,
                                                           manager->priv->phase == SCSM_MANAGER_PHASE_RUNNING);
@@ -3246,20 +3246,20 @@ on_session_connection_closed (GDBusConnection *connection,
                               GError *error,
                               gpointer user_data)
 {
-        GsmManager *manager;
+        ScsmManager *manager;
 
         manager = SCSM_MANAGER (user_data);
 
-        g_debug ("GsmManager: dbus disconnected; disconnecting dbus clients...");
+        g_debug ("ScsmManager: dbus disconnected; disconnecting dbus clients...");
         manager->priv->dbus_disconnected = TRUE;
         remove_clients_for_connection (manager, NULL);
 }
 
 static gboolean
-register_manager (GsmManager *manager)
+register_manager (ScsmManager *manager)
 {
         GDBusConnection *connection;
-        GsmExportedManager *skeleton;
+        ScsmExportedManager *skeleton;
         GError *error = NULL;
 
         connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
@@ -3352,7 +3352,7 @@ idle_timeout_get_mapping (GValue *value,
 }
 
 static void
-scsm_manager_init (GsmManager *manager)
+scsm_manager_init (ScsmManager *manager)
 {
 
         manager->priv = SCSM_MANAGER_GET_PRIVATE (manager);
@@ -3394,14 +3394,14 @@ scsm_manager_init (GsmManager *manager)
         manager->priv->end_session_cancellable = g_cancellable_new ();
 }
 
-GsmManager *
+ScsmManager *
 scsm_manager_get (void)
 {
         return manager_object;
 }
 
-GsmManager *
-scsm_manager_new (GsmStore *client_store,
+ScsmManager *
+scsm_manager_new (ScsmStore *client_store,
                  gboolean  failsafe,
                  gboolean  systemd_managed)
 {
@@ -3429,7 +3429,7 @@ scsm_manager_new (GsmStore *client_store,
 }
 
 static void
-disconnect_shell_dialog_signals (GsmManager *manager)
+disconnect_shell_dialog_signals (ScsmManager *manager)
 {
         if (manager->priv->shell_end_session_dialog_canceled_id != 0) {
                 g_signal_handler_disconnect (manager->priv->shell,
@@ -3463,16 +3463,16 @@ disconnect_shell_dialog_signals (GsmManager *manager)
 }
 
 static void
-on_shell_end_session_dialog_canceled (GsmShell   *shell,
-                                      GsmManager *manager)
+on_shell_end_session_dialog_canceled (ScsmShell   *shell,
+                                      ScsmManager *manager)
 {
         cancel_end_session (manager);
         disconnect_shell_dialog_signals (manager);
 }
 
 static void
-_handle_end_session_dialog_response (GsmManager           *manager,
-                                     GsmManagerLogoutType  logout_type)
+_handle_end_session_dialog_response (ScsmManager           *manager,
+                                     ScsmManagerLogoutType  logout_type)
 {
         /* Note we're checking for END_SESSION here and
          * QUERY_END_SESSION in the fallback cases elsewhere.
@@ -3494,31 +3494,31 @@ _handle_end_session_dialog_response (GsmManager           *manager,
 }
 
 static void
-on_shell_end_session_dialog_confirmed_logout (GsmShell   *shell,
-                                              GsmManager *manager)
+on_shell_end_session_dialog_confirmed_logout (ScsmShell   *shell,
+                                              ScsmManager *manager)
 {
         _handle_end_session_dialog_response (manager, SCSM_MANAGER_LOGOUT_LOGOUT);
         disconnect_shell_dialog_signals (manager);
 }
 
 static void
-on_shell_end_session_dialog_confirmed_shutdown (GsmShell   *shell,
-                                                GsmManager *manager)
+on_shell_end_session_dialog_confirmed_shutdown (ScsmShell   *shell,
+                                                ScsmManager *manager)
 {
         _handle_end_session_dialog_response (manager, SCSM_MANAGER_LOGOUT_SHUTDOWN);
         disconnect_shell_dialog_signals (manager);
 }
 
 static void
-on_shell_end_session_dialog_confirmed_reboot (GsmShell   *shell,
-                                              GsmManager *manager)
+on_shell_end_session_dialog_confirmed_reboot (ScsmShell   *shell,
+                                              ScsmManager *manager)
 {
         _handle_end_session_dialog_response (manager, SCSM_MANAGER_LOGOUT_REBOOT);
         disconnect_shell_dialog_signals (manager);
 }
 
 static void
-connect_shell_dialog_signals (GsmManager *manager)
+connect_shell_dialog_signals (ScsmManager *manager)
 {
         if (manager->priv->shell_end_session_dialog_canceled_id != 0)
                 return;
@@ -3555,8 +3555,8 @@ connect_shell_dialog_signals (GsmManager *manager)
 }
 
 static void
-show_shell_end_session_dialog (GsmManager                   *manager,
-                               GsmShellEndSessionDialogType  type)
+show_shell_end_session_dialog (ScsmManager                   *manager,
+                               ScsmShellEndSessionDialogType  type)
 {
         if (!scsm_shell_is_running (manager->priv->shell))
                 return;
@@ -3575,8 +3575,8 @@ show_shell_end_session_dialog (GsmManager                   *manager,
 */
 
 gboolean
-scsm_manager_set_phase (GsmManager      *manager,
-                       GsmManagerPhase  phase)
+scsm_manager_set_phase (ScsmManager      *manager,
+                       ScsmManagerPhase  phase)
 {
         g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
         manager->priv->phase = phase;
@@ -3584,43 +3584,43 @@ scsm_manager_set_phase (GsmManager      *manager,
 }
 
 static void
-append_app (GsmManager *manager,
-            GsmApp     *app,
+append_app (ScsmManager *manager,
+            ScsmApp     *app,
             const char *provides,
             gboolean    is_required)
 {
         const char *id;
         const char *app_id;
-        GsmApp     *dup;
+        ScsmApp     *dup;
 
         id = scsm_app_peek_id (app);
         if (IS_STRING_EMPTY (id)) {
-                g_debug ("GsmManager: not adding app: no id");
+                g_debug ("ScsmManager: not adding app: no id");
                 return;
         }
 
-        dup = (GsmApp *)scsm_store_lookup (manager->priv->apps, id);
+        dup = (ScsmApp *)scsm_store_lookup (manager->priv->apps, id);
         if (dup != NULL) {
-                g_debug ("GsmManager: not adding app: already added");
+                g_debug ("ScsmManager: not adding app: already added");
                 return;
         }
 
         app_id = scsm_app_peek_app_id (app);
         if (IS_STRING_EMPTY (app_id)) {
-                g_debug ("GsmManager: not adding app: no app-id");
+                g_debug ("ScsmManager: not adding app: no app-id");
                 return;
         }
 
         dup = find_app_for_app_id (manager, app_id);
         if (dup != NULL) {
-                g_debug ("GsmManager: not adding app: app-id '%s' already exists", app_id);
+                g_debug ("ScsmManager: not adding app: app-id '%s' already exists", app_id);
 
                 if (provides && SCSM_IS_AUTOSTART_APP (dup))
                         scsm_autostart_app_add_provides (SCSM_AUTOSTART_APP (dup), provides);
 
                 if (is_required &&
                     !g_slist_find (manager->priv->required_apps, dup)) {
-                        g_debug ("GsmManager: making app '%s' required", scsm_app_peek_app_id (dup));
+                        g_debug ("ScsmManager: making app '%s' required", scsm_app_peek_app_id (dup));
                         manager->priv->required_apps = g_slist_prepend (manager->priv->required_apps, dup);
                 }
 
@@ -3629,18 +3629,18 @@ append_app (GsmManager *manager,
 
         scsm_store_add (manager->priv->apps, id, G_OBJECT (app));
         if (is_required) {
-                g_debug ("GsmManager: adding required app %s", scsm_app_peek_app_id (app));
+                g_debug ("ScsmManager: adding required app %s", scsm_app_peek_app_id (app));
                 manager->priv->required_apps = g_slist_prepend (manager->priv->required_apps, app);
         }
 }
 
 static gboolean
-add_autostart_app_internal (GsmManager *manager,
+add_autostart_app_internal (ScsmManager *manager,
                             const char *path,
                             const char *provides,
                             gboolean    is_required)
 {
-        GsmApp  *app;
+        ScsmApp  *app;
         char   **internal_provides;
         GError *error = NULL;
 
@@ -3655,17 +3655,17 @@ add_autostart_app_internal (GsmManager *manager,
 
         /* first check to see if service is already provided */
         if (provides != NULL) {
-                GsmApp *dup;
+                ScsmApp *dup;
 
-                dup = (GsmApp *)scsm_store_find (manager->priv->apps,
-                                                (GsmStoreFunc)_find_app_provides,
+                dup = (ScsmApp *)scsm_store_find (manager->priv->apps,
+                                                (ScsmStoreFunc)_find_app_provides,
                                                 (char *)provides);
                 if (dup != NULL) {
-                        g_debug ("GsmManager: service '%s' is already provided", provides);
+                        g_debug ("ScsmManager: service '%s' is already provided", provides);
 
                         if (is_required &&
                             !g_slist_find (manager->priv->required_apps, dup)) {
-                                g_debug ("GsmManager: making app '%s' required", scsm_app_peek_app_id (dup));
+                                g_debug ("ScsmManager: making app '%s' required", scsm_app_peek_app_id (dup));
                                 manager->priv->required_apps = g_slist_prepend (manager->priv->required_apps, dup);
                         }
 
@@ -3686,17 +3686,17 @@ add_autostart_app_internal (GsmManager *manager,
                 gboolean provided = FALSE;
 
                 for (i = 0; internal_provides[i] != NULL; i++) {
-                        GsmApp *dup;
+                        ScsmApp *dup;
 
-                        dup = (GsmApp *)scsm_store_find (manager->priv->apps,
-                                                        (GsmStoreFunc)_find_app_provides,
+                        dup = (ScsmApp *)scsm_store_find (manager->priv->apps,
+                                                        (ScsmStoreFunc)_find_app_provides,
                                                         (char *)internal_provides[i]);
                         if (dup != NULL) {
-                                g_debug ("GsmManager: service '%s' is already provided", internal_provides[i]);
+                                g_debug ("ScsmManager: service '%s' is already provided", internal_provides[i]);
 
                                 if (is_required &&
                                     !g_slist_find (manager->priv->required_apps, dup)) {
-                                        g_debug ("GsmManager: making app '%s' required", scsm_app_peek_app_id (dup));
+                                        g_debug ("ScsmManager: making app '%s' required", scsm_app_peek_app_id (dup));
                                         manager->priv->required_apps = g_slist_prepend (manager->priv->required_apps, dup);
                                 }
 
@@ -3716,7 +3716,7 @@ add_autostart_app_internal (GsmManager *manager,
         if (provides)
                 scsm_autostart_app_add_provides (SCSM_AUTOSTART_APP (app), provides);
 
-        g_debug ("GsmManager: read %s", path);
+        g_debug ("ScsmManager: read %s", path);
         append_app (manager, app, provides, is_required);
         g_object_unref (app);
 
@@ -3724,7 +3724,7 @@ add_autostart_app_internal (GsmManager *manager,
 }
 
 gboolean
-scsm_manager_add_autostart_app (GsmManager *manager,
+scsm_manager_add_autostart_app (ScsmManager *manager,
                                const char *path,
                                const char *provides)
 {
@@ -3736,7 +3736,7 @@ scsm_manager_add_autostart_app (GsmManager *manager,
 
 /**
  * scsm_manager_add_required_app:
- * @manager: a #GsmManager
+ * @manager: a #ScsmManager
  * @path: Path to desktop file
  * @provides: What the component provides, as a space separated list
  *
@@ -3746,7 +3746,7 @@ scsm_manager_add_autostart_app (GsmManager *manager,
  *
  */
 gboolean
-scsm_manager_add_required_app (GsmManager *manager,
+scsm_manager_add_required_app (ScsmManager *manager,
                               const char *path,
                               const char *provides)
 {
@@ -3758,7 +3758,7 @@ scsm_manager_add_required_app (GsmManager *manager,
 
 
 gboolean
-scsm_manager_add_autostart_apps_from_dir (GsmManager *manager,
+scsm_manager_add_autostart_apps_from_dir (ScsmManager *manager,
                                          const char *path)
 {
         GDir       *dir;
@@ -3767,7 +3767,7 @@ scsm_manager_add_autostart_apps_from_dir (GsmManager *manager,
         g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
         g_return_val_if_fail (path != NULL, FALSE);
 
-        g_debug ("GsmManager: *** Adding autostart apps for %s", path);
+        g_debug ("ScsmManager: *** Adding autostart apps for %s", path);
 
         dir = g_dir_open (path, 0, NULL);
         if (dir == NULL) {
@@ -3792,11 +3792,11 @@ scsm_manager_add_autostart_apps_from_dir (GsmManager *manager,
 }
 
 static void
-on_shutdown_prepared (GsmSystem  *system,
+on_shutdown_prepared (ScsmSystem  *system,
                       gboolean    success,
-                      GsmManager *manager)
+                      ScsmManager *manager)
 {
-        g_debug ("GsmManager: on_shutdown_prepared, success: %d", success);
+        g_debug ("ScsmManager: on_shutdown_prepared, success: %d", success);
         g_signal_handlers_disconnect_by_func (system, on_shutdown_prepared, manager);
 
         if (success) {
@@ -3813,7 +3813,7 @@ on_shutdown_prepared (GsmSystem  *system,
 }
 
 static gboolean
-do_query_end_session_exit (GsmManager *manager)
+do_query_end_session_exit (ScsmManager *manager)
 {
         gboolean reboot = FALSE;
         gboolean shutdown = FALSE;

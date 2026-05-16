@@ -31,9 +31,9 @@
 
 #include "scarecrow-session/scsm-inhibitor-flag.h"
 
-static GsmInhibitorFlag parse_flags (const gchar *arg)
+static ScsmInhibitorFlag parse_flags (const gchar *arg)
 {
-  GsmInhibitorFlag flags;
+  ScsmInhibitorFlag flags;
   gchar **args;
   gint i;
 
@@ -63,7 +63,7 @@ static GsmInhibitorFlag parse_flags (const gchar *arg)
 
 static gboolean inhibit (const gchar       *app_id,
                          const gchar       *reason,
-                         GsmInhibitorFlag flags)
+                         ScsmInhibitorFlag flags)
 {
   GDBusConnection *bus;
   GVariant *ret;
@@ -314,7 +314,7 @@ wait_forever (void)
 int main (int argc, char *argv[])
 {
   gchar *prgname;
-  GsmInhibitorFlag inhibit_flags = 0;
+  ScsmInhibitorFlag inhibit_flags = 0;
   gboolean show_help = FALSE;
   gboolean show_version = FALSE;
   gboolean show_list = FALSE;

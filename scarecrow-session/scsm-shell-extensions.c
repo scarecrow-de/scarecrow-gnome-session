@@ -30,28 +30,28 @@
 #define SHELL_SCHEMA "io.github.scarecrow_de.shell"
 #define DISABLE_EXTENSIONS_KEY "disable-user-extensions"
 
-#define SHELL_EXTENSIONS_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsPrivate))
+#define SHELL_EXTENSIONS_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_SHELL_EXTENSIONS, ScsmShellExtensionsPrivate))
 
-struct _GsmShellExtensionsPrivate
+struct _ScsmShellExtensionsPrivate
 {
   GSettings *settings;
   guint num_extensions;
 };
 
-G_DEFINE_TYPE (GsmShellExtensions, scsm_shell_extensions, G_TYPE_OBJECT);
+G_DEFINE_TYPE (ScsmShellExtensions, scsm_shell_extensions, G_TYPE_OBJECT);
 
 /**
  * scsm_shell_extensions_finalize:
- * @object: (in): A #GsmShellExtensions.
+ * @object: (in): A #ScsmShellExtensions.
  *
- * Finalizer for a #GsmShellExtensions instance.  Frees any resources held by
+ * Finalizer for a #ScsmShellExtensions instance.  Frees any resources held by
  * the instance.
  */
 static void
 scsm_shell_extensions_finalize (GObject *object)
 {
-  GsmShellExtensions *extensions = SCSM_SHELL_EXTENSIONS (object);
-  GsmShellExtensionsPrivate *priv = extensions->priv;
+  ScsmShellExtensions *extensions = SCSM_SHELL_EXTENSIONS (object);
+  ScsmShellExtensionsPrivate *priv = extensions->priv;
 
   g_clear_object (&priv->settings);
 
@@ -60,22 +60,22 @@ scsm_shell_extensions_finalize (GObject *object)
 
 /**
  * scsm_shell_extensions_class_init:
- * @klass: (in): A #GsmShellExtensionsClass.
+ * @klass: (in): A #ScsmShellExtensionsClass.
  *
- * Initializes the #GsmShellExtensionsClass and prepares the vtable.
+ * Initializes the #ScsmShellExtensionsClass and prepares the vtable.
  */
 static void
-scsm_shell_extensions_class_init (GsmShellExtensionsClass *klass)
+scsm_shell_extensions_class_init (ScsmShellExtensionsClass *klass)
 {
   GObjectClass *object_class;
 
   object_class = G_OBJECT_CLASS (klass);
   object_class->finalize = scsm_shell_extensions_finalize;
-  g_type_class_add_private (object_class, sizeof (GsmShellExtensionsPrivate));
+  g_type_class_add_private (object_class, sizeof (ScsmShellExtensionsPrivate));
 }
 
 static void
-scsm_shell_extensions_scan_dir (GsmShellExtensions *self,
+scsm_shell_extensions_scan_dir (ScsmShellExtensions *self,
                                GFile              *dir)
 {
   GFileEnumerator *enumerator;
@@ -127,7 +127,7 @@ scsm_shell_extensions_scan_dir (GsmShellExtensions *self,
 }
 
 static void
-scsm_shell_extensions_scan (GsmShellExtensions *self)
+scsm_shell_extensions_scan (ScsmShellExtensions *self)
 {
   gchar *dirname;
   GFile *dir;
@@ -156,12 +156,12 @@ scsm_shell_extensions_scan (GsmShellExtensions *self)
 
 /**
  * scsm_shell_extensions_init:
- * @self: (in): A #GsmShellExtensions.
+ * @self: (in): A #ScsmShellExtensions.
  *
- * Initializes the newly created #GsmShellExtensions instance.
+ * Initializes the newly created #ScsmShellExtensions instance.
  */
 static void
-scsm_shell_extensions_init (GsmShellExtensions *self)
+scsm_shell_extensions_init (ScsmShellExtensions *self)
 {
   GSettingsSchemaSource *source;
   GSettingsSchema *schema;
@@ -182,7 +182,7 @@ scsm_shell_extensions_init (GsmShellExtensions *self)
 }
 
 gboolean
-scsm_shell_extensions_disable_all (GsmShellExtensions *self)
+scsm_shell_extensions_disable_all (ScsmShellExtensions *self)
 {
   return g_settings_set_boolean (self->priv->settings,
                                  DISABLE_EXTENSIONS_KEY,
@@ -190,7 +190,7 @@ scsm_shell_extensions_disable_all (GsmShellExtensions *self)
 }
 
 guint
-scsm_shell_extensions_n_extensions (GsmShellExtensions *self)
+scsm_shell_extensions_n_extensions (ScsmShellExtensions *self)
 {
   if (self->priv->settings == NULL)
     return 0;

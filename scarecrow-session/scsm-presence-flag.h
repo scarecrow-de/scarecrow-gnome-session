@@ -26,7 +26,7 @@ typedef enum {
         SCSM_PRESENCE_STATUS_INVISIBLE,
         SCSM_PRESENCE_STATUS_BUSY,
         SCSM_PRESENCE_STATUS_IDLE,
-} GsmPresenceStatus;
+} ScsmPresenceStatus;
 
 G_END_DECLS
 

@@ -27,72 +27,72 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_CLIENT            (scsm_client_get_type ())
-#define SCSM_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_CLIENT, GsmClient))
-#define SCSM_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_CLIENT, GsmClientClass))
+#define SCSM_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_CLIENT, ScsmClient))
+#define SCSM_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_CLIENT, ScsmClientClass))
 #define SCSM_IS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_CLIENT))
 #define SCSM_IS_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_CLIENT))
-#define SCSM_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_CLIENT, GsmClientClass))
+#define SCSM_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_CLIENT, ScsmClientClass))
 
-typedef struct _GsmApp           GsmApp;
-typedef struct _GsmClient        GsmClient;
-typedef struct _GsmClientClass   GsmClientClass;
+typedef struct _ScsmApp           ScsmApp;
+typedef struct _ScsmClient        ScsmClient;
+typedef struct _ScsmClientClass   ScsmClientClass;
 
-typedef struct GsmClientPrivate GsmClientPrivate;
+typedef struct ScsmClientPrivate ScsmClientPrivate;
 
 typedef enum {
         SCSM_CLIENT_UNREGISTERED = 0,
         SCSM_CLIENT_REGISTERED,
         SCSM_CLIENT_FINISHED,
         SCSM_CLIENT_FAILED
-} GsmClientStatus;
+} ScsmClientStatus;
 
 typedef enum {
         SCSM_CLIENT_RESTART_NEVER = 0,
         SCSM_CLIENT_RESTART_IF_RUNNING,
         SCSM_CLIENT_RESTART_ANYWAY,
         SCSM_CLIENT_RESTART_IMMEDIATELY
-} GsmClientRestartStyle;
+} ScsmClientRestartStyle;
 
 typedef enum {
         SCSM_CLIENT_END_SESSION_FLAG_FORCEFUL = 1 << 0,
         SCSM_CLIENT_END_SESSION_FLAG_SAVE     = 1 << 1,
         SCSM_CLIENT_END_SESSION_FLAG_LAST     = 1 << 2
-} GsmClientEndSessionFlag;
+} ScsmClientEndSessionFlag;
 
-struct _GsmClient
+struct _ScsmClient
 {
         GObject           parent;
-        GsmClientPrivate *priv;
+        ScsmClientPrivate *priv;
 };
 
-struct _GsmClientClass
+struct _ScsmClientClass
 {
         GObjectClass parent_class;
 
         /* signals */
-        void         (*disconnected)               (GsmClient  *client);
-        void         (*end_session_response)       (GsmClient  *client,
+        void         (*disconnected)               (ScsmClient  *client);
+        void         (*end_session_response)       (ScsmClient  *client,
                                                     gboolean    ok,
                                                     gboolean    do_last,
                                                     gboolean    cancel,
                                                     const char *reason);
 
         /* virtual methods */
-        char *                (*impl_get_app_name)           (GsmClient *client);
-        GsmClientRestartStyle (*impl_get_restart_style_hint) (GsmClient *client);
-        guint                 (*impl_get_unix_process_id)    (GsmClient *client);
-        gboolean              (*impl_query_end_session)      (GsmClient *client,
-                                                              GsmClientEndSessionFlag flags,
+        char *                (*impl_get_app_name)           (ScsmClient *client);
+        ScsmClientRestartStyle (*impl_get_restart_style_hint) (ScsmClient *client);
+        guint                 (*impl_get_unix_process_id)    (ScsmClient *client);
+        gboolean              (*impl_query_end_session)      (ScsmClient *client,
+                                                              ScsmClientEndSessionFlag flags,
                                                               GError   **error);
-        gboolean              (*impl_end_session)            (GsmClient *client,
-                                                              GsmClientEndSessionFlag flags,
+        gboolean              (*impl_end_session)            (ScsmClient *client,
+                                                              ScsmClientEndSessionFlag flags,
                                                               GError   **error);
-        gboolean              (*impl_cancel_end_session)     (GsmClient *client,
+        gboolean              (*impl_cancel_end_session)     (ScsmClient *client,
                                                               GError   **error);
-        gboolean              (*impl_stop)                   (GsmClient *client,
+        gboolean              (*impl_stop)                   (ScsmClient *client,
                                                               GError   **error);
-        GKeyFile *            (*impl_save)                   (GsmClient *client,
-                                                              GsmApp    *app,
+        GKeyFile *            (*impl_save)                   (ScsmClient *client,
+                                                              ScsmApp    *app,
                                                               GError   **error);
 };
 
@@ -101,49 +101,49 @@ typedef enum
         SCSM_CLIENT_ERROR_GENERAL = 0,
         SCSM_CLIENT_ERROR_NOT_REGISTERED,
         SCSM_CLIENT_NUM_ERRORS
-} GsmClientError;
+} ScsmClientError;
 
 #define SCSM_CLIENT_ERROR scsm_client_error_quark ()
 GQuark                scsm_client_error_quark                (void);
 
 GType                 scsm_client_get_type                   (void) G_GNUC_CONST;
 
-const char           *scsm_client_peek_id                    (GsmClient  *client);
+const char           *scsm_client_peek_id                    (ScsmClient  *client);
 
 
-const char *          scsm_client_peek_startup_id            (GsmClient  *client);
-const char *          scsm_client_peek_app_id                (GsmClient  *client);
-guint                 scsm_client_peek_restart_style_hint    (GsmClient  *client);
-guint                 scsm_client_peek_status                (GsmClient  *client);
+const char *          scsm_client_peek_startup_id            (ScsmClient  *client);
+const char *          scsm_client_peek_app_id                (ScsmClient  *client);
+guint                 scsm_client_peek_restart_style_hint    (ScsmClient  *client);
+guint                 scsm_client_peek_status                (ScsmClient  *client);
 
 
-char                 *scsm_client_get_app_name               (GsmClient  *client);
-void                  scsm_client_set_app_id                 (GsmClient  *client,
+char                 *scsm_client_get_app_name               (ScsmClient  *client);
+void                  scsm_client_set_app_id                 (ScsmClient  *client,
                                                              const char *app_id);
-void                  scsm_client_set_status                 (GsmClient  *client,
+void                  scsm_client_set_status                 (ScsmClient  *client,
                                                              guint       status);
 
-gboolean              scsm_client_end_session                (GsmClient  *client,
+gboolean              scsm_client_end_session                (ScsmClient  *client,
                                                              guint       flags,
                                                              GError    **error);
-gboolean              scsm_client_query_end_session          (GsmClient  *client,
+gboolean              scsm_client_query_end_session          (ScsmClient  *client,
                                                              guint       flags,
                                                              GError    **error);
-gboolean              scsm_client_cancel_end_session         (GsmClient  *client,
+gboolean              scsm_client_cancel_end_session         (ScsmClient  *client,
                                                              GError    **error);
 
-void                  scsm_client_disconnected               (GsmClient  *client);
+void                  scsm_client_disconnected               (ScsmClient  *client);
 
-GKeyFile             *scsm_client_save                       (GsmClient  *client,
-                                                             GsmApp     *app,
+GKeyFile             *scsm_client_save                       (ScsmClient  *client,
+                                                             ScsmApp     *app,
                                                              GError    **error);
 
-gboolean              scsm_client_stop                       (GsmClient  *client,
+gboolean              scsm_client_stop                       (ScsmClient  *client,
                                                              GError    **error);
 
 /* private */
 
-void                  scsm_client_end_session_response       (GsmClient  *client,
+void                  scsm_client_end_session_response       (ScsmClient  *client,
                                                              gboolean    is_ok,
                                                              gboolean    do_last,
                                                              gboolean    cancel,

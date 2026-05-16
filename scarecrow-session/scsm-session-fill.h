@@ -24,7 +24,7 @@
 
 G_BEGIN_DECLS
 
-gboolean scsm_session_fill (GsmManager  *manager,
+gboolean scsm_session_fill (ScsmManager  *manager,
                            const char  *session);
 
 G_END_DECLS

@@ -30,14 +30,14 @@ typedef struct {
         GError        **error;
         GMainContext   *maincontext;
         GSource        *timeout_source;
-} GsmProcessHelper;
+} ScsmProcessHelper;
 
 static void
 on_child_exited (GObject        *source,
                  GAsyncResult   *result,
                  gpointer        data)
 {
-        GsmProcessHelper *helper = data;
+        ScsmProcessHelper *helper = data;
 
         helper->done = TRUE;
 
@@ -53,7 +53,7 @@ on_child_exited (GObject        *source,
 static gboolean
 on_child_timeout (gpointer data)
 {
-        GsmProcessHelper *helper = data;
+        ScsmProcessHelper *helper = data;
         
         g_assert (!helper->done);
         
@@ -75,7 +75,7 @@ scsm_process_helper (const char   *command_line,
                     GError      **error)
 {
         gboolean ret = FALSE;
-        GsmProcessHelper helper = { 0, };
+        ScsmProcessHelper helper = { 0, };
         gchar **argv = NULL;
         GMainContext *subcontext = NULL;
 

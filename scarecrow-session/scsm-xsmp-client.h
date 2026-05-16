@@ -26,63 +26,63 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_XSMP_CLIENT            (scsm_xsmp_client_get_type ())
-#define SCSM_XSMP_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_XSMP_CLIENT, GsmXSMPClient))
-#define SCSM_XSMP_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_XSMP_CLIENT, GsmXSMPClientClass))
+#define SCSM_XSMP_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_XSMP_CLIENT, ScsmXSMPClient))
+#define SCSM_XSMP_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_XSMP_CLIENT, ScsmXSMPClientClass))
 #define SCSM_IS_XSMP_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_XSMP_CLIENT))
 #define SCSM_IS_XSMP_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_XSMP_CLIENT))
-#define SCSM_XSMP_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_XSMP_CLIENT, GsmXSMPClientClass))
+#define SCSM_XSMP_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_XSMP_CLIENT, ScsmXSMPClientClass))
 
-typedef struct _GsmXSMPClient        GsmXSMPClient;
-typedef struct _GsmXSMPClientClass   GsmXSMPClientClass;
+typedef struct _ScsmXSMPClient        ScsmXSMPClient;
+typedef struct _ScsmXSMPClientClass   ScsmXSMPClientClass;
 
-typedef struct GsmXSMPClientPrivate  GsmXSMPClientPrivate;
+typedef struct ScsmXSMPClientPrivate  ScsmXSMPClientPrivate;
 
-struct _GsmXSMPClient
+struct _ScsmXSMPClient
 {
-        GsmClient             parent;
-        GsmXSMPClientPrivate *priv;
+        ScsmClient             parent;
+        ScsmXSMPClientPrivate *priv;
 };
 
-struct _GsmXSMPClientClass
+struct _ScsmXSMPClientClass
 {
-        GsmClientClass parent_class;
+        ScsmClientClass parent_class;
 
         /* signals */
-        gboolean (*register_request)     (GsmXSMPClient  *client,
+        gboolean (*register_request)     (ScsmXSMPClient  *client,
                                           char          **client_id);
-        void     (*register_confirmed)   (GsmXSMPClient  *client,
+        void     (*register_confirmed)   (ScsmXSMPClient  *client,
                                           const char     *client_id);
-        gboolean (*logout_request)       (GsmXSMPClient  *client,
+        gboolean (*logout_request)       (ScsmXSMPClient  *client,
                                           gboolean        prompt);
 
 
-        void     (*saved_state)          (GsmXSMPClient  *client);
+        void     (*saved_state)          (ScsmXSMPClient  *client);
 
-        void     (*request_phase2)       (GsmXSMPClient  *client);
+        void     (*request_phase2)       (ScsmXSMPClient  *client);
 
-        void     (*request_interaction)  (GsmXSMPClient  *client);
-        void     (*interaction_done)     (GsmXSMPClient  *client,
+        void     (*request_interaction)  (ScsmXSMPClient  *client);
+        void     (*interaction_done)     (ScsmXSMPClient  *client,
                                           gboolean        cancel_shutdown);
 
-        void     (*save_yourself_done)   (GsmXSMPClient  *client);
+        void     (*save_yourself_done)   (ScsmXSMPClient  *client);
 
 };
 
 GType       scsm_xsmp_client_get_type             (void) G_GNUC_CONST;
 
-GsmClient  *scsm_xsmp_client_new                  (IceConn         ice_conn);
+ScsmClient  *scsm_xsmp_client_new                  (IceConn         ice_conn);
 
-void        scsm_xsmp_client_connect              (GsmXSMPClient  *client,
+void        scsm_xsmp_client_connect              (ScsmXSMPClient  *client,
                                                   SmsConn         conn,
                                                   unsigned long  *mask_ret,
                                                   SmsCallbacks   *callbacks_ret);
 
-void        scsm_xsmp_client_save_state           (GsmXSMPClient  *client);
-void        scsm_xsmp_client_save_yourself        (GsmXSMPClient  *client,
+void        scsm_xsmp_client_save_state           (ScsmXSMPClient  *client);
+void        scsm_xsmp_client_save_yourself        (ScsmXSMPClient  *client,
                                                   gboolean        save_state);
-void        scsm_xsmp_client_save_yourself_phase2 (GsmXSMPClient  *client);
-void        scsm_xsmp_client_interact             (GsmXSMPClient  *client);
-void        scsm_xsmp_client_shutdown_cancelled   (GsmXSMPClient  *client);
+void        scsm_xsmp_client_save_yourself_phase2 (ScsmXSMPClient  *client);
+void        scsm_xsmp_client_interact             (ScsmXSMPClient  *client);
+void        scsm_xsmp_client_shutdown_cancelled   (ScsmXSMPClient  *client);
 
 G_END_DECLS
 

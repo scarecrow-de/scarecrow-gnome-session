@@ -27,39 +27,39 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_AUTOSTART_APP            (scsm_autostart_app_get_type ())
-#define SCSM_AUTOSTART_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_AUTOSTART_APP, GsmAutostartApp))
-#define SCSM_AUTOSTART_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_AUTOSTART_APP, GsmAutostartAppClass))
+#define SCSM_AUTOSTART_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_AUTOSTART_APP, ScsmAutostartApp))
+#define SCSM_AUTOSTART_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_AUTOSTART_APP, ScsmAutostartAppClass))
 #define SCSM_IS_AUTOSTART_APP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_AUTOSTART_APP))
 #define SCSM_IS_AUTOSTART_APP_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_AUTOSTART_APP))
-#define SCSM_AUTOSTART_APP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_AUTOSTART_APP, GsmAutostartAppClass))
+#define SCSM_AUTOSTART_APP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_AUTOSTART_APP, ScsmAutostartAppClass))
 
-typedef struct _GsmAutostartApp        GsmAutostartApp;
-typedef struct _GsmAutostartAppClass   GsmAutostartAppClass;
-typedef struct _GsmAutostartAppPrivate GsmAutostartAppPrivate;
+typedef struct _ScsmAutostartApp        ScsmAutostartApp;
+typedef struct _ScsmAutostartAppClass   ScsmAutostartAppClass;
+typedef struct _ScsmAutostartAppPrivate ScsmAutostartAppPrivate;
 
-struct _GsmAutostartApp
+struct _ScsmAutostartApp
 {
-        GsmApp parent;
+        ScsmApp parent;
 
-        GsmAutostartAppPrivate *priv;
+        ScsmAutostartAppPrivate *priv;
 };
 
-struct _GsmAutostartAppClass
+struct _ScsmAutostartAppClass
 {
-        GsmAppClass parent_class;
+        ScsmAppClass parent_class;
 
         /* signals */
-        void     (*condition_changed)  (GsmApp  *app,
+        void     (*condition_changed)  (ScsmApp  *app,
                                         gboolean condition);
 };
 
 GType   scsm_autostart_app_get_type           (void) G_GNUC_CONST;
 
-GsmApp *scsm_autostart_app_new                (const char *desktop_file,
+ScsmApp *scsm_autostart_app_new                (const char *desktop_file,
                                               gboolean    mask_systemd,
                                               GError    **error);
 
-void    scsm_autostart_app_add_provides       (GsmAutostartApp *aapp,
+void    scsm_autostart_app_add_provides       (ScsmAutostartApp *aapp,
                                               const char      *provides);
 
 #define SCSM_AUTOSTART_APP_SYSTEMD_KEY     "X-GNOME-HiddenUnderSystemd"

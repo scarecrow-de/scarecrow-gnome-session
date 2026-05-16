@@ -30,52 +30,52 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_APP            (scsm_app_get_type ())
-#define SCSM_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_APP, GsmApp))
-#define SCSM_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_APP, GsmAppClass))
+#define SCSM_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_APP, ScsmApp))
+#define SCSM_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_APP, ScsmAppClass))
 #define SCSM_IS_APP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_APP))
 #define SCSM_IS_APP_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_APP))
-#define SCSM_APP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_APP, GsmAppClass))
+#define SCSM_APP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_APP, ScsmAppClass))
 
-typedef struct _GsmApp        GsmApp;
-typedef struct _GsmAppClass   GsmAppClass;
-typedef struct _GsmAppPrivate GsmAppPrivate;
+typedef struct _ScsmApp        ScsmApp;
+typedef struct _ScsmAppClass   ScsmAppClass;
+typedef struct _ScsmAppPrivate ScsmAppPrivate;
 
-struct _GsmApp
+struct _ScsmApp
 {
         GObject        parent;
-        GsmAppPrivate *priv;
+        ScsmAppPrivate *priv;
 };
 
-struct _GsmAppClass
+struct _ScsmAppClass
 {
         GObjectClass parent_class;
 
         /* signals */
-        void        (*exited)       (GsmApp *app,
+        void        (*exited)       (ScsmApp *app,
                                      guchar  exit_code);
-        void        (*died)         (GsmApp *app,
+        void        (*died)         (ScsmApp *app,
                                      int     signal);
 
         /* virtual methods */
-        gboolean    (*impl_start)                     (GsmApp     *app,
+        gboolean    (*impl_start)                     (ScsmApp     *app,
                                                        GError    **error);
-        gboolean    (*impl_restart)                   (GsmApp     *app,
+        gboolean    (*impl_restart)                   (ScsmApp     *app,
                                                        GError    **error);
-        gboolean    (*impl_stop)                      (GsmApp     *app,
+        gboolean    (*impl_stop)                      (ScsmApp     *app,
                                                        GError    **error);
-        gboolean    (*impl_provides)                  (GsmApp     *app,
+        gboolean    (*impl_provides)                  (ScsmApp     *app,
                                                        const char *service);
-        char **     (*impl_get_provides)              (GsmApp     *app);
-        gboolean    (*impl_has_autostart_condition)   (GsmApp     *app,
+        char **     (*impl_get_provides)              (ScsmApp     *app);
+        gboolean    (*impl_has_autostart_condition)   (ScsmApp     *app,
                                                        const char *service);
-        gboolean    (*impl_is_running)                (GsmApp     *app);
+        gboolean    (*impl_is_running)                (ScsmApp     *app);
 
-        gboolean    (*impl_get_autorestart)           (GsmApp     *app);
-        const char *(*impl_get_app_id)                (GsmApp     *app);
-        gboolean    (*impl_is_disabled)               (GsmApp     *app);
-        gboolean    (*impl_is_conditionally_disabled) (GsmApp     *app);
+        gboolean    (*impl_get_autorestart)           (ScsmApp     *app);
+        const char *(*impl_get_app_id)                (ScsmApp     *app);
+        gboolean    (*impl_is_disabled)               (ScsmApp     *app);
+        gboolean    (*impl_is_conditionally_disabled) (ScsmApp     *app);
 
-        gboolean    (*impl_save_to_keyfile)           (GsmApp     *app,
+        gboolean    (*impl_save_to_keyfile)           (ScsmApp     *app,
                                                        GKeyFile   *keyfile,
                                                        GError    **error);
 };
@@ -87,45 +87,45 @@ typedef enum
         SCSM_APP_ERROR_START,
         SCSM_APP_ERROR_STOP,
         SCSM_APP_NUM_ERRORS
-} GsmAppError;
+} ScsmAppError;
 
 #define SCSM_APP_ERROR scsm_app_error_quark ()
 
 GQuark           scsm_app_error_quark                    (void);
 GType            scsm_app_get_type                       (void) G_GNUC_CONST;
 
-gboolean         scsm_app_peek_autorestart               (GsmApp     *app);
+gboolean         scsm_app_peek_autorestart               (ScsmApp     *app);
 
-const char      *scsm_app_peek_id                        (GsmApp     *app);
-const char      *scsm_app_peek_app_id                    (GsmApp     *app);
-const char      *scsm_app_peek_startup_id                (GsmApp     *app);
-GsmManagerPhase  scsm_app_peek_phase                     (GsmApp     *app);
-gboolean         scsm_app_peek_is_disabled               (GsmApp     *app);
-gboolean         scsm_app_peek_is_conditionally_disabled (GsmApp     *app);
+const char      *scsm_app_peek_id                        (ScsmApp     *app);
+const char      *scsm_app_peek_app_id                    (ScsmApp     *app);
+const char      *scsm_app_peek_startup_id                (ScsmApp     *app);
+ScsmManagerPhase  scsm_app_peek_phase                     (ScsmApp     *app);
+gboolean         scsm_app_peek_is_disabled               (ScsmApp     *app);
+gboolean         scsm_app_peek_is_conditionally_disabled (ScsmApp     *app);
 
-gboolean         scsm_app_start                          (GsmApp     *app,
+gboolean         scsm_app_start                          (ScsmApp     *app,
                                                          GError    **error);
-gboolean         scsm_app_restart                        (GsmApp     *app,
+gboolean         scsm_app_restart                        (ScsmApp     *app,
                                                          GError    **error);
-gboolean         scsm_app_stop                           (GsmApp     *app,
+gboolean         scsm_app_stop                           (ScsmApp     *app,
                                                          GError    **error);
-gboolean         scsm_app_is_running                     (GsmApp     *app);
+gboolean         scsm_app_is_running                     (ScsmApp     *app);
 
-void             scsm_app_exited                         (GsmApp     *app,
+void             scsm_app_exited                         (ScsmApp     *app,
                                                          guchar      exit_code);
-void             scsm_app_died                           (GsmApp     *app,
+void             scsm_app_died                           (ScsmApp     *app,
                                                          int         signal);
 
-gboolean         scsm_app_provides                       (GsmApp     *app,
+gboolean         scsm_app_provides                       (ScsmApp     *app,
                                                          const char *service);
-char           **scsm_app_get_provides                   (GsmApp     *app);
-gboolean         scsm_app_has_autostart_condition        (GsmApp     *app,
+char           **scsm_app_get_provides                   (ScsmApp     *app);
+gboolean         scsm_app_has_autostart_condition        (ScsmApp     *app,
                                                          const char *condition);
-gboolean         scsm_app_get_registered                 (GsmApp     *app);
-void             scsm_app_set_registered                 (GsmApp     *app,
+gboolean         scsm_app_get_registered                 (ScsmApp     *app);
+void             scsm_app_set_registered                 (ScsmApp     *app,
                                                          gboolean  registered);
 
-gboolean         scsm_app_save_to_keyfile                (GsmApp    *app,
+gboolean         scsm_app_save_to_keyfile                (ScsmApp    *app,
                                                          GKeyFile  *keyfile,
                                                          GError   **error);
 

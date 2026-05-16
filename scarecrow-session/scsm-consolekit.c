@@ -42,7 +42,7 @@
 #define CK_SESSION_INTERFACE    CK_NAME ".Session"
 
 
-struct _GsmConsolekitPrivate
+struct _ScsmConsolekitPrivate
 {
         GDBusProxy      *ck_proxy;
         GDBusProxy      *ck_session_proxy;
@@ -64,27 +64,27 @@ enum {
         PROP_ACTIVE
 };
 
-static void scsm_consolekit_system_init (GsmSystemInterface *iface);
+static void scsm_consolekit_system_init (ScsmSystemInterface *iface);
 
-G_DEFINE_TYPE_WITH_CODE (GsmConsolekit, scsm_consolekit, G_TYPE_OBJECT,
+G_DEFINE_TYPE_WITH_CODE (ScsmConsolekit, scsm_consolekit, G_TYPE_OBJECT,
                          G_IMPLEMENT_INTERFACE (SCSM_TYPE_SYSTEM,
                                                 scsm_consolekit_system_init))
 
 static void
-drop_system_inhibitor (GsmConsolekit *manager)
+drop_system_inhibitor (ScsmConsolekit *manager)
 {
         if (manager->priv->inhibit_fd != -1) {
-                g_debug ("GsmConsolekit: Dropping system inhibitor");
+                g_debug ("ScsmConsolekit: Dropping system inhibitor");
                 close (manager->priv->inhibit_fd);
                 manager->priv->inhibit_fd = -1;
         }
 }
 
 static void
-drop_delay_inhibitor (GsmConsolekit *manager)
+drop_delay_inhibitor (ScsmConsolekit *manager)
 {
         if (manager->priv->delay_inhibit_fd != -1) {
-                g_debug ("GsmConsolekit: Dropping delay inhibitor");
+                g_debug ("ScsmConsolekit: Dropping delay inhibitor");
                 close (manager->priv->delay_inhibit_fd);
                 manager->priv->delay_inhibit_fd = -1;
         }
@@ -93,7 +93,7 @@ drop_delay_inhibitor (GsmConsolekit *manager)
 static void
 scsm_consolekit_finalize (GObject *object)
 {
-        GsmConsolekit *consolekit = SCSM_CONSOLEKIT (object);
+        ScsmConsolekit *consolekit = SCSM_CONSOLEKIT (object);
 
         g_clear_object (&consolekit->priv->ck_proxy);
         g_clear_object (&consolekit->priv->ck_session_proxy);
@@ -115,7 +115,7 @@ scsm_consolekit_set_property (GObject      *object,
                              const GValue *value,
                              GParamSpec   *pspec)
 {
-        GsmConsolekit *self = SCSM_CONSOLEKIT (object);
+        ScsmConsolekit *self = SCSM_CONSOLEKIT (object);
 
         switch (prop_id) {
         case PROP_ACTIVE:
@@ -132,7 +132,7 @@ scsm_consolekit_get_property (GObject    *object,
                              GValue     *value,
                              GParamSpec *pspec)
 {
-        GsmConsolekit *self = SCSM_CONSOLEKIT (object);
+        ScsmConsolekit *self = SCSM_CONSOLEKIT (object);
 
         switch (prop_id) {
         case PROP_ACTIVE:
@@ -145,7 +145,7 @@ scsm_consolekit_get_property (GObject    *object,
 }
 
 static void
-scsm_consolekit_class_init (GsmConsolekitClass *manager_class)
+scsm_consolekit_class_init (ScsmConsolekitClass *manager_class)
 {
         GObjectClass *object_class;
 
@@ -157,7 +157,7 @@ scsm_consolekit_class_init (GsmConsolekitClass *manager_class)
 
         g_object_class_override_property (object_class, PROP_ACTIVE, "active");
 
-        g_type_class_add_private (manager_class, sizeof (GsmConsolekitPrivate));
+        g_type_class_add_private (manager_class, sizeof (ScsmConsolekitPrivate));
 }
 
 static void ck_session_proxy_signal_cb (GDBusProxy  *proxy,
@@ -173,7 +173,7 @@ static void ck_proxy_signal_cb (GDBusProxy  *proxy,
                                 gpointer     user_data);
 
 static void
-ck_pid_get_session (GsmConsolekit *manager,
+ck_pid_get_session (ScsmConsolekit *manager,
                     pid_t          pid,
                     gchar        **session_id)
 {
@@ -205,7 +205,7 @@ ck_pid_get_session (GsmConsolekit *manager,
 }
 
 static void
-scsm_consolekit_init (GsmConsolekit *manager)
+scsm_consolekit_init (ScsmConsolekit *manager)
 {
         GError *error = NULL;
         GDBusConnection *bus;
@@ -213,7 +213,7 @@ scsm_consolekit_init (GsmConsolekit *manager)
 
         manager->priv = G_TYPE_INSTANCE_GET_PRIVATE (manager,
                                                      SCSM_TYPE_CONSOLEKIT,
-                                                     GsmConsolekitPrivate);
+                                                     ScsmConsolekitPrivate);
 
         manager->priv->inhibit_fd = -1;
         manager->priv->delay_inhibit_fd = -1;
@@ -273,7 +273,7 @@ scsm_consolekit_init (GsmConsolekit *manager)
 }
 
 static void
-emit_restart_complete (GsmConsolekit *manager,
+emit_restart_complete (ScsmConsolekit *manager,
                        GError     *error)
 {
         GError *call_error;
@@ -295,7 +295,7 @@ emit_restart_complete (GsmConsolekit *manager,
 }
 
 static void
-emit_stop_complete (GsmConsolekit *manager,
+emit_stop_complete (ScsmConsolekit *manager,
                     GError     *error)
 {
         GError *call_error;
@@ -322,7 +322,7 @@ restart_done (GObject      *source,
               gpointer      user_data)
 {
         GDBusProxy *proxy = G_DBUS_PROXY (source);
-        GsmConsolekit *manager = user_data;
+        ScsmConsolekit *manager = user_data;
         GError *error = NULL;
         GVariant *res;
 
@@ -339,9 +339,9 @@ restart_done (GObject      *source,
 }
 
 static void
-scsm_consolekit_attempt_restart (GsmSystem *system)
+scsm_consolekit_attempt_restart (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         /* Use Restart instead of Reboot because it will work on
          * both CK and CK2 */
@@ -361,7 +361,7 @@ stop_done (GObject      *source,
            gpointer      user_data)
 {
         GDBusProxy *proxy = G_DBUS_PROXY (source);
-        GsmConsolekit *manager = user_data;
+        ScsmConsolekit *manager = user_data;
         GError *error = NULL;
         GVariant *res;
 
@@ -378,9 +378,9 @@ stop_done (GObject      *source,
 }
 
 static void
-scsm_consolekit_attempt_stop (GsmSystem *system)
+scsm_consolekit_attempt_stop (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         /* Use Stop insetad of PowerOff because it will work with
          * Ck and CK2. */
@@ -395,10 +395,10 @@ scsm_consolekit_attempt_stop (GsmSystem *system)
 }
 
 static void
-scsm_consolekit_set_session_idle (GsmSystem *system,
+scsm_consolekit_set_session_idle (ScsmSystem *system,
                               gboolean   is_idle)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         g_debug ("Updating consolekit idle status: %d", is_idle);
         g_dbus_proxy_call_sync (manager->priv->ck_session_proxy,
@@ -410,7 +410,7 @@ scsm_consolekit_set_session_idle (GsmSystem *system,
 }
 
 static void
-ck_session_get_seat (GsmConsolekit *manager,
+ck_session_get_seat (ScsmConsolekit *manager,
                      gchar        **seat)
 {
         GVariant *res;
@@ -424,7 +424,7 @@ ck_session_get_seat (GsmConsolekit *manager,
                                       -1,
                                       NULL, NULL);
         if (!res) {
-                g_warning ("GsmConsoleKit: Calling GetSeatId failed.");
+                g_warning ("ScsmConsoleKit: Calling GetSeatId failed.");
                 return;
         }
 
@@ -437,7 +437,7 @@ ck_session_get_seat (GsmConsolekit *manager,
  *          1 seat is not multi-session
  */
 static gint
-ck_seat_can_multi_session (GsmConsolekit *manager,
+ck_seat_can_multi_session (ScsmConsolekit *manager,
                            const gchar   *seat)
 {
         GDBusConnection *bus;
@@ -457,7 +457,7 @@ ck_seat_can_multi_session (GsmConsolekit *manager,
                                            -1,
                                            NULL, NULL);
         if (!res) {
-                g_warning ("GsmConsoleKit: Calling GetSeatId failed.");
+                g_warning ("ScsmConsoleKit: Calling GetSeatId failed.");
                 return -1;
         }
 
@@ -468,9 +468,9 @@ ck_seat_can_multi_session (GsmConsolekit *manager,
 }
 
 static gboolean
-scsm_consolekit_can_switch_user (GsmSystem *system)
+scsm_consolekit_can_switch_user (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         gchar *seat;
         gint ret;
 
@@ -482,9 +482,9 @@ scsm_consolekit_can_switch_user (GsmSystem *system)
 }
 
 static gboolean
-scsm_consolekit_can_restart (GsmSystem *system)
+scsm_consolekit_can_restart (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         GVariant *res;
         gboolean can_restart;
 
@@ -508,9 +508,9 @@ scsm_consolekit_can_restart (GsmSystem *system)
 }
 
 static gboolean
-scsm_consolekit_can_stop (GsmSystem *system)
+scsm_consolekit_can_stop (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         GVariant *res;
         gboolean can_stop;
 
@@ -535,7 +535,7 @@ scsm_consolekit_can_stop (GsmSystem *system)
 
 /* returns -1 on failure, 0 on success */
 static gint
-ck_session_get_class (GsmConsolekit *manager,
+ck_session_get_class (ScsmConsolekit *manager,
                       gchar        **session_class)
 {
         GVariant *res;
@@ -549,7 +549,7 @@ ck_session_get_class (GsmConsolekit *manager,
                                       -1,
                                       NULL, NULL);
         if (!res) {
-                g_warning ("GsmConsoleKit: Calling GetSessionClass failed.");
+                g_warning ("ScsmConsoleKit: Calling GetSessionClass failed.");
                 return -1;
         }
 
@@ -560,9 +560,9 @@ ck_session_get_class (GsmConsolekit *manager,
 }
 
 static gboolean
-scsm_consolekit_is_login_session (GsmSystem *system)
+scsm_consolekit_is_login_session (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         int res;
         gboolean ret;
         gchar *session_class = NULL;
@@ -585,9 +585,9 @@ scsm_consolekit_is_login_session (GsmSystem *system)
 }
 
 static gboolean
-scsm_consolekit_can_suspend (GsmSystem *system)
+scsm_consolekit_can_suspend (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         gchar *rv;
         GVariant *res;
         gboolean can_suspend;
@@ -617,9 +617,9 @@ scsm_consolekit_can_suspend (GsmSystem *system)
 }
 
 static gboolean
-scsm_consolekit_can_hibernate (GsmSystem *system)
+scsm_consolekit_can_hibernate (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         gchar *rv;
         GVariant *res;
         gboolean can_hibernate;
@@ -687,9 +687,9 @@ hibernate_done (GObject      *source,
 }
 
 static void
-scsm_consolekit_suspend (GsmSystem *system)
+scsm_consolekit_suspend (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         g_dbus_proxy_call (manager->priv->ck_proxy,
                            "Suspend",
@@ -702,9 +702,9 @@ scsm_consolekit_suspend (GsmSystem *system)
 }
 
 static void
-scsm_consolekit_hibernate (GsmSystem *system)
+scsm_consolekit_hibernate (ScsmSystem *system)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         g_dbus_proxy_call (manager->priv->ck_proxy,
                            "Hibernate",
@@ -722,7 +722,7 @@ inhibit_done (GObject      *source,
               gpointer      user_data)
 {
         GDBusProxy *proxy = G_DBUS_PROXY (source);
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (user_data);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (user_data);
         GError *error = NULL;
         GVariant *res;
         GUnixFDList *fd_list = NULL;
@@ -751,11 +751,11 @@ inhibit_done (GObject      *source,
 }
 
 static void
-scsm_consolekit_add_inhibitor (GsmSystem        *system,
+scsm_consolekit_add_inhibitor (ScsmSystem        *system,
                            const gchar      *id,
-                           GsmInhibitorFlag  flag)
+                           ScsmInhibitorFlag  flag)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         if ((flag & SCSM_INHIBITOR_FLAG_SUSPEND) == 0)
                 return;
@@ -780,10 +780,10 @@ scsm_consolekit_add_inhibitor (GsmSystem        *system,
 }
 
 static void
-scsm_consolekit_remove_inhibitor (GsmSystem   *system,
+scsm_consolekit_remove_inhibitor (ScsmSystem   *system,
                               const gchar *id)
 {
-        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         GSList *l;
 
         l = g_slist_find_custom (manager->priv->inhibitors, id, (GCompareFunc)g_strcmp0);
@@ -802,7 +802,7 @@ reboot_or_poweroff_done (GObject      *source,
                          GAsyncResult *res,
                          gpointer      user_data)
 {
-        GsmConsolekit *consolekit = user_data;
+        ScsmConsolekit *consolekit = user_data;
         GVariant *result;
         GError *error = NULL;
 
@@ -816,7 +816,7 @@ reboot_or_poweroff_done (GObject      *source,
                 }
                 g_error_free (error);
                 drop_delay_inhibitor (consolekit);
-                g_debug ("GsmConsolekit: shutdown preparation failed");
+                g_debug ("ScsmConsolekit: shutdown preparation failed");
                 consolekit->priv->prepare_for_shutdown_expected = FALSE;
                 g_signal_emit_by_name (consolekit, "shutdown-prepared", FALSE);
         } else {
@@ -825,16 +825,16 @@ reboot_or_poweroff_done (GObject      *source,
 }
 
 static void
-scsm_consolekit_prepare_shutdown (GsmSystem *system,
+scsm_consolekit_prepare_shutdown (ScsmSystem *system,
                                  gboolean   restart)
 {
-        GsmConsolekit *consolekit = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *consolekit = SCSM_CONSOLEKIT (system);
         GUnixFDList *fd_list;
         GVariant *res;
         GError *error = NULL;
         gint idx;
 
-        g_debug ("GsmConsolekit: prepare shutdown");
+        g_debug ("ScsmConsolekit: prepare shutdown");
 
         res = g_dbus_proxy_call_with_unix_fd_list_sync (consolekit->priv->ck_proxy,
                                                         "Inhibit",
@@ -858,7 +858,7 @@ scsm_consolekit_prepare_shutdown (GsmSystem *system,
 
                 consolekit->priv->delay_inhibit_fd = g_unix_fd_list_get (fd_list, idx, NULL);
 
-                g_debug ("GsmConsolekit: got delay inhibitor, fd = %d", consolekit->priv->delay_inhibit_fd);
+                g_debug ("ScsmConsolekit: got delay inhibitor, fd = %d", consolekit->priv->delay_inhibit_fd);
 
                 g_variant_unref (res);
                 g_object_unref (fd_list);
@@ -877,22 +877,22 @@ scsm_consolekit_prepare_shutdown (GsmSystem *system,
 }
 
 static void
-scsm_consolekit_complete_shutdown (GsmSystem *system)
+scsm_consolekit_complete_shutdown (ScsmSystem *system)
 {
-        GsmConsolekit *consolekit = SCSM_CONSOLEKIT (system);
+        ScsmConsolekit *consolekit = SCSM_CONSOLEKIT (system);
 
         /* remove delay inhibitor, if any */
         drop_delay_inhibitor (consolekit);
 }
 
 static gboolean
-scsm_consolekit_is_last_session_for_user (GsmSystem *system)
+scsm_consolekit_is_last_session_for_user (ScsmSystem *system)
 {
         return FALSE;
 }
 
 static void
-scsm_consolekit_system_init (GsmSystemInterface *iface)
+scsm_consolekit_system_init (ScsmSystemInterface *iface)
 {
         iface->can_switch_user = scsm_consolekit_can_switch_user;
         iface->can_stop = scsm_consolekit_can_stop;
@@ -912,10 +912,10 @@ scsm_consolekit_system_init (GsmSystemInterface *iface)
         iface->is_last_session_for_user = scsm_consolekit_is_last_session_for_user;
 }
 
-GsmConsolekit *
+ScsmConsolekit *
 scsm_consolekit_new (void)
 {
-        GsmConsolekit *manager;
+        ScsmConsolekit *manager;
 
         manager = g_object_new (SCSM_TYPE_CONSOLEKIT, NULL);
 
@@ -929,24 +929,24 @@ ck_proxy_signal_cb (GDBusProxy  *proxy,
                     GVariant    *parameters,
                     gpointer     user_data)
 {
-        GsmConsolekit *consolekit = user_data;
+        ScsmConsolekit *consolekit = user_data;
         gboolean is_about_to_shutdown;
 
-        g_debug ("GsmConsolekit: received ConsoleKit signal: %s", signal_name);
+        g_debug ("ScsmConsolekit: received ConsoleKit signal: %s", signal_name);
 
         if (g_strcmp0 (signal_name, "PrepareForShutdown") != 0) {
-                g_debug ("GsmConsolekit: ignoring %s signal", signal_name);
+                g_debug ("ScsmConsolekit: ignoring %s signal", signal_name);
                 return;
         }
 
         g_variant_get (parameters, "(b)", &is_about_to_shutdown);
         if (!is_about_to_shutdown) {
-                g_debug ("GsmConsolekit: ignoring %s signal since about-to-shutdown is FALSE", signal_name);
+                g_debug ("ScsmConsolekit: ignoring %s signal since about-to-shutdown is FALSE", signal_name);
                 return;
         }
 
         if (consolekit->priv->prepare_for_shutdown_expected) {
-                g_debug ("GsmConsolekit: shutdown successfully prepared");
+                g_debug ("ScsmConsolekit: shutdown successfully prepared");
                 g_signal_emit_by_name (consolekit, "shutdown-prepared", TRUE);
                 consolekit->priv->prepare_for_shutdown_expected = FALSE;
         }
@@ -959,19 +959,19 @@ ck_session_proxy_signal_cb (GDBusProxy  *proxy,
                             GVariant    *parameters,
                             gpointer     user_data)
 {
-        GsmConsolekit *consolekit = user_data;
+        ScsmConsolekit *consolekit = user_data;
         gboolean is_active;
 
-        g_debug ("GsmConsolekit: received ConsoleKit signal: %s", signal_name);
+        g_debug ("ScsmConsolekit: received ConsoleKit signal: %s", signal_name);
 
         if (g_strcmp0 (signal_name, "ActiveChanged") != 0) {
-                g_debug ("GsmConsolekit: ignoring %s signal", signal_name);
+                g_debug ("ScsmConsolekit: ignoring %s signal", signal_name);
                 return;
         }
 
         g_variant_get (parameters, "(b)", &is_active);
         if (consolekit->priv->is_active != is_active) {
-                g_debug ("GsmConsolekit: session state changed");
+                g_debug ("ScsmConsolekit: session state changed");
                 consolekit->priv->is_active = is_active;
                 g_object_notify (G_OBJECT (consolekit), "active");
         }

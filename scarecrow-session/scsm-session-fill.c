@@ -34,14 +34,14 @@
 /* See https://bugzilla.gnome.org/show_bug.cgi?id=641992 for discussion */
 #define SCSM_RUNNABLE_HELPER_TIMEOUT 3000 /* ms */
 
-typedef void (*GsmFillHandleComponent) (const char *component,
+typedef void (*ScsmFillHandleComponent) (const char *component,
                                         const char *app_path,
                                         gpointer    user_data);
 
 static void
 handle_required_components (GKeyFile               *keyfile,
                             gboolean                look_in_saved_session,
-                            GsmFillHandleComponent  callback,
+                            ScsmFillHandleComponent  callback,
                             gpointer                user_data)
 {
         char **required_components;
@@ -99,9 +99,9 @@ check_required (GKeyFile *keyfile)
 }
 
 static void
-maybe_load_saved_session_apps (GsmManager *manager)
+maybe_load_saved_session_apps (ScsmManager *manager)
 {
-        GsmSystem *system;
+        ScsmSystem *system;
         gboolean is_login;
 
         system = scsm_get_system ();
@@ -119,7 +119,7 @@ append_required_components_helper (const char *component,
                                    const char *app_path,
                                    gpointer    user_data)
 {
-        GsmManager *manager = user_data;
+        ScsmManager *manager = user_data;
 
         if (app_path == NULL)
                 g_warning ("Unable to find required component '%s'", component);
@@ -129,7 +129,7 @@ append_required_components_helper (const char *component,
 
 
 static void
-load_standard_apps (GsmManager *manager,
+load_standard_apps (ScsmManager *manager,
                     GKeyFile   *keyfile)
 {
         /* Note that saving/restoring sessions is not really possible on systemd, as
@@ -314,7 +314,7 @@ get_session_keyfile (const char *session,
 }
 
 gboolean
-scsm_session_fill (GsmManager  *manager,
+scsm_session_fill (ScsmManager  *manager,
                   const char  *session)
 {
         GKeyFile *keyfile;

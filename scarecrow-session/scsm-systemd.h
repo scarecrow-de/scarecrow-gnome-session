@@ -28,31 +28,31 @@
 G_BEGIN_DECLS
 
 #define SCSM_TYPE_SYSTEMD             (scsm_systemd_get_type ())
-#define SCSM_SYSTEMD(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SYSTEMD, GsmSystemd))
-#define SCSM_SYSTEMD_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SYSTEMD, GsmSystemdClass))
+#define SCSM_SYSTEMD(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SYSTEMD, ScsmSystemd))
+#define SCSM_SYSTEMD_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SYSTEMD, ScsmSystemdClass))
 #define SCSM_IS_SYSTEMD(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SYSTEMD))
 #define SCSM_IS_SYSTEMD_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_SYSTEMD))
-#define SCSM_SYSTEMD_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), SCSM_TYPE_SYSTEMD, GsmSystemdClass))
+#define SCSM_SYSTEMD_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), SCSM_TYPE_SYSTEMD, ScsmSystemdClass))
 
-typedef struct _GsmSystemd        GsmSystemd;
-typedef struct _GsmSystemdClass   GsmSystemdClass;
-typedef struct _GsmSystemdPrivate GsmSystemdPrivate;
+typedef struct _ScsmSystemd        ScsmSystemd;
+typedef struct _ScsmSystemdClass   ScsmSystemdClass;
+typedef struct _ScsmSystemdPrivate ScsmSystemdPrivate;
 
-struct _GsmSystemd
+struct _ScsmSystemd
 {
         GObject            parent;
 
-        GsmSystemdPrivate *priv;
+        ScsmSystemdPrivate *priv;
 };
 
-struct _GsmSystemdClass
+struct _ScsmSystemdClass
 {
         GObjectClass parent_class;
 };
 
 GType         scsm_systemd_get_type (void);
 
-GsmSystemd   *scsm_systemd_new      (void) G_GNUC_MALLOC;
+ScsmSystemd   *scsm_systemd_new      (void) G_GNUC_MALLOC;
 
 G_END_DECLS
 

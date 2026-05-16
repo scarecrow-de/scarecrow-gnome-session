@@ -42,17 +42,17 @@ enum {
 
 static guint signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_INTERFACE (GsmSystem, scsm_system, G_TYPE_OBJECT)
+G_DEFINE_INTERFACE (ScsmSystem, scsm_system, G_TYPE_OBJECT)
 
 static void
-scsm_system_default_init (GsmSystemInterface *iface)
+scsm_system_default_init (ScsmSystemInterface *iface)
 {
         GParamSpec *pspec;
         signals [REQUEST_COMPLETED] =
                 g_signal_new ("request-completed",
                               SCSM_TYPE_SYSTEM,
                               G_SIGNAL_RUN_LAST,
-                              G_STRUCT_OFFSET (GsmSystemInterface, request_completed),
+                              G_STRUCT_OFFSET (ScsmSystemInterface, request_completed),
                               NULL, NULL, NULL,
                               G_TYPE_NONE,
                               1, G_TYPE_POINTER);
@@ -60,7 +60,7 @@ scsm_system_default_init (GsmSystemInterface *iface)
                  g_signal_new ("shutdown-prepared",
                                SCSM_TYPE_SYSTEM,
                                G_SIGNAL_RUN_LAST,
-                               G_STRUCT_OFFSET (GsmSystemInterface, shutdown_prepared),
+                               G_STRUCT_OFFSET (ScsmSystemInterface, shutdown_prepared),
                                NULL, NULL, NULL,
                                G_TYPE_NONE,
                                1, G_TYPE_BOOLEAN);
@@ -72,15 +72,15 @@ scsm_system_default_init (GsmSystemInterface *iface)
         g_object_interface_install_property (iface, pspec);
 }
 
-typedef GObject GsmSystemNull;
-typedef GObjectClass GsmSystemNullClass;
+typedef GObject ScsmSystemNull;
+typedef GObjectClass ScsmSystemNullClass;
 
 static void do_nothing (void) { }
 static gboolean return_true (void) { return TRUE; }
 static gboolean return_false (void) { return TRUE; }
 
 static void
-scsm_system_null_init_iface (GsmSystemInterface *iface)
+scsm_system_null_init_iface (ScsmSystemInterface *iface)
 {
         iface->can_switch_user   = (void *) return_false;
         iface->can_stop          = (void *) return_false;
@@ -103,7 +103,7 @@ scsm_system_null_init_iface (GsmSystemInterface *iface)
 }
 
 static void
-scsm_system_null_init (GsmSystemNull *gsn)
+scsm_system_null_init (ScsmSystemNull *gsn)
 {
 }
 
@@ -115,7 +115,7 @@ scsm_system_null_get_property (GObject *object, guint prop_id,
 }
 
 static void
-scsm_system_null_class_init (GsmSystemNullClass *class)
+scsm_system_null_class_init (ScsmSystemNullClass *class)
 {
         class->get_property = scsm_system_null_get_property;
         class->set_property = (void *) do_nothing;
@@ -124,7 +124,7 @@ scsm_system_null_class_init (GsmSystemNullClass *class)
 }
 
 static GType scsm_system_null_get_type (void);
-G_DEFINE_TYPE_WITH_CODE (GsmSystemNull, scsm_system_null, G_TYPE_OBJECT,
+G_DEFINE_TYPE_WITH_CODE (ScsmSystemNull, scsm_system_null, G_TYPE_OBJECT,
                          G_IMPLEMENT_INTERFACE (SCSM_TYPE_SYSTEM, scsm_system_null_init_iface))
 
 GQuark
@@ -140,102 +140,102 @@ scsm_system_error_quark (void)
 }
 
 gboolean
-scsm_system_can_switch_user (GsmSystem *system)
+scsm_system_can_switch_user (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->can_switch_user (system);
 }
 
 gboolean
-scsm_system_can_stop (GsmSystem *system)
+scsm_system_can_stop (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->can_stop (system);
 }
 
 gboolean
-scsm_system_can_restart (GsmSystem *system)
+scsm_system_can_restart (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->can_restart (system);
 }
 
 gboolean
-scsm_system_can_restart_to_firmware_setup (GsmSystem *system)
+scsm_system_can_restart_to_firmware_setup (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->can_restart_to_firmware_setup (system);
 }
 
 void
-scsm_system_set_restart_to_firmware_setup (GsmSystem *system,
+scsm_system_set_restart_to_firmware_setup (ScsmSystem *system,
                                           gboolean   enable)
 {
         SCSM_SYSTEM_GET_IFACE (system)->set_restart_to_firmware_setup (system, enable);
 }
 
 gboolean
-scsm_system_can_suspend (GsmSystem *system)
+scsm_system_can_suspend (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->can_suspend (system);
 }
 
 gboolean
-scsm_system_can_hibernate (GsmSystem *system)
+scsm_system_can_hibernate (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->can_hibernate (system);
 }
 
 void
-scsm_system_attempt_stop (GsmSystem *system)
+scsm_system_attempt_stop (ScsmSystem *system)
 {
         SCSM_SYSTEM_GET_IFACE (system)->attempt_stop (system);
 }
 
 void
-scsm_system_attempt_restart (GsmSystem *system)
+scsm_system_attempt_restart (ScsmSystem *system)
 {
         SCSM_SYSTEM_GET_IFACE (system)->attempt_restart (system);
 }
 
 void
-scsm_system_suspend (GsmSystem *system)
+scsm_system_suspend (ScsmSystem *system)
 {
         SCSM_SYSTEM_GET_IFACE (system)->suspend (system);
 }
 
 void
-scsm_system_hibernate (GsmSystem *system)
+scsm_system_hibernate (ScsmSystem *system)
 {
         SCSM_SYSTEM_GET_IFACE (system)->hibernate (system);
 }
 
 void
-scsm_system_set_session_idle (GsmSystem *system,
+scsm_system_set_session_idle (ScsmSystem *system,
                              gboolean   is_idle)
 {
         SCSM_SYSTEM_GET_IFACE (system)->set_session_idle (system, is_idle);
 }
 
 void
-scsm_system_add_inhibitor (GsmSystem        *system,
+scsm_system_add_inhibitor (ScsmSystem        *system,
                           const gchar      *id,
-                          GsmInhibitorFlag  flag)
+                          ScsmInhibitorFlag  flag)
 {
         SCSM_SYSTEM_GET_IFACE (system)->add_inhibitor (system, id, flag);
 }
 
 void
-scsm_system_remove_inhibitor (GsmSystem   *system,
+scsm_system_remove_inhibitor (ScsmSystem   *system,
                              const gchar *id)
 {
         SCSM_SYSTEM_GET_IFACE (system)->remove_inhibitor (system, id);
 }
 
 gboolean
-scsm_system_is_login_session (GsmSystem *system)
+scsm_system_is_login_session (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->is_login_session (system);
 }
 
 gboolean
-scsm_system_is_last_session_for_user (GsmSystem *system)
+scsm_system_is_last_session_for_user (ScsmSystem *system)
 {
         return SCSM_SYSTEM_GET_IFACE (system)->is_last_session_for_user (system);
 }
@@ -247,7 +247,7 @@ scsm_system_is_last_session_for_user (GsmSystem *system)
  * Since: 3.8
  */
 gboolean
-scsm_system_is_active (GsmSystem *system)
+scsm_system_is_active (ScsmSystem *system)
 {
         gboolean is_active;
         g_object_get ((GObject*)system, "active", &is_active, NULL);
@@ -255,22 +255,22 @@ scsm_system_is_active (GsmSystem *system)
 }
 
 void
-scsm_system_prepare_shutdown  (GsmSystem *system,
+scsm_system_prepare_shutdown  (ScsmSystem *system,
                               gboolean   restart)
 {
         SCSM_SYSTEM_GET_IFACE (system)->prepare_shutdown (system, restart);
 }
 
 void
-scsm_system_complete_shutdown (GsmSystem *system)
+scsm_system_complete_shutdown (ScsmSystem *system)
 {
         SCSM_SYSTEM_GET_IFACE (system)->complete_shutdown (system);
 }
 
-GsmSystem *
+ScsmSystem *
 scsm_get_system (void)
 {
-        static GsmSystem *system = NULL;
+        static ScsmSystem *system = NULL;
 
         if (system == NULL) {
                 system = SCSM_SYSTEM (scsm_systemd_new ());
