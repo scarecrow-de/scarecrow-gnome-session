@@ -15,8 +15,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_UTIL_H__
-#define __GSM_UTIL_H__
+#ifndef __SCSM_UTIL_H__
+#define __SCSM_UTIL_H__
 
 #include <glib.h>
 
@@ -66,4 +66,4 @@ void        scsm_quit                                (void);
 
 G_END_DECLS
 
-#endif /* __GSM_UTIL_H__ */
+#endif /* __SCSM_UTIL_H__ */

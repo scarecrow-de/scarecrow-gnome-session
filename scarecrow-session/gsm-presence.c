@@ -30,8 +30,8 @@
 #include "scsm-presence.h"
 #include "io.github.scarecrow_de.SessionManager.Presence.h"
 
-#define GSM_PRESENCE_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Presence"
-#define GSM_PRESENCE_DBUS_PATH "/io/github/scarecrow_de/SessionManager/Presence"
+#define SCSM_PRESENCE_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Presence"
+#define SCSM_PRESENCE_DBUS_PATH "/io/github/scarecrow_de/SessionManager/Presence"
 
 #define GS_NAME      "io.github.scarecrow_de.ScreenSaver"
 #define GS_PATH      "/io/github/scarecrow_de/ScreenSaver"
@@ -39,7 +39,7 @@
 
 #define MAX_STATUS_TEXT 140
 
-#define GSM_PRESENCE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_PRESENCE, GsmPresencePrivate))
+#define SCSM_PRESENCE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_PRESENCE, GsmPresencePrivate))
 
 struct GsmPresencePrivate
 {
@@ -73,7 +73,7 @@ static guint signals[LAST_SIGNAL] = { 0, };
 G_DEFINE_TYPE (GsmPresence, scsm_presence, G_TYPE_OBJECT)
 
 static const GDBusErrorEntry scsm_presence_error_entries[] = {
-        { GSM_PRESENCE_ERROR_GENERAL, GSM_PRESENCE_DBUS_IFACE ".GeneralError" }
+        { SCSM_PRESENCE_ERROR_GENERAL, SCSM_PRESENCE_DBUS_IFACE ".GeneralError" }
 };
 
 GQuark
@@ -109,7 +109,7 @@ scsm_presence_set_status_text (GsmPresence  *presence,
                               const char   *status_text,
                               GError      **error)
 {
-        g_return_val_if_fail (GSM_IS_PRESENCE (presence), FALSE);
+        g_return_val_if_fail (SCSM_IS_PRESENCE (presence), FALSE);
 
         g_free (presence->priv->status_text);
         presence->priv->status_text = NULL;
@@ -117,8 +117,8 @@ scsm_presence_set_status_text (GsmPresence  *presence,
         /* check length */
         if (status_text != NULL && strlen (status_text) > MAX_STATUS_TEXT) {
                 g_set_error (error,
-                             GSM_PRESENCE_ERROR,
-                             GSM_PRESENCE_ERROR_GENERAL,
+                             SCSM_PRESENCE_ERROR,
+                             SCSM_PRESENCE_ERROR_GENERAL,
                              "Status text too long");
                 return FALSE;
         }
@@ -141,21 +141,21 @@ set_session_idle (GsmPresence   *presence,
         g_debug ("GsmPresence: setting idle: %d", is_idle);
 
         if (is_idle) {
-                if (presence->priv->status == GSM_PRESENCE_STATUS_IDLE) {
+                if (presence->priv->status == SCSM_PRESENCE_STATUS_IDLE) {
                         g_debug ("GsmPresence: already idle, ignoring");
                         return;
                 }
 
                 /* save current status */
                 presence->priv->saved_status = presence->priv->status;
-                scsm_presence_set_status (presence, GSM_PRESENCE_STATUS_IDLE);
+                scsm_presence_set_status (presence, SCSM_PRESENCE_STATUS_IDLE);
 
                 gnome_idle_monitor_add_user_active_watch (presence->priv->idle_monitor,
                                                           idle_became_active_cb,
                                                           presence,
                                                           NULL);
         } else {
-                if (presence->priv->status != GSM_PRESENCE_STATUS_IDLE) {
+                if (presence->priv->status != SCSM_PRESENCE_STATUS_IDLE) {
                         g_debug ("GsmPresence: already not idle, ignoring");
                         return;
                 }
@@ -163,7 +163,7 @@ set_session_idle (GsmPresence   *presence,
                 /* restore saved status */
                 scsm_presence_set_status (presence, presence->priv->saved_status);
                 g_debug ("GsmPresence: setting non-idle status %d", presence->priv->saved_status);
-                presence->priv->saved_status = GSM_PRESENCE_STATUS_AVAILABLE;
+                presence->priv->saved_status = SCSM_PRESENCE_STATUS_AVAILABLE;
         }
 }
 
@@ -294,7 +294,7 @@ register_presence (GsmPresence *presence)
         presence->priv->skeleton = skeleton;
         g_dbus_interface_skeleton_export (G_DBUS_INTERFACE_SKELETON (skeleton),
                                           presence->priv->connection,
-                                          GSM_PRESENCE_DBUS_PATH, &error);
+                                          SCSM_PRESENCE_DBUS_PATH, &error);
         if (error != NULL) {
                 g_critical ("error registering presence object on session bus: %s", error->message);
                 g_error_free (error);
@@ -318,7 +318,7 @@ scsm_presence_constructor (GType                  type,
         gboolean     res;
         GError      *error = NULL;
 
-        presence = GSM_PRESENCE (G_OBJECT_CLASS (scsm_presence_parent_class)->constructor (type,
+        presence = SCSM_PRESENCE (G_OBJECT_CLASS (scsm_presence_parent_class)->constructor (type,
                                                                                              n_construct_properties,
                                                                                              construct_properties));
 
@@ -351,7 +351,7 @@ scsm_presence_constructor (GType                  type,
 static void
 scsm_presence_init (GsmPresence *presence)
 {
-        presence->priv = GSM_PRESENCE_GET_PRIVATE (presence);
+        presence->priv = SCSM_PRESENCE_GET_PRIVATE (presence);
 
         presence->priv->idle_monitor = gnome_idle_monitor_new ();
 }
@@ -360,7 +360,7 @@ void
 scsm_presence_set_idle_enabled (GsmPresence  *presence,
                                gboolean      enabled)
 {
-        g_return_if_fail (GSM_IS_PRESENCE (presence));
+        g_return_if_fail (SCSM_IS_PRESENCE (presence));
 
         if (presence->priv->idle_enabled != enabled) {
                 presence->priv->idle_enabled = enabled;
@@ -374,7 +374,7 @@ void
 scsm_presence_set_idle_timeout (GsmPresence  *presence,
                                guint         timeout)
 {
-        g_return_if_fail (GSM_IS_PRESENCE (presence));
+        g_return_if_fail (SCSM_IS_PRESENCE (presence));
 
         if (timeout != presence->priv->idle_timeout) {
                 presence->priv->idle_timeout = timeout;
@@ -391,7 +391,7 @@ scsm_presence_set_property (GObject       *object,
 {
         GsmPresence *self;
 
-        self = GSM_PRESENCE (object);
+        self = SCSM_PRESENCE (object);
 
         switch (prop_id) {
         case PROP_IDLE_ENABLED:
@@ -414,7 +414,7 @@ scsm_presence_get_property (GObject    *object,
 {
         GsmPresence *self;
 
-        self = GSM_PRESENCE (object);
+        self = SCSM_PRESENCE (object);
 
         switch (prop_id) {
         case PROP_IDLE_ENABLED:
@@ -492,7 +492,7 @@ scsm_presence_new (void)
 {
         GsmPresence *presence;
 
-        presence = g_object_new (GSM_TYPE_PRESENCE,
+        presence = g_object_new (SCSM_TYPE_PRESENCE,
                                  NULL);
 
         return presence;

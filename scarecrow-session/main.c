@@ -47,7 +47,7 @@
 #include <systemd/sd-journal.h>
 #endif
 
-#define GSM_DBUS_NAME "io.github.scarecrow_de.SessionManager"
+#define SCSM_DBUS_NAME "io.github.scarecrow_de.SessionManager"
 
 static gboolean systemd_service = FALSE;
 static gboolean use_systemd = USE_SYSTEMD_SESSION;
@@ -94,7 +94,7 @@ on_name_lost (GDBusConnection *connection,
                  * applications in the off chance a handler is already queued
                  * to dispatch following the below call to gtk_main_quit.
                  */
-                scsm_manager_set_phase (manager, GSM_MANAGER_PHASE_EXIT);
+                scsm_manager_set_phase (manager, SCSM_MANAGER_PHASE_EXIT);
 
                 scsm_quit ();
         }
@@ -109,8 +109,8 @@ term_or_int_signal_cb (gpointer data)
         /* let the fatal signals interrupt us */
         g_debug ("Caught SIGINT/SIGTERM, shutting down normally.");
 
-        if (!scsm_manager_logout (manager, GSM_MANAGER_LOGOUT_MODE_FORCE, &error)) {
-                if (g_error_matches (error, GSM_MANAGER_ERROR, GSM_MANAGER_ERROR_NOT_IN_RUNNING)) {
+        if (!scsm_manager_logout (manager, SCSM_MANAGER_LOGOUT_MODE_FORCE, &error)) {
+                if (g_error_matches (error, SCSM_MANAGER_ERROR, SCSM_MANAGER_ERROR_NOT_IN_RUNNING)) {
                     scsm_quit ();
                     return FALSE;
                 }
@@ -180,7 +180,7 @@ static guint
 acquire_name (void)
 {
         return g_bus_own_name (G_BUS_TYPE_SESSION,
-                               GSM_DBUS_NAME,
+                               SCSM_DBUS_NAME,
                                G_BUS_NAME_OWNER_FLAGS_NONE,
                                on_bus_acquired,
                                on_name_acquired,

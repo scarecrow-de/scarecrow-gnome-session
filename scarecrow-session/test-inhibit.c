@@ -63,9 +63,9 @@ session_manager_connect (void)
 }
 
 typedef enum {
-        GSM_INHIBITOR_FLAG_LOGOUT      = 1 << 0,
-        GSM_INHIBITOR_FLAG_SWITCH_USER = 1 << 1,
-        GSM_INHIBITOR_FLAG_SUSPEND     = 1 << 2
+        SCSM_INHIBITOR_FLAG_LOGOUT      = 1 << 0,
+        SCSM_INHIBITOR_FLAG_SWITCH_USER = 1 << 1,
+        SCSM_INHIBITOR_FLAG_SUSPEND     = 1 << 2
 } GsmInhibitFlag;
 
 static gboolean
@@ -86,9 +86,9 @@ do_inhibit_for_window (GdkWindow *window)
         reason = "A file transfer is in progress.";
 #endif
         toplevel_xid = gdk_x11_window_get_xid (window);
-        flags = GSM_INHIBITOR_FLAG_LOGOUT
-                | GSM_INHIBITOR_FLAG_SWITCH_USER
-                | GSM_INHIBITOR_FLAG_SUSPEND;
+        flags = SCSM_INHIBITOR_FLAG_LOGOUT
+                | SCSM_INHIBITOR_FLAG_SWITCH_USER
+                | SCSM_INHIBITOR_FLAG_SUSPEND;
 
         error = NULL;
         cookie_variant = g_dbus_proxy_call_sync (sm_proxy,

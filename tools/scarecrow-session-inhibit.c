@@ -43,15 +43,15 @@ static GsmInhibitorFlag parse_flags (const gchar *arg)
   for (i = 0; args[i]; i++)
     {
       if (strcmp (args[i], "logout") == 0)
-        flags |= GSM_INHIBITOR_FLAG_LOGOUT;
+        flags |= SCSM_INHIBITOR_FLAG_LOGOUT;
       else if (strcmp (args[i], "switch-user") == 0)
-        flags |= GSM_INHIBITOR_FLAG_SWITCH_USER;
+        flags |= SCSM_INHIBITOR_FLAG_SWITCH_USER;
       else if (strcmp (args[i], "suspend") == 0)
-        flags |= GSM_INHIBITOR_FLAG_SUSPEND;
+        flags |= SCSM_INHIBITOR_FLAG_SUSPEND;
       else if (strcmp (args[i], "idle") == 0)
-        flags |= GSM_INHIBITOR_FLAG_IDLE;
+        flags |= SCSM_INHIBITOR_FLAG_IDLE;
       else if (strcmp (args[i], "automount") == 0)
-        flags |= GSM_INHIBITOR_FLAG_AUTOMOUNT;
+        flags |= SCSM_INHIBITOR_FLAG_AUTOMOUNT;
       else
         g_print ("Ignoring inhibit argument: %s\n", args[i]);
     }
@@ -167,15 +167,15 @@ flags_to_str (guint32 flags)
   GString *s;
 
   s = g_string_new (NULL);
-  if (flags & GSM_INHIBITOR_FLAG_LOGOUT)
+  if (flags & SCSM_INHIBITOR_FLAG_LOGOUT)
     string_append_comma (s, "logout");
-  if (flags & GSM_INHIBITOR_FLAG_SWITCH_USER)
+  if (flags & SCSM_INHIBITOR_FLAG_SWITCH_USER)
     string_append_comma (s, "switch-user");
-  if (flags & GSM_INHIBITOR_FLAG_SUSPEND)
+  if (flags & SCSM_INHIBITOR_FLAG_SUSPEND)
     string_append_comma (s, "suspend");
-  if (flags & GSM_INHIBITOR_FLAG_IDLE)
+  if (flags & SCSM_INHIBITOR_FLAG_IDLE)
     string_append_comma (s, "idle");
-  if (flags & GSM_INHIBITOR_FLAG_AUTOMOUNT)
+  if (flags & SCSM_INHIBITOR_FLAG_AUTOMOUNT)
     string_append_comma (s, "automount");
 
   return g_string_free (s, FALSE);
@@ -397,7 +397,7 @@ int main (int argc, char *argv[])
     }
 
   if (inhibit_flags == 0)
-    inhibit_flags = GSM_INHIBITOR_FLAG_IDLE;
+    inhibit_flags = SCSM_INHIBITOR_FLAG_IDLE;
 
   if (inhibit (app_id, reason, inhibit_flags) == FALSE)
     return 1;

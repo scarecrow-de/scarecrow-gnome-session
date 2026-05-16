@@ -16,8 +16,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_INHIBITOR_H__
-#define __GSM_INHIBITOR_H__
+#ifndef __SCSM_INHIBITOR_H__
+#define __SCSM_INHIBITOR_H__
 
 #include <glib-object.h>
 #include <sys/types.h>
@@ -26,12 +26,12 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_INHIBITOR            (scsm_inhibitor_get_type ())
-#define GSM_INHIBITOR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_INHIBITOR, GsmInhibitor))
-#define GSM_INHIBITOR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_INHIBITOR, GsmInhibitorClass))
-#define GSM_IS_INHIBITOR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_INHIBITOR))
-#define GSM_IS_INHIBITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_INHIBITOR))
-#define GSM_INHIBITOR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GSM_TYPE_INHIBITOR, GsmInhibitorClass))
+#define SCSM_TYPE_INHIBITOR            (scsm_inhibitor_get_type ())
+#define SCSM_INHIBITOR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_INHIBITOR, GsmInhibitor))
+#define SCSM_INHIBITOR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_INHIBITOR, GsmInhibitorClass))
+#define SCSM_IS_INHIBITOR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_INHIBITOR))
+#define SCSM_IS_INHIBITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_INHIBITOR))
+#define SCSM_INHIBITOR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_INHIBITOR, GsmInhibitorClass))
 
 typedef struct _GsmInhibitor        GsmInhibitor;
 typedef struct _GsmInhibitorClass   GsmInhibitorClass;
@@ -51,12 +51,12 @@ struct _GsmInhibitorClass
 
 typedef enum
 {
-        GSM_INHIBITOR_ERROR_GENERAL = 0,
-        GSM_INHIBITOR_ERROR_NOT_SET,
-        GSM_INHIBITOR_NUM_ERRORS
+        SCSM_INHIBITOR_ERROR_GENERAL = 0,
+        SCSM_INHIBITOR_ERROR_NOT_SET,
+        SCSM_INHIBITOR_NUM_ERRORS
 } GsmInhibitorError;
 
-#define GSM_INHIBITOR_ERROR scsm_inhibitor_error_quark ()
+#define SCSM_INHIBITOR_ERROR scsm_inhibitor_error_quark ()
 GQuark         scsm_inhibitor_error_quark          (void);
 
 GType          scsm_inhibitor_get_type             (void) G_GNUC_CONST;
@@ -85,4 +85,4 @@ guint          scsm_inhibitor_peek_toplevel_xid    (GsmInhibitor  *inhibitor);
 
 G_END_DECLS
 
-#endif /* __GSM_INHIBITOR_H__ */
+#endif /* __SCSM_INHIBITOR_H__ */

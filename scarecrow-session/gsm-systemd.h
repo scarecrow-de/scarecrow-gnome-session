@@ -19,20 +19,20 @@
  *	Matthias Clasen <mclasen@redhat.com>
  */
 
-#ifndef __GSM_SYSTEMD_H__
-#define __GSM_SYSTEMD_H__
+#ifndef __SCSM_SYSTEMD_H__
+#define __SCSM_SYSTEMD_H__
 
 #include <glib.h>
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_SYSTEMD             (scsm_systemd_get_type ())
-#define GSM_SYSTEMD(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_SYSTEMD, GsmSystemd))
-#define GSM_SYSTEMD_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_SYSTEMD, GsmSystemdClass))
-#define GSM_IS_SYSTEMD(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_SYSTEMD))
-#define GSM_IS_SYSTEMD_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_SYSTEMD))
-#define GSM_SYSTEMD_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), GSM_TYPE_SYSTEMD, GsmSystemdClass))
+#define SCSM_TYPE_SYSTEMD             (scsm_systemd_get_type ())
+#define SCSM_SYSTEMD(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SYSTEMD, GsmSystemd))
+#define SCSM_SYSTEMD_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SYSTEMD, GsmSystemdClass))
+#define SCSM_IS_SYSTEMD(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SYSTEMD))
+#define SCSM_IS_SYSTEMD_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_SYSTEMD))
+#define SCSM_SYSTEMD_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), SCSM_TYPE_SYSTEMD, GsmSystemdClass))
 
 typedef struct _GsmSystemd        GsmSystemd;
 typedef struct _GsmSystemdClass   GsmSystemdClass;
@@ -56,4 +56,4 @@ GsmSystemd   *scsm_systemd_new      (void) G_GNUC_MALLOC;
 
 G_END_DECLS
 
-#endif /* __GSM_SYSTEMD_H__ */
+#endif /* __SCSM_SYSTEMD_H__ */

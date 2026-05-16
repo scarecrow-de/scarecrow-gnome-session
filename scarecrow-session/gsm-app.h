@@ -17,8 +17,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_APP_H__
-#define __GSM_APP_H__
+#ifndef __SCSM_APP_H__
+#define __SCSM_APP_H__
 
 #include <glib-object.h>
 #include <sys/types.h>
@@ -29,12 +29,12 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_APP            (scsm_app_get_type ())
-#define GSM_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_APP, GsmApp))
-#define GSM_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_APP, GsmAppClass))
-#define GSM_IS_APP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_APP))
-#define GSM_IS_APP_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_APP))
-#define GSM_APP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GSM_TYPE_APP, GsmAppClass))
+#define SCSM_TYPE_APP            (scsm_app_get_type ())
+#define SCSM_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_APP, GsmApp))
+#define SCSM_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_APP, GsmAppClass))
+#define SCSM_IS_APP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_APP))
+#define SCSM_IS_APP_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_APP))
+#define SCSM_APP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_APP, GsmAppClass))
 
 typedef struct _GsmApp        GsmApp;
 typedef struct _GsmAppClass   GsmAppClass;
@@ -82,14 +82,14 @@ struct _GsmAppClass
 
 typedef enum
 {
-        GSM_APP_ERROR_GENERAL = 0,
-        GSM_APP_ERROR_RESTART_LIMIT,
-        GSM_APP_ERROR_START,
-        GSM_APP_ERROR_STOP,
-        GSM_APP_NUM_ERRORS
+        SCSM_APP_ERROR_GENERAL = 0,
+        SCSM_APP_ERROR_RESTART_LIMIT,
+        SCSM_APP_ERROR_START,
+        SCSM_APP_ERROR_STOP,
+        SCSM_APP_NUM_ERRORS
 } GsmAppError;
 
-#define GSM_APP_ERROR scsm_app_error_quark ()
+#define SCSM_APP_ERROR scsm_app_error_quark ()
 
 GQuark           scsm_app_error_quark                    (void);
 GType            scsm_app_get_type                       (void) G_GNUC_CONST;
@@ -131,4 +131,4 @@ gboolean         scsm_app_save_to_keyfile                (GsmApp    *app,
 
 G_END_DECLS
 
-#endif /* __GSM_APP_H__ */
+#endif /* __SCSM_APP_H__ */

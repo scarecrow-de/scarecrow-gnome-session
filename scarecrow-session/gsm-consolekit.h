@@ -19,20 +19,20 @@
  *	Jon McCann <jmccann@redhat.com>
  */
 
-#ifndef __GSM_CONSOLEKIT_H__
-#define __GSM_CONSOLEKIT_H__
+#ifndef __SCSM_CONSOLEKIT_H__
+#define __SCSM_CONSOLEKIT_H__
 
 #include <glib.h>
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_CONSOLEKIT             (scsm_consolekit_get_type ())
-#define GSM_CONSOLEKIT(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_CONSOLEKIT, GsmConsolekit))
-#define GSM_CONSOLEKIT_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_CONSOLEKIT, GsmConsolekitClass))
-#define GSM_IS_CONSOLEKIT(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_CONSOLEKIT))
-#define GSM_IS_CONSOLEKIT_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_CONSOLEKIT))
-#define GSM_CONSOLEKIT_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), GSM_TYPE_CONSOLEKIT, GsmConsolekitClass))
+#define SCSM_TYPE_CONSOLEKIT             (scsm_consolekit_get_type ())
+#define SCSM_CONSOLEKIT(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_CONSOLEKIT, GsmConsolekit))
+#define SCSM_CONSOLEKIT_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_CONSOLEKIT, GsmConsolekitClass))
+#define SCSM_IS_CONSOLEKIT(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_CONSOLEKIT))
+#define SCSM_IS_CONSOLEKIT_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_CONSOLEKIT))
+#define SCSM_CONSOLEKIT_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), SCSM_TYPE_CONSOLEKIT, GsmConsolekitClass))
 
 typedef struct _GsmConsolekit        GsmConsolekit;
 typedef struct _GsmConsolekitClass   GsmConsolekitClass;
@@ -56,4 +56,4 @@ GsmConsolekit   *scsm_consolekit_new             (void) G_GNUC_MALLOC;
 
 G_END_DECLS
 
-#endif /* __GSM_CONSOLEKIT_H__ */
+#endif /* __SCSM_CONSOLEKIT_H__ */

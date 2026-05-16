@@ -16,21 +16,21 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_INHIBITOR_FLAG_H__
-#define __GSM_INHIBITOR_FLAG_H__
+#ifndef __SCSM_INHIBITOR_FLAG_H__
+#define __SCSM_INHIBITOR_FLAG_H__
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
 typedef enum {
-        GSM_INHIBITOR_FLAG_LOGOUT      = 1 << 0,
-        GSM_INHIBITOR_FLAG_SWITCH_USER = 1 << 1,
-        GSM_INHIBITOR_FLAG_SUSPEND     = 1 << 2,
-        GSM_INHIBITOR_FLAG_IDLE        = 1 << 3,
-        GSM_INHIBITOR_FLAG_AUTOMOUNT   = 1 << 4
+        SCSM_INHIBITOR_FLAG_LOGOUT      = 1 << 0,
+        SCSM_INHIBITOR_FLAG_SWITCH_USER = 1 << 1,
+        SCSM_INHIBITOR_FLAG_SUSPEND     = 1 << 2,
+        SCSM_INHIBITOR_FLAG_IDLE        = 1 << 3,
+        SCSM_INHIBITOR_FLAG_AUTOMOUNT   = 1 << 4
 } GsmInhibitorFlag;
 
 G_END_DECLS
 
-#endif /* __GSM_INHIBITOR_FLAG_H__ */
+#endif /* __SCSM_INHIBITOR_FLAG_H__ */

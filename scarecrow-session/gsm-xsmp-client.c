@@ -36,9 +36,9 @@
 #include "scsm-icon-names.h"
 #include "scsm-manager.h"
 
-#define GsmDesktopFile "_GSM_DesktopFile"
+#define GsmDesktopFile "_SCSM_DesktopFile"
 
-#define GSM_XSMP_CLIENT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_XSMP_CLIENT, GsmXSMPClientPrivate))
+#define SCSM_XSMP_CLIENT_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_XSMP_CLIENT, GsmXSMPClientPrivate))
 
 struct GsmXSMPClientPrivate
 {
@@ -71,7 +71,7 @@ enum {
 
 static guint signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (GsmXSMPClient, scsm_xsmp_client, GSM_TYPE_CLIENT)
+G_DEFINE_TYPE (GsmXSMPClient, scsm_xsmp_client, SCSM_TYPE_CLIENT)
 
 static gboolean
 client_iochannel_watch (GIOChannel    *channel,
@@ -88,11 +88,11 @@ client_iochannel_watch (GIOChannel    *channel,
 
         case IceProcessMessagesIOError:
                 g_debug ("GsmXSMPClient: IceProcessMessagesIOError on '%s'", client->priv->description);
-                scsm_client_set_status (GSM_CLIENT (client), GSM_CLIENT_FAILED);
+                scsm_client_set_status (SCSM_CLIENT (client), SCSM_CLIENT_FAILED);
                 /* Emitting "disconnected" will eventually cause
                  * IceCloseConnection() to be called.
                  */
-                scsm_client_disconnected (GSM_CLIENT (client));
+                scsm_client_disconnected (SCSM_CLIENT (client));
                 keep_going = FALSE;
                 break;
 
@@ -140,7 +140,7 @@ set_description (GsmXSMPClient *client)
         const char *id;
 
         prop = find_property (client, SmProgram, NULL);
-        id = scsm_client_peek_startup_id (GSM_CLIENT (client));
+        id = scsm_client_peek_startup_id (SCSM_CLIENT (client));
 
         g_free (client->priv->description);
         if (prop) {
@@ -185,7 +185,7 @@ scsm_xsmp_client_constructor (GType                  type,
 {
         GsmXSMPClient *client;
 
-        client = GSM_XSMP_CLIENT (G_OBJECT_CLASS (scsm_xsmp_client_parent_class)->constructor (type,
+        client = SCSM_XSMP_CLIENT (G_OBJECT_CLASS (scsm_xsmp_client_parent_class)->constructor (type,
                                                                                               n_construct_properties,
                                                                                               construct_properties));
         setup_connection (client);
@@ -196,7 +196,7 @@ scsm_xsmp_client_constructor (GType                  type,
 static void
 scsm_xsmp_client_init (GsmXSMPClient *client)
 {
-        client->priv = GSM_XSMP_CLIENT_GET_PRIVATE (client);
+        client->priv = SCSM_XSMP_CLIENT_GET_PRIVATE (client);
 
         client->priv->props = g_ptr_array_new ();
         client->priv->current_save_yourself = -1;
@@ -226,7 +226,7 @@ delete_property (GsmXSMPClient *client,
          * again later.
          */
         if (!strcmp (name, SmDiscardCommand)) {
-                scsm_client_run_discard (GSM_CLIENT (client));
+                scsm_client_run_discard (SCSM_CLIENT (client));
         }
 #endif
 
@@ -375,7 +375,7 @@ xsmp_get_restart_command (GsmClient *client)
 {
         SmProp *prop;
 
-        prop = find_property (GSM_XSMP_CLIENT (client), SmRestartCommand, NULL);
+        prop = find_property (SCSM_XSMP_CLIENT (client), SmRestartCommand, NULL);
 
         if (!prop || strcmp (prop->type, SmLISTofARRAY8) != 0) {
                 return NULL;
@@ -389,7 +389,7 @@ xsmp_get_discard_command (GsmClient *client)
 {
         SmProp *prop;
 
-        prop = find_property (GSM_XSMP_CLIENT (client), SmDiscardCommand, NULL);
+        prop = find_property (SCSM_XSMP_CLIENT (client), SmDiscardCommand, NULL);
 
         if (!prop || strcmp (prop->type, SmLISTofARRAY8) != 0) {
                 return NULL;
@@ -483,8 +483,8 @@ xsmp_cancel_end_session (GsmClient *client,
 
         if (xsmp->priv->conn == NULL) {
                 g_set_error (error,
-                             GSM_CLIENT_ERROR,
-                             GSM_CLIENT_ERROR_NOT_REGISTERED,
+                             SCSM_CLIENT_ERROR,
+                             SCSM_CLIENT_ERROR_NOT_REGISTERED,
                              "Client is not registered");
                 return FALSE;
         }
@@ -532,7 +532,7 @@ get_desktop_file_path (GsmXSMPClient *client)
 
 out:
         g_debug ("GsmXSMPClient: desktop file for client %s is %s",
-                 scsm_client_peek_id (GSM_CLIENT (client)),
+                 scsm_client_peek_id (SCSM_CLIENT (client)),
                  desktop_file_path ? desktop_file_path : "(null)");
 
         return desktop_file_path;
@@ -546,7 +546,7 @@ set_desktop_file_keys_from_client (GsmClient *client,
         const char *name;
         char       *comment;
 
-        prop = find_property (GSM_XSMP_CLIENT (client), SmProgram, NULL);
+        prop = find_property (SCSM_XSMP_CLIENT (client), SmProgram, NULL);
         if (prop) {
                 name = prop->vals[0].value;
         } else {
@@ -573,7 +573,7 @@ set_desktop_file_keys_from_client (GsmClient *client,
         g_key_file_set_string (keyfile,
                                G_KEY_FILE_DESKTOP_GROUP,
                                G_KEY_FILE_DESKTOP_KEY_ICON,
-                               GSM_ICON_XSMP_DEFAULT);
+                               SCSM_ICON_XSMP_DEFAULT);
 
         g_key_file_set_string (keyfile,
                                G_KEY_FILE_DESKTOP_GROUP,
@@ -632,7 +632,7 @@ xsmp_save (GsmClient *client,
         local_error = NULL;
 
         restart_style = xsmp_get_restart_style_hint (client);
-        if (restart_style == GSM_CLIENT_RESTART_NEVER) {
+        if (restart_style == SCSM_CLIENT_RESTART_NEVER) {
                 goto out;
         }
 
@@ -641,7 +641,7 @@ xsmp_save (GsmClient *client,
                 goto out;
         }
 
-        desktop_file_path = get_desktop_file_path (GSM_XSMP_CLIENT (client));
+        desktop_file_path = get_desktop_file_path (SCSM_XSMP_CLIENT (client));
 
         /* this can accept desktop_file_path == NULL */
         keyfile = create_client_key_file (client,
@@ -658,7 +658,7 @@ xsmp_save (GsmClient *client,
 
         g_key_file_set_string (keyfile,
                                G_KEY_FILE_DESKTOP_GROUP,
-                               GSM_AUTOSTART_APP_STARTUP_ID_KEY,
+                               SCSM_AUTOSTART_APP_STARTUP_ID_KEY,
                                startup_id);
 
         g_key_file_set_string (keyfile,
@@ -670,7 +670,7 @@ xsmp_save (GsmClient *client,
         if (exec_discard)
                 g_key_file_set_string (keyfile,
                                        G_KEY_FILE_DESKTOP_GROUP,
-                                       GSM_AUTOSTART_APP_DISCARD_KEY,
+                                       SCSM_AUTOSTART_APP_DISCARD_KEY,
                                        exec_discard);
 
         if (app != NULL) {
@@ -707,8 +707,8 @@ xsmp_stop (GsmClient *client,
 
         if (xsmp->priv->conn == NULL) {
                 g_set_error (error,
-                             GSM_CLIENT_ERROR,
-                             GSM_CLIENT_ERROR_NOT_REGISTERED,
+                             SCSM_CLIENT_ERROR,
+                             SCSM_CLIENT_ERROR_NOT_REGISTERED,
                              "Client is not registered");
                 return FALSE;
         }
@@ -726,24 +726,24 @@ xsmp_query_end_session (GsmClient                *client,
         gboolean allow_interact;
         int      save_type;
 
-        if (GSM_XSMP_CLIENT (client)->priv->conn == NULL) {
+        if (SCSM_XSMP_CLIENT (client)->priv->conn == NULL) {
                 g_set_error (error,
-                             GSM_CLIENT_ERROR,
-                             GSM_CLIENT_ERROR_NOT_REGISTERED,
+                             SCSM_CLIENT_ERROR,
+                             SCSM_CLIENT_ERROR_NOT_REGISTERED,
                              "Client is not registered");
                 return FALSE;
         }
 
-        allow_interact = !(flags & GSM_CLIENT_END_SESSION_FLAG_FORCEFUL);
+        allow_interact = !(flags & SCSM_CLIENT_END_SESSION_FLAG_FORCEFUL);
 
         /* we don't want to save the session state, but we just want to know if
          * there's user data the client has to save and we want to give the
          * client a chance to tell the user about it. This is consistent with
-         * the manager not setting GSM_CLIENT_END_SESSION_FLAG_SAVE for this
+         * the manager not setting SCSM_CLIENT_END_SESSION_FLAG_SAVE for this
          * phase. */
         save_type = SmSaveGlobal;
 
-        do_save_yourself (GSM_XSMP_CLIENT (client), save_type, allow_interact);
+        do_save_yourself (SCSM_XSMP_CLIENT (client), save_type, allow_interact);
         return TRUE;
 }
 
@@ -754,15 +754,15 @@ xsmp_end_session (GsmClient                *client,
 {
         gboolean phase2;
 
-        if (GSM_XSMP_CLIENT (client)->priv->conn == NULL) {
+        if (SCSM_XSMP_CLIENT (client)->priv->conn == NULL) {
                 g_set_error (error,
-                             GSM_CLIENT_ERROR,
-                             GSM_CLIENT_ERROR_NOT_REGISTERED,
+                             SCSM_CLIENT_ERROR,
+                             SCSM_CLIENT_ERROR_NOT_REGISTERED,
                              "Client is not registered");
                 return FALSE;
         }
 
-        phase2 = (flags & GSM_CLIENT_END_SESSION_FLAG_LAST);
+        phase2 = (flags & SCSM_CLIENT_END_SESSION_FLAG_LAST);
 
         if (phase2) {
                 xsmp_save_yourself_phase2 (client);
@@ -774,13 +774,13 @@ xsmp_end_session (GsmClient                *client,
                  * xsmp_query_end_session(), now it's too late to interact */
                 allow_interact = FALSE;
 
-                if (flags & GSM_CLIENT_END_SESSION_FLAG_SAVE) {
+                if (flags & SCSM_CLIENT_END_SESSION_FLAG_SAVE) {
                         save_type = SmSaveBoth;
                 } else {
                         save_type = SmSaveGlobal;
                 }
 
-                do_save_yourself (GSM_XSMP_CLIENT (client),
+                do_save_yourself (SCSM_XSMP_CLIENT (client),
                                   save_type, allow_interact);
         }
 
@@ -793,7 +793,7 @@ xsmp_get_app_name (GsmClient *client)
         SmProp *prop;
         char   *name = NULL;
 
-        prop = find_property (GSM_XSMP_CLIENT (client), SmProgram, NULL);
+        prop = find_property (SCSM_XSMP_CLIENT (client), SmProgram, NULL);
         if (prop) {
                 name = prop_to_command (prop);
         }
@@ -816,7 +816,7 @@ scsm_xsmp_client_set_property (GObject       *object,
 {
         GsmXSMPClient *self;
 
-        self = GSM_XSMP_CLIENT (object);
+        self = SCSM_XSMP_CLIENT (object);
 
         switch (prop_id) {
         case PROP_ICE_CONNECTION:
@@ -836,7 +836,7 @@ scsm_xsmp_client_get_property (GObject    *object,
 {
         GsmXSMPClient *self;
 
-        self = GSM_XSMP_CLIENT (object);
+        self = SCSM_XSMP_CLIENT (object);
 
         switch (prop_id) {
         case PROP_ICE_CONNECTION:
@@ -903,26 +903,26 @@ xsmp_get_restart_style_hint (GsmClient *client)
         GsmClientRestartStyle hint;
 
         g_debug ("GsmXSMPClient: getting restart style");
-        hint = GSM_CLIENT_RESTART_IF_RUNNING;
+        hint = SCSM_CLIENT_RESTART_IF_RUNNING;
 
-        prop = find_property (GSM_XSMP_CLIENT (client), SmRestartStyleHint, NULL);
+        prop = find_property (SCSM_XSMP_CLIENT (client), SmRestartStyleHint, NULL);
 
         if (!prop || strcmp (prop->type, SmCARD8) != 0) {
-                return GSM_CLIENT_RESTART_IF_RUNNING;
+                return SCSM_CLIENT_RESTART_IF_RUNNING;
         }
 
         switch (((unsigned char *)prop->vals[0].value)[0]) {
         case SmRestartIfRunning:
-                hint = GSM_CLIENT_RESTART_IF_RUNNING;
+                hint = SCSM_CLIENT_RESTART_IF_RUNNING;
                 break;
         case SmRestartAnyway:
-                hint = GSM_CLIENT_RESTART_ANYWAY;
+                hint = SCSM_CLIENT_RESTART_ANYWAY;
                 break;
         case SmRestartImmediately:
-                hint = GSM_CLIENT_RESTART_IMMEDIATELY;
+                hint = SCSM_CLIENT_RESTART_IMMEDIATELY;
                 break;
         case SmRestartNever:
-                hint = GSM_CLIENT_RESTART_NEVER;
+                hint = SCSM_CLIENT_RESTART_NEVER;
                 break;
         default:
                 break;
@@ -965,7 +965,7 @@ xsmp_get_unix_process_id (GsmClient *client)
 
         g_debug ("GsmXSMPClient: getting pid");
 
-        prop = find_property (GSM_XSMP_CLIENT (client), SmProcessID, NULL);
+        prop = find_property (SCSM_XSMP_CLIENT (client), SmProcessID, NULL);
 
         if (!prop || strcmp (prop->type, SmARRAY8) != 0) {
                 return 0;
@@ -984,7 +984,7 @@ static void
 scsm_xsmp_client_class_init (GsmXSMPClientClass *klass)
 {
         GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-        GsmClientClass *client_class = GSM_CLIENT_CLASS (klass);
+        GsmClientClass *client_class = SCSM_CLIENT_CLASS (klass);
 
         object_class->finalize             = scsm_xsmp_client_finalize;
         object_class->constructor          = scsm_xsmp_client_constructor;
@@ -1046,11 +1046,11 @@ scsm_xsmp_client_new (IceConn ice_conn)
 {
         GsmXSMPClient *xsmp;
 
-        xsmp = g_object_new (GSM_TYPE_XSMP_CLIENT,
+        xsmp = g_object_new (SCSM_TYPE_XSMP_CLIENT,
                              "ice-connection", ice_conn,
                              NULL);
 
-        return GSM_CLIENT (xsmp);
+        return SCSM_CLIENT (xsmp);
 }
 
 static Status
@@ -1105,7 +1105,7 @@ register_client_callback (SmsConn    conn,
                 client->priv->current_save_yourself = SmSaveLocal;
         }
 
-        scsm_client_set_status (GSM_CLIENT (client), GSM_CLIENT_REGISTERED);
+        scsm_client_set_status (SCSM_CLIENT (client), SCSM_CLIENT_REGISTERED);
 
         g_signal_emit (client, signals[REGISTER_CONFIRMED], 0, id);
 
@@ -1191,7 +1191,7 @@ save_yourself_phase2_request_callback (SmsConn   conn,
 
         /* this is a valid response to SaveYourself and therefore
            may be a response to a QES or ES */
-        scsm_client_end_session_response (GSM_CLIENT (client),
+        scsm_client_end_session_response (SCSM_CLIENT (client),
                                          TRUE, TRUE, FALSE,
                                          NULL);
 }
@@ -1211,7 +1211,7 @@ interact_request_callback (SmsConn   conn,
                  client->priv->description,
                  dialog_type == SmDialogNormal ? "Dialog" : "Errors");
 
-        scsm_client_end_session_response (GSM_CLIENT (client),
+        scsm_client_end_session_response (SCSM_CLIENT (client),
                                          FALSE, FALSE, FALSE,
                                          _("This program is blocking logout."));
 
@@ -1222,13 +1222,13 @@ interact_request_callback (SmsConn   conn,
            This grabbing is clearly bullshit and is not supported by
            the client spec or protocol spec.
         */
-        res = xsmp_cancel_end_session (GSM_CLIENT (client), &error);
+        res = xsmp_cancel_end_session (SCSM_CLIENT (client), &error);
         if (! res) {
                 g_warning ("Unable to cancel end session: %s", error->message);
                 g_error_free (error);
         }
 #endif
-        xsmp_interact (GSM_CLIENT (client));
+        xsmp_interact (SCSM_CLIENT (client));
 }
 
 static void
@@ -1242,7 +1242,7 @@ interact_done_callback (SmsConn   conn,
                  client->priv->description,
                  cancel_shutdown ? "True" : "False");
 
-        scsm_client_end_session_response (GSM_CLIENT (client),
+        scsm_client_end_session_response (SCSM_CLIENT (client),
                                          TRUE, FALSE, cancel_shutdown,
                                          NULL);
 }
@@ -1266,7 +1266,7 @@ save_yourself_done_callback (SmsConn   conn,
         /* If success is false then the application couldn't save data. Nothing
          * the session manager can do about, though. FIXME: we could display a
          * dialog about this, I guess. */
-        scsm_client_end_session_response (GSM_CLIENT (client),
+        scsm_client_end_session_response (SCSM_CLIENT (client),
                                          TRUE, FALSE, FALSE,
                                          NULL);
 
@@ -1295,8 +1295,8 @@ close_connection_callback (SmsConn     conn,
         }
         SmFreeReasons (count, reason_msgs);
 
-        scsm_client_set_status (GSM_CLIENT (client), GSM_CLIENT_FINISHED);
-        scsm_client_disconnected (GSM_CLIENT (client));
+        scsm_client_set_status (SCSM_CLIENT (client), SCSM_CLIENT_FINISHED);
+        scsm_client_disconnected (SCSM_CLIENT (client));
 }
 
 void
@@ -1355,5 +1355,5 @@ scsm_xsmp_client_connect (GsmXSMPClient *client,
 void
 scsm_xsmp_client_save_state (GsmXSMPClient *client)
 {
-        g_return_if_fail (GSM_IS_XSMP_CLIENT (client));
+        g_return_if_fail (SCSM_IS_XSMP_CLIENT (client));
 }

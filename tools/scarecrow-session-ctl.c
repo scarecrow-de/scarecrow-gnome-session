@@ -36,9 +36,9 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#define GSM_SERVICE_DBUS   "io.github.scarecrow_de.SessionManager"
-#define GSM_PATH_DBUS      "/io/github/scarecrow_de/SessionManager"
-#define GSM_INTERFACE_DBUS "io.github.scarecrow_de.SessionManager"
+#define SCSM_SERVICE_DBUS   "io.github.scarecrow_de.SessionManager"
+#define SCSM_PATH_DBUS      "/io/github/scarecrow_de/SessionManager"
+#define SCSM_INTERFACE_DBUS "io.github.scarecrow_de.SessionManager"
 
 #define SYSTEMD_DBUS            "org.freedesktop.systemd1"
 #define SYSTEMD_PATH_DBUS       "/org/freedesktop/systemd1"
@@ -70,9 +70,9 @@ do_signal_init (void)
                 return;
 
         reply = g_dbus_connection_call_sync (connection,
-                                             GSM_SERVICE_DBUS,
-                                             GSM_PATH_DBUS,
-                                             GSM_INTERFACE_DBUS,
+                                             SCSM_SERVICE_DBUS,
+                                             SCSM_PATH_DBUS,
+                                             SCSM_INTERFACE_DBUS,
                                              "Initialized",
                                              NULL,
                                              NULL,

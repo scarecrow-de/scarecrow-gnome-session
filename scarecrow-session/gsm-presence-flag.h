@@ -16,18 +16,18 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_PRESENCE_FLAG_H__
-#define __GSM_PRESENCE_FLAG_H__
+#ifndef __SCSM_PRESENCE_FLAG_H__
+#define __SCSM_PRESENCE_FLAG_H__
 
 G_BEGIN_DECLS
 
 typedef enum {
-        GSM_PRESENCE_STATUS_AVAILABLE = 0,
-        GSM_PRESENCE_STATUS_INVISIBLE,
-        GSM_PRESENCE_STATUS_BUSY,
-        GSM_PRESENCE_STATUS_IDLE,
+        SCSM_PRESENCE_STATUS_AVAILABLE = 0,
+        SCSM_PRESENCE_STATUS_INVISIBLE,
+        SCSM_PRESENCE_STATUS_BUSY,
+        SCSM_PRESENCE_STATUS_IDLE,
 } GsmPresenceStatus;
 
 G_END_DECLS
 
-#endif /* __GSM_PRESENCE_FLAG_H__ */
+#endif /* __SCSM_PRESENCE_FLAG_H__ */

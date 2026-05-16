@@ -39,8 +39,8 @@
 
 #define AUTOMATIC_ACTION_TIMEOUT 60
 
-#define GSM_SHELL_GET_PRIVATE(o)                                   \
-        (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_SHELL, GsmShellPrivate))
+#define SCSM_SHELL_GET_PRIVATE(o)                                   \
+        (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_SHELL, GsmShellPrivate))
 
 struct _GsmShellPrivate
 {
@@ -88,7 +88,7 @@ scsm_shell_get_property (GObject    *object,
                              GValue     *value,
                              GParamSpec *pspec)
 {
-        GsmShell *shell = GSM_SHELL (object);
+        GsmShell *shell = SCSM_SHELL (object);
 
         switch (prop_id) {
         case PROP_IS_RUNNING:
@@ -219,7 +219,7 @@ scsm_shell_ensure_connection (GsmShell  *shell)
 static void
 scsm_shell_init (GsmShell *shell)
 {
-        shell->priv = GSM_SHELL_GET_PRIVATE (shell);
+        shell->priv = SCSM_SHELL_GET_PRIVATE (shell);
 
         scsm_shell_ensure_connection (shell);
 }
@@ -230,7 +230,7 @@ scsm_shell_finalize (GObject *object)
         GsmShell *shell;
         GObjectClass  *parent_class;
 
-        shell = GSM_SHELL (object);
+        shell = SCSM_SHELL (object);
 
         parent_class = G_OBJECT_CLASS (scsm_shell_parent_class);
 
@@ -251,7 +251,7 @@ scsm_shell_new (void)
 {
         GsmShell *shell;
 
-        shell = g_object_new (GSM_TYPE_SHELL, NULL);
+        shell = g_object_new (SCSM_TYPE_SHELL, NULL);
 
         return shell;
 }

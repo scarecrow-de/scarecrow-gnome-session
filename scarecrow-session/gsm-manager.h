@@ -18,8 +18,8 @@
  */
 
 
-#ifndef __GSM_MANAGER_H
-#define __GSM_MANAGER_H
+#ifndef __SCSM_MANAGER_H
+#define __SCSM_MANAGER_H
 
 #include <glib-object.h>
 
@@ -28,12 +28,12 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_MANAGER         (scsm_manager_get_type ())
-#define GSM_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), GSM_TYPE_MANAGER, GsmManager))
-#define GSM_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), GSM_TYPE_MANAGER, GsmManagerClass))
-#define GSM_IS_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), GSM_TYPE_MANAGER))
-#define GSM_IS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), GSM_TYPE_MANAGER))
-#define GSM_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), GSM_TYPE_MANAGER, GsmManagerClass))
+#define SCSM_TYPE_MANAGER         (scsm_manager_get_type ())
+#define SCSM_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_MANAGER, GsmManager))
+#define SCSM_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_MANAGER, GsmManagerClass))
+#define SCSM_IS_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), SCSM_TYPE_MANAGER))
+#define SCSM_IS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), SCSM_TYPE_MANAGER))
+#define SCSM_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_MANAGER, GsmManagerClass))
 
 typedef struct GsmManagerPrivate GsmManagerPrivate;
 
@@ -53,44 +53,44 @@ typedef struct
 
 typedef enum {
         /* scsm's own startup/initialization phase */
-        GSM_MANAGER_PHASE_STARTUP = 0,
+        SCSM_MANAGER_PHASE_STARTUP = 0,
         /* scarecrow-initial-setup */
-        GSM_MANAGER_PHASE_EARLY_INITIALIZATION,
+        SCSM_MANAGER_PHASE_EARLY_INITIALIZATION,
         /* scarecrow-keyring-daemon */
-        GSM_MANAGER_PHASE_PRE_DISPLAY_SERVER,
+        SCSM_MANAGER_PHASE_PRE_DISPLAY_SERVER,
         /* wayland compositor and XWayland */
-        GSM_MANAGER_PHASE_DISPLAY_SERVER,
+        SCSM_MANAGER_PHASE_DISPLAY_SERVER,
         /* xrandr setup, scarecrow-settings-daemon, etc */
-        GSM_MANAGER_PHASE_INITIALIZATION,
+        SCSM_MANAGER_PHASE_INITIALIZATION,
         /* window/compositing managers */
-        GSM_MANAGER_PHASE_WINDOW_MANAGER,
+        SCSM_MANAGER_PHASE_WINDOW_MANAGER,
         /* apps that will create _NET_WM_WINDOW_TYPE_PANEL windows */
-        GSM_MANAGER_PHASE_PANEL,
+        SCSM_MANAGER_PHASE_PANEL,
         /* apps that will create _NET_WM_WINDOW_TYPE_DESKTOP windows */
-        GSM_MANAGER_PHASE_DESKTOP,
+        SCSM_MANAGER_PHASE_DESKTOP,
         /* everything else */
-        GSM_MANAGER_PHASE_APPLICATION,
+        SCSM_MANAGER_PHASE_APPLICATION,
         /* done launching */
-        GSM_MANAGER_PHASE_RUNNING,
+        SCSM_MANAGER_PHASE_RUNNING,
         /* shutting down */
-        GSM_MANAGER_PHASE_QUERY_END_SESSION,
-        GSM_MANAGER_PHASE_END_SESSION,
-        GSM_MANAGER_PHASE_EXIT
+        SCSM_MANAGER_PHASE_QUERY_END_SESSION,
+        SCSM_MANAGER_PHASE_END_SESSION,
+        SCSM_MANAGER_PHASE_EXIT
 } GsmManagerPhase;
 
 typedef enum
 {
-        GSM_MANAGER_ERROR_GENERAL = 0,
-        GSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
-        GSM_MANAGER_ERROR_NOT_IN_RUNNING,
-        GSM_MANAGER_ERROR_ALREADY_REGISTERED,
-        GSM_MANAGER_ERROR_NOT_REGISTERED,
-        GSM_MANAGER_ERROR_INVALID_OPTION,
-        GSM_MANAGER_ERROR_LOCKED_DOWN,
-        GSM_MANAGER_NUM_ERRORS
+        SCSM_MANAGER_ERROR_GENERAL = 0,
+        SCSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
+        SCSM_MANAGER_ERROR_NOT_IN_RUNNING,
+        SCSM_MANAGER_ERROR_ALREADY_REGISTERED,
+        SCSM_MANAGER_ERROR_NOT_REGISTERED,
+        SCSM_MANAGER_ERROR_INVALID_OPTION,
+        SCSM_MANAGER_ERROR_LOCKED_DOWN,
+        SCSM_MANAGER_NUM_ERRORS
 } GsmManagerError;
 
-#define GSM_MANAGER_ERROR scsm_manager_error_quark ()
+#define SCSM_MANAGER_ERROR scsm_manager_error_quark ()
 GQuark              scsm_manager_error_quark                    (void);
 
 GType               scsm_manager_get_type                       (void);
@@ -134,4 +134,4 @@ gboolean            scsm_manager_set_phase                      (GsmManager     
 
 G_END_DECLS
 
-#endif /* __GSM_MANAGER_H */
+#endif /* __SCSM_MANAGER_H */

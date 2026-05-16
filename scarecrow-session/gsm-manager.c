@@ -70,15 +70,15 @@
 #include "scsm-shell-extensions.h"
 #include "scsm-fail-whale.h"
 
-#define GSM_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_MANAGER, GsmManagerPrivate))
+#define SCSM_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_MANAGER, GsmManagerPrivate))
 
 /* UUIDs for log messages */
-#define GSM_MANAGER_STARTUP_SUCCEEDED_MSGID     "0ce153587afa4095832d233c17a88001"
-#define GSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID "10dd2dc188b54a5e98970f56499d1f73"
+#define SCSM_MANAGER_STARTUP_SUCCEEDED_MSGID     "0ce153587afa4095832d233c17a88001"
+#define SCSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID "10dd2dc188b54a5e98970f56499d1f73"
 
-#define GSM_MANAGER_DBUS_PATH "/io/github/scarecrow_de/SessionManager"
-#define GSM_MANAGER_DBUS_NAME "io.github.scarecrow_de.SessionManager"
-#define GSM_MANAGER_DBUS_IFACE "io.github.scarecrow_de.SessionManager"
+#define SCSM_MANAGER_DBUS_PATH "/io/github/scarecrow_de/SessionManager"
+#define SCSM_MANAGER_DBUS_NAME "io.github.scarecrow_de.SessionManager"
+#define SCSM_MANAGER_DBUS_IFACE "io.github.scarecrow_de.SessionManager"
 
 /* Probably about the longest amount of time someone could reasonably
  * want to wait, at least for something happening more than once.
@@ -88,7 +88,7 @@
  * a fail whale if required components don't show up quickly enough,
  * let's make this fairly long.
  */
-#define GSM_MANAGER_PHASE_TIMEOUT 90 /* seconds */
+#define SCSM_MANAGER_PHASE_TIMEOUT 90 /* seconds */
 
 #define SCDM_FLEXISERVER_COMMAND "scdmflexiserver"
 #define SCDM_FLEXISERVER_ARGS    "--startnew Standard"
@@ -97,7 +97,7 @@
 #define KEY_IDLE_DELAY            "idle-delay"
 #define KEY_SESSION_NAME          "session-name"
 
-#define GSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
+#define SCSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
 #define KEY_AUTOSAVE              "auto-save-session"
 #define KEY_AUTOSAVE_ONE_SHOT     "auto-save-session-one-shot"
 #define KEY_LOGOUT_PROMPT         "logout-prompt"
@@ -114,12 +114,12 @@ static void app_registered (GsmApp     *app, GParamSpec *spec, GsmManager *manag
 
 typedef enum
 {
-        GSM_MANAGER_LOGOUT_NONE,
-        GSM_MANAGER_LOGOUT_LOGOUT,
-        GSM_MANAGER_LOGOUT_REBOOT,
-        GSM_MANAGER_LOGOUT_REBOOT_INTERACT,
-        GSM_MANAGER_LOGOUT_SHUTDOWN,
-        GSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT,
+        SCSM_MANAGER_LOGOUT_NONE,
+        SCSM_MANAGER_LOGOUT_LOGOUT,
+        SCSM_MANAGER_LOGOUT_REBOOT,
+        SCSM_MANAGER_LOGOUT_REBOOT_INTERACT,
+        SCSM_MANAGER_LOGOUT_SHUTDOWN,
+        SCSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT,
 } GsmManagerLogoutType;
 
 struct GsmManagerPrivate
@@ -146,7 +146,7 @@ struct GsmManagerPrivate
         GsmManagerLogoutMode    logout_mode;
         GSList                 *query_clients;
         guint                   query_timeout_id;
-        /* This is used for GSM_MANAGER_PHASE_END_SESSION only at the moment,
+        /* This is used for SCSM_MANAGER_PHASE_END_SESSION only at the moment,
          * since it uses a sublist of all running client that replied in a
          * specific way */
         GSList                 *next_query_clients;
@@ -215,13 +215,13 @@ static gpointer manager_object = NULL;
 G_DEFINE_TYPE (GsmManager, scsm_manager, G_TYPE_OBJECT)
 
 static const GDBusErrorEntry scsm_manager_error_entries[] = {
-        { GSM_MANAGER_ERROR_GENERAL, GSM_MANAGER_DBUS_IFACE ".GeneralError" },
-        { GSM_MANAGER_ERROR_NOT_IN_INITIALIZATION, GSM_MANAGER_DBUS_IFACE ".NotInInitialization" },
-        { GSM_MANAGER_ERROR_NOT_IN_RUNNING, GSM_MANAGER_DBUS_IFACE ".NotInRunning" },
-        { GSM_MANAGER_ERROR_ALREADY_REGISTERED, GSM_MANAGER_DBUS_IFACE ".AlreadyRegistered" },
-        { GSM_MANAGER_ERROR_NOT_REGISTERED, GSM_MANAGER_DBUS_IFACE ".NotRegistered" },
-        { GSM_MANAGER_ERROR_INVALID_OPTION, GSM_MANAGER_DBUS_IFACE ".InvalidOption" },
-        { GSM_MANAGER_ERROR_LOCKED_DOWN, GSM_MANAGER_DBUS_IFACE ".LockedDown" }
+        { SCSM_MANAGER_ERROR_GENERAL, SCSM_MANAGER_DBUS_IFACE ".GeneralError" },
+        { SCSM_MANAGER_ERROR_NOT_IN_INITIALIZATION, SCSM_MANAGER_DBUS_IFACE ".NotInInitialization" },
+        { SCSM_MANAGER_ERROR_NOT_IN_RUNNING, SCSM_MANAGER_DBUS_IFACE ".NotInRunning" },
+        { SCSM_MANAGER_ERROR_ALREADY_REGISTERED, SCSM_MANAGER_DBUS_IFACE ".AlreadyRegistered" },
+        { SCSM_MANAGER_ERROR_NOT_REGISTERED, SCSM_MANAGER_DBUS_IFACE ".NotRegistered" },
+        { SCSM_MANAGER_ERROR_INVALID_OPTION, SCSM_MANAGER_DBUS_IFACE ".InvalidOption" },
+        { SCSM_MANAGER_ERROR_LOCKED_DOWN, SCSM_MANAGER_DBUS_IFACE ".LockedDown" }
 };
 
 GQuark
@@ -271,7 +271,7 @@ on_required_app_failure (GsmManager  *manager,
         app_id = scsm_app_peek_app_id (app);
 
         if (g_str_equal (app_id, "io.github.scarecrow_de.Shell")) {
-                extensions = g_object_new (GSM_TYPE_SHELL_EXTENSIONS, NULL);
+                extensions = g_object_new (SCSM_TYPE_SHELL_EXTENSIONS, NULL);
                 scsm_shell_extensions_disable_all (extensions);
         } else {
                 extensions = NULL;
@@ -284,7 +284,7 @@ on_required_app_failure (GsmManager  *manager,
         }
 
 #ifdef ENABLE_SYSTEMD_JOURNAL
-        sd_journal_send ("MESSAGE_ID=%s", GSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID,
+        sd_journal_send ("MESSAGE_ID=%s", SCSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID,
                          "PRIORITY=%d", 3,
                          "MESSAGE=Unrecoverable failure in required component %s", app_id,
                          NULL);
@@ -305,7 +305,7 @@ on_display_server_failure (GsmManager *manager,
         app_id = scsm_app_peek_app_id (app);
 
         if (g_str_equal (app_id, "io.github.scarecrow_de.Shell")) {
-                extensions = g_object_new (GSM_TYPE_SHELL_EXTENSIONS, NULL);
+                extensions = g_object_new (SCSM_TYPE_SHELL_EXTENSIONS, NULL);
                 scsm_shell_extensions_disable_all (extensions);
 
                 g_object_unref (extensions);
@@ -314,7 +314,7 @@ on_display_server_failure (GsmManager *manager,
         }
 
 #ifdef ENABLE_SYSTEMD_JOURNAL
-        sd_journal_send ("MESSAGE_ID=%s", GSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID,
+        sd_journal_send ("MESSAGE_ID=%s", SCSM_MANAGER_UNRECOVERABLE_FAILURE_MSGID,
                          "PRIORITY=%d", 3,
                          "MESSAGE=Unrecoverable failure in required component %s", app_id,
                          NULL);
@@ -429,43 +429,43 @@ phase_num_to_name (guint phase)
         const char *name;
 
         switch (phase) {
-        case GSM_MANAGER_PHASE_STARTUP:
+        case SCSM_MANAGER_PHASE_STARTUP:
                 name = "STARTUP";
                 break;
-        case GSM_MANAGER_PHASE_EARLY_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_EARLY_INITIALIZATION:
                 name = "EARLY_INITIALIZATION";
                 break;
-        case GSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
                 name = "PRE_DISPLAY_SERVER";
                 break;
-        case GSM_MANAGER_PHASE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_DISPLAY_SERVER:
                 name = "DISPLAY_SERVER";
                 break;
-        case GSM_MANAGER_PHASE_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_INITIALIZATION:
                 name = "INITIALIZATION";
                 break;
-        case GSM_MANAGER_PHASE_WINDOW_MANAGER:
+        case SCSM_MANAGER_PHASE_WINDOW_MANAGER:
                 name = "WINDOW_MANAGER";
                 break;
-        case GSM_MANAGER_PHASE_PANEL:
+        case SCSM_MANAGER_PHASE_PANEL:
                 name = "PANEL";
                 break;
-        case GSM_MANAGER_PHASE_DESKTOP:
+        case SCSM_MANAGER_PHASE_DESKTOP:
                 name = "DESKTOP";
                 break;
-        case GSM_MANAGER_PHASE_APPLICATION:
+        case SCSM_MANAGER_PHASE_APPLICATION:
                 name = "APPLICATION";
                 break;
-        case GSM_MANAGER_PHASE_RUNNING:
+        case SCSM_MANAGER_PHASE_RUNNING:
                 name = "RUNNING";
                 break;
-        case GSM_MANAGER_PHASE_QUERY_END_SESSION:
+        case SCSM_MANAGER_PHASE_QUERY_END_SESSION:
                 name = "QUERY_END_SESSION";
                 break;
-        case GSM_MANAGER_PHASE_END_SESSION:
+        case SCSM_MANAGER_PHASE_END_SESSION:
                 name = "END_SESSION";
                 break;
-        case GSM_MANAGER_PHASE_EXIT:
+        case SCSM_MANAGER_PHASE_EXIT:
                 name = "EXIT";
                 break;
         default:
@@ -485,17 +485,17 @@ scsm_manager_quit (GsmManager *manager)
          * this works. */
 
         switch (manager->priv->logout_type) {
-        case GSM_MANAGER_LOGOUT_LOGOUT:
-        case GSM_MANAGER_LOGOUT_NONE:
+        case SCSM_MANAGER_LOGOUT_LOGOUT:
+        case SCSM_MANAGER_LOGOUT_NONE:
                 scsm_quit ();
                 break;
-        case GSM_MANAGER_LOGOUT_REBOOT:
-        case GSM_MANAGER_LOGOUT_REBOOT_INTERACT:
+        case SCSM_MANAGER_LOGOUT_REBOOT:
+        case SCSM_MANAGER_LOGOUT_REBOOT_INTERACT:
                 scsm_system_complete_shutdown (manager->priv->system);
                 scsm_quit ();
                 break;
-        case GSM_MANAGER_LOGOUT_SHUTDOWN:
-        case GSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT:
+        case SCSM_MANAGER_LOGOUT_SHUTDOWN:
+        case SCSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT:
                 scsm_system_complete_shutdown (manager->priv->system);
                 scsm_quit ();
                 break;
@@ -534,12 +534,12 @@ end_phase (GsmManager *manager)
         }
 
         switch (manager->priv->phase) {
-        case GSM_MANAGER_PHASE_STARTUP:
-        case GSM_MANAGER_PHASE_EARLY_INITIALIZATION:
-        case GSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
-        case GSM_MANAGER_PHASE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_STARTUP:
+        case SCSM_MANAGER_PHASE_EARLY_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_DISPLAY_SERVER:
                 break;
-        case GSM_MANAGER_PHASE_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_INITIALIZATION:
                 manager->priv->manager_initialized = TRUE;
                 /* Wait for systemd if it isn't initialized yet*/
                 if (manager->priv->systemd_managed && !manager->priv->systemd_initialized) {
@@ -547,25 +547,25 @@ end_phase (GsmManager *manager)
                         start_next_phase = FALSE;
                 }
                 break;
-        case GSM_MANAGER_PHASE_WINDOW_MANAGER:
-        case GSM_MANAGER_PHASE_PANEL:
-        case GSM_MANAGER_PHASE_DESKTOP:
-        case GSM_MANAGER_PHASE_APPLICATION:
+        case SCSM_MANAGER_PHASE_WINDOW_MANAGER:
+        case SCSM_MANAGER_PHASE_PANEL:
+        case SCSM_MANAGER_PHASE_DESKTOP:
+        case SCSM_MANAGER_PHASE_APPLICATION:
                 break;
-        case GSM_MANAGER_PHASE_RUNNING:
+        case SCSM_MANAGER_PHASE_RUNNING:
                 if (_log_out_is_locked_down (manager)) {
                         g_warning ("Unable to logout: Logout has been locked down");
                         start_next_phase = FALSE;
                 }
                 break;
-        case GSM_MANAGER_PHASE_QUERY_END_SESSION:
+        case SCSM_MANAGER_PHASE_QUERY_END_SESSION:
                 if (!do_query_end_session_exit (manager))
                         start_next_phase = FALSE;
                 break;
-        case GSM_MANAGER_PHASE_END_SESSION:
+        case SCSM_MANAGER_PHASE_END_SESSION:
                 maybe_save_session (manager);
                 break;
-        case GSM_MANAGER_PHASE_EXIT:
+        case SCSM_MANAGER_PHASE_EXIT:
                 start_next_phase = FALSE;
                 scsm_manager_quit (manager);
                 break;
@@ -584,7 +584,7 @@ static void
 app_event_during_startup (GsmManager *manager,
                           GsmApp     *app)
 {
-        if (!(manager->priv->phase < GSM_MANAGER_PHASE_APPLICATION))
+        if (!(manager->priv->phase < SCSM_MANAGER_PHASE_APPLICATION))
                 return;
 
         manager->priv->pending_apps = g_slist_remove (manager->priv->pending_apps, app);
@@ -613,7 +613,7 @@ is_app_display_server (GsmManager *manager,
 
         phase = scsm_app_peek_phase (app);
 
-        return (phase == GSM_MANAGER_PHASE_DISPLAY_SERVER &&
+        return (phase == SCSM_MANAGER_PHASE_DISPLAY_SERVER &&
                 is_app_required (manager, app));
 }
 
@@ -711,15 +711,15 @@ on_phase_timeout (GsmManager *manager)
         manager->priv->phase_timeout_id = 0;
 
         switch (manager->priv->phase) {
-        case GSM_MANAGER_PHASE_STARTUP:
-        case GSM_MANAGER_PHASE_EARLY_INITIALIZATION:
-        case GSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
-        case GSM_MANAGER_PHASE_DISPLAY_SERVER:
-        case GSM_MANAGER_PHASE_INITIALIZATION:
-        case GSM_MANAGER_PHASE_WINDOW_MANAGER:
-        case GSM_MANAGER_PHASE_PANEL:
-        case GSM_MANAGER_PHASE_DESKTOP:
-        case GSM_MANAGER_PHASE_APPLICATION:
+        case SCSM_MANAGER_PHASE_STARTUP:
+        case SCSM_MANAGER_PHASE_EARLY_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_WINDOW_MANAGER:
+        case SCSM_MANAGER_PHASE_PANEL:
+        case SCSM_MANAGER_PHASE_DESKTOP:
+        case SCSM_MANAGER_PHASE_APPLICATION:
                 for (a = manager->priv->pending_apps; a; a = a->next) {
                         GsmApp *app = a->data;
                         g_warning ("Application '%s' failed to register before timeout",
@@ -728,12 +728,12 @@ on_phase_timeout (GsmManager *manager)
                                 on_required_app_failure (manager, app);
                 }
                 break;
-        case GSM_MANAGER_PHASE_RUNNING:
+        case SCSM_MANAGER_PHASE_RUNNING:
                 break;
-        case GSM_MANAGER_PHASE_QUERY_END_SESSION:
-        case GSM_MANAGER_PHASE_END_SESSION:
+        case SCSM_MANAGER_PHASE_QUERY_END_SESSION:
+        case SCSM_MANAGER_PHASE_END_SESSION:
                 break;
-        case GSM_MANAGER_PHASE_EXIT:
+        case SCSM_MANAGER_PHASE_EXIT:
                 break;
         default:
                 g_assert_not_reached ();
@@ -770,7 +770,7 @@ _start_app (const char *id,
         if (!start_app_or_warn (manager, app))
                 goto out;
 
-        if (manager->priv->phase < GSM_MANAGER_PHASE_APPLICATION) {
+        if (manager->priv->phase < SCSM_MANAGER_PHASE_APPLICATION) {
                 /* Historical note - apparently,
                  * e.g. scarecrow-settings-daemon used to "daemonize", and
                  * so scarecrow-session assumes process exit means "ok
@@ -806,8 +806,8 @@ do_phase_startup (GsmManager *manager)
                            manager);
 
         if (manager->priv->pending_apps != NULL) {
-                if (manager->priv->phase < GSM_MANAGER_PHASE_APPLICATION) {
-                        manager->priv->phase_timeout_id = g_timeout_add_seconds (GSM_MANAGER_PHASE_TIMEOUT,
+                if (manager->priv->phase < SCSM_MANAGER_PHASE_APPLICATION) {
+                        manager->priv->phase_timeout_id = g_timeout_add_seconds (SCSM_MANAGER_PHASE_TIMEOUT,
                                                                                  (GSourceFunc)on_phase_timeout,
                                                                                  manager);
                 }
@@ -880,11 +880,11 @@ do_phase_end_session (GsmManager *manager)
         data.manager = manager;
         data.flags = 0;
 
-        if (manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_FORCE) {
-                data.flags |= GSM_CLIENT_END_SESSION_FLAG_FORCEFUL;
+        if (manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE) {
+                data.flags |= SCSM_CLIENT_END_SESSION_FLAG_FORCEFUL;
         }
         if (auto_save_is_enabled (manager)) {
-                data.flags |= GSM_CLIENT_END_SESSION_FLAG_SAVE;
+                data.flags |= SCSM_CLIENT_END_SESSION_FLAG_SAVE;
         }
 
         if (manager->priv->phase_timeout_id > 0) {
@@ -893,7 +893,7 @@ do_phase_end_session (GsmManager *manager)
         }
 
         if (scsm_store_size (manager->priv->clients) > 0) {
-                manager->priv->phase_timeout_id = g_timeout_add_seconds (GSM_MANAGER_PHASE_TIMEOUT,
+                manager->priv->phase_timeout_id = g_timeout_add_seconds (SCSM_MANAGER_PHASE_TIMEOUT,
                                                                          (GSourceFunc)on_phase_timeout,
                                                                          manager);
 
@@ -913,16 +913,16 @@ do_phase_end_session_part_2 (GsmManager *manager)
         data.manager = manager;
         data.flags = 0;
 
-        if (manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_FORCE) {
-                data.flags |= GSM_CLIENT_END_SESSION_FLAG_FORCEFUL;
+        if (manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE) {
+                data.flags |= SCSM_CLIENT_END_SESSION_FLAG_FORCEFUL;
         }
         if (auto_save_is_enabled (manager)) {
-                data.flags |= GSM_CLIENT_END_SESSION_FLAG_SAVE;
+                data.flags |= SCSM_CLIENT_END_SESSION_FLAG_SAVE;
         }
-        data.flags |= GSM_CLIENT_END_SESSION_FLAG_LAST;
+        data.flags |= SCSM_CLIENT_END_SESSION_FLAG_LAST;
 
         /* keep the timeout that was started at the beginning of the
-         * GSM_MANAGER_PHASE_END_SESSION phase */
+         * SCSM_MANAGER_PHASE_END_SESSION phase */
 
         if (g_slist_length (manager->priv->next_query_clients) > 0) {
                 g_slist_foreach (manager->priv->next_query_clients,
@@ -1051,7 +1051,7 @@ scsm_manager_is_logout_inhibited (GsmManager *manager)
 {
         GsmInhibitor *inhibitor;
 
-        if (manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_FORCE) {
+        if (manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE) {
                 return FALSE;
         }
 
@@ -1061,7 +1061,7 @@ scsm_manager_is_logout_inhibited (GsmManager *manager)
 
         inhibitor = (GsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
                                                     (GsmStoreFunc)inhibitor_has_flag,
-                                                    GUINT_TO_POINTER (GSM_INHIBITOR_FLAG_LOGOUT));
+                                                    GUINT_TO_POINTER (SCSM_INHIBITOR_FLAG_LOGOUT));
         if (inhibitor == NULL) {
                 return FALSE;
         }
@@ -1079,7 +1079,7 @@ scsm_manager_is_idle_inhibited (GsmManager *manager)
 
         inhibitor = (GsmInhibitor *)scsm_store_find (manager->priv->inhibitors,
                                                     (GsmStoreFunc)inhibitor_has_flag,
-                                                    GUINT_TO_POINTER (GSM_INHIBITOR_FLAG_IDLE));
+                                                    GUINT_TO_POINTER (SCSM_INHIBITOR_FLAG_IDLE));
         if (inhibitor == NULL) {
                 return FALSE;
         }
@@ -1123,7 +1123,7 @@ static void
 cancel_end_session (GsmManager *manager)
 {
         /* just ignore if received outside of shutdown */
-        if (manager->priv->phase < GSM_MANAGER_PHASE_QUERY_END_SESSION) {
+        if (manager->priv->phase < SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 return;
         }
 
@@ -1132,10 +1132,10 @@ cancel_end_session (GsmManager *manager)
 
         g_cancellable_cancel (manager->priv->end_session_cancellable);
 
-        scsm_manager_set_phase (manager, GSM_MANAGER_PHASE_RUNNING);
-        manager->priv->logout_mode = GSM_MANAGER_LOGOUT_MODE_NORMAL;
+        scsm_manager_set_phase (manager, SCSM_MANAGER_PHASE_RUNNING);
+        manager->priv->logout_mode = SCSM_MANAGER_LOGOUT_MODE_NORMAL;
 
-        manager->priv->logout_type = GSM_MANAGER_LOGOUT_NONE;
+        manager->priv->logout_type = SCSM_MANAGER_LOGOUT_NONE;
 
         /* clear all JIT inhibitors */
         scsm_store_foreach_remove (manager->priv->inhibitors,
@@ -1157,21 +1157,21 @@ end_session_or_show_shell_dialog (GsmManager *manager)
         gboolean logout_inhibited;
 
         switch (manager->priv->logout_type) {
-        case GSM_MANAGER_LOGOUT_LOGOUT:
-                type = GSM_SHELL_END_SESSION_DIALOG_TYPE_LOGOUT;
+        case SCSM_MANAGER_LOGOUT_LOGOUT:
+                type = SCSM_SHELL_END_SESSION_DIALOG_TYPE_LOGOUT;
                 break;
-        case GSM_MANAGER_LOGOUT_REBOOT:
-        case GSM_MANAGER_LOGOUT_REBOOT_INTERACT:
-                type = GSM_SHELL_END_SESSION_DIALOG_TYPE_RESTART;
+        case SCSM_MANAGER_LOGOUT_REBOOT:
+        case SCSM_MANAGER_LOGOUT_REBOOT_INTERACT:
+                type = SCSM_SHELL_END_SESSION_DIALOG_TYPE_RESTART;
                 break;
-        case GSM_MANAGER_LOGOUT_SHUTDOWN:
-        case GSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT:
-                type = GSM_SHELL_END_SESSION_DIALOG_TYPE_SHUTDOWN;
+        case SCSM_MANAGER_LOGOUT_SHUTDOWN:
+        case SCSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT:
+                type = SCSM_SHELL_END_SESSION_DIALOG_TYPE_SHUTDOWN;
                 break;
         default:
                 g_warning ("Unexpected logout type %d when creating end session dialog",
                            manager->priv->logout_type);
-                type = GSM_SHELL_END_SESSION_DIALOG_TYPE_LOGOUT;
+                type = SCSM_SHELL_END_SESSION_DIALOG_TYPE_LOGOUT;
                 break;
         }
 
@@ -1180,7 +1180,7 @@ end_session_or_show_shell_dialog (GsmManager *manager)
                                                 KEY_LOGOUT_PROMPT);
 
         switch (manager->priv->logout_mode) {
-        case GSM_MANAGER_LOGOUT_MODE_NORMAL:
+        case SCSM_MANAGER_LOGOUT_MODE_NORMAL:
                 if (logout_inhibited || logout_prompt) {
                         show_shell_end_session_dialog (manager, type);
                 } else {
@@ -1188,7 +1188,7 @@ end_session_or_show_shell_dialog (GsmManager *manager)
                 }
                 break;
 
-        case GSM_MANAGER_LOGOUT_MODE_NO_CONFIRMATION:
+        case SCSM_MANAGER_LOGOUT_MODE_NO_CONFIRMATION:
                 if (logout_inhibited) {
                         show_shell_end_session_dialog (manager, type);
                 } else {
@@ -1196,7 +1196,7 @@ end_session_or_show_shell_dialog (GsmManager *manager)
                 }
                 break;
 
-        case GSM_MANAGER_LOGOUT_MODE_FORCE:
+        case SCSM_MANAGER_LOGOUT_MODE_FORCE:
                 end_phase (manager);
                 break;
         default:
@@ -1264,12 +1264,12 @@ _on_query_end_session_timeout (GsmManager *manager)
 
                 /* Don't add "not responding" inhibitors if logout is forced
                  */
-                if (manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_FORCE) {
+                if (manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE) {
                         continue;
                 }
 
                 /* Add JIT inhibit for unresponsive client */
-                if (GSM_IS_DBUS_CLIENT (l->data)) {
+                if (SCSM_IS_DBUS_CLIENT (l->data)) {
                         bus_name = scsm_dbus_client_get_bus_name (l->data);
                 } else {
                         bus_name = NULL;
@@ -1285,7 +1285,7 @@ _on_query_end_session_timeout (GsmManager *manager)
                 cookie = _generate_unique_cookie (manager);
                 inhibitor = scsm_inhibitor_new_for_client (scsm_client_peek_id (l->data),
                                                           app_id,
-                                                          GSM_INHIBITOR_FLAG_LOGOUT,
+                                                          SCSM_INHIBITOR_FLAG_LOGOUT,
                                                           _("Not responding"),
                                                           bus_name,
                                                           cookie);
@@ -1310,17 +1310,17 @@ do_phase_query_end_session (GsmManager *manager)
         data.manager = manager;
         data.flags = 0;
 
-        if (manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_FORCE) {
-                data.flags |= GSM_CLIENT_END_SESSION_FLAG_FORCEFUL;
+        if (manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE) {
+                data.flags |= SCSM_CLIENT_END_SESSION_FLAG_FORCEFUL;
         }
         /* We only query if an app is ready to log out, so we don't use
-         * GSM_CLIENT_END_SESSION_FLAG_SAVE here.
+         * SCSM_CLIENT_END_SESSION_FLAG_SAVE here.
          */
 
         debug_clients (manager);
         g_debug ("GsmManager: sending query-end-session to clients (logout mode: %s)",
-                 manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_NORMAL? "normal" :
-                 manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_FORCE? "forceful":
+                 manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_NORMAL? "normal" :
+                 manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE? "forceful":
                  "no confirmation");
         scsm_store_foreach (manager->priv->clients,
                            (GsmStoreFunc)_client_query_end_session,
@@ -1368,25 +1368,25 @@ start_phase (GsmManager *manager)
         sd_notifyf (0, "STATUS=GNOME Session Manager phase is %s", phase_num_to_name (manager->priv->phase));
 
         switch (manager->priv->phase) {
-        case GSM_MANAGER_PHASE_STARTUP:
-        case GSM_MANAGER_PHASE_EARLY_INITIALIZATION:
-        case GSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_STARTUP:
+        case SCSM_MANAGER_PHASE_EARLY_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_PRE_DISPLAY_SERVER:
                 do_phase_startup (manager);
                 break;
-        case GSM_MANAGER_PHASE_DISPLAY_SERVER:
+        case SCSM_MANAGER_PHASE_DISPLAY_SERVER:
                 sd_notify (0, "READY=1");
                 do_phase_startup (manager);
                 break;
-        case GSM_MANAGER_PHASE_INITIALIZATION:
-        case GSM_MANAGER_PHASE_WINDOW_MANAGER:
-        case GSM_MANAGER_PHASE_PANEL:
-        case GSM_MANAGER_PHASE_DESKTOP:
-        case GSM_MANAGER_PHASE_APPLICATION:
+        case SCSM_MANAGER_PHASE_INITIALIZATION:
+        case SCSM_MANAGER_PHASE_WINDOW_MANAGER:
+        case SCSM_MANAGER_PHASE_PANEL:
+        case SCSM_MANAGER_PHASE_DESKTOP:
+        case SCSM_MANAGER_PHASE_APPLICATION:
                 do_phase_startup (manager);
                 break;
-        case GSM_MANAGER_PHASE_RUNNING:
+        case SCSM_MANAGER_PHASE_RUNNING:
 #ifdef ENABLE_SYSTEMD_JOURNAL
-                sd_journal_send ("MESSAGE_ID=%s", GSM_MANAGER_STARTUP_SUCCEEDED_MSGID,
+                sd_journal_send ("MESSAGE_ID=%s", SCSM_MANAGER_STARTUP_SUCCEEDED_MSGID,
                                  "PRIORITY=%d", 5,
                                  "MESSAGE=Entering running state",
                                  NULL);
@@ -1399,16 +1399,16 @@ start_phase (GsmManager *manager)
                 scsm_exported_manager_emit_session_running (manager->priv->skeleton);
                 update_idle (manager);
                 break;
-        case GSM_MANAGER_PHASE_QUERY_END_SESSION:
+        case SCSM_MANAGER_PHASE_QUERY_END_SESSION:
                 scsm_xsmp_server_stop_accepting_new_clients (manager->priv->xsmp_server);
                 do_phase_query_end_session (manager);
                 break;
-        case GSM_MANAGER_PHASE_END_SESSION:
+        case SCSM_MANAGER_PHASE_END_SESSION:
                 sd_notify (0, "STOPPING=1");
 
                 do_phase_end_session (manager);
                 break;
-        case GSM_MANAGER_PHASE_EXIT:
+        case SCSM_MANAGER_PHASE_EXIT:
                 sd_notify (0, "STOPPING=1");
 
                 do_phase_exit (manager);
@@ -1447,7 +1447,7 @@ debug_app_summary (GsmManager *manager)
         guint phase;
 
         g_debug ("GsmManager: App startup summary");
-        for (phase = GSM_MANAGER_PHASE_EARLY_INITIALIZATION; phase < GSM_MANAGER_PHASE_RUNNING; phase++) {
+        for (phase = SCSM_MANAGER_PHASE_EARLY_INITIALIZATION; phase < SCSM_MANAGER_PHASE_RUNNING; phase++) {
                 g_debug ("GsmManager: Phase %s", phase_num_to_name (phase));
                 scsm_store_foreach (manager->priv->apps,
                                    (GsmStoreFunc)_debug_app_for_phase,
@@ -1458,12 +1458,12 @@ debug_app_summary (GsmManager *manager)
 void
 scsm_manager_start (GsmManager *manager)
 {
-        g_debug ("GsmManager: GSM starting to manage");
+        g_debug ("GsmManager: SCSM starting to manage");
 
-        g_return_if_fail (GSM_IS_MANAGER (manager));
+        g_return_if_fail (SCSM_IS_MANAGER (manager));
 
         scsm_xsmp_server_start (manager->priv->xsmp_server);
-        scsm_manager_set_phase (manager, GSM_MANAGER_PHASE_EARLY_INITIALIZATION);
+        scsm_manager_set_phase (manager, SCSM_MANAGER_PHASE_EARLY_INITIALIZATION);
         debug_app_summary (manager);
         start_phase (manager);
 }
@@ -1573,9 +1573,9 @@ find_app_for_startup_id (GsmManager *manager,
         /* If we're starting up the session, try to match the new client
          * with one pending apps for the current phase. If not, try to match
          * with any of the autostarted apps. */
-        if (manager->priv->phase < GSM_MANAGER_PHASE_APPLICATION) {
+        if (manager->priv->phase < SCSM_MANAGER_PHASE_APPLICATION) {
                 for (a = manager->priv->pending_apps; a != NULL; a = a->next) {
-                        GsmApp *app = GSM_APP (a->data);
+                        GsmApp *app = SCSM_APP (a->data);
 
                         if (strcmp (startup_id, scsm_app_peek_startup_id (app)) == 0) {
                                 found_app = app;
@@ -1613,7 +1613,7 @@ _disconnect_client (GsmManager *manager,
         /* take a ref so it doesn't get finalized */
         g_object_ref (client);
 
-        scsm_client_set_status (client, GSM_CLIENT_FINISHED);
+        scsm_client_set_status (client, SCSM_CLIENT_FINISHED);
 
         is_condition_client = FALSE;
         if (g_slist_find (manager->priv->condition_clients, client)) {
@@ -1646,7 +1646,7 @@ _disconnect_client (GsmManager *manager,
         }
 
         switch (manager->priv->phase) {
-        case GSM_MANAGER_PHASE_QUERY_END_SESSION:
+        case SCSM_MANAGER_PHASE_QUERY_END_SESSION:
                 /* Instead of answering our end session query, the client just exited.
                  * Treat that as an "okay, end the session" answer.
                  *
@@ -1663,7 +1663,7 @@ _disconnect_client (GsmManager *manager,
                                                      "instead of end session "
                                                      "phase");
                 break;
-        case GSM_MANAGER_PHASE_END_SESSION:
+        case SCSM_MANAGER_PHASE_END_SESSION:
                 if (! g_slist_find (manager->priv->query_clients, client)) {
                         /* the client sent its EndSessionResponse and we already
                          * processed it.
@@ -1690,7 +1690,7 @@ _disconnect_client (GsmManager *manager,
                 break;
         }
 
-        if (manager->priv->dbus_disconnected && GSM_IS_DBUS_CLIENT (client)) {
+        if (manager->priv->dbus_disconnected && SCSM_IS_DBUS_CLIENT (client)) {
                 g_debug ("GsmManager: dbus disconnected, not restarting application");
                 goto out;
         }
@@ -1700,7 +1700,7 @@ _disconnect_client (GsmManager *manager,
                 goto out;
         }
 
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_QUERY_END_SESSION) {
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 g_debug ("GsmManager: in shutdown, not restarting application");
                 goto out;
         }
@@ -1710,7 +1710,7 @@ _disconnect_client (GsmManager *manager,
 
         /* allow legacy clients to override the app info */
         if (! app_restart
-            && client_restart_hint != GSM_CLIENT_RESTART_IMMEDIATELY) {
+            && client_restart_hint != SCSM_CLIENT_RESTART_IMMEDIATELY) {
                 g_debug ("GsmManager: autorestart not set, not restarting application");
                 goto out;
         }
@@ -1740,7 +1740,7 @@ _disconnect_dbus_client (const char       *id,
 {
         const char *name;
 
-        if (! GSM_IS_DBUS_CLIENT (client)) {
+        if (! SCSM_IS_DBUS_CLIENT (client)) {
                 return FALSE;
         }
 
@@ -1750,7 +1750,7 @@ _disconnect_dbus_client (const char       *id,
                 return TRUE;
         }
 
-        name = scsm_dbus_client_get_bus_name (GSM_DBUS_CLIENT (client));
+        name = scsm_dbus_client_get_bus_name (SCSM_DBUS_CLIENT (client));
         if (IS_STRING_EMPTY (name)) {
                 return FALSE;
         }
@@ -1786,7 +1786,7 @@ remove_clients_for_connection (GsmManager *manager,
                                   (GsmStoreFunc)_disconnect_dbus_client,
                                   &data);
 
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_QUERY_END_SESSION
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION
             && scsm_store_size (manager->priv->clients) == 0) {
                 g_debug ("GsmManager: last client disconnected - exiting");
                 end_phase (manager);
@@ -1797,7 +1797,7 @@ static void
 scsm_manager_set_failsafe (GsmManager *manager,
                           gboolean    enabled)
 {
-        g_return_if_fail (GSM_IS_MANAGER (manager));
+        g_return_if_fail (SCSM_IS_MANAGER (manager));
 
         manager->priv->failsafe = enabled;
 }
@@ -1805,7 +1805,7 @@ scsm_manager_set_failsafe (GsmManager *manager,
 gboolean
 scsm_manager_get_failsafe (GsmManager *manager)
 {
-        g_return_val_if_fail (GSM_IS_MANAGER (manager), FALSE);
+        g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
 
         return manager->priv->failsafe;
 }
@@ -1813,7 +1813,7 @@ scsm_manager_get_failsafe (GsmManager *manager)
 gboolean
 scsm_manager_get_systemd_managed (GsmManager *manager)
 {
-        g_return_val_if_fail (GSM_IS_MANAGER (manager), FALSE);
+        g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
 
         return manager->priv->systemd_managed;
 }
@@ -1825,7 +1825,7 @@ on_client_disconnected (GsmClient  *client,
         g_debug ("GsmManager: disconnect client");
         _disconnect_client (manager, client);
         scsm_store_remove (manager->priv->clients, scsm_client_peek_id (client));
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_QUERY_END_SESSION
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION
             && scsm_store_size (manager->priv->clients) == 0) {
                 g_debug ("GsmManager: last client disconnected - exiting");
                 end_phase (manager);
@@ -1844,7 +1844,7 @@ on_xsmp_client_register_request (GsmXSMPClient *client,
         handled = TRUE;
         new_id = NULL;
 
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_QUERY_END_SESSION) {
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 goto out;
         }
 
@@ -1878,7 +1878,7 @@ on_xsmp_client_register_request (GsmXSMPClient *client,
 
         app = find_app_for_startup_id (manager, new_id);
         if (app != NULL) {
-                scsm_client_set_app_id (GSM_CLIENT (client), scsm_app_peek_app_id (app));
+                scsm_client_set_app_id (SCSM_CLIENT (client), scsm_app_peek_app_id (app));
                 goto out;
         }
 
@@ -1929,8 +1929,8 @@ maybe_save_session (GsmManager *manager)
 
         /* We only allow session saving when session is running or when
          * logging out */
-        if (manager->priv->phase != GSM_MANAGER_PHASE_RUNNING &&
-            manager->priv->phase != GSM_MANAGER_PHASE_END_SESSION) {
+        if (manager->priv->phase != SCSM_MANAGER_PHASE_RUNNING &&
+            manager->priv->phase != SCSM_MANAGER_PHASE_END_SESSION) {
                 return;
         }
 
@@ -1957,7 +1957,7 @@ _handle_client_end_session_response (GsmManager *manager,
                                      const char *reason)
 {
         /* just ignore if received outside of shutdown */
-        if (manager->priv->phase < GSM_MANAGER_PHASE_QUERY_END_SESSION) {
+        if (manager->priv->phase < SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 return;
         }
 
@@ -1970,7 +1970,7 @@ _handle_client_end_session_response (GsmManager *manager,
 
         manager->priv->query_clients = g_slist_remove (manager->priv->query_clients, client);
 
-        if (! is_ok && manager->priv->logout_mode != GSM_MANAGER_LOGOUT_MODE_FORCE) {
+        if (! is_ok && manager->priv->logout_mode != SCSM_MANAGER_LOGOUT_MODE_FORCE) {
                 guint         cookie;
                 GsmInhibitor *inhibitor;
                 char         *app_id;
@@ -1979,8 +1979,8 @@ _handle_client_end_session_response (GsmManager *manager,
                 /* FIXME: do we support updating the reason? */
 
                 /* Create JIT inhibit */
-                if (GSM_IS_DBUS_CLIENT (client)) {
-                        bus_name = scsm_dbus_client_get_bus_name (GSM_DBUS_CLIENT (client));
+                if (SCSM_IS_DBUS_CLIENT (client)) {
+                        bus_name = scsm_dbus_client_get_bus_name (SCSM_DBUS_CLIENT (client));
                 } else {
                         bus_name = NULL;
                 }
@@ -1995,7 +1995,7 @@ _handle_client_end_session_response (GsmManager *manager,
                 cookie = _generate_unique_cookie (manager);
                 inhibitor = scsm_inhibitor_new_for_client (scsm_client_peek_id (client),
                                                           app_id,
-                                                          GSM_INHIBITOR_FLAG_LOGOUT,
+                                                          SCSM_INHIBITOR_FLAG_LOGOUT,
                                                           reason != NULL ? reason : _("Not responding"),
                                                           bus_name,
                                                           cookie);
@@ -2008,14 +2008,14 @@ _handle_client_end_session_response (GsmManager *manager,
                                           (gpointer)scsm_client_peek_id (client));
         }
 
-        if (manager->priv->phase == GSM_MANAGER_PHASE_QUERY_END_SESSION) { 
+        if (manager->priv->phase == SCSM_MANAGER_PHASE_QUERY_END_SESSION) { 
                 if (manager->priv->query_clients == NULL) {
                         query_end_session_complete (manager);
                 }
-        } else if (manager->priv->phase == GSM_MANAGER_PHASE_END_SESSION) {
+        } else if (manager->priv->phase == SCSM_MANAGER_PHASE_END_SESSION) {
                 if (do_last) {
                         /* This only makes sense if we're in part 1 of
-                         * GSM_MANAGER_PHASE_END_SESSION. Doing this in part 2
+                         * SCSM_MANAGER_PHASE_END_SESSION. Doing this in part 2
                          * can only happen because of a buggy client that loops
                          * wanting to be last again and again. The phase
                          * timeout will take care of this issue. */
@@ -2063,9 +2063,9 @@ on_xsmp_client_logout_request (GsmXSMPClient *client,
         int     logout_mode;
 
         if (show_dialog) {
-                logout_mode = GSM_MANAGER_LOGOUT_MODE_NORMAL;
+                logout_mode = SCSM_MANAGER_LOGOUT_MODE_NORMAL;
         } else {
-                logout_mode = GSM_MANAGER_LOGOUT_MODE_NO_CONFIRMATION;
+                logout_mode = SCSM_MANAGER_LOGOUT_MODE_NO_CONFIRMATION;
         }
 
         error = NULL;
@@ -2088,7 +2088,7 @@ on_store_client_added (GsmStore   *store,
         client = (GsmClient *)scsm_store_lookup (store, id);
 
         /* a bit hacky */
-        if (GSM_IS_XSMP_CLIENT (client)) {
+        if (SCSM_IS_XSMP_CLIENT (client)) {
                 g_signal_connect (client,
                                   "register-request",
                                   G_CALLBACK (on_xsmp_client_register_request),
@@ -2126,7 +2126,7 @@ static void
 scsm_manager_set_client_store (GsmManager *manager,
                               GsmStore   *store)
 {
-        g_return_if_fail (GSM_IS_MANAGER (manager));
+        g_return_if_fail (SCSM_IS_MANAGER (manager));
 
         if (store != NULL) {
                 g_object_ref (store);
@@ -2173,7 +2173,7 @@ scsm_manager_set_property (GObject       *object,
 {
         GsmManager *self;
 
-        self = GSM_MANAGER (object);
+        self = SCSM_MANAGER (object);
 
         switch (prop_id) {
         case PROP_FAILSAFE:
@@ -2202,7 +2202,7 @@ scsm_manager_get_property (GObject    *object,
 {
         GsmManager *self;
 
-        self = GSM_MANAGER (object);
+        self = SCSM_MANAGER (object);
 
         switch (prop_id) {
         case PROP_FAILSAFE:
@@ -2238,7 +2238,7 @@ scsm_manager_constructor (GType                  type,
 {
         GsmManager *manager;
 
-        manager = GSM_MANAGER (G_OBJECT_CLASS (scsm_manager_parent_class)->constructor (type,
+        manager = SCSM_MANAGER (G_OBJECT_CLASS (scsm_manager_parent_class)->constructor (type,
                                                                                        n_construct_properties,
                                                                                        construct_properties));
         return G_OBJECT (manager);
@@ -2273,7 +2273,7 @@ on_store_inhibitor_added (GsmStore   *store,
 
         g_debug ("GsmManager: Inhibitor added: %s", id);
 
-        i = GSM_INHIBITOR (scsm_store_lookup (store, id));
+        i = SCSM_INHIBITOR (scsm_store_lookup (store, id));
         scsm_system_add_inhibitor (manager->priv->system, id,
                                   scsm_inhibitor_peek_flags (i));
 
@@ -2294,7 +2294,7 @@ collect_inhibition_flags (const char *id,
 {
         GsmInhibitorFlag *new_inhibited_actions = user_data;
 
-        *new_inhibited_actions |= scsm_inhibitor_peek_flags (GSM_INHIBITOR (object));
+        *new_inhibited_actions |= scsm_inhibitor_peek_flags (SCSM_INHIBITOR (object));
 
         return FALSE;
 }
@@ -2320,7 +2320,7 @@ on_store_inhibitor_removed (GsmStore   *store,
 
         update_idle (manager);
 
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_QUERY_END_SESSION) {
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 end_session_or_show_shell_dialog (manager);
         }
 }
@@ -2328,7 +2328,7 @@ on_store_inhibitor_removed (GsmStore   *store,
 static void
 scsm_manager_dispose (GObject *object)
 {
-        GsmManager *manager = GSM_MANAGER (object);
+        GsmManager *manager = SCSM_MANAGER (object);
 
         g_debug ("GsmManager: disposing manager");
 
@@ -2441,7 +2441,7 @@ scsm_manager_class_init (GsmManagerClass *klass)
                                          g_param_spec_object ("client-store",
                                                               NULL,
                                                               NULL,
-                                                              GSM_TYPE_STORE,
+                                                              SCSM_TYPE_STORE,
                                                               G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
         g_object_class_install_property (object_class,
@@ -2464,7 +2464,7 @@ on_presence_status_changed (GsmPresence  *presence,
 
         system = scsm_get_system ();
         scsm_system_set_session_idle (system,
-                                     (status == GSM_PRESENCE_STATUS_IDLE));
+                                     (status == SCSM_PRESENCE_STATUS_IDLE));
         g_object_unref (system);
 }
 
@@ -2511,7 +2511,7 @@ request_reboot (GsmManager *manager)
          *
          * See https://bugzilla.gnome.org/show_bug.cgi?id=585614
          */
-        manager->priv->logout_type = GSM_MANAGER_LOGOUT_REBOOT_INTERACT;
+        manager->priv->logout_type = SCSM_MANAGER_LOGOUT_REBOOT_INTERACT;
         end_phase (manager);
 }
 
@@ -2522,7 +2522,7 @@ request_shutdown (GsmManager *manager)
 
         /* See the comment in request_reboot() for some more details about
          * what work needs to be done here. */
-        manager->priv->logout_type = GSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT;
+        manager->priv->logout_type = SCSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT;
         end_phase (manager);
 }
 
@@ -2533,7 +2533,7 @@ request_logout (GsmManager           *manager,
         g_debug ("GsmManager: requesting logout");
 
         manager->priv->logout_mode = mode;
-        manager->priv->logout_type = GSM_MANAGER_LOGOUT_LOGOUT;
+        manager->priv->logout_type = SCSM_MANAGER_LOGOUT_LOGOUT;
 
         end_phase (manager);
 }
@@ -2547,18 +2547,18 @@ scsm_manager_shutdown (GsmExportedManager    *skeleton,
 
         g_debug ("GsmManager: Shutdown called");
 
-        if (manager->priv->phase < GSM_MANAGER_PHASE_RUNNING) {
+        if (manager->priv->phase < SCSM_MANAGER_PHASE_RUNNING) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_IN_RUNNING,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_IN_RUNNING,
                                                        "Shutdown interface is only available after the Running phase starts");
                 return TRUE;
         }
 
         if (_log_out_is_locked_down (manager)) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_LOCKED_DOWN,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_LOCKED_DOWN,
                                                        "Logout has been locked down");
                 return TRUE;
         }
@@ -2582,18 +2582,18 @@ scsm_manager_reboot (GsmExportedManager    *skeleton,
 
         g_debug ("GsmManager: Reboot called");
 
-        if (manager->priv->phase < GSM_MANAGER_PHASE_RUNNING) {
+        if (manager->priv->phase < SCSM_MANAGER_PHASE_RUNNING) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_IN_RUNNING,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_IN_RUNNING,
                                                        "Reboot interface is only available after the Running phase starts");
                 return TRUE;
         }
 
         if (_log_out_is_locked_down (manager)) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_LOCKED_DOWN,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_LOCKED_DOWN,
                                                        "Logout has been locked down");
                 return TRUE;
         }
@@ -2667,10 +2667,10 @@ scsm_manager_setenv (GsmExportedManager    *skeleton,
                     const char            *value,
                     GsmManager            *manager)
 {
-        if (manager->priv->phase > GSM_MANAGER_PHASE_INITIALIZATION) {
+        if (manager->priv->phase > SCSM_MANAGER_PHASE_INITIALIZATION) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
                                                        "Setenv interface is only available during the DisplayServer and Initialization phase");
         } else {
                 scsm_util_setenv (variable, value);
@@ -2688,24 +2688,24 @@ scsm_manager_initialized (GsmExportedManager    *skeleton,
         /* Signaled by helper when scarecrow-session-initialized.target is reached. */
         if (!manager->priv->systemd_managed) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_GENERAL,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_GENERAL,
                                                        "Initialized interface is only available when scarecrow-session is managed by systemd");
         } else if (manager->priv->systemd_initialized) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
                                                        "Systemd initialization was already signaled");
-        } else if (manager->priv->phase > GSM_MANAGER_PHASE_INITIALIZATION) {
+        } else if (manager->priv->phase > SCSM_MANAGER_PHASE_INITIALIZATION) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
                                                        "Initialized interface is only available during startup");
         } else {
                 manager->priv->systemd_initialized = TRUE;
 
                 if (manager->priv->manager_initialized) {
-                        g_assert (manager->priv->phase == GSM_MANAGER_PHASE_INITIALIZATION);
+                        g_assert (manager->priv->phase == SCSM_MANAGER_PHASE_INITIALIZATION);
                         manager->priv->phase++;
                         start_phase (manager);
                 }
@@ -2763,8 +2763,8 @@ scsm_manager_get_locale (GsmExportedManager    *skeleton,
 {
         if (!is_valid_category (category)) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_INVALID_OPTION,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_INVALID_OPTION,
                                                        "GetLocale doesn't support locale category '%d'", category);
         } else {
                 const char *value;
@@ -2785,10 +2785,10 @@ scsm_manager_initialization_error (GsmExportedManager    *skeleton,
                                   gboolean               fatal,
                                   GsmManager            *manager)
 {
-        if (manager->priv->phase != GSM_MANAGER_PHASE_INITIALIZATION) {
+        if (manager->priv->phase != SCSM_MANAGER_PHASE_INITIALIZATION) {
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_IN_INITIALIZATION,
                                                        "InitializationError interface is only available during the Initialization phase");
                 return TRUE;
         }
@@ -2803,7 +2803,7 @@ static void
 user_logout (GsmManager           *manager,
              GsmManagerLogoutMode  mode)
 {
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_QUERY_END_SESSION) {
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 manager->priv->logout_mode = mode;
                 end_session_or_show_shell_dialog (manager);
                 return;
@@ -2817,26 +2817,26 @@ scsm_manager_logout (GsmManager *manager,
                     guint logout_mode,
                     GError **error)
 {
-        if (manager->priv->phase < GSM_MANAGER_PHASE_RUNNING) {
+        if (manager->priv->phase < SCSM_MANAGER_PHASE_RUNNING) {
                 g_set_error (error,
-                             GSM_MANAGER_ERROR,
-                             GSM_MANAGER_ERROR_NOT_IN_RUNNING,
+                             SCSM_MANAGER_ERROR,
+                             SCSM_MANAGER_ERROR_NOT_IN_RUNNING,
                              "Logout interface is only available after the Running phase starts");
                 return FALSE;
         }
 
         if (_log_out_is_locked_down (manager)) {
                 g_set_error (error,
-                             GSM_MANAGER_ERROR,
-                             GSM_MANAGER_ERROR_LOCKED_DOWN,
+                             SCSM_MANAGER_ERROR,
+                             SCSM_MANAGER_ERROR_LOCKED_DOWN,
                              "Logout has been locked down");
                 return FALSE;
         }
 
         switch (logout_mode) {
-        case GSM_MANAGER_LOGOUT_MODE_NORMAL:
-        case GSM_MANAGER_LOGOUT_MODE_NO_CONFIRMATION:
-        case GSM_MANAGER_LOGOUT_MODE_FORCE:
+        case SCSM_MANAGER_LOGOUT_MODE_NORMAL:
+        case SCSM_MANAGER_LOGOUT_MODE_NO_CONFIRMATION:
+        case SCSM_MANAGER_LOGOUT_MODE_FORCE:
                 user_logout (manager, logout_mode);
                 break;
 
@@ -2844,8 +2844,8 @@ scsm_manager_logout (GsmManager *manager,
                 g_debug ("Unknown logout mode option");
 
                 g_set_error (error,
-                             GSM_MANAGER_ERROR,
-                             GSM_MANAGER_ERROR_INVALID_OPTION,
+                             SCSM_MANAGER_ERROR,
+                             SCSM_MANAGER_ERROR_INVALID_OPTION,
                              "Unknown logout mode flag");
                 return FALSE;
         }
@@ -2889,12 +2889,12 @@ scsm_manager_register_client (GsmExportedManager    *skeleton,
 
         g_debug ("GsmManager: RegisterClient %s", startup_id);
 
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_QUERY_END_SESSION) {
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_QUERY_END_SESSION) {
                 g_debug ("Unable to register client: shutting down");
 
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_IN_RUNNING,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_IN_RUNNING,
                                                        "Unable to register client");
                 return TRUE;
         }
@@ -2911,8 +2911,8 @@ scsm_manager_register_client (GsmExportedManager    *skeleton,
                         g_debug ("Unable to register client: already registered");
 
                         g_dbus_method_invocation_return_error (invocation,
-                                                               GSM_MANAGER_ERROR,
-                                                               GSM_MANAGER_ERROR_ALREADY_REGISTERED,
+                                                               SCSM_MANAGER_ERROR,
+                                                               SCSM_MANAGER_ERROR_ALREADY_REGISTERED,
                                                                "Unable to register client");
                         return TRUE;
                 }
@@ -2936,8 +2936,8 @@ scsm_manager_register_client (GsmExportedManager    *skeleton,
                 g_debug ("Unable to create client");
 
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_GENERAL,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_GENERAL,
                                                        "Unable to register client");
                 return TRUE;
         }
@@ -2960,7 +2960,7 @@ scsm_manager_register_client (GsmExportedManager    *skeleton,
                 scsm_client_set_app_id (client, app_id);
         }
 
-        scsm_client_set_status (client, GSM_CLIENT_REGISTERED);
+        scsm_client_set_status (client, SCSM_CLIENT_REGISTERED);
 
         g_assert (new_startup_id != NULL);
         g_free (new_startup_id);
@@ -2985,15 +2985,15 @@ scsm_manager_unregister_client (GsmExportedManager    *skeleton,
                 g_debug ("Unable to unregister client: not registered");
 
                 g_dbus_method_invocation_return_error (invocation,
-                                                       GSM_MANAGER_ERROR,
-                                                       GSM_MANAGER_ERROR_NOT_REGISTERED,
+                                                       SCSM_MANAGER_ERROR,
+                                                       SCSM_MANAGER_ERROR_NOT_REGISTERED,
                                                        "Unable to unregister client");
                 return TRUE;
         }
 
         /* don't disconnect client here, only change the status.
            Wait until it leaves the bus before disconnecting it */
-        scsm_client_set_status (client, GSM_CLIENT_UNREGISTERED);
+        scsm_client_set_status (client, SCSM_CLIENT_UNREGISTERED);
 
         scsm_exported_manager_complete_unregister_client (skeleton, invocation);
 
@@ -3018,11 +3018,11 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
                  reason,
                  flags);
 
-        if (manager->priv->logout_mode == GSM_MANAGER_LOGOUT_MODE_FORCE) {
+        if (manager->priv->logout_mode == SCSM_MANAGER_LOGOUT_MODE_FORCE) {
                 GError *new_error;
 
-                new_error = g_error_new (GSM_MANAGER_ERROR,
-                                         GSM_MANAGER_ERROR_GENERAL,
+                new_error = g_error_new (SCSM_MANAGER_ERROR,
+                                         SCSM_MANAGER_ERROR_GENERAL,
                                          "Forced logout cannot be inhibited");
                 g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
@@ -3032,8 +3032,8 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
         if (IS_STRING_EMPTY (app_id)) {
                 GError *new_error;
 
-                new_error = g_error_new (GSM_MANAGER_ERROR,
-                                         GSM_MANAGER_ERROR_GENERAL,
+                new_error = g_error_new (SCSM_MANAGER_ERROR,
+                                         SCSM_MANAGER_ERROR_GENERAL,
                                          "Application ID not specified");
                 g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
@@ -3043,8 +3043,8 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
         if (IS_STRING_EMPTY (reason)) {
                 GError *new_error;
 
-                new_error = g_error_new (GSM_MANAGER_ERROR,
-                                         GSM_MANAGER_ERROR_GENERAL,
+                new_error = g_error_new (SCSM_MANAGER_ERROR,
+                                         SCSM_MANAGER_ERROR_GENERAL,
                                          "Reason not specified");
                 g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
@@ -3054,8 +3054,8 @@ scsm_manager_inhibit (GsmExportedManager    *skeleton,
         if (flags == 0) {
                 GError *new_error;
 
-                new_error = g_error_new (GSM_MANAGER_ERROR,
-                                         GSM_MANAGER_ERROR_GENERAL,
+                new_error = g_error_new (SCSM_MANAGER_ERROR,
+                                         SCSM_MANAGER_ERROR_GENERAL,
                                          "Invalid inhibit flags");
                 g_debug ("GsmManager: Unable to inhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
@@ -3093,8 +3093,8 @@ scsm_manager_uninhibit (GsmExportedManager    *skeleton,
         if (inhibitor == NULL) {
                 GError *new_error;
 
-                new_error = g_error_new (GSM_MANAGER_ERROR,
-                                         GSM_MANAGER_ERROR_GENERAL,
+                new_error = g_error_new (SCSM_MANAGER_ERROR,
+                                         SCSM_MANAGER_ERROR_GENERAL,
                                          "Unable to uninhibit: Invalid cookie");
                 g_debug ("Unable to uninhibit: %s", new_error->message);
                 g_dbus_method_invocation_take_error (invocation, new_error);
@@ -3236,7 +3236,7 @@ scsm_manager_is_session_running (GsmExportedManager    *skeleton,
                                 GsmManager            *manager)
 {
         scsm_exported_manager_complete_is_session_running (skeleton, invocation,
-                                                          manager->priv->phase == GSM_MANAGER_PHASE_RUNNING);
+                                                          manager->priv->phase == SCSM_MANAGER_PHASE_RUNNING);
         return TRUE;
 }
 
@@ -3248,7 +3248,7 @@ on_session_connection_closed (GDBusConnection *connection,
 {
         GsmManager *manager;
 
-        manager = GSM_MANAGER (user_data);
+        manager = SCSM_MANAGER (user_data);
 
         g_debug ("GsmManager: dbus disconnected; disconnecting dbus clients...");
         manager->priv->dbus_disconnected = TRUE;
@@ -3274,7 +3274,7 @@ register_manager (GsmManager *manager)
         skeleton = scsm_exported_manager_skeleton_new ();
         g_dbus_interface_skeleton_export (G_DBUS_INTERFACE_SKELETON (skeleton),
                                           connection,
-                                          GSM_MANAGER_DBUS_PATH, &error);
+                                          SCSM_MANAGER_DBUS_PATH, &error);
 
         if (error != NULL) {
                 g_critical ("error exporting manager on session bus: %s", error->message);
@@ -3355,9 +3355,9 @@ static void
 scsm_manager_init (GsmManager *manager)
 {
 
-        manager->priv = GSM_MANAGER_GET_PRIVATE (manager);
+        manager->priv = SCSM_MANAGER_GET_PRIVATE (manager);
 
-        manager->priv->settings = g_settings_new (GSM_MANAGER_SCHEMA);
+        manager->priv->settings = g_settings_new (SCSM_MANAGER_SCHEMA);
         manager->priv->session_settings = g_settings_new (SESSION_SCHEMA);
         manager->priv->screensaver_settings = g_settings_new (SCREENSAVER_SCHEMA);
         manager->priv->lockdown_settings = g_settings_new (LOCKDOWN_SCHEMA);
@@ -3410,7 +3410,7 @@ scsm_manager_new (GsmStore *client_store,
         } else {
                 gboolean res;
 
-                manager_object = g_object_new (GSM_TYPE_MANAGER,
+                manager_object = g_object_new (SCSM_TYPE_MANAGER,
                                                "client-store", client_store,
                                                "failsafe", failsafe,
                                                "systemd-managed", systemd_managed,
@@ -3425,7 +3425,7 @@ scsm_manager_new (GsmStore *client_store,
                 }
         }
 
-        return GSM_MANAGER (manager_object);
+        return SCSM_MANAGER (manager_object);
 }
 
 static void
@@ -3483,12 +3483,12 @@ _handle_end_session_dialog_response (GsmManager           *manager,
          * inhibitors. The fallback code has two distinct dialogs, once of
          * which we can (and do show) before collecting the inhibitors.
          */
-        if (manager->priv->phase >= GSM_MANAGER_PHASE_END_SESSION) {
+        if (manager->priv->phase >= SCSM_MANAGER_PHASE_END_SESSION) {
                 /* Already shutting down, nothing more to do */
                 return;
         }
 
-        manager->priv->logout_mode = GSM_MANAGER_LOGOUT_MODE_FORCE;
+        manager->priv->logout_mode = SCSM_MANAGER_LOGOUT_MODE_FORCE;
         manager->priv->logout_type = logout_type;
         end_phase (manager);
 }
@@ -3497,7 +3497,7 @@ static void
 on_shell_end_session_dialog_confirmed_logout (GsmShell   *shell,
                                               GsmManager *manager)
 {
-        _handle_end_session_dialog_response (manager, GSM_MANAGER_LOGOUT_LOGOUT);
+        _handle_end_session_dialog_response (manager, SCSM_MANAGER_LOGOUT_LOGOUT);
         disconnect_shell_dialog_signals (manager);
 }
 
@@ -3505,7 +3505,7 @@ static void
 on_shell_end_session_dialog_confirmed_shutdown (GsmShell   *shell,
                                                 GsmManager *manager)
 {
-        _handle_end_session_dialog_response (manager, GSM_MANAGER_LOGOUT_SHUTDOWN);
+        _handle_end_session_dialog_response (manager, SCSM_MANAGER_LOGOUT_SHUTDOWN);
         disconnect_shell_dialog_signals (manager);
 }
 
@@ -3513,7 +3513,7 @@ static void
 on_shell_end_session_dialog_confirmed_reboot (GsmShell   *shell,
                                               GsmManager *manager)
 {
-        _handle_end_session_dialog_response (manager, GSM_MANAGER_LOGOUT_REBOOT);
+        _handle_end_session_dialog_response (manager, SCSM_MANAGER_LOGOUT_REBOOT);
         disconnect_shell_dialog_signals (manager);
 }
 
@@ -3578,7 +3578,7 @@ gboolean
 scsm_manager_set_phase (GsmManager      *manager,
                        GsmManagerPhase  phase)
 {
-        g_return_val_if_fail (GSM_IS_MANAGER (manager), FALSE);
+        g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
         manager->priv->phase = phase;
         return (TRUE);
 }
@@ -3615,8 +3615,8 @@ append_app (GsmManager *manager,
         if (dup != NULL) {
                 g_debug ("GsmManager: not adding app: app-id '%s' already exists", app_id);
 
-                if (provides && GSM_IS_AUTOSTART_APP (dup))
-                        scsm_autostart_app_add_provides (GSM_AUTOSTART_APP (dup), provides);
+                if (provides && SCSM_IS_AUTOSTART_APP (dup))
+                        scsm_autostart_app_add_provides (SCSM_AUTOSTART_APP (dup), provides);
 
                 if (is_required &&
                     !g_slist_find (manager->priv->required_apps, dup)) {
@@ -3644,7 +3644,7 @@ add_autostart_app_internal (GsmManager *manager,
         char   **internal_provides;
         GError *error = NULL;
 
-        g_return_val_if_fail (GSM_IS_MANAGER (manager), FALSE);
+        g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
         g_return_val_if_fail (path != NULL, FALSE);
 
         /* Note: if we cannot add the app because its service is already
@@ -3714,7 +3714,7 @@ add_autostart_app_internal (GsmManager *manager,
         }
 
         if (provides)
-                scsm_autostart_app_add_provides (GSM_AUTOSTART_APP (app), provides);
+                scsm_autostart_app_add_provides (SCSM_AUTOSTART_APP (app), provides);
 
         g_debug ("GsmManager: read %s", path);
         append_app (manager, app, provides, is_required);
@@ -3764,7 +3764,7 @@ scsm_manager_add_autostart_apps_from_dir (GsmManager *manager,
         GDir       *dir;
         const char *name;
 
-        g_return_val_if_fail (GSM_IS_MANAGER (manager), FALSE);
+        g_return_val_if_fail (SCSM_IS_MANAGER (manager), FALSE);
         g_return_val_if_fail (path != NULL, FALSE);
 
         g_debug ("GsmManager: *** Adding autostart apps for %s", path);
@@ -3801,7 +3801,7 @@ on_shutdown_prepared (GsmSystem  *system,
 
         if (success) {
                 /* move to end-session phase */
-                g_assert (manager->priv->phase == GSM_MANAGER_PHASE_QUERY_END_SESSION);
+                g_assert (manager->priv->phase == SCSM_MANAGER_PHASE_QUERY_END_SESSION);
                 manager->priv->phase++;
                 start_phase (manager);
         } else {
@@ -3819,14 +3819,14 @@ do_query_end_session_exit (GsmManager *manager)
         gboolean shutdown = FALSE;
 
         switch (manager->priv->logout_type) {
-        case GSM_MANAGER_LOGOUT_LOGOUT:
+        case SCSM_MANAGER_LOGOUT_LOGOUT:
                 break;
-        case GSM_MANAGER_LOGOUT_REBOOT:
-        case GSM_MANAGER_LOGOUT_REBOOT_INTERACT:
+        case SCSM_MANAGER_LOGOUT_REBOOT:
+        case SCSM_MANAGER_LOGOUT_REBOOT_INTERACT:
                 reboot = TRUE;
                 break;
-        case GSM_MANAGER_LOGOUT_SHUTDOWN:
-        case GSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT:
+        case SCSM_MANAGER_LOGOUT_SHUTDOWN:
+        case SCSM_MANAGER_LOGOUT_SHUTDOWN_INTERACT:
                 shutdown = TRUE;
                 break;
         default:

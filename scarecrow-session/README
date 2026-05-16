@@ -11,18 +11,18 @@ represents an app resumed from the previous saved session.)
 
 Startup is divided into 7 phases (GsmManagerPhase):
 
-    * GSM_MANAGER_PHASE_STARTUP covers scarecrow-session's internal
+    * SCSM_MANAGER_PHASE_STARTUP covers scarecrow-session's internal
       startup, which also includes starting dbus-daemon (if
       it's not already running). Gnome-session starts up those
       explicitly because it needs them for its own purposes.
 
-    * GSM_MANAGER_PHASE_EARLY_INITIALIZATION is the first phase of
+    * SCSM_MANAGER_PHASE_EARLY_INITIALIZATION is the first phase of
       "normal" startup (ie, startup controlled by .desktop files
       rather than hardcoding). It covers the possible installation of
       files in $HOME by gnome-initial-setup and must be done before
       other components such as gnome-keyring use those files.
 
-    * GSM_MANAGER_PHASE_INITIALIZATION covers low-level stuff like
+    * SCSM_MANAGER_PHASE_INITIALIZATION covers low-level stuff like
       scarecrow-settings-daemon helpers, that need to be
       running very early (before any windows are displayed).
 
@@ -31,18 +31,18 @@ Startup is divided into 7 phases (GsmManagerPhase):
       in scarecrow-session's environment. This can be used for things like
       $GTK_MODULES, $GNOME_KEYRING_SOCKET, etc
 
-    * GSM_MANAGER_PHASE_WINDOW_MANAGER includes window managers and
+    * SCSM_MANAGER_PHASE_WINDOW_MANAGER includes window managers and
       compositing managers, and anything else that has to be running
       before any windows are mapped
 
-    * GSM_MANAGER_PHASE_PANEL includes anything that permanently takes
+    * SCSM_MANAGER_PHASE_PANEL includes anything that permanently takes
       up screen real estate (via EWMH struts). This is the first phase
       where things actually appear on the screen.
 
-    * GSM_MANAGER_PHASE_DESKTOP includes anything that draws directly
+    * SCSM_MANAGER_PHASE_DESKTOP includes anything that draws directly
       on the desktop (eg, nautilus).
 
-    * GSM_MANAGER_PHASE_APPLICATION is everything else (normal apps,
+    * SCSM_MANAGER_PHASE_APPLICATION is everything else (normal apps,
       tray icons, etc)
 
 For each startup phase, GsmSession launches the appropriate GsmApps.
@@ -58,7 +58,7 @@ of resumed apps.
 Running/Shutdown
 ----------------
 
-GSM_MANAGER_PHASE_RUNNING is pretty similar to the old scarecrow-session;
+SCSM_MANAGER_PHASE_RUNNING is pretty similar to the old scarecrow-session;
 mostly it just tracks XSMP clients, and watches for
 SmRestartImmediately clients exiting (NOTE: THIS DOESN'T HAPPEN YET).
 

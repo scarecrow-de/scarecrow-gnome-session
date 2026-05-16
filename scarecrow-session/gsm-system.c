@@ -50,7 +50,7 @@ scsm_system_default_init (GsmSystemInterface *iface)
         GParamSpec *pspec;
         signals [REQUEST_COMPLETED] =
                 g_signal_new ("request-completed",
-                              GSM_TYPE_SYSTEM,
+                              SCSM_TYPE_SYSTEM,
                               G_SIGNAL_RUN_LAST,
                               G_STRUCT_OFFSET (GsmSystemInterface, request_completed),
                               NULL, NULL, NULL,
@@ -58,7 +58,7 @@ scsm_system_default_init (GsmSystemInterface *iface)
                               1, G_TYPE_POINTER);
         signals[SHUTDOWN_PREPARED] =
                  g_signal_new ("shutdown-prepared",
-                               GSM_TYPE_SYSTEM,
+                               SCSM_TYPE_SYSTEM,
                                G_SIGNAL_RUN_LAST,
                                G_STRUCT_OFFSET (GsmSystemInterface, shutdown_prepared),
                                NULL, NULL, NULL,
@@ -125,7 +125,7 @@ scsm_system_null_class_init (GsmSystemNullClass *class)
 
 static GType scsm_system_null_get_type (void);
 G_DEFINE_TYPE_WITH_CODE (GsmSystemNull, scsm_system_null, G_TYPE_OBJECT,
-                         G_IMPLEMENT_INTERFACE (GSM_TYPE_SYSTEM, scsm_system_null_init_iface))
+                         G_IMPLEMENT_INTERFACE (SCSM_TYPE_SYSTEM, scsm_system_null_init_iface))
 
 GQuark
 scsm_system_error_quark (void)
@@ -142,75 +142,75 @@ scsm_system_error_quark (void)
 gboolean
 scsm_system_can_switch_user (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->can_switch_user (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->can_switch_user (system);
 }
 
 gboolean
 scsm_system_can_stop (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->can_stop (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->can_stop (system);
 }
 
 gboolean
 scsm_system_can_restart (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->can_restart (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->can_restart (system);
 }
 
 gboolean
 scsm_system_can_restart_to_firmware_setup (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->can_restart_to_firmware_setup (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->can_restart_to_firmware_setup (system);
 }
 
 void
 scsm_system_set_restart_to_firmware_setup (GsmSystem *system,
                                           gboolean   enable)
 {
-        GSM_SYSTEM_GET_IFACE (system)->set_restart_to_firmware_setup (system, enable);
+        SCSM_SYSTEM_GET_IFACE (system)->set_restart_to_firmware_setup (system, enable);
 }
 
 gboolean
 scsm_system_can_suspend (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->can_suspend (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->can_suspend (system);
 }
 
 gboolean
 scsm_system_can_hibernate (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->can_hibernate (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->can_hibernate (system);
 }
 
 void
 scsm_system_attempt_stop (GsmSystem *system)
 {
-        GSM_SYSTEM_GET_IFACE (system)->attempt_stop (system);
+        SCSM_SYSTEM_GET_IFACE (system)->attempt_stop (system);
 }
 
 void
 scsm_system_attempt_restart (GsmSystem *system)
 {
-        GSM_SYSTEM_GET_IFACE (system)->attempt_restart (system);
+        SCSM_SYSTEM_GET_IFACE (system)->attempt_restart (system);
 }
 
 void
 scsm_system_suspend (GsmSystem *system)
 {
-        GSM_SYSTEM_GET_IFACE (system)->suspend (system);
+        SCSM_SYSTEM_GET_IFACE (system)->suspend (system);
 }
 
 void
 scsm_system_hibernate (GsmSystem *system)
 {
-        GSM_SYSTEM_GET_IFACE (system)->hibernate (system);
+        SCSM_SYSTEM_GET_IFACE (system)->hibernate (system);
 }
 
 void
 scsm_system_set_session_idle (GsmSystem *system,
                              gboolean   is_idle)
 {
-        GSM_SYSTEM_GET_IFACE (system)->set_session_idle (system, is_idle);
+        SCSM_SYSTEM_GET_IFACE (system)->set_session_idle (system, is_idle);
 }
 
 void
@@ -218,26 +218,26 @@ scsm_system_add_inhibitor (GsmSystem        *system,
                           const gchar      *id,
                           GsmInhibitorFlag  flag)
 {
-        GSM_SYSTEM_GET_IFACE (system)->add_inhibitor (system, id, flag);
+        SCSM_SYSTEM_GET_IFACE (system)->add_inhibitor (system, id, flag);
 }
 
 void
 scsm_system_remove_inhibitor (GsmSystem   *system,
                              const gchar *id)
 {
-        GSM_SYSTEM_GET_IFACE (system)->remove_inhibitor (system, id);
+        SCSM_SYSTEM_GET_IFACE (system)->remove_inhibitor (system, id);
 }
 
 gboolean
 scsm_system_is_login_session (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->is_login_session (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->is_login_session (system);
 }
 
 gboolean
 scsm_system_is_last_session_for_user (GsmSystem *system)
 {
-        return GSM_SYSTEM_GET_IFACE (system)->is_last_session_for_user (system);
+        return SCSM_SYSTEM_GET_IFACE (system)->is_last_session_for_user (system);
 }
 
 /**
@@ -258,13 +258,13 @@ void
 scsm_system_prepare_shutdown  (GsmSystem *system,
                               gboolean   restart)
 {
-        GSM_SYSTEM_GET_IFACE (system)->prepare_shutdown (system, restart);
+        SCSM_SYSTEM_GET_IFACE (system)->prepare_shutdown (system, restart);
 }
 
 void
 scsm_system_complete_shutdown (GsmSystem *system)
 {
-        GSM_SYSTEM_GET_IFACE (system)->complete_shutdown (system);
+        SCSM_SYSTEM_GET_IFACE (system)->complete_shutdown (system);
 }
 
 GsmSystem *
@@ -273,7 +273,7 @@ scsm_get_system (void)
         static GsmSystem *system = NULL;
 
         if (system == NULL) {
-                system = GSM_SYSTEM (scsm_systemd_new ());
+                system = SCSM_SYSTEM (scsm_systemd_new ());
                 if (system != NULL) {
                         g_debug ("Using systemd for session tracking");
                 }
@@ -281,7 +281,7 @@ scsm_get_system (void)
 
 #ifdef HAVE_CONSOLEKIT
         if (system == NULL) {
-                system = GSM_SYSTEM (scsm_consolekit_new ());
+                system = SCSM_SYSTEM (scsm_consolekit_new ());
                 if (system != NULL) {
                         g_debug ("Using ConsoleKit for session tracking");
                 }

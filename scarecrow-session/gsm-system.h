@@ -19,8 +19,8 @@
  *	Jon McCann <jmccann@redhat.com>
  */
 
-#ifndef __GSM_SYSTEM_H__
-#define __GSM_SYSTEM_H__
+#ifndef __SCSM_SYSTEM_H__
+#define __SCSM_SYSTEM_H__
 
 #include <glib.h>
 #include <glib-object.h>
@@ -29,12 +29,12 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_SYSTEM             (scsm_system_get_type ())
-#define GSM_SYSTEM(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_SYSTEM, GsmSystem))
-#define GSM_SYSTEM_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_SYSTEM, GsmSystemInterface))
-#define GSM_IS_SYSTEM(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_SYSTEM))
-#define GSM_SYSTEM_GET_IFACE(obj)   (G_TYPE_INSTANCE_GET_INTERFACE((obj), GSM_TYPE_SYSTEM, GsmSystemInterface))
-#define GSM_SYSTEM_ERROR            (scsm_system_error_quark ())
+#define SCSM_TYPE_SYSTEM             (scsm_system_get_type ())
+#define SCSM_SYSTEM(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SYSTEM, GsmSystem))
+#define SCSM_SYSTEM_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SYSTEM, GsmSystemInterface))
+#define SCSM_IS_SYSTEM(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SYSTEM))
+#define SCSM_SYSTEM_GET_IFACE(obj)   (G_TYPE_INSTANCE_GET_INTERFACE((obj), SCSM_TYPE_SYSTEM, GsmSystemInterface))
+#define SCSM_SYSTEM_ERROR            (scsm_system_error_quark ())
 
 typedef struct _GsmSystem          GsmSystem;
 typedef struct _GsmSystemInterface GsmSystemInterface;
@@ -77,8 +77,8 @@ struct _GsmSystemInterface
 };
 
 enum _GsmSystemError {
-        GSM_SYSTEM_ERROR_RESTARTING = 0,
-        GSM_SYSTEM_ERROR_STOPPING
+        SCSM_SYSTEM_ERROR_RESTARTING = 0,
+        SCSM_SYSTEM_ERROR_STOPPING
 };
 
 GType      scsm_system_get_type         (void);
@@ -133,4 +133,4 @@ void       scsm_system_complete_shutdown (GsmSystem  *system);
 
 G_END_DECLS
 
-#endif /* __GSM_SYSTEM_H__ */
+#endif /* __SCSM_SYSTEM_H__ */

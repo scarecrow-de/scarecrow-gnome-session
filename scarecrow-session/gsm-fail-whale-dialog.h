@@ -21,16 +21,16 @@
  *      Marco Trevisan <marco@ubuntu.com>
  */
 
-#ifndef __GSM_FAIL_WHALE_DIALOG_H__
-#define __GSM_FAIL_WHALE_DIALOG_H__
+#ifndef __SCSM_FAIL_WHALE_DIALOG_H__
+#define __SCSM_FAIL_WHALE_DIALOG_H__
 
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_FAIL_WHALE_DIALOG         (scsm_fail_whale_dialog_get_type ())
-G_DECLARE_FINAL_TYPE (GsmFailWhaleDialog, scsm_fail_whale_dialog, GSM, FAIL_WHALE_DIALOG, GtkWindow);
+#define SCSM_TYPE_FAIL_WHALE_DIALOG         (scsm_fail_whale_dialog_get_type ())
+G_DECLARE_FINAL_TYPE (GsmFailWhaleDialog, scsm_fail_whale_dialog, SCSM, FAIL_WHALE_DIALOG, GtkWindow);
 
 G_END_DECLS
 
-#endif /* __GSM_FAIL_WHALE_DIALOG_H__ */
+#endif /* __SCSM_FAIL_WHALE_DIALOG_H__ */

@@ -16,8 +16,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_PROCESS_HELPER_H
-#define __GSM_PROCESS_HELPER_H
+#ifndef __SCSM_PROCESS_HELPER_H
+#define __SCSM_PROCESS_HELPER_H
 
 #include <glib.h>
 
@@ -29,4 +29,4 @@ int  scsm_process_helper (const char    *command_line,
 
 G_END_DECLS
 
-#endif /* __GSM_PROCESS_HELPER_H */
+#endif /* __SCSM_PROCESS_HELPER_H */

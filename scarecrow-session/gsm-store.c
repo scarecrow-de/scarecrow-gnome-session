@@ -31,7 +31,7 @@
 
 #include "scsm-store.h"
 
-#define GSM_STORE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_STORE, GsmStorePrivate))
+#define SCSM_STORE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_STORE, GsmStorePrivate))
 
 struct GsmStorePrivate
 {
@@ -255,7 +255,7 @@ void
 scsm_store_set_locked (GsmStore *store,
                       gboolean  locked)
 {
-        g_return_if_fail (GSM_IS_STORE (store));
+        g_return_if_fail (SCSM_IS_STORE (store));
 
         store->priv->locked = locked;
 }
@@ -263,7 +263,7 @@ scsm_store_set_locked (GsmStore *store,
 gboolean
 scsm_store_get_locked (GsmStore *store)
 {
-        g_return_val_if_fail (GSM_IS_STORE (store), FALSE);
+        g_return_val_if_fail (SCSM_IS_STORE (store), FALSE);
 
         return store->priv->locked;
 }
@@ -276,7 +276,7 @@ scsm_store_set_property (GObject      *object,
 {
         GsmStore *self;
 
-        self = GSM_STORE (object);
+        self = SCSM_STORE (object);
 
         switch (prop_id) {
         case PROP_LOCKED:
@@ -296,7 +296,7 @@ scsm_store_get_property (GObject    *object,
 {
         GsmStore *self;
 
-        self = GSM_STORE (object);
+        self = SCSM_STORE (object);
 
         switch (prop_id) {
         case PROP_LOCKED:
@@ -314,9 +314,9 @@ scsm_store_dispose (GObject *object)
         GsmStore *store;
 
         g_return_if_fail (object != NULL);
-        g_return_if_fail (GSM_IS_STORE (object));
+        g_return_if_fail (SCSM_IS_STORE (object));
 
-        store = GSM_STORE (object);
+        store = SCSM_STORE (object);
 
         scsm_store_clear (store);
 
@@ -371,7 +371,7 @@ static void
 scsm_store_init (GsmStore *store)
 {
 
-        store->priv = GSM_STORE_GET_PRIVATE (store);
+        store->priv = SCSM_STORE_GET_PRIVATE (store);
 
         store->priv->objects = g_hash_table_new_full (g_str_hash,
                                                       g_str_equal,
@@ -385,9 +385,9 @@ scsm_store_finalize (GObject *object)
         GsmStore *store;
 
         g_return_if_fail (object != NULL);
-        g_return_if_fail (GSM_IS_STORE (object));
+        g_return_if_fail (SCSM_IS_STORE (object));
 
-        store = GSM_STORE (object);
+        store = SCSM_STORE (object);
 
         g_return_if_fail (store->priv != NULL);
 
@@ -401,8 +401,8 @@ scsm_store_new (void)
 {
         GObject *object;
 
-        object = g_object_new (GSM_TYPE_STORE,
+        object = g_object_new (SCSM_TYPE_STORE,
                                NULL);
 
-        return GSM_STORE (object);
+        return SCSM_STORE (object);
 }

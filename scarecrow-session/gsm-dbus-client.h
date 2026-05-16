@@ -16,19 +16,19 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_DBUS_CLIENT_H__
-#define __GSM_DBUS_CLIENT_H__
+#ifndef __SCSM_DBUS_CLIENT_H__
+#define __SCSM_DBUS_CLIENT_H__
 
 #include "scsm-client.h"
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_DBUS_CLIENT            (scsm_dbus_client_get_type ())
-#define GSM_DBUS_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_DBUS_CLIENT, GsmDBusClient))
-#define GSM_DBUS_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_DBUS_CLIENT, GsmDBusClientClass))
-#define GSM_IS_DBUS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_DBUS_CLIENT))
-#define GSM_IS_DBUS_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_DBUS_CLIENT))
-#define GSM_DBUS_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GSM_TYPE_DBUS_CLIENT, GsmDBusClientClass))
+#define SCSM_TYPE_DBUS_CLIENT            (scsm_dbus_client_get_type ())
+#define SCSM_DBUS_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_DBUS_CLIENT, GsmDBusClient))
+#define SCSM_DBUS_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_DBUS_CLIENT, GsmDBusClientClass))
+#define SCSM_IS_DBUS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_DBUS_CLIENT))
+#define SCSM_IS_DBUS_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_DBUS_CLIENT))
+#define SCSM_DBUS_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_DBUS_CLIENT, GsmDBusClientClass))
 
 typedef struct _GsmDBusClient        GsmDBusClient;
 typedef struct _GsmDBusClientClass   GsmDBusClientClass;
@@ -54,4 +54,4 @@ const char *   scsm_dbus_client_get_bus_name       (GsmDBusClient  *client);
 
 G_END_DECLS
 
-#endif /* __GSM_DBUS_CLIENT_H__ */
+#endif /* __SCSM_DBUS_CLIENT_H__ */

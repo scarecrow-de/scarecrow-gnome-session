@@ -18,19 +18,19 @@
  */
 
 
-#ifndef __GSM_STORE_H
-#define __GSM_STORE_H
+#ifndef __SCSM_STORE_H
+#define __SCSM_STORE_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_STORE         (scsm_store_get_type ())
-#define GSM_STORE(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), GSM_TYPE_STORE, GsmStore))
-#define GSM_STORE_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), GSM_TYPE_STORE, GsmStoreClass))
-#define GSM_IS_STORE(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), GSM_TYPE_STORE))
-#define GSM_IS_STORE_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), GSM_TYPE_STORE))
-#define GSM_STORE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), GSM_TYPE_STORE, GsmStoreClass))
+#define SCSM_TYPE_STORE         (scsm_store_get_type ())
+#define SCSM_STORE(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SCSM_TYPE_STORE, GsmStore))
+#define SCSM_STORE_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SCSM_TYPE_STORE, GsmStoreClass))
+#define SCSM_IS_STORE(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), SCSM_TYPE_STORE))
+#define SCSM_IS_STORE_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), SCSM_TYPE_STORE))
+#define SCSM_STORE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SCSM_TYPE_STORE, GsmStoreClass))
 
 typedef struct GsmStorePrivate GsmStorePrivate;
 
@@ -52,10 +52,10 @@ typedef struct
 
 typedef enum
 {
-         GSM_STORE_ERROR_GENERAL
+         SCSM_STORE_ERROR_GENERAL
 } GsmStoreError;
 
-#define GSM_STORE_ERROR scsm_store_error_quark ()
+#define SCSM_STORE_ERROR scsm_store_error_quark ()
 
 typedef gboolean (*GsmStoreFunc) (const char *id,
                                   GObject    *object,
@@ -93,4 +93,4 @@ GObject *           scsm_store_lookup                   (GsmStore    *store,
 
 G_END_DECLS
 
-#endif /* __GSM_STORE_H */
+#endif /* __SCSM_STORE_H */

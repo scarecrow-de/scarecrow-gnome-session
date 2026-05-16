@@ -17,8 +17,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_SESSION_FILL_H
-#define __GSM_SESSION_FILL_H
+#ifndef __SCSM_SESSION_FILL_H
+#define __SCSM_SESSION_FILL_H
 
 #include "scsm-manager.h"
 
@@ -29,4 +29,4 @@ gboolean scsm_session_fill (GsmManager  *manager,
 
 G_END_DECLS
 
-#endif /* __GSM_SESSION_FILL_H */
+#endif /* __SCSM_SESSION_FILL_H */

@@ -26,13 +26,13 @@
 #include "scsm-process-helper.h"
 #include "scsm-util.h"
 
-#define GSM_KEYFILE_SESSION_GROUP "Scarecrow Session"
-#define GSM_KEYFILE_RUNNABLE_KEY "IsRunnableHelper"
-#define GSM_KEYFILE_FALLBACK_KEY "FallbackSession"
-#define GSM_KEYFILE_REQUIRED_COMPONENTS_KEY "RequiredComponents"
+#define SCSM_KEYFILE_SESSION_GROUP "Scarecrow Session"
+#define SCSM_KEYFILE_RUNNABLE_KEY "IsRunnableHelper"
+#define SCSM_KEYFILE_FALLBACK_KEY "FallbackSession"
+#define SCSM_KEYFILE_REQUIRED_COMPONENTS_KEY "RequiredComponents"
 
 /* See https://bugzilla.gnome.org/show_bug.cgi?id=641992 for discussion */
-#define GSM_RUNNABLE_HELPER_TIMEOUT 3000 /* ms */
+#define SCSM_RUNNABLE_HELPER_TIMEOUT 3000 /* ms */
 
 typedef void (*GsmFillHandleComponent) (const char *component,
                                         const char *app_path,
@@ -51,8 +51,8 @@ handle_required_components (GKeyFile               *keyfile,
         g_assert (callback != NULL);
 
         required_components = g_key_file_get_string_list (keyfile,
-                                                          GSM_KEYFILE_SESSION_GROUP,
-                                                          GSM_KEYFILE_REQUIRED_COMPONENTS_KEY,
+                                                          SCSM_KEYFILE_SESSION_GROUP,
+                                                          SCSM_KEYFILE_REQUIRED_COMPONENTS_KEY,
                                                           NULL, NULL);
 
         if (!required_components)
@@ -174,14 +174,14 @@ get_session_keyfile_if_valid (const char *path)
                 goto error;
         }
 
-        if (!g_key_file_has_group (keyfile, GSM_KEYFILE_SESSION_GROUP)) {
-                g_warning ("Cannot use session '%s': no '%s' group.", path, GSM_KEYFILE_SESSION_GROUP);
+        if (!g_key_file_has_group (keyfile, SCSM_KEYFILE_SESSION_GROUP)) {
+                g_warning ("Cannot use session '%s': no '%s' group.", path, SCSM_KEYFILE_SESSION_GROUP);
                 goto error;
         }
 
         list = g_key_file_get_string_list (keyfile,
-                                           GSM_KEYFILE_SESSION_GROUP,
-                                           GSM_KEYFILE_REQUIRED_COMPONENTS_KEY,
+                                           SCSM_KEYFILE_SESSION_GROUP,
+                                           SCSM_KEYFILE_REQUIRED_COMPONENTS_KEY,
                                            &len, NULL);
         if (list)
                 g_strfreev (list);
@@ -269,11 +269,11 @@ get_session_keyfile (const char *session,
         session_runnable = TRUE;
 
         value = g_key_file_get_string (keyfile,
-                                       GSM_KEYFILE_SESSION_GROUP, GSM_KEYFILE_RUNNABLE_KEY,
+                                       SCSM_KEYFILE_SESSION_GROUP, SCSM_KEYFILE_RUNNABLE_KEY,
                                        NULL);
         if (!IS_STRING_EMPTY (value)) {
                 g_debug ("fill: *** Launching helper '%s' to know if session is runnable", value);
-                session_runnable = scsm_process_helper (value, GSM_RUNNABLE_HELPER_TIMEOUT, &error);
+                session_runnable = scsm_process_helper (value, SCSM_RUNNABLE_HELPER_TIMEOUT, &error);
                 if (!session_runnable) {
                         g_warning ("Session '%s' runnable check failed: %s", session,
                                    error->message);
@@ -297,7 +297,7 @@ get_session_keyfile (const char *session,
 
         /* We can't run this session, so try to use the fallback */
         value = g_key_file_get_string (keyfile,
-                                       GSM_KEYFILE_SESSION_GROUP, GSM_KEYFILE_FALLBACK_KEY,
+                                       SCSM_KEYFILE_SESSION_GROUP, SCSM_KEYFILE_FALLBACK_KEY,
                                        NULL);
 
         g_key_file_free (keyfile);

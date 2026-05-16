@@ -17,8 +17,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_CLIENT_H__
-#define __GSM_CLIENT_H__
+#ifndef __SCSM_CLIENT_H__
+#define __SCSM_CLIENT_H__
 
 #include <glib.h>
 #include <glib-object.h>
@@ -26,12 +26,12 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_CLIENT            (scsm_client_get_type ())
-#define GSM_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_CLIENT, GsmClient))
-#define GSM_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_CLIENT, GsmClientClass))
-#define GSM_IS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_CLIENT))
-#define GSM_IS_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_CLIENT))
-#define GSM_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GSM_TYPE_CLIENT, GsmClientClass))
+#define SCSM_TYPE_CLIENT            (scsm_client_get_type ())
+#define SCSM_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_CLIENT, GsmClient))
+#define SCSM_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_CLIENT, GsmClientClass))
+#define SCSM_IS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_CLIENT))
+#define SCSM_IS_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_CLIENT))
+#define SCSM_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_CLIENT, GsmClientClass))
 
 typedef struct _GsmApp           GsmApp;
 typedef struct _GsmClient        GsmClient;
@@ -40,23 +40,23 @@ typedef struct _GsmClientClass   GsmClientClass;
 typedef struct GsmClientPrivate GsmClientPrivate;
 
 typedef enum {
-        GSM_CLIENT_UNREGISTERED = 0,
-        GSM_CLIENT_REGISTERED,
-        GSM_CLIENT_FINISHED,
-        GSM_CLIENT_FAILED
+        SCSM_CLIENT_UNREGISTERED = 0,
+        SCSM_CLIENT_REGISTERED,
+        SCSM_CLIENT_FINISHED,
+        SCSM_CLIENT_FAILED
 } GsmClientStatus;
 
 typedef enum {
-        GSM_CLIENT_RESTART_NEVER = 0,
-        GSM_CLIENT_RESTART_IF_RUNNING,
-        GSM_CLIENT_RESTART_ANYWAY,
-        GSM_CLIENT_RESTART_IMMEDIATELY
+        SCSM_CLIENT_RESTART_NEVER = 0,
+        SCSM_CLIENT_RESTART_IF_RUNNING,
+        SCSM_CLIENT_RESTART_ANYWAY,
+        SCSM_CLIENT_RESTART_IMMEDIATELY
 } GsmClientRestartStyle;
 
 typedef enum {
-        GSM_CLIENT_END_SESSION_FLAG_FORCEFUL = 1 << 0,
-        GSM_CLIENT_END_SESSION_FLAG_SAVE     = 1 << 1,
-        GSM_CLIENT_END_SESSION_FLAG_LAST     = 1 << 2
+        SCSM_CLIENT_END_SESSION_FLAG_FORCEFUL = 1 << 0,
+        SCSM_CLIENT_END_SESSION_FLAG_SAVE     = 1 << 1,
+        SCSM_CLIENT_END_SESSION_FLAG_LAST     = 1 << 2
 } GsmClientEndSessionFlag;
 
 struct _GsmClient
@@ -98,12 +98,12 @@ struct _GsmClientClass
 
 typedef enum
 {
-        GSM_CLIENT_ERROR_GENERAL = 0,
-        GSM_CLIENT_ERROR_NOT_REGISTERED,
-        GSM_CLIENT_NUM_ERRORS
+        SCSM_CLIENT_ERROR_GENERAL = 0,
+        SCSM_CLIENT_ERROR_NOT_REGISTERED,
+        SCSM_CLIENT_NUM_ERRORS
 } GsmClientError;
 
-#define GSM_CLIENT_ERROR scsm_client_error_quark ()
+#define SCSM_CLIENT_ERROR scsm_client_error_quark ()
 GQuark                scsm_client_error_quark                (void);
 
 GType                 scsm_client_get_type                   (void) G_GNUC_CONST;
@@ -151,4 +151,4 @@ void                  scsm_client_end_session_response       (GsmClient  *client
 
 G_END_DECLS
 
-#endif /* __GSM_CLIENT_H__ */
+#endif /* __SCSM_CLIENT_H__ */

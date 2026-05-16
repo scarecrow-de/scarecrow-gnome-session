@@ -15,8 +15,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_FAIL_WHALE_H___
-#define __GSM_FAIL_WHALE_H__
+#ifndef __SCSM_FAIL_WHALE_H___
+#define __SCSM_FAIL_WHALE_H__
 
 #include <glib.h>
 
@@ -30,5 +30,5 @@ void        scsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
 
 G_END_DECLS
 
-#endif /* __GSM_FAIL_WHALE_H__ */
+#endif /* __SCSM_FAIL_WHALE_H__ */
 

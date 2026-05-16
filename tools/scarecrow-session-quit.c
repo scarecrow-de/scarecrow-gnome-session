@@ -30,14 +30,14 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#define GSM_SERVICE_DBUS   "io.github.scarecrow_de.SessionManager"
-#define GSM_PATH_DBUS      "/io/github/scarecrow_de/SessionManager"
-#define GSM_INTERFACE_DBUS "io.github.scarecrow_de.SessionManager"
+#define SCSM_SERVICE_DBUS   "io.github.scarecrow_de.SessionManager"
+#define SCSM_PATH_DBUS      "/io/github/scarecrow_de/SessionManager"
+#define SCSM_INTERFACE_DBUS "io.github.scarecrow_de.SessionManager"
 
 enum {
-        GSM_LOGOUT_MODE_NORMAL = 0,
-        GSM_LOGOUT_MODE_NO_CONFIRMATION,
-        GSM_LOGOUT_MODE_FORCE
+        SCSM_LOGOUT_MODE_NORMAL = 0,
+        SCSM_LOGOUT_MODE_NO_CONFIRMATION,
+        SCSM_LOGOUT_MODE_FORCE
 };
 
 static gboolean opt_logout = FALSE;
@@ -92,9 +92,9 @@ get_sm_proxy (void)
         sm_proxy = g_dbus_proxy_new_sync (connection,
                                           G_DBUS_PROXY_FLAGS_NONE,
                                           NULL,
-                                          GSM_SERVICE_DBUS,
-                                          GSM_PATH_DBUS,
-                                          GSM_INTERFACE_DBUS,
+                                          SCSM_SERVICE_DBUS,
+                                          SCSM_PATH_DBUS,
+                                          SCSM_INTERFACE_DBUS,
                                           NULL, NULL);
         g_object_unref (connection);
 
@@ -205,11 +205,11 @@ main (int argc, char *argv[])
                 /* default to logout */
 
                 if (opt_force)
-                        do_logout (GSM_LOGOUT_MODE_FORCE);
+                        do_logout (SCSM_LOGOUT_MODE_FORCE);
                 else if (opt_no_prompt)
-                        do_logout (GSM_LOGOUT_MODE_NO_CONFIRMATION);
+                        do_logout (SCSM_LOGOUT_MODE_NO_CONFIRMATION);
                 else
-                        do_logout (GSM_LOGOUT_MODE_NORMAL);
+                        do_logout (SCSM_LOGOUT_MODE_NORMAL);
         }
 
         return 0;

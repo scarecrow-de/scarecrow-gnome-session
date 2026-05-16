@@ -125,9 +125,9 @@ scsm_fail_whale_dialog_realize (GtkWidget *widget)
                 GTK_WIDGET_CLASS (scsm_fail_whale_dialog_parent_class)->realize (widget);
         }
 
-        _window_override_user_time (GSM_FAIL_WHALE_DIALOG (widget));
-        update_geometry (GSM_FAIL_WHALE_DIALOG (widget));
-        _window_move_resize_window (GSM_FAIL_WHALE_DIALOG (widget), TRUE, TRUE);
+        _window_override_user_time (SCSM_FAIL_WHALE_DIALOG (widget));
+        update_geometry (SCSM_FAIL_WHALE_DIALOG (widget));
+        _window_move_resize_window (SCSM_FAIL_WHALE_DIALOG (widget), TRUE, TRUE);
 
         g_signal_connect (gtk_window_get_screen (GTK_WINDOW (widget)),
                           "size_changed",
@@ -156,7 +156,7 @@ scsm_fail_whale_dialog_size_request (GtkWidget      *widget,
         int            position_changed = FALSE;
         int            size_changed = FALSE;
 
-        fail_dialog = GSM_FAIL_WHALE_DIALOG (widget);
+        fail_dialog = SCSM_FAIL_WHALE_DIALOG (widget);
 
         old_geometry = fail_dialog->geometry;
 
@@ -274,7 +274,7 @@ setup_window (GsmFailWhaleDialog *fail_dialog)
         int i;
 
         gtk_window_set_title (GTK_WINDOW (fail_dialog), "");
-        gtk_window_set_icon_name (GTK_WINDOW (fail_dialog), GSM_ICON_COMPUTER_FAIL);
+        gtk_window_set_icon_name (GTK_WINDOW (fail_dialog), SCSM_ICON_COMPUTER_FAIL);
 
         gtk_window_set_skip_taskbar_hint (GTK_WINDOW (fail_dialog), TRUE);
         gtk_window_set_keep_above (GTK_WINDOW (fail_dialog), TRUE);
@@ -302,7 +302,7 @@ setup_window (GsmFailWhaleDialog *fail_dialog)
 
         scale_factor = gdk_monitor_get_scale_factor (fail_dialog->monitor);
         fail_icon = gtk_icon_theme_load_icon_for_scale (gtk_icon_theme_get_default (),
-                                                        GSM_ICON_COMPUTER_FAIL,
+                                                        SCSM_ICON_COMPUTER_FAIL,
                                                         128,
                                                         scale_factor,
                                                         0,
@@ -365,7 +365,7 @@ create_fail_dialog (GdkMonitor *monitor)
 {
         GsmFailWhaleDialog *fail_dialog;
 
-        fail_dialog = g_object_new (GSM_TYPE_FAIL_WHALE_DIALOG, NULL);
+        fail_dialog = g_object_new (SCSM_TYPE_FAIL_WHALE_DIALOG, NULL);
         fail_dialog->debug_mode = debug_mode;
         fail_dialog->allow_logout = allow_logout;
         fail_dialog->extensions = extensions;

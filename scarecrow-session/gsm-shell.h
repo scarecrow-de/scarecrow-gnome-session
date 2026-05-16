@@ -19,8 +19,8 @@
  *    Ray Strode <rstrode@redhat.com>
  */
 
-#ifndef __GSM_SHELL_H__
-#define __GSM_SHELL_H__
+#ifndef __SCSM_SHELL_H__
+#define __SCSM_SHELL_H__
 
 #include <glib.h>
 #include <glib-object.h>
@@ -29,13 +29,13 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_SHELL             (scsm_shell_get_type ())
-#define GSM_SHELL(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_SHELL, GsmShell))
-#define GSM_SHELL_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_SHELL, GsmShellClass))
-#define GSM_IS_SHELL(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_SHELL))
-#define GSM_IS_SHELL_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_SHELL))
-#define GSM_SHELL_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), GSM_TYPE_SHELL, GsmShellClass))
-#define GSM_SHELL_ERROR            (scsm_shell_error_quark ())
+#define SCSM_TYPE_SHELL             (scsm_shell_get_type ())
+#define SCSM_SHELL(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SHELL, GsmShell))
+#define SCSM_SHELL_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_SHELL, GsmShellClass))
+#define SCSM_IS_SHELL(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SHELL))
+#define SCSM_IS_SHELL_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_SHELL))
+#define SCSM_SHELL_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), SCSM_TYPE_SHELL, GsmShellClass))
+#define SCSM_SHELL_ERROR            (scsm_shell_error_quark ())
 
 typedef struct _GsmShell        GsmShell;
 typedef struct _GsmShellClass   GsmShellClass;
@@ -43,9 +43,9 @@ typedef struct _GsmShellPrivate GsmShellPrivate;
 
 typedef enum
 {
-    GSM_SHELL_END_SESSION_DIALOG_TYPE_LOGOUT = 0,
-    GSM_SHELL_END_SESSION_DIALOG_TYPE_SHUTDOWN,
-    GSM_SHELL_END_SESSION_DIALOG_TYPE_RESTART,
+    SCSM_SHELL_END_SESSION_DIALOG_TYPE_LOGOUT = 0,
+    SCSM_SHELL_END_SESSION_DIALOG_TYPE_SHUTDOWN,
+    SCSM_SHELL_END_SESSION_DIALOG_TYPE_RESTART,
 } GsmShellEndSessionDialogType;
 
 struct _GsmShell
@@ -84,4 +84,4 @@ void             scsm_shell_close_end_session_dialog (GsmShell *shell);
 
 G_END_DECLS
 
-#endif /* __GSM_SHELL_H__ */
+#endif /* __SCSM_SHELL_H__ */

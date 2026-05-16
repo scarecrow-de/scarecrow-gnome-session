@@ -29,7 +29,7 @@
 
 #include "scsm-session-save.h"
 
-#define GSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
+#define SCSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
 #define KEY_AUTOSAVE_ONE_SHOT     "auto-save-session-one-shot"
 
 
@@ -70,7 +70,7 @@ save_one_client (char            *id,
         char       *discard_exec;
         GError     *local_error;
 
-        client = GSM_CLIENT (object);
+        client = SCSM_CLIENT (object);
 
         local_error = NULL;
 
@@ -121,7 +121,7 @@ save_one_client (char            *id,
 
         discard_exec = g_key_file_get_string (keyfile,
                                               G_KEY_FILE_DESKTOP_GROUP,
-                                              GSM_AUTOSTART_APP_DISCARD_KEY,
+                                              SCSM_AUTOSTART_APP_DISCARD_KEY,
                                               NULL);
         if (discard_exec) {
                 g_hash_table_insert (data->discard_hash,
@@ -164,7 +164,7 @@ scsm_session_save (GsmStore  *client_store,
         /* Clear one shot key autosave in the event its set (so that it's actually
          * one shot only)
          */
-        settings = g_settings_new (GSM_MANAGER_SCHEMA);
+        settings = g_settings_new (SCSM_MANAGER_SCHEMA);
         g_settings_set_boolean (settings, KEY_AUTOSAVE_ONE_SHOT, FALSE);
         g_object_unref (settings);
 
@@ -210,7 +210,7 @@ scsm_session_clear_one_client (const char *filename,
 
                 discard_exec = g_key_file_get_string (key_file,
                                                       G_KEY_FILE_DESKTOP_GROUP,
-                                                      GSM_AUTOSTART_APP_DISCARD_KEY,
+                                                      SCSM_AUTOSTART_APP_DISCARD_KEY,
                                                       NULL);
                 if (!discard_exec)
                         goto out;

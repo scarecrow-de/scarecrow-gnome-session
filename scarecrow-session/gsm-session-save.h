@@ -15,8 +15,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_SESSION_SAVE_H__
-#define __GSM_SESSION_SAVE_H__
+#ifndef __SCSM_SESSION_SAVE_H__
+#define __SCSM_SESSION_SAVE_H__
 
 #include <glib.h>
 
@@ -31,4 +31,4 @@ void      scsm_session_save_clear           (void);
 
 G_END_DECLS
 
-#endif /* __GSM_SESSION_SAVE_H__ */
+#endif /* __SCSM_SESSION_SAVE_H__ */

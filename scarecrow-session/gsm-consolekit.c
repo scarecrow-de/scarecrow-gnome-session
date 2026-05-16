@@ -67,7 +67,7 @@ enum {
 static void scsm_consolekit_system_init (GsmSystemInterface *iface);
 
 G_DEFINE_TYPE_WITH_CODE (GsmConsolekit, scsm_consolekit, G_TYPE_OBJECT,
-                         G_IMPLEMENT_INTERFACE (GSM_TYPE_SYSTEM,
+                         G_IMPLEMENT_INTERFACE (SCSM_TYPE_SYSTEM,
                                                 scsm_consolekit_system_init))
 
 static void
@@ -93,7 +93,7 @@ drop_delay_inhibitor (GsmConsolekit *manager)
 static void
 scsm_consolekit_finalize (GObject *object)
 {
-        GsmConsolekit *consolekit = GSM_CONSOLEKIT (object);
+        GsmConsolekit *consolekit = SCSM_CONSOLEKIT (object);
 
         g_clear_object (&consolekit->priv->ck_proxy);
         g_clear_object (&consolekit->priv->ck_session_proxy);
@@ -115,7 +115,7 @@ scsm_consolekit_set_property (GObject      *object,
                              const GValue *value,
                              GParamSpec   *pspec)
 {
-        GsmConsolekit *self = GSM_CONSOLEKIT (object);
+        GsmConsolekit *self = SCSM_CONSOLEKIT (object);
 
         switch (prop_id) {
         case PROP_ACTIVE:
@@ -132,7 +132,7 @@ scsm_consolekit_get_property (GObject    *object,
                              GValue     *value,
                              GParamSpec *pspec)
 {
-        GsmConsolekit *self = GSM_CONSOLEKIT (object);
+        GsmConsolekit *self = SCSM_CONSOLEKIT (object);
 
         switch (prop_id) {
         case PROP_ACTIVE:
@@ -212,7 +212,7 @@ scsm_consolekit_init (GsmConsolekit *manager)
         GVariant *res;
 
         manager->priv = G_TYPE_INSTANCE_GET_PRIVATE (manager,
-                                                     GSM_TYPE_CONSOLEKIT,
+                                                     SCSM_TYPE_CONSOLEKIT,
                                                      GsmConsolekitPrivate);
 
         manager->priv->inhibit_fd = -1;
@@ -281,8 +281,8 @@ emit_restart_complete (GsmConsolekit *manager,
         call_error = NULL;
 
         if (error != NULL) {
-                call_error = g_error_new_literal (GSM_SYSTEM_ERROR,
-                                                  GSM_SYSTEM_ERROR_RESTARTING,
+                call_error = g_error_new_literal (SCSM_SYSTEM_ERROR,
+                                                  SCSM_SYSTEM_ERROR_RESTARTING,
                                                   error->message);
         }
 
@@ -303,8 +303,8 @@ emit_stop_complete (GsmConsolekit *manager,
         call_error = NULL;
 
         if (error != NULL) {
-                call_error = g_error_new_literal (GSM_SYSTEM_ERROR,
-                                                  GSM_SYSTEM_ERROR_STOPPING,
+                call_error = g_error_new_literal (SCSM_SYSTEM_ERROR,
+                                                  SCSM_SYSTEM_ERROR_STOPPING,
                                                   error->message);
         }
 
@@ -341,7 +341,7 @@ restart_done (GObject      *source,
 static void
 scsm_consolekit_attempt_restart (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         /* Use Restart instead of Reboot because it will work on
          * both CK and CK2 */
@@ -380,7 +380,7 @@ stop_done (GObject      *source,
 static void
 scsm_consolekit_attempt_stop (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         /* Use Stop insetad of PowerOff because it will work with
          * Ck and CK2. */
@@ -398,7 +398,7 @@ static void
 scsm_consolekit_set_session_idle (GsmSystem *system,
                               gboolean   is_idle)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         g_debug ("Updating consolekit idle status: %d", is_idle);
         g_dbus_proxy_call_sync (manager->priv->ck_session_proxy,
@@ -470,7 +470,7 @@ ck_seat_can_multi_session (GsmConsolekit *manager,
 static gboolean
 scsm_consolekit_can_switch_user (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         gchar *seat;
         gint ret;
 
@@ -484,7 +484,7 @@ scsm_consolekit_can_switch_user (GsmSystem *system)
 static gboolean
 scsm_consolekit_can_restart (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         GVariant *res;
         gboolean can_restart;
 
@@ -510,7 +510,7 @@ scsm_consolekit_can_restart (GsmSystem *system)
 static gboolean
 scsm_consolekit_can_stop (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         GVariant *res;
         gboolean can_stop;
 
@@ -562,7 +562,7 @@ ck_session_get_class (GsmConsolekit *manager,
 static gboolean
 scsm_consolekit_is_login_session (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         int res;
         gboolean ret;
         gchar *session_class = NULL;
@@ -587,7 +587,7 @@ scsm_consolekit_is_login_session (GsmSystem *system)
 static gboolean
 scsm_consolekit_can_suspend (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         gchar *rv;
         GVariant *res;
         gboolean can_suspend;
@@ -619,7 +619,7 @@ scsm_consolekit_can_suspend (GsmSystem *system)
 static gboolean
 scsm_consolekit_can_hibernate (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         gchar *rv;
         GVariant *res;
         gboolean can_hibernate;
@@ -689,7 +689,7 @@ hibernate_done (GObject      *source,
 static void
 scsm_consolekit_suspend (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         g_dbus_proxy_call (manager->priv->ck_proxy,
                            "Suspend",
@@ -704,7 +704,7 @@ scsm_consolekit_suspend (GsmSystem *system)
 static void
 scsm_consolekit_hibernate (GsmSystem *system)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
         g_dbus_proxy_call (manager->priv->ck_proxy,
                            "Hibernate",
@@ -722,7 +722,7 @@ inhibit_done (GObject      *source,
               gpointer      user_data)
 {
         GDBusProxy *proxy = G_DBUS_PROXY (source);
-        GsmConsolekit *manager = GSM_CONSOLEKIT (user_data);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (user_data);
         GError *error = NULL;
         GVariant *res;
         GUnixFDList *fd_list = NULL;
@@ -755,9 +755,9 @@ scsm_consolekit_add_inhibitor (GsmSystem        *system,
                            const gchar      *id,
                            GsmInhibitorFlag  flag)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
 
-        if ((flag & GSM_INHIBITOR_FLAG_SUSPEND) == 0)
+        if ((flag & SCSM_INHIBITOR_FLAG_SUSPEND) == 0)
                 return;
 
         if (manager->priv->inhibitors == NULL) {
@@ -783,7 +783,7 @@ static void
 scsm_consolekit_remove_inhibitor (GsmSystem   *system,
                               const gchar *id)
 {
-        GsmConsolekit *manager = GSM_CONSOLEKIT (system);
+        GsmConsolekit *manager = SCSM_CONSOLEKIT (system);
         GSList *l;
 
         l = g_slist_find_custom (manager->priv->inhibitors, id, (GCompareFunc)g_strcmp0);
@@ -828,7 +828,7 @@ static void
 scsm_consolekit_prepare_shutdown (GsmSystem *system,
                                  gboolean   restart)
 {
-        GsmConsolekit *consolekit = GSM_CONSOLEKIT (system);
+        GsmConsolekit *consolekit = SCSM_CONSOLEKIT (system);
         GUnixFDList *fd_list;
         GVariant *res;
         GError *error = NULL;
@@ -879,7 +879,7 @@ scsm_consolekit_prepare_shutdown (GsmSystem *system,
 static void
 scsm_consolekit_complete_shutdown (GsmSystem *system)
 {
-        GsmConsolekit *consolekit = GSM_CONSOLEKIT (system);
+        GsmConsolekit *consolekit = SCSM_CONSOLEKIT (system);
 
         /* remove delay inhibitor, if any */
         drop_delay_inhibitor (consolekit);
@@ -917,7 +917,7 @@ scsm_consolekit_new (void)
 {
         GsmConsolekit *manager;
 
-        manager = g_object_new (GSM_TYPE_CONSOLEKIT, NULL);
+        manager = g_object_new (SCSM_TYPE_CONSOLEKIT, NULL);
 
         return manager;
 }

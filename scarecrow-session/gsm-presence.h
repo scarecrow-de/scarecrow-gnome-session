@@ -16,8 +16,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_PRESENCE_H__
-#define __GSM_PRESENCE_H__
+#ifndef __SCSM_PRESENCE_H__
+#define __SCSM_PRESENCE_H__
 
 #include <glib-object.h>
 #include <sys/types.h>
@@ -26,12 +26,12 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_PRESENCE            (scsm_presence_get_type ())
-#define GSM_PRESENCE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_PRESENCE, GsmPresence))
-#define GSM_PRESENCE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_PRESENCE, GsmPresenceClass))
-#define GSM_IS_PRESENCE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_PRESENCE))
-#define GSM_IS_PRESENCE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_PRESENCE))
-#define GSM_PRESENCE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GSM_TYPE_PRESENCE, GsmPresenceClass))
+#define SCSM_TYPE_PRESENCE            (scsm_presence_get_type ())
+#define SCSM_PRESENCE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_PRESENCE, GsmPresence))
+#define SCSM_PRESENCE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_PRESENCE, GsmPresenceClass))
+#define SCSM_IS_PRESENCE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_PRESENCE))
+#define SCSM_IS_PRESENCE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_PRESENCE))
+#define SCSM_PRESENCE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_PRESENCE, GsmPresenceClass))
 
 typedef struct _GsmPresence        GsmPresence;
 typedef struct _GsmPresenceClass   GsmPresenceClass;
@@ -54,11 +54,11 @@ struct _GsmPresenceClass
 
 typedef enum
 {
-        GSM_PRESENCE_ERROR_GENERAL = 0,
-        GSM_PRESENCE_NUM_ERRORS
+        SCSM_PRESENCE_ERROR_GENERAL = 0,
+        SCSM_PRESENCE_NUM_ERRORS
 } GsmPresenceError;
 
-#define GSM_PRESENCE_ERROR scsm_presence_error_quark ()
+#define SCSM_PRESENCE_ERROR scsm_presence_error_quark ()
 GQuark         scsm_presence_error_quark          (void);
 
 GType          scsm_presence_get_type             (void) G_GNUC_CONST;
@@ -72,4 +72,4 @@ void           scsm_presence_set_idle_timeout     (GsmPresence  *presence,
 
 G_END_DECLS
 
-#endif /* __GSM_PRESENCE_H__ */
+#endif /* __SCSM_PRESENCE_H__ */

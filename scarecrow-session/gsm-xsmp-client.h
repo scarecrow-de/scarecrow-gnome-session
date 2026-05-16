@@ -16,8 +16,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __GSM_XSMP_CLIENT_H__
-#define __GSM_XSMP_CLIENT_H__
+#ifndef __SCSM_XSMP_CLIENT_H__
+#define __SCSM_XSMP_CLIENT_H__
 
 #include "scsm-client.h"
 
@@ -25,12 +25,12 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_XSMP_CLIENT            (scsm_xsmp_client_get_type ())
-#define GSM_XSMP_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_XSMP_CLIENT, GsmXSMPClient))
-#define GSM_XSMP_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_XSMP_CLIENT, GsmXSMPClientClass))
-#define GSM_IS_XSMP_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_XSMP_CLIENT))
-#define GSM_IS_XSMP_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_XSMP_CLIENT))
-#define GSM_XSMP_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GSM_TYPE_XSMP_CLIENT, GsmXSMPClientClass))
+#define SCSM_TYPE_XSMP_CLIENT            (scsm_xsmp_client_get_type ())
+#define SCSM_XSMP_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_XSMP_CLIENT, GsmXSMPClient))
+#define SCSM_XSMP_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), SCSM_TYPE_XSMP_CLIENT, GsmXSMPClientClass))
+#define SCSM_IS_XSMP_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_XSMP_CLIENT))
+#define SCSM_IS_XSMP_CLIENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), SCSM_TYPE_XSMP_CLIENT))
+#define SCSM_XSMP_CLIENT_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), SCSM_TYPE_XSMP_CLIENT, GsmXSMPClientClass))
 
 typedef struct _GsmXSMPClient        GsmXSMPClient;
 typedef struct _GsmXSMPClientClass   GsmXSMPClientClass;
@@ -86,4 +86,4 @@ void        scsm_xsmp_client_shutdown_cancelled   (GsmXSMPClient  *client);
 
 G_END_DECLS
 
-#endif /* __GSM_XSMP_CLIENT_H__ */
+#endif /* __SCSM_XSMP_CLIENT_H__ */

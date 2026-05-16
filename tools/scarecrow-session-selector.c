@@ -34,7 +34,7 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 
-#define GSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
+#define SCSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
 #define KEY_AUTOSAVE_ONE_SHOT     "auto-save-session-one-shot"
 
 static GtkBuilder *builder;
@@ -570,7 +570,7 @@ auto_save_next_session (void)
 {
         GSettings *settings;
 
-        settings = g_settings_new (GSM_MANAGER_SCHEMA);
+        settings = g_settings_new (SCSM_MANAGER_SCHEMA);
         g_settings_set_boolean (settings, KEY_AUTOSAVE_ONE_SHOT, TRUE);
         g_object_unref (settings);
 }

@@ -19,19 +19,19 @@
  *      Jasper St. Pierre <jstpierre@mecheye.net>
  */
 
-#ifndef __GSM_SHELL_EXTENSIONS_H
-#define __GSM_SHELL_EXTENSIONS_H
+#ifndef __SCSM_SHELL_EXTENSIONS_H
+#define __SCSM_SHELL_EXTENSIONS_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_SHELL_EXTENSIONS            (scsm_shell_extensions_get_type ())
-#define GSM_SHELL_EXTENSIONS(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensions))
-#define GSM_SHELL_EXTENSIONS_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  GSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsClass))
-#define GSM_IS_SHELL_EXTENSIONS(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_SHELL_EXTENSIONS))
-#define GSM_IS_SHELL_EXTENSIONS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  GSM_TYPE_SHELL_EXTENSIONS))
-#define GSM_SHELL_EXTENSIONS_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  GSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsClass))
+#define SCSM_TYPE_SHELL_EXTENSIONS            (scsm_shell_extensions_get_type ())
+#define SCSM_SHELL_EXTENSIONS(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensions))
+#define SCSM_SHELL_EXTENSIONS_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsClass))
+#define SCSM_IS_SHELL_EXTENSIONS(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), SCSM_TYPE_SHELL_EXTENSIONS))
+#define SCSM_IS_SHELL_EXTENSIONS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  SCSM_TYPE_SHELL_EXTENSIONS))
+#define SCSM_SHELL_EXTENSIONS_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsClass))
 
 typedef struct _GsmShellExtensions        GsmShellExtensions;
 typedef struct _GsmShellExtensionsClass   GsmShellExtensionsClass;
@@ -58,4 +58,4 @@ guint scsm_shell_extensions_n_extensions               (GsmShellExtensions *self
 
 G_END_DECLS
 
-#endif /* __GSM_SHELL_EXTENSIONS_H */
+#endif /* __SCSM_SHELL_EXTENSIONS_H */

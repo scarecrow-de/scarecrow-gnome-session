@@ -1,8 +1,8 @@
-desktop_plain = 'gnome'
+desktop_plain = 'scarecrow'
 
 desktops = [
   desktop_plain,
-  'gnome-xorg'
+  'scarecrow-xorg'
 ]
 
 shell_component = {
@@ -31,7 +31,7 @@ required_components = {
 }
 
 if enable_session_selector
-  desktops += 'gnome-custom-session'
+  desktops += 'scarecrow-custom-session'
 endif
 
 foreach name: desktops
@@ -69,8 +69,8 @@ endforeach
 
 
 sessions = [
-  'gnome',
-  'gnome-dummy'
+  'scarecrow',
+  'scarecrow-dummy'
 ]
 
 foreach session: sessions

@@ -21,6 +21,6 @@ dst_dir = os.path.join(install_root, 'wayland-sessions')
 if not os.path.exists(dst_dir):
   os.makedirs(dst_dir)
 
-src = os.path.join(install_root, 'xsessions', 'gnome.desktop')
-dst = os.path.join(dst_dir, 'gnome.desktop')
+src = os.path.join(install_root, 'xsessions', 'scarecrow.desktop')
+dst = os.path.join(dst_dir, 'scarecrow.desktop')
 shutil.copyfile(src, dst)

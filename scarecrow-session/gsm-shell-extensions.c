@@ -30,7 +30,7 @@
 #define SHELL_SCHEMA "io.github.scarecrow_de.shell"
 #define DISABLE_EXTENSIONS_KEY "disable-user-extensions"
 
-#define SHELL_EXTENSIONS_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsPrivate))
+#define SHELL_EXTENSIONS_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SCSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsPrivate))
 
 struct _GsmShellExtensionsPrivate
 {
@@ -50,7 +50,7 @@ G_DEFINE_TYPE (GsmShellExtensions, scsm_shell_extensions, G_TYPE_OBJECT);
 static void
 scsm_shell_extensions_finalize (GObject *object)
 {
-  GsmShellExtensions *extensions = GSM_SHELL_EXTENSIONS (object);
+  GsmShellExtensions *extensions = SCSM_SHELL_EXTENSIONS (object);
   GsmShellExtensionsPrivate *priv = extensions->priv;
 
   g_clear_object (&priv->settings);
