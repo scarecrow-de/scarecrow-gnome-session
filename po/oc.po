@@ -67,11 +67,11 @@ msgstr "Reno_menar la session"
 msgid "_Continue"
 msgstr "_Contunhar"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ò damne ! Quicòm a trucat."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 #| msgid ""
 #| "A problem has occurred and the system can't recover. Please contact a "
 #| "system administrator"
@@ -82,7 +82,7 @@ msgstr ""
 "Un problèma s'es produit e lo sistèma se pòt pas recuperar. Contactatz un "
 "administrator del sistèma"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 #| msgid ""
 #| "A problem has occurred and the system can't recover. All extensions have "
 #| "been disabled as a precaution."
@@ -93,7 +93,7 @@ msgstr ""
 "Un problèma s'es produit e lo sistèma se pòt pas recuperar. Totas las "
 "extensions son estadas desactivadas per mesura de precaucion."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 #| msgid ""
 #| "A problem has occurred and the system can't recover.\n"
 #| "Please log out and try again."
@@ -104,27 +104,27 @@ msgstr ""
 "Un problèma s'es produit e lo sistèma se pòt pas recuperar.\n"
 "Desconnectatz-vos e ensajatz tornamai."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Tampar la session"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
 msgid "Enable debugging code"
 msgstr "Activa lo còdi de desbugatge"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Autorizar la desconnexion"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Afichar l'avertiment per las extensions"
 
-#: scarecrow-session/gsm-manager.c:1266 scarecrow-session/gsm-manager.c:1919
+#: scarecrow-session/scsm-manager.c:1266 scarecrow-session/scsm-manager.c:1919
 msgid "Not responding"
 msgstr "Abséncia de responsa"
 
-#: scarecrow-session/gsm-util.c:382
+#: scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "_Se desconnectar"
 
@@ -132,15 +132,15 @@ msgstr "_Se desconnectar"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Aplicacions memorizadas"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Aqueste programa blòca la desconnexion."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -148,7 +148,7 @@ msgstr ""
 "Refús de la connexion d'un novèl client perque la session es actualament en "
 "cors de tampadura\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Impossible de crear lo connectador d'escota ICE : %s"

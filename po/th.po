@@ -107,17 +107,17 @@ msgstr "_คำสั่ง:"
 msgid "_Name:"
 msgstr "_ชื่อ:"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:313
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "คุณพระ!  มีอะไรผิดพลาดสักอย่าง"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
 msgstr "เกิดปัญหาบางอย่างขึ้น โดยระบบไม่สามารถฟื้นคืนได้ กรุณาติดต่อผู้ดูแลระบบ"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -125,7 +125,7 @@ msgstr ""
 "เกิดปัญหาบางอย่างขึ้น โดยระบบไม่สามารถฟื้นคืนได้ "
 "ระบบได้ปิดการใช้ส่วนขยายทั้งหมดเพื่อเป็นการป้องกันแล้ว"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:324
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -133,27 +133,27 @@ msgstr ""
 "เกิดปัญหาบางอย่างขึ้น โดยระบบไม่สามารถฟื้นคืนได้\n"
 "กรุณาออกจากระบบ แล้วลองเข้ามาใหม่"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:339
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_ออกจากระบบ"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:280
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:280
 msgid "Enable debugging code"
 msgstr "เปิดใช้โค้ดส่วนดีบั๊ก"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:362
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "อนุญาตให้ออกจากระบบ"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:363
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "แสดงคำเตือนของส่วนขยาย"
 
-#: ../scarecrow-session/gsm-manager.c:1256 ../scarecrow-session/gsm-manager.c:1902
+#: ../scarecrow-session/scsm-manager.c:1256 ../scarecrow-session/scsm-manager.c:1902
 msgid "Not responding"
 msgstr "ไม่ตอบสนอง"
 
-#: ../scarecrow-session/gsm-util.c:381
+#: ../scarecrow-session/scsm-util.c:381
 msgid "_Log out"
 msgstr "_ออกจากระบบ"
 
@@ -161,21 +161,21 @@ msgstr "_ออกจากระบบ"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "โปรแกรมที่จำไว้"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "โปรแกรมนี้ขัดขวางการออกจากระบบอยู่"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "ไม่รับการเชื่อมต่อใหม่จากลูกข่าย เพราะวาระกำลังปิดตัว\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ไม่สามารถสร้างซ็อกเก็ตรอรับการเชื่อมต่อ ICE: %s"

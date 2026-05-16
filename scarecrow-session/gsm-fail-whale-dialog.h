@@ -28,8 +28,8 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_FAIL_WHALE_DIALOG         (gsm_fail_whale_dialog_get_type ())
-G_DECLARE_FINAL_TYPE (GsmFailWhaleDialog, gsm_fail_whale_dialog, GSM, FAIL_WHALE_DIALOG, GtkWindow);
+#define GSM_TYPE_FAIL_WHALE_DIALOG         (scsm_fail_whale_dialog_get_type ())
+G_DECLARE_FINAL_TYPE (GsmFailWhaleDialog, scsm_fail_whale_dialog, GSM, FAIL_WHALE_DIALOG, GtkWindow);
 
 G_END_DECLS
 

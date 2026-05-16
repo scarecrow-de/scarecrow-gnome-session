@@ -20,39 +20,39 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : (n%10==1 || n%10==2) ? 1 : (n%"
 "10>=3 && n%10<= 6) ? 2 : ((n%10>=7 && n%10<=9) || n==10) ? 3 : 4;\n"
 
-#: ../capplet/gsm-app-dialog.c:120
+#: ../capplet/scsm-app-dialog.c:120
 msgid "Select Command"
 msgstr "Roghnaigh Ordú"
 
-#: ../capplet/gsm-app-dialog.c:192
+#: ../capplet/scsm-app-dialog.c:192
 msgid "Add Startup Program"
 msgstr "Cuir Ríomhchlár Tosaithe Leis"
 
-#: ../capplet/gsm-app-dialog.c:196
+#: ../capplet/scsm-app-dialog.c:196
 msgid "Edit Startup Program"
 msgstr "Cuir Ríomhchlár Tosaithe in Eagar"
 
-#: ../capplet/gsm-app-dialog.c:484
+#: ../capplet/scsm-app-dialog.c:484
 msgid "The startup command cannot be empty"
 msgstr ""
 
-#: ../capplet/gsm-app-dialog.c:490
+#: ../capplet/scsm-app-dialog.c:490
 msgid "The startup command is not valid"
 msgstr ""
 
-#: ../capplet/gsm-properties-dialog.c:555
+#: ../capplet/scsm-properties-dialog.c:555
 msgid "Enabled"
 msgstr "Cumasaithe"
 
-#: ../capplet/gsm-properties-dialog.c:567
+#: ../capplet/scsm-properties-dialog.c:567
 msgid "Icon"
 msgstr "Deilbhín"
 
-#: ../capplet/gsm-properties-dialog.c:579
+#: ../capplet/scsm-properties-dialog.c:579
 msgid "Program"
 msgstr "Ríomhchlár"
 
-#: ../capplet/gsm-properties-dialog.c:790
+#: ../capplet/scsm-properties-dialog.c:790
 msgid "Startup Applications Preferences"
 msgstr "Sainroghanna Feidhmchlár Tosaithe"
 
@@ -194,11 +194,11 @@ msgstr ""
 msgid "Window Manager"
 msgstr "Bainisteoir Fuinneoga"
 
-#: ../data/gsm-inhibit-dialog.ui.h:1
+#: ../data/scsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>Tá ríomhcláir éigin ag rith fós:</b>"
 
-#: ../data/gsm-inhibit-dialog.ui.h:2 ../scarecrow-session/gsm-inhibit-dialog.c:667
+#: ../data/scsm-inhibit-dialog.ui.h:2 ../scarecrow-session/scsm-inhibit-dialog.c:667
 msgid ""
 "Waiting for program to finish.  Interrupting program may cause you to lose "
 "work."
@@ -283,35 +283,35 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr ""
 
-#: ../egg/eggsmclient.c:225
+#: ../egg/egscsmclient.c:225
 msgid "Disable connection to session manager"
 msgstr ""
 
-#: ../egg/eggsmclient.c:228
+#: ../egg/egscsmclient.c:228
 msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: ../egg/eggsmclient.c:228
+#: ../egg/egscsmclient.c:228
 msgid "FILE"
 msgstr "COMHAD"
 
-#: ../egg/eggsmclient.c:231
+#: ../egg/egscsmclient.c:231
 msgid "Specify session management ID"
 msgstr "Sonraigh CA bainistíochta seisiún"
 
-#: ../egg/eggsmclient.c:231
+#: ../egg/egscsmclient.c:231
 msgid "ID"
 msgstr "CA"
 
-#: ../egg/eggsmclient.c:252
+#: ../egg/egscsmclient.c:252
 msgid "Session management options:"
 msgstr "Roghanna bainistíochta seisiún:"
 
-#: ../egg/eggsmclient.c:253
+#: ../egg/egscsmclient.c:253
 msgid "Show session management options"
 msgstr "Taispeáin roghanna bainistíochta seisiún"
 
-#: ../scarecrow-session/gsm-gconf.c:106
+#: ../scarecrow-session/scsm-gconf.c:106
 #, c-format
 msgid ""
 "There is a problem with the configuration server.\n"
@@ -320,62 +320,62 @@ msgstr ""
 "Tá fadhb ann leis an bhfreastalaí cumraíochta.\n"
 "(Chríochnaigh %s le stádas %d)"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:255
+#: ../scarecrow-session/scsm-inhibit-dialog.c:255
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "Deilbhín '%s' gan aimsiú"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:615
+#: ../scarecrow-session/scsm-inhibit-dialog.c:615
 msgid "Unknown"
 msgstr "Anaithnid"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:666
+#: ../scarecrow-session/scsm-inhibit-dialog.c:666
 msgid "A program is still running:"
 msgstr "Tá feidhmchlár á rith fós:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:670
+#: ../scarecrow-session/scsm-inhibit-dialog.c:670
 msgid "Some programs are still running:"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:671
+#: ../scarecrow-session/scsm-inhibit-dialog.c:671
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:901
+#: ../scarecrow-session/scsm-inhibit-dialog.c:901
 msgid "Switch User Anyway"
 msgstr "Aistrigh Úsáideoir Mar Sin Féin"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:904
+#: ../scarecrow-session/scsm-inhibit-dialog.c:904
 msgid "Logout Anyway"
 msgstr "Logáil Amach Mar Sin Féin"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:907
+#: ../scarecrow-session/scsm-inhibit-dialog.c:907
 msgid "Suspend Anyway"
 msgstr "Cuir ar Fionraí Mar Sin Féin"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:910
+#: ../scarecrow-session/scsm-inhibit-dialog.c:910
 msgid "Hibernate Anyway"
 msgstr "Geimhrigh Mar Sin Féin"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:913
+#: ../scarecrow-session/scsm-inhibit-dialog.c:913
 msgid "Shutdown Anyway"
 msgstr "Múch Mar Sin Féin"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:916
+#: ../scarecrow-session/scsm-inhibit-dialog.c:916
 msgid "Reboot Anyway"
 msgstr "Atosaigh Mar Sin Féin"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:924
+#: ../scarecrow-session/scsm-inhibit-dialog.c:924
 msgid "Lock Screen"
 msgstr "Cuir Scáileáin Faoi Ghlas"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:927
+#: ../scarecrow-session/scsm-inhibit-dialog.c:927
 msgid "Cancel"
 msgstr "Cealaigh"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:274
+#: ../scarecrow-session/scsm-logout-dialog.c:274
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
@@ -385,7 +385,7 @@ msgstr[2] "Logálfar thú amach go huathoibríoch i gceann %d shoicind."
 msgstr[3] "Logálfar thú amach go huathoibríoch i gceann %d soicind."
 msgstr[4] "Logálfar thú amach go huathoibríoch i gceann %d soicind."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:282
+#: ../scarecrow-session/scsm-logout-dialog.c:282
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
@@ -395,64 +395,64 @@ msgstr[2] "Múchfar an córas seo go huathoibríoch i gceann %d shoicind."
 msgstr[3] "Múchfar an córas seo go huathoibríoch i gceann %d soicind."
 msgstr[4] "Múchfar an córas seo go huathoibríoch i gceann %d soicind."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:314
+#: ../scarecrow-session/scsm-logout-dialog.c:314
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "Tá tú logáilte isteach mar \"%s\"."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:379
+#: ../scarecrow-session/scsm-logout-dialog.c:379
 msgid "Log out of this system now?"
 msgstr "Logáil amach as an gcóras seo anois?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:385
+#: ../scarecrow-session/scsm-logout-dialog.c:385
 msgid "_Switch User"
 msgstr "_Switch User"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:394
+#: ../scarecrow-session/scsm-logout-dialog.c:394
 msgid "_Log Out"
 msgstr "_Lógáil Amach"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:400
+#: ../scarecrow-session/scsm-logout-dialog.c:400
 msgid "Shut down this system now?"
 msgstr "Múch an córas seo anois?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:406
+#: ../scarecrow-session/scsm-logout-dialog.c:406
 msgid "S_uspend"
 msgstr "_Cuir ar Fionraí"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:412
+#: ../scarecrow-session/scsm-logout-dialog.c:412
 msgid "_Hibernate"
 msgstr "_Geimhrigh"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:418
+#: ../scarecrow-session/scsm-logout-dialog.c:418
 msgid "_Restart"
 msgstr "_Atosaigh"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:428
+#: ../scarecrow-session/scsm-logout-dialog.c:428
 msgid "_Shut Down"
 msgstr "_Múch"
 
-#: ../scarecrow-session/gsm-manager.c:1158 ../scarecrow-session/gsm-manager.c:1850
+#: ../scarecrow-session/scsm-manager.c:1158 ../scarecrow-session/scsm-manager.c:1850
 msgid "Not responding"
 msgstr "Gan fhreagairt"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1206
+#: ../scarecrow-session/scsm-xsmp-client.c:1206
 msgid "This program is blocking log out."
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:234
+#: ../scarecrow-session/scsm-xsmp-server.c:234
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:489
+#: ../scarecrow-session/scsm-xsmp-server.c:489
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr ""
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:354
+#: ../scarecrow-session/scsm-util.c:354
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr ""

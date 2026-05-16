@@ -71,48 +71,48 @@ msgstr "सत्रको नाम फेर्ने"
 msgid "_Continue"
 msgstr "जारी राख्नुहोस्"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:313
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr ""
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system administrator"
 msgstr ""
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have been disabled as "
 "a precaution."
 msgstr ""
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:324
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
 msgstr ""
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:339
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "लगआउट"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:281
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:281
 msgid "Enable debugging code"
 msgstr "डिबगिङ सक्षम पार्नुहोस्"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:362
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "लगआउट अनुमति दिनुहोस्"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:363
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "चेतावनी देखाउनुहोस्"
 
-#: ../scarecrow-session/gsm-manager.c:1318 ../scarecrow-session/gsm-manager.c:1971
+#: ../scarecrow-session/scsm-manager.c:1318 ../scarecrow-session/scsm-manager.c:1971
 msgid "Not responding"
 msgstr "जवाफ दिन बन्द गरेको छ."
 
-#: ../scarecrow-session/gsm-util.c:382
+#: ../scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "लगआउट"
 
@@ -120,19 +120,19 @@ msgstr "लगआउट"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "सम्झिएको अनुप्रयोग"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "यो कार्यक्रमले लगआउट गर्न दिएन"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid "Refusing new client connection because the session is currently being shut down\n"
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr ""

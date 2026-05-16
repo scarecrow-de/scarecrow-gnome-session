@@ -23,7 +23,7 @@
 
 G_BEGIN_DECLS
 
-int  gsm_process_helper (const char    *command_line,
+int  scsm_process_helper (const char    *command_line,
                          unsigned int   timeout,
                          GError       **error);
 

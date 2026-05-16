@@ -72,11 +72,11 @@ msgstr "_Canvia el nom de la sessió"
 msgid "_Continue"
 msgstr "_Continua"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:313
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Alguna cosa ha fallat."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -84,7 +84,7 @@ msgstr ""
 "S'ha produït un problema i el sistema no es pot recuperar. Contacteu amb un "
 "administrador del sistema"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -92,7 +92,7 @@ msgstr ""
 "S'ha produït un problema i el sistema no es pot recuperar. Com a mètode de "
 "precaució s'han inhabilitat totes les extensions."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:324
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -100,27 +100,27 @@ msgstr ""
 "S'ha produït un problema i el sistema no es pot recuperar.\n"
 "Eixiu i torneu-ho a provar."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:339
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "I_x"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:281
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:281
 msgid "Enable debugging code"
 msgstr "Habilita el codi de depuració"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:362
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Permet eixir"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:363
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Mostra l'avís de l'extensió"
 
-#: ../scarecrow-session/gsm-manager.c:1266 ../scarecrow-session/gsm-manager.c:1919
+#: ../scarecrow-session/scsm-manager.c:1266 ../scarecrow-session/scsm-manager.c:1919
 msgid "Not responding"
 msgstr "No està responent"
 
-#: ../scarecrow-session/gsm-util.c:382
+#: ../scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "I_x"
 
@@ -128,15 +128,15 @@ msgstr "I_x"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Aplicació recordada"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "Este programa està blocant l'eixida."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -144,7 +144,7 @@ msgstr ""
 "Es refusarà la connexió de client nova perquè la sessió s'està aturant\n"
 
 # Nota: ICE -> Inter-Client Exchange (http://en.wikipedia.org/wiki/X_Window_System_protocols_and_architecture#Inter-client_communication)
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "No s'ha pogut crear el sòcol ICE d'escolta: %s"

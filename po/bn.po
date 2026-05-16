@@ -24,39 +24,39 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "X-Language: bn_BD\n"
 
-#: ../capplet/gsm-app-dialog.c:120
+#: ../capplet/scsm-app-dialog.c:120
 msgid "Select Command"
 msgstr "কমান্ড নির্বাচন করুন"
 
-#: ../capplet/gsm-app-dialog.c:193
+#: ../capplet/scsm-app-dialog.c:193
 msgid "Add Startup Program"
 msgstr "স্টার্টআপ প্রোগ্রাম যোগ করুন"
 
-#: ../capplet/gsm-app-dialog.c:197
+#: ../capplet/scsm-app-dialog.c:197
 msgid "Edit Startup Program"
 msgstr "স্টার্টআপ কমান্ড সম্পাদন করুন"
 
-#: ../capplet/gsm-app-dialog.c:485
+#: ../capplet/scsm-app-dialog.c:485
 msgid "The startup command cannot be empty"
 msgstr "স্টার্টআপ কমান্ড ফাঁকা থাকবে না"
 
-#: ../capplet/gsm-app-dialog.c:491
+#: ../capplet/scsm-app-dialog.c:491
 msgid "The startup command is not valid"
 msgstr "স্টার্টআপ কমান্ডটি কার্যকর নয়"
 
-#: ../capplet/gsm-properties-dialog.c:517
+#: ../capplet/scsm-properties-dialog.c:517
 msgid "Enabled"
 msgstr "সক্রিয়"
 
-#: ../capplet/gsm-properties-dialog.c:529
+#: ../capplet/scsm-properties-dialog.c:529
 msgid "Icon"
 msgstr "আইকন"
 
-#: ../capplet/gsm-properties-dialog.c:541
+#: ../capplet/scsm-properties-dialog.c:541
 msgid "Program"
 msgstr "প্রোগ্রাম"
 
-#: ../capplet/gsm-properties-dialog.c:745
+#: ../capplet/scsm-properties-dialog.c:745
 msgid "Startup Applications Preferences"
 msgstr "স্টার্টআপ অ্যাপ্লিকেশনের পছন্দসমূহ"
 
@@ -88,11 +88,11 @@ msgstr "Scarecrow"
 msgid "This session logs you into Scarecrow"
 msgstr "এই সেশনের মাধ্যমে Scarecrow-এ লগ-ইন করা যাবে"
 
-#: ../data/gsm-inhibit-dialog.ui.h:1
+#: ../data/scsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>কিছু প্রোগ্রাম এখনো চলছে:</b>"
 
-#: ../data/gsm-inhibit-dialog.ui.h:2 ../scarecrow-session/gsm-inhibit-dialog.c:644
+#: ../data/scsm-inhibit-dialog.ui.h:2 ../scarecrow-session/scsm-inhibit-dialog.c:644
 msgid ""
 "Waiting for the program to finish.  Interrupting the program may cause you "
 "to lose work."
@@ -180,35 +180,35 @@ msgstr "'Type=Link' ডেস্কটপ এন্ট্রির জন্য 
 msgid "Not a launchable item"
 msgstr "চালু করার অযোগ্য আইটেম"
 
-#: ../egg/eggsmclient.c:225
+#: ../egg/egscsmclient.c:225
 msgid "Disable connection to session manager"
 msgstr "সেশন ম্যানেজারের সাথে সংযোগ বিচ্ছিন্ন করা হয়"
 
-#: ../egg/eggsmclient.c:228
+#: ../egg/egscsmclient.c:228
 msgid "Specify file containing saved configuration"
 msgstr "সংরক্ষিত কনফিগারেশন সহ ফাইল উল্লেখ করুন"
 
-#: ../egg/eggsmclient.c:228
+#: ../egg/egscsmclient.c:228
 msgid "FILE"
 msgstr "FILE"
 
-#: ../egg/eggsmclient.c:231
+#: ../egg/egscsmclient.c:231
 msgid "Specify session management ID"
 msgstr "সেশন পরিচালনা ID উল্লেখ করুন"
 
-#: ../egg/eggsmclient.c:231
+#: ../egg/egscsmclient.c:231
 msgid "ID"
 msgstr "ID"
 
-#: ../egg/eggsmclient.c:252
+#: ../egg/egscsmclient.c:252
 msgid "Session management options:"
 msgstr "সেশন পরিচালনা অপশন:"
 
-#: ../egg/eggsmclient.c:253
+#: ../egg/egscsmclient.c:253
 msgid "Show session management options"
 msgstr "সেশন পরিচালনা অপশন প্রদর্শন করা হবে"
 
-#: ../scarecrow-session/gsm-gconf.c:106
+#: ../scarecrow-session/scsm-gconf.c:106
 #, c-format
 msgid ""
 "There is a problem with the configuration server.\n"
@@ -217,24 +217,24 @@ msgstr ""
 "সার্ভার কনফিগারেশন সংক্রান্ত কিছু সমস্যা রয়েছে।\n"
 "(%s প্রস্থানকালে %d অবস্থায় থাকে)"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:253
+#: ../scarecrow-session/scsm-inhibit-dialog.c:253
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "'%s' আইকন খুঁজে পাওয়া যায়নি"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:592
+#: ../scarecrow-session/scsm-inhibit-dialog.c:592
 msgid "Unknown"
 msgstr "অজানা"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:643
+#: ../scarecrow-session/scsm-inhibit-dialog.c:643
 msgid "A program is still running:"
 msgstr "একটি প্রোগ্রাম এখনও চলছে:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:647
+#: ../scarecrow-session/scsm-inhibit-dialog.c:647
 msgid "Some programs are still running:"
 msgstr "কয়েকটি প্রোগ্রাম এখনও চলছে:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:648
+#: ../scarecrow-session/scsm-inhibit-dialog.c:648
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
@@ -242,98 +242,98 @@ msgstr ""
 "প্রোগ্রাম সমাপ্তির জন্য অপেক্ষা করা হচ্ছে। প্রোগ্রাম বিঘ্নিত হলে আপনার কাজের ব্যাঘাত  "
 "ঘটতে পারে।"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:878
+#: ../scarecrow-session/scsm-inhibit-dialog.c:878
 msgid "Switch User Anyway"
 msgstr "তথাপি ব্যবহারকারী পরিবর্তন করা হবে"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:881
+#: ../scarecrow-session/scsm-inhibit-dialog.c:881
 msgid "Log Out Anyway"
 msgstr "যেকোনোভাবে লগ-আউট"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:884
+#: ../scarecrow-session/scsm-inhibit-dialog.c:884
 msgid "Suspend Anyway"
 msgstr "তথাপি স্থগিত করা হবে"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:887
+#: ../scarecrow-session/scsm-inhibit-dialog.c:887
 msgid "Hibernate Anyway"
 msgstr "তথাপি হাইবারনেট করা হবে"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:890
+#: ../scarecrow-session/scsm-inhibit-dialog.c:890
 msgid "Shut Down Anyway"
 msgstr "যেকোনোভাবে বন্ধ"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:893
+#: ../scarecrow-session/scsm-inhibit-dialog.c:893
 msgid "Reboot Anyway"
 msgstr "তথাপি পুনরায় বুট করা হবে"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:901
+#: ../scarecrow-session/scsm-inhibit-dialog.c:901
 msgid "Lock Screen"
 msgstr "পর্দা লক করুন"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:904
+#: ../scarecrow-session/scsm-inhibit-dialog.c:904
 msgid "Cancel"
 msgstr "বাতিল"
 
-#. This string is shared with gsm-fail-whale-dialog.c
-#: ../scarecrow-session/gsm-logout-dialog.c:275
+#. This string is shared with scsm-fail-whale-dialog.c
+#: ../scarecrow-session/scsm-logout-dialog.c:275
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
 msgstr[0] "%d সেকেন্ড অতিক্রান্ত হলে স্বয়ংক্রিয়ভাবে আপনাকে লগ-আউট করা হবে।"
 msgstr[1] "%d সেকেন্ড অতিক্রান্ত হলে স্বয়ংক্রিয়ভাবে আপনাকে লগ-আউট করা হবে।"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:283
+#: ../scarecrow-session/scsm-logout-dialog.c:283
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
 msgstr[0] "%d সেকেন্ড অতিক্রান্ত হলে স্বয়ংক্রিয়ভাবে সিস্টেম বন্ধ করা হবে।"
 msgstr[1] "%d সেকেন্ড অতিক্রান্ত হলে স্বয়ংক্রিয়ভাবে সিস্টেম বন্ধ করা হবে।"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:315
+#: ../scarecrow-session/scsm-logout-dialog.c:315
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "বর্তমানে আপনি \"%s\" নামে লগ-ইন করে আছেন।"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:381
+#: ../scarecrow-session/scsm-logout-dialog.c:381
 msgid "Log out of this system now?"
 msgstr "এখনই সিস্টেম থেকে লগ-আউট করা হবে কি?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:387
+#: ../scarecrow-session/scsm-logout-dialog.c:387
 msgid "_Switch User"
 msgstr "ব্যবহারকারী পরিবর্তন করুন (_S)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:396
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:296
-#: ../scarecrow-session/gsm-util.c:363
+#: ../scarecrow-session/scsm-logout-dialog.c:396
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:296
+#: ../scarecrow-session/scsm-util.c:363
 msgid "_Log Out"
 msgstr "লগ আউট (_L)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:402
+#: ../scarecrow-session/scsm-logout-dialog.c:402
 msgid "Shut down this system now?"
 msgstr "এখনই সিস্টেম বন্ধ করা হবে কি?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:408
+#: ../scarecrow-session/scsm-logout-dialog.c:408
 msgid "S_uspend"
 msgstr "স্থগিত করা (_u)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:414
+#: ../scarecrow-session/scsm-logout-dialog.c:414
 msgid "_Hibernate"
 msgstr "সুপ্ত করা (_H)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:420
+#: ../scarecrow-session/scsm-logout-dialog.c:420
 msgid "_Restart"
 msgstr "পুনরায় চালু করা (_R)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:430
+#: ../scarecrow-session/scsm-logout-dialog.c:430
 msgid "_Shut Down"
 msgstr "বন্ধ করা (_S)"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:276
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:276
 msgid "Oh no!  Something has gone wrong."
 msgstr "ওহ্ না! কিছু একটা নিশ্চয় ভুল হয়েছে।"
 
 #. make this changable at some point
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:283
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:283
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -341,26 +341,26 @@ msgstr ""
 "একটি সমস্যা তৈরি হয়েছে এবং সিস্টেম পুনরুদ্ধার করতে পারেনি।\nঅনুগ্রহ করে "
 "লগআউট করে পুনরায় চেষ্টা করুন।"
 
-#: ../scarecrow-session/gsm-process-helper.c:123
+#: ../scarecrow-session/scsm-process-helper.c:123
 #, c-format
 msgid "Exited with code %d"
 msgstr "কোড %d সহ বিদ্যমান"
 
-#: ../scarecrow-session/gsm-process-helper.c:128
+#: ../scarecrow-session/scsm-process-helper.c:128
 #, c-format
 msgid "Killed by signal %d"
 msgstr "সিগন্যাল %d দ্বারা কিল করা হয়েছে"
 
-#: ../scarecrow-session/gsm-process-helper.c:133
+#: ../scarecrow-session/scsm-process-helper.c:133
 #, c-format
 msgid "Stopped by signal %d"
 msgstr "সিগন্যাল %d দ্বারা বন্ধ করা হয়েছে"
 
-#: ../scarecrow-session/gsm-manager.c:1372
+#: ../scarecrow-session/scsm-manager.c:1372
 msgid "Scarecrow 3 Failed to Load"
 msgstr "জিনোম 3 লোড করতে ব্যর্থ"
 
-#: ../scarecrow-session/gsm-manager.c:1373
+#: ../scarecrow-session/scsm-manager.c:1373
 msgid ""
 "Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
@@ -373,19 +373,19 @@ msgstr ""
 "এ থেকে বুঝা যায় যে, আপনার সিস্টেম (গ্রাফিক্স হার্ডওয়ার বা ড্রাইভার) সম্পূর্ণ জিনোম 3 "
 "পরিবেশ ডেলিভার করতে সমর্থ নয়।"
 
-#: ../scarecrow-session/gsm-manager.c:1375
+#: ../scarecrow-session/scsm-manager.c:1375
 msgid "Learn more about Scarecrow 3"
 msgstr "জিনোম 3 সম্পর্কে আরও জানুন"
 
-#: ../scarecrow-session/gsm-manager.c:1472 ../scarecrow-session/gsm-manager.c:2203
+#: ../scarecrow-session/scsm-manager.c:1472 ../scarecrow-session/scsm-manager.c:2203
 msgid "Not responding"
 msgstr "সাড়া দিচ্ছে না"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1183
+#: ../scarecrow-session/scsm-xsmp-client.c:1183
 msgid "This program is blocking logout."
 msgstr "এই প্রোগ্রাম দ্বারা লগ-আউট ব্লক করা হচ্ছে।"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:325
+#: ../scarecrow-session/scsm-xsmp-server.c:325
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -393,13 +393,13 @@ msgstr ""
 "সেশনটি বর্তমানে বন্ধ করা হচ্ছে এবং এ কারনে নতুন ক্লায়েন্ট সংযোগ প্রত্যাখ্যান করা "
 "হচ্ছে।\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:587
+#: ../scarecrow-session/scsm-xsmp-server.c:587
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE লিসেন সকেট তৈরি করতে ব্যর্থ: %s"
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:347
+#: ../scarecrow-session/scsm-util.c:347
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr "লগ-ইন সেশন শুরু করতে ব্যর্থ (X সার্ভারের সাথে সংযোগ স্থাপনে ব্যর্থ)"

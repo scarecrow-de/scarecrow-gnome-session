@@ -11,33 +11,33 @@ configure_file(
   configuration: script_conf
 )
 
-libgsmutil = static_library(
-  'gsmutil',
-  sources: 'gsm-util.c',
+libscsmutil = static_library(
+  'scsmutil',
+  sources: 'scsm-util.c',
   include_directories: top_inc,
   dependencies: session_deps
 )
 
 sources = files(
-  'gsm-app.c',
-  'gsm-autostart-app.c',
-  'gsm-client.c',
-  'gsm-dbus-client.c',
-  'gsm-fail-whale.c',
-  'gsm-inhibitor.c',
+  'scsm-app.c',
+  'scsm-autostart-app.c',
+  'scsm-client.c',
+  'scsm-dbus-client.c',
+  'scsm-fail-whale.c',
+  'scsm-inhibitor.c',
   'scdm-log.c',
-  'gsm-manager.c',
-  'gsm-presence.c',
-  'gsm-process-helper.c',
-  'gsm-session-fill.c',
-  'gsm-session-save.c',
-  'gsm-shell-extensions.c',
-  'gsm-shell.c',
-  'gsm-store.c',
-  'gsm-system.c',
-  'gsm-systemd.c',
-  'gsm-xsmp-client.c',
-  'gsm-xsmp-server.c',
+  'scsm-manager.c',
+  'scsm-presence.c',
+  'scsm-process-helper.c',
+  'scsm-session-fill.c',
+  'scsm-session-save.c',
+  'scsm-shell-extensions.c',
+  'scsm-shell.c',
+  'scsm-store.c',
+  'scsm-system.c',
+  'scsm-systemd.c',
+  'scsm-xsmp-client.c',
+  'scsm-xsmp-server.c',
   'main.c'
 )
 
@@ -61,7 +61,7 @@ foreach iface: dbus_ifaces
 endforeach
 
 if enable_consolekit
-  sources += files('gsm-consolekit.c')
+  sources += files('scsm-consolekit.c')
 endif
 
 cflags = [
@@ -76,12 +76,12 @@ executable(
   include_directories: top_inc,
   dependencies: session_bin_deps,
   c_args: cflags,
-  link_with: libgsmutil,
+  link_with: libscsmutil,
   install: true,
   install_dir: session_libexecdir
 )
 
-sources = files('gsm-fail-whale-dialog.c')
+sources = files('scsm-fail-whale-dialog.c')
 
 cflags = '-DLOCALE_DIR="@0@"'.format(session_localedir)
 
@@ -98,7 +98,7 @@ executable(
 units = [
   ['test-inhibit', [], session_deps + [gtk_dep]],
   ['test-client-dbus', [], [gio_dep]],
-  ['test-process-helper', files('gsm-process-helper.c'), [gio_dep]]
+  ['test-process-helper', files('scsm-process-helper.c'), [gio_dep]]
 ]
 
 foreach unit: units

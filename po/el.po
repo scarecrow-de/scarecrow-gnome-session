@@ -142,11 +142,11 @@ msgstr "Με_τονομασία συνεδρίας"
 msgid "_Continue"
 msgstr "_Συνέχεια"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ωχ όχι! Κάτι πήγε στραβά."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -154,7 +154,7 @@ msgstr ""
 "Προέκυψε ένα πρόβλημα και το σύστημα δε μπορεί να ανακάμψει. Παρακαλούμε "
 "επικοινωνήστε με τον διαχειριστή του συστήματος"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -162,7 +162,7 @@ msgstr ""
 "Προέκυψε ένα πρόβλημα και το σύστημα δε μπορεί να ανακάμψει. Έχουν "
 "απενεργοποιηθεί όλες οι επεκτάσεις για λόγους προφύλαξης."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -170,27 +170,27 @@ msgstr ""
 "Προέκυψε ένα πρόβλημα και το σύστημα δε μπορεί να ανακάμψει.\n"
 "Παρακαλούμε αποσυνδεθείτε και δοκιμάστε ξανά."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "Απο_σύνδεση"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
 msgid "Enable debugging code"
 msgstr "Ενεργοποίηση κώδικα αποφαλμάτωσης"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Να επιτρέπεται αποσύνδεση"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Προβολή προειδοποίησης επέκτασης"
 
-#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1967
+#: scarecrow-session/scsm-manager.c:1289 scarecrow-session/scsm-manager.c:1967
 msgid "Not responding"
 msgstr "Δεν ανταποκρίνεται"
 
-#: scarecrow-session/gsm-util.c:382
+#: scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "_Αποσύνδεση"
 
@@ -198,22 +198,22 @@ msgstr "_Αποσύνδεση"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Απομνημόνευση εφαρμογών"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Αυτό το πρόγραμμα εμποδίζει την αποσύνδεση."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "Άρνηση σύνδεσης νέου πελάτη επειδή το σύστημα τερματίζεται αυτή τη στιγμή\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Αδυναμία δημιουργίας υποδοχής ακρόασης ICE: %s"

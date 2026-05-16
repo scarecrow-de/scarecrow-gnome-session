@@ -25,7 +25,7 @@
 #include <gio/gio.h>
 #include <json-glib/json-glib.h>
 
-#include "gsm-shell-extensions.h"
+#include "scsm-shell-extensions.h"
 
 #define SHELL_SCHEMA "io.github.scarecrow_de.shell"
 #define DISABLE_EXTENSIONS_KEY "disable-user-extensions"
@@ -38,44 +38,44 @@ struct _GsmShellExtensionsPrivate
   guint num_extensions;
 };
 
-G_DEFINE_TYPE (GsmShellExtensions, gsm_shell_extensions, G_TYPE_OBJECT);
+G_DEFINE_TYPE (GsmShellExtensions, scsm_shell_extensions, G_TYPE_OBJECT);
 
 /**
- * gsm_shell_extensions_finalize:
+ * scsm_shell_extensions_finalize:
  * @object: (in): A #GsmShellExtensions.
  *
  * Finalizer for a #GsmShellExtensions instance.  Frees any resources held by
  * the instance.
  */
 static void
-gsm_shell_extensions_finalize (GObject *object)
+scsm_shell_extensions_finalize (GObject *object)
 {
   GsmShellExtensions *extensions = GSM_SHELL_EXTENSIONS (object);
   GsmShellExtensionsPrivate *priv = extensions->priv;
 
   g_clear_object (&priv->settings);
 
-  G_OBJECT_CLASS (gsm_shell_extensions_parent_class)->finalize (object);
+  G_OBJECT_CLASS (scsm_shell_extensions_parent_class)->finalize (object);
 }
 
 /**
- * gsm_shell_extensions_class_init:
+ * scsm_shell_extensions_class_init:
  * @klass: (in): A #GsmShellExtensionsClass.
  *
  * Initializes the #GsmShellExtensionsClass and prepares the vtable.
  */
 static void
-gsm_shell_extensions_class_init (GsmShellExtensionsClass *klass)
+scsm_shell_extensions_class_init (GsmShellExtensionsClass *klass)
 {
   GObjectClass *object_class;
 
   object_class = G_OBJECT_CLASS (klass);
-  object_class->finalize = gsm_shell_extensions_finalize;
+  object_class->finalize = scsm_shell_extensions_finalize;
   g_type_class_add_private (object_class, sizeof (GsmShellExtensionsPrivate));
 }
 
 static void
-gsm_shell_extensions_scan_dir (GsmShellExtensions *self,
+scsm_shell_extensions_scan_dir (GsmShellExtensions *self,
                                GFile              *dir)
 {
   GFileEnumerator *enumerator;
@@ -127,7 +127,7 @@ gsm_shell_extensions_scan_dir (GsmShellExtensions *self,
 }
 
 static void
-gsm_shell_extensions_scan (GsmShellExtensions *self)
+scsm_shell_extensions_scan (GsmShellExtensions *self)
 {
   gchar *dirname;
   GFile *dir;
@@ -139,7 +139,7 @@ gsm_shell_extensions_scan (GsmShellExtensions *self)
   dir = g_file_new_for_path (dirname);
   g_free (dirname);
 
-  gsm_shell_extensions_scan_dir (self, dir);
+  scsm_shell_extensions_scan_dir (self, dir);
   g_object_unref (dir);
 
   system_data_dirs = g_get_system_data_dirs ();
@@ -149,19 +149,19 @@ gsm_shell_extensions_scan (GsmShellExtensions *self)
       dir = g_file_new_for_path (dirname);
       g_free (dirname);
 
-      gsm_shell_extensions_scan_dir (self, dir);
+      scsm_shell_extensions_scan_dir (self, dir);
       g_object_unref (dir);
     }
 }
 
 /**
- * gsm_shell_extensions_init:
+ * scsm_shell_extensions_init:
  * @self: (in): A #GsmShellExtensions.
  *
  * Initializes the newly created #GsmShellExtensions instance.
  */
 static void
-gsm_shell_extensions_init (GsmShellExtensions *self)
+scsm_shell_extensions_init (GsmShellExtensions *self)
 {
   GSettingsSchemaSource *source;
   GSettingsSchema *schema;
@@ -178,11 +178,11 @@ gsm_shell_extensions_init (GsmShellExtensions *self)
     }
 
   if (self->priv->settings != NULL)
-    gsm_shell_extensions_scan (self);
+    scsm_shell_extensions_scan (self);
 }
 
 gboolean
-gsm_shell_extensions_disable_all (GsmShellExtensions *self)
+scsm_shell_extensions_disable_all (GsmShellExtensions *self)
 {
   return g_settings_set_boolean (self->priv->settings,
                                  DISABLE_EXTENSIONS_KEY,
@@ -190,7 +190,7 @@ gsm_shell_extensions_disable_all (GsmShellExtensions *self)
 }
 
 guint
-gsm_shell_extensions_n_extensions (GsmShellExtensions *self)
+scsm_shell_extensions_n_extensions (GsmShellExtensions *self)
 {
   if (self->priv->settings == NULL)
     return 0;

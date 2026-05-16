@@ -31,8 +31,8 @@
 #include <gio/gio.h>
 #include <gio/gunixfdlist.h>
 
-#include "gsm-system.h"
-#include "gsm-consolekit.h"
+#include "scsm-system.h"
+#include "scsm-consolekit.h"
 
 #define CK_NAME      "org.freedesktop.ConsoleKit"
 
@@ -64,11 +64,11 @@ enum {
         PROP_ACTIVE
 };
 
-static void gsm_consolekit_system_init (GsmSystemInterface *iface);
+static void scsm_consolekit_system_init (GsmSystemInterface *iface);
 
-G_DEFINE_TYPE_WITH_CODE (GsmConsolekit, gsm_consolekit, G_TYPE_OBJECT,
+G_DEFINE_TYPE_WITH_CODE (GsmConsolekit, scsm_consolekit, G_TYPE_OBJECT,
                          G_IMPLEMENT_INTERFACE (GSM_TYPE_SYSTEM,
-                                                gsm_consolekit_system_init))
+                                                scsm_consolekit_system_init))
 
 static void
 drop_system_inhibitor (GsmConsolekit *manager)
@@ -91,7 +91,7 @@ drop_delay_inhibitor (GsmConsolekit *manager)
 }
 
 static void
-gsm_consolekit_finalize (GObject *object)
+scsm_consolekit_finalize (GObject *object)
 {
         GsmConsolekit *consolekit = GSM_CONSOLEKIT (object);
 
@@ -106,11 +106,11 @@ gsm_consolekit_finalize (GObject *object)
         drop_system_inhibitor (consolekit);
         drop_delay_inhibitor (consolekit);
 
-        G_OBJECT_CLASS (gsm_consolekit_parent_class)->finalize (object);
+        G_OBJECT_CLASS (scsm_consolekit_parent_class)->finalize (object);
 }
 
 static void
-gsm_consolekit_set_property (GObject      *object,
+scsm_consolekit_set_property (GObject      *object,
                              guint         prop_id,
                              const GValue *value,
                              GParamSpec   *pspec)
@@ -127,7 +127,7 @@ gsm_consolekit_set_property (GObject      *object,
 }
 
 static void
-gsm_consolekit_get_property (GObject    *object,
+scsm_consolekit_get_property (GObject    *object,
                              guint       prop_id,
                              GValue     *value,
                              GParamSpec *pspec)
@@ -145,15 +145,15 @@ gsm_consolekit_get_property (GObject    *object,
 }
 
 static void
-gsm_consolekit_class_init (GsmConsolekitClass *manager_class)
+scsm_consolekit_class_init (GsmConsolekitClass *manager_class)
 {
         GObjectClass *object_class;
 
         object_class = G_OBJECT_CLASS (manager_class);
 
-        object_class->get_property = gsm_consolekit_get_property;
-        object_class->set_property = gsm_consolekit_set_property;
-        object_class->finalize = gsm_consolekit_finalize;
+        object_class->get_property = scsm_consolekit_get_property;
+        object_class->set_property = scsm_consolekit_set_property;
+        object_class->finalize = scsm_consolekit_finalize;
 
         g_object_class_override_property (object_class, PROP_ACTIVE, "active");
 
@@ -205,7 +205,7 @@ ck_pid_get_session (GsmConsolekit *manager,
 }
 
 static void
-gsm_consolekit_init (GsmConsolekit *manager)
+scsm_consolekit_init (GsmConsolekit *manager)
 {
         GError *error = NULL;
         GDBusConnection *bus;
@@ -339,7 +339,7 @@ restart_done (GObject      *source,
 }
 
 static void
-gsm_consolekit_attempt_restart (GsmSystem *system)
+scsm_consolekit_attempt_restart (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
 
@@ -378,7 +378,7 @@ stop_done (GObject      *source,
 }
 
 static void
-gsm_consolekit_attempt_stop (GsmSystem *system)
+scsm_consolekit_attempt_stop (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
 
@@ -395,7 +395,7 @@ gsm_consolekit_attempt_stop (GsmSystem *system)
 }
 
 static void
-gsm_consolekit_set_session_idle (GsmSystem *system,
+scsm_consolekit_set_session_idle (GsmSystem *system,
                               gboolean   is_idle)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
@@ -468,7 +468,7 @@ ck_seat_can_multi_session (GsmConsolekit *manager,
 }
 
 static gboolean
-gsm_consolekit_can_switch_user (GsmSystem *system)
+scsm_consolekit_can_switch_user (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
         gchar *seat;
@@ -482,7 +482,7 @@ gsm_consolekit_can_switch_user (GsmSystem *system)
 }
 
 static gboolean
-gsm_consolekit_can_restart (GsmSystem *system)
+scsm_consolekit_can_restart (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
         GVariant *res;
@@ -508,7 +508,7 @@ gsm_consolekit_can_restart (GsmSystem *system)
 }
 
 static gboolean
-gsm_consolekit_can_stop (GsmSystem *system)
+scsm_consolekit_can_stop (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
         GVariant *res;
@@ -560,7 +560,7 @@ ck_session_get_class (GsmConsolekit *manager,
 }
 
 static gboolean
-gsm_consolekit_is_login_session (GsmSystem *system)
+scsm_consolekit_is_login_session (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
         int res;
@@ -585,7 +585,7 @@ gsm_consolekit_is_login_session (GsmSystem *system)
 }
 
 static gboolean
-gsm_consolekit_can_suspend (GsmSystem *system)
+scsm_consolekit_can_suspend (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
         gchar *rv;
@@ -617,7 +617,7 @@ gsm_consolekit_can_suspend (GsmSystem *system)
 }
 
 static gboolean
-gsm_consolekit_can_hibernate (GsmSystem *system)
+scsm_consolekit_can_hibernate (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
         gchar *rv;
@@ -687,7 +687,7 @@ hibernate_done (GObject      *source,
 }
 
 static void
-gsm_consolekit_suspend (GsmSystem *system)
+scsm_consolekit_suspend (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
 
@@ -702,7 +702,7 @@ gsm_consolekit_suspend (GsmSystem *system)
 }
 
 static void
-gsm_consolekit_hibernate (GsmSystem *system)
+scsm_consolekit_hibernate (GsmSystem *system)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
 
@@ -751,7 +751,7 @@ inhibit_done (GObject      *source,
 }
 
 static void
-gsm_consolekit_add_inhibitor (GsmSystem        *system,
+scsm_consolekit_add_inhibitor (GsmSystem        *system,
                            const gchar      *id,
                            GsmInhibitorFlag  flag)
 {
@@ -780,7 +780,7 @@ gsm_consolekit_add_inhibitor (GsmSystem        *system,
 }
 
 static void
-gsm_consolekit_remove_inhibitor (GsmSystem   *system,
+scsm_consolekit_remove_inhibitor (GsmSystem   *system,
                               const gchar *id)
 {
         GsmConsolekit *manager = GSM_CONSOLEKIT (system);
@@ -825,7 +825,7 @@ reboot_or_poweroff_done (GObject      *source,
 }
 
 static void
-gsm_consolekit_prepare_shutdown (GsmSystem *system,
+scsm_consolekit_prepare_shutdown (GsmSystem *system,
                                  gboolean   restart)
 {
         GsmConsolekit *consolekit = GSM_CONSOLEKIT (system);
@@ -877,7 +877,7 @@ gsm_consolekit_prepare_shutdown (GsmSystem *system,
 }
 
 static void
-gsm_consolekit_complete_shutdown (GsmSystem *system)
+scsm_consolekit_complete_shutdown (GsmSystem *system)
 {
         GsmConsolekit *consolekit = GSM_CONSOLEKIT (system);
 
@@ -886,34 +886,34 @@ gsm_consolekit_complete_shutdown (GsmSystem *system)
 }
 
 static gboolean
-gsm_consolekit_is_last_session_for_user (GsmSystem *system)
+scsm_consolekit_is_last_session_for_user (GsmSystem *system)
 {
         return FALSE;
 }
 
 static void
-gsm_consolekit_system_init (GsmSystemInterface *iface)
+scsm_consolekit_system_init (GsmSystemInterface *iface)
 {
-        iface->can_switch_user = gsm_consolekit_can_switch_user;
-        iface->can_stop = gsm_consolekit_can_stop;
-        iface->can_restart = gsm_consolekit_can_restart;
-        iface->can_suspend = gsm_consolekit_can_suspend;
-        iface->can_hibernate = gsm_consolekit_can_hibernate;
-        iface->attempt_stop = gsm_consolekit_attempt_stop;
-        iface->attempt_restart = gsm_consolekit_attempt_restart;
-        iface->suspend = gsm_consolekit_suspend;
-        iface->hibernate = gsm_consolekit_hibernate;
-        iface->set_session_idle = gsm_consolekit_set_session_idle;
-        iface->is_login_session = gsm_consolekit_is_login_session;
-        iface->add_inhibitor = gsm_consolekit_add_inhibitor;
-        iface->remove_inhibitor = gsm_consolekit_remove_inhibitor;
-        iface->prepare_shutdown = gsm_consolekit_prepare_shutdown;
-        iface->complete_shutdown = gsm_consolekit_complete_shutdown;
-        iface->is_last_session_for_user = gsm_consolekit_is_last_session_for_user;
+        iface->can_switch_user = scsm_consolekit_can_switch_user;
+        iface->can_stop = scsm_consolekit_can_stop;
+        iface->can_restart = scsm_consolekit_can_restart;
+        iface->can_suspend = scsm_consolekit_can_suspend;
+        iface->can_hibernate = scsm_consolekit_can_hibernate;
+        iface->attempt_stop = scsm_consolekit_attempt_stop;
+        iface->attempt_restart = scsm_consolekit_attempt_restart;
+        iface->suspend = scsm_consolekit_suspend;
+        iface->hibernate = scsm_consolekit_hibernate;
+        iface->set_session_idle = scsm_consolekit_set_session_idle;
+        iface->is_login_session = scsm_consolekit_is_login_session;
+        iface->add_inhibitor = scsm_consolekit_add_inhibitor;
+        iface->remove_inhibitor = scsm_consolekit_remove_inhibitor;
+        iface->prepare_shutdown = scsm_consolekit_prepare_shutdown;
+        iface->complete_shutdown = scsm_consolekit_complete_shutdown;
+        iface->is_last_session_for_user = scsm_consolekit_is_last_session_for_user;
 }
 
 GsmConsolekit *
-gsm_consolekit_new (void)
+scsm_consolekit_new (void)
 {
         GsmConsolekit *manager;
 

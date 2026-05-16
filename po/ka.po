@@ -19,47 +19,47 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../capplet/gsm-app-dialog.c:126
+#: ../capplet/scsm-app-dialog.c:126
 msgid "Select Command"
 msgstr "ბრძანების ამორჩევა"
 
-#: ../capplet/gsm-app-dialog.c:187
+#: ../capplet/scsm-app-dialog.c:187
 msgid "Add Startup Program"
 msgstr "დამწყები პროგრამის დამატება"
 
-#: ../capplet/gsm-app-dialog.c:191
+#: ../capplet/scsm-app-dialog.c:191
 msgid "Edit Startup Program"
 msgstr "დამწყები პროგრამის რედაქტირება"
 
-#: ../capplet/gsm-properties-dialog.c:132
+#: ../capplet/scsm-properties-dialog.c:132
 msgid "No description"
 msgstr "არავითარი აღწერილობა"
 
-#: ../capplet/gsm-properties-dialog.c:977
+#: ../capplet/scsm-properties-dialog.c:977
 msgid "The name of the startup program cannot be empty"
 msgstr "ავტო გაშვებადი პროგრამის სახელწოდება არ უნდა იყოს ცარიელი"
 
-#: ../capplet/gsm-properties-dialog.c:981
+#: ../capplet/scsm-properties-dialog.c:981
 msgid "The startup command cannot be empty"
 msgstr "გაშვების ბრძანება არ უნდა იყოს ცარიელი"
 
-#: ../capplet/gsm-properties-dialog.c:987
+#: ../capplet/scsm-properties-dialog.c:987
 msgid "The startup command is not valid"
 msgstr "გაშვების ბრძანება მიუღებელია"
 
-#: ../capplet/gsm-properties-dialog.c:1291
+#: ../capplet/scsm-properties-dialog.c:1291
 msgid "Enabled"
 msgstr "ჩართულია"
 
-#: ../capplet/gsm-properties-dialog.c:1304
+#: ../capplet/scsm-properties-dialog.c:1304
 msgid "Icon"
 msgstr "ხატულა"
 
-#: ../capplet/gsm-properties-dialog.c:1315
+#: ../capplet/scsm-properties-dialog.c:1315
 msgid "Program"
 msgstr "პროგრამა"
 
-#: ../capplet/gsm-properties-dialog.c:1464
+#: ../capplet/scsm-properties-dialog.c:1464
 #: ../data/session-properties.glade.h:6
 msgid "Sessions Preferences"
 msgstr "სესიების პარამეტრები"
@@ -204,12 +204,12 @@ msgstr ""
 msgid "Window Manager"
 msgstr "ფანჯარათა მმართველი"
 
-#: ../data/gsm-inhibit-dialog.glade.h:1
+#: ../data/scsm-inhibit-dialog.glade.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>ზოგიერთი პროგრამა ჯერ კიდევ გაშვებულია:</b>"
 
-#: ../data/gsm-inhibit-dialog.glade.h:2
-#: ../scarecrow-session/gsm-inhibit-dialog.c:632
+#: ../data/scsm-inhibit-dialog.glade.h:2
+#: ../scarecrow-session/scsm-inhibit-dialog.c:632
 msgid ""
 "Waiting for program to finish.  Interrupting program may cause you to lose "
 "work."
@@ -294,43 +294,43 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr "არ არის გაშვებადი ელემენტი"
 
-#: ../egg/eggsmclient-libgnomeui.c:102
+#: ../egg/egscsmclient-libgnomeui.c:102
 msgid "Session management"
 msgstr "სესიის სახელი"
 
-#: ../egg/eggsmclient-libgnomeui.c:136
+#: ../egg/egscsmclient-libgnomeui.c:136
 msgid "Scarecrow GUI Library + EggSMClient"
 msgstr "Scarecrow GUI Library + EggSMClient"
 
-#: ../egg/eggsmclient.c:185
+#: ../egg/egscsmclient.c:185
 msgid "Disable connection to session manager"
 msgstr "ვერ ვუკავშირდები სესიის მენეჯერს"
 
-#: ../egg/eggsmclient.c:188
+#: ../egg/egscsmclient.c:188
 msgid "Specify file containing saved configuration"
 msgstr "დამახსოვრებული კონფიგურაციის მქონე ფაილის მინიშნება"
 
-#: ../egg/eggsmclient.c:188
+#: ../egg/egscsmclient.c:188
 msgid "FILE"
 msgstr "ფაილი"
 
-#: ../egg/eggsmclient.c:191
+#: ../egg/egscsmclient.c:191
 msgid "Specify session management ID"
 msgstr "აღნიშნეთ თუ რომელი სეანსი ჩაიტვირთოს"
 
-#: ../egg/eggsmclient.c:191
+#: ../egg/egscsmclient.c:191
 msgid "ID"
 msgstr "ID"
 
-#: ../egg/eggsmclient.c:241
+#: ../egg/egscsmclient.c:241
 msgid "Session Management Options"
 msgstr "სესიის პარამეტრები"
 
-#: ../egg/eggsmclient.c:242
+#: ../egg/egscsmclient.c:242
 msgid "Show Session Management options"
 msgstr "სესიის პარამეტრები"
 
-#: ../scarecrow-session/gsm-gconf.c:106
+#: ../scarecrow-session/scsm-gconf.c:106
 #, c-format
 msgid ""
 "There is a problem with the configuration server.\n"
@@ -339,24 +339,24 @@ msgstr ""
 "დაიშვა შეცდომა კონფიგურაციის სერვერთან.\n"
 "(%s დასრულდა სტატუსით %d)"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:256
+#: ../scarecrow-session/scsm-inhibit-dialog.c:256
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "ხატულა '%s' ვერ მოიძებნა"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:580
+#: ../scarecrow-session/scsm-inhibit-dialog.c:580
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:631
+#: ../scarecrow-session/scsm-inhibit-dialog.c:631
 msgid "A program is still running:"
 msgstr "პროგრამა ჯერ კიდევ გაშვებულია:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:635
+#: ../scarecrow-session/scsm-inhibit-dialog.c:635
 msgid "Some programs are still running:"
 msgstr "ზოგიერთი პროგრამა ჯერ კიდევ გაშვებულია:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:636
+#: ../scarecrow-session/scsm-inhibit-dialog.c:636
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
@@ -364,39 +364,39 @@ msgstr ""
 "ველოდები პროგრამების დასრულებას.  ამ პროცესის შეწყვეტამ, შესაძლებელია თქვენს "
 "მიერ ჩატარებული სამუშაოს დაკარგვა გამოიწვიოს."
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:864
+#: ../scarecrow-session/scsm-inhibit-dialog.c:864
 msgid "Switch User Anyway"
 msgstr "მაინც მომხმარებლის გადართვა"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:867
+#: ../scarecrow-session/scsm-inhibit-dialog.c:867
 msgid "Logout Anyway"
 msgstr "მაინც შესვლა"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:870
+#: ../scarecrow-session/scsm-inhibit-dialog.c:870
 msgid "Suspend Anyway"
 msgstr "მაინც შეყოვნება"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:873
+#: ../scarecrow-session/scsm-inhibit-dialog.c:873
 msgid "Hibernate Anyway"
 msgstr "მაინც ჰიბერნირებულ რეჟიმში შესვლა"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:876
+#: ../scarecrow-session/scsm-inhibit-dialog.c:876
 msgid "Shutdown Anyway"
 msgstr "მაინც გამორთე"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:879
+#: ../scarecrow-session/scsm-inhibit-dialog.c:879
 msgid "Reboot Anyway"
 msgstr "მაინც გადატვირთე"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:887
+#: ../scarecrow-session/scsm-inhibit-dialog.c:887
 msgid "Lock Screen"
 msgstr "ეკრანის დაბლოკვა"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:890
+#: ../scarecrow-session/scsm-inhibit-dialog.c:890
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:283
+#: ../scarecrow-session/scsm-logout-dialog.c:283
 #, c-format
 msgid ""
 "You are currently logged in as \"%s\".\n"
@@ -408,7 +408,7 @@ msgstr[0] ""
 "თქვენ დარეგისტრირებული ბრძანდებით როგორც: \"%s\".\n"
 "თქვენ ავტომატურად დატოვებთ სესიას %d წამში."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:295
+#: ../scarecrow-session/scsm-logout-dialog.c:295
 #, c-format
 msgid ""
 "You are currently logged in as \"%s\".\n"
@@ -420,59 +420,59 @@ msgstr[0] ""
 "თქვენ დარეგისტრირებული ბრძანდებით როგორც: \"%s\".\n"
 "სისტემა ავტომატურად გამოირთვება %d წამში."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:377
+#: ../scarecrow-session/scsm-logout-dialog.c:377
 msgid "Log out of this system now?"
 msgstr "გნებავთ მყისვე დატოვოთ სისტემა?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:383
+#: ../scarecrow-session/scsm-logout-dialog.c:383
 msgid "_Switch User"
 msgstr "_მომხმარებლის გადართვა"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:392
+#: ../scarecrow-session/scsm-logout-dialog.c:392
 msgid "_Log Out"
 msgstr "_სეანსის დასრულება"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:398
+#: ../scarecrow-session/scsm-logout-dialog.c:398
 msgid "Shut down this system now?"
 msgstr "გნებავთ სისტემის ახლავე გამორთვა?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:404
+#: ../scarecrow-session/scsm-logout-dialog.c:404
 msgid "S_uspend"
 msgstr "_დაყოვნება"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:410
+#: ../scarecrow-session/scsm-logout-dialog.c:410
 msgid "_Hibernate"
 msgstr "_ჰიბერნიზაცია"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:416
+#: ../scarecrow-session/scsm-logout-dialog.c:416
 msgid "_Restart"
 msgstr "გადატვირთვა"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:426
+#: ../scarecrow-session/scsm-logout-dialog.c:426
 msgid "_Shut Down"
 msgstr "გა_მორთვა"
 
-#: ../scarecrow-session/gsm-manager.c:924 ../scarecrow-session/gsm-manager.c:1541
+#: ../scarecrow-session/scsm-manager.c:924 ../scarecrow-session/scsm-manager.c:1541
 msgid "Not responding"
 msgstr "არ პასუხობს"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:988
+#: ../scarecrow-session/scsm-xsmp-client.c:988
 msgid "This program is blocking log out."
 msgstr "მოცემული პროგრამა ბლოკავს სისტემიდან გასვლას"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:234
+#: ../scarecrow-session/scsm-xsmp-server.c:234
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:489
+#: ../scarecrow-session/scsm-xsmp-server.c:489
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr ""
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:139
+#: ../scarecrow-session/scsm-util.c:139
 #, c-format
 msgid "Unable to start login session (and unable connect to the X server)"
 msgstr ""

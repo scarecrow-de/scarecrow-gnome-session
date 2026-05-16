@@ -77,108 +77,108 @@ msgstr "Bontšha seširo sa go tlampuletša ge lenaneo le thoma"
 msgid "Splash Screen Image"
 msgstr "Seswantšho sa Sekirini sa go Tlampuletša"
 
-#: scarecrow-session/gsm-client-editor.c:97 scarecrow-session/startup-programs.c:314
+#: scarecrow-session/scsm-client-editor.c:97 scarecrow-session/startup-programs.c:314
 msgid "_Order:"
 msgstr "_Tatelano:"
 
-#: scarecrow-session/gsm-client-editor.c:99
+#: scarecrow-session/scsm-client-editor.c:99
 msgid "The order in which applications are started in the session."
 msgstr "Tatelano yeo ditirišo di thongwago ka yona lenaneong le."
 
-#: scarecrow-session/gsm-client-editor.c:106
+#: scarecrow-session/scsm-client-editor.c:106
 msgid "What happens to the application when it exits."
 msgstr "Go direga'ng tirišong ge e tšwa."
 
-#: scarecrow-session/gsm-client-editor.c:109
+#: scarecrow-session/scsm-client-editor.c:109
 msgid "_Style:"
 msgstr "_Setaele:"
 
-#: scarecrow-session/gsm-client-list.c:150
+#: scarecrow-session/scsm-client-list.c:150
 #: scarecrow-session/session-properties-capplet.c:412
 msgid "Order"
 msgstr "Tatelano"
 
-#: scarecrow-session/gsm-client-list.c:155
+#: scarecrow-session/scsm-client-list.c:155
 msgid "Style"
 msgstr "Setaele"
 
-#: scarecrow-session/gsm-client-list.c:160
+#: scarecrow-session/scsm-client-list.c:160
 msgid "State"
 msgstr "Boemo"
 
-#: scarecrow-session/gsm-client-list.c:165
+#: scarecrow-session/scsm-client-list.c:165
 msgid "Program"
 msgstr "Lenaneo"
 
-#: scarecrow-session/gsm-client-row.c:31
+#: scarecrow-session/scsm-client-row.c:31
 msgid "Inactive"
 msgstr "Ga e šome"
 
-#: scarecrow-session/gsm-client-row.c:32
+#: scarecrow-session/scsm-client-row.c:32
 msgid "Waiting to start or already finished."
 msgstr "E emetše go thoma goba e šetše e feditše."
 
-#: scarecrow-session/gsm-client-row.c:34
+#: scarecrow-session/scsm-client-row.c:34
 msgid "Starting"
 msgstr "E a thoma"
 
-#: scarecrow-session/gsm-client-row.c:35
+#: scarecrow-session/scsm-client-row.c:35
 msgid "Started but has not yet reported state."
 msgstr "E thomile eupja ga se ya hlwa e bega boemo bjo e lego go bjona."
 
-#: scarecrow-session/gsm-client-row.c:37
+#: scarecrow-session/scsm-client-row.c:37
 msgid "Running"
 msgstr "E a šoma"
 
-#: scarecrow-session/gsm-client-row.c:38
+#: scarecrow-session/scsm-client-row.c:38
 msgid "A normal member of the session."
 msgstr "Leloko le tlwaelegilego la lenaneo."
 
-#: scarecrow-session/gsm-client-row.c:40
+#: scarecrow-session/scsm-client-row.c:40
 msgid "Saving"
 msgstr "E a boloka"
 
-#: scarecrow-session/gsm-client-row.c:41
+#: scarecrow-session/scsm-client-row.c:41
 msgid "Saving session details."
 msgstr "E boloka dintlha tša lenaneo."
 
-#: scarecrow-session/gsm-client-row.c:43
+#: scarecrow-session/scsm-client-row.c:43
 msgid "Unknown"
 msgstr "Ga e tsebje"
 
-#: scarecrow-session/gsm-client-row.c:44
+#: scarecrow-session/scsm-client-row.c:44
 msgid "State not reported within timeout."
 msgstr "Boemo ga se bja begwa nakong ya ge go tlogetšwe go šoma."
 
-#: scarecrow-session/gsm-client-row.c:50
+#: scarecrow-session/scsm-client-row.c:50
 msgid "Normal"
 msgstr "Tlwaelegile"
 
-#: scarecrow-session/gsm-client-row.c:51
+#: scarecrow-session/scsm-client-row.c:51
 msgid "Unaffected by logouts but can die."
 msgstr "Ga se ya kgongwa ke go tšwa eupša e ka hwa."
 
-#: scarecrow-session/gsm-client-row.c:53
+#: scarecrow-session/scsm-client-row.c:53
 msgid "Restart"
 msgstr "Thoma ka leswa"
 
-#: scarecrow-session/gsm-client-row.c:54
+#: scarecrow-session/scsm-client-row.c:54
 msgid "Never allowed to die."
 msgstr "Ga se ya dumelelwa go hwa."
 
-#: scarecrow-session/gsm-client-row.c:56
+#: scarecrow-session/scsm-client-row.c:56
 msgid "Trash"
 msgstr "Ditlakala"
 
-#: scarecrow-session/gsm-client-row.c:57
+#: scarecrow-session/scsm-client-row.c:57
 msgid "Discarded on logout and can die."
 msgstr "E lahlilwe go tšweng gomme e ka hwa."
 
-#: scarecrow-session/gsm-client-row.c:59
+#: scarecrow-session/scsm-client-row.c:59
 msgid "Settings"
 msgstr "Dipeakanyo"
 
-#: scarecrow-session/gsm-client-row.c:60
+#: scarecrow-session/scsm-client-row.c:60
 msgid "Always started on every login."
 msgstr "Ka mehla e thomile go go tsena go gongwe le go gongwe."
 
@@ -190,7 +190,7 @@ msgstr "Ka mehla e thomile go go tsena go gongwe le go gongwe."
 #. *
 #. * for now, we just kill the old dialog and pop up a new one.
 #.
-#: scarecrow-session/gsm-gsd.c:41
+#: scarecrow-session/scsm-gsd.c:41
 msgid ""
 "There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
@@ -202,7 +202,7 @@ msgstr ""
 "Dilo tše dingwe, tše bjalo ka dihlogo, medumo goba dipeakanyo tše bonagalago "
 "ka morago di ka no se šome gabotse."
 
-#: scarecrow-session/gsm-gsd.c:53
+#: scarecrow-session/scsm-gsd.c:53
 msgid ""
 "\n"
 "\n"
@@ -214,7 +214,7 @@ msgstr ""
 "Molaetša wa mafelelo wa phošo e be e le:\n"
 "\n"
 
-#: scarecrow-session/gsm-gsd.c:58
+#: scarecrow-session/scsm-gsd.c:58
 msgid ""
 "\n"
 "\n"
@@ -225,11 +225,11 @@ msgstr ""
 "Scarecrow e sa dutše e tla leka go thoma Daemon ya Dipeakanyo ka leswa nakong e "
 "tlago ge o tsena."
 
-#: scarecrow-session/gsm-gsd.c:115
+#: scarecrow-session/scsm-gsd.c:115
 msgid "There was an unknown activation error."
 msgstr "Go bile le phošo e sa tsebjego ya go diragatša."
 
-#: scarecrow-session/gsm-gsd.c:157
+#: scarecrow-session/scsm-gsd.c:157
 msgid "The Settings Daemon restarted too many times."
 msgstr "Daemon ya Dipeakanyo e thomile ka leswa gantši kudu."
 

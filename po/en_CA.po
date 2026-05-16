@@ -99,7 +99,7 @@ msgstr "Configure your sessions"
 msgid "Sessions"
 msgstr "Sessions"
 
-#: ../scarecrow-session/gsm-at-startup.c:39
+#: ../scarecrow-session/scsm-at-startup.c:39
 msgid ""
 "Assistive technology support has been requested for this session, but the "
 "accessibility registry was not found. Please ensure that the AT-SPI package "
@@ -111,109 +111,109 @@ msgstr ""
 "is installed. Your session has been started without assistive technology "
 "support."
 
-#: ../scarecrow-session/gsm-client-editor.c:123
+#: ../scarecrow-session/scsm-client-editor.c:123
 msgid "_Order:"
 msgstr "_Order:"
 
-#: ../scarecrow-session/gsm-client-editor.c:125
+#: ../scarecrow-session/scsm-client-editor.c:125
 msgid "The order in which applications are started in the session."
 msgstr "The order in which applications are started in the session."
 
-#: ../scarecrow-session/gsm-client-editor.c:133
+#: ../scarecrow-session/scsm-client-editor.c:133
 msgid "What happens to the application when it exits."
 msgstr "What happens to the application when it exits."
 
-#: ../scarecrow-session/gsm-client-editor.c:134
+#: ../scarecrow-session/scsm-client-editor.c:134
 msgid "_Style:"
 msgstr "_Style:"
 
-#: ../scarecrow-session/gsm-client-list.c:44
+#: ../scarecrow-session/scsm-client-list.c:44
 msgid "Inactive"
 msgstr "Inactive"
 
-#: ../scarecrow-session/gsm-client-list.c:44
+#: ../scarecrow-session/scsm-client-list.c:44
 msgid "Waiting to start or already finished."
 msgstr "Waiting to start or already finished."
 
-#: ../scarecrow-session/gsm-client-list.c:46
+#: ../scarecrow-session/scsm-client-list.c:46
 msgid "Starting"
 msgstr "Starting"
 
-#: ../scarecrow-session/gsm-client-list.c:46
+#: ../scarecrow-session/scsm-client-list.c:46
 msgid "Started but has not yet reported state."
 msgstr "Started but has not yet reported state."
 
-#: ../scarecrow-session/gsm-client-list.c:48
+#: ../scarecrow-session/scsm-client-list.c:48
 msgid "Running"
 msgstr "Running"
 
-#: ../scarecrow-session/gsm-client-list.c:48
+#: ../scarecrow-session/scsm-client-list.c:48
 msgid "A normal member of the session."
 msgstr "A normal member of the session."
 
-#: ../scarecrow-session/gsm-client-list.c:50
+#: ../scarecrow-session/scsm-client-list.c:50
 msgid "Saving"
 msgstr "Saving"
 
-#: ../scarecrow-session/gsm-client-list.c:50
+#: ../scarecrow-session/scsm-client-list.c:50
 msgid "Saving session details."
 msgstr "Saving session details."
 
 #. FIXME find better icon
-#: ../scarecrow-session/gsm-client-list.c:53
+#: ../scarecrow-session/scsm-client-list.c:53
 msgid "Unknown"
 msgstr "Unknown"
 
-#: ../scarecrow-session/gsm-client-list.c:53
+#: ../scarecrow-session/scsm-client-list.c:53
 msgid "State not reported within timeout."
 msgstr "State not reported within timeout."
 
 #. FIXME find icon
-#: ../scarecrow-session/gsm-client-list.c:60
+#: ../scarecrow-session/scsm-client-list.c:60
 msgid "Normal"
 msgstr "Normal"
 
-#: ../scarecrow-session/gsm-client-list.c:60
+#: ../scarecrow-session/scsm-client-list.c:60
 msgid "Unaffected by logouts but can die."
 msgstr "Unaffected by logouts but can die."
 
-#: ../scarecrow-session/gsm-client-list.c:62
+#: ../scarecrow-session/scsm-client-list.c:62
 msgid "Restart"
 msgstr "Restart"
 
-#: ../scarecrow-session/gsm-client-list.c:62
+#: ../scarecrow-session/scsm-client-list.c:62
 msgid "Never allowed to die."
 msgstr "Never allowed to die."
 
-#: ../scarecrow-session/gsm-client-list.c:64
+#: ../scarecrow-session/scsm-client-list.c:64
 msgid "Trash"
 msgstr "Trash"
 
-#: ../scarecrow-session/gsm-client-list.c:64
+#: ../scarecrow-session/scsm-client-list.c:64
 msgid "Discarded on logout and can die."
 msgstr "Discarded on logout and can die."
 
-#: ../scarecrow-session/gsm-client-list.c:66
+#: ../scarecrow-session/scsm-client-list.c:66
 msgid "Settings"
 msgstr "Settings"
 
-#: ../scarecrow-session/gsm-client-list.c:66
+#: ../scarecrow-session/scsm-client-list.c:66
 msgid "Always started on every login."
 msgstr "Always started on every login."
 
-#: ../scarecrow-session/gsm-client-list.c:190
+#: ../scarecrow-session/scsm-client-list.c:190
 msgid "Order"
 msgstr "Order"
 
-#: ../scarecrow-session/gsm-client-list.c:197
+#: ../scarecrow-session/scsm-client-list.c:197
 msgid "Style"
 msgstr "Style"
 
-#: ../scarecrow-session/gsm-client-list.c:204
+#: ../scarecrow-session/scsm-client-list.c:204
 msgid "State"
 msgstr "State"
 
-#: ../scarecrow-session/gsm-client-list.c:211
+#: ../scarecrow-session/scsm-client-list.c:211
 #: ../scarecrow-session/session-properties-capplet.c:283
 msgid "Program"
 msgstr "Program"
@@ -226,7 +226,7 @@ msgstr "Program"
 #. *
 #. * for now, we just kill the old dialog and pop up a new one.
 #.
-#: ../scarecrow-session/gsm-gsd.c:45
+#: ../scarecrow-session/scsm-gsd.c:45
 msgid ""
 "There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
@@ -238,7 +238,7 @@ msgstr ""
 "Some things, such as themes, sounds, or background settings may not work "
 "correctly."
 
-#: ../scarecrow-session/gsm-gsd.c:57
+#: ../scarecrow-session/scsm-gsd.c:57
 msgid ""
 "\n"
 "\n"
@@ -250,7 +250,7 @@ msgstr ""
 "The last error message was:\n"
 "\n"
 
-#: ../scarecrow-session/gsm-gsd.c:62
+#: ../scarecrow-session/scsm-gsd.c:62
 msgid ""
 "\n"
 "\n"
@@ -260,12 +260,12 @@ msgstr ""
 "\n"
 "Scarecrow will still try to restart the Settings Daemon next time you log in."
 
-#: ../scarecrow-session/gsm-gsd.c:145
+#: ../scarecrow-session/scsm-gsd.c:145
 msgid "The Settings Daemon restarted too many times."
 msgstr "The Settings Daemon restarted too many times."
 
 #. Name is mandatory and might not be set by the caller
-#: ../scarecrow-session/gsm-keyfile.c:43
+#: ../scarecrow-session/scsm-keyfile.c:43
 msgid "No Name"
 msgstr "No Name"
 

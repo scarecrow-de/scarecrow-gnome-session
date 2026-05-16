@@ -110,18 +110,18 @@ msgstr "Đổi _tên phiên làm việc"
 msgid "_Continue"
 msgstr "_Tiếp tục"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ôi không! Có cái gì đó bị hỏng rồi."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
 msgstr ""
 "Hệ thống gặp vấn đề không thể phục hồi. Vui lòng liên lạc quản trị hệ thống."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -129,7 +129,7 @@ msgstr ""
 "Hệ thống gặp vấn đề không thể phục hồi. Mọi phần mở rộng đã bị tắt để đề "
 "phòng."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -137,27 +137,27 @@ msgstr ""
 "Hệ thống gặp vấn đề không thể phục hồi.\n"
 "Hãy đăng xuất và thử lại."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "Đăng _xuất"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
 msgid "Enable debugging code"
 msgstr "Bật mã hỗ trợ tìm lỗi"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Cho phép đăng xuất"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Hiện cảnh báo phần mở rộng"
 
-#: scarecrow-session/gsm-manager.c:1266 scarecrow-session/gsm-manager.c:1919
+#: scarecrow-session/scsm-manager.c:1266 scarecrow-session/scsm-manager.c:1919
 msgid "Not responding"
 msgstr "Không trả lời"
 
-#: scarecrow-session/gsm-util.c:382
+#: scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "Đăng _xuất"
 
@@ -165,21 +165,21 @@ msgstr "Đăng _xuất"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Ứng dụng đã nhớ"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Chương trình này đang ngăn cản đăng xuất."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Đang từ chối kết nối khách mới vì phiên làm việc đang bị tắt\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Không thể tạo ổ cắm lắng nghe ICE: %s"

@@ -27,8 +27,8 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#include "gsm-inhibitor.h"
-#include "gsm-shell.h"
+#include "scsm-inhibitor.h"
+#include "scsm-shell.h"
 
 #define SHELL_NAME      "io.github.scarecrow_de.Shell"
 #define SHELL_PATH      "/io/github/scarecrow_de/Shell"
@@ -74,16 +74,16 @@ enum {
 
 static guint signals[NUMBER_OF_SIGNALS] = { 0 };
 
-static void     gsm_shell_class_init   (GsmShellClass *klass);
-static void     gsm_shell_init         (GsmShell      *ck);
-static void     gsm_shell_finalize     (GObject            *object);
+static void     scsm_shell_class_init   (GsmShellClass *klass);
+static void     scsm_shell_init         (GsmShell      *ck);
+static void     scsm_shell_finalize     (GObject            *object);
 
 static void     queue_end_session_dialog_update (GsmShell *shell);
 
-G_DEFINE_TYPE (GsmShell, gsm_shell, G_TYPE_OBJECT);
+G_DEFINE_TYPE (GsmShell, scsm_shell, G_TYPE_OBJECT);
 
 static void
-gsm_shell_get_property (GObject    *object,
+scsm_shell_get_property (GObject    *object,
                              guint       prop_id,
                              GValue     *value,
                              GParamSpec *pspec)
@@ -104,15 +104,15 @@ gsm_shell_get_property (GObject    *object,
 }
 
 static void
-gsm_shell_class_init (GsmShellClass *shell_class)
+scsm_shell_class_init (GsmShellClass *shell_class)
 {
         GObjectClass *object_class;
         GParamSpec   *param_spec;
 
         object_class = G_OBJECT_CLASS (shell_class);
 
-        object_class->finalize = gsm_shell_finalize;
-        object_class->get_property = gsm_shell_get_property;
+        object_class->finalize = scsm_shell_finalize;
+        object_class->get_property = scsm_shell_get_property;
 
         param_spec = g_param_spec_boolean ("is-running",
                                            "Is running",
@@ -202,7 +202,7 @@ on_shell_name_appeared (GDBusConnection *connection,
 }
 
 static void
-gsm_shell_ensure_connection (GsmShell  *shell)
+scsm_shell_ensure_connection (GsmShell  *shell)
 {
         if (shell->priv->watch_id != 0) {
                 return;
@@ -217,22 +217,22 @@ gsm_shell_ensure_connection (GsmShell  *shell)
 }
 
 static void
-gsm_shell_init (GsmShell *shell)
+scsm_shell_init (GsmShell *shell)
 {
         shell->priv = GSM_SHELL_GET_PRIVATE (shell);
 
-        gsm_shell_ensure_connection (shell);
+        scsm_shell_ensure_connection (shell);
 }
 
 static void
-gsm_shell_finalize (GObject *object)
+scsm_shell_finalize (GObject *object)
 {
         GsmShell *shell;
         GObjectClass  *parent_class;
 
         shell = GSM_SHELL (object);
 
-        parent_class = G_OBJECT_CLASS (gsm_shell_parent_class);
+        parent_class = G_OBJECT_CLASS (scsm_shell_parent_class);
 
         g_object_unref (shell->priv->inhibitors);
 
@@ -247,7 +247,7 @@ gsm_shell_finalize (GObject *object)
 }
 
 GsmShell *
-gsm_shell_new (void)
+scsm_shell_new (void)
 {
         GsmShell *shell;
 
@@ -257,21 +257,21 @@ gsm_shell_new (void)
 }
 
 GsmShell *
-gsm_get_shell (void)
+scsm_get_shell (void)
 {
         static GsmShell *shell = NULL;
 
         if (shell == NULL) {
-                shell = gsm_shell_new ();
+                shell = scsm_shell_new ();
         }
 
         return g_object_ref (shell);
 }
 
 gboolean
-gsm_shell_is_running (GsmShell *shell)
+scsm_shell_is_running (GsmShell *shell)
 {
-        gsm_shell_ensure_connection (shell);
+        scsm_shell_ensure_connection (shell);
 
         return shell->priv->is_running;
 }
@@ -281,7 +281,7 @@ add_inhibitor_to_array (const char      *id,
                         GsmInhibitor    *inhibitor,
                         GVariantBuilder *builder)
 {
-        g_variant_builder_add (builder, "o", gsm_inhibitor_peek_id (inhibitor));
+        g_variant_builder_add (builder, "o", scsm_inhibitor_peek_id (inhibitor));
         return FALSE;
 }
 
@@ -291,7 +291,7 @@ get_array_from_store (GsmStore *inhibitors)
         GVariantBuilder builder;
 
         g_variant_builder_init (&builder, G_VARIANT_TYPE ("ao"));
-        gsm_store_foreach (inhibitors,
+        scsm_store_foreach (inhibitors,
                            (GsmStoreFunc) add_inhibitor_to_array,
                            &builder);
 
@@ -396,7 +396,7 @@ on_need_end_session_dialog_update (GsmShell *shell)
 
         shell->priv->update_idle_id = 0;
 
-        gsm_shell_open_end_session_dialog (shell,
+        scsm_shell_open_end_session_dialog (shell,
                                            shell->priv->end_session_dialog_type,
                                            shell->priv->inhibitors);
         return FALSE;
@@ -413,7 +413,7 @@ queue_end_session_dialog_update (GsmShell *shell)
 }
 
 gboolean
-gsm_shell_open_end_session_dialog (GsmShell *shell,
+scsm_shell_open_end_session_dialog (GsmShell *shell,
                                    GsmShellEndSessionDialogType type,
                                    GsmStore *inhibitors)
 {
@@ -492,7 +492,7 @@ gsm_shell_open_end_session_dialog (GsmShell *shell,
 }
 
 void
-gsm_shell_close_end_session_dialog (GsmShell *shell)
+scsm_shell_close_end_session_dialog (GsmShell *shell)
 {
         if (!shell->priv->end_session_dialog_proxy)
                 return;

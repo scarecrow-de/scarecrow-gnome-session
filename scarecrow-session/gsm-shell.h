@@ -25,17 +25,17 @@
 #include <glib.h>
 #include <glib-object.h>
 
-#include "gsm-store.h"
+#include "scsm-store.h"
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_SHELL             (gsm_shell_get_type ())
+#define GSM_TYPE_SHELL             (scsm_shell_get_type ())
 #define GSM_SHELL(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_SHELL, GsmShell))
 #define GSM_SHELL_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_SHELL, GsmShellClass))
 #define GSM_IS_SHELL(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_SHELL))
 #define GSM_IS_SHELL_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), GSM_TYPE_SHELL))
 #define GSM_SHELL_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS((obj), GSM_TYPE_SHELL, GsmShellClass))
-#define GSM_SHELL_ERROR            (gsm_shell_error_quark ())
+#define GSM_SHELL_ERROR            (scsm_shell_error_quark ())
 
 typedef struct _GsmShell        GsmShell;
 typedef struct _GsmShellClass   GsmShellClass;
@@ -70,17 +70,17 @@ struct _GsmShellClass
 
 };
 
-GType            gsm_shell_get_type           (void);
+GType            scsm_shell_get_type           (void);
 
-GsmShell        *gsm_shell_new                (void);
+GsmShell        *scsm_shell_new                (void);
 
-GsmShell        *gsm_get_shell                (void);
-gboolean         gsm_shell_is_running         (GsmShell *shell);
+GsmShell        *scsm_get_shell                (void);
+gboolean         scsm_shell_is_running         (GsmShell *shell);
 
-gboolean         gsm_shell_open_end_session_dialog (GsmShell *shell,
+gboolean         scsm_shell_open_end_session_dialog (GsmShell *shell,
                                                     GsmShellEndSessionDialogType type,
                                                     GsmStore *inhibitors);
-void             gsm_shell_close_end_session_dialog (GsmShell *shell);
+void             scsm_shell_close_end_session_dialog (GsmShell *shell);
 
 G_END_DECLS
 

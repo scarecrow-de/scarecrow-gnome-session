@@ -20,11 +20,11 @@
 #ifndef __GSM_SESSION_FILL_H
 #define __GSM_SESSION_FILL_H
 
-#include "gsm-manager.h"
+#include "scsm-manager.h"
 
 G_BEGIN_DECLS
 
-gboolean gsm_session_fill (GsmManager  *manager,
+gboolean scsm_session_fill (GsmManager  *manager,
                            const char  *session);
 
 G_END_DECLS

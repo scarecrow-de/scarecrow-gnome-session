@@ -76,11 +76,11 @@ msgstr "Пре_именуване на сесия"
 msgid "_Continue"
 msgstr "_Продължаване"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:313
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "О, не! Нещо се обърка."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -88,7 +88,7 @@ msgstr ""
 "Възникна проблем и системата не може да се справи. Свържете се със системен "
 "администратор"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -96,7 +96,7 @@ msgstr ""
 "Възникна проблем и системата не може да се справи. За всеки случай всички "
 "разширения са изключени."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:324
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -104,27 +104,27 @@ msgstr ""
 "Възникна проблем и системата не може да се справи.\n"
 "Излезте от системата и опитайте отново."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:339
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Изход"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:281
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:281
 msgid "Enable debugging code"
 msgstr "Включване на изчистването на грешки"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:362
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Разрешаване на изхода"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:363
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Показване на предупреждение за разширение"
 
-#: ../scarecrow-session/gsm-manager.c:1266 ../scarecrow-session/gsm-manager.c:1919
+#: ../scarecrow-session/scsm-manager.c:1266 ../scarecrow-session/scsm-manager.c:1919
 msgid "Not responding"
 msgstr "Не отговаря"
 
-#: ../scarecrow-session/gsm-util.c:382
+#: ../scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "_Изход"
 
@@ -132,15 +132,15 @@ msgstr "_Изход"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Запомнена програма"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "Тази програма блокира излизането."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -148,7 +148,7 @@ msgstr ""
 "Отхвърляне на свързванията с нови клиенти, защото тази сесия в момента се "
 "затваря\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Неуспешно създаване на гнездо на ICE за слушане: %s"

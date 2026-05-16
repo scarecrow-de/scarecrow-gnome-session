@@ -103,11 +103,11 @@ msgstr "_Beddel isem n tɣimit"
 msgid "_Continue"
 msgstr "_Kemmel"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ayaa ! Yella wacu ur neddi ara."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -115,7 +115,7 @@ msgstr ""
 "Yeḍra-d wugur yerna anagraw ulamek ara d-yuɣal. Ttxil-k nermes anedbal n "
 "unagraw"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -123,7 +123,7 @@ msgstr ""
 "Yeḍra-d wugur yerna anagraw ulamek ara d-yuɣal. Akk isiɣzifen ttusexsin i "
 "lmend n leḥdar."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -131,27 +131,27 @@ msgstr ""
 "Yeḍra-d wugur yerna anagraw ulamek ara d-yuɣal.\n"
 "Ttxil-k senser sakin eɛreḍ tikkelt-nniḍen."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Mdel tiɣimit"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:279
 msgid "Enable debugging code"
 msgstr "Sermed tangalt n weseɣti"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Sureg asenser"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Beqqeḍ asmigel n isiɣzifen"
 
-#: scarecrow-session/gsm-manager.c:1266 scarecrow-session/gsm-manager.c:1919
+#: scarecrow-session/scsm-manager.c:1266 scarecrow-session/scsm-manager.c:1919
 msgid "Not responding"
 msgstr "Ulac tiririt"
 
-#: scarecrow-session/gsm-util.c:382
+#: scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "_Senser"
 
@@ -159,21 +159,21 @@ msgstr "_Senser"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Isnasen yettumektan"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Ahil-agi yeseḥbes asenser."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Ahil yugi tuqqna n umsaɣ amaynut acku tiɣimit ala tetteddu ad temdel\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "D awezɣi asnulfu n umaqqan n usefled ICE : %s"

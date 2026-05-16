@@ -132,11 +132,11 @@ msgstr "_Omdøb session"
 msgid "_Continue"
 msgstr "_Fortsæt"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/scsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "Åh nej!  Noget er gået galt."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/scsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -144,7 +144,7 @@ msgstr ""
 "Der er opstået et problem og systemet kan ikke gendannes. Henvend dig "
 "venligst til en systemadministrator"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/scsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -152,7 +152,7 @@ msgstr ""
 "Der er opstået et problem, og systemet kan ikke gendannes. Alle udvidelser "
 "er blevet deaktiveret for en sikkerheds skyld."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/scsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -160,27 +160,27 @@ msgstr ""
 "Et problem er opstået og systemet kan ikke gendannes.\n"
 "Log venligst ud og prøv igen."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:344
+#: scarecrow-session/scsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "_Log ud"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
+#: scarecrow-session/scsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "Aktivér fejlfindingskode"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/scsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "Tillad log ud"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/scsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "Vis udvidelsesfejl"
 
-#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
+#: scarecrow-session/scsm-manager.c:1289 scarecrow-session/scsm-manager.c:1999
 msgid "Not responding"
 msgstr "Svarer ikke"
 
-#: scarecrow-session/gsm-util.c:415
+#: scarecrow-session/scsm-util.c:415
 msgid "_Log out"
 msgstr "_Log ud"
 
@@ -188,22 +188,22 @@ msgstr "_Log ud"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Husket program"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Dette program blokerer log ud."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "Nægter ny klientforbindelse fordi sessionen er ved at blive lukket ned\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Kunne ikke oprette ICE-lyttesoklen: %s"

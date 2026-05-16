@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
- * gsm-util.c
+ * scsm-util.c
  * Copyright (C) 2008 Lucas Rocha.
  *
  * This program is free software; you can redistribute it and/or
@@ -30,7 +30,7 @@
 #include <glib/gstdio.h>
 #include <gio/gio.h>
 
-#include "gsm-util.h"
+#include "scsm-util.h"
 
 static gchar *_saved_session_dir = NULL;
 static gchar **child_environment;
@@ -69,7 +69,7 @@ static const char * const variable_unsetlist[] = {
 };
 
 char *
-gsm_util_find_desktop_file_for_app_name (const char *name,
+scsm_util_find_desktop_file_for_app_name (const char *name,
                                          gboolean    look_in_saved_session,
                                          gboolean    autostart_first)
 {
@@ -81,7 +81,7 @@ gsm_util_find_desktop_file_for_app_name (const char *name,
 
         app_path = NULL;
 
-        app_dirs = gsm_util_get_desktop_dirs (look_in_saved_session, autostart_first);
+        app_dirs = scsm_util_get_desktop_dirs (look_in_saved_session, autostart_first);
 
         key_file = g_key_file_new ();
 
@@ -140,7 +140,7 @@ ensure_dir_exists (const char *dir)
 }
 
 gchar *
-gsm_util_get_empty_tmp_session_dir (void)
+scsm_util_get_empty_tmp_session_dir (void)
 {
         char *tmp;
         gboolean exists;
@@ -176,7 +176,7 @@ gsm_util_get_empty_tmp_session_dir (void)
 }
 
 const gchar *
-gsm_util_get_saved_session_dir (void)
+scsm_util_get_saved_session_dir (void)
 {
         if (_saved_session_dir == NULL) {
                 gboolean exists;
@@ -209,13 +209,13 @@ gsm_util_get_saved_session_dir (void)
 static char ** autostart_dirs;
 
 void
-gsm_util_set_autostart_dirs (char ** dirs)
+scsm_util_set_autostart_dirs (char ** dirs)
 {
         autostart_dirs = g_strdupv (dirs);
 }
 
 static char **
-gsm_util_get_standard_autostart_dirs (void)
+scsm_util_get_standard_autostart_dirs (void)
 {
         GPtrArray          *dirs;
         const char * const *system_config_dirs;
@@ -248,17 +248,17 @@ gsm_util_get_standard_autostart_dirs (void)
 }
 
 char **
-gsm_util_get_autostart_dirs ()
+scsm_util_get_autostart_dirs ()
 {
         if (autostart_dirs) {
                 return g_strdupv ((char **)autostart_dirs);
         }
 
-        return gsm_util_get_standard_autostart_dirs ();
+        return scsm_util_get_standard_autostart_dirs ();
 }
 
 char **
-gsm_util_get_app_dirs ()
+scsm_util_get_app_dirs ()
 {
         GPtrArray          *dirs;
         const char * const *system_data_dirs;
@@ -285,7 +285,7 @@ gsm_util_get_app_dirs ()
 }
 
 char **
-gsm_util_get_desktop_dirs (gboolean include_saved_session,
+scsm_util_get_desktop_dirs (gboolean include_saved_session,
                            gboolean autostart_first)
 {
         char **apps;
@@ -295,13 +295,13 @@ gsm_util_get_desktop_dirs (gboolean include_saved_session,
         int    size;
         int    i;
 
-        apps = gsm_util_get_app_dirs ();
-        autostart = gsm_util_get_autostart_dirs ();
+        apps = scsm_util_get_app_dirs ();
+        autostart = scsm_util_get_autostart_dirs ();
 
         /* Still, check the standard autostart dirs for things like fulfilling session reqs,
          * if using a non-standard autostart dir for autostarting */
         if (autostart_dirs != NULL)
-                standard_autostart = gsm_util_get_standard_autostart_dirs ();
+                standard_autostart = scsm_util_get_standard_autostart_dirs ();
         else
                 standard_autostart = NULL;
 
@@ -319,7 +319,7 @@ gsm_util_get_desktop_dirs (gboolean include_saved_session,
 
         if (autostart_first) {
                 if (include_saved_session)
-                        result[size++] = g_strdup (gsm_util_get_saved_session_dir ());
+                        result[size++] = g_strdup (scsm_util_get_saved_session_dir ());
 
                 for (i = 0; autostart[i] != NULL; i++, size++) {
                         result[size] = autostart[i];
@@ -346,7 +346,7 @@ gsm_util_get_desktop_dirs (gboolean include_saved_session,
                 }
 
                 if (include_saved_session)
-                        result[size++] = g_strdup (gsm_util_get_saved_session_dir ());
+                        result[size++] = g_strdup (scsm_util_get_saved_session_dir ());
         }
 
         g_free (apps);
@@ -359,7 +359,7 @@ gsm_util_get_desktop_dirs (gboolean include_saved_session,
 }
 
 gboolean
-gsm_util_text_is_blank (const char *str)
+scsm_util_text_is_blank (const char *str)
 {
         if (str == NULL) {
                 return TRUE;
@@ -377,12 +377,12 @@ gsm_util_text_is_blank (const char *str)
 }
 
 /**
- * gsm_util_init_error:
+ * scsm_util_init_error:
  * @fatal: whether or not the error is fatal to the login session
  * @format: printf-style error message format
  * @...: error message args
  *
- * Displays the error message to the user. If @fatal is %TRUE, gsm
+ * Displays the error message to the user. If @fatal is %TRUE, scsm
  * will exit after displaying the message.
  *
  * This should be called for major errors that occur before the
@@ -390,7 +390,7 @@ gsm_util_text_is_blank (const char *str)
  * itself, since no window manager will be running yet.)
  **/
 void
-gsm_util_init_error (gboolean    fatal,
+scsm_util_init_error (gboolean    fatal,
                      const char *format, ...)
 {
         char           *msg;
@@ -425,14 +425,14 @@ gsm_util_init_error (gboolean    fatal,
 }
 
 /**
- * gsm_util_generate_startup_id:
+ * scsm_util_generate_startup_id:
  *
  * Generates a new SM client ID.
  *
  * Return value: an SM client ID.
  **/
 char *
-gsm_util_generate_startup_id (void)
+scsm_util_generate_startup_id (void)
 {
         static int     sequence = -1;
         static guint   rand1 = 0;
@@ -482,7 +482,7 @@ gsm_util_generate_startup_id (void)
 }
 
 static gboolean
-gsm_util_update_activation_environment (const char  *variable,
+scsm_util_update_activation_environment (const char  *variable,
                                         const char  *value,
                                         GError     **error)
 {
@@ -526,7 +526,7 @@ gsm_util_update_activation_environment (const char  *variable,
 }
 
 gboolean
-gsm_util_export_activation_environment (GError     **error)
+scsm_util_export_activation_environment (GError     **error)
 {
 
         GDBusConnection *connection;
@@ -615,7 +615,7 @@ gsm_util_export_activation_environment (GError     **error)
 
 #ifdef HAVE_SYSTEMD
 gboolean
-gsm_util_export_user_environment (GError     **error)
+scsm_util_export_user_environment (GError     **error)
 {
 
         GDBusConnection *connection;
@@ -691,7 +691,7 @@ gsm_util_export_user_environment (GError     **error)
 }
 
 static gboolean
-gsm_util_update_user_environment (const char  *variable,
+scsm_util_update_user_environment (const char  *variable,
                                   const char  *value,
                                   GError     **error)
 {
@@ -738,7 +738,7 @@ gsm_util_update_user_environment (const char  *variable,
 }
 
 gboolean
-gsm_util_start_systemd_unit (const char  *unit,
+scsm_util_start_systemd_unit (const char  *unit,
                              const char  *mode,
                              GError     **error)
 {
@@ -771,7 +771,7 @@ gsm_util_start_systemd_unit (const char  *unit,
 }
 
 gboolean
-gsm_util_systemd_reset_failed (GError **error)
+scsm_util_systemd_reset_failed (GError **error)
 {
         g_autoptr(GDBusConnection) connection = NULL;
         g_autoptr(GVariant)        reply = NULL;
@@ -802,7 +802,7 @@ gsm_util_systemd_reset_failed (GError **error)
 #endif
 
 void
-gsm_util_setenv (const char *variable,
+scsm_util_setenv (const char *variable,
                  const char *value)
 {
         GError *error = NULL;
@@ -818,7 +818,7 @@ gsm_util_setenv (const char *variable,
         /* If this fails it isn't fatal, it means some things like session
          * management and keyring won't work in activated clients.
          */
-        if (!gsm_util_update_activation_environment (variable, value, &error)) {
+        if (!scsm_util_update_activation_environment (variable, value, &error)) {
                 g_warning ("Could not make bus activated clients aware of %s=%s environment variable: %s", variable, value, error->message);
                 g_clear_error (&error);
         }
@@ -826,7 +826,7 @@ gsm_util_setenv (const char *variable,
 #ifdef HAVE_SYSTEMD
         /* If this fails, the system user session won't get the updated environment
          */
-        if (!gsm_util_update_user_environment (variable, value, &error)) {
+        if (!scsm_util_update_user_environment (variable, value, &error)) {
                 g_debug ("Could not make systemd aware of %s=%s environment variable: %s", variable, value, error->message);
                 g_clear_error (&error);
         }
@@ -834,14 +834,14 @@ gsm_util_setenv (const char *variable,
 }
 
 const char * const *
-gsm_util_listenv (void)
+scsm_util_listenv (void)
 {
         return (const char * const *) child_environment;
 
 }
 
 const char * const *
-gsm_util_get_variable_blacklist (void)
+scsm_util_get_variable_blacklist (void)
 {
         return variable_blacklist;
 }

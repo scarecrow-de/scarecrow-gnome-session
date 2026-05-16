@@ -22,11 +22,11 @@
 #include <glib-object.h>
 #include <sys/types.h>
 
-#include "gsm-presence-flag.h"
+#include "scsm-presence-flag.h"
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_PRESENCE            (gsm_presence_get_type ())
+#define GSM_TYPE_PRESENCE            (scsm_presence_get_type ())
 #define GSM_PRESENCE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_PRESENCE, GsmPresence))
 #define GSM_PRESENCE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_PRESENCE, GsmPresenceClass))
 #define GSM_IS_PRESENCE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_PRESENCE))
@@ -58,16 +58,16 @@ typedef enum
         GSM_PRESENCE_NUM_ERRORS
 } GsmPresenceError;
 
-#define GSM_PRESENCE_ERROR gsm_presence_error_quark ()
-GQuark         gsm_presence_error_quark          (void);
+#define GSM_PRESENCE_ERROR scsm_presence_error_quark ()
+GQuark         scsm_presence_error_quark          (void);
 
-GType          gsm_presence_get_type             (void) G_GNUC_CONST;
+GType          scsm_presence_get_type             (void) G_GNUC_CONST;
 
-GsmPresence *  gsm_presence_new                  (void);
+GsmPresence *  scsm_presence_new                  (void);
 
-void           gsm_presence_set_idle_enabled     (GsmPresence  *presence,
+void           scsm_presence_set_idle_enabled     (GsmPresence  *presence,
                                                   gboolean      enabled);
-void           gsm_presence_set_idle_timeout     (GsmPresence  *presence,
+void           scsm_presence_set_idle_timeout     (GsmPresence  *presence,
                                                   guint         n_seconds);
 
 G_END_DECLS

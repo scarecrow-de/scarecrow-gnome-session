@@ -26,7 +26,7 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_CLIENT            (gsm_client_get_type ())
+#define GSM_TYPE_CLIENT            (scsm_client_get_type ())
 #define GSM_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_CLIENT, GsmClient))
 #define GSM_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_CLIENT, GsmClientClass))
 #define GSM_IS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_CLIENT))
@@ -103,47 +103,47 @@ typedef enum
         GSM_CLIENT_NUM_ERRORS
 } GsmClientError;
 
-#define GSM_CLIENT_ERROR gsm_client_error_quark ()
-GQuark                gsm_client_error_quark                (void);
+#define GSM_CLIENT_ERROR scsm_client_error_quark ()
+GQuark                scsm_client_error_quark                (void);
 
-GType                 gsm_client_get_type                   (void) G_GNUC_CONST;
+GType                 scsm_client_get_type                   (void) G_GNUC_CONST;
 
-const char           *gsm_client_peek_id                    (GsmClient  *client);
-
-
-const char *          gsm_client_peek_startup_id            (GsmClient  *client);
-const char *          gsm_client_peek_app_id                (GsmClient  *client);
-guint                 gsm_client_peek_restart_style_hint    (GsmClient  *client);
-guint                 gsm_client_peek_status                (GsmClient  *client);
+const char           *scsm_client_peek_id                    (GsmClient  *client);
 
 
-char                 *gsm_client_get_app_name               (GsmClient  *client);
-void                  gsm_client_set_app_id                 (GsmClient  *client,
+const char *          scsm_client_peek_startup_id            (GsmClient  *client);
+const char *          scsm_client_peek_app_id                (GsmClient  *client);
+guint                 scsm_client_peek_restart_style_hint    (GsmClient  *client);
+guint                 scsm_client_peek_status                (GsmClient  *client);
+
+
+char                 *scsm_client_get_app_name               (GsmClient  *client);
+void                  scsm_client_set_app_id                 (GsmClient  *client,
                                                              const char *app_id);
-void                  gsm_client_set_status                 (GsmClient  *client,
+void                  scsm_client_set_status                 (GsmClient  *client,
                                                              guint       status);
 
-gboolean              gsm_client_end_session                (GsmClient  *client,
+gboolean              scsm_client_end_session                (GsmClient  *client,
                                                              guint       flags,
                                                              GError    **error);
-gboolean              gsm_client_query_end_session          (GsmClient  *client,
+gboolean              scsm_client_query_end_session          (GsmClient  *client,
                                                              guint       flags,
                                                              GError    **error);
-gboolean              gsm_client_cancel_end_session         (GsmClient  *client,
+gboolean              scsm_client_cancel_end_session         (GsmClient  *client,
                                                              GError    **error);
 
-void                  gsm_client_disconnected               (GsmClient  *client);
+void                  scsm_client_disconnected               (GsmClient  *client);
 
-GKeyFile             *gsm_client_save                       (GsmClient  *client,
+GKeyFile             *scsm_client_save                       (GsmClient  *client,
                                                              GsmApp     *app,
                                                              GError    **error);
 
-gboolean              gsm_client_stop                       (GsmClient  *client,
+gboolean              scsm_client_stop                       (GsmClient  *client,
                                                              GError    **error);
 
 /* private */
 
-void                  gsm_client_end_session_response       (GsmClient  *client,
+void                  scsm_client_end_session_response       (GsmClient  *client,
                                                              gboolean    is_ok,
                                                              gboolean    do_last,
                                                              gboolean    cancel,

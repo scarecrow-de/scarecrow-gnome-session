@@ -111,11 +111,11 @@ msgstr "_Фармон:"
 msgid "_Name:"
 msgstr "_Ном:"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:313
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Ваҳ! Чизе вайрон шудааст."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -123,7 +123,7 @@ msgstr ""
 "Хатогӣ ба вуҷуд омад ва система барқарор карда натавонист. Лутфан, бо "
 "маъмури система дар тамос шавед"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -131,7 +131,7 @@ msgstr ""
 "Хатогӣ ба вуҷуд омад ва система барқарор карда натавонист. Ба сабабҳои "
 "бехатарӣ ҳамаи пасвандҳо ғайрифаъол карда шудаанд."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:324
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -139,27 +139,27 @@ msgstr ""
 "Хатогӣ ба вуҷуд омад ва система барқарор карда натавонист.\n"
 "Лутфан, бароед ва аз нав ворид шавед."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:339
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Баромадан"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:243
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:243
 msgid "Enable debugging code"
 msgstr "Фаъол кардани ислоҳи хатоҳои барномарезӣ"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:362
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Иҷозат додани баромад"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:363
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Намоиш додани огоҳи пасванд"
 
-#: ../scarecrow-session/gsm-manager.c:1251 ../scarecrow-session/gsm-manager.c:1896
+#: ../scarecrow-session/scsm-manager.c:1251 ../scarecrow-session/scsm-manager.c:1896
 msgid "Not responding"
 msgstr "Ҷавоб намедиҳад"
 
-#: ../scarecrow-session/gsm-util.c:381
+#: ../scarecrow-session/scsm-util.c:381
 msgid "_Log out"
 msgstr "_Баромадан"
 
@@ -167,15 +167,15 @@ msgstr "_Баромадан"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Барномаҳои ба хотир гирифташуда"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "Ин барнома баромади шуморо манъ мекунад."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -183,7 +183,7 @@ msgstr ""
 "Пайвасти муштарии нав рад шуда истодааст, зеро ки ҷаласа дар ҳоли анҷоми кор "
 "мебошад\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Эҷоди бастагоҳи мунтазири ICE имконнопазир аст: %s"

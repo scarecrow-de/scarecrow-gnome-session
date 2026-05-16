@@ -103,11 +103,11 @@ msgstr "_Naredba:"
 msgid "_Name:"
 msgstr "_Naziv:"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:313
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "O, ne! Nešto je pošlo naopako."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -115,7 +115,7 @@ msgstr ""
 "Problem se desio i sistem se ne može oporaviti. Molimo Vas da kontaktirate "
 "administratora sistema"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -123,7 +123,7 @@ msgstr ""
 "Došlo je do problema i sistem ne može da se oporavi. Sva proširenja su "
 "isključena zarad predostrožnosti."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:324
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -131,27 +131,27 @@ msgstr ""
 "Problem je nastao i sistem se ne može povratiti.\n"
 "Molim, odjavite se i pokušajte ponovo."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:339
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Odjava"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:243
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:361 ../scarecrow-session/main.c:243
 msgid "Enable debugging code"
 msgstr "Uključi kod za traženje grešaka"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:362
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Dozvoli odjavljivanje"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:363
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Prikaži upozorenje o proširenju"
 
-#: ../scarecrow-session/gsm-manager.c:1251 ../scarecrow-session/gsm-manager.c:1896
+#: ../scarecrow-session/scsm-manager.c:1251 ../scarecrow-session/scsm-manager.c:1896
 msgid "Not responding"
 msgstr "Ne daje odziv"
 
-#: ../scarecrow-session/gsm-util.c:381
+#: ../scarecrow-session/scsm-util.c:381
 msgid "_Log out"
 msgstr "_Odjava"
 
@@ -159,21 +159,21 @@ msgstr "_Odjava"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still bje that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Zapamćeni program"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "Program ne dozvoljava da se odjavite."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Odbijam vezu sa novim klijentom jer je u toku gašenje sesije.\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Ne mogu da napravim ICE soket: %s"

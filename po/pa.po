@@ -122,18 +122,18 @@ msgstr "ਸ਼ੈਸ਼ਨ ਨਾਂ ਬਦਲੋ(_m)"
 msgid "_Continue"
 msgstr "ਜਾਰੀ ਰੱਖੋ(_C)"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "ਓਹ ਹੋ! ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ।"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
 msgstr ""
 "ਕੋਈ ਸਮੱਸਿਆ ਆਈ ਹੈ ਅਤੇ ਸਿਸਟਮ ਬਹਾਲ ਨਹੀਂ ਹੋ ਸਕਿਆ। ਆਪਣੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -142,7 +142,7 @@ msgstr ""
 " ਅਸਮਰੱਥ ਕੀਤਾ ਜਾ "
 "ਚੁੱਕਾ ਹੈ।"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -151,28 +151,28 @@ msgstr ""
 "ਲਾਗ ਆਉਟ ਕਰਕੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
 # scarecrow-session/logout.c:274
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "ਲਾਗ-ਆਉਟ(_L)"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
 msgid "Enable debugging code"
 msgstr "ਡੀਬੱਗ ਕੋਡ ਯੋਗ"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "ਲਾਗਆਉਟ ਮਨਜ਼ੂਰ"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "ਇਕਸਟੈਨਸ਼ਨ ਚੇਤਾਵਨੀ ਵੇਖਾਓ"
 
-#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1994
+#: scarecrow-session/scsm-manager.c:1289 scarecrow-session/scsm-manager.c:1994
 msgid "Not responding"
 msgstr "ਕੋਈ ਜਵਾਬ ਨਹੀਂ"
 
 # scarecrow-session/logout.c:274
-#: scarecrow-session/gsm-util.c:389
+#: scarecrow-session/scsm-util.c:389
 msgid "_Log out"
 msgstr "ਲਾਗ-ਆਉਟ(_L)"
 
@@ -180,22 +180,22 @@ msgstr "ਲਾਗ-ਆਉਟ(_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "ਯਾਦ ਰੱਖੇ ਹੋਏ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "ਇਹ ਪਰੋਗਰਾਮ ਲਾਗ-ਆਉਟ ਨੂੰ ਰੋਕ ਰਿਹਾ ਹੈ।"
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "ਨਵਾਂ ਕਲਾਇਟ ਕੁਨੈਕਸ਼ਨ ਤੋਂ ਇਨਕਾਰ ਕੀਤਾ ਗਿਆ ਹੈ, ਕਿਉਂਕਿ ਸ਼ੈਸ਼ਨ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE ਲਿਸਨਿੰਗ ਸਾਕਟ ਬਣਾਈ ਨਹੀਂ ਜਾ ਸਕੀ: %s"
@@ -436,7 +436,7 @@ msgstr "“%s “ ਨਾਂ ਨਾਲ ਸ਼ੈਸ਼ਨ ਪਹਿਲਾਂ ਹੀ ਮ
 #~ msgid "Icon"
 #~ msgstr "ਆਈਕਾਨ"
 
-# scarecrow-session/gsm-client-list.c:111
+# scarecrow-session/scsm-client-list.c:111
 #~ msgid "Program"
 #~ msgstr "ਪਰੋਗਰਾਮ"
 
@@ -464,7 +464,7 @@ msgstr "“%s “ ਨਾਂ ਨਾਲ ਸ਼ੈਸ਼ਨ ਪਹਿਲਾਂ ਹੀ ਮ
 #~ msgid "Unrecognized desktop file Version '%s'"
 #~ msgstr "ਅਣਜਾਣ ਡੈਸਕਟਾਪ ਫਾਇਲ ਵਰਜਨ '%s'"
 
-# scarecrow-session/gsm-client-row.c:34
+# scarecrow-session/scsm-client-row.c:34
 #~ msgid "Starting %s"
 #~ msgstr "%s ਸ਼ੁਰੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 

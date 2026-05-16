@@ -26,7 +26,7 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_SHELL_EXTENSIONS            (gsm_shell_extensions_get_type ())
+#define GSM_TYPE_SHELL_EXTENSIONS            (scsm_shell_extensions_get_type ())
 #define GSM_SHELL_EXTENSIONS(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensions))
 #define GSM_SHELL_EXTENSIONS_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  GSM_TYPE_SHELL_EXTENSIONS, GsmShellExtensionsClass))
 #define GSM_IS_SHELL_EXTENSIONS(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_SHELL_EXTENSIONS))
@@ -50,11 +50,11 @@ struct _GsmShellExtensionsClass
     GObjectClass parent_class;
 };
 
-GType gsm_shell_extensions_get_type                   (void) G_GNUC_CONST;
+GType scsm_shell_extensions_get_type                   (void) G_GNUC_CONST;
 
-gboolean gsm_shell_extensions_disable_all             (GsmShellExtensions *self);
+gboolean scsm_shell_extensions_disable_all             (GsmShellExtensions *self);
 
-guint gsm_shell_extensions_n_extensions               (GsmShellExtensions *self);
+guint scsm_shell_extensions_n_extensions               (GsmShellExtensions *self);
 
 G_END_DECLS
 

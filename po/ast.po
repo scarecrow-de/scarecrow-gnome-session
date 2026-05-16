@@ -21,47 +21,47 @@ msgstr ""
 "X-Launchpad-Export-Date: 2009-02-10 00:28+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../capplet/gsm-app-dialog.c:126
+#: ../capplet/scsm-app-dialog.c:126
 msgid "Select Command"
 msgstr "Comandu Selección"
 
-#: ../capplet/gsm-app-dialog.c:187
+#: ../capplet/scsm-app-dialog.c:187
 msgid "Add Startup Program"
 msgstr "Amestar Programa d'Arranque"
 
-#: ../capplet/gsm-app-dialog.c:191
+#: ../capplet/scsm-app-dialog.c:191
 msgid "Edit Startup Program"
 msgstr "Remanar Programa d'Arranque"
 
-#: ../capplet/gsm-properties-dialog.c:132
+#: ../capplet/scsm-properties-dialog.c:132
 msgid "No description"
 msgstr "Ensin descrición"
 
-#: ../capplet/gsm-properties-dialog.c:952
+#: ../capplet/scsm-properties-dialog.c:952
 msgid "The name of the startup program cannot be empty"
 msgstr "El nome del comandu d'arranque nun pue tar vacíu"
 
-#: ../capplet/gsm-properties-dialog.c:956
+#: ../capplet/scsm-properties-dialog.c:956
 msgid "The startup command cannot be empty"
 msgstr "El comandu d'arranque nun puede tar vacíu"
 
-#: ../capplet/gsm-properties-dialog.c:962
+#: ../capplet/scsm-properties-dialog.c:962
 msgid "The startup command is not valid"
 msgstr "El comandu d'arranque nun ye válidu"
 
-#: ../capplet/gsm-properties-dialog.c:1279
+#: ../capplet/scsm-properties-dialog.c:1279
 msgid "Enabled"
 msgstr "Activáu"
 
-#: ../capplet/gsm-properties-dialog.c:1292
+#: ../capplet/scsm-properties-dialog.c:1292
 msgid "Icon"
 msgstr "Iconu"
 
-#: ../capplet/gsm-properties-dialog.c:1303
+#: ../capplet/scsm-properties-dialog.c:1303
 msgid "Program"
 msgstr "Programa"
 
-#: ../capplet/gsm-properties-dialog.c:1453
+#: ../capplet/scsm-properties-dialog.c:1453
 #: ../data/session-properties.glade.h:6
 msgid "Sessions Preferences"
 msgstr "Preferencies de Sesión"
@@ -229,12 +229,12 @@ msgstr "Tiempu enantes de considerar la sesión como inactiva"
 msgid "Window Manager"
 msgstr "Alministrador de Ventanes"
 
-#: ../data/gsm-inhibit-dialog.glade.h:1
+#: ../data/scsm-inhibit-dialog.glade.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>Tovía tán executándose dalgunos programes:</b>"
 
-#: ../data/gsm-inhibit-dialog.glade.h:2
-#: ../scarecrow-session/gsm-inhibit-dialog.c:633
+#: ../data/scsm-inhibit-dialog.glade.h:2
+#: ../scarecrow-session/scsm-inhibit-dialog.c:633
 msgid ""
 "Waiting for program to finish.  Interrupting program may cause you to lose "
 "work."
@@ -323,35 +323,35 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr "Nun ye un elementu llanciable"
 
-#: ../egg/eggsmclient.c:185
+#: ../egg/egscsmclient.c:185
 msgid "Disable connection to session manager"
 msgstr "Desactivar la conexón al remanador de sesiones"
 
-#: ../egg/eggsmclient.c:188
+#: ../egg/egscsmclient.c:188
 msgid "Specify file containing saved configuration"
 msgstr "Especificar el ficheru que contién la configuración guardada"
 
-#: ../egg/eggsmclient.c:188
+#: ../egg/egscsmclient.c:188
 msgid "FILE"
 msgstr "FICHERU"
 
-#: ../egg/eggsmclient.c:191
+#: ../egg/egscsmclient.c:191
 msgid "Specify session management ID"
 msgstr "Especificar la ID del remanamientu de sesión"
 
-#: ../egg/eggsmclient.c:191
+#: ../egg/egscsmclient.c:191
 msgid "ID"
 msgstr "ID"
 
-#: ../egg/eggsmclient.c:245
+#: ../egg/egscsmclient.c:245
 msgid "Session Management Options"
 msgstr "Opciones del remanamientu de sesiones"
 
-#: ../egg/eggsmclient.c:246
+#: ../egg/egscsmclient.c:246
 msgid "Show Session Management options"
 msgstr "Amosar les opciones del remanamientu de sesiones"
 
-#: ../scarecrow-session/gsm-gconf.c:106
+#: ../scarecrow-session/scsm-gconf.c:106
 #, c-format
 msgid ""
 "There is a problem with the configuration server.\n"
@@ -360,24 +360,24 @@ msgstr ""
 "Hai un problema col servidor de configuración.\n"
 "(%s salió col estáu %d)"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:256
+#: ../scarecrow-session/scsm-inhibit-dialog.c:256
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "Nun s'atopó l'iconu '%s'"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:581
+#: ../scarecrow-session/scsm-inhibit-dialog.c:581
 msgid "Unknown"
 msgstr "Desconocíu"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:632
+#: ../scarecrow-session/scsm-inhibit-dialog.c:632
 msgid "A program is still running:"
 msgstr "Tovía hai un programa executándose:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:636
+#: ../scarecrow-session/scsm-inhibit-dialog.c:636
 msgid "Some programs are still running:"
 msgstr "Tovía hai dalgunos programes executándose:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:637
+#: ../scarecrow-session/scsm-inhibit-dialog.c:637
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
@@ -385,39 +385,39 @@ msgstr ""
 "Esperando a que finen los programes. Interrumpir estos programes pue facer "
 "que pierdas datos."
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:865
+#: ../scarecrow-session/scsm-inhibit-dialog.c:865
 msgid "Switch User Anyway"
 msgstr "Trocar usuariu de toes maneres"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:868
+#: ../scarecrow-session/scsm-inhibit-dialog.c:868
 msgid "Logout Anyway"
 msgstr "Zarrar sesión de toes maneres"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:871
+#: ../scarecrow-session/scsm-inhibit-dialog.c:871
 msgid "Suspend Anyway"
 msgstr "Suspender de toes maneres"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:874
+#: ../scarecrow-session/scsm-inhibit-dialog.c:874
 msgid "Hibernate Anyway"
 msgstr "Hibernar de toes maneres"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:877
+#: ../scarecrow-session/scsm-inhibit-dialog.c:877
 msgid "Shutdown Anyway"
 msgstr "Apagar de toes maneres"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:880
+#: ../scarecrow-session/scsm-inhibit-dialog.c:880
 msgid "Reboot Anyway"
 msgstr "Reaniciar de toes maneres"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:888
+#: ../scarecrow-session/scsm-inhibit-dialog.c:888
 msgid "Lock Screen"
 msgstr "Candar pantalla"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:891
+#: ../scarecrow-session/scsm-inhibit-dialog.c:891
 msgid "Cancel"
 msgstr "Encaboxar"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:283
+#: ../scarecrow-session/scsm-logout-dialog.c:283
 #, c-format
 msgid ""
 "You are currently logged in as \"%s\".\n"
@@ -432,7 +432,7 @@ msgstr[1] ""
 "Anguaño tas rexistráu como «%s».\n"
 "Vas salir automáticamente de la sesión en %d segundos."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:295
+#: ../scarecrow-session/scsm-logout-dialog.c:295
 #, c-format
 msgid ""
 "You are currently logged in as \"%s\".\n"
@@ -447,61 +447,61 @@ msgstr[1] ""
 "Anguaño tas rexistráu como «%s».\n"
 "El sistema va apagase automáticamente en %d segundos."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:377
+#: ../scarecrow-session/scsm-logout-dialog.c:377
 #, fuzzy
 msgid "Log out of this system now?"
 msgstr "Zarrar la sesión"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:383
+#: ../scarecrow-session/scsm-logout-dialog.c:383
 msgid "_Switch User"
 msgstr "_Trocar usuariu"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:392
+#: ../scarecrow-session/scsm-logout-dialog.c:392
 msgid "_Log Out"
 msgstr "_Zarrar Sesión"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:398
+#: ../scarecrow-session/scsm-logout-dialog.c:398
 msgid "Shut down this system now?"
 msgstr ""
 
-#: ../scarecrow-session/gsm-logout-dialog.c:404
+#: ../scarecrow-session/scsm-logout-dialog.c:404
 msgid "S_uspend"
 msgstr "S_uspender"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:410
+#: ../scarecrow-session/scsm-logout-dialog.c:410
 msgid "_Hibernate"
 msgstr "I_vernar"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:416
+#: ../scarecrow-session/scsm-logout-dialog.c:416
 msgid "_Restart"
 msgstr "_Reaniciar"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:426
+#: ../scarecrow-session/scsm-logout-dialog.c:426
 msgid "_Shut Down"
 msgstr "_Apagar"
 
-#: ../scarecrow-session/gsm-manager.c:943 ../scarecrow-session/gsm-manager.c:1571
+#: ../scarecrow-session/scsm-manager.c:943 ../scarecrow-session/scsm-manager.c:1571
 msgid "Not responding"
 msgstr "Nun respuende"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:989
+#: ../scarecrow-session/scsm-xsmp-client.c:989
 msgid "This program is blocking log out."
 msgstr "Esti programa ta bloquiando la salida de la sesión."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:234
+#: ../scarecrow-session/scsm-xsmp-server.c:234
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "Refugando la conexón d'un cliente nuevu porque la sesión ta siendo zarrada\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:489
+#: ../scarecrow-session/scsm-xsmp-server.c:489
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Nun se pudo crear el socket d'escucha ICE: %s"
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:143
+#: ../scarecrow-session/scsm-util.c:143
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr ""

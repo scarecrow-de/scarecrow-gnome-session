@@ -27,7 +27,7 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_CONSOLEKIT             (gsm_consolekit_get_type ())
+#define GSM_TYPE_CONSOLEKIT             (scsm_consolekit_get_type ())
 #define GSM_CONSOLEKIT(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_CONSOLEKIT, GsmConsolekit))
 #define GSM_CONSOLEKIT_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_CONSOLEKIT, GsmConsolekitClass))
 #define GSM_IS_CONSOLEKIT(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_CONSOLEKIT))
@@ -50,9 +50,9 @@ struct _GsmConsolekitClass
         GObjectClass parent_class;
 };
 
-GType            gsm_consolekit_get_type        (void);
+GType            scsm_consolekit_get_type        (void);
 
-GsmConsolekit   *gsm_consolekit_new             (void) G_GNUC_MALLOC;
+GsmConsolekit   *scsm_consolekit_new             (void) G_GNUC_MALLOC;
 
 G_END_DECLS
 

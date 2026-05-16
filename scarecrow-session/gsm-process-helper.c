@@ -21,7 +21,7 @@
 #include <gio/gio.h>
 #include <glib/gi18n.h>
 
-#include "gsm-process-helper.h"
+#include "scsm-process-helper.h"
 
 typedef struct {
         gboolean        done;
@@ -70,7 +70,7 @@ on_child_timeout (gpointer data)
 }
 
 gboolean
-gsm_process_helper (const char   *command_line,
+scsm_process_helper (const char   *command_line,
                     unsigned int  timeout,
                     GError      **error)
 {

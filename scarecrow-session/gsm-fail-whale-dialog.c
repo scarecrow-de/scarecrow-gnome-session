@@ -32,9 +32,9 @@
 #include <gtk/gtkx.h>
 #endif
 
-#include "gsm-fail-whale-dialog.h"
+#include "scsm-fail-whale-dialog.h"
 
-#include "gsm-icon-names.h"
+#include "scsm-icon-names.h"
 
 struct _GsmFailWhaleDialog
 {
@@ -47,7 +47,7 @@ struct _GsmFailWhaleDialog
         GdkRectangle geometry;
 };
 
-G_DEFINE_TYPE (GsmFailWhaleDialog, gsm_fail_whale_dialog, GTK_TYPE_WINDOW);
+G_DEFINE_TYPE (GsmFailWhaleDialog, scsm_fail_whale_dialog, GTK_TYPE_WINDOW);
 
 /* derived from tomboy */
 static void
@@ -119,10 +119,10 @@ on_screen_size_changed (GdkScreen          *screen,
 }
 
 static void
-gsm_fail_whale_dialog_realize (GtkWidget *widget)
+scsm_fail_whale_dialog_realize (GtkWidget *widget)
 {
-        if (GTK_WIDGET_CLASS (gsm_fail_whale_dialog_parent_class)->realize) {
-                GTK_WIDGET_CLASS (gsm_fail_whale_dialog_parent_class)->realize (widget);
+        if (GTK_WIDGET_CLASS (scsm_fail_whale_dialog_parent_class)->realize) {
+                GTK_WIDGET_CLASS (scsm_fail_whale_dialog_parent_class)->realize (widget);
         }
 
         _window_override_user_time (GSM_FAIL_WHALE_DIALOG (widget));
@@ -136,19 +136,19 @@ gsm_fail_whale_dialog_realize (GtkWidget *widget)
 }
 
 static void
-gsm_fail_whale_dialog_unrealize (GtkWidget *widget)
+scsm_fail_whale_dialog_unrealize (GtkWidget *widget)
 {
         g_signal_handlers_disconnect_by_func (gtk_window_get_screen (GTK_WINDOW (widget)),
                                               on_screen_size_changed,
                                               widget);
 
-        if (GTK_WIDGET_CLASS (gsm_fail_whale_dialog_parent_class)->unrealize) {
-                GTK_WIDGET_CLASS (gsm_fail_whale_dialog_parent_class)->unrealize (widget);
+        if (GTK_WIDGET_CLASS (scsm_fail_whale_dialog_parent_class)->unrealize) {
+                GTK_WIDGET_CLASS (scsm_fail_whale_dialog_parent_class)->unrealize (widget);
         }
 }
 
 static void
-gsm_fail_whale_dialog_size_request (GtkWidget      *widget,
+scsm_fail_whale_dialog_size_request (GtkWidget      *widget,
                                     GtkRequisition *requisition)
 {
         GsmFailWhaleDialog *fail_dialog;
@@ -184,68 +184,68 @@ gsm_fail_whale_dialog_size_request (GtkWidget      *widget,
 }
 
 static void
-gsm_fail_whale_dialog_get_preferred_width (GtkWidget *widget,
+scsm_fail_whale_dialog_get_preferred_width (GtkWidget *widget,
                                            gint      *minimal_width,
                                            gint      *natural_width)
 {
         GtkRequisition requisition;
 
-        gsm_fail_whale_dialog_size_request (widget, &requisition);
+        scsm_fail_whale_dialog_size_request (widget, &requisition);
 
         *minimal_width = *natural_width = requisition.width;
 }
 
 static void
-gsm_fail_whale_dialog_get_preferred_width_for_height (GtkWidget *widget,
+scsm_fail_whale_dialog_get_preferred_width_for_height (GtkWidget *widget,
                                                       gint       for_height,
                                                       gint      *minimal_width,
                                                       gint      *natural_width)
 {
         GtkRequisition requisition;
 
-        gsm_fail_whale_dialog_size_request (widget, &requisition);
+        scsm_fail_whale_dialog_size_request (widget, &requisition);
 
         *minimal_width = *natural_width = requisition.width;
 }
 
 static void
-gsm_fail_whale_dialog_get_preferred_height (GtkWidget *widget,
+scsm_fail_whale_dialog_get_preferred_height (GtkWidget *widget,
                                             gint      *minimal_height,
                                             gint      *natural_height)
 {
         GtkRequisition requisition;
 
-        gsm_fail_whale_dialog_size_request (widget, &requisition);
+        scsm_fail_whale_dialog_size_request (widget, &requisition);
 
         *minimal_height = *natural_height = requisition.height;
 }
 
 static void
-gsm_fail_whale_dialog_get_preferred_height_for_width (GtkWidget *widget,
+scsm_fail_whale_dialog_get_preferred_height_for_width (GtkWidget *widget,
                                                       gint       for_width,
                                                       gint      *minimal_height,
                                                       gint      *natural_height)
 {
         GtkRequisition requisition;
 
-        gsm_fail_whale_dialog_size_request (widget, &requisition);
+        scsm_fail_whale_dialog_size_request (widget, &requisition);
 
         *minimal_height = *natural_height = requisition.height;
 }
 
 static void
-gsm_fail_whale_dialog_class_init (GsmFailWhaleDialogClass *klass)
+scsm_fail_whale_dialog_class_init (GsmFailWhaleDialogClass *klass)
 {
         GtkWidgetClass *widget_class;
 
         widget_class = GTK_WIDGET_CLASS (klass);
 
-        widget_class->realize = gsm_fail_whale_dialog_realize;
-        widget_class->unrealize = gsm_fail_whale_dialog_unrealize;
-        widget_class->get_preferred_width = gsm_fail_whale_dialog_get_preferred_width;
-        widget_class->get_preferred_height = gsm_fail_whale_dialog_get_preferred_height;
-        widget_class->get_preferred_width_for_height = gsm_fail_whale_dialog_get_preferred_width_for_height;
-        widget_class->get_preferred_height_for_width = gsm_fail_whale_dialog_get_preferred_height_for_width;
+        widget_class->realize = scsm_fail_whale_dialog_realize;
+        widget_class->unrealize = scsm_fail_whale_dialog_unrealize;
+        widget_class->get_preferred_width = scsm_fail_whale_dialog_get_preferred_width;
+        widget_class->get_preferred_height = scsm_fail_whale_dialog_get_preferred_height;
+        widget_class->get_preferred_width_for_height = scsm_fail_whale_dialog_get_preferred_width_for_height;
+        widget_class->get_preferred_height_for_width = scsm_fail_whale_dialog_get_preferred_height_for_width;
 }
 
 static void
@@ -351,7 +351,7 @@ setup_window (GsmFailWhaleDialog *fail_dialog)
 }
 
 static void
-gsm_fail_whale_dialog_init (GsmFailWhaleDialog *fail_dialog)
+scsm_fail_whale_dialog_init (GsmFailWhaleDialog *fail_dialog)
 {
 }
 

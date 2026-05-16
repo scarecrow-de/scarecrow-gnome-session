@@ -23,11 +23,11 @@
 
 #include <glib-object.h>
 
-#include "gsm-store.h"
+#include "scsm-store.h"
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_XSMP_SERVER         (gsm_xsmp_server_get_type ())
+#define GSM_TYPE_XSMP_SERVER         (scsm_xsmp_server_get_type ())
 #define GSM_XSMP_SERVER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), GSM_TYPE_XSMP_SERVER, GsmXsmpServer))
 #define GSM_XSMP_SERVER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), GSM_TYPE_XSMP_SERVER, GsmXsmpServerClass))
 #define GSM_IS_XSMP_SERVER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), GSM_TYPE_XSMP_SERVER))
@@ -47,12 +47,12 @@ typedef struct
         GObjectClass   parent_class;
 } GsmXsmpServerClass;
 
-GType               gsm_xsmp_server_get_type                       (void);
+GType               scsm_xsmp_server_get_type                       (void);
 
-GsmXsmpServer *     gsm_xsmp_server_new                            (GsmStore      *client_store);
-void                gsm_xsmp_server_start                          (GsmXsmpServer *server);
-void                gsm_xsmp_server_stop_accepting_new_clients     (GsmXsmpServer *server);
-void                gsm_xsmp_server_start_accepting_new_clients    (GsmXsmpServer *server);
+GsmXsmpServer *     scsm_xsmp_server_new                            (GsmStore      *client_store);
+void                scsm_xsmp_server_start                          (GsmXsmpServer *server);
+void                scsm_xsmp_server_stop_accepting_new_clients     (GsmXsmpServer *server);
+void                scsm_xsmp_server_start_accepting_new_clients    (GsmXsmpServer *server);
 
 G_END_DECLS
 

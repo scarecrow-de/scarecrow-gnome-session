@@ -19,11 +19,11 @@
 #ifndef __GSM_DBUS_CLIENT_H__
 #define __GSM_DBUS_CLIENT_H__
 
-#include "gsm-client.h"
+#include "scsm-client.h"
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_DBUS_CLIENT            (gsm_dbus_client_get_type ())
+#define GSM_TYPE_DBUS_CLIENT            (scsm_dbus_client_get_type ())
 #define GSM_DBUS_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_DBUS_CLIENT, GsmDBusClient))
 #define GSM_DBUS_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_DBUS_CLIENT, GsmDBusClientClass))
 #define GSM_IS_DBUS_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_DBUS_CLIENT))
@@ -46,11 +46,11 @@ struct _GsmDBusClientClass
         GsmClientClass parent_class;
 };
 
-GType          gsm_dbus_client_get_type           (void) G_GNUC_CONST;
+GType          scsm_dbus_client_get_type           (void) G_GNUC_CONST;
 
-GsmClient *    gsm_dbus_client_new                (const char     *startup_id,
+GsmClient *    scsm_dbus_client_new                (const char     *startup_id,
                                                    const char     *bus_name);
-const char *   gsm_dbus_client_get_bus_name       (GsmDBusClient  *client);
+const char *   scsm_dbus_client_get_bus_name       (GsmDBusClient  *client);
 
 G_END_DECLS
 

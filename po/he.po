@@ -117,11 +117,11 @@ msgstr "_שינוי שם ההפעלה"
 msgid "_Continue"
 msgstr "להמ_שיך"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "אבוי!  משהו השתבש."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 #| msgid ""
 #| "A problem has occurred and the system can't recover. Please contact a "
 #| "system administrator"
@@ -131,7 +131,7 @@ msgid ""
 msgstr ""
 "אירעה שגיאה והמערכת אינה יכולה להשתקם ממנה. נא ליצור קשר עם מנהל המערכת."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 #| msgid ""
 #| "A problem has occurred and the system can't recover. All extensions have "
 #| "been disabled as a precaution."
@@ -141,7 +141,7 @@ msgid ""
 msgstr ""
 "אירעה שגיאה והמערכת אינה יכולה להשתקם ממנה. ליתר ביטחון הושבתו כל ההרחבות."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 #| msgid ""
 #| "A problem has occurred and the system can't recover.\n"
 #| "Please log out and try again."
@@ -152,27 +152,27 @@ msgstr ""
 "אירעה שגיאה והמערכת אינה יכולה להשתקם ממנה.\n"
 "נא לצאת ולנסות שוב."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_ניתוק"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
 msgid "Enable debugging code"
 msgstr "Enable debugging code"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "לאפשר יציאה"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "הצגת אזהרת הרחבות"
 
-#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1994
+#: scarecrow-session/scsm-manager.c:1289 scarecrow-session/scsm-manager.c:1994
 msgid "Not responding"
 msgstr "אין תגובה"
 
-#: scarecrow-session/gsm-util.c:389
+#: scarecrow-session/scsm-util.c:389
 msgid "_Log out"
 msgstr "י_ציאה"
 
@@ -180,21 +180,21 @@ msgstr "י_ציאה"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "יישום השמור בזיכרון"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "תכנית זו מונעת את היציאה."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "מסרב לחיבור לקוח חדש מכיון שההפעלה נמצאת במהלך כיבוי\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "לא ניתן ליצור שקע ICE: ‏%s"

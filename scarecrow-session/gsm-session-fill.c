@@ -19,14 +19,14 @@
 
 #include <config.h>
 
-#include "gsm-session-fill.h"
+#include "scsm-session-fill.h"
 
-#include "gsm-system.h"
-#include "gsm-manager.h"
-#include "gsm-process-helper.h"
-#include "gsm-util.h"
+#include "scsm-system.h"
+#include "scsm-manager.h"
+#include "scsm-process-helper.h"
+#include "scsm-util.h"
 
-#define GSM_KEYFILE_SESSION_GROUP "GNOME Session"
+#define GSM_KEYFILE_SESSION_GROUP "Scarecrow Session"
 #define GSM_KEYFILE_RUNNABLE_KEY "IsRunnableHelper"
 #define GSM_KEYFILE_FALLBACK_KEY "FallbackSession"
 #define GSM_KEYFILE_REQUIRED_COMPONENTS_KEY "RequiredComponents"
@@ -61,7 +61,7 @@ handle_required_components (GKeyFile               *keyfile,
         for (i = 0; required_components[i] != NULL; i++) {
                 char *app_path;
 
-                app_path = gsm_util_find_desktop_file_for_app_name (required_components[i],
+                app_path = scsm_util_find_desktop_file_for_app_name (required_components[i],
                                                                     look_in_saved_session, TRUE);
                 callback (required_components[i], app_path, user_data);
                 g_free (app_path);
@@ -104,14 +104,14 @@ maybe_load_saved_session_apps (GsmManager *manager)
         GsmSystem *system;
         gboolean is_login;
 
-        system = gsm_get_system ();
-        is_login = gsm_system_is_login_session (system);
+        system = scsm_get_system ();
+        is_login = scsm_system_is_login_session (system);
         g_object_unref (system);
 
         if (is_login)
                 return;
 
-        gsm_manager_add_autostart_apps_from_dir (manager, gsm_util_get_saved_session_dir ());
+        scsm_manager_add_autostart_apps_from_dir (manager, scsm_util_get_saved_session_dir ());
 }
 
 static void
@@ -124,7 +124,7 @@ append_required_components_helper (const char *component,
         if (app_path == NULL)
                 g_warning ("Unable to find required component '%s'", component);
         else
-                gsm_manager_add_required_app (manager, app_path, NULL);
+                scsm_manager_add_required_app (manager, app_path, NULL);
 }
 
 
@@ -136,21 +136,21 @@ load_standard_apps (GsmManager *manager,
          * XSMP clients cannot be reliably mapped to .desktop files. */
         g_debug ("fill: *** Adding required components");
         handle_required_components (keyfile,
-                                    !gsm_manager_get_failsafe (manager) && !gsm_manager_get_systemd_managed (manager),
+                                    !scsm_manager_get_failsafe (manager) && !scsm_manager_get_systemd_managed (manager),
                                     append_required_components_helper, manager);
         g_debug ("fill: *** Done adding required components");
 
-        if (!gsm_manager_get_failsafe (manager)) {
+        if (!scsm_manager_get_failsafe (manager)) {
                 char **autostart_dirs;
                 int    i;
 
-                autostart_dirs = gsm_util_get_autostart_dirs ();
+                autostart_dirs = scsm_util_get_autostart_dirs ();
 
-                if (!gsm_manager_get_systemd_managed (manager))
+                if (!scsm_manager_get_systemd_managed (manager))
                         maybe_load_saved_session_apps (manager);
 
                 for (i = 0; autostart_dirs[i]; i++) {
-                        gsm_manager_add_autostart_apps_from_dir (manager,
+                        scsm_manager_add_autostart_apps_from_dir (manager,
                                                                  autostart_dirs[i]);
                 }
 
@@ -273,7 +273,7 @@ get_session_keyfile (const char *session,
                                        NULL);
         if (!IS_STRING_EMPTY (value)) {
                 g_debug ("fill: *** Launching helper '%s' to know if session is runnable", value);
-                session_runnable = gsm_process_helper (value, GSM_RUNNABLE_HELPER_TIMEOUT, &error);
+                session_runnable = scsm_process_helper (value, GSM_RUNNABLE_HELPER_TIMEOUT, &error);
                 if (!session_runnable) {
                         g_warning ("Session '%s' runnable check failed: %s", session,
                                    error->message);
@@ -314,7 +314,7 @@ get_session_keyfile (const char *session,
 }
 
 gboolean
-gsm_session_fill (GsmManager  *manager,
+scsm_session_fill (GsmManager  *manager,
                   const char  *session)
 {
         GKeyFile *keyfile;
@@ -326,7 +326,7 @@ gsm_session_fill (GsmManager  *manager,
         if (!keyfile)
                 return FALSE;
 
-        _gsm_manager_set_active_session (manager, actual_session, is_fallback);
+        _scsm_manager_set_active_session (manager, actual_session, is_fallback);
 
         g_free (actual_session);
 

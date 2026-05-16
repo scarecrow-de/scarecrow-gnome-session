@@ -16,47 +16,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: ../capplet/gsm-app-dialog.c:126
+#: ../capplet/scsm-app-dialog.c:126
 msgid "Select Command"
 msgstr "Fermanê Hilbijêre"
 
-#: ../capplet/gsm-app-dialog.c:187
+#: ../capplet/scsm-app-dialog.c:187
 msgid "Add Startup Program"
 msgstr "Bernameya destpêkê zêde bike"
 
-#: ../capplet/gsm-app-dialog.c:191
+#: ../capplet/scsm-app-dialog.c:191
 msgid "Edit Startup Program"
 msgstr "Bernameya destpêkê biguherîne"
 
-#: ../capplet/gsm-properties-dialog.c:132
+#: ../capplet/scsm-properties-dialog.c:132
 msgid "No description"
 msgstr ""
 
-#: ../capplet/gsm-properties-dialog.c:977
+#: ../capplet/scsm-properties-dialog.c:977
 msgid "The name of the startup program cannot be empty"
 msgstr "Navê bernameya destpêke vala nabe"
 
-#: ../capplet/gsm-properties-dialog.c:981
+#: ../capplet/scsm-properties-dialog.c:981
 msgid "The startup command cannot be empty"
 msgstr "Fermana destpêke vala nabe"
 
-#: ../capplet/gsm-properties-dialog.c:987
+#: ../capplet/scsm-properties-dialog.c:987
 msgid "The startup command is not valid"
 msgstr "Fermana destpêke nederbasdar e"
 
-#: ../capplet/gsm-properties-dialog.c:1291
+#: ../capplet/scsm-properties-dialog.c:1291
 msgid "Enabled"
 msgstr "Çalak"
 
-#: ../capplet/gsm-properties-dialog.c:1304
+#: ../capplet/scsm-properties-dialog.c:1304
 msgid "Icon"
 msgstr "Îkon"
 
-#: ../capplet/gsm-properties-dialog.c:1315
+#: ../capplet/scsm-properties-dialog.c:1315
 msgid "Program"
 msgstr "Bername"
 
-#: ../capplet/gsm-properties-dialog.c:1465
+#: ../capplet/scsm-properties-dialog.c:1465
 #: ../data/session-properties.glade.h:6
 msgid "Sessions Preferences"
 msgstr ""
@@ -206,12 +206,12 @@ msgstr ""
 msgid "Window Manager"
 msgstr "Menajerê Paceyan"
 
-#: ../data/gsm-inhibit-dialog.glade.h:1
+#: ../data/scsm-inhibit-dialog.glade.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr ""
 
-#: ../data/gsm-inhibit-dialog.glade.h:2
-#: ../scarecrow-session/gsm-inhibit-dialog.c:632
+#: ../data/scsm-inhibit-dialog.glade.h:2
+#: ../scarecrow-session/scsm-inhibit-dialog.c:632
 msgid ""
 "Waiting for program to finish.  Interrupting program may cause you to lose "
 "work."
@@ -296,117 +296,117 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr ""
 
-#: ../egg/eggsmclient-libgnomeui.c:102
+#: ../egg/egscsmclient-libgnomeui.c:102
 #, fuzzy
 msgid "Session management"
 msgstr "Navê Danişînê"
 
-#: ../egg/eggsmclient-libgnomeui.c:136
+#: ../egg/egscsmclient-libgnomeui.c:136
 msgid "Scarecrow GUI Library + EggSMClient"
 msgstr ""
 
-#: ../egg/eggsmclient.c:185
+#: ../egg/egscsmclient.c:185
 #, fuzzy
 msgid "Disable connection to session manager"
 msgstr "Pêwendî bi rêveberê danişînê re pêk nehat"
 
-#: ../egg/eggsmclient.c:188
+#: ../egg/egscsmclient.c:188
 msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: ../egg/eggsmclient.c:188
+#: ../egg/egscsmclient.c:188
 msgid "FILE"
 msgstr "PEL"
 
-#: ../egg/eggsmclient.c:191
+#: ../egg/egscsmclient.c:191
 #, fuzzy
 msgid "Specify session management ID"
 msgstr "Navê danişîna ku tê barkirin eşkere bike"
 
-#: ../egg/eggsmclient.c:191
+#: ../egg/egscsmclient.c:191
 msgid "ID"
 msgstr ""
 
-#: ../egg/eggsmclient.c:241
+#: ../egg/egscsmclient.c:241
 #, fuzzy
 msgid "Session Management Options"
 msgstr "Vebijêrkên Danişînê"
 
-#: ../egg/eggsmclient.c:242
+#: ../egg/egscsmclient.c:242
 #, fuzzy
 msgid "Show Session Management options"
 msgstr "Vebijêrkên Danişînê"
 
-#: ../scarecrow-session/gsm-gconf.c:106
+#: ../scarecrow-session/scsm-gconf.c:106
 #, c-format
 msgid ""
 "There is a problem with the configuration server.\n"
 "(%s exited with status %d)"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:256
+#: ../scarecrow-session/scsm-inhibit-dialog.c:256
 #, c-format
 msgid "Icon '%s' not found"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:580
+#: ../scarecrow-session/scsm-inhibit-dialog.c:580
 msgid "Unknown"
 msgstr "Nenas"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:631
+#: ../scarecrow-session/scsm-inhibit-dialog.c:631
 msgid "A program is still running:"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:635
+#: ../scarecrow-session/scsm-inhibit-dialog.c:635
 msgid "Some programs are still running:"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:636
+#: ../scarecrow-session/scsm-inhibit-dialog.c:636
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:864
+#: ../scarecrow-session/scsm-inhibit-dialog.c:864
 #, fuzzy
 msgid "Switch User Anyway"
 msgstr "_Bikarhêner biguherîne"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:867
+#: ../scarecrow-session/scsm-inhibit-dialog.c:867
 #, fuzzy
 msgid "Logout Anyway"
 msgstr "Bilî vî Têkeve"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:870
+#: ../scarecrow-session/scsm-inhibit-dialog.c:870
 #, fuzzy
 msgid "Suspend Anyway"
 msgstr "_Xew (suspend)"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:873
+#: ../scarecrow-session/scsm-inhibit-dialog.c:873
 #, fuzzy
 msgid "Hibernate Anyway"
 msgstr "Xewa _kûr (hibernate)"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:876
+#: ../scarecrow-session/scsm-inhibit-dialog.c:876
 #, fuzzy
 msgid "Shutdown Anyway"
 msgstr "Bilî vî Têkeve"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:879
+#: ../scarecrow-session/scsm-inhibit-dialog.c:879
 #, fuzzy
 msgid "Reboot Anyway"
 msgstr "Bilî vî Têkeve"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:887
+#: ../scarecrow-session/scsm-inhibit-dialog.c:887
 #, fuzzy
 msgid "Lock Screen"
 msgstr "Ekranê _qifil bike"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:890
+#: ../scarecrow-session/scsm-inhibit-dialog.c:890
 msgid "Cancel"
 msgstr "Betalkirin"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:283
+#: ../scarecrow-session/scsm-logout-dialog.c:283
 #, c-format
 msgid ""
 "You are currently logged in as \"%s\".\n"
@@ -415,7 +415,7 @@ msgid ""
 "You will be automatically logged out in %d seconds."
 msgstr ""
 
-#: ../scarecrow-session/gsm-logout-dialog.c:295
+#: ../scarecrow-session/scsm-logout-dialog.c:295
 #, c-format
 msgid ""
 "You are currently logged in as \"%s\".\n"
@@ -424,60 +424,60 @@ msgid ""
 "This system will be automatically shut down in %d seconds."
 msgstr ""
 
-#: ../scarecrow-session/gsm-logout-dialog.c:377
+#: ../scarecrow-session/scsm-logout-dialog.c:377
 msgid "Log out of this system now?"
 msgstr ""
 
-#: ../scarecrow-session/gsm-logout-dialog.c:383
+#: ../scarecrow-session/scsm-logout-dialog.c:383
 msgid "_Switch User"
 msgstr "_Bikarhêner biguherîne"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:392
+#: ../scarecrow-session/scsm-logout-dialog.c:392
 msgid "_Log Out"
 msgstr "_Derkeve"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:398
+#: ../scarecrow-session/scsm-logout-dialog.c:398
 msgid "Shut down this system now?"
 msgstr ""
 
-#: ../scarecrow-session/gsm-logout-dialog.c:404
+#: ../scarecrow-session/scsm-logout-dialog.c:404
 #, fuzzy
 msgid "S_uspend"
 msgstr "_Xew (suspend)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:410
+#: ../scarecrow-session/scsm-logout-dialog.c:410
 msgid "_Hibernate"
 msgstr "Xewa _kûr (hibernate)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:416
+#: ../scarecrow-session/scsm-logout-dialog.c:416
 msgid "_Restart"
 msgstr "_Nûdestpêkirin"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:426
+#: ../scarecrow-session/scsm-logout-dialog.c:426
 msgid "_Shut Down"
 msgstr "Bi _tevahî bigire"
 
-#: ../scarecrow-session/gsm-manager.c:924 ../scarecrow-session/gsm-manager.c:1541
+#: ../scarecrow-session/scsm-manager.c:924 ../scarecrow-session/scsm-manager.c:1541
 msgid "Not responding"
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-client.c:988
+#: ../scarecrow-session/scsm-xsmp-client.c:988
 msgid "This program is blocking log out."
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:234
+#: ../scarecrow-session/scsm-xsmp-server.c:234
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:489
+#: ../scarecrow-session/scsm-xsmp-server.c:489
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr ""
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:139
+#: ../scarecrow-session/scsm-util.c:139
 #, c-format
 msgid "Unable to start login session (and unable connect to the X server)"
 msgstr ""

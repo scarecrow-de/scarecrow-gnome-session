@@ -19,7 +19,7 @@
  */
 
 #include "config.h"
-#include "gsm-systemd.h"
+#include "scsm-systemd.h"
 
 #ifdef HAVE_SYSTEMD
 
@@ -38,7 +38,7 @@
 #include <gio/gio.h>
 #include <gio/gunixfdlist.h>
 
-#include "gsm-system.h"
+#include "scsm-system.h"
 
 #define SD_NAME              "org.freedesktop.login1"
 #define SD_PATH              "/org/freedesktop/login1"
@@ -69,11 +69,11 @@ enum {
         PROP_ACTIVE
 };
 
-static void gsm_systemd_system_init (GsmSystemInterface *iface);
+static void scsm_systemd_system_init (GsmSystemInterface *iface);
 
-G_DEFINE_TYPE_WITH_CODE (GsmSystemd, gsm_systemd, G_TYPE_OBJECT,
+G_DEFINE_TYPE_WITH_CODE (GsmSystemd, scsm_systemd, G_TYPE_OBJECT,
                          G_IMPLEMENT_INTERFACE (GSM_TYPE_SYSTEM,
-                                                gsm_systemd_system_init))
+                                                scsm_systemd_system_init))
 
 static void
 drop_system_inhibitor (GsmSystemd *manager)
@@ -96,7 +96,7 @@ drop_delay_inhibitor (GsmSystemd *manager)
 }
 
 static void
-gsm_systemd_finalize (GObject *object)
+scsm_systemd_finalize (GObject *object)
 {
         GsmSystemd *systemd = GSM_SYSTEMD (object);
 
@@ -114,11 +114,11 @@ gsm_systemd_finalize (GObject *object)
         drop_system_inhibitor (systemd);
         drop_delay_inhibitor (systemd);
 
-        G_OBJECT_CLASS (gsm_systemd_parent_class)->finalize (object);
+        G_OBJECT_CLASS (scsm_systemd_parent_class)->finalize (object);
 }
 
 static void
-gsm_systemd_set_property (GObject      *object,
+scsm_systemd_set_property (GObject      *object,
                           guint         prop_id,
                           const GValue *value,
                           GParamSpec   *pspec)
@@ -135,7 +135,7 @@ gsm_systemd_set_property (GObject      *object,
 }
 
 static void
-gsm_systemd_get_property (GObject    *object,
+scsm_systemd_get_property (GObject    *object,
                           guint       prop_id,
                           GValue     *value,
                           GParamSpec *pspec)
@@ -153,15 +153,15 @@ gsm_systemd_get_property (GObject    *object,
 }
 
 static void
-gsm_systemd_class_init (GsmSystemdClass *manager_class)
+scsm_systemd_class_init (GsmSystemdClass *manager_class)
 {
         GObjectClass *object_class;
 
         object_class = G_OBJECT_CLASS (manager_class);
 
-        object_class->get_property = gsm_systemd_get_property;
-        object_class->set_property = gsm_systemd_set_property;
-        object_class->finalize = gsm_systemd_finalize;
+        object_class->get_property = scsm_systemd_get_property;
+        object_class->set_property = scsm_systemd_set_property;
+        object_class->finalize = scsm_systemd_finalize;
 
         g_object_class_override_property (object_class, PROP_ACTIVE, "active");
 
@@ -325,7 +325,7 @@ _systemd_session_is_active (const char *session_id)
 }
 
 static gboolean
-gsm_systemd_find_session (char **session_id)
+scsm_systemd_find_session (char **session_id)
 {
         char *local_session_id = NULL;
         g_auto(GStrv) sessions = NULL;
@@ -369,7 +369,7 @@ gsm_systemd_find_session (char **session_id)
 }
 
 static void
-gsm_systemd_init (GsmSystemd *manager)
+scsm_systemd_init (GsmSystemd *manager)
 {
         GError *error = NULL;
         GDBusConnection *bus;
@@ -404,7 +404,7 @@ gsm_systemd_init (GsmSystemd *manager)
         g_signal_connect (manager->priv->sd_proxy, "g-signal",
                           G_CALLBACK (sd_proxy_signal_cb), manager);
 
-        gsm_systemd_find_session (&manager->priv->session_id);
+        scsm_systemd_find_session (&manager->priv->session_id);
 
         if (manager->priv->session_id == NULL) {
                 g_warning ("Could not get session id for session. Check that logind is "
@@ -508,7 +508,7 @@ restart_done (GObject      *source,
 }
 
 static void
-gsm_systemd_attempt_restart (GsmSystem *system)
+scsm_systemd_attempt_restart (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
 
@@ -545,7 +545,7 @@ stop_done (GObject      *source,
 }
 
 static void
-gsm_systemd_attempt_stop (GsmSystem *system)
+scsm_systemd_attempt_stop (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
 
@@ -560,7 +560,7 @@ gsm_systemd_attempt_stop (GsmSystem *system)
 }
 
 static void
-gsm_systemd_set_session_idle (GsmSystem *system,
+scsm_systemd_set_session_idle (GsmSystem *system,
                               gboolean   is_idle)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
@@ -587,7 +587,7 @@ gsm_systemd_set_session_idle (GsmSystem *system,
 }
 
 static gboolean
-gsm_systemd_can_switch_user (GsmSystem *system)
+scsm_systemd_can_switch_user (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
         gchar *seat;
@@ -601,7 +601,7 @@ gsm_systemd_can_switch_user (GsmSystem *system)
 }
 
 static gboolean
-gsm_systemd_can_restart (GsmSystem *system)
+scsm_systemd_can_restart (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
         gchar *rv;
@@ -633,7 +633,7 @@ gsm_systemd_can_restart (GsmSystem *system)
 }
 
 static gboolean
-gsm_systemd_can_restart_to_firmware_setup (GsmSystem *system)
+scsm_systemd_can_restart_to_firmware_setup (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
         const gchar *rv;
@@ -667,7 +667,7 @@ gsm_systemd_can_restart_to_firmware_setup (GsmSystem *system)
 }
 
 static void
-gsm_systemd_set_restart_to_firmware_setup (GsmSystem *system,
+scsm_systemd_set_restart_to_firmware_setup (GsmSystem *system,
                                            gboolean   enable)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
@@ -692,7 +692,7 @@ gsm_systemd_set_restart_to_firmware_setup (GsmSystem *system,
 }
 
 static gboolean
-gsm_systemd_can_stop (GsmSystem *system)
+scsm_systemd_can_stop (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
         gchar *rv;
@@ -724,7 +724,7 @@ gsm_systemd_can_stop (GsmSystem *system)
 }
 
 static gboolean
-gsm_systemd_is_login_session (GsmSystem *system)
+scsm_systemd_is_login_session (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
         int res;
@@ -749,7 +749,7 @@ gsm_systemd_is_login_session (GsmSystem *system)
 }
 
 static gboolean
-gsm_systemd_can_suspend (GsmSystem *system)
+scsm_systemd_can_suspend (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
         gchar *rv;
@@ -781,7 +781,7 @@ gsm_systemd_can_suspend (GsmSystem *system)
 }
 
 static gboolean
-gsm_systemd_can_hibernate (GsmSystem *system)
+scsm_systemd_can_hibernate (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
         gchar *rv;
@@ -851,7 +851,7 @@ hibernate_done (GObject      *source,
 }
 
 static void
-gsm_systemd_suspend (GsmSystem *system)
+scsm_systemd_suspend (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
 
@@ -866,7 +866,7 @@ gsm_systemd_suspend (GsmSystem *system)
 }
 
 static void
-gsm_systemd_hibernate (GsmSystem *system)
+scsm_systemd_hibernate (GsmSystem *system)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
 
@@ -915,7 +915,7 @@ inhibit_done (GObject      *source,
 }
 
 static void
-gsm_systemd_add_inhibitor (GsmSystem        *system,
+scsm_systemd_add_inhibitor (GsmSystem        *system,
                            const gchar      *id,
                            GsmInhibitorFlag  flag)
 {
@@ -944,7 +944,7 @@ gsm_systemd_add_inhibitor (GsmSystem        *system,
 }
 
 static void
-gsm_systemd_remove_inhibitor (GsmSystem   *system,
+scsm_systemd_remove_inhibitor (GsmSystem   *system,
                               const gchar *id)
 {
         GsmSystemd *manager = GSM_SYSTEMD (system);
@@ -989,7 +989,7 @@ reboot_or_poweroff_done (GObject      *source,
 }
 
 static void
-gsm_systemd_prepare_shutdown (GsmSystem *system,
+scsm_systemd_prepare_shutdown (GsmSystem *system,
                               gboolean   restart)
 {
         GsmSystemd *systemd = GSM_SYSTEMD (system);
@@ -1042,7 +1042,7 @@ gsm_systemd_prepare_shutdown (GsmSystem *system,
 }
 
 static void
-gsm_systemd_complete_shutdown (GsmSystem *system)
+scsm_systemd_complete_shutdown (GsmSystem *system)
 {
         GsmSystemd *systemd = GSM_SYSTEMD (system);
 
@@ -1051,14 +1051,14 @@ gsm_systemd_complete_shutdown (GsmSystem *system)
 }
 
 static gboolean
-gsm_systemd_is_last_session_for_user (GsmSystem *system)
+scsm_systemd_is_last_session_for_user (GsmSystem *system)
 {
         char **sessions = NULL;
         char *session = NULL;
         gboolean is_last_session;
         int ret, i;
 
-        if (!gsm_systemd_find_session (&session)) {
+        if (!scsm_systemd_find_session (&session)) {
                 return FALSE;
         }
 
@@ -1111,30 +1111,30 @@ gsm_systemd_is_last_session_for_user (GsmSystem *system)
 }
 
 static void
-gsm_systemd_system_init (GsmSystemInterface *iface)
+scsm_systemd_system_init (GsmSystemInterface *iface)
 {
-        iface->can_switch_user = gsm_systemd_can_switch_user;
-        iface->can_stop = gsm_systemd_can_stop;
-        iface->can_restart = gsm_systemd_can_restart;
-        iface->can_restart_to_firmware_setup = gsm_systemd_can_restart_to_firmware_setup;
-        iface->set_restart_to_firmware_setup = gsm_systemd_set_restart_to_firmware_setup;
-        iface->can_suspend = gsm_systemd_can_suspend;
-        iface->can_hibernate = gsm_systemd_can_hibernate;
-        iface->attempt_stop = gsm_systemd_attempt_stop;
-        iface->attempt_restart = gsm_systemd_attempt_restart;
-        iface->suspend = gsm_systemd_suspend;
-        iface->hibernate = gsm_systemd_hibernate;
-        iface->set_session_idle = gsm_systemd_set_session_idle;
-        iface->is_login_session = gsm_systemd_is_login_session;
-        iface->add_inhibitor = gsm_systemd_add_inhibitor;
-        iface->remove_inhibitor = gsm_systemd_remove_inhibitor;
-        iface->prepare_shutdown = gsm_systemd_prepare_shutdown;
-        iface->complete_shutdown = gsm_systemd_complete_shutdown;
-        iface->is_last_session_for_user = gsm_systemd_is_last_session_for_user;
+        iface->can_switch_user = scsm_systemd_can_switch_user;
+        iface->can_stop = scsm_systemd_can_stop;
+        iface->can_restart = scsm_systemd_can_restart;
+        iface->can_restart_to_firmware_setup = scsm_systemd_can_restart_to_firmware_setup;
+        iface->set_restart_to_firmware_setup = scsm_systemd_set_restart_to_firmware_setup;
+        iface->can_suspend = scsm_systemd_can_suspend;
+        iface->can_hibernate = scsm_systemd_can_hibernate;
+        iface->attempt_stop = scsm_systemd_attempt_stop;
+        iface->attempt_restart = scsm_systemd_attempt_restart;
+        iface->suspend = scsm_systemd_suspend;
+        iface->hibernate = scsm_systemd_hibernate;
+        iface->set_session_idle = scsm_systemd_set_session_idle;
+        iface->is_login_session = scsm_systemd_is_login_session;
+        iface->add_inhibitor = scsm_systemd_add_inhibitor;
+        iface->remove_inhibitor = scsm_systemd_remove_inhibitor;
+        iface->prepare_shutdown = scsm_systemd_prepare_shutdown;
+        iface->complete_shutdown = scsm_systemd_complete_shutdown;
+        iface->is_last_session_for_user = scsm_systemd_is_last_session_for_user;
 }
 
 GsmSystemd *
-gsm_systemd_new (void)
+scsm_systemd_new (void)
 {
         GsmSystemd *manager;
 
@@ -1180,7 +1180,7 @@ sd_proxy_signal_cb (GDBusProxy  *proxy,
 #else
 
 GsmSystemd *
-gsm_systemd_new (void)
+scsm_systemd_new (void)
 {
         return NULL;
 }

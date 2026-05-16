@@ -1,4 +1,4 @@
-/* gsm-fail-whale.h
+/* scsm-fail-whale.h
  * Copyright (C) 2012 Red Hat, Inc.
  *
  * This program is free software; you can redistribute it and/or
@@ -20,11 +20,11 @@
 
 #include <glib.h>
 
-#include "gsm-shell-extensions.h"
+#include "scsm-shell-extensions.h"
 
 G_BEGIN_DECLS
 
-void        gsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
+void        scsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
                                               gboolean            allow_logout,
                                               GsmShellExtensions *extensions);
 

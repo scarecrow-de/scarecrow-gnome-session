@@ -18,39 +18,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../capplet/gsm-app-dialog.c:120
+#: ../capplet/scsm-app-dialog.c:120
 msgid "Select Command"
 msgstr "कमांड चुनू"
 
-#: ../capplet/gsm-app-dialog.c:194
+#: ../capplet/scsm-app-dialog.c:194
 msgid "Add Startup Program"
 msgstr "प्रारंभिक प्रोग्राम जोड़ू"
 
-#: ../capplet/gsm-app-dialog.c:198
+#: ../capplet/scsm-app-dialog.c:198
 msgid "Edit Startup Program"
 msgstr "प्रारंभिक प्रोग्राम संपादित करू"
 
-#: ../capplet/gsm-app-dialog.c:486
+#: ../capplet/scsm-app-dialog.c:486
 msgid "The startup command cannot be empty"
 msgstr "प्रारंभिक कमांड रिक्त नहि भ' सकत"
 
-#: ../capplet/gsm-app-dialog.c:492
+#: ../capplet/scsm-app-dialog.c:492
 msgid "The startup command is not valid"
 msgstr ""
 
-#: ../capplet/gsm-properties-dialog.c:555
+#: ../capplet/scsm-properties-dialog.c:555
 msgid "Enabled"
 msgstr "सक्षम"
 
-#: ../capplet/gsm-properties-dialog.c:567
+#: ../capplet/scsm-properties-dialog.c:567
 msgid "Icon"
 msgstr "चिह्न"
 
-#: ../capplet/gsm-properties-dialog.c:579
+#: ../capplet/scsm-properties-dialog.c:579
 msgid "Program"
 msgstr "प्रोग्राम"
 
-#: ../capplet/gsm-properties-dialog.c:792
+#: ../capplet/scsm-properties-dialog.c:792
 msgid "Startup Applications Preferences"
 msgstr ""
 
@@ -181,11 +181,11 @@ msgstr "सत्रक निष्क्रिय मानल जाएबा
 msgid "Window Manager"
 msgstr "विन्डो मैनेजर"
 
-#: ../data/gsm-inhibit-dialog.ui.h:1
+#: ../data/scsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr ""
 
-#: ../data/gsm-inhibit-dialog.ui.h:2 ../scarecrow-session/gsm-inhibit-dialog.c:667
+#: ../data/scsm-inhibit-dialog.ui.h:2 ../scarecrow-session/scsm-inhibit-dialog.c:667
 msgid ""
 "Waiting for program to finish.  Interrupting program may cause you to lose "
 "work."
@@ -270,168 +270,168 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr "चलाबैबला मद नहि अछि "
 
-#: ../egg/eggsmclient.c:225
+#: ../egg/egscsmclient.c:225
 msgid "Disable connection to session manager"
 msgstr "सत्र प्रबंधकसँ संपर्क रद करू"
 
-#: ../egg/eggsmclient.c:228
+#: ../egg/egscsmclient.c:228
 msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: ../egg/eggsmclient.c:228
+#: ../egg/egscsmclient.c:228
 msgid "FILE"
 msgstr "फाइल"
 
-#: ../egg/eggsmclient.c:231
+#: ../egg/egscsmclient.c:231
 msgid "Specify session management ID"
 msgstr "सत्र प्रबंधन आईडी निर्दिष्ट करू"
 
-#: ../egg/eggsmclient.c:231
+#: ../egg/egscsmclient.c:231
 msgid "ID"
 msgstr "ID"
 
-#: ../egg/eggsmclient.c:252
+#: ../egg/egscsmclient.c:252
 msgid "Session management options:"
 msgstr ""
 
-#: ../egg/eggsmclient.c:253
+#: ../egg/egscsmclient.c:253
 msgid "Show session management options"
 msgstr "सत्र प्रबंधन विकल्प देखाबू"
 
-#: ../scarecrow-session/gsm-gconf.c:106
+#: ../scarecrow-session/scsm-gconf.c:106
 #, c-format
 msgid ""
 "There is a problem with the configuration server.\n"
 "(%s exited with status %d)"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:255
+#: ../scarecrow-session/scsm-inhibit-dialog.c:255
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "'%s' प्रतीक नहि भेटल"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:615
+#: ../scarecrow-session/scsm-inhibit-dialog.c:615
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:666
+#: ../scarecrow-session/scsm-inhibit-dialog.c:666
 msgid "A program is still running:"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:670
+#: ../scarecrow-session/scsm-inhibit-dialog.c:670
 msgid "Some programs are still running:"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:671
+#: ../scarecrow-session/scsm-inhibit-dialog.c:671
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:901
+#: ../scarecrow-session/scsm-inhibit-dialog.c:901
 msgid "Switch User Anyway"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:904
+#: ../scarecrow-session/scsm-inhibit-dialog.c:904
 msgid "Logout Anyway"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:907
+#: ../scarecrow-session/scsm-inhibit-dialog.c:907
 msgid "Suspend Anyway"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:910
+#: ../scarecrow-session/scsm-inhibit-dialog.c:910
 msgid "Hibernate Anyway"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:913
+#: ../scarecrow-session/scsm-inhibit-dialog.c:913
 msgid "Shutdown Anyway"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:916
+#: ../scarecrow-session/scsm-inhibit-dialog.c:916
 msgid "Reboot Anyway"
 msgstr ""
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:924
+#: ../scarecrow-session/scsm-inhibit-dialog.c:924
 msgid "Lock Screen"
 msgstr "स्क्रीन पर ताला लगाबू"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:927
+#: ../scarecrow-session/scsm-inhibit-dialog.c:927
 msgid "Cancel"
 msgstr "रद करू"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:274
+#: ../scarecrow-session/scsm-logout-dialog.c:274
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
 msgstr[0] "अहाँ स्वतः %d सकेंडमे लॉग आउट भ' जाएब."
 msgstr[1] "अहाँ स्वतः %d सकेंडमे लॉग आउट भ' जाएब."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:282
+#: ../scarecrow-session/scsm-logout-dialog.c:282
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
 msgstr[0] "सिस्टम %d सकेंडमे स्वतः बन्न भ' जएताह."
 msgstr[1] "सिस्टम %d सकेंडमे स्वतः बन्न भ' जएताह."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:314
+#: ../scarecrow-session/scsm-logout-dialog.c:314
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr ""
 
-#: ../scarecrow-session/gsm-logout-dialog.c:380
+#: ../scarecrow-session/scsm-logout-dialog.c:380
 msgid "Log out of this system now?"
 msgstr "आब एहि सिस्टम सँ लॉग आउट करू?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:386
+#: ../scarecrow-session/scsm-logout-dialog.c:386
 msgid "_Switch User"
 msgstr "प्रयोक्ता बदलू (_S)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:395
+#: ../scarecrow-session/scsm-logout-dialog.c:395
 msgid "_Log Out"
 msgstr "लाग-आउट (_L)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:401
+#: ../scarecrow-session/scsm-logout-dialog.c:401
 msgid "Shut down this system now?"
 msgstr "आब एहि सिस्टमकेँ बन्न करू?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:407
+#: ../scarecrow-session/scsm-logout-dialog.c:407
 msgid "S_uspend"
 msgstr "स्थगित करू (_S)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:413
+#: ../scarecrow-session/scsm-logout-dialog.c:413
 msgid "_Hibernate"
 msgstr "सुप्तावस्थामे लए जाउ (_H)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:419
+#: ../scarecrow-session/scsm-logout-dialog.c:419
 msgid "_Restart"
 msgstr "पुन:आरंभ करू (_R)"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:429
+#: ../scarecrow-session/scsm-logout-dialog.c:429
 msgid "_Shut Down"
 msgstr "बन्न करू (_S)"
 
-#: ../scarecrow-session/gsm-manager.c:1158 ../scarecrow-session/gsm-manager.c:1850
+#: ../scarecrow-session/scsm-manager.c:1158 ../scarecrow-session/scsm-manager.c:1850
 msgid "Not responding"
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1206
+#: ../scarecrow-session/scsm-xsmp-client.c:1206
 msgid "This program is blocking log out."
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:234
+#: ../scarecrow-session/scsm-xsmp-server.c:234
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 
-#: ../scarecrow-session/gsm-xsmp-server.c:489
+#: ../scarecrow-session/scsm-xsmp-server.c:489
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr ""
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:354
+#: ../scarecrow-session/scsm-util.c:354
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr ""

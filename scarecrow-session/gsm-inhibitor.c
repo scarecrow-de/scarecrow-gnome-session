@@ -24,10 +24,10 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "gsm-inhibitor.h"
+#include "scsm-inhibitor.h"
 #include "io.github.scarecrow_de.SessionManager.Inhibitor.h"
 
-#include "gsm-util.h"
+#include "scsm-util.h"
 
 static guint32 inhibitor_serial = 1;
 
@@ -66,29 +66,29 @@ enum {
 };
 static guint signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (GsmInhibitor, gsm_inhibitor, G_TYPE_OBJECT)
+G_DEFINE_TYPE (GsmInhibitor, scsm_inhibitor, G_TYPE_OBJECT)
 
 #define GSM_INHIBITOR_DBUS_IFACE "io.github.scarecrow_de.SessionManager.Inhibitor"
 
-static const GDBusErrorEntry gsm_inhibitor_error_entries[] = {
+static const GDBusErrorEntry scsm_inhibitor_error_entries[] = {
         { GSM_INHIBITOR_ERROR_GENERAL, GSM_INHIBITOR_DBUS_IFACE ".GeneralError" },
         { GSM_INHIBITOR_ERROR_NOT_SET, GSM_INHIBITOR_DBUS_IFACE ".NotSet" }
 };
 
 GQuark
-gsm_inhibitor_error_quark (void)
+scsm_inhibitor_error_quark (void)
 {
         static volatile gsize quark_volatile = 0;
 
-        g_dbus_error_register_error_domain ("gsm_inhibitor_error",
+        g_dbus_error_register_error_domain ("scsm_inhibitor_error",
                                             &quark_volatile,
-                                            gsm_inhibitor_error_entries,
-                                            G_N_ELEMENTS (gsm_inhibitor_error_entries));
+                                            scsm_inhibitor_error_entries,
+                                            G_N_ELEMENTS (scsm_inhibitor_error_entries));
         return quark_volatile;
 }
 
 static gboolean
-gsm_inhibitor_get_app_id (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_app_id (GsmExportedInhibitor  *skeleton,
                           GDBusMethodInvocation *invocation,
                           GsmInhibitor          *inhibitor)
 {
@@ -100,13 +100,13 @@ gsm_inhibitor_get_app_id (GsmExportedInhibitor  *skeleton,
                 id = "";
         }
 
-        gsm_exported_inhibitor_complete_get_app_id (skeleton, invocation, id);
+        scsm_exported_inhibitor_complete_get_app_id (skeleton, invocation, id);
 
         return TRUE;
 }
 
 static gboolean
-gsm_inhibitor_get_client_id (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_client_id (GsmExportedInhibitor  *skeleton,
                              GDBusMethodInvocation *invocation,
                              GsmInhibitor          *inhibitor)
 {
@@ -119,14 +119,14 @@ gsm_inhibitor_get_client_id (GsmExportedInhibitor  *skeleton,
                 return TRUE;
         }
 
-        gsm_exported_inhibitor_complete_get_client_id (skeleton, invocation, inhibitor->priv->client_id);
+        scsm_exported_inhibitor_complete_get_client_id (skeleton, invocation, inhibitor->priv->client_id);
         g_debug ("GsmInhibitor: getting client-id = '%s'", inhibitor->priv->client_id);
 
         return TRUE;
 }
 
 static gboolean
-gsm_inhibitor_get_reason (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_reason (GsmExportedInhibitor  *skeleton,
                           GDBusMethodInvocation *invocation,
                           GsmInhibitor          *inhibitor)
 {
@@ -138,25 +138,25 @@ gsm_inhibitor_get_reason (GsmExportedInhibitor  *skeleton,
                 reason = "";
         }
 
-        gsm_exported_inhibitor_complete_get_reason (skeleton, invocation, reason);
+        scsm_exported_inhibitor_complete_get_reason (skeleton, invocation, reason);
         return TRUE;
 }
 
 static gboolean
-gsm_inhibitor_get_flags (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_flags (GsmExportedInhibitor  *skeleton,
                          GDBusMethodInvocation *invocation,
                          GsmInhibitor          *inhibitor)
 {
-        gsm_exported_inhibitor_complete_get_flags (skeleton, invocation, inhibitor->priv->flags);
+        scsm_exported_inhibitor_complete_get_flags (skeleton, invocation, inhibitor->priv->flags);
         return TRUE;
 }
 
 static gboolean
-gsm_inhibitor_get_toplevel_xid (GsmExportedInhibitor  *skeleton,
+scsm_inhibitor_get_toplevel_xid (GsmExportedInhibitor  *skeleton,
                                 GDBusMethodInvocation *invocation,
                                 GsmInhibitor          *inhibitor)
 {
-        gsm_exported_inhibitor_complete_get_toplevel_xid (skeleton, invocation, inhibitor->priv->toplevel_xid);
+        scsm_exported_inhibitor_complete_get_toplevel_xid (skeleton, invocation, inhibitor->priv->toplevel_xid);
         return TRUE;
 }
 
@@ -189,7 +189,7 @@ register_inhibitor (GsmInhibitor *inhibitor)
                 return FALSE;
         }
 
-        skeleton = gsm_exported_inhibitor_skeleton_new ();
+        skeleton = scsm_exported_inhibitor_skeleton_new ();
         inhibitor->priv->skeleton = skeleton;
         g_dbus_interface_skeleton_export (G_DBUS_INTERFACE_SKELETON (skeleton),
                                           inhibitor->priv->connection,
@@ -202,28 +202,28 @@ register_inhibitor (GsmInhibitor *inhibitor)
         }
 
         g_signal_connect (skeleton, "handle-get-app-id",
-                          G_CALLBACK (gsm_inhibitor_get_app_id), inhibitor);
+                          G_CALLBACK (scsm_inhibitor_get_app_id), inhibitor);
         g_signal_connect (skeleton, "handle-get-client-id",
-                          G_CALLBACK (gsm_inhibitor_get_client_id), inhibitor);
+                          G_CALLBACK (scsm_inhibitor_get_client_id), inhibitor);
         g_signal_connect (skeleton, "handle-get-flags",
-                          G_CALLBACK (gsm_inhibitor_get_flags), inhibitor);
+                          G_CALLBACK (scsm_inhibitor_get_flags), inhibitor);
         g_signal_connect (skeleton, "handle-get-reason",
-                          G_CALLBACK (gsm_inhibitor_get_reason), inhibitor);
+                          G_CALLBACK (scsm_inhibitor_get_reason), inhibitor);
         g_signal_connect (skeleton, "handle-get-toplevel-xid",
-                          G_CALLBACK (gsm_inhibitor_get_toplevel_xid), inhibitor);
+                          G_CALLBACK (scsm_inhibitor_get_toplevel_xid), inhibitor);
 
         return TRUE;
 }
 
 static GObject *
-gsm_inhibitor_constructor (GType                  type,
+scsm_inhibitor_constructor (GType                  type,
                            guint                  n_construct_properties,
                            GObjectConstructParam *construct_properties)
 {
         GsmInhibitor *inhibitor;
         gboolean      res;
 
-        inhibitor = GSM_INHIBITOR (G_OBJECT_CLASS (gsm_inhibitor_parent_class)->constructor (type,
+        inhibitor = GSM_INHIBITOR (G_OBJECT_CLASS (scsm_inhibitor_parent_class)->constructor (type,
                                                                                              n_construct_properties,
                                                                                              construct_properties));
 
@@ -238,7 +238,7 @@ gsm_inhibitor_constructor (GType                  type,
 }
 
 static void
-gsm_inhibitor_init (GsmInhibitor *inhibitor)
+scsm_inhibitor_init (GsmInhibitor *inhibitor)
 {
         inhibitor->priv = GSM_INHIBITOR_GET_PRIVATE (inhibitor);
 }
@@ -257,7 +257,7 @@ on_inhibitor_vanished (GDBusConnection *connection,
 }
 
 static void
-gsm_inhibitor_set_bus_name (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_bus_name (GsmInhibitor  *inhibitor,
                             const char    *bus_name)
 {
         g_return_if_fail (GSM_IS_INHIBITOR (inhibitor));
@@ -281,7 +281,7 @@ gsm_inhibitor_set_bus_name (GsmInhibitor  *inhibitor,
 }
 
 static void
-gsm_inhibitor_set_app_id (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_app_id (GsmInhibitor  *inhibitor,
                           const char    *app_id)
 {
         g_return_if_fail (GSM_IS_INHIBITOR (inhibitor));
@@ -293,7 +293,7 @@ gsm_inhibitor_set_app_id (GsmInhibitor  *inhibitor,
 }
 
 static void
-gsm_inhibitor_set_client_id (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_client_id (GsmInhibitor  *inhibitor,
                              const char    *client_id)
 {
         g_return_if_fail (GSM_IS_INHIBITOR (inhibitor));
@@ -311,7 +311,7 @@ gsm_inhibitor_set_client_id (GsmInhibitor  *inhibitor,
 }
 
 static void
-gsm_inhibitor_set_reason (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_reason (GsmInhibitor  *inhibitor,
                           const char    *reason)
 {
         g_return_if_fail (GSM_IS_INHIBITOR (inhibitor));
@@ -327,7 +327,7 @@ gsm_inhibitor_set_reason (GsmInhibitor  *inhibitor,
 }
 
 static void
-gsm_inhibitor_set_cookie (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_cookie (GsmInhibitor  *inhibitor,
                           guint          cookie)
 {
         g_return_if_fail (GSM_IS_INHIBITOR (inhibitor));
@@ -339,7 +339,7 @@ gsm_inhibitor_set_cookie (GsmInhibitor  *inhibitor,
 }
 
 static void
-gsm_inhibitor_set_flags (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_flags (GsmInhibitor  *inhibitor,
                          guint          flags)
 {
         g_return_if_fail (GSM_IS_INHIBITOR (inhibitor));
@@ -351,7 +351,7 @@ gsm_inhibitor_set_flags (GsmInhibitor  *inhibitor,
 }
 
 static void
-gsm_inhibitor_set_toplevel_xid (GsmInhibitor  *inhibitor,
+scsm_inhibitor_set_toplevel_xid (GsmInhibitor  *inhibitor,
                                 guint          xid)
 {
         g_return_if_fail (GSM_IS_INHIBITOR (inhibitor));
@@ -363,7 +363,7 @@ gsm_inhibitor_set_toplevel_xid (GsmInhibitor  *inhibitor,
 }
 
 const char *
-gsm_inhibitor_peek_bus_name (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_bus_name (GsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -371,7 +371,7 @@ gsm_inhibitor_peek_bus_name (GsmInhibitor  *inhibitor)
 }
 
 const char *
-gsm_inhibitor_peek_id (GsmInhibitor *inhibitor)
+scsm_inhibitor_peek_id (GsmInhibitor *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -379,7 +379,7 @@ gsm_inhibitor_peek_id (GsmInhibitor *inhibitor)
 }
 
 const char *
-gsm_inhibitor_peek_app_id (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_app_id (GsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -387,7 +387,7 @@ gsm_inhibitor_peek_app_id (GsmInhibitor  *inhibitor)
 }
 
 const char *
-gsm_inhibitor_peek_client_id (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_client_id (GsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -395,7 +395,7 @@ gsm_inhibitor_peek_client_id (GsmInhibitor  *inhibitor)
 }
 
 const char *
-gsm_inhibitor_peek_reason (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_reason (GsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), NULL);
 
@@ -403,7 +403,7 @@ gsm_inhibitor_peek_reason (GsmInhibitor  *inhibitor)
 }
 
 guint
-gsm_inhibitor_peek_flags (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_flags (GsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), 0);
 
@@ -411,7 +411,7 @@ gsm_inhibitor_peek_flags (GsmInhibitor  *inhibitor)
 }
 
 guint
-gsm_inhibitor_peek_toplevel_xid (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_toplevel_xid (GsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), 0);
 
@@ -419,7 +419,7 @@ gsm_inhibitor_peek_toplevel_xid (GsmInhibitor  *inhibitor)
 }
 
 guint
-gsm_inhibitor_peek_cookie (GsmInhibitor  *inhibitor)
+scsm_inhibitor_peek_cookie (GsmInhibitor  *inhibitor)
 {
         g_return_val_if_fail (GSM_IS_INHIBITOR (inhibitor), 0);
 
@@ -427,7 +427,7 @@ gsm_inhibitor_peek_cookie (GsmInhibitor  *inhibitor)
 }
 
 static void
-gsm_inhibitor_set_property (GObject       *object,
+scsm_inhibitor_set_property (GObject       *object,
                             guint          prop_id,
                             const GValue  *value,
                             GParamSpec    *pspec)
@@ -438,25 +438,25 @@ gsm_inhibitor_set_property (GObject       *object,
 
         switch (prop_id) {
         case PROP_BUS_NAME:
-                gsm_inhibitor_set_bus_name (self, g_value_get_string (value));
+                scsm_inhibitor_set_bus_name (self, g_value_get_string (value));
                 break;
         case PROP_APP_ID:
-                gsm_inhibitor_set_app_id (self, g_value_get_string (value));
+                scsm_inhibitor_set_app_id (self, g_value_get_string (value));
                 break;
         case PROP_CLIENT_ID:
-                gsm_inhibitor_set_client_id (self, g_value_get_string (value));
+                scsm_inhibitor_set_client_id (self, g_value_get_string (value));
                 break;
         case PROP_REASON:
-                gsm_inhibitor_set_reason (self, g_value_get_string (value));
+                scsm_inhibitor_set_reason (self, g_value_get_string (value));
                 break;
         case PROP_FLAGS:
-                gsm_inhibitor_set_flags (self, g_value_get_uint (value));
+                scsm_inhibitor_set_flags (self, g_value_get_uint (value));
                 break;
         case PROP_COOKIE:
-                gsm_inhibitor_set_cookie (self, g_value_get_uint (value));
+                scsm_inhibitor_set_cookie (self, g_value_get_uint (value));
                 break;
         case PROP_TOPLEVEL_XID:
-                gsm_inhibitor_set_toplevel_xid (self, g_value_get_uint (value));
+                scsm_inhibitor_set_toplevel_xid (self, g_value_get_uint (value));
                 break;
         default:
                 G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -465,7 +465,7 @@ gsm_inhibitor_set_property (GObject       *object,
 }
 
 static void
-gsm_inhibitor_get_property (GObject    *object,
+scsm_inhibitor_get_property (GObject    *object,
                             guint       prop_id,
                             GValue     *value,
                             GParamSpec *pspec)
@@ -503,7 +503,7 @@ gsm_inhibitor_get_property (GObject    *object,
 }
 
 static void
-gsm_inhibitor_finalize (GObject *object)
+scsm_inhibitor_finalize (GObject *object)
 {
         GsmInhibitor *inhibitor = (GsmInhibitor *) object;
 
@@ -525,18 +525,18 @@ gsm_inhibitor_finalize (GObject *object)
 
         g_clear_object (&inhibitor->priv->connection);
 
-        G_OBJECT_CLASS (gsm_inhibitor_parent_class)->finalize (object);
+        G_OBJECT_CLASS (scsm_inhibitor_parent_class)->finalize (object);
 }
 
 static void
-gsm_inhibitor_class_init (GsmInhibitorClass *klass)
+scsm_inhibitor_class_init (GsmInhibitorClass *klass)
 {
         GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-        object_class->finalize             = gsm_inhibitor_finalize;
-        object_class->constructor          = gsm_inhibitor_constructor;
-        object_class->get_property         = gsm_inhibitor_get_property;
-        object_class->set_property         = gsm_inhibitor_set_property;
+        object_class->finalize             = scsm_inhibitor_finalize;
+        object_class->constructor          = scsm_inhibitor_constructor;
+        object_class->get_property         = scsm_inhibitor_get_property;
+        object_class->set_property         = scsm_inhibitor_set_property;
 
         signals[VANISHED] =
                 g_signal_new ("vanished",
@@ -605,7 +605,7 @@ gsm_inhibitor_class_init (GsmInhibitorClass *klass)
 }
 
 GsmInhibitor *
-gsm_inhibitor_new (const char    *app_id,
+scsm_inhibitor_new (const char    *app_id,
                    guint          toplevel_xid,
                    guint          flags,
                    const char    *reason,
@@ -627,7 +627,7 @@ gsm_inhibitor_new (const char    *app_id,
 }
 
 GsmInhibitor *
-gsm_inhibitor_new_for_client (const char    *client_id,
+scsm_inhibitor_new_for_client (const char    *client_id,
                               const char    *app_id,
                               guint          flags,
                               const char    *reason,

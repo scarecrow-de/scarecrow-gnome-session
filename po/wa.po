@@ -86,108 +86,108 @@ msgstr ""
 "valixhances valides. On candjmint del valixhance serè-st efectif a "
 "l' elodjaedje shuvant."
 
-#: scarecrow-session/gsm-client-editor.c:97 scarecrow-session/startup-programs.c:314
+#: scarecrow-session/scsm-client-editor.c:97 scarecrow-session/startup-programs.c:314
 msgid "_Order:"
 msgstr "Ô_re:"
 
-#: scarecrow-session/gsm-client-editor.c:99
+#: scarecrow-session/scsm-client-editor.c:99
 msgid "The order in which applications are started in the session."
 msgstr "L' ôre ki les programes sont-st enondés el session."
 
-#: scarecrow-session/gsm-client-editor.c:106
+#: scarecrow-session/scsm-client-editor.c:106
 msgid "What happens to the application when it exits."
 msgstr "Çou k' arive å programe cwand on cwite li session."
 
-#: scarecrow-session/gsm-client-editor.c:109
+#: scarecrow-session/scsm-client-editor.c:109
 msgid "_Style:"
 msgstr "_Stîle:"
 
-#: scarecrow-session/gsm-client-list.c:150
+#: scarecrow-session/scsm-client-list.c:150
 #: scarecrow-session/session-properties-capplet.c:412
 msgid "Order"
 msgstr "Ôre"
 
-#: scarecrow-session/gsm-client-list.c:155
+#: scarecrow-session/scsm-client-list.c:155
 msgid "Style"
 msgstr "Stîle"
 
-#: scarecrow-session/gsm-client-list.c:160
+#: scarecrow-session/scsm-client-list.c:160
 msgid "State"
 msgstr "Estat"
 
-#: scarecrow-session/gsm-client-list.c:165
+#: scarecrow-session/scsm-client-list.c:165
 msgid "Program"
 msgstr "Programe"
 
-#: scarecrow-session/gsm-client-row.c:31
+#: scarecrow-session/scsm-client-row.c:31
 msgid "Inactive"
 msgstr "Essocté"
 
-#: scarecrow-session/gsm-client-row.c:32
+#: scarecrow-session/scsm-client-row.c:32
 msgid "Waiting to start or already finished."
 msgstr "Ratindant po s' enonder oudonbén il a ddja fini."
 
-#: scarecrow-session/gsm-client-row.c:34
+#: scarecrow-session/scsm-client-row.c:34
 msgid "Starting"
 msgstr "S' enondant"
 
-#: scarecrow-session/gsm-client-row.c:35
+#: scarecrow-session/scsm-client-row.c:35
 msgid "Started but has not yet reported state."
 msgstr "Dedja enondé mins ki n' a nén co rapoirté si estat."
 
-#: scarecrow-session/gsm-client-row.c:37
+#: scarecrow-session/scsm-client-row.c:37
 msgid "Running"
 msgstr "En alaedje"
 
-#: scarecrow-session/gsm-client-row.c:38
+#: scarecrow-session/scsm-client-row.c:38
 msgid "A normal member of the session."
 msgstr "On mimbe normå del session (programe en alaedje)."
 
-#: scarecrow-session/gsm-client-row.c:40
+#: scarecrow-session/scsm-client-row.c:40
 msgid "Saving"
 msgstr "Schapant"
 
-#: scarecrow-session/gsm-client-row.c:41
+#: scarecrow-session/scsm-client-row.c:41
 msgid "Saving session details."
 msgstr "Schapant l' apontiaedje des detays pol session."
 
-#: scarecrow-session/gsm-client-row.c:43
+#: scarecrow-session/scsm-client-row.c:43
 msgid "Unknown"
 msgstr "Nén cnoxhou"
 
-#: scarecrow-session/gsm-client-row.c:44
+#: scarecrow-session/scsm-client-row.c:44
 msgid "State not reported within timeout."
 msgstr "Estat nén rapoirté et li tårdjaedje est houte."
 
-#: scarecrow-session/gsm-client-row.c:50
+#: scarecrow-session/scsm-client-row.c:50
 msgid "Normal"
 msgstr "Normå"
 
-#: scarecrow-session/gsm-client-row.c:51
+#: scarecrow-session/scsm-client-row.c:51
 msgid "Unaffected by logouts but can die."
 msgstr "Nén afecté pal fén del session, mins i pout mori."
 
-#: scarecrow-session/gsm-client-row.c:53
+#: scarecrow-session/scsm-client-row.c:53
 msgid "Restart"
 msgstr "Renonder"
 
-#: scarecrow-session/gsm-client-row.c:54
+#: scarecrow-session/scsm-client-row.c:54
 msgid "Never allowed to die."
 msgstr "Ni pout måy mori (i ravicrè)."
 
-#: scarecrow-session/gsm-client-row.c:56
+#: scarecrow-session/scsm-client-row.c:56
 msgid "Trash"
 msgstr "Batch"
 
-#: scarecrow-session/gsm-client-row.c:57
+#: scarecrow-session/scsm-client-row.c:57
 msgid "Discarded on logout and can die."
 msgstr "Oisté al fén del session et pout mori."
 
-#: scarecrow-session/gsm-client-row.c:59
+#: scarecrow-session/scsm-client-row.c:59
 msgid "Settings"
 msgstr "Apontiaedjes"
 
-#: scarecrow-session/gsm-client-row.c:60
+#: scarecrow-session/scsm-client-row.c:60
 msgid "Always started on every login."
 msgstr "Tofer enondé po tchaeke session."
 
@@ -199,7 +199,7 @@ msgstr "Tofer enondé po tchaeke session."
 #. *
 #. * for now, we just kill the old dialog and pop up a new one.
 #.
-#: scarecrow-session/gsm-gsd.c:41
+#: scarecrow-session/scsm-gsd.c:41
 msgid ""
 "There was an error starting the Scarecrow Settings Daemon.\n"
 "\n"
@@ -211,7 +211,7 @@ msgstr ""
 "Sacwantès sacwès, come les tinmes, les sons, ou l' apontiaedje do fond del "
 "waitroûle, pôrént n' nén roter comifåt."
 
-#: scarecrow-session/gsm-gsd.c:53
+#: scarecrow-session/scsm-gsd.c:53
 msgid ""
 "\n"
 "\n"
@@ -223,7 +223,7 @@ msgstr ""
 "Li dierin messaedje d' aroke fourit:\n"
 "\n"
 
-#: scarecrow-session/gsm-gsd.c:58
+#: scarecrow-session/scsm-gsd.c:58
 msgid ""
 "\n"
 "\n"
@@ -231,14 +231,14 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Gnome va tot l' minme rissayî d' enonder li démon d' apontiaedjes li côp ki "
+"Scarecrow va tot l' minme rissayî d' enonder li démon d' apontiaedjes li côp ki "
 "vént k' vos vs elodjroz."
 
-#: scarecrow-session/gsm-gsd.c:115
+#: scarecrow-session/scsm-gsd.c:115
 msgid "There was an unknown activation error."
 msgstr "I gn a-st avou ene aroke d' activaedje nén cnoxhowe."
 
-#: scarecrow-session/gsm-gsd.c:157
+#: scarecrow-session/scsm-gsd.c:157
 msgid "The Settings Daemon restarted too many times."
 msgstr "Li démon d' apontiaedjes a stî renondé pår trop d' feyes."
 

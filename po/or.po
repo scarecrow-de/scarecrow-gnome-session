@@ -118,11 +118,11 @@ msgstr "ନିର୍ଦ୍ଦେଶ (_m):"
 msgid "_Name:"
 msgstr "ନାମ (_N):"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:321
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:321
 msgid "Oh no!  Something has gone wrong."
 msgstr "ଆହା! କିଛି ଗୋଟିଏ ଭୁଲ ହୋଇଗଲା।"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:328
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:328
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -130,7 +130,7 @@ msgstr ""
 "ଏକ ସମସ୍ୟା ଘଟିଛି ଏବଂ ତନ୍ତ୍ର ଠିକ ହୋଇପାରୁ ନାହିଁ। ଦୟାକରି ତନ୍ତ୍ର ପ୍ରଶାସକଙ୍କ ସହିତ "
 "ସମ୍ପର୍କ କରନ୍ତୁ"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:330
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:330
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -139,7 +139,7 @@ msgstr ""
 "ଅନୁଲଗ୍ନଗୁଡ଼ିକୁ ନିଷ୍କ୍ରିୟ "
 "କରାଯାଇଛି।"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:332
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:332
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -147,27 +147,27 @@ msgstr ""
 "ଏକ ସମସ୍ୟା ଘଟିଛି ଏବଂ ତନ୍ତ୍ର ଠିକ ହୋଇପାରୁ ନାହିଁ। \n"
 "ଦୟାକରି ଲଗଆଉଟ କରି ପୁଣିଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:347
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:347
 msgid "_Log Out"
 msgstr "ଲଗଆଉଟ କରନ୍ତୁ (_L)"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:369 ../scarecrow-session/main.c:305
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:369 ../scarecrow-session/main.c:305
 msgid "Enable debugging code"
 msgstr "ତ୍ରୁଟି ନିବାରଣ ସଂକେତକୁ ସକ୍ରିୟ କରନ୍ତୁ"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:370
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:370
 msgid "Allow logout"
 msgstr "ଲଗଆଉଟ  ପାଇଁ ଅନୁମତି ଦିଅନ୍ତୁ"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:371
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:371
 msgid "Show extension warning"
 msgstr "ଅନୁଲଗ୍ନ ଚେତାବନି ଦର୍ଶାନ୍ତୁ"
 
-#: ../scarecrow-session/gsm-manager.c:1271 ../scarecrow-session/gsm-manager.c:2043
+#: ../scarecrow-session/scsm-manager.c:1271 ../scarecrow-session/scsm-manager.c:2043
 msgid "Not responding"
 msgstr "ଉତ୍ତର ଦେଉନାହିଁ"
 
-#: ../scarecrow-session/gsm-util.c:382
+#: ../scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "ଲଗଆଉଟ (_L)"
 
@@ -175,22 +175,22 @@ msgstr "ଲଗଆଉଟ (_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "ମନେଥିବା ପ୍ରୟୋଗ"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "ଏହି ପ୍ରଗ୍ରାମଟି ଲଗଆଉଟ ହେବାକୁ ଦେଉନାହିଁ।"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "ନୂତନ କ୍ଲାଏଣ୍ଟ ସଂଯୋଗକୁ ମନାକରୁଅଛି କାରଣ ସେହି ଅଧିବେଶନଟି ବର୍ତ୍ତମାନ ବନ୍ଦ ହୋଇଛି\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE କୁ ମାନୁଥିବା ସକେଟ ନିର୍ମାଣ କରିପାରିଲା ନାହିଁ: %s"

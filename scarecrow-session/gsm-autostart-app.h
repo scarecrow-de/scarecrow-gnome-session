@@ -20,13 +20,13 @@
 #ifndef __GSM_AUTOSTART_APP_H__
 #define __GSM_AUTOSTART_APP_H__
 
-#include "gsm-app.h"
+#include "scsm-app.h"
 
 #include <X11/SM/SMlib.h>
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_AUTOSTART_APP            (gsm_autostart_app_get_type ())
+#define GSM_TYPE_AUTOSTART_APP            (scsm_autostart_app_get_type ())
 #define GSM_AUTOSTART_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_AUTOSTART_APP, GsmAutostartApp))
 #define GSM_AUTOSTART_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_AUTOSTART_APP, GsmAutostartAppClass))
 #define GSM_IS_AUTOSTART_APP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_AUTOSTART_APP))
@@ -53,13 +53,13 @@ struct _GsmAutostartAppClass
                                         gboolean condition);
 };
 
-GType   gsm_autostart_app_get_type           (void) G_GNUC_CONST;
+GType   scsm_autostart_app_get_type           (void) G_GNUC_CONST;
 
-GsmApp *gsm_autostart_app_new                (const char *desktop_file,
+GsmApp *scsm_autostart_app_new                (const char *desktop_file,
                                               gboolean    mask_systemd,
                                               GError    **error);
 
-void    gsm_autostart_app_add_provides       (GsmAutostartApp *aapp,
+void    scsm_autostart_app_add_provides       (GsmAutostartApp *aapp,
                                               const char      *provides);
 
 #define GSM_AUTOSTART_APP_SYSTEMD_KEY     "X-GNOME-HiddenUnderSystemd"

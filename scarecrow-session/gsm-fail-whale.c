@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
- * gsm-fail-whale.c
+ * scsm-fail-whale.c
  * Copyright (C) 2012 Red Hat, Inc
  *
  * This program is free software; you can redistribute it and/or
@@ -24,8 +24,8 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 
-#include "gsm-fail-whale.h"
-#include "gsm-util.h"
+#include "scsm-fail-whale.h"
+#include "scsm-util.h"
 
 static void
 on_fail_whale_failed (void)
@@ -34,7 +34,7 @@ on_fail_whale_failed (void)
 }
 
 void
-gsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
+scsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
                                   gboolean            allow_logout,
                                   GsmShellExtensions *extensions)
 {
@@ -52,11 +52,11 @@ gsm_fail_whale_dialog_we_failed  (gboolean            debug_mode,
                 argv[i++] = "--debug";
         if (allow_logout)
                 argv[i++] = "--allow-logout";
-        if (extensions != NULL && gsm_shell_extensions_n_extensions (extensions) > 0)
+        if (extensions != NULL && scsm_shell_extensions_n_extensions (extensions) > 0)
                 argv[i++] = "--extensions";
         argv[i++] = NULL;
 
-        if (!g_spawn_async (NULL, argv, (char **) gsm_util_listenv (), G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, NULL)) {
+        if (!g_spawn_async (NULL, argv, (char **) scsm_util_listenv (), G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, NULL)) {
                 exit (1);
         }
 

@@ -121,11 +121,11 @@ msgstr "Nam_a Semula Sesi"
 msgid "_Continue"
 msgstr "_Teruskan"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Alamak! Ada masalah telah berlaku."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 #| msgid ""
 #| "A problem has occurred and the system can't recover. Please contact a "
 #| "system administrator"
@@ -136,7 +136,7 @@ msgstr ""
 "Satu masalah telah berlaku dan menyebabkan sistem tidak dapat dipulihkan. "
 "Sila hubungi pentadbir sistem"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 #| msgid ""
 #| "A problem has occurred and the system can't recover. All extensions have "
 #| "been disabled as a precaution."
@@ -147,7 +147,7 @@ msgstr ""
 "Satu masalah telah berlaku dan menyebabkan sistem tidak dapat dipulihkan. "
 "Semua sambungan telah dilumpuhkan sebagai langkah berjaga-jaga."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 #| msgid ""
 #| "A problem has occurred and the system can't recover.\n"
 #| "Please log out and try again."
@@ -158,27 +158,27 @@ msgstr ""
 "Satu masalah telah berlaku dan menyebabkan sistem tidak dapat dipulihkan. \n"
 "Sila daftar keluar dan cuba sekali lagi."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "_Daftar Keluar"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:404
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "Benarkan kod penyahpepijatan"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Benarkan daftar keluar"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Tunjuk amaran sambungan"
 
-#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
+#: scarecrow-session/scsm-manager.c:1289 scarecrow-session/scsm-manager.c:1999
 msgid "Not responding"
 msgstr "Tiada respons"
 
-#: scarecrow-session/gsm-util.c:414
+#: scarecrow-session/scsm-util.c:414
 msgid "_Log out"
 msgstr "_Daftar keluar"
 
@@ -186,22 +186,22 @@ msgstr "_Daftar keluar"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Aplikasi Diingati"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Program ini telah menyekat daftar keluar."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "Enggan menerima sambungan klien baharu kerana sesi ini sedang dimatikan\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Tidak dapat mencipta soket mendengar ICE: %s"

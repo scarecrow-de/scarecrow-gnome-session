@@ -1,4 +1,4 @@
-/* gsm-session-save.h
+/* scsm-session-save.h
  * Copyright (C) 2008 Lucas Rocha.
  *
  * This program is free software; you can redistribute it and/or
@@ -20,14 +20,14 @@
 
 #include <glib.h>
 
-#include "gsm-store.h"
+#include "scsm-store.h"
 
 G_BEGIN_DECLS
 
-void      gsm_session_save                 (GsmStore  *client_store,
+void      scsm_session_save                 (GsmStore  *client_store,
                                             GsmStore  *app_store,
                                             GError   **error);
-void      gsm_session_save_clear           (void);
+void      scsm_session_save_clear           (void);
 
 G_END_DECLS
 

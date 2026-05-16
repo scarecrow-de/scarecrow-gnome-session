@@ -36,12 +36,12 @@
 
 #include "scdm-log.h"
 
-#include "gsm-util.h"
-#include "gsm-manager.h"
-#include "gsm-session-fill.h"
-#include "gsm-store.h"
-#include "gsm-system.h"
-#include "gsm-fail-whale.h"
+#include "scsm-util.h"
+#include "scsm-manager.h"
+#include "scsm-session-fill.h"
+#include "scsm-store.h"
+#include "scsm-system.h"
+#include "scsm-fail-whale.h"
 
 #ifdef ENABLE_SYSTEMD_JOURNAL
 #include <systemd/sd-journal.h>
@@ -63,13 +63,13 @@ static char *gl_renderer = NULL;
 static GMainLoop *loop;
 
 void
-gsm_quit (void)
+scsm_quit (void)
 {
         g_main_loop_quit (loop);
 }
 
 static void
-gsm_main (void)
+scsm_main (void)
 {
         if (loop == NULL)
                 loop = g_main_loop_new (NULL, TRUE);
@@ -84,7 +84,7 @@ on_name_lost (GDBusConnection *connection,
 {
         if (connection == NULL) {
                 g_warning ("Lost name on bus: %s", name);
-                gsm_fail_whale_dialog_we_failed (TRUE, TRUE, NULL);
+                scsm_fail_whale_dialog_we_failed (TRUE, TRUE, NULL);
         } else {
                 g_debug ("Calling name lost callback function");
 
@@ -94,9 +94,9 @@ on_name_lost (GDBusConnection *connection,
                  * applications in the off chance a handler is already queued
                  * to dispatch following the below call to gtk_main_quit.
                  */
-                gsm_manager_set_phase (manager, GSM_MANAGER_PHASE_EXIT);
+                scsm_manager_set_phase (manager, GSM_MANAGER_PHASE_EXIT);
 
-                gsm_quit ();
+                scsm_quit ();
         }
 }
 
@@ -109,9 +109,9 @@ term_or_int_signal_cb (gpointer data)
         /* let the fatal signals interrupt us */
         g_debug ("Caught SIGINT/SIGTERM, shutting down normally.");
 
-        if (!gsm_manager_logout (manager, GSM_MANAGER_LOGOUT_MODE_FORCE, &error)) {
+        if (!scsm_manager_logout (manager, GSM_MANAGER_LOGOUT_MODE_FORCE, &error)) {
                 if (g_error_matches (error, GSM_MANAGER_ERROR, GSM_MANAGER_ERROR_NOT_IN_RUNNING)) {
-                    gsm_quit ();
+                    scsm_quit ();
                     return FALSE;
                 }
 
@@ -140,7 +140,7 @@ on_name_acquired (GDBusConnection *connection,
                   const char *name,
                   gpointer data)
 {
-        gsm_manager_start (manager);
+        scsm_manager_start (manager);
 }
 
 static void
@@ -148,8 +148,8 @@ create_manager (void)
 {
         GsmStore *client_store;
 
-        client_store = gsm_store_new ();
-        manager = gsm_manager_new (client_store, failsafe, systemd_service);
+        client_store = scsm_store_new ();
+        manager = scsm_manager_new (client_store, failsafe, systemd_service);
         g_object_unref (client_store);
 
         g_unix_signal_add (SIGTERM, term_or_int_signal_cb, manager);
@@ -158,14 +158,14 @@ create_manager (void)
         g_unix_signal_add (SIGUSR2, sigusr2_cb, manager);
 
         if (IS_STRING_EMPTY (session_name)) {
-                session_name = _gsm_manager_get_default_session (manager);
+                session_name = _scsm_manager_get_default_session (manager);
         }
 
-        if (!gsm_session_fill (manager, session_name)) {
-                gsm_fail_whale_dialog_we_failed (FALSE, TRUE, NULL);
+        if (!scsm_session_fill (manager, session_name)) {
+                scsm_fail_whale_dialog_we_failed (FALSE, TRUE, NULL);
         }
 
-        _gsm_manager_set_renderer (manager, gl_renderer);
+        _scsm_manager_set_renderer (manager, gl_renderer);
 }
 
 static void
@@ -282,7 +282,7 @@ leader_term_or_int_signal_cb (gpointer data)
         gint fifo_fd = GPOINTER_TO_INT (data);
 
         /* Start a shutdown explicitly. */
-        gsm_util_start_systemd_unit ("scarecrow-session-shutdown.target", "replace-irreversibly", NULL);
+        scsm_util_start_systemd_unit ("scarecrow-session-shutdown.target", "replace-irreversibly", NULL);
 
         if (fifo_fd >= 0) {
                 int res;
@@ -291,11 +291,11 @@ leader_term_or_int_signal_cb (gpointer data)
                 res = write (fifo_fd, "S", 1);
                 if (res < 0) {
                         g_warning ("Error signaling shutdown to monitoring process: %m");
-                        gsm_quit ();
+                        scsm_quit ();
                 }
         } else {
                 /* Otherwise quit immediately as we cannot wait on systemd */
-                gsm_quit ();
+                scsm_quit ();
         }
 
         return G_SOURCE_REMOVE;
@@ -366,7 +366,7 @@ systemd_leader_run(void)
                         close (fifo_fd);
                         fifo_fd = -1;
                 } else {
-                        g_unix_fd_add (fifo_fd, G_IO_HUP, (GUnixFDSourceFunc) gsm_quit, NULL);
+                        g_unix_fd_add (fifo_fd, G_IO_HUP, (GUnixFDSourceFunc) scsm_quit, NULL);
                 }
         } else {
                 g_warning ("Unable to watch systemd session: Opening FIFO failed with %m");
@@ -376,7 +376,7 @@ systemd_leader_run(void)
         g_unix_signal_add (SIGINT, leader_term_or_int_signal_cb, GINT_TO_POINTER (fifo_fd));
 
         /* Sleep until we receive HUP or are killed. */
-        gsm_main ();
+        scsm_main ();
         exit(0);
 }
 #endif /* ENABLE_SYSTEMD_SESSION */
@@ -412,7 +412,7 @@ main (int argc, char **argv)
 
         /* Make sure that we have a session bus */
         if (!require_dbus_session (argc, argv, &error)) {
-                gsm_util_init_error (TRUE, "%s", error->message);
+                scsm_util_init_error (TRUE, "%s", error->message);
         }
 
         /* From 3.14 GDM sets XDG_CURRENT_DESKTOP. For compatibility with
@@ -421,7 +421,7 @@ main (int argc, char **argv)
          */
         if (g_getenv ("XDG_CURRENT_DESKTOP") == NULL) {
             g_setenv("XDG_CURRENT_DESKTOP", "Scarecrow", TRUE);
-            gsm_util_setenv ("XDG_CURRENT_DESKTOP", "Scarecrow");
+            scsm_util_setenv ("XDG_CURRENT_DESKTOP", "Scarecrow");
         }
 
         /* Make sure we initialize gio in a way that does not autostart any daemon */
@@ -501,14 +501,14 @@ main (int argc, char **argv)
         }
 
         if (gl_failed) {
-                gsm_fail_whale_dialog_we_failed (FALSE, TRUE, NULL);
-                gsm_main ();
+                scsm_fail_whale_dialog_we_failed (FALSE, TRUE, NULL);
+                scsm_main ();
                 exit (1);
         }
 
         if (please_fail) {
-                gsm_fail_whale_dialog_we_failed (TRUE, TRUE, NULL);
-                gsm_main ();
+                scsm_fail_whale_dialog_we_failed (TRUE, TRUE, NULL);
+                scsm_main ();
                 exit (1);
         }
 
@@ -516,9 +516,9 @@ main (int argc, char **argv)
 
         if (env_override_autostart_dirs != NULL && env_override_autostart_dirs[0] != '\0') {
                 env_override_autostart_dirs_v = g_strsplit (env_override_autostart_dirs, ":", 0);
-                gsm_util_set_autostart_dirs (env_override_autostart_dirs_v);
+                scsm_util_set_autostart_dirs (env_override_autostart_dirs_v);
         } else {
-                gsm_util_set_autostart_dirs (override_autostart_dirs);
+                scsm_util_set_autostart_dirs (override_autostart_dirs);
 
                 /* Export the override autostart dirs parameter to the environment
                  * in case we are running on systemd. */
@@ -529,12 +529,12 @@ main (int argc, char **argv)
                 }
         }
 
-        gsm_util_export_activation_environment (NULL);
+        scsm_util_export_activation_environment (NULL);
 
         session_name = opt_session_name;
 
 #ifdef HAVE_SYSTEMD
-        gsm_util_export_user_environment (NULL);
+        scsm_util_export_user_environment (NULL);
 #endif
 
 #ifdef ENABLE_SYSTEMD_SESSION
@@ -548,14 +548,14 @@ main (int argc, char **argv)
                 /* We really need to resolve the session name at this point,
                  * which requires talking to GSettings internally. */
                 if (IS_STRING_EMPTY (session_name)) {
-                        session_name = _gsm_manager_get_default_session (NULL);
+                        session_name = _scsm_manager_get_default_session (NULL);
                 }
 
                 /* Reset all failed units; we are going to start a lof ot things and
                  * really do not want to run into errors because units have failed
                  * in a previous session
                  */
-                gsm_util_systemd_reset_failed (&error);
+                scsm_util_systemd_reset_failed (&error);
                 if (error) {
                         g_warning ("Failed to reset failed state of units: %s", error->message);
                         g_clear_error (&error);
@@ -563,7 +563,7 @@ main (int argc, char **argv)
 
                 /* We don't escape the name (i.e. we leave any '-' intact). */
                 gnome_session_target = g_strdup_printf ("scarecrow-session-%s@%s.target", session_type, session_name);
-                if (gsm_util_start_systemd_unit (gnome_session_target, "fail", &error)) {
+                if (scsm_util_start_systemd_unit (gnome_session_target, "fail", &error)) {
                         /* We started the unit, open fifo and sleep forever. */
                         systemd_leader_run ();
                         exit(0);
@@ -584,11 +584,11 @@ main (int argc, char **argv)
                         p = g_getenv ("QT_IM_MODULE");
                         if (!p || !*p)
                                 p = "ibus";
-                        gsm_util_setenv ("QT_IM_MODULE", p);
+                        scsm_util_setenv ("QT_IM_MODULE", p);
                         p = g_getenv ("XMODIFIERS");
                         if (!p || !*p)
                                 p = "@im=ibus";
-                        gsm_util_setenv ("XMODIFIERS", p);
+                        scsm_util_setenv ("XMODIFIERS", p);
                 }
 
                 g_free (ibus_path);
@@ -596,21 +596,21 @@ main (int argc, char **argv)
 
         /* We want to use the GNOME menus which has the designed categories.
          */
-        gsm_util_setenv ("XDG_MENU_PREFIX", "scarecrow-");
+        scsm_util_setenv ("XDG_MENU_PREFIX", "scarecrow-");
 
         /* Talk to logind before acquiring a name, since it does synchronous
          * calls at initialization time that invoke a main loop and if we
          * already owned a name, then we would service too early during
          * that main loop.
          */
-        g_object_unref (gsm_get_system ());
+        g_object_unref (scsm_get_system ());
 
         name_owner_id  = acquire_name ();
 
-        gsm_main ();
+        scsm_main ();
 
 #ifdef HAVE_SYSTEMD
-        gsm_util_export_user_environment (NULL);
+        scsm_util_export_user_environment (NULL);
 #endif
 
         g_clear_object (&manager);

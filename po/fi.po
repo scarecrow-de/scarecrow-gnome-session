@@ -36,7 +36,7 @@ msgstr "Tämä kohta mahdollistaa tallennetun istunnon valinnan"
 #: data/scarecrow.desktop.in.in:3 data/scarecrow.session.desktop.in.in:3
 #: data/scarecrow-wayland.desktop.in.in:3
 msgid "Scarecrow"
-msgstr "Gnome"
+msgstr "Scarecrow"
 
 #: data/scarecrow.desktop.in.in:4 data/scarecrow-wayland.desktop.in.in:4
 #: data/scarecrow-xorg.desktop.in.in:4
@@ -45,11 +45,11 @@ msgstr "Tämä istunto kirjautuu Gnomeen"
 
 #: data/scarecrow-dummy.session.desktop.in.in:3
 msgid "Scarecrow dummy"
-msgstr "Gnome-malli-istunto (dummy)"
+msgstr "Scarecrow-malli-istunto (dummy)"
 
 #: data/scarecrow-xorg.desktop.in.in:3
 msgid "Scarecrow on Xorg"
-msgstr "Gnome Xorgia käyttäen"
+msgstr "Scarecrow Xorgia käyttäen"
 
 #: data/io.github.scarecrow_de.SessionManager.gschema.xml.in:5
 msgid "Save sessions"
@@ -118,11 +118,11 @@ msgstr "Ni_meä istunto uudelleen"
 msgid "_Continue"
 msgstr "_Jatka"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:313
+#: scarecrow-session/scsm-fail-whale-dialog.c:313
 msgid "Oh no!  Something has gone wrong."
 msgstr "Voi ei! Jotain meni pieleen."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:320
+#: scarecrow-session/scsm-fail-whale-dialog.c:320
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
@@ -130,7 +130,7 @@ msgstr ""
 "Esiintyi ongelma, josta järjestelmä ei pysty palautumaan. Ota yhteys "
 "järjestelmän ylläpitäjään"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:322
+#: scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
@@ -138,7 +138,7 @@ msgstr ""
 "Esiintyi ongelma, josta järjestelmä ei pysty palautumaan. Kaikki "
 "laajennukset on poistettu käytöstä varotoimenpiteenä."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:324
+#: scarecrow-session/scsm-fail-whale-dialog.c:324
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
@@ -146,27 +146,27 @@ msgstr ""
 "Esiintyi ongelma, josta järjestelmä ei pysty palautumaan.\n"
 "Kirjaudu ulos ja yritä uudelleen."
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:339
+#: scarecrow-session/scsm-fail-whale-dialog.c:339
 msgid "_Log Out"
 msgstr "Kirjaudu ul_os"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
+#: scarecrow-session/scsm-fail-whale-dialog.c:361 scarecrow-session/main.c:396
 msgid "Enable debugging code"
 msgstr "Käytä vianetsintäkoodia"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:362
+#: scarecrow-session/scsm-fail-whale-dialog.c:362
 msgid "Allow logout"
 msgstr "Salli uloskirjautuminen"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:363
+#: scarecrow-session/scsm-fail-whale-dialog.c:363
 msgid "Show extension warning"
 msgstr "Näytä laajennusvaroitus"
 
-#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1967
+#: scarecrow-session/scsm-manager.c:1289 scarecrow-session/scsm-manager.c:1967
 msgid "Not responding"
 msgstr "Ei vastaa"
 
-#: scarecrow-session/gsm-util.c:382
+#: scarecrow-session/scsm-util.c:382
 msgid "_Log out"
 msgstr "Kirjau_du ulos"
 
@@ -174,15 +174,15 @@ msgstr "Kirjau_du ulos"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "Muistettu sovellus"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "Tämä ohjelma estää kirjautumisen ulos."
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -190,7 +190,7 @@ msgstr ""
 "Kieltäydytään uudesta asiakasyhteydestä, koska istuntoa ollaan parhaillaan "
 "sulkemassa\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE-kuuntelupistoketta ei voi luoda: %s"
@@ -558,7 +558,7 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgstr "Kuvaketta ”%s” ei löydy"
 
 #~ msgid "Scarecrow 3 Failed to Load"
-#~ msgstr "Gnome 3 lataus epäonnistui"
+#~ msgstr "Scarecrow 3 lataus epäonnistui"
 
 #~ msgid ""
 #~ "Unfortunately Scarecrow 3 failed to start properly and started in the "
@@ -729,10 +729,10 @@ msgstr "Istunto nimeltä “%s” on jo olemassa"
 #~ msgstr "Ohjetta ei löydy."
 
 #~ msgid "Scarecrow Splash Screen"
-#~ msgstr "Gnomen käynnistymisikkuna"
+#~ msgstr "Scarecrown käynnistymisikkuna"
 
 #~ msgid "Scarecrow Settings Daemon Helper"
-#~ msgstr "Gnomen asetuspalvelimen käärin"
+#~ msgstr "Scarecrown asetuspalvelimen käärin"
 
 #~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "- Gnomen käynnistymisikkuna"

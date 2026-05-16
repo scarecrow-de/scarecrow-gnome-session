@@ -1,4 +1,4 @@
-/* gsm-util.h
+/* scsm-util.h
  * Copyright (C) 2008 Lucas Rocha.
  *
  * This program is free software; you can redistribute it and/or
@@ -24,45 +24,45 @@ G_BEGIN_DECLS
 
 #define IS_STRING_EMPTY(x) ((x)==NULL||(x)[0]=='\0')
 
-char *      gsm_util_find_desktop_file_for_app_name (const char *app_name,
+char *      scsm_util_find_desktop_file_for_app_name (const char *app_name,
                                                      gboolean    look_in_saved_session,
                                                      gboolean    autostart_first);
 
-gchar      *gsm_util_get_empty_tmp_session_dir      (void);
+gchar      *scsm_util_get_empty_tmp_session_dir      (void);
 
-const char *gsm_util_get_saved_session_dir          (void);
+const char *scsm_util_get_saved_session_dir          (void);
 
-gchar**     gsm_util_get_app_dirs                   (void);
+gchar**     scsm_util_get_app_dirs                   (void);
 
-gchar**     gsm_util_get_autostart_dirs             (void);
-void        gsm_util_set_autostart_dirs             (char **dirs);
+gchar**     scsm_util_get_autostart_dirs             (void);
+void        scsm_util_set_autostart_dirs             (char **dirs);
 
-gchar **    gsm_util_get_desktop_dirs               (gboolean include_saved_session,
+gchar **    scsm_util_get_desktop_dirs               (gboolean include_saved_session,
                                                      gboolean autostart_first);
 
-gboolean    gsm_util_text_is_blank                  (const char *str);
+gboolean    scsm_util_text_is_blank                  (const char *str);
 
-void        gsm_util_init_error                     (gboolean    fatal,
+void        scsm_util_init_error                     (gboolean    fatal,
                                                      const char *format, ...) G_GNUC_PRINTF (2, 3);
 
-char *      gsm_util_generate_startup_id            (void);
+char *      scsm_util_generate_startup_id            (void);
 
-void        gsm_util_setenv                         (const char *variable,
+void        scsm_util_setenv                         (const char *variable,
                                                      const char *value);
-const char * const * gsm_util_listenv               (void);
-const char * const * gsm_util_get_variable_blacklist(void);
+const char * const * scsm_util_listenv               (void);
+const char * const * scsm_util_get_variable_blacklist(void);
 
-gboolean    gsm_util_export_activation_environment  (GError     **error);
+gboolean    scsm_util_export_activation_environment  (GError     **error);
 #ifdef HAVE_SYSTEMD
-gboolean    gsm_util_export_user_environment        (GError     **error);
-gboolean    gsm_util_start_systemd_unit             (const char  *unit,
+gboolean    scsm_util_export_user_environment        (GError     **error);
+gboolean    scsm_util_start_systemd_unit             (const char  *unit,
                                                      const char  *mode,
                                                      GError     **error);
-gboolean    gsm_util_systemd_reset_failed           (GError     **error);
+gboolean    scsm_util_systemd_reset_failed           (GError     **error);
 
 #endif
 
-void        gsm_quit                                (void);
+void        scsm_quit                                (void);
 
 G_END_DECLS
 

@@ -28,47 +28,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #
-#: ../capplet/gsm-app-dialog.c:120
+#: ../capplet/scsm-app-dialog.c:120
 msgid "Select Command"
 msgstr "Vel kommando"
 
-# gsm/startup-programs.c:373
-#: ../capplet/gsm-app-dialog.c:193
+# scsm/startup-programs.c:373
+#: ../capplet/scsm-app-dialog.c:193
 msgid "Add Startup Program"
 msgstr "Legg til oppstartsprogram"
 
-# gsm/startup-programs.c:391
+# scsm/startup-programs.c:391
 #
-#: ../capplet/gsm-app-dialog.c:197
+#: ../capplet/scsm-app-dialog.c:197
 msgid "Edit Startup Program"
 msgstr "Rediger oppstartsprogram"
 
-# gsm/startup-programs.c:333
-#: ../capplet/gsm-app-dialog.c:484
+# scsm/startup-programs.c:333
+#: ../capplet/scsm-app-dialog.c:484
 msgid "The startup command cannot be empty"
 msgstr "Oppstartskommandoen kan ikkje vera tom"
 
 #
-#: ../capplet/gsm-app-dialog.c:490
+#: ../capplet/scsm-app-dialog.c:490
 msgid "The startup command is not valid"
 msgstr "Oppstartskommandoen er ikkje gyldig"
 
 #
-#: ../capplet/gsm-properties-dialog.c:518
+#: ../capplet/scsm-properties-dialog.c:518
 msgid "Enabled"
 msgstr "Aktivert"
 
-# gsm/logout.c:239
-#: ../capplet/gsm-properties-dialog.c:530
+# scsm/logout.c:239
+#: ../capplet/scsm-properties-dialog.c:530
 msgid "Icon"
 msgstr "Ikon"
 
-# gsm/gsm-client-list.c:122
-#: ../capplet/gsm-properties-dialog.c:542
+# scsm/scsm-client-list.c:122
+#: ../capplet/scsm-properties-dialog.c:542
 msgid "Program"
 msgstr "Program"
 
-#: ../capplet/gsm-properties-dialog.c:746
+#: ../capplet/scsm-properties-dialog.c:746
 msgid "Startup Applications Preferences"
 msgstr "Innstillingar for oppstartsprogram"
 
@@ -103,11 +103,11 @@ msgstr "Scarecrow"
 msgid "This session logs you into Scarecrow"
 msgstr "Denne økta loggar inn i Scarecrow"
 
-#: ../data/gsm-inhibit-dialog.ui.h:1
+#: ../data/scsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>Nokre program køyrer enno:</b>"
 
-#: ../data/gsm-inhibit-dialog.ui.h:2 ../scarecrow-session/gsm-inhibit-dialog.c:640
+#: ../data/scsm-inhibit-dialog.ui.h:2 ../scarecrow-session/scsm-inhibit-dialog.c:640
 #| msgid ""
 #| "Waiting for programs to finish.  Interrupting these programs may cause "
 #| "you to lose work."
@@ -126,7 +126,7 @@ msgstr "Vel kva for program du vil starta når du loggar inn"
 msgid "Startup Applications"
 msgstr "Oppstartsprogram"
 
-# gsm/startup-programs.c:373
+# scsm/startup-programs.c:373
 #: ../data/session-properties.ui.h:1
 msgid "Additional startup _programs:"
 msgstr "Fleire oppstarts_program:"
@@ -146,12 +146,12 @@ msgstr "Ko_mmando:"
 msgid "Comm_ent:"
 msgstr "Komm_entar:"
 
-# gsm/session-properties-capplet.c:262
+# scsm/session-properties-capplet.c:262
 #: ../data/session-properties.ui.h:5
 msgid "Options"
 msgstr "Innstillingar"
 
-# gsm/session-properties-capplet.c:330
+# scsm/session-properties-capplet.c:330
 #: ../data/session-properties.ui.h:6
 msgid "Startup Programs"
 msgstr "Oppstartsprogram"
@@ -183,7 +183,7 @@ msgstr "Fila er ikkje ei gyldig .desktop-fil"
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Klarte ikkje kjenna att desktop-fil versjon «%s»"
 
-# gsm/gsm-client-row.c:34
+# scsm/scsm-client-row.c:34
 #: ../egg/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
@@ -212,57 +212,57 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr "Ikkje eit køyrbart element"
 
-# gsm/save-session.c:92
-#: ../egg/eggsmclient.c:226
+# scsm/save-session.c:92
+#: ../egg/egscsmclient.c:226
 msgid "Disable connection to session manager"
 msgstr "Slå av tilkopling til økthandsamaren"
 
-#: ../egg/eggsmclient.c:229
+#: ../egg/egscsmclient.c:229
 msgid "Specify file containing saved configuration"
 msgstr "Vel fil som inneheld lagra innstillingar"
 
-#: ../egg/eggsmclient.c:229
+#: ../egg/egscsmclient.c:229
 msgid "FILE"
 msgstr "FIL"
 
-# gsm/main.c:64
-#: ../egg/eggsmclient.c:232
+# scsm/main.c:64
+#: ../egg/egscsmclient.c:232
 msgid "Specify session management ID"
 msgstr "Oppgje ID for økthandsaming"
 
-#: ../egg/eggsmclient.c:232
+#: ../egg/egscsmclient.c:232
 msgid "ID"
 msgstr "ID"
 
-# gsm/session-properties-capplet.c:262
-#: ../egg/eggsmclient.c:253
+# scsm/session-properties-capplet.c:262
+#: ../egg/egscsmclient.c:253
 msgid "Session management options:"
 msgstr "Innstillingar for økthandsaming"
 
-# gsm/session-properties-capplet.c:262
-#: ../egg/eggsmclient.c:254
+# scsm/session-properties-capplet.c:262
+#: ../egg/egscsmclient.c:254
 msgid "Show session management options"
 msgstr "Vis innstillingar for økthandsaming"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:253
+#: ../scarecrow-session/scsm-inhibit-dialog.c:253
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "Klarte ikkje finna ikonet «%s»"
 
-# gsm/gsm-client-row.c:43
-#: ../scarecrow-session/gsm-inhibit-dialog.c:588
+# scsm/scsm-client-row.c:43
+#: ../scarecrow-session/scsm-inhibit-dialog.c:588
 msgid "Unknown"
 msgstr "Ukjend"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:639
+#: ../scarecrow-session/scsm-inhibit-dialog.c:639
 msgid "A program is still running:"
 msgstr "Eit program køyrer enno:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:643
+#: ../scarecrow-session/scsm-inhibit-dialog.c:643
 msgid "Some programs are still running:"
 msgstr "Nokre program køyrer enno:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:644
+#: ../scarecrow-session/scsm-inhibit-dialog.c:644
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
@@ -270,103 +270,103 @@ msgstr ""
 "Ventar på at program skal avslutta. Om du avbryt desse programma kan data gå "
 "tapt."
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:874
+#: ../scarecrow-session/scsm-inhibit-dialog.c:874
 msgid "Switch User Anyway"
 msgstr "Byt brukar likevel"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:877
+#: ../scarecrow-session/scsm-inhibit-dialog.c:877
 #| msgid "Logout Anyway"
 msgid "Log Out Anyway"
 msgstr "Logg ut likevel"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:880
+#: ../scarecrow-session/scsm-inhibit-dialog.c:880
 msgid "Suspend Anyway"
 msgstr "Gå i kvilemodus likevel"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:883
+#: ../scarecrow-session/scsm-inhibit-dialog.c:883
 msgid "Hibernate Anyway"
 msgstr "Gå i dvalemodus likevel"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:886
+#: ../scarecrow-session/scsm-inhibit-dialog.c:886
 #| msgid "Shutdown Anyway"
 msgid "Shut Down Anyway"
 msgstr "Slå av likevel"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:889
+#: ../scarecrow-session/scsm-inhibit-dialog.c:889
 #| msgid "Reboot Anyway"
 msgid "Restart Anyway"
 msgstr "Start på nytt likevel"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:897
+#: ../scarecrow-session/scsm-inhibit-dialog.c:897
 msgid "Lock Screen"
 msgstr "Lås skjerm"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:900
+#: ../scarecrow-session/scsm-inhibit-dialog.c:900
 msgid "Cancel"
 msgstr "Avbryt"
 
-#. This string is shared with gsm-fail-whale-dialog.c
-#: ../scarecrow-session/gsm-logout-dialog.c:275
+#. This string is shared with scsm-fail-whale-dialog.c
+#: ../scarecrow-session/scsm-logout-dialog.c:275
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
 msgstr[0] "Du vert logga ut automatisk om %d sekund."
 msgstr[1] "Du vert logga ut automatisk om %d sekund."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:283
+#: ../scarecrow-session/scsm-logout-dialog.c:283
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
 msgstr[0] "Systemet vert slått av automatisk om %d sekund."
 msgstr[1] "Systemet vert slått av automatisk om %d sekund."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:315
+#: ../scarecrow-session/scsm-logout-dialog.c:315
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "Du er logga inn som «%s»."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:381
+#: ../scarecrow-session/scsm-logout-dialog.c:381
 msgid "Log out of this system now?"
 msgstr "Logg ut av systemet no?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:387
+#: ../scarecrow-session/scsm-logout-dialog.c:387
 msgid "_Switch User"
 msgstr "_Byt brukar"
 
 # panel/logout.c:74 panel/menu.c:5340
-#: ../scarecrow-session/gsm-logout-dialog.c:396
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:422
-#: ../scarecrow-session/gsm-util.c:389
+#: ../scarecrow-session/scsm-logout-dialog.c:396
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:422
+#: ../scarecrow-session/scsm-util.c:389
 msgid "_Log Out"
 msgstr "_Logg ut"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:402
+#: ../scarecrow-session/scsm-logout-dialog.c:402
 msgid "Shut down this system now?"
 msgstr "Slå av systemet no?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:408
+#: ../scarecrow-session/scsm-logout-dialog.c:408
 msgid "S_uspend"
 msgstr "_Kvilemodus"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:414
+#: ../scarecrow-session/scsm-logout-dialog.c:414
 msgid "_Hibernate"
 msgstr "_Dvalemodus"
 
 # applets/tasklist/tasklist_menu.c:258
-#: ../scarecrow-session/gsm-logout-dialog.c:420
+#: ../scarecrow-session/scsm-logout-dialog.c:420
 msgid "_Restart"
 msgstr "_Start på nytt"
 
-# gsm/logout.c:250
-#: ../scarecrow-session/gsm-logout-dialog.c:430
+# scsm/logout.c:250
+#: ../scarecrow-session/scsm-logout-dialog.c:430
 msgid "_Shut Down"
 msgstr "Slå _av"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:377
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:377
 msgid "Oh no!  Something has gone wrong."
 msgstr "Å nei! Noko har gått gale."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:384
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:384
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -374,7 +374,7 @@ msgstr ""
 "Eit problem har oppstått og systemet klarer ikkje gjenoppretta. Kontakt ein "
 "systemadministrator."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:386
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:386
 msgid ""
 "A problem has occurred and the system can't recover. Some of the extensions "
 "below may have caused this.\n"
@@ -384,7 +384,7 @@ msgstr ""
 "utvidingane under kan ha medført dette.\n"
 "Prøv å slå av nokre av desse og logg ut for å prøva på nytt."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:388
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:388
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -392,26 +392,26 @@ msgstr ""
 "Eit problem har oppstått og systemet klarer ikkje gjenoppretta.\n"
 "Logg ut og prøv på nytt."
 
-#: ../scarecrow-session/gsm-process-helper.c:123
+#: ../scarecrow-session/scsm-process-helper.c:123
 #, c-format
 msgid "Exited with code %d"
 msgstr "Avslutta med koden %d"
 
-#: ../scarecrow-session/gsm-process-helper.c:128
+#: ../scarecrow-session/scsm-process-helper.c:128
 #, c-format
 msgid "Killed by signal %d"
 msgstr "Avslutta av signalet %d"
 
-#: ../scarecrow-session/gsm-process-helper.c:133
+#: ../scarecrow-session/scsm-process-helper.c:133
 #, c-format
 msgid "Stopped by signal %d"
 msgstr "Stoppa av signalet %d"
 
-#: ../scarecrow-session/gsm-manager.c:1386
+#: ../scarecrow-session/scsm-manager.c:1386
 msgid "Scarecrow 3 Failed to Load"
 msgstr "Scarecrow 3 klarte ikkje starta"
 
-#: ../scarecrow-session/gsm-manager.c:1387
+#: ../scarecrow-session/scsm-manager.c:1387
 msgid ""
 "Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
@@ -424,11 +424,11 @@ msgstr ""
 "Sannsynlegvis klarer ikkje systemet (grafikkortet eller drivaren) å køyre "
 "Scarecrow 3."
 
-#: ../scarecrow-session/gsm-manager.c:1389
+#: ../scarecrow-session/scsm-manager.c:1389
 msgid "Learn more about Scarecrow 3"
 msgstr "Lær meir om Scarecrow 3"
 
-#: ../scarecrow-session/gsm-manager.c:1486 ../scarecrow-session/gsm-manager.c:2255
+#: ../scarecrow-session/scsm-manager.c:1486 ../scarecrow-session/scsm-manager.c:2255
 msgid "Not responding"
 msgstr "Svarer ikkje"
 
@@ -437,29 +437,29 @@ msgstr "Svarer ikkje"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:559
+#: ../scarecrow-session/scsm-xsmp-client.c:559
 #| msgid "Remember running applications"
 msgid "Remembered Application"
 msgstr "Hugsa program"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1197
+#: ../scarecrow-session/scsm-xsmp-client.c:1197
 #| msgid "This program is blocking log out."
 msgid "This program is blocking logout."
 msgstr "Dette programmet hindrar utlogging."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:325
+#: ../scarecrow-session/scsm-xsmp-server.c:325
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "Avviser ny klienttilkopling fordi økta er i ferd med å avslutta\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:587
+#: ../scarecrow-session/scsm-xsmp-server.c:587
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Klarte ikkje oppretta sokkel for ICE-lytting: %s"
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:373
+#: ../scarecrow-session/scsm-util.c:373
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr ""
@@ -474,7 +474,7 @@ msgstr "Overstyr standard autostartmapper"
 msgid "AUTOSTART_DIR"
 msgstr "AUTOSTART_DIR"
 
-# gsm/session-properties.c:272
+# scsm/session-properties.c:272
 #: ../scarecrow-session/main.c:278
 #| msgid "Sessions"
 msgid "Session to use"
@@ -521,7 +521,7 @@ msgstr "Ignorerer eventuelle hindringar"
 msgid "Don't prompt for user confirmation"
 msgstr "Ikkje spør etter stadfesting"
 
-# gsm/save-session.c:92
+# scsm/save-session.c:92
 #: ../tools/scarecrow-session-quit.c:89 ../tools/scarecrow-session-quit.c:99
 msgid "Could not connect to the session manager"
 msgstr "Klarte ikkje kopla til økthandsamar"
@@ -533,12 +533,12 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "Scarecrow Settings Daemon Helper"
 #~ msgstr "Hjelpar til Scarecrow innstillingsnisse"
 
-# gsm/save-session.c:42
+# scsm/save-session.c:42
 #~| msgid "Kill session"
 #~ msgid "Default session"
 #~ msgstr "Standardøkt"
 
-# gsm/splash.c:67
+# scsm/splash.c:67
 #~| msgid "Window Manager"
 #~ msgid "File Manager"
 #~ msgstr "Filhandsamar"
@@ -575,11 +575,11 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ "vil automatisk leggja til dei nødvendige komponentane tilbake til økta "
 #~ "dersom dei vert fjerna."
 
-# gsm/logout.c:247
+# scsm/logout.c:247
 #~ msgid "Logout prompt"
 #~ msgstr "Spør ved avlogging"
 
-# gsm/splash.c:65
+# scsm/splash.c:65
 #~| msgid "The Panel"
 #~ msgid "Panel"
 #~ msgstr "Panel"
@@ -590,11 +590,11 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "Required session components"
 #~ msgstr "Obligatoriske komponentar"
 
-# gsm/session-properties.c:272
+# scsm/session-properties.c:272
 #~ msgid "Save sessions"
 #~ msgstr "Lagra økter"
 
-# gsm/session-properties-capplet.c:192
+# scsm/session-properties-capplet.c:192
 #~ msgid "Show the splash screen"
 #~ msgstr "Vis oppstartsskjerm ved pålogging"
 
@@ -638,7 +638,7 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "Time before session is considered idle"
 #~ msgstr "Tid før økta vert sett på som inaktiv"
 
-# gsm/splash.c:67
+# scsm/splash.c:67
 #~ msgid "Window Manager"
 #~ msgstr "Vindaugehandsamar"
 
@@ -659,7 +659,7 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "GConf key used to lookup default session"
 #~ msgstr "GConf-nøkkel som vert brukt til å slå opp standard økt"
 
-# gsm/session-properties-capplet.c:192
+# scsm/session-properties-capplet.c:192
 #~| msgid "Show the splash screen"
 #~ msgid "- Scarecrow Splash Screen"
 #~ msgstr "- Oppstartskjerm"
@@ -677,14 +677,14 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "Use dialog boxes for errors"
 #~ msgstr "Bruk dialogboksar for feil"
 
-# gsm/session-properties-capplet.c:206
+# scsm/session-properties-capplet.c:206
 #~ msgid "Set the current session name"
 #~ msgstr "Vel øktnamn"
 
 #~ msgid "NAME"
 #~ msgstr "NAMN"
 
-# gsm/save-session.c:42
+# scsm/save-session.c:42
 #~ msgid "Kill session"
 #~ msgstr "Drep økta"
 
@@ -728,87 +728,87 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ "for denne funksjonen vart ikkje funne. Vennligst sjekk at AT-SPI er "
 #~ "installert. Sesjonen er starta utan hjelpeteknologi for tilgjenge."
 
-# gsm/gsm-client-editor.c:97
+# scsm/scsm-client-editor.c:97
 #~ msgid "_Order:"
 #~ msgstr "_Rekkefølgje: "
 
 #~ msgid "What happens to the application when it exits."
 #~ msgstr "Kva som skjer med applikasjonen når han avsluttar."
 
-# gsm/gsm-client-editor.c:107
+# scsm/scsm-client-editor.c:107
 #~ msgid "_Style:"
 #~ msgstr "_Stil: "
 
-# gsm/gsm-client-row.c:31
+# scsm/scsm-client-row.c:31
 #~ msgid "Inactive"
 #~ msgstr "Inaktiv"
 
-# gsm/gsm-client-row.c:32
+# scsm/scsm-client-row.c:32
 #~ msgid "Waiting to start or already finished."
 #~ msgstr "Ventar på å få starta eller er allereie starta."
 
-# gsm/gsm-client-row.c:35
+# scsm/scsm-client-row.c:35
 #~ msgid "Started but has not yet reported state."
 #~ msgstr "Starta, men har ikkje enno rapportert tilstand."
 
-# gsm/gsm-client-row.c:37
+# scsm/scsm-client-row.c:37
 #~ msgid "Running"
 #~ msgstr "Køyrer"
 
-# gsm/gsm-client-row.c:38
+# scsm/scsm-client-row.c:38
 #~ msgid "A normal member of the session."
 #~ msgstr "Eit vanleg medlem av økta."
 
-# gsm/gsm-client-row.c:40
+# scsm/scsm-client-row.c:40
 #~ msgid "Saving"
 #~ msgstr "Lagrar"
 
-# gsm/gsm-client-row.c:41
+# scsm/scsm-client-row.c:41
 #~ msgid "Saving session details."
 #~ msgstr "Lagrar innstillingar for økta."
 
-# gsm/gsm-client-row.c:44
+# scsm/scsm-client-row.c:44
 #~ msgid "State not reported within timeout."
 #~ msgstr "Tilstand ikkje rapportert innan tidsavbrot."
 
-# gsm/gsm-client-row.c:50 panel/menu.c:4760 panel/panel_config.c:1400
+# scsm/scsm-client-row.c:50 panel/menu.c:4760 panel/panel_config.c:1400
 #~ msgid "Normal"
 #~ msgstr "Vanleg"
 
-# gsm/gsm-client-row.c:51
+# scsm/scsm-client-row.c:51
 #~ msgid "Unaffected by logouts but can die."
 #~ msgstr "Ikkje påvirka av avlogging, men kan døy."
 
-# gsm/gsm-client-row.c:54
+# scsm/scsm-client-row.c:54
 #~ msgid "Never allowed to die."
 #~ msgstr "Aldri la døy."
 
-# gsm/gsm-client-row.c:56
+# scsm/scsm-client-row.c:56
 #~ msgid "Trash"
 #~ msgstr "Papirkorg"
 
-# gsm/gsm-client-row.c:57
+# scsm/scsm-client-row.c:57
 #~ msgid "Discarded on logout and can die."
 #~ msgstr "Forkastast ved avlogging og kan døy."
 
-# gnome-terminal/gnome-terminal.c:1596 gsm/gsm-client-row.c:59
+# gnome-terminal/gnome-terminal.c:1596 scsm/scsm-client-row.c:59
 # panel/foobar-widget.c:1070
 #~ msgid "Settings"
 #~ msgstr "Innstillingar"
 
-# gsm/gsm-client-row.c:60
+# scsm/scsm-client-row.c:60
 #~ msgid "Always started on every login."
 #~ msgstr "Startast ved kvar login."
 
-# gsm/gsm-client-list.c:119
+# scsm/scsm-client-list.c:119
 #~ msgid "Order"
 #~ msgstr "Rekkjefølgje"
 
-# gsm/gsm-client-list.c:120
+# scsm/scsm-client-list.c:120
 #~ msgid "Style"
 #~ msgstr "Stil"
 
-# gsm/gsm-client-list.c:121
+# scsm/scsm-client-list.c:121
 #~ msgid "State"
 #~ msgstr "Tilstand"
 
@@ -917,11 +917,11 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "_Restart the computer"
 #~ msgstr "Sta_rt maskinen på nytt"
 
-# gsm/main.c:65
+# scsm/main.c:65
 #~ msgid "Only read saved sessions from the default.session file"
 #~ msgstr "Berre les lagra økter frå default.session fila"
 
-# gsm/main.c:66
+# scsm/main.c:66
 #~ msgid "Millisecond period spent waiting for clients to register (0=forever)"
 #~ msgstr ""
 #~ "Antal millisekund ventetid for registrering av klientar (0=uendeleg)"
@@ -929,11 +929,11 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "DELAY"
 #~ msgstr "SEINKING"
 
-# gsm/main.c:67
+# scsm/main.c:67
 #~ msgid "Millisecond period spent waiting for clients to respond (0=forever)"
 #~ msgstr "Antal millisekund ventetid for at klientar skal svare (0=uendeleg)"
 
-# gsm/main.c:68
+# scsm/main.c:68
 #~ msgid "Millisecond period spent waiting for clients to die (0=forever)"
 #~ msgstr "Antal millisekund ventetid for at klientar skal døy (0=uendeleg)"
 
@@ -979,7 +979,7 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "_Adjust the Clock"
 #~ msgstr "_Juster klokka"
 
-# gsm/gnome-login-check.c:344
+# scsm/gnome-login-check.c:344
 #~ msgid ""
 #~ "Could not look up internet address for %s.\n"
 #~ "This will prevent Scarecrow from operating correctly.\n"
@@ -991,35 +991,35 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ "Det er mogleg å retta opp problemet ved å leggja\n"
 #~ "til %s i fila /etc/hosts."
 
-# gsm/gnome-login-check.c:327 gsm/gnome-login-check.c:352
+# scsm/gnome-login-check.c:327 scsm/gnome-login-check.c:352
 #~ msgid "Try Again"
 #~ msgstr "Prøv igjen"
 
-# gsm/manager.c:400
+# scsm/manager.c:400
 #~ msgid "Wait abandoned due to conflict."
 #~ msgstr "Venting forlatt grunna konflikt."
 
-# gsm/manager.c:834
+# scsm/manager.c:834
 #~ msgid "No response to the %s command."
 #~ msgstr "Ikkje noko svar på kommandoen %s."
 
-# gsm/manager.c:835
+# scsm/manager.c:835
 #~ msgid "The program may be slow, stopped or broken."
 #~ msgstr "Programmet kan være treigt, stoppa eller øydelagt."
 
-# gsm/manager.c:836
+# scsm/manager.c:836
 #~ msgid "You may wait for it to respond or remove it."
 #~ msgstr "Du kan vente på svar, eller fjerne det."
 
-# gsm/manager.c:1375
+# scsm/manager.c:1375
 #~ msgid "Restart abandoned due to failures."
 #~ msgstr "Gjenoppstart program som er forlatt pga feil."
 
-# gsm/manager.c:1541
+# scsm/manager.c:1541
 #~ msgid "A session shutdown is in progress."
 #~ msgstr "Nedstenging av økta er i gang."
 
-# gsm/session-properties-capplet.c:206
+# scsm/session-properties-capplet.c:206
 #~ msgid "- Save the current session"
 #~ msgstr "- Lagra denne økta"
 
@@ -1051,26 +1051,26 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "Remove the currently selected client from the session."
 #~ msgstr "Fjern den valde klienten frå økta."
 
-# gsm/session-properties-capplet.c:206
+# scsm/session-properties-capplet.c:206
 #~ msgid "Apply changes to the current session"
 #~ msgstr "Bruk endringane i den aktive økta"
 
 #~ msgid "The list of programs in the session."
 #~ msgstr "Liste over program i økta."
 
-# gsm/session-properties-capplet.c:321
+# scsm/session-properties-capplet.c:321
 #~ msgid "Currently running _programs:"
 #~ msgstr "_Program som køyrer no:"
 
-# gsm/splash.c:58 gsm/splash.c:59
+# scsm/splash.c:58 scsm/splash.c:59
 #~ msgid "Sawfish Window Manager"
 #~ msgstr "Sawfish vindaugehandsamar"
 
-# gsm/splash.c:67
+# scsm/splash.c:67
 #~ msgid "Metacity Window Manager"
 #~ msgstr "Metacity vindaugehandsamar"
 
-# gsm/splash.c:69
+# scsm/splash.c:69
 #~ msgid "Nautilus"
 #~ msgstr "Nautilus"
 
@@ -1082,23 +1082,23 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ msgid "The name of the startup program cannot be empty"
 #~ msgstr "Oppstartskommandoen kan ikkje vera tom"
 
-# gsm/logout.c:220
+# scsm/logout.c:220
 #~ msgid "_Save current setup"
 #~ msgstr "L_agra noverande oppsett"
 
-# gsm/session-names.c:126
+# scsm/session-names.c:126
 #~ msgid "The session name cannot be empty"
 #~ msgstr "Øktnamnet kan ikkje vere tomt"
 
-# gsm/session-names.c:136
+# scsm/session-names.c:136
 #~ msgid "The session name already exists"
 #~ msgstr "Øktnamnet eksisterer allereie"
 
-# gsm/session-names.c:170
+# scsm/session-names.c:170
 #~ msgid "Add a new session"
 #~ msgstr "Legg til ny økt"
 
-# gsm/session-names.c:202
+# scsm/session-names.c:202
 #~ msgid "Edit session name"
 #~ msgstr "Rediger namnet på økta"
 
@@ -1116,22 +1116,22 @@ msgstr "Programmet vart kalla med motstridande alternativ"
 #~ "Somme endringar er ikkje lagra.\n"
 #~ "Vil du avslutta likevel?"
 
-# gsm/session-properties-capplet.c:192
+# scsm/session-properties-capplet.c:192
 #~ msgid "Show splash screen on _login"
 #~ msgstr "Vis oppstartskjerm ved inn_logging"
 
-# gsm/session-properties-capplet.c:199
+# scsm/session-properties-capplet.c:199
 #~ msgid "As_k on logout"
 #~ msgstr "S_pør før du loggar ut"
 
-# gsm/session-properties-capplet.c:206
+# scsm/session-properties-capplet.c:206
 #~ msgid "Automatically save chan_ges to session"
 #~ msgstr "Lagra endrin_gar i økta automatisk"
 
-# gsm/session-properties.c:272
+# scsm/session-properties.c:272
 #~ msgid "_Sessions:"
 #~ msgstr "_Økter:"
 
-# gsm/startup-programs.c:283 gsm/startup-programs.c:290
+# scsm/startup-programs.c:283 scsm/startup-programs.c:290
 #~ msgid "_Startup Command:"
 #~ msgstr "Opp_startskommando:"

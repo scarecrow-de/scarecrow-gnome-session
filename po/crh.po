@@ -17,39 +17,39 @@ msgstr ""
 "Content-Transfer-Encoding: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../capplet/gsm-app-dialog.c:120
+#: ../capplet/scsm-app-dialog.c:120
 msgid "Select Command"
 msgstr "Emir Sayla"
 
-#: ../capplet/gsm-app-dialog.c:193
+#: ../capplet/scsm-app-dialog.c:193
 msgid "Add Startup Program"
 msgstr "Başlanğıç Programı Ekle"
 
-#: ../capplet/gsm-app-dialog.c:197
+#: ../capplet/scsm-app-dialog.c:197
 msgid "Edit Startup Program"
 msgstr "Başlanğıç Programı Tahrir Et"
 
-#: ../capplet/gsm-app-dialog.c:484
+#: ../capplet/scsm-app-dialog.c:484
 msgid "The startup command cannot be empty"
 msgstr "Başlanğıç emri boş olalmaz"
 
-#: ../capplet/gsm-app-dialog.c:490
+#: ../capplet/scsm-app-dialog.c:490
 msgid "The startup command is not valid"
 msgstr "Başlanğıç emri keçerli degil"
 
-#: ../capplet/gsm-properties-dialog.c:517
+#: ../capplet/scsm-properties-dialog.c:517
 msgid "Enabled"
 msgstr "Qabilleştirilgen"
 
-#: ../capplet/gsm-properties-dialog.c:529
+#: ../capplet/scsm-properties-dialog.c:529
 msgid "Icon"
 msgstr "İşaretçik"
 
-#: ../capplet/gsm-properties-dialog.c:541
+#: ../capplet/scsm-properties-dialog.c:541
 msgid "Program"
 msgstr "Program"
 
-#: ../capplet/gsm-properties-dialog.c:745
+#: ../capplet/scsm-properties-dialog.c:745
 msgid "Startup Applications Preferences"
 msgstr "Başlanğıç Uyğulamaları Tercihleri"
 
@@ -114,7 +114,7 @@ msgstr "Oturımnı Kene _adlandır"
 msgid "_Continue"
 msgstr "_Devam Et"
 
-#: ../data/gsm-inhibit-dialog.ui.h:1 ../scarecrow-session/gsm-inhibit-dialog.c:514
+#: ../data/scsm-inhibit-dialog.ui.h:1 ../scarecrow-session/scsm-inhibit-dialog.c:514
 msgid "Some programs are still running:"
 msgstr "Bazı programlar ale çapmaqta:"
 
@@ -203,39 +203,39 @@ msgstr "Bir 'Tür=İlişim' masaüstü kirildisine vesiqa URI'leri keçirilalmaz
 msgid "Not a launchable item"
 msgstr "Fırlatılabilir bir unsur degil"
 
-#: ../egg/eggsmclient.c:226
+#: ../egg/egscsmclient.c:226
 msgid "Disable connection to session manager"
 msgstr "Oturım idarecisine bağlantını ğayrı qabilleştir"
 
-#: ../egg/eggsmclient.c:229
+#: ../egg/egscsmclient.c:229
 msgid "Specify file containing saved configuration"
 msgstr "Saqlanğan ayarlamanı ihtiva etken dosyeni belirtiñiz"
 
-#: ../egg/eggsmclient.c:229
+#: ../egg/egscsmclient.c:229
 msgid "FILE"
 msgstr "DOSYE"
 
-#: ../egg/eggsmclient.c:232
+#: ../egg/egscsmclient.c:232
 msgid "Specify session management ID"
 msgstr "Oturım idaresi kimligini belirtiñiz"
 
-#: ../egg/eggsmclient.c:232
+#: ../egg/egscsmclient.c:232
 msgid "ID"
 msgstr "Kimlik"
 
-#: ../egg/eggsmclient.c:253
+#: ../egg/egscsmclient.c:253
 msgid "Session management options:"
 msgstr "Oturım idaresi ihtiyariyatı:"
 
-#: ../egg/eggsmclient.c:254
+#: ../egg/egscsmclient.c:254
 msgid "Show session management options"
 msgstr "Oturım idaresi ihtiyariyatını köster"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:286
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:286
 msgid "Oh no!  Something has gone wrong."
 msgstr "Aman!  Bir şey yañlış ketkendir."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:293
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:293
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -243,7 +243,7 @@ msgstr ""
 "Bir mesele hasıl oldı ve sistem toparlanalmay. Lütfen bir sistem memurı ile "
 "temasqa keçiñiz"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:295
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:295
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
@@ -251,7 +251,7 @@ msgstr ""
 "Bir mesele hasıl oldı ve sistem toparlanalmay. İhtiyat olaraq eklentilerniñ "
 "hepsi ğayrıfaalleştirilgendir."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:297
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:297
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -259,33 +259,33 @@ msgstr ""
 "Bir mesele hasıl oldı ve sistem toparlanalmay.Lütfen tışarı imzalanıp tekrar "
 "deñeñiz."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:312
-#: ../scarecrow-session/gsm-logout-dialog.c:384
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:312
+#: ../scarecrow-session/scsm-logout-dialog.c:384
 msgid "_Log Out"
 msgstr "_Tışarı İmzalan"
 
 # tüklü
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:334 ../scarecrow-session/main.c:282
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:334 ../scarecrow-session/main.c:282
 msgid "Enable debugging code"
 msgstr "Arızasızlandıruv kodunı qabilleştir"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:335
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:335
 msgid "Allow logout"
 msgstr "Tışarı imzalanmağa izin ber"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:336
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:336
 msgid "Show extension warning"
 msgstr "Uzantı tenbihini köster"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:462
+#: ../scarecrow-session/scsm-inhibit-dialog.c:462
 msgid "Unknown"
 msgstr "Bilinmey"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:510
+#: ../scarecrow-session/scsm-inhibit-dialog.c:510
 msgid "A program is still running:"
 msgstr "Bir program ale çapmaqta:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:511
+#: ../scarecrow-session/scsm-inhibit-dialog.c:511
 msgid ""
 "Waiting for the program to finish. Interrupting the program may cause you to "
 "lose work."
@@ -293,7 +293,7 @@ msgstr ""
 "Programnıñ tamamlanuvı içün beklene. Bu programnı inqıtağa oğratuv emekni "
 "ğayıp etüviñizge sebep olabilir."
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:515
+#: ../scarecrow-session/scsm-inhibit-dialog.c:515
 msgid ""
 "Waiting for programs to finish. Interrupting these programs may cause you to "
 "lose work."
@@ -301,102 +301,102 @@ msgstr ""
 "Programlarnıñ tamamlanuvı içün beklene. Bu programlarnıñ inqıtağa oğratıluvı "
 "işleriñizni ğayıp etüviñizge sebep olabilir."
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:745
+#: ../scarecrow-session/scsm-inhibit-dialog.c:745
 msgid "Switch User Anyway"
 msgstr "Kene de Qullanıcını Deñiştir"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:748
+#: ../scarecrow-session/scsm-inhibit-dialog.c:748
 msgid "Log Out Anyway"
 msgstr "Kene de Tışarı İmzalan"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:751
+#: ../scarecrow-session/scsm-inhibit-dialog.c:751
 msgid "Suspend Anyway"
 msgstr "Kene de Sarqıt"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:754
+#: ../scarecrow-session/scsm-inhibit-dialog.c:754
 msgid "Hibernate Anyway"
 msgstr "Kene de Yuqlat"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:757
+#: ../scarecrow-session/scsm-inhibit-dialog.c:757
 msgid "Shut Down Anyway"
 msgstr "Kene de Qapat"
 
 # tüklü
-#: ../scarecrow-session/gsm-inhibit-dialog.c:760
+#: ../scarecrow-session/scsm-inhibit-dialog.c:760
 msgid "Restart Anyway"
 msgstr "Kene de Yañıdan Başlat"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:768
+#: ../scarecrow-session/scsm-inhibit-dialog.c:768
 msgid "Lock Screen"
 msgstr "Ekrannı Kilitle"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:771
+#: ../scarecrow-session/scsm-inhibit-dialog.c:771
 msgid "Cancel"
 msgstr "Vazgeç"
 
 # tüklü
-#. This string is shared with gsm-fail-whale-dialog.c
-#: ../scarecrow-session/gsm-logout-dialog.c:263
+#. This string is shared with scsm-fail-whale-dialog.c
+#: ../scarecrow-session/scsm-logout-dialog.c:263
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
 msgstr[0] "%d saniyeden soñ avtomatik olaraq tışarı imzalandırılacaqsıñız. "
 
-#: ../scarecrow-session/gsm-logout-dialog.c:271
+#: ../scarecrow-session/scsm-logout-dialog.c:271
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
 msgstr[0] "Bu sistem %d saniyeden soñ avtomatik olaraq qapatılacaq."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:279
+#: ../scarecrow-session/scsm-logout-dialog.c:279
 #, c-format
 msgid "This system will be automatically restarted in %d second."
 msgid_plural "This system will be automatically restarted in %d seconds."
 msgstr[0] "Bu sistem %d saniyeden soñ avtomatik olaraq kene başlatılacaq."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:303
+#: ../scarecrow-session/scsm-logout-dialog.c:303
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "Hal-hazırda \"%s\" olaraq içeri imzalanğansıñız."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:369
+#: ../scarecrow-session/scsm-logout-dialog.c:369
 msgid "Log out of this system now?"
 msgstr "Bu sistemden şimdi çıqılsınmı?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:375
+#: ../scarecrow-session/scsm-logout-dialog.c:375
 msgid "_Switch User"
 msgstr "_Qullanıcı Almaştır"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:390
+#: ../scarecrow-session/scsm-logout-dialog.c:390
 msgid "Shut down this system now?"
 msgstr "Bu sistem şimdi qapatılsınmı?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:396
+#: ../scarecrow-session/scsm-logout-dialog.c:396
 msgid "S_uspend"
 msgstr "_Sarqıt"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:402
+#: ../scarecrow-session/scsm-logout-dialog.c:402
 msgid "_Hibernate"
 msgstr "_Yuqlat"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:408
-#: ../scarecrow-session/gsm-logout-dialog.c:434
+#: ../scarecrow-session/scsm-logout-dialog.c:408
+#: ../scarecrow-session/scsm-logout-dialog.c:434
 msgid "_Restart"
 msgstr "_Kene Başlat"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:418
+#: ../scarecrow-session/scsm-logout-dialog.c:418
 msgid "_Shut Down"
 msgstr "_Söndür"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:424
+#: ../scarecrow-session/scsm-logout-dialog.c:424
 msgid "Restart this system now?"
 msgstr "Bu sistem şimdi kene başlatılsınmı?"
 
-#: ../scarecrow-session/gsm-manager.c:1429 ../scarecrow-session/gsm-manager.c:2178
+#: ../scarecrow-session/scsm-manager.c:1429 ../scarecrow-session/scsm-manager.c:2178
 msgid "Not responding"
 msgstr "Cevap bermey"
 
-#: ../scarecrow-session/gsm-util.c:411
+#: ../scarecrow-session/scsm-util.c:411
 msgid "_Log out"
 msgstr "_Tışarı imzalan"
 
@@ -404,15 +404,15 @@ msgstr "_Tışarı imzalan"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:558
+#: ../scarecrow-session/scsm-xsmp-client.c:558
 msgid "Remembered Application"
 msgstr "Hatırlanğan Uyğulama"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1196
+#: ../scarecrow-session/scsm-xsmp-client.c:1196
 msgid "This program is blocking logout."
 msgstr "Bu program tışarı imzalanuvnı bloklay."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:341
+#: ../scarecrow-session/scsm-xsmp-server.c:341
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
@@ -421,7 +421,7 @@ msgstr ""
 "etile\n"
 
 # tüklü
-#: ../scarecrow-session/gsm-xsmp-server.c:610
+#: ../scarecrow-session/scsm-xsmp-server.c:610
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "ICE diñlev oyuğı (soketi) icat etilamadı: %s"

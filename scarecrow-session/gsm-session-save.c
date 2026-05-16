@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
- * gsm-session-save.c
+ * scsm-session-save.c
  * Copyright (C) 2008 Lucas Rocha.
  *
  * This program is free software; you can redistribute it and/or
@@ -22,18 +22,18 @@
 #include <glib/gstdio.h>
 #include <gio/gio.h>
 
-#include "gsm-app.h"
-#include "gsm-util.h"
-#include "gsm-autostart-app.h"
-#include "gsm-client.h"
+#include "scsm-app.h"
+#include "scsm-util.h"
+#include "scsm-autostart-app.h"
+#include "scsm-client.h"
 
-#include "gsm-session-save.h"
+#include "scsm-session-save.h"
 
 #define GSM_MANAGER_SCHEMA        "io.github.scarecrow_de.SessionManager"
 #define KEY_AUTOSAVE_ONE_SHOT     "auto-save-session-one-shot"
 
 
-static gboolean gsm_session_clear_saved_session (const char *directory,
+static gboolean scsm_session_clear_saved_session (const char *directory,
                                                  GHashTable *discard_hash);
 
 typedef struct {
@@ -50,7 +50,7 @@ _app_has_app_id (const char   *id,
 {
         const char *app_id_b;
 
-        app_id_b = gsm_app_peek_app_id (app);
+        app_id_b = scsm_app_peek_app_id (app);
         return g_strcmp0 (app_id_a, app_id_b) == 0;
 }
 
@@ -74,7 +74,7 @@ save_one_client (char            *id,
 
         local_error = NULL;
 
-        app_id = gsm_client_peek_app_id (client);
+        app_id = scsm_client_peek_app_id (client);
         if (!IS_STRING_EMPTY (app_id)) {
                 if (g_str_has_suffix (app_id, ".desktop"))
                         filename = g_strdup (app_id);
@@ -83,11 +83,11 @@ save_one_client (char            *id,
 
                 path = g_build_filename (data->dir, filename, NULL);
 
-                app = (GsmApp *)gsm_store_find (data->app_store,
+                app = (GsmApp *)scsm_store_find (data->app_store,
                                                 (GsmStoreFunc)_app_has_app_id,
                                                 (char *)app_id);
         }
-        keyfile = gsm_client_save (client, app, &local_error);
+        keyfile = scsm_client_save (client, app, &local_error);
 
         if (keyfile == NULL || local_error) {
                 goto out;
@@ -106,7 +106,7 @@ save_one_client (char            *id,
                         g_free (path);
 
                 filename = g_strdup_printf ("%s.desktop",
-                                            gsm_client_peek_startup_id (client));
+                                            scsm_client_peek_startup_id (client));
                 path = g_build_filename (data->dir, filename, NULL);
         }
 
@@ -151,7 +151,7 @@ out:
 }
 
 void
-gsm_session_save (GsmStore  *client_store,
+scsm_session_save (GsmStore  *client_store,
                   GsmStore  *app_store,
                   GError   **error)
 {
@@ -168,7 +168,7 @@ gsm_session_save (GsmStore  *client_store,
         g_settings_set_boolean (settings, KEY_AUTOSAVE_ONE_SHOT, FALSE);
         g_object_unref (settings);
 
-        save_dir = gsm_util_get_saved_session_dir ();
+        save_dir = scsm_util_get_saved_session_dir ();
         if (save_dir == NULL) {
                 g_warning ("GsmSessionSave: cannot create saved session directory");
                 return;
@@ -180,10 +180,10 @@ gsm_session_save (GsmStore  *client_store,
         data.app_store = app_store;
 
         /* remove old saved session */
-        gsm_session_clear_saved_session (save_dir, data.discard_hash);
+        scsm_session_clear_saved_session (save_dir, data.discard_hash);
         data.error = error;
 
-        gsm_store_foreach (client_store,
+        scsm_store_foreach (client_store,
                            (GsmStoreFunc) save_one_client,
                            &data);
 
@@ -191,7 +191,7 @@ gsm_session_save (GsmStore  *client_store,
 }
 
 static gboolean
-gsm_session_clear_one_client (const char *filename,
+scsm_session_clear_one_client (const char *filename,
                               GHashTable *discard_hash)
 {
         gboolean  result = TRUE;
@@ -201,7 +201,7 @@ gsm_session_clear_one_client (const char *filename,
 
         g_debug ("GsmSessionSave: removing '%s' from saved session", filename);
 
-        envp = (char **) gsm_util_listenv ();
+        envp = (char **) scsm_util_listenv ();
         key_file = g_key_file_new ();
         if (g_key_file_load_from_file (key_file, filename,
                                        G_KEY_FILE_NONE, NULL)) {
@@ -241,7 +241,7 @@ out:
 }
 
 static gboolean
-gsm_session_clear_saved_session (const char *directory,
+scsm_session_clear_saved_session (const char *directory,
                                  GHashTable *discard_hash)
 {
         GDir       *dir;
@@ -268,7 +268,7 @@ gsm_session_clear_saved_session (const char *directory,
                 char *path = g_build_filename (directory,
                                                filename, NULL);
 
-                result = gsm_session_clear_one_client (path, discard_hash)
+                result = scsm_session_clear_one_client (path, discard_hash)
                          && result;
 
                 g_free (path);
@@ -280,17 +280,17 @@ gsm_session_clear_saved_session (const char *directory,
 }
 
 void
-gsm_session_save_clear (void)
+scsm_session_save_clear (void)
 {
         const char *save_dir;
 
         g_debug ("GsmSessionSave: Clearing saved session");
 
-        save_dir = gsm_util_get_saved_session_dir ();
+        save_dir = scsm_util_get_saved_session_dir ();
         if (save_dir == NULL) {
                 g_warning ("GsmSessionSave: cannot create saved session directory");
                 return;
         }
 
-        gsm_session_clear_saved_session (save_dir, NULL);
+        scsm_session_clear_saved_session (save_dir, NULL);
 }

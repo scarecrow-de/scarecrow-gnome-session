@@ -114,23 +114,23 @@ msgstr "الأ_مر:"
 msgid "_Name:"
 msgstr "الا_سم:"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:321
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:321
 msgid "Oh no!  Something has gone wrong."
 msgstr "لا! ثمة مشكلة."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:328
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:328
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
 msgstr "حدثت مشكلة وتعذّر تعافي النظام. حاول الاتصال بمدير النظام."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:330
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:330
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
 "been disabled as a precaution."
 msgstr "حدثت مشكلة وتعذّر تعافي النظام. ستتعطل جميع الامتدادات كإجراء احترازي."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:332
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:332
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -138,27 +138,27 @@ msgstr ""
 "حدثت مشكلة وتعذّر تعافي النظام.\n"
 "حاول الخروج ثم الولوج مجددا."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:347
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:347
 msgid "_Log Out"
 msgstr "ا_خرج"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:369 ../scarecrow-session/main.c:305
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:369 ../scarecrow-session/main.c:305
 msgid "Enable debugging code"
 msgstr "فعّل كود تتبع الأخطاء"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:370
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:370
 msgid "Allow logout"
 msgstr "اسمح بالخروج"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:371
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:371
 msgid "Show extension warning"
 msgstr "أظهر تحذير الامتداد"
 
-#: ../scarecrow-session/gsm-manager.c:1271 ../scarecrow-session/gsm-manager.c:2043
+#: ../scarecrow-session/scsm-manager.c:1271 ../scarecrow-session/scsm-manager.c:2043
 msgid "Not responding"
 msgstr "لا يستجيب"
 
-#: ../scarecrow-session/gsm-util.c:409
+#: ../scarecrow-session/scsm-util.c:409
 msgid "_Log out"
 msgstr "ا_خرج"
 
@@ -166,21 +166,21 @@ msgstr "ا_خرج"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:557
+#: ../scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "التطبيقات المتذكرة"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1207
+#: ../scarecrow-session/scsm-xsmp-client.c:1207
 msgid "This program is blocking logout."
 msgstr "يعيق هذا البرنامج الخروج."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:340
+#: ../scarecrow-session/scsm-xsmp-server.c:340
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "يرفض العملاء الجدد لأن الجلسة يتم إطفاؤها حاليا\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:609
+#: ../scarecrow-session/scsm-xsmp-server.c:609
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "تعذّر إنشاء مقبس استماع ICE: %s"

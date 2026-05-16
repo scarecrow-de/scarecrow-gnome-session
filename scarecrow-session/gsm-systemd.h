@@ -27,7 +27,7 @@
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_SYSTEMD             (gsm_systemd_get_type ())
+#define GSM_TYPE_SYSTEMD             (scsm_systemd_get_type ())
 #define GSM_SYSTEMD(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_SYSTEMD, GsmSystemd))
 #define GSM_SYSTEMD_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_SYSTEMD, GsmSystemdClass))
 #define GSM_IS_SYSTEMD(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_SYSTEMD))
@@ -50,9 +50,9 @@ struct _GsmSystemdClass
         GObjectClass parent_class;
 };
 
-GType         gsm_systemd_get_type (void);
+GType         scsm_systemd_get_type (void);
 
-GsmSystemd   *gsm_systemd_new      (void) G_GNUC_MALLOC;
+GsmSystemd   *scsm_systemd_new      (void) G_GNUC_MALLOC;
 
 G_END_DECLS
 

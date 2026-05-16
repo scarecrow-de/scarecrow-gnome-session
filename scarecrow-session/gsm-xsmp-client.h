@@ -19,13 +19,13 @@
 #ifndef __GSM_XSMP_CLIENT_H__
 #define __GSM_XSMP_CLIENT_H__
 
-#include "gsm-client.h"
+#include "scsm-client.h"
 
 #include <X11/SM/SMlib.h>
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_XSMP_CLIENT            (gsm_xsmp_client_get_type ())
+#define GSM_TYPE_XSMP_CLIENT            (scsm_xsmp_client_get_type ())
 #define GSM_XSMP_CLIENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_XSMP_CLIENT, GsmXSMPClient))
 #define GSM_XSMP_CLIENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_XSMP_CLIENT, GsmXSMPClientClass))
 #define GSM_IS_XSMP_CLIENT(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_XSMP_CLIENT))
@@ -68,21 +68,21 @@ struct _GsmXSMPClientClass
 
 };
 
-GType       gsm_xsmp_client_get_type             (void) G_GNUC_CONST;
+GType       scsm_xsmp_client_get_type             (void) G_GNUC_CONST;
 
-GsmClient  *gsm_xsmp_client_new                  (IceConn         ice_conn);
+GsmClient  *scsm_xsmp_client_new                  (IceConn         ice_conn);
 
-void        gsm_xsmp_client_connect              (GsmXSMPClient  *client,
+void        scsm_xsmp_client_connect              (GsmXSMPClient  *client,
                                                   SmsConn         conn,
                                                   unsigned long  *mask_ret,
                                                   SmsCallbacks   *callbacks_ret);
 
-void        gsm_xsmp_client_save_state           (GsmXSMPClient  *client);
-void        gsm_xsmp_client_save_yourself        (GsmXSMPClient  *client,
+void        scsm_xsmp_client_save_state           (GsmXSMPClient  *client);
+void        scsm_xsmp_client_save_yourself        (GsmXSMPClient  *client,
                                                   gboolean        save_state);
-void        gsm_xsmp_client_save_yourself_phase2 (GsmXSMPClient  *client);
-void        gsm_xsmp_client_interact             (GsmXSMPClient  *client);
-void        gsm_xsmp_client_shutdown_cancelled   (GsmXSMPClient  *client);
+void        scsm_xsmp_client_save_yourself_phase2 (GsmXSMPClient  *client);
+void        scsm_xsmp_client_interact             (GsmXSMPClient  *client);
+void        scsm_xsmp_client_shutdown_cancelled   (GsmXSMPClient  *client);
 
 G_END_DECLS
 

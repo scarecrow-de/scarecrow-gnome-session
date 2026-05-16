@@ -24,12 +24,12 @@
 #include <sys/types.h>
 
 
-#include "gsm-manager.h"
-#include "gsm-client.h"
+#include "scsm-manager.h"
+#include "scsm-client.h"
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_APP            (gsm_app_get_type ())
+#define GSM_TYPE_APP            (scsm_app_get_type ())
 #define GSM_APP(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_APP, GsmApp))
 #define GSM_APP_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_APP, GsmAppClass))
 #define GSM_IS_APP(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_APP))
@@ -89,43 +89,43 @@ typedef enum
         GSM_APP_NUM_ERRORS
 } GsmAppError;
 
-#define GSM_APP_ERROR gsm_app_error_quark ()
+#define GSM_APP_ERROR scsm_app_error_quark ()
 
-GQuark           gsm_app_error_quark                    (void);
-GType            gsm_app_get_type                       (void) G_GNUC_CONST;
+GQuark           scsm_app_error_quark                    (void);
+GType            scsm_app_get_type                       (void) G_GNUC_CONST;
 
-gboolean         gsm_app_peek_autorestart               (GsmApp     *app);
+gboolean         scsm_app_peek_autorestart               (GsmApp     *app);
 
-const char      *gsm_app_peek_id                        (GsmApp     *app);
-const char      *gsm_app_peek_app_id                    (GsmApp     *app);
-const char      *gsm_app_peek_startup_id                (GsmApp     *app);
-GsmManagerPhase  gsm_app_peek_phase                     (GsmApp     *app);
-gboolean         gsm_app_peek_is_disabled               (GsmApp     *app);
-gboolean         gsm_app_peek_is_conditionally_disabled (GsmApp     *app);
+const char      *scsm_app_peek_id                        (GsmApp     *app);
+const char      *scsm_app_peek_app_id                    (GsmApp     *app);
+const char      *scsm_app_peek_startup_id                (GsmApp     *app);
+GsmManagerPhase  scsm_app_peek_phase                     (GsmApp     *app);
+gboolean         scsm_app_peek_is_disabled               (GsmApp     *app);
+gboolean         scsm_app_peek_is_conditionally_disabled (GsmApp     *app);
 
-gboolean         gsm_app_start                          (GsmApp     *app,
+gboolean         scsm_app_start                          (GsmApp     *app,
                                                          GError    **error);
-gboolean         gsm_app_restart                        (GsmApp     *app,
+gboolean         scsm_app_restart                        (GsmApp     *app,
                                                          GError    **error);
-gboolean         gsm_app_stop                           (GsmApp     *app,
+gboolean         scsm_app_stop                           (GsmApp     *app,
                                                          GError    **error);
-gboolean         gsm_app_is_running                     (GsmApp     *app);
+gboolean         scsm_app_is_running                     (GsmApp     *app);
 
-void             gsm_app_exited                         (GsmApp     *app,
+void             scsm_app_exited                         (GsmApp     *app,
                                                          guchar      exit_code);
-void             gsm_app_died                           (GsmApp     *app,
+void             scsm_app_died                           (GsmApp     *app,
                                                          int         signal);
 
-gboolean         gsm_app_provides                       (GsmApp     *app,
+gboolean         scsm_app_provides                       (GsmApp     *app,
                                                          const char *service);
-char           **gsm_app_get_provides                   (GsmApp     *app);
-gboolean         gsm_app_has_autostart_condition        (GsmApp     *app,
+char           **scsm_app_get_provides                   (GsmApp     *app);
+gboolean         scsm_app_has_autostart_condition        (GsmApp     *app,
                                                          const char *condition);
-gboolean         gsm_app_get_registered                 (GsmApp     *app);
-void             gsm_app_set_registered                 (GsmApp     *app,
+gboolean         scsm_app_get_registered                 (GsmApp     *app);
+void             scsm_app_set_registered                 (GsmApp     *app,
                                                          gboolean  registered);
 
-gboolean         gsm_app_save_to_keyfile                (GsmApp    *app,
+gboolean         scsm_app_save_to_keyfile                (GsmApp    *app,
                                                          GKeyFile  *keyfile,
                                                          GError   **error);
 

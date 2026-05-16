@@ -29,7 +29,7 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#include "scarecrow-session/gsm-inhibitor-flag.h"
+#include "scarecrow-session/scsm-inhibitor-flag.h"
 
 static GsmInhibitorFlag parse_flags (const gchar *arg)
 {

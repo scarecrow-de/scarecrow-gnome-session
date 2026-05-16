@@ -18,39 +18,39 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
 
-#: ../capplet/gsm-app-dialog.c:120
+#: ../capplet/scsm-app-dialog.c:120
 msgid "Select Command"
 msgstr "Wëbierzë pòlét"
 
-#: ../capplet/gsm-app-dialog.c:193
+#: ../capplet/scsm-app-dialog.c:193
 msgid "Add Startup Program"
 msgstr "Nowi program sztartowi"
 
-#: ../capplet/gsm-app-dialog.c:197
+#: ../capplet/scsm-app-dialog.c:197
 msgid "Edit Startup Program"
 msgstr "Editëjë program sztartowi"
 
-#: ../capplet/gsm-app-dialog.c:484
+#: ../capplet/scsm-app-dialog.c:484
 msgid "The startup command cannot be empty"
 msgstr "Sztartowi pòlét nie mòże bëc pùsti"
 
-#: ../capplet/gsm-app-dialog.c:490
+#: ../capplet/scsm-app-dialog.c:490
 msgid "The startup command is not valid"
 msgstr "Sztartowi pòlét je lëchi"
 
-#: ../capplet/gsm-properties-dialog.c:518
+#: ../capplet/scsm-properties-dialog.c:518
 msgid "Enabled"
 msgstr "Włączoné"
 
-#: ../capplet/gsm-properties-dialog.c:530
+#: ../capplet/scsm-properties-dialog.c:530
 msgid "Icon"
 msgstr "Jikòna"
 
-#: ../capplet/gsm-properties-dialog.c:542
+#: ../capplet/scsm-properties-dialog.c:542
 msgid "Program"
 msgstr "Program"
 
-#: ../capplet/gsm-properties-dialog.c:746
+#: ../capplet/scsm-properties-dialog.c:746
 msgid "Startup Applications Preferences"
 msgstr "Preferencje sztartowëch aplikacji"
 
@@ -84,11 +84,11 @@ msgstr "Scarecrow"
 msgid "This session logs you into Scarecrow"
 msgstr "Na sesjô wlogùje Ce do Ubuntu"
 
-#: ../data/gsm-inhibit-dialog.ui.h:1
+#: ../data/scsm-inhibit-dialog.ui.h:1
 msgid "<b>Some programs are still running:</b>"
 msgstr "<b>Niejedné programë dali robią:</b>"
 
-#: ../data/gsm-inhibit-dialog.ui.h:2 ../scarecrow-session/gsm-inhibit-dialog.c:640
+#: ../data/scsm-inhibit-dialog.ui.h:2 ../scarecrow-session/scsm-inhibit-dialog.c:640
 msgid ""
 "Waiting for the program to finish.  Interrupting the program may cause you "
 "to lose work."
@@ -181,52 +181,52 @@ msgstr "Ni mòże sélac zamłoscë dokùmentu URIs do skrótu 'Type=Link'"
 msgid "Not a launchable item"
 msgstr "Element nie je do zrëszeniô"
 
-#: ../egg/eggsmclient.c:226
+#: ../egg/egscsmclient.c:226
 msgid "Disable connection to session manager"
 msgstr "Wëłączë sparłãczenié z menadżerã sesji"
 
-#: ../egg/eggsmclient.c:229
+#: ../egg/egscsmclient.c:229
 msgid "Specify file containing saved configuration"
 msgstr "Wëbierzë lopk z zapisóną kònfigùracjã"
 
-#: ../egg/eggsmclient.c:229
+#: ../egg/egscsmclient.c:229
 msgid "FILE"
 msgstr "LOPK"
 
-#: ../egg/eggsmclient.c:232
+#: ../egg/egscsmclient.c:232
 msgid "Specify session management ID"
 msgstr "Wëbierzë jidentifikatór sesji"
 
-#: ../egg/eggsmclient.c:232
+#: ../egg/egscsmclient.c:232
 msgid "ID"
 msgstr "Jidentifikatór"
 
-#: ../egg/eggsmclient.c:253
+#: ../egg/egscsmclient.c:253
 msgid "Session management options:"
 msgstr "Òptacje sprôwianiô sesjama:"
 
-#: ../egg/eggsmclient.c:254
+#: ../egg/egscsmclient.c:254
 msgid "Show session management options"
 msgstr "Wëskrzeni optacje sprôwianiô sesjama"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:253
+#: ../scarecrow-session/scsm-inhibit-dialog.c:253
 #, c-format
 msgid "Icon '%s' not found"
 msgstr "Ni mógł nalezc jikòny '%s'"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:588
+#: ../scarecrow-session/scsm-inhibit-dialog.c:588
 msgid "Unknown"
 msgstr "Nieznóny"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:639
+#: ../scarecrow-session/scsm-inhibit-dialog.c:639
 msgid "A program is still running:"
 msgstr "Program jesz chòdzy:"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:643
+#: ../scarecrow-session/scsm-inhibit-dialog.c:643
 msgid "Some programs are still running:"
 msgstr "Niechtërné programë jesz chòdzą"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:644
+#: ../scarecrow-session/scsm-inhibit-dialog.c:644
 msgid ""
 "Waiting for programs to finish.  Interrupting these programs may cause you "
 "to lose work."
@@ -234,40 +234,40 @@ msgstr ""
 "Żdanié na zakùńczenié dzejania programów. Òprzestanié dzejania programów "
 "mòże sprawic ùtratã niezapisóny robòtë."
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:874
+#: ../scarecrow-session/scsm-inhibit-dialog.c:874
 msgid "Switch User Anyway"
 msgstr "Ë tak przëłączë brëkòwnika"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:877
+#: ../scarecrow-session/scsm-inhibit-dialog.c:877
 msgid "Log Out Anyway"
 msgstr "Ë tak wëlogùjë"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:880
+#: ../scarecrow-session/scsm-inhibit-dialog.c:880
 msgid "Suspend Anyway"
 msgstr "Ë tak zawieszë"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:883
+#: ../scarecrow-session/scsm-inhibit-dialog.c:883
 msgid "Hibernate Anyway"
 msgstr "Ë tak hibernëjë"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:886
+#: ../scarecrow-session/scsm-inhibit-dialog.c:886
 msgid "Shut Down Anyway"
 msgstr "Ë tak wëłączë"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:889
+#: ../scarecrow-session/scsm-inhibit-dialog.c:889
 msgid "Restart Anyway"
 msgstr "Ë tak zrëszi znowa"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:897
+#: ../scarecrow-session/scsm-inhibit-dialog.c:897
 msgid "Lock Screen"
 msgstr "Zablokùjë ekran"
 
-#: ../scarecrow-session/gsm-inhibit-dialog.c:900
+#: ../scarecrow-session/scsm-inhibit-dialog.c:900
 msgid "Cancel"
 msgstr "Òprzestóń"
 
-#. This string is shared with gsm-fail-whale-dialog.c
-#: ../scarecrow-session/gsm-logout-dialog.c:271
+#. This string is shared with scsm-fail-whale-dialog.c
+#: ../scarecrow-session/scsm-logout-dialog.c:271
 #, c-format
 msgid "You will be automatically logged out in %d second."
 msgid_plural "You will be automatically logged out in %d seconds."
@@ -275,7 +275,7 @@ msgstr[0] "Bãdzesz automatno wëlogòwóny za %d  sekùndã."
 msgstr[1] "Bãdzesz automatno wëlogòwóny za %d  sekùndë."
 msgstr[2] "Bãdzesz automatno wëlogòwóny za %d  sekùndów."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:279
+#: ../scarecrow-session/scsm-logout-dialog.c:279
 #, c-format
 msgid "This system will be automatically shut down in %d second."
 msgid_plural "This system will be automatically shut down in %d seconds."
@@ -283,50 +283,50 @@ msgstr[0] "System sã automatno wëłączi za %d sekùndã."
 msgstr[1] "System sã automatno wëłączi za %d sekùndë."
 msgstr[2] "System sã automatno wëłączi za %d sekùndów."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:303
+#: ../scarecrow-session/scsm-logout-dialog.c:303
 #, c-format
 msgid "You are currently logged in as \"%s\"."
 msgstr "Jes wlogòwóny jakno \"%s\"."
 
-#: ../scarecrow-session/gsm-logout-dialog.c:369
+#: ../scarecrow-session/scsm-logout-dialog.c:369
 msgid "Log out of this system now?"
 msgstr "Wëlogòwac sã z systemù?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:375
+#: ../scarecrow-session/scsm-logout-dialog.c:375
 msgid "_Switch User"
 msgstr "_Przełączë brëkòwnika"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:384
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:337
-#: ../scarecrow-session/gsm-util.c:389
+#: ../scarecrow-session/scsm-logout-dialog.c:384
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:337
+#: ../scarecrow-session/scsm-util.c:389
 msgid "_Log Out"
 msgstr "Wë_logùjë"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:390
+#: ../scarecrow-session/scsm-logout-dialog.c:390
 msgid "Shut down this system now?"
 msgstr "Zarô wëłączëc system?"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:396
+#: ../scarecrow-session/scsm-logout-dialog.c:396
 msgid "S_uspend"
 msgstr "_Zawieszë"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:402
+#: ../scarecrow-session/scsm-logout-dialog.c:402
 msgid "_Hibernate"
 msgstr "Ùs_pienié"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:408
+#: ../scarecrow-session/scsm-logout-dialog.c:408
 msgid "_Restart"
 msgstr "Zôstne z_rëszenié"
 
-#: ../scarecrow-session/gsm-logout-dialog.c:418
+#: ../scarecrow-session/scsm-logout-dialog.c:418
 msgid "_Shut Down"
 msgstr "_Wëłączë kòmpùtr"
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:311
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:311
 msgid "Oh no!  Something has gone wrong."
 msgstr "Në! Cos sã nie darzëło."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:318
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:318
 msgid ""
 "A problem has occurred and the system can't recover. Please contact a system "
 "administrator"
@@ -334,7 +334,7 @@ msgstr ""
 "Pòkôza sã fela ë nie jidze przëwrócëc systemù. Proszã sparłãczëc sã ze "
 "sprôwnikã kòmpùtra."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:320
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:320
 #, fuzzy
 msgid ""
 "A problem has occurred and the system can't recover. All extensions have "
@@ -343,7 +343,7 @@ msgstr ""
 "Pòkôza sã fela ë nie jidze przëwrócëc systemù. Proszã sparłãczëc sã ze "
 "sprôwnikã kòmpùtra."
 
-#: ../scarecrow-session/gsm-fail-whale-dialog.c:322
+#: ../scarecrow-session/scsm-fail-whale-dialog.c:322
 msgid ""
 "A problem has occurred and the system can't recover.\n"
 "Please log out and try again."
@@ -351,26 +351,26 @@ msgstr ""
 "Pòkôza sã fela ë nie jidze przëwrócëc systemù.\n"
 "Proszã, wëlogùjë sã ë spróbùjë jesz rôz."
 
-#: ../scarecrow-session/gsm-process-helper.c:123
+#: ../scarecrow-session/scsm-process-helper.c:123
 #, c-format
 msgid "Exited with code %d"
 msgstr "Zakùńczono z kòdã %d"
 
-#: ../scarecrow-session/gsm-process-helper.c:128
+#: ../scarecrow-session/scsm-process-helper.c:128
 #, c-format
 msgid "Killed by signal %d"
 msgstr "Ùsëniãté przez signał %d"
 
-#: ../scarecrow-session/gsm-process-helper.c:133
+#: ../scarecrow-session/scsm-process-helper.c:133
 #, c-format
 msgid "Stopped by signal %d"
 msgstr "Zatrzimóné przez signał %d"
 
-#: ../scarecrow-session/gsm-manager.c:1421
+#: ../scarecrow-session/scsm-manager.c:1421
 msgid "Scarecrow 3 Failed to Load"
 msgstr "Scarecrow 3 sã ni mógł wladowac"
 
-#: ../scarecrow-session/gsm-manager.c:1422
+#: ../scarecrow-session/scsm-manager.c:1422
 msgid ""
 "Unfortunately Scarecrow 3 failed to start properly and started in the "
 "<i>fallback mode</i>.\n"
@@ -382,11 +382,11 @@ msgstr ""
 "Mòżlëwi że Twój kòmpùtr (hardwôrë graficzné abò czerowniczi) ni mòże zrëszëc "
 "GNOMA 3."
 
-#: ../scarecrow-session/gsm-manager.c:1424
+#: ../scarecrow-session/scsm-manager.c:1424
 msgid "Learn more about Scarecrow 3"
 msgstr "Wëdowiédzë sã wicy ò GNOMIE 3"
 
-#: ../scarecrow-session/gsm-manager.c:1521 ../scarecrow-session/gsm-manager.c:2267
+#: ../scarecrow-session/scsm-manager.c:1521 ../scarecrow-session/scsm-manager.c:2267
 msgid "Not responding"
 msgstr "Nie dostôł òdpòwiescy"
 
@@ -394,28 +394,28 @@ msgstr "Nie dostôł òdpòwiescy"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: ../scarecrow-session/gsm-xsmp-client.c:559
+#: ../scarecrow-session/scsm-xsmp-client.c:559
 msgid "Remembered Application"
 msgstr "Spamiãtóny program"
 
-#: ../scarecrow-session/gsm-xsmp-client.c:1197
+#: ../scarecrow-session/scsm-xsmp-client.c:1197
 msgid "This program is blocking logout."
 msgstr "Nen program ùniemòlëwiô wëlogòwónié."
 
-#: ../scarecrow-session/gsm-xsmp-server.c:325
+#: ../scarecrow-session/scsm-xsmp-server.c:325
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr ""
 "Òdrzëcono nowé sparłãczenié bò starô sesjô jesz sã do kùńca nie zamkła\n"
 
-#: ../scarecrow-session/gsm-xsmp-server.c:587
+#: ../scarecrow-session/scsm-xsmp-server.c:587
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "Ni mòże stwòrzëc słëchającégò gniazda: %s"
 
 #. Oh well, no X for you!
-#: ../scarecrow-session/gsm-util.c:373
+#: ../scarecrow-session/scsm-util.c:373
 #, c-format
 msgid "Unable to start login session (and unable to connect to the X server)"
 msgstr "Ni mòże zrëszëc sesji logòwaniô (ë nie mòże sã sparłãczëc z serwerã X)"

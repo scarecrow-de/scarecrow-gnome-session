@@ -121,51 +121,51 @@ msgstr "重命名会话(_M)"
 msgid "_Continue"
 msgstr "继续(_C)"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:318
+#: scarecrow-session/scsm-fail-whale-dialog.c:318
 msgid "Oh no!  Something has gone wrong."
 msgstr "糟糕！出错啦！"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:325
+#: scarecrow-session/scsm-fail-whale-dialog.c:325
 msgid ""
 "A problem has occurred and the system can’t recover. Please contact a system "
 "administrator"
 msgstr "系统出错且无法恢复。请联系系统管理员。"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:327
+#: scarecrow-session/scsm-fail-whale-dialog.c:327
 msgid ""
 "A problem has occurred and the system can’t recover. All extensions have "
 "been disabled as a precaution."
 msgstr "系统出错且无法恢复。为预防起见，已禁用了所有扩展。"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:329
+#: scarecrow-session/scsm-fail-whale-dialog.c:329
 msgid ""
 "A problem has occurred and the system can’t recover.\n"
 "Please log out and try again."
 msgstr "系统出错并无法恢复，请尝试注销并重新登录。"
 
-# gsm/logout.c:248
-#: scarecrow-session/gsm-fail-whale-dialog.c:344
+# scsm/logout.c:248
+#: scarecrow-session/scsm-fail-whale-dialog.c:344
 msgid "_Log Out"
 msgstr "注销(_L)"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
+#: scarecrow-session/scsm-fail-whale-dialog.c:412 scarecrow-session/main.c:404
 msgid "Enable debugging code"
 msgstr "启用调试代码"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:413
+#: scarecrow-session/scsm-fail-whale-dialog.c:413
 msgid "Allow logout"
 msgstr "允许注销"
 
-#: scarecrow-session/gsm-fail-whale-dialog.c:414
+#: scarecrow-session/scsm-fail-whale-dialog.c:414
 msgid "Show extension warning"
 msgstr "显示扩展警告"
 
-#: scarecrow-session/gsm-manager.c:1289 scarecrow-session/gsm-manager.c:1999
+#: scarecrow-session/scsm-manager.c:1289 scarecrow-session/scsm-manager.c:1999
 msgid "Not responding"
 msgstr "无响应"
 
-# gsm/logout.c:248
-#: scarecrow-session/gsm-util.c:415
+# scsm/logout.c:248
+#: scarecrow-session/scsm-util.c:415
 msgid "_Log out"
 msgstr "注销(_L)"
 
@@ -173,21 +173,21 @@ msgstr "注销(_L)"
 #. * then the XSMP client already has set several XSMP
 #. * properties. But it could still be that SmProgram is not set.
 #.
-#: scarecrow-session/gsm-xsmp-client.c:557
+#: scarecrow-session/scsm-xsmp-client.c:557
 msgid "Remembered Application"
 msgstr "记住的应用程序"
 
-#: scarecrow-session/gsm-xsmp-client.c:1216
+#: scarecrow-session/scsm-xsmp-client.c:1216
 msgid "This program is blocking logout."
 msgstr "此程序正在阻止注销。"
 
-#: scarecrow-session/gsm-xsmp-server.c:338
+#: scarecrow-session/scsm-xsmp-server.c:338
 msgid ""
 "Refusing new client connection because the session is currently being shut "
 "down\n"
 msgstr "拒绝新客户连接，原因是会话正在关闭\n"
 
-#: scarecrow-session/gsm-xsmp-server.c:605
+#: scarecrow-session/scsm-xsmp-server.c:605
 #, c-format
 msgid "Could not create ICE listening socket: %s"
 msgstr "无法创建 ICE 监听套接字：%s"
@@ -313,7 +313,7 @@ msgstr "执行 %s 失败\n"
 msgid "%s requires an argument\n"
 msgstr "%s 需要一个参数\n"
 
-# gsm/logout.c:248
+# scsm/logout.c:248
 #: tools/scarecrow-session-quit.c:50
 msgid "Log out"
 msgstr "注销"
@@ -334,7 +334,7 @@ msgstr "忽略现有限制因素"
 msgid "Don’t prompt for user confirmation"
 msgstr "不提示用户确认"
 
-# gsm/save-session.c:86
+# scsm/save-session.c:86
 #: tools/scarecrow-session-quit.c:88 tools/scarecrow-session-quit.c:102
 msgid "Could not connect to the session manager"
 msgstr "无法连接到会话管理器"
@@ -420,7 +420,7 @@ msgstr "名为“%s”的会话已存在"
 #~ msgid "Enabled"
 #~ msgstr "启用"
 
-# gsm/logout.c:240
+# scsm/logout.c:240
 #~ msgid "Icon"
 #~ msgstr "图标"
 
@@ -471,7 +471,7 @@ msgstr "名为“%s”的会话已存在"
 #~ msgid "Not a launchable item"
 #~ msgstr "不是可调用项"
 
-# gsm/save-session.c:86
+# scsm/save-session.c:86
 #~ msgid "Disable connection to session manager"
 #~ msgstr "禁止连接到会话管理器"
 
@@ -562,7 +562,7 @@ msgstr "名为“%s”的会话已存在"
 #~ msgid "_Hibernate"
 #~ msgstr "休眠(_H)"
 
-# gmenu/edit.c:336 gsm/session-properties.c:167
+# gmenu/edit.c:336 scsm/session-properties.c:167
 #~ msgid "_Restart"
 #~ msgstr "重启(_R)"
 

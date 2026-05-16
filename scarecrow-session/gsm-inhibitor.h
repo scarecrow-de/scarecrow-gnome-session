@@ -22,11 +22,11 @@
 #include <glib-object.h>
 #include <sys/types.h>
 
-#include "gsm-inhibitor-flag.h"
+#include "scsm-inhibitor-flag.h"
 
 G_BEGIN_DECLS
 
-#define GSM_TYPE_INHIBITOR            (gsm_inhibitor_get_type ())
+#define GSM_TYPE_INHIBITOR            (scsm_inhibitor_get_type ())
 #define GSM_INHIBITOR(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GSM_TYPE_INHIBITOR, GsmInhibitor))
 #define GSM_INHIBITOR_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GSM_TYPE_INHIBITOR, GsmInhibitorClass))
 #define GSM_IS_INHIBITOR(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GSM_TYPE_INHIBITOR))
@@ -56,32 +56,32 @@ typedef enum
         GSM_INHIBITOR_NUM_ERRORS
 } GsmInhibitorError;
 
-#define GSM_INHIBITOR_ERROR gsm_inhibitor_error_quark ()
-GQuark         gsm_inhibitor_error_quark          (void);
+#define GSM_INHIBITOR_ERROR scsm_inhibitor_error_quark ()
+GQuark         scsm_inhibitor_error_quark          (void);
 
-GType          gsm_inhibitor_get_type             (void) G_GNUC_CONST;
+GType          scsm_inhibitor_get_type             (void) G_GNUC_CONST;
 
-GsmInhibitor * gsm_inhibitor_new                  (const char    *app_id,
+GsmInhibitor * scsm_inhibitor_new                  (const char    *app_id,
                                                    guint          toplevel_xid,
                                                    guint          flags,
                                                    const char    *reason,
                                                    const char    *bus_name,
                                                    guint          cookie);
-GsmInhibitor * gsm_inhibitor_new_for_client       (const char    *client_id,
+GsmInhibitor * scsm_inhibitor_new_for_client       (const char    *client_id,
                                                    const char    *app_id,
                                                    guint          flags,
                                                    const char    *reason,
                                                    const char    *bus_name,
                                                    guint          cookie);
 
-const char *   gsm_inhibitor_peek_id              (GsmInhibitor  *inhibitor);
-const char *   gsm_inhibitor_peek_app_id          (GsmInhibitor  *inhibitor);
-const char *   gsm_inhibitor_peek_client_id       (GsmInhibitor  *inhibitor);
-const char *   gsm_inhibitor_peek_reason          (GsmInhibitor  *inhibitor);
-const char *   gsm_inhibitor_peek_bus_name        (GsmInhibitor  *inhibitor);
-guint          gsm_inhibitor_peek_cookie          (GsmInhibitor  *inhibitor);
-guint          gsm_inhibitor_peek_flags           (GsmInhibitor  *inhibitor);
-guint          gsm_inhibitor_peek_toplevel_xid    (GsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_id              (GsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_app_id          (GsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_client_id       (GsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_reason          (GsmInhibitor  *inhibitor);
+const char *   scsm_inhibitor_peek_bus_name        (GsmInhibitor  *inhibitor);
+guint          scsm_inhibitor_peek_cookie          (GsmInhibitor  *inhibitor);
+guint          scsm_inhibitor_peek_flags           (GsmInhibitor  *inhibitor);
+guint          scsm_inhibitor_peek_toplevel_xid    (GsmInhibitor  *inhibitor);
 
 G_END_DECLS
 
