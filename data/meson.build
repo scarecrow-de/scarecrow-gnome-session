@@ -22,7 +22,7 @@ required_components = {
     'io.github.scarecrow_de.SettingsDaemon.Rfkill',
     'io.github.scarecrow_de.SettingsDaemon.ScreensaverProxy',
     'io.github.scarecrow_de.SettingsDaemon.Sharing',
-    'io.github.scarecrow_de.SettingsDaemon.Smartcard',
+#    'io.github.scarecrow_de.SettingsDaemon.Smartcard',
     'io.github.scarecrow_de.SettingsDaemon.Sound',
     'io.github.scarecrow_de.SettingsDaemon.UsbProtection',
     'io.github.scarecrow_de.SettingsDaemon.Wacom',
