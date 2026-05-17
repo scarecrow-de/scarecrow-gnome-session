@@ -404,7 +404,7 @@ scsm_util_init_error (gboolean    fatal,
         argv[0] = "zenity";
         argv[1] = "--error";
         argv[2] = "--class";
-        argv[3] = "mutter-dialog";
+        argv[3] = "vater-dialog";
         argv[4] = "--title";
         argv[5] = "\"\"";
         argv[6] = "--text";
